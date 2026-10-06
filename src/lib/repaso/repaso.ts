@@ -30,6 +30,11 @@ export function cumple(e: ErrorPartida, f: Filtros): boolean {
   return true
 }
 
+/** Repasos que no son ejercicios de mis errores (problemas de Lichess, finales). */
+export function esOtroRepaso(id: string): boolean {
+  return id.startsWith('lichess-problema:') || id.startsWith('final:') || id.startsWith('final-propio:')
+}
+
 function inicioDelDia(): number {
   const d = new Date()
   d.setHours(0, 0, 0, 0)
@@ -54,8 +59,8 @@ export async function estadoRepaso(filtros: Filtros): Promise<EstadoRepaso> {
   const { elegibles, porId, repasos } = await datos(filtros)
   const ahora = Date.now()
   const { nuevosPorDia } = await leerPreferencias()
-  // Los problemas de Lichess comparten la tabla de repasos pero tienen su propio límite diario.
-  const empezadosHoy = repasos.filter((r) => r.creado >= inicioDelDia() && !r.errorId.startsWith('lichess-problema:')).length
+  // Los problemas de Lichess y los finales comparten la tabla de repasos pero no cuentan para este límite diario.
+  const empezadosHoy = repasos.filter((r) => r.creado >= inicioDelDia() && !esOtroRepaso(r.errorId)).length
   return {
     vencidos: elegibles.filter((e) => {
       const r = porId.get(e.id)

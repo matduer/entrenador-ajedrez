@@ -3,6 +3,8 @@
   import AvisoActualizacion from './lib/AvisoActualizacion.svelte'
   import Ajustes from './pantallas/Ajustes.svelte'
   import Aperturas from './pantallas/Aperturas.svelte'
+  import Finales from './pantallas/Finales.svelte'
+  import Progreso from './pantallas/Progreso.svelte'
   import MisPartidas from './pantallas/MisPartidas.svelte'
   import Tactica from './pantallas/Tactica.svelte'
 
@@ -42,6 +44,10 @@
       <Tactica />
     {:else if actual === 'aperturas'}
       <Aperturas />
+    {:else if actual === 'finales'}
+      <Finales />
+    {:else if actual === 'progreso'}
+      <Progreso />
     {:else if actual === 'ajustes'}
       <Ajustes />
     {:else}

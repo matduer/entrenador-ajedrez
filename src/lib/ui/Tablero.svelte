@@ -62,7 +62,14 @@
       },
     }
     if (cg) cg.set(config)
-    else cg = Chessground(elemento, { ...config, coordinates: true, animation: { enabled: true, duration: 200 } })
+    else
+      cg = Chessground(elemento, {
+        ...config,
+        coordinates: true,
+        animation: { enabled: true, duration: 200 },
+        // Solo en desarrollo: acepta eventos simulados para poder probar la app automáticamente.
+        trustAllEvents: import.meta.env.DEV,
+      })
   }
 
   $effect(() => {

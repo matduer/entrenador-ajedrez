@@ -1,0 +1,388 @@
+{
+  "temas": [
+    {
+      "id": "mates-basicos",
+      "titulo": "Mates básicos: dama y torre",
+      "nivel": 1,
+      "explicacion": [
+        "Son la base de todos los finales: si no se dan rápido y sin ahogar, cualquier final ganado se puede escapar.",
+        "Con dama: se reduce el espacio del rey rival con la dama a salto de caballo de él, sin dar jaques inútiles, hasta encerrarlo en una banda; recién ahí se acerca el rey propio para dar mate.",
+        "Con torre: la torre corta al rey en una fila o columna y el rey propio se pone en oposición; cada vez que los reyes quedan enfrentados, un jaque de torre lo empuja una fila más. Si el rival no se deja enfrentar, una jugada de espera con la torre lo obliga."
+      ],
+      "ideas": [
+        "Antes de cada jugada de dama, mirar si el rey rival tiene alguna casilla: si no tiene y no está en jaque, es ahogado.",
+        "El rey propio es una pieza más: sin él no hay mate.",
+        "Con torre, la jugada de espera (mover la torre a lo largo de la fila sin soltar el corte) es la clave."
+      ],
+      "posiciones": [
+        {
+          "id": "dama",
+          "fen": "8/8/8/4k3/8/8/8/3QK3 w - - 0 1",
+          "objetivo": "ganar",
+          "consigna": "Dá mate con dama y rey.",
+          "pista": "Encerrá al rey con la dama a salto de caballo y traé tu rey.",
+          "maxJugadas": 15,
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "d1d7",
+            "dtm": 13,
+            "fecha": "2026-10-06"
+          }
+        },
+        {
+          "id": "torre",
+          "fen": "8/8/8/4k3/8/8/8/R3K3 w - - 0 1",
+          "objetivo": "ganar",
+          "consigna": "Dá mate con torre y rey.",
+          "pista": "Cortá al rey con la torre y acercá tu rey hasta enfrentarlo.",
+          "maxJugadas": 30,
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "a1a5",
+            "dtm": 27,
+            "fecha": "2026-10-06"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Checkmate pattern (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Checkmate_pattern",
+          "licencia": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    {
+      "id": "regla-del-cuadrado",
+      "titulo": "La regla del cuadrado",
+      "nivel": 1,
+      "explicacion": [
+        "Para saber si un rey alcanza a un peón pasado sin ayuda, se imagina un cuadrado con un lado que va desde el peón hasta la casilla de coronación. Si el rey puede entrar en ese cuadrado en su turno, alcanza al peón; si no, el peón corona.",
+        "Ahorra cálculo en finales de peones: se sabe de un vistazo si una carrera se gana o se pierde.",
+        "Ojo con dos excepciones: el primer avance del peón desde la segunda fila puede ser doble (el cuadrado se mide desde la cuarta fila), y las piezas propias pueden tapar el camino del rey."
+      ],
+      "ideas": [
+        "Contar en casillas, no en jugadas: el cuadrado lo dice todo.",
+        "Si el rey está en el cuadrado, alcanza al peón moviéndose en diagonal, que también lo acerca."
+      ],
+      "posiciones": [
+        {
+          "id": "carrera",
+          "fen": "8/8/8/8/P7/8/6k1/K7 w - - 0 1",
+          "objetivo": "ganar",
+          "consigna": "El rey negro está afuera del cuadrado del peón: coroná y ganá.",
+          "pista": "Avanzá el peón: el rey negro no llega.",
+          "maxJugadas": 30,
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "a4a5",
+            "dtm": 25,
+            "fecha": "2026-10-06"
+          }
+        },
+        {
+          "id": "alcanzar",
+          "fen": "k7/8/8/8/7p/8/8/3K4 w - - 0 1",
+          "objetivo": "tablas",
+          "consigna": "Alcanzá el peón negro antes de que corone.",
+          "pista": "Entrá en el cuadrado h4-d4-d1-h1: el rey tiene que ir hacia la columna h, no quedarse en la primera fila.",
+          "maxJugadas": 10,
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "d1e1",
+            "dtm": 0,
+            "fecha": "2026-10-06"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Rule of the square (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Rule_of_the_square",
+          "licencia": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    {
+      "id": "oposicion",
+      "titulo": "Rey y peón: oposición y casillas clave",
+      "nivel": 2,
+      "explicacion": [
+        "En los finales de rey y peón contra rey, el resultado depende de si el rey del bando fuerte llega a una casilla clave: para un peón que no es de torre, son las tres casillas que están dos filas delante del peón (cuando el peón ya pasó la mitad del tablero, también las de una fila adelante).",
+        "La oposición es la situación en que los reyes quedan enfrentados con una casilla de por medio y le toca mover al otro: el que tiene que mover cede el paso. Con la oposición, el rey fuerte entra; sin ella, el rey débil lo frena.",
+        "Regla práctica: primero se lleva el rey adelante del peón, y el peón se mueve después. Mover el peón antes de tiempo suele regalar la oposición y las tablas.",
+        "Para el bando que defiende: el rey va delante del peón, y cuando el peón avanza a la casilla de al lado del rey, el rey se pone justo enfrente."
+      ],
+      "ideas": [
+        "Rey delante del peón, no al costado ni detrás.",
+        "Si el rey del bando fuerte llega a la sexta fila delante de su peón (no de torre), gana siempre, mueva quien mueva.",
+        "El peón sirve de jugada de reserva: un avance a tiempo puede ceder el turno y ganar la oposición."
+      ],
+      "posiciones": [
+        {
+          "id": "tomar-oposicion",
+          "fen": "8/8/8/3k4/8/8/3PK3/8 w - - 0 1",
+          "objetivo": "ganar",
+          "consigna": "Ganá el final. Solo una jugada de rey gana: las de peón tablean.",
+          "pista": "Re3-d3 enfrentando al rey negro: tomá la oposición.",
+          "maxJugadas": 30,
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "e2d3",
+            "dtm": 41,
+            "fecha": "2026-10-06"
+          }
+        },
+        {
+          "id": "primero-el-rey",
+          "fen": "3k4/8/8/8/8/8/3P4/3K4 w - - 0 1",
+          "objetivo": "ganar",
+          "consigna": "Ganá el final. Si movés el peón ahora, son tablas.",
+          "pista": "Primero el rey: Rc2 o Re2 y avanzá con el rey delante del peón.",
+          "maxJugadas": 35,
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "d1c2",
+            "dtm": 43,
+            "fecha": "2026-10-06"
+          }
+        },
+        {
+          "id": "rey-en-sexta",
+          "fen": "4k3/8/4K3/4P3/8/8/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "consigna": "Tu rey ya está en la sexta fila delante del peón: ganá sin ahogar.",
+          "pista": "Rd6 o Rf6, sin apurar el peón: cuidado con el ahogado.",
+          "maxJugadas": 25,
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "e6d6",
+            "dtm": 21,
+            "fecha": "2026-10-06"
+          }
+        },
+        {
+          "id": "defensa",
+          "fen": "8/8/8/8/4k3/4p3/4K3/8 w - - 0 1",
+          "objetivo": "tablas",
+          "consigna": "Defendé: hay una sola jugada que tablea.",
+          "pista": "Re1, retrocediendo en la misma columna. Si el rey negro va a d3 o f3, enfrentalo (Rd1 o Rf1); si el peón da jaque en e2, ponete delante con Re1.",
+          "maxJugadas": 15,
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "e2e1",
+            "dtm": 0,
+            "fecha": "2026-10-06"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Opposition (chess) (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Opposition_(chess)",
+          "licencia": "CC BY-SA 4.0"
+        },
+        {
+          "titulo": "King and pawn versus king endgame (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/King_and_pawn_versus_king_endgame",
+          "licencia": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    {
+      "id": "peon-de-torre",
+      "titulo": "El peón de torre",
+      "nivel": 2,
+      "explicacion": [
+        "Con un peón de torre las reglas cambian: si el rey que defiende llega a la esquina de coronación, son tablas aunque el bando fuerte tenga el rey cerca. El rey defensor no puede ser expulsado de la esquina y los intentos de echarlo terminan en ahogado.",
+        "Por eso el peón de torre vale mucho menos que los demás en finales de peones, y también con alfil del color que no controla la casilla de coronación."
+      ],
+      "ideas": [
+        "Si defendés, corré a la esquina.",
+        "Si atacás, impedí que el rey rival llegue a la esquina antes de avanzar."
+      ],
+      "posiciones": [
+        {
+          "id": "esquina",
+          "fen": "7k/8/5K2/7P/8/8/8/8 b - - 0 1",
+          "objetivo": "tablas",
+          "consigna": "Jugás con negras: hacé tablas.",
+          "pista": "Quedate pegado a la esquina: entre h8 y g8 (o h7).",
+          "maxJugadas": 20,
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "h8h7",
+            "dtm": 0,
+            "fecha": "2026-10-06"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "King and pawn versus king endgame (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/King_and_pawn_versus_king_endgame",
+          "licencia": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    {
+      "id": "lucena",
+      "titulo": "Finales de torres: la posición de Lucena",
+      "nivel": 3,
+      "explicacion": [
+        "Es la posición ganadora más importante de los finales de torres: el bando fuerte tiene el rey en la casilla de coronación delante de su peón en séptima, la torre rival da jaques por detrás y el rey defensor está cortado a una columna o más.",
+        "El método se llama \"construir el puente\": primero un jaque para alejar al rey defensor un poco más, después la torre a la cuarta fila; cuando el rey sale a la séptima, la torre en cuarta corta los jaques interponiéndose y el peón corona."
+      ],
+      "ideas": [
+        "Primero alejar al rey rival con un jaque de torre (Td1+).",
+        "La torre en la cuarta fila (Td4) es el puente que frena los jaques.",
+        "El rey sale de la casilla de coronación hacia el lado contrario al del rey rival."
+      ],
+      "posiciones": [
+        {
+          "id": "puente",
+          "fen": "1K6/1P1k4/8/8/8/8/r7/2R5 w - - 0 1",
+          "objetivo": "ganar",
+          "consigna": "Coroná el peón con el método del puente.",
+          "pista": "Td1+ primero; después la torre a d4.",
+          "maxJugadas": 40,
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "c1d1",
+            "dtm": 41,
+            "fecha": "2026-10-06"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Lucena position (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Lucena_position",
+          "licencia": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    {
+      "id": "philidor",
+      "titulo": "Finales de torres: la posición de Philidor",
+      "nivel": 3,
+      "explicacion": [
+        "La defensa básica de torre contra torre y peón: con el rey delante del peón, la torre defensora se queda en su tercera fila (la sexta, si defienden las negras) para que el rey rival no pueda avanzar.",
+        "Cuando el peón avanza a esa fila, ya no protege a su rey de los jaques: en ese momento la torre defensora se va a la primera fila (la octava, para las negras) y da jaques por detrás desde lejos. El rey atacante no tiene dónde esconderse."
+      ],
+      "ideas": [
+        "Mientras el peón no avance, torre en la tercera fila propia, moviéndose a lo largo de ella.",
+        "En cuanto el peón llega a esa fila, torre a la primera fila y jaques desde atrás.",
+        "Error típico: dejar la tercera fila antes de tiempo y permitir que el rey atacante llegue a la sexta."
+      ],
+      "posiciones": [
+        {
+          "id": "tercera-fila",
+          "fen": "4k3/7R/r7/4P3/3K4/8/8/8 b - - 0 1",
+          "objetivo": "tablas",
+          "consigna": "Jugás con negras: defendé con el método de Philidor.",
+          "pista": "La torre se queda en la sexta fila (Tb6, Tc6...) hasta que el peón llegue a e6; recién ahí, a la primera fila para dar jaques.",
+          "maxJugadas": 30,
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "a6a1",
+            "dtm": 0,
+            "fecha": "2026-10-06"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Philidor position (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Philidor_position",
+          "licencia": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    {
+      "id": "alfil-equivocado",
+      "titulo": "Alfil y peón de torre del color equivocado",
+      "nivel": 3,
+      "explicacion": [
+        "Con alfil y peón de torre, si el alfil no controla la casilla de coronación, el rey defensor que llega a esa esquina hace tablas: no hay forma de echarlo sin ahogarlo.",
+        "Es un recurso defensivo muy útil en la práctica: al cambiar piezas, hay que mirar si queda este final."
+      ],
+      "ideas": [
+        "Mirá de qué color es la casilla de coronación y de qué color es el alfil.",
+        "El defensor corre a la esquina; el atacante tiene que impedirlo antes de avanzar el peón."
+      ],
+      "posiciones": [
+        {
+          "id": "a-la-esquina",
+          "fen": "8/1k6/8/8/8/8/P7/2B1K3 b - - 0 1",
+          "objetivo": "tablas",
+          "consigna": "Jugás con negras: hacé tablas.",
+          "pista": "El alfil es de casillas negras y el peón corona en a8, blanca: tu rey tiene que llegar a a8.",
+          "maxJugadas": 25,
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "b7a6",
+            "dtm": 0,
+            "fecha": "2026-10-06"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Wrong rook pawn (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Wrong_rook_pawn",
+          "licencia": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    {
+      "id": "dama-contra-peon",
+      "titulo": "Dama contra peón en séptima",
+      "nivel": 4,
+      "explicacion": [
+        "Contra un peón central o de caballo en séptima apoyado por su rey, la dama gana con un método fijo: jaques y clavadas para obligar al rey defensor a ponerse delante de su peón; cada vez que lo hace, el rey propio se acerca una casilla. Cuando el rey llega, se gana el peón o se da mate.",
+        "Contra un peón de alfil o de torre en séptima, en cambio, el defensor suele tener tablas por ahogado si el rey atacante está lejos."
+      ],
+      "ideas": [
+        "Obligar al rey rival a bloquear su propio peón para ganar un tiempo.",
+        "Acercar el rey propio en cada tiempo ganado."
+      ],
+      "posiciones": [
+        {
+          "id": "peon-d",
+          "fen": "8/8/8/8/8/1K6/3pk3/7Q w - - 0 1",
+          "objetivo": "ganar",
+          "consigna": "Ganá el peón o dá mate.",
+          "pista": "Jaques para llevar al rey negro a d1, delante del peón, y acercá tu rey.",
+          "maxJugadas": 30,
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "h1e4",
+            "dtm": 15,
+            "fecha": "2026-10-06"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Queen versus pawn endgame (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Queen_versus_pawn_endgame",
+          "licencia": "CC BY-SA 4.0"
+        }
+      ]
+    }
+  ]
+}
