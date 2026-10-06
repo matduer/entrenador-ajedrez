@@ -2,6 +2,7 @@
   import { SECCIONES, type IdSeccion } from './lib/secciones'
   import AvisoActualizacion from './lib/AvisoActualizacion.svelte'
   import Ajustes from './pantallas/Ajustes.svelte'
+  import Aperturas from './pantallas/Aperturas.svelte'
   import MisPartidas from './pantallas/MisPartidas.svelte'
   import Tactica from './pantallas/Tactica.svelte'
 
@@ -39,6 +40,8 @@
       <MisPartidas />
     {:else if actual === 'tactica'}
       <Tactica />
+    {:else if actual === 'aperturas'}
+      <Aperturas />
     {:else if actual === 'ajustes'}
       <Ajustes />
     {:else}

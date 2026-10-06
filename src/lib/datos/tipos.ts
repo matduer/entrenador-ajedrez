@@ -32,6 +32,8 @@ export interface Partida {
   terminacion?: string
   eco?: string
   apertura?: string
+  /** Clasificación propia con el catálogo de aperturas (igual criterio para Lichess y Chess.com). */
+  aperturaApp?: { eco: string; familia: string; nombre: string } | null
   jugadas: string[] // UCI estándar
   relojes?: number[] // centésimas de segundo que le quedan al que acaba de mover, una por jugada
   estadoAnalisis: EstadoAnalisis
@@ -71,6 +73,29 @@ export interface Repaso {
   ultimo?: number
 }
 
+/** Una línea de mi repertorio, desde la posición inicial. */
+export interface LineaRepertorio {
+  id: string // `${color}:${ucis.join(' ')}`
+  color: Color
+  ucis: string[]
+  nombre?: string
+  origen: 'manual' | 'partidas' | 'catalogo'
+  creada: number
+}
+
+/** Repaso espaciado de una línea de apertura practicada (de mi repertorio o del catálogo). */
+export interface RepasoLinea {
+  id: string // `${color}:${ucis.join(' ')}`
+  color: Color
+  ucis: string[]
+  card: Card
+  creado: number
+  intentos: number
+  aciertos: number
+  ultimo?: number
+  ultimoBien?: boolean
+}
+
 export interface Ajuste {
   clave: string
   valor: unknown
@@ -84,4 +109,6 @@ export interface Respaldo {
   errores: ErrorPartida[]
   repasos: Repaso[]
   ajustes: Ajuste[]
+  repertorio?: LineaRepertorio[]
+  repasosLineas?: RepasoLinea[]
 }

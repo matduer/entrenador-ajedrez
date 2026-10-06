@@ -29,7 +29,7 @@ export default defineConfig({
       },
       workbox: {
         // Incluye el motor (stockfish.wasm, ~1,7 MB) para que funcione sin conexión.
-        globPatterns: ['**/*.{js,css,html,svg,png,woff2,wasm}'],
+        globPatterns: ['**/*.{js,css,html,svg,png,woff2,wasm,json}'],
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
       },
     }),

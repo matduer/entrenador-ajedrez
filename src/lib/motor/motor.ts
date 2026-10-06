@@ -117,3 +117,13 @@ export function motorFondo(): Motor {
 export function motorInteractivo(): Motor {
   return (interactivo ??= new Motor())
 }
+
+let tablero: Motor | undefined
+
+/**
+ * Motor del análisis continuo del explorador: se corta y se relanza cada vez que cambia la
+ * posición, así que no puede compartirse con verificaciones que tienen que terminar.
+ */
+export function motorTablero(): Motor {
+  return (tablero ??= new Motor())
+}

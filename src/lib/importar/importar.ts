@@ -74,6 +74,33 @@ export async function importarNuevas(alInformar: (mensaje: string) => void): Pro
   return resultados
 }
 
+/**
+ * Las exportaciones PGN de Lichess suelen bajarse sin tiempos. Esto vuelve a pedir todas las
+ * partidas a la API (que sí los trae) y completa el reloj de las que no lo tienen. Tarda: Lichess
+ * entrega unas 20 partidas por segundo sin token.
+ */
+export async function completarRelojesLichess(alInformar: (mensaje: string) => void): Promise<number> {
+  const { lichess } = await leerUsuarios()
+  if (!lichess) return 0
+  let completadas = 0
+  await importarLichess(
+    lichess,
+    0,
+    async (lote) => {
+      const existentes = await db.partidas.bulkGet(lote.map((p) => p.id))
+      const cambios: Partida[] = []
+      lote.forEach((p, i) => {
+        const actual = existentes[i]
+        if (actual && !actual.relojes && p.relojes?.length) cambios.push({ ...actual, relojes: p.relojes })
+      })
+      await db.partidas.bulkPut(cambios)
+      completadas += cambios.length
+    },
+    (n) => alInformar(`${n} partidas revisadas, ${completadas} relojes completados…`),
+  )
+  return completadas
+}
+
 export async function importarArchivoPgn(texto: string): Promise<{ leidas: number; nuevas: number }> {
   const partidas = partidasDesdeTextoPgn(texto, await leerUsuarios())
   return { leidas: partidas.length, nuevas: await guardarNuevas(partidas) }

@@ -12,6 +12,7 @@
     "prebuild": "npm run motor",
     "build": "vite build",
     "analisis-previo": "node scripts/preparar-analisis-previo.ts",
+    "aperturas": "node scripts/preparar-aperturas.ts",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json"
   },

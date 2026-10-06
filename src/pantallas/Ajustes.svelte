@@ -1,11 +1,13 @@
 <script lang="ts">
   import { contarPendientes } from '../lib/analisis/cola.svelte.ts'
-  import { db, guardarAjuste, leerPreferencias, leerUsuarios, PREFERENCIAS_INICIALES, type Preferencias } from '../lib/datos/db.ts'
+  import { db, guardarAjuste, leerAjuste, leerPreferencias, leerUsuarios, PREFERENCIAS_INICIALES, type Preferencias } from '../lib/datos/db.ts'
   import type { Usuarios } from '../lib/datos/normalizar.ts'
   import { descargarRespaldo, importarRespaldo } from '../lib/datos/respaldo.ts'
-  import { importarArchivoPgn, mensajeDeError } from '../lib/importar/importar.ts'
+  import { completarRelojesLichess, importarArchivoPgn, mensajeDeError } from '../lib/importar/importar.ts'
 
   let usuarios = $state<Usuarios>({})
+  let token = $state('')
+  leerAjuste<string>('tokenLichess', '').then((t) => (token = t))
   let preferencias = $state<Preferencias>({ ...PREFERENCIAS_INICIALES })
   let guardado = $state('')
   let mensajeRespaldo = $state('')
@@ -28,6 +30,7 @@
     }
     await guardarAjuste('usuarios', limpio)
     await guardarAjuste('preferencias', $state.snapshot(preferencias))
+    await guardarAjuste('tokenLichess', token.trim())
     guardado = 'Guardado.'
     setTimeout(() => (guardado = ''), 2500)
   }
@@ -51,6 +54,20 @@
       await cargar()
     } catch (err) {
       mensajeRespaldo = `No se pudo importar: ${mensajeDeError(err)}`
+    } finally {
+      ocupado = false
+    }
+  }
+
+  let mensajeRelojes = $state('')
+
+  async function completarRelojes() {
+    ocupado = true
+    try {
+      const n = await completarRelojesLichess((m) => (mensajeRelojes = m))
+      mensajeRelojes = `Listo: ${n} partidas con reloj completado.`
+    } catch (err) {
+      mensajeRelojes = `No se pudo completar: ${mensajeDeError(err)}`
     } finally {
       ocupado = false
     }
@@ -80,6 +97,16 @@
   <p class="suave">Se usan para importar tus partidas por las APIs públicas, sin contraseña.</p>
   <label>Lichess <input bind:value={usuarios.lichess} autocomplete="off" autocapitalize="off" spellcheck="false" /></label>
   <label>Chess.com <input bind:value={usuarios.chesscom} autocomplete="off" autocapitalize="off" spellcheck="false" /></label>
+
+  <label>
+    Token de Lichess (opcional)
+    <input type="password" bind:value={token} autocomplete="off" placeholder="lip_…" />
+  </label>
+  <p class="suave">
+    Solo hace falta para ver las estadísticas de la base Masters en el explorador de aperturas. Se crea sin marcar ningún
+    permiso en <a href="https://lichess.org/account/oauth/token" target="_blank" rel="noopener">lichess.org/account/oauth/token</a>.
+    Queda solo en este dispositivo y no viaja en los respaldos.
+  </p>
 
   <h2>Entrenamiento</h2>
   <label>
@@ -126,6 +153,16 @@
     <input type="file" accept=".pgn,text/plain" onchange={alElegirPgn} disabled={ocupado} />
   </label>
   {#if mensajePgn}<p>{mensajePgn}</p>{/if}
+</section>
+
+<section class="tarjeta">
+  <h2>Completar relojes de Lichess</h2>
+  <p class="suave">
+    Las estadísticas de reloj necesitan el tiempo de cada jugada. Si cargaste partidas de Lichess desde un PGN sin tiempos,
+    esto los pide a la API de Lichess. Tarda unos minutos cada mil partidas.
+  </p>
+  <button class="boton" onclick={completarRelojes} disabled={ocupado || !navigator.onLine}>Completar relojes</button>
+  {#if mensajeRelojes}<p>{mensajeRelojes}</p>{/if}
 </section>
 
 <section class="tarjeta">
