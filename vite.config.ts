@@ -28,8 +28,9 @@ export default defineConfig({
         ],
       },
       workbox: {
-        // El motor (WASM) y los datos de contenido se suman al precache en las etapas siguientes.
-        globPatterns: ['**/*.{js,css,html,svg,png,woff2}'],
+        // Incluye el motor (stockfish.wasm, ~1,7 MB) para que funcione sin conexión.
+        globPatterns: ['**/*.{js,css,html,svg,png,woff2,wasm}'],
+        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
       },
     }),
   ],

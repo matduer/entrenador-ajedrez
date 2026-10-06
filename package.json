@@ -5,9 +5,13 @@
   "license": "GPL-3.0-or-later",
   "type": "module",
   "scripts": {
+    "motor": "node scripts/copiar-motor.mjs",
+    "predev": "npm run motor",
     "dev": "vite",
-    "dev:red": "vite --host",
+    "dev:red": "npm run motor && vite --host",
+    "prebuild": "npm run motor",
     "build": "vite build",
+    "analisis-previo": "node scripts/preparar-analisis-previo.ts",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json"
   },
@@ -20,5 +24,12 @@
     "typescript": "~6.0.2",
     "vite": "^8.3.0",
     "vite-plugin-pwa": "^2.0.0"
+  },
+  "dependencies": {
+    "chessground": "^9.2.1",
+    "chessops": "^0.15.1",
+    "dexie": "^4.4.6",
+    "stockfish": "^19.0.0",
+    "ts-fsrs": "^5.4.2"
   }
 }

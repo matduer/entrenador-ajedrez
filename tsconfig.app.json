@@ -6,6 +6,9 @@
     "module": "esnext",
     "types": ["svelte", "vite/client", "vite-plugin-pwa/client"],
     "allowArbitraryExtensions": true,
+    // Los módulos de src/lib/ajedrez y src/lib/datos también los usan scripts de Node (scripts/),
+    // que necesitan la extensión .ts explícita en los imports.
+    "allowImportingTsExtensions": true,
     "noEmit": true,
     /**
      * Typecheck JS in `.svelte` and `.js` files by default.

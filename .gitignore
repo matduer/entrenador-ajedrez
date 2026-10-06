@@ -3,6 +3,9 @@ dist/
 .vite/
 *.local
 
+# Se copia desde node_modules/stockfish en cada build (npm run motor).
+public/motor/
+
 # Datos privados: partidas con nombres de rivales y análisis crudo. No van al repo público.
 docs/contexto/partidas/
 datos-privados/

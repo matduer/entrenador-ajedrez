@@ -1,6 +1,9 @@
 <script lang="ts">
   import { SECCIONES, type IdSeccion } from './lib/secciones'
   import AvisoActualizacion from './lib/AvisoActualizacion.svelte'
+  import Ajustes from './pantallas/Ajustes.svelte'
+  import MisPartidas from './pantallas/MisPartidas.svelte'
+  import Tactica from './pantallas/Tactica.svelte'
 
   function seccionDesdeHash(): IdSeccion {
     const id = location.hash.replace('#/', '')
@@ -23,7 +26,7 @@
     {#each SECCIONES as s (s.id)}
       <a href={`#/${s.id}`} aria-current={s.id === actual ? 'page' : undefined}>
         <span class="icono" aria-hidden="true">{s.icono}</span>
-        <span class="etiqueta">{s.titulo}</span>
+        <span class="rotulo">{s.titulo}</span>
       </a>
     {/each}
   </nav>
@@ -32,9 +35,17 @@
     {#if !enLinea}
       <p class="sin-conexion">Sin conexión: todo funciona salvo importar partidas y las consultas en línea.</p>
     {/if}
-    <h1>{seccion.titulo}</h1>
-    <p class="descripcion">{seccion.descripcion}</p>
-    <p class="pendiente">En construcción · etapa {seccion.etapa}</p>
+    {#if actual === 'partidas'}
+      <MisPartidas />
+    {:else if actual === 'tactica'}
+      <Tactica />
+    {:else if actual === 'ajustes'}
+      <Ajustes />
+    {:else}
+      <h1>{seccion.titulo}</h1>
+      <p class="descripcion">{seccion.descripcion}</p>
+      <p class="pendiente">En construcción</p>
+    {/if}
   </main>
 </div>
 
