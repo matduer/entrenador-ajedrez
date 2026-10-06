@@ -56,23 +56,3 @@
     <Practica {...practica} alSalir={() => (modo = 'explorar')} />
   {/key}
 {/if}
-
-<style>
-  .pestanas {
-    display: flex;
-    gap: 4px;
-    margin-bottom: 12px;
-  }
-  .pestanas button {
-    flex: 1;
-    border: 1px solid var(--borde);
-    background: var(--superficie);
-    color: var(--texto-suave);
-    border-radius: 8px;
-    padding: 8px;
-  }
-  .pestanas button[aria-selected='true'] {
-    color: var(--acento);
-    border-color: var(--acento);
-  }
-</style>

@@ -5,6 +5,9 @@
   import type { ErrorPartida, Partida } from '../lib/datos/tipos.ts'
   import { armarSesion, estadoRepaso, FILTROS_INICIALES, type EstadoRepaso, type Filtros, type ResultadoIntento } from '../lib/repaso/repaso.ts'
   import Ejercicio from '../lib/ui/Ejercicio.svelte'
+  import TacticaLichess from './TacticaLichess.svelte'
+
+  let fuente = $state<'propios' | 'lichess'>('propios')
 
   const MOTIVOS = [
     'pieza colgada',
@@ -95,6 +98,17 @@
   {/key}
 {:else}
   <h1>Táctica</h1>
+  <div class="pestanas" role="tablist">
+    <button role="tab" aria-selected={fuente === 'propios'} onclick={() => (fuente = 'propios')}>Mis errores</button>
+    <button role="tab" aria-selected={fuente === 'lichess'} onclick={() => (fuente = 'lichess')}>Problemas de Lichess</button>
+  </div>
+{/if}
+
+{#if enSesion && sesion[indice]}
+  <!-- sesión en curso: ya se mostró arriba -->
+{:else if fuente === 'lichess'}
+  <TacticaLichess />
+{:else}
   <p class="suave">
     Ejercicios armados con tus propios errores: la posición antes de la jugada mala, para encontrar la buena. Lo que
     fallás vuelve antes.

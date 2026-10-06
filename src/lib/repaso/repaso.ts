@@ -54,7 +54,8 @@ export async function estadoRepaso(filtros: Filtros): Promise<EstadoRepaso> {
   const { elegibles, porId, repasos } = await datos(filtros)
   const ahora = Date.now()
   const { nuevosPorDia } = await leerPreferencias()
-  const empezadosHoy = repasos.filter((r) => r.creado >= inicioDelDia()).length
+  // Los problemas de Lichess comparten la tabla de repasos pero tienen su propio límite diario.
+  const empezadosHoy = repasos.filter((r) => r.creado >= inicioDelDia() && !r.errorId.startsWith('lichess-problema:')).length
   return {
     vencidos: elegibles.filter((e) => {
       const r = porId.get(e.id)

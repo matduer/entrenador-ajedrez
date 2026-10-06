@@ -1,0 +1,95 @@
+/**
+ * Verifica con Stockfish las explicaciones de aperturas (src/contenido/aperturas/*.json):
+ *  - cada jugada explicada ("por qué sí") tiene que ser legal y no perder más de 0,06 de chances
+ *    de ganar respecto de la mejor jugada;
+ *  - cada alternativa de "por qué no" tiene que ser legal y perder al menos 0,08;
+ *  - las trampas tienen que ser jugables.
+ * Guarda el resultado en el campo `verificacion` de cada archivo y termina con código 1 si algo falla.
+ *
+ * Uso: node scripts/verificar-explicaciones.ts [profundidad]
+ * Motor: variable de entorno STOCKFISH (ruta al ejecutable); por defecto, el que ya estaba instalado.
+ */
+import { readFileSync, readdirSync, writeFileSync } from 'node:fs'
+import { textoEvaluacion } from '../src/lib/ajedrez/evaluacion.ts'
+import { lineaSan } from '../src/lib/ajedrez/posicion.ts'
+import { fensDeLinea } from '../src/lib/aperturas/arbol.ts'
+import type { Explicacion, ResultadoVerificacion } from '../src/lib/aperturas/explicaciones.ts'
+import { MotorNativo } from './lib-motor.ts'
+
+const PROFUNDIDAD = Number(process.argv[2] ?? 20)
+const CARPETA = 'src/contenido/aperturas'
+const motor = new MotorNativo(PROFUNDIDAD)
+const evaluarJugada = (prefijo: string[], uci: string) => motor.evaluarJugada(prefijo, uci)
+
+let fallas = 0
+for (const archivo of readdirSync(CARPETA).filter((f) => f.endsWith('.json'))) {
+  const ruta = `${CARPETA}/${archivo}`
+  const e: Explicacion = JSON.parse(readFileSync(ruta, 'utf8'))
+  const resultados: Record<string, ResultadoVerificacion> = {}
+  const raiz = e.raiz.split(' ')
+  if (fensDeLinea(raiz).length !== raiz.length + 1) {
+    console.log(`✗ ${archivo}: la raíz no es legal`)
+    fallas++
+  }
+
+  for (const [clave, nota] of Object.entries(e.notas)) {
+    const ucis = clave.split(' ')
+    const prefijo = ucis.slice(0, -1)
+    const uci = ucis[ucis.length - 1]
+    const sanes = lineaSan(fensDeLinea([])[0], ucis)
+    const etiqueta = sanes.join(' ')
+    const r = await evaluarJugada(prefijo, uci)
+    if (!r) {
+      resultados[clave] = { ok: false, detalle: 'Jugada ilegal' }
+      console.log(`✗ ${archivo} ${clave}: ilegal`)
+      fallas++
+      continue
+    }
+    const ok = r.perdida <= 0.06
+    resultados[clave] = {
+      ok,
+      detalle: ok
+        ? `Stockfish (prof. ${PROFUNDIDAD}): ${textoEvaluacion(r.despues)} para el bando que mueve`
+        : `Stockfish (prof. ${PROFUNDIDAD}) prefiere ${lineaSan(fensDeLinea(prefijo).at(-1)!, [r.mejor])[0]}: ${textoEvaluacion(r.antes)} contra ${textoEvaluacion(r.despues)}`,
+    }
+    if (!ok) {
+      console.log(`✗ ${archivo} ${etiqueta}: pierde ${r.perdida.toFixed(3)} — ${resultados[clave].detalle}`)
+      fallas++
+    }
+    for (const alt of nota.porQueNo ?? []) {
+      const q = await evaluarJugada(prefijo, alt.uci)
+      const claveAlt = `${prefijo.join(' ')} ${alt.uci} (por qué no)`
+      if (!q) {
+        resultados[claveAlt] = { ok: false, detalle: 'Jugada ilegal' }
+        console.log(`✗ ${archivo} por qué no ${alt.uci} tras ${prefijo.join(' ')}: ilegal`)
+        fallas++
+        continue
+      }
+      const okAlt = q.perdida >= 0.08
+      const fenAlt = fensDeLinea([...prefijo, alt.uci]).at(-1)!
+      resultados[claveAlt] = {
+        ok: okAlt,
+        detalle: `Pierde ${(q.perdida * 50).toFixed(0)} puntos de chances: ${textoEvaluacion(q.antes)} → ${textoEvaluacion(q.despues)}. Refutación: ${lineaSan(fenAlt, q.refutacion.slice(0, 6)).join(' ')}`,
+      }
+      if (!okAlt) {
+        console.log(`✗ ${archivo} por qué no ${lineaSan(fensDeLinea(prefijo).at(-1)!, [alt.uci])[0]} tras ${etiqueta}: solo pierde ${q.perdida.toFixed(3)}`)
+        fallas++
+      }
+    }
+  }
+
+  for (const t of e.trampas) {
+    const ucis = t.jugadas.split(' ')
+    if (fensDeLinea(ucis).length !== ucis.length + 1) {
+      console.log(`✗ ${archivo} trampa ilegal: ${t.jugadas}`)
+      fallas++
+    }
+  }
+
+  e.verificacion = { motor: 'Stockfish', profundidad: PROFUNDIDAD, fecha: new Date().toISOString().slice(0, 10), resultados }
+  writeFileSync(ruta, JSON.stringify(e, null, 2) + '\n')
+  console.log(`${archivo}: ${Object.values(resultados).filter((r) => r.ok).length}/${Object.keys(resultados).length} verificaciones OK`)
+}
+motor.cerrar()
+console.log(fallas ? `${fallas} problema(s): revisar el contenido.` : 'Todo verificado.')
+process.exit(fallas ? 1 : 0)

@@ -1,0 +1,488 @@
+{
+  "id": "caro-kann",
+  "nombre": "Defensa Caro-Kann",
+  "raiz": "e2e4 c7c6",
+  "resumen": "Defensa sólida contra 1.e4: el negro prepara ...d5 apoyado por el peón de c6 y, a diferencia de la Francesa, todavía puede sacar el alfil de c8 antes de cerrar la cadena con ...e6. Las posiciones suelen ser más de maniobra que de cálculo. Para las blancas, la Variante del Avance (3.e5) gana espacio; la Clásica (3.Cc3) abre el juego y busca ventaja de desarrollo; la del Cambio (3.exd5) da una estructura simétrica y tranquila.",
+  "planesBlancas": [
+    "Avance: aprovechar el espacio que da el peón de e5. En el sistema Short (Cf3, Ae2, O-O) se desarrolla sin apuro y se juega c3 o Ae3 según cómo ataque el negro el centro con ...c5.",
+    "Avance: el alfil negro de f5 es la pieza que justifica la defensa. Ideas típicas para molestarlo: Ch4 (cuando ya no se lo puede comer la dama), h4-h5, o g4 cuando la dama defiende la casilla (variante Van der Wiel, con Cc3 y Cge2).",
+    "Avance: si el negro juega ...c5 y cambia en d4, el centro se abre y las piezas blancas más activas pesan; dxc5 seguido de Ae3 o b4 puede ganar casillas en el flanco de dama.",
+    "Clásica: después de 5.Cg3 Ag6, avanzar h4-h5 para ganar espacio y forzar al alfil a h7, y enrocar largo con una posición más libre.",
+    "Cambio: desarrollo simple (Ad3, c3, Af4, Cf3) y juego en el flanco de rey; la estructura es la Carlsbad con colores invertidos."
+  ],
+  "planesNegras": [
+    "Sacar el alfil de c8 afuera de la cadena (...Af5 o ...Ag4) antes de jugar ...e6: es la gran diferencia con la Francesa.",
+    "Atacar la base de la cadena blanca con ...c5 (Avance) para que el centro no quede firme; preparar ...Cc6, ...Db6 y presión sobre d4.",
+    "Desarrollar el caballo de g8 por e7 (no por f6, que está controlada por el peón de e5) y llevarlo a f5 o g6.",
+    "En la Clásica, mantener una estructura sin debilidades y buscar ...c5 o ...e5 para liberar el juego."
+  ],
+  "estructura": "En el Avance, cadena blanca d4-e5 contra la negra c6-d5-e6: el negro juega en el flanco de dama (...c5) y las blancas tienen más espacio en el de rey. En la Clásica desaparece el peón de d5 y el negro queda con peones en c6 y e6, sin debilidades pero con menos espacio. En el Cambio, d4 contra d5 con columnas c y e semiabiertas.",
+  "rupturas": [
+    "...c5 contra la cadena d4-e5 (Avance), a veces preparada con ...Cd7 y ...Ce7.",
+    "...f6 para cuestionar e5 cuando el negro está bien desarrollado.",
+    "c4 de las blancas en el Avance para abrir el juego en el centro y el flanco de dama.",
+    "...c5 o ...e5 del negro en la Clásica, para ganar espacio y activar las piezas."
+  ],
+  "piezas": [
+    "Alfil negro de casillas blancas: afuera de la cadena (f5/g6/h7). Si queda encerrado detrás de e6, la Caro-Kann pierde su sentido.",
+    "Caballo negro de g8: e7 (y después f5 o g6) en el Avance; f6 en la Clásica y el Cambio.",
+    "Alfil blanco de casillas blancas: en el Avance conviene no cambiarlo enseguida por el negro de f5; en la Clásica, Ad3 para cambiarlo y dejar al negro con menos control de casillas blancas.",
+    "Caballo blanco: en la Clásica salta a g3 para atacar al alfil de f5; en el Avance, Ch4 para hostigarlo una vez que el alfil se retiró a g6."
+  ],
+  "trampas": [
+    {
+      "jugadas": "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 d1e2 g8f6 e4d6",
+      "texto": "Mate de la coz en 6 jugadas: con la dama en e2, el peón negro de e7 está clavado y no puede capturar en d6. Si el negro desarrolla 5...Cgf6 sin mirar, 6.Cd6# es mate."
+    },
+    {
+      "jugadas": "e2e4 c7c6 d2d4 d7d5 e4e5 c8g4 d1g4",
+      "texto": "Tras 3.e5, el alfil a g4 no está defendido: la diagonal d1-g4 está abierta porque el peón de e2 ya salió. 3...Ag4?? 4.Dxg4 gana una pieza."
+    }
+  ],
+  "notas": {
+    "e2e4 c7c6": {
+      "porQue": "Prepara ...d5 con el apoyo del peón de c6. A diferencia de 1...e6 (Francesa), deja abierta la diagonal del alfil de c8, que va a salir antes de cerrar con ...e6."
+    },
+    "e2e4 c7c6 d2d4": {
+      "porQue": "Ocupa el centro con los dos peones: si el negro no juega ...d5, las blancas quedan con un centro ideal."
+    },
+    "e2e4 c7c6 d2d4 d7d5": {
+      "porQue": "La idea de la defensa: atacar e4 con un peón apoyado. Las blancas tienen que decidir: avanzar (e5), defender o cambiar (exd5)."
+    },
+    "e2e4 c7c6 d2d4 d7d5 e4e5": {
+      "porQue": "Variante del Avance: gana espacio y le quita la casilla f6 al caballo negro. A cambio, el centro queda fijo y el negro puede atacar la base de la cadena con ...c5."
+    },
+    "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5": {
+      "porQue": "El alfil sale de la cadena antes de ...e6, que es el objetivo de toda la Caro-Kann. Después vienen ...e6 y ...c5.",
+      "porQueNo": [
+        {
+          "uci": "c8g4",
+          "texto": "El alfil en g4 no tiene defensa y la diagonal de la dama blanca está abierta: Dxg4 lo gana."
+        },
+        {
+          "uci": "g8f6",
+          "texto": "Con el peón en e5, f6 está controlada: exf6 gana el caballo."
+        }
+      ]
+    },
+    "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 g1f3": {
+      "porQue": "Sistema Short: desarrollo tranquilo, sin debilitar nada. El caballo defiende d4 y prepara Ae2 y el enroque.",
+      "porQueNo": [
+        {
+          "uci": "d1d3",
+          "texto": "Ofrecer el cambio de alfiles con la dama no funciona: el alfil de f5 controla d3 y se come la dama."
+        },
+        {
+          "uci": "d1f3",
+          "texto": "La dama en f3 deja sin defensa el peón de c2: ...Axc2 y el negro gana un peón con buena posición."
+        }
+      ]
+    },
+    "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 g1f3 e7e6": {
+      "porQue": "Con el alfil ya afuera, ...e6 refuerza d5 y abre la diagonal del alfil de f8, que apoya la ruptura ...c5."
+    },
+    "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 g1f3 e7e6 f1e2": {
+      "porQue": "Desarrolla y prepara el enroque. El alfil en e2 no se ofrece para cambiar por el de f5 y, si hace falta, cubre el flanco de rey.",
+      "porQueNo": [
+        {
+          "uci": "g2g4",
+          "texto": "Con el caballo en f3, la dama ya no defiende g4: ...Axg4 gana un peón. En la variante Van der Wiel g4 funciona porque el caballo todavía no está en f3."
+        },
+        {
+          "uci": "f3h4",
+          "texto": "Ch4 para cazar el alfil es una idea típica, pero acá la diagonal d8-h4 está abierta: ...Dxh4 gana el caballo."
+        }
+      ]
+    },
+    "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 g1f3 e7e6 f1e2 c6c5": {
+      "porQue": "La ruptura típica: ataca d4, la base de la cadena. El negro mueve dos veces el peón c, pero gana actividad.",
+      "porQueNo": [
+        {
+          "uci": "g8f6",
+          "texto": "El caballo no tiene la casilla f6 en el Avance: exf6. Su lugar es e7."
+        },
+        {
+          "uci": "f8d6",
+          "texto": "Ofrecer el cambio de alfiles en d6 no es posible: el peón de e5 controla la casilla y exd6 gana el alfil."
+        }
+      ]
+    },
+    "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 g1f3 e7e6 f1e2 c6c5 c1e3": {
+      "porQue": "Defiende d4 y deja el centro como está: si el negro cambia en d4, las blancas retoman con el caballo y quedan bien centralizadas."
+    },
+    "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 g1f3 e7e6 f1e2 c6c5 c1e3 d8b6": {
+      "porQue": "La dama presiona b2 y d4 a la vez; las blancas tienen que dedicar una jugada a cuidar b2 (Cc3 o Dc1, o b3).",
+      "porQueNo": [
+        {
+          "uci": "b7b5",
+          "texto": "Ganar espacio con ...b5 deja el peón sin defensa: Axb5+ y el negro además pierde el enroque."
+        },
+        {
+          "uci": "f8e7",
+          "texto": "Pasivo: dxc5 gana tiempo y el negro se queda sin presión sobre el centro."
+        }
+      ]
+    },
+    "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 g1f3 e7e6 f1e2 b8d7": {
+      "porQue": "Otra forma de jugarlo: primero desarrollo (...Cd7, ...Ce7) y recién después ...c5, para no dar a las blancas un blanco temprano."
+    },
+    "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 g1f3 e7e6 f1e2 b8d7 e1g1": {
+      "porQue": "Las blancas enrocan y quedan listas para c3, Cbd2 o Ch4 según el plan del negro."
+    },
+    "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 g1f3 e7e6 f1e2 b8d7 e1g1 g8e7": {
+      "porQue": "El caballo va a e7 (f6 está controlada) y desde ahí a g6 o f5. Recién con las piezas fuera conviene ...c5.",
+      "porQueNo": [
+        {
+          "uci": "c6c5",
+          "texto": "Con el negro sin desarrollar, ...c5 llega temprano: c4 abre el centro y el rey negro todavía está en e8."
+        }
+      ]
+    },
+    "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 b1c3": {
+      "porQue": "El camino agresivo: el caballo defiende d5 indirectamente y deja libre g4 para avanzar el peón con la dama detrás."
+    },
+    "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 b1c3 e7e6": {
+      "porQue": "Igual que contra el sistema Short: refuerza d5 y libera el alfil de f8."
+    },
+    "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 b1c3 e7e6 g2g4": {
+      "porQue": "Variante Van der Wiel: g4 echa al alfil con ganancia de tiempo. Funciona porque la dama todavía defiende g4 (no hay caballo en f3 tapando la diagonal)."
+    },
+    "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 b1c3 e7e6 g2g4 f5g6": {
+      "porQue": "El alfil se retira pero sigue afuera de la cadena, mirando el flanco de rey blanco."
+    },
+    "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 b1c3 e7e6 g2g4 f5g6 g1e2": {
+      "porQue": "El caballo va a e2 (no a f3) para no tapar la dama ni el peón de f, y amenaza Cf4 para atacar el alfil de g6."
+    },
+    "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 b1c3 e7e6 g2g4 f5g6 g1e2 c6c5": {
+      "porQue": "La respuesta necesaria: contraataque inmediato en el centro mientras las blancas gastan jugadas en el flanco de rey. Casi todas las demás jugadas dejan al negro peor.",
+      "porQueNo": [
+        {
+          "uci": "g6e4",
+          "texto": "Ofrecer el cambio en e4 parece activo, pero Cxe4 dxe4 deja un peón aislado en e4 que se pierde o queda débil, y las blancas se quedan con la pareja de alfiles."
+        },
+        {
+          "uci": "h7h5",
+          "texto": "Atacar g4 enseguida es lento: Cf4 ataca el alfil y el negro no tiene tiempo para el contrajuego en el centro."
+        }
+      ]
+    },
+    "e2e4 c7c6 d2d4 d7d5 b1c3": {
+      "porQue": "Variante Clásica (o Principal): defiende e4 desarrollando una pieza. Si el negro cambia en e4, las blancas recuperan con el caballo y quedan con ventaja de desarrollo."
+    },
+    "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4": {
+      "porQue": "El negro cambia el centro: ya no hay cadena de peones y el juego pasa a ser de piezas."
+    },
+    "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4": {
+      "porQue": "El caballo recupera el peón y queda centralizado; ahora el negro elige cómo desarrollarse (...Af5, ...Cd7 o ...Cf6)."
+    },
+    "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5": {
+      "porQue": "La línea Clásica: el alfil sale atacando el caballo de e4 y, otra vez, queda afuera antes de ...e6.",
+      "porQueNo": [
+        {
+          "uci": "c8g4",
+          "texto": "El mismo error que en el Avance: g4 no está defendida y Dxg4 gana la pieza."
+        },
+        {
+          "uci": "e7e6",
+          "texto": "Encierra al alfil de c8 sin necesidad: el negro queda pasivo, como en una Francesa mala."
+        }
+      ]
+    },
+    "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5 e4g3": {
+      "porQue": "El caballo se aparta atacando al alfil: el negro tiene que retirarlo o cambiarlo."
+    },
+    "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5 e4g3 f5g6": {
+      "porQue": "La única retirada buena: el alfil sigue en la diagonal y, si las blancas lo cambian, el negro retoma con el peón de h y abre la columna h.",
+      "porQueNo": [
+        {
+          "uci": "g8f6",
+          "texto": "Desarrollar dejando el alfil en f5 permite Cxf5: las blancas se quedan con la pareja de alfiles."
+        },
+        {
+          "uci": "e7e6",
+          "texto": "Tras Cxf5 exf5 el negro queda con peones doblados en la columna f y sin su alfil bueno."
+        }
+      ]
+    },
+    "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5 e4g3 f5g6 h2h4": {
+      "porQue": "Amenaza h5 para atrapar o echar al alfil. Ganar espacio en el flanco de rey es el plan blanco típico de la línea."
+    },
+    "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5 e4g3 f5g6 h2h4 h7h6": {
+      "porQue": "Le da al alfil la casilla h7 para cuando venga h5."
+    },
+    "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5 e4g3 f5g6 h2h4 h7h6 g1f3": {
+      "porQue": "Desarrollo con el caballo hacia e5, donde molesta al alfil y presiona f7."
+    },
+    "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5 e4g3 f5g6 h2h4 h7h6 g1f3 b8d7": {
+      "porQue": "Controla e5 para que el caballo blanco no se instale ahí."
+    },
+    "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5 e4g3 f5g6 h2h4 h7h6 g1f3 b8d7 h4h5": {
+      "porQue": "Fija el peón de h6 y echa al alfil a h7: el peón de h5 da espacio, aunque en el final puede quedar débil."
+    },
+    "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5 e4g3 f5g6 h2h4 h7h6 g1f3 b8d7 h4h5 g6h7": {
+      "porQue": "La única casilla del alfil, que sigue apuntando al flanco de dama blanco."
+    },
+    "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5 e4g3 f5g6 h2h4 h7h6 g1f3 b8d7 h4h5 g6h7 f1d3": {
+      "porQue": "Ofrece el cambio del mejor alfil negro: sin él, las casillas blancas del negro quedan más flojas."
+    },
+    "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5 e4g3 f5g6 h2h4 h7h6 g1f3 b8d7 h4h5 g6h7 f1d3 h7d3": {
+      "porQue": "El negro acepta el cambio: así se saca de encima la pieza blanca más activa."
+    },
+    "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5 e4g3 f5g6 h2h4 h7h6 g1f3 b8d7 h4h5 g6h7 f1d3 h7d3 d1d3": {
+      "porQue": "La dama retoma centralizada. Plan típico: Af4 o Ad2, enroque largo y juego en el centro; el negro, ...e6, ...Cgf6, ...Dc7 y ...O-O-O o ...c5."
+    },
+    "e2e4 c7c6 d2d4 d7d5 e4d5": {
+      "porQue": "Variante del Cambio: simplifica el centro. Es tranquila, pero no es inocua: las blancas desarrollan rápido y pueden atacar en el flanco de rey."
+    },
+    "e2e4 c7c6 d2d4 d7d5 e4d5 c6d5": {
+      "porQue": "Estructura simétrica: d5 contra d4. Las columnas c y e quedan semiabiertas."
+    },
+    "e2e4 c7c6 d2d4 d7d5 e4d5 c6d5 f1d3": {
+      "porQue": "El alfil apunta al flanco de rey negro y controla f5, para que el alfil de c8 no salga con comodidad."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Caro–Kann Defence (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Caro%E2%80%93Kann_Defence",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Chess Opening Theory/1. e4/1...c6/2. d4/2...d5/3. e5 (Wikilibros)",
+      "url": "https://en.wikibooks.org/wiki/Chess_Opening_Theory/1._e4/1...c6/2._d4/2...d5/3._e5",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-06",
+    "resultados": {
+      "e2e4 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5 c8g4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 42 puntos de chances: −0,4 → −8,0. Refutación: Dxg4 e6 c3 Ce7 Dd1 c5"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5 g8f6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 37 puntos de chances: −0,4 → −6,2. Refutación: exf6 gxf6 Cf3 Tg8 g3 Ag4"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 d1d3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 49 puntos de chances: +0,3 → −8,4. Refutación: Axd3 Axd3 e6 Cf3 Cd7 Af4"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 d1f3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 13 puntos de chances: +0,3 → −1,1. Refutación: Axc2 e6 fxe6 De2 Af5 g4"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 g1f3 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 g1f3 e7e6 f1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 g1f3 e7e6 g2g4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 22 puntos de chances: +0,5 → −2,0. Refutación: Axg4 Tg1 Ah5 Tg5 Axf3 Dxf3"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 g1f3 e7e6 f3h4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 47 puntos de chances: +0,5 → −7,0. Refutación: Dxh4 Ae3 De4 Rd2 Dh4 Re1"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 g1f3 e7e6 f1e2 c6c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 g1f3 e7e6 f1e2 g8f6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 37 puntos de chances: −0,4 → −6,1. Refutación: exf6 Dxf6 c4 Cd7 Ag5 Dg6"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 g1f3 e7e6 f1e2 f8d6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 40 puntos de chances: −0,4 → −7,4. Refutación: exd6 Dxd6 O-O Cd7 c4 h6"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 g1f3 e7e6 f1e2 c6c5 c1e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 g1f3 e7e6 f1e2 c6c5 c1e3 d8b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 g1f3 e7e6 f1e2 c6c5 c1e3 b7b5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 34 puntos de chances: −0,6 → −5,8. Refutación: Axb5+ Cd7 dxc5 a6 Aa4 Dc7"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 g1f3 e7e6 f1e2 c6c5 c1e3 f8e7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,6 → −1,4. Refutación: dxc5 Cc6 c4 Da5+ Dd2 Dxd2+"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 g1f3 e7e6 f1e2 b8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 g1f3 e7e6 f1e2 b8d7 e1g1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 g1f3 e7e6 f1e2 b8d7 e1g1 g8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 g1f3 e7e6 f1e2 b8d7 e1g1 c6c5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,4 → −1,0. Refutación: c4 dxc4 Cc3 a6 d5 Ce7"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 b1c3 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 b1c3 e7e6 g2g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 b1c3 e7e6 g2g4 f5g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 b1c3 e7e6 g2g4 f5g6 g1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 b1c3 e7e6 g2g4 f5g6 g1e2 c6c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 b1c3 e7e6 g2g4 f5g6 g1e2 g6e4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 28 puntos de chances: +0,2 → −3,1. Refutación: Cxe4 dxe4 c3 c5 Ag2 Cc6"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4e5 c8f5 b1c3 e7e6 g2g4 f5g6 g1e2 h7h5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: +0,2 → −0,7. Refutación: Cf4 Ah7 g5 Af5 Cxh5 c5"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8g4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 42 puntos de chances: −0,3 → −8,2. Refutación: Dxg4 e6 Dd1 Cd7 Cf3 Cb6"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 e7e6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,3 → −0,9. Refutación: Cf3 Cd7 Ad3 Cgf6 De2 Cxe4"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5 e4g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5 e4g3 f5g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5 e4g3 g8f6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,4 → −1,1. Refutación: Cxf5 Da5+ c3 Dxf5 Cf3 Dc8"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5 e4g3 e7e6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 13 puntos de chances: −0,4 → −1,8. Refutación: Cxf5 exf5 Cf3 Ae7 Ad3 Af6"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5 e4g3 f5g6 h2h4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5 e4g3 f5g6 h2h4 h7h6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5 e4g3 f5g6 h2h4 h7h6 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5 e4g3 f5g6 h2h4 h7h6 g1f3 b8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5 e4g3 f5g6 h2h4 h7h6 g1f3 b8d7 h4h5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5 e4g3 f5g6 h2h4 h7h6 g1f3 b8d7 h4h5 g6h7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5 e4g3 f5g6 h2h4 h7h6 g1f3 b8d7 h4h5 g6h7 f1d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5 e4g3 f5g6 h2h4 h7h6 g1f3 b8d7 h4h5 g6h7 f1d3 h7d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5 e4g3 f5g6 h2h4 h7h6 g1f3 b8d7 h4h5 g6h7 f1d3 h7d3 d1d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4d5 c6d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4d5 c6d5 f1d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      }
+    }
+  }
+}
