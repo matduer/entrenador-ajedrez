@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.vite/
+*.local
+
+# Datos privados: partidas con nombres de rivales y análisis crudo. No van al repo público.
+docs/contexto/partidas/
+datos-privados/
