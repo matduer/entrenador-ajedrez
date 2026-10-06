@@ -67,10 +67,13 @@ Contexto del jugador: `docs/contexto/analisis-partidas-avatargs.md` y `docs/cont
 - Etapa 0 hecha: Vite + Svelte 5 + TS + vite-plugin-pwa; app con navegación de las 5 secciones (pantallas vacías "en construcción"), aviso de actualización y de modo offline, íconos PNG, tema claro/oscuro, workflow `.github/workflows/deploy.yml`. `npm run check` y `npm run build` sin errores.
 - Git y Node 24 LTS instalados con winget en esta máquina. En PowerShell, si `node`/`git` no se encuentran, refrescar el PATH: `$env:Path = [Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [Environment]::GetEnvironmentVariable('Path','User')`.
 
+- Publicada en https://matduer.github.io/entrenador-ajedrez/ (repo público `matduer/entrenador-ajedrez`, Pages con fuente "GitHub Actions"). Primer deploy OK, service worker registrado.
+- Resumen de la etapa 0 (documento de Claude): https://claude.ai/code/artifact/5b9365d9-6bcd-4878-bc38-93eb32cf98e6
+- Push: la credencial de GitHub quedó guardada en el Git Credential Manager. Si un push desde la herramienta falla por "terminal prompts disabled", abrir una ventana aparte (`Start-Process powershell -NoExit`) con `$env:GCM_INTERACTIVE='auto'` para que el usuario inicie sesión.
+
 ## Próximos pasos
 
-1. Que el usuario cree el repo vacío `matduer/entrenador-ajedrez` en GitHub, active Pages con fuente "GitHub Actions" y haga el primer push (ver README).
-2. Etapa 1, previa aprobación.
+1. Etapa 1, previa aprobación del usuario.
 
 ## Comandos
 
