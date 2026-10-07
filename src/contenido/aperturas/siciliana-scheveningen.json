@@ -1,0 +1,113 @@
+{
+  "id": "siciliana-scheveningen",
+  "nombre": "Siciliana Scheveningen",
+  "raiz": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6",
+  "resumen": "La estructura con peones en e6 y d6. FCO la llama la columna vertebral de la Siciliana: quien no conoce la Scheveningen no conoce la Siciliana, porque aparece de fondo en la Taimanov, la Najdorf y la Clásica. El negro tiene una posición sólida y contraataca en el flanco de dama (...a6, ...Dc7, ...b5). La prueba más crítica de las blancas, desde los años 80, es el Ataque Keres: 6.g4, ganar espacio en el flanco de rey de inmediato.",
+  "planesBlancas": [
+    "Ataque Keres: g4-g5 para echar al caballo de f6 y avanzar en el flanco de rey.",
+    "Clásica: Ae2, O-O, f4, Ae3 y Rh1, con paciencia; o f4 con Df3 y g4."
+  ],
+  "planesNegras": [
+    "...a6, ...Dc7, ...b5 y ...Ab7 en el flanco de dama.",
+    "Rupturas centrales ...e5 o ...d5 en el momento justo."
+  ],
+  "estructura": "Peones negros en d6 y e6 (\"el pequeño centro\"): sólidos, controlan d5, e5, c5 y f5.",
+  "rupturas": [
+    "...d5 y ...e5 del negro.",
+    "g4-g5, f4-f5 y e5 de las blancas."
+  ],
+  "piezas": [
+    "Alfil negro de f8: e7, detrás de los peones.",
+    "Dama negra: c7, sobre la columna c."
+  ],
+  "trampas": [],
+  "notas": {
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 g2g4": {
+      "porQue": "El Ataque Keres: gana espacio y amenaza g5 para echar al caballo que defiende el centro.",
+      "porQueNo": [
+        {
+          "uci": "f1b5",
+          "texto": "...Ad7: el cambio de alfiles alivia al negro."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 g2g4 h7h6": {
+      "porQue": "La respuesta más común: frena g5 por ahora.",
+      "porQueNo": [
+        {
+          "uci": "b8c6",
+          "texto": "g5 Cd7: el caballo es echado con tiempo y las blancas siguen avanzando."
+        },
+        {
+          "uci": "d6d5",
+          "texto": "exd5 Cxd5 Ab5+: el centro se abre a favor de las blancas, más desarrolladas."
+        },
+        {
+          "uci": "g7g6",
+          "texto": "g5 Ch5: el caballo queda mal en el borde."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 c1e3": {
+      "porQue": "Desarrollo flexible: puede seguir con f3, Dd2 y g4 (al estilo del Ataque Inglés)."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 f2f3": {
+      "porQue": "Prepara g4 y Ae3: el mismo plan que el Ataque Inglés."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Sicilian Defence», sección «Scheveningen Variation»"
+    },
+    {
+      "titulo": "Sicilian Defence, Scheveningen Variation (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Sicilian_Defence,_Scheveningen_Variation",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 g2g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 f1b5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,6 → +0,1. Refutación: Ad7 Ae2 Cc6 Ae3 Ae7 g4"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 g2g4 h7h6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 g2g4 b8c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,7 → −1,4. Refutación: g5 Cd7 Ae3 Ae7 Tg1 a6"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 g2g4 d6d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,7 → −1,6. Refutación: exd5 Cxd5 Ab5+ Cd7 Cxd5 exd5"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 g2g4 g7g6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: −0,7 → −2,0. Refutación: g5 Ch5 Ae3 Cc6 Dd2 Ag7"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 c1e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 f2f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      }
+    }
+  }
+}

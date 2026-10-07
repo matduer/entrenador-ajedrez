@@ -1,0 +1,126 @@
+{
+  "id": "siciliana-clasica",
+  "nombre": "Siciliana Clásica (Richter-Rauzer y Sozin)",
+  "raiz": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6",
+  "resumen": "La forma más clásica de jugar la Siciliana: ...d6, ...Cf6 y ...Cc6, desarrollo sano sin comprometer nada. Contra el tranquilo 6.Ae2, el negro elige entre ...e6 (Scheveningen), ...g6 (Dragón) o ...e5 (Boleslavsky). Por eso las blancas buscaron algo más incisivo: 6.Ag5, el Ataque Richter-Rauzer, con Dd2 y enroque largo; y 6.Ac4, el Ataque Sozin, con el alfil apuntando a f7 y la idea f4-f5 (o la versión de Velimirovic, con De2 y enroque largo).",
+  "planesBlancas": [
+    "Richter-Rauzer: Ag5, Dd2, O-O-O y f4, presionando d6; si Axf6 gxf6, atacar la estructura con f4-f5.",
+    "Sozin: Ac4-b3, f4-f5 contra e6 o e5; Velimirovic: De2, O-O-O y g4-g5."
+  ],
+  "planesNegras": [
+    "...e6, ...a6, ...Ad7 y ...b5 en el flanco de dama.",
+    "Con la pareja de alfiles tras ...gxf6, preparar ...d5."
+  ],
+  "estructura": "Siciliana abierta con ...d6 y ...e6; en el Rauzer suele aparecer la estructura con peones doblados en f7 y f6.",
+  "rupturas": [
+    "...d5 y ...b5 del negro.",
+    "f4-f5 y e5 de las blancas."
+  ],
+  "piezas": [
+    "Alfil blanco de c1: g5 (Rauzer) o e3 (Sozin).",
+    "Alfil blanco de f1: c4-b3 en el Sozin, apuntando a e6 y f7."
+  ],
+  "trampas": [],
+  "notas": {
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1e2": {
+      "porQue": "La línea antigua: sana pero poco exigente. El negro elige su sistema: ...e6, ...g6 o ...e5.",
+      "inferior": true
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1e2 e7e5": {
+      "porQue": "Variante Boleslavsky: acepta el hueco en d5 a cambio de juego activo y la ruptura ...d5 más adelante."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6": {
+      "porQue": "Lo más común contra el Rauzer: prepara ...Ae7 para romper la clavada.",
+      "porQueNo": [
+        {
+          "uci": "c6d4",
+          "texto": "Dxd4: la dama blanca queda centralizada y el negro perdió su mejor pieza."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2": {
+      "porQue": "Muestra las cartas: enroque largo, flanco de rey libre para el ataque y presión sobre d6.",
+      "porQueNo": [
+        {
+          "uci": "d4b5",
+          "texto": "...a6 y el caballo vuelve: la presión sobre d6 era prematura."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 a7a6": {
+      "porQue": "Evita Cdb5 y prepara ...b5."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 a7a6 e1c1": {
+      "porQue": "La continuación consecuente: enroque largo."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 f8e7 e1c1 e8g8": {
+      "porQue": "La línea más antigua y clásica: d6 es el punto débil, pero no es fácil atacarlo."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1c4 e7e6 c1e3 f8e7 d1e2": {
+      "porQue": "El Ataque Velimirovic: De2 evita ...Cg4 y prepara el enroque largo y el avance g4-g5."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Sicilian Defence», secciones «Classical Variation», «Richter-Rauzer Attack» y «Sozin Attack»"
+    },
+    {
+      "titulo": "Sicilian Defence (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Sicilian_Defence",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Ag5: +0,5 contra +0,0 (marcada como inferior pero jugable)"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1e2 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 c6d4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,4 → −1,3. Refutación: Dxd4 Ad7 O-O-O Da5 f4 h6"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d4b5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,3 → −0,3. Refutación: a6 Cd4 Ad7 Ae2 Ae7 O-O"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 a7a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 a7a6 e1c1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 f8e7 e1c1 e8g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1c4 e7e6 c1e3 f8e7 d1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      }
+    }
+  }
+}
