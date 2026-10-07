@@ -1255,6 +1255,59 @@
           "capitulo": "Parte Cinco (ELO 1600-1799): «Dos Alfiles contra el Rey»"
         }
       ]
+    },
+    {
+      "id": "lucena-peon-de-torre",
+      "titulo": "Finales de torres: «Lucena» con peón de torre",
+      "nivel": 4,
+      "explicacion": [
+        "Con peón de torre en séptima y el rey delante de él, la posición se parece a la de Lucena pero no funciona igual: el rey atacante está encerrado en el rincón y la torre rival le impide salir por la columna de caballo.",
+        "Silman da la regla: solo se gana si el rey defensor está cortado más allá de la columna del alfil del otro lado (con peón de a, en la columna f o más lejos). Si está más cerca, llega a c7/c8 y el rey atacante no sale nunca del rincón: tablas.",
+        "Cuando se gana, el plan es llevar la torre a la columna b para que el rey salga, y esquivar los jaques acercándose a la torre rival. La técnica tiene trampas: en la posición de práctica, ojo con mates en la octava y con jaques laterales que recuperan el peón."
+      ],
+      "ideas": [
+        "Contá columnas: rey defensor en la columna f o más lejos, se gana; más cerca, tablas.",
+        "Defendiendo, el rey va hacia c7: desde ahí el rey atacante no sale del rincón.",
+        "Atacando, la torre a la columna b para liberar al rey."
+      ],
+      "posiciones": [
+        {
+          "id": "rey-lejos",
+          "fen": "K7/P4k2/8/8/8/8/1r6/7R w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 40,
+          "consigna": "El rey negro está cortado en la columna f: se gana, pero con técnica.",
+          "pista": "Tc1 y Tc8, después Tb8 para que tu rey salga por b7; los jaques se esquivan yendo hacia el lado de la torre negra.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "h1h8",
+            "dtm": 39,
+            "fecha": "2026-10-07"
+          }
+        },
+        {
+          "id": "rey-cerca",
+          "fen": "K7/P2k4/8/8/8/8/1r6/7R b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 25,
+          "consigna": "Jugás con negras: con tu rey en d7, es tablas. Demostralo.",
+          "pista": "Rey a c7 (o c8): desde ahí el rey blanco no sale del rincón. La torre se queda en la columna b.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "b2b3",
+            "dtm": 0,
+            "fecha": "2026-10-07"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jeremy Silman — El curso de finales completo (Siles Press, 2007)",
+          "capitulo": "Parte Seis (ELO 1800-1999): «“Lucena” con un peón de Torre»"
+        }
+      ]
     }
   ]
 }
