@@ -123,9 +123,31 @@
     },
     "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 f8c5 c4f7": {
       "porQue": "Contra el Traxler, Axf7+ saca al rey negro del enroque. Cxf7 también es fuerte."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 d2d3": {
+      "porQue": "El enfoque moderno: en lugar de Cg5, una lucha posicional lenta parecida a la Española con d3."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 b1c3 f6e4": {
+      "porQue": "El truco central: si Cxe4, ...d5 recupera la pieza y el negro queda con buen centro."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 d2d4 e5d4 e1g1 f6e4": {
+      "porQue": "Elimina el peón de e4 y le quita fuerza al ataque blanco."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 d2d4 e5d4 e1g1 f6e4 f1e1 d7d5": {
+      "porQue": "Defiende el caballo y ataca al alfil."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 d2d4 e5d4 e1g1 f6e4 f1e1 d7d5 c4d5 d8d5 b1c3": {
+      "porQue": "Aprovecha dos clavadas: el caballo de e4 está clavado contra la dama y contra el rey."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 d2d4 e5d4 e1g1 f6e4 f1e1 d7d5 c4d5 d8d5 b1c3 d5a5": {
+      "porQue": "La dama se aparta y mantiene la defensa del caballo; tras Cxe4 Ae6, el negro está bien."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Italian Game», sección «Two Knights Defence»"
+    },
     {
       "titulo": "Two Knights Defense (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Two_Knights_Defense",
@@ -237,6 +259,30 @@
       "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 f8c5 c4f7": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +1,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 d2d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 b1c3 f6e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 d2d4 e5d4 e1g1 f6e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 d2d4 e5d4 e1g1 f6e4 f1e1 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 d2d4 e5d4 e1g1 f6e4 f1e1 d7d5 c4d5 d8d5 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 d2d4 e5d4 e1g1 f6e4 f1e1 d7d5 c4d5 d8d5 b1c3 d5a5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
       }
     }
   }
