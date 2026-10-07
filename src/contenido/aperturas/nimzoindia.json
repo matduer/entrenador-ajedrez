@@ -1,0 +1,183 @@
+{
+  "id": "nimzoindia",
+  "nombre": "Defensa Nimzoindia",
+  "raiz": "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4",
+  "resumen": "Una de las defensas más sólidas contra 1.d4. Con 3...Ab4 el negro clava el caballo que prepara e4 y controla esa casilla con piezas en vez de con peones. Está dispuesto a cambiar el alfil por el caballo: entrega la pareja de alfiles a cambio de doblar los peones blancos en la columna c y jugar contra ellos.",
+  "planesBlancas": [
+    "Evitar los peones doblados recapturando con la dama (4.Dc2) o desarrollar con calma (4.e3) y aceptar el cambio en condiciones favorables.",
+    "Si el negro cambia en c3, aprovechar la pareja de alfiles abriendo el juego y empujar el centro con e4.",
+    "Defender los peones doblados de c y usar la columna b semiabierta."
+  ],
+  "planesNegras": [
+    "Controlar e4 (con el alfil en b4, el caballo de f6 y a veces ...Ab7) para que las blancas no armen el centro.",
+    "Tras el cambio en c3, cerrar el juego para restarles fuerza a los alfiles blancos (...d6, ...e5, ...c5) y atacar el peón de c4 con ...b6, ...Aa6 y ...Cc6-a5.",
+    "Enrocar pronto y presionar el centro con ...c5 o ...d5."
+  ],
+  "estructura": "Si el negro cambia en c3 y las blancas retoman con el peón, quedan peones doblados en c3 y c4: el de c4 es el blanco típico. A cambio, las blancas tienen la pareja de alfiles y más control del centro.",
+  "rupturas": [
+    "...c5 contra d4.",
+    "...d5 contra c4 en las líneas tranquilas.",
+    "e4 de las blancas, preparado con f3 o Dc2, para liberar sus alfiles."
+  ],
+  "piezas": [
+    "Alfil negro de b4: clava el caballo de c3; se cambia por él cuando eso daña la estructura blanca o cuando las blancas gastan un tiempo con a3.",
+    "Alfil negro de c8: b7 o a6 (contra c4), a través de ...b6.",
+    "Caballo negro de c6: hacia a5 para atacar c4.",
+    "Dama blanca: c2 en la Clásica, para retomar en c3 sin doblar peones y controlar e4."
+  ],
+  "trampas": [],
+  "notas": {
+    "d2d4 g8f6 c2c4 e7e6": {
+      "porQue": "Prepara ...Ab4 o ...d5 y deja abierta la diagonal del alfil de f8."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3": {
+      "porQue": "Prepara e4, que echaría al caballo de f6 y daría a las blancas el centro completo."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4": {
+      "porQue": "Clava el caballo que prepara e4: mientras la clavada exista, e4 no se puede jugar sin perder un peón. Es la idea central de la Nimzoindia.",
+      "porQueNo": [
+        {
+          "uci": "f8e7",
+          "texto": "Pasivo: e4 y las blancas arman el centro completo, que es justo lo que la Nimzoindia quiere impedir."
+        },
+        {
+          "uci": "d7d6",
+          "texto": "Tampoco frena e4: las blancas toman el centro y el negro queda sin espacio."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1c2": {
+      "porQue": "Variante Clásica: si el negro cambia en c3, la dama retoma y no hay peones doblados. Además controla e4."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1c2 e8g8": {
+      "porQue": "Enroca y espera: el negro decide después entre ...d5, ...c5 o ...b6 según cómo sigan las blancas.",
+      "porQueNo": [
+        {
+          "uci": "b4e7",
+          "texto": "Retroceder el alfil es perder dos tiempos: e4 y las blancas quedan con el centro."
+        },
+        {
+          "uci": "b7b5",
+          "texto": "Un gambito sin fundamento: cxb5 y el negro no tiene compensación."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3": {
+      "porQue": "Variante Rubinstein: desarrollo sólido, preparando Ad3 y Ce2 (para retomar en c3 con el caballo)."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3 e8g8": {
+      "porQue": "El negro enroca y se reserva ...d5, ...c5 o ...b6.",
+      "porQueNo": [
+        {
+          "uci": "b4e7",
+          "texto": "Otra vez: sin la clavada, e4 llega con fuerza."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 a2a3": {
+      "porQue": "Variante Sämisch: obliga al negro a decidir ya. Las blancas aceptan los peones doblados a cambio de la pareja de alfiles."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 a2a3 b4c3": {
+      "porQue": "El cambio lógico: retroceder el alfil haría perder tiempo, y los peones doblados son el objetivo."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 a2a3 b4c3 b2c3": {
+      "porQue": "Las blancas retoman hacia el centro: más control de d4 y e4, a cambio del peón de c4 debilitado."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 a2a3 b4c3 b2c3 b7b6": {
+      "porQue": "Prepara ...Aa6 para atacar el peón débil de c4 y ...Ab7 para controlar e4.",
+      "porQueNo": [
+        {
+          "uci": "e6e5",
+          "texto": "Abrir el centro favorece a los alfiles blancos: dxe5 y el caballo tiene que salir de f6."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Nimzo-Indian Defence (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Nimzo-Indian_Defence",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "d2d4 g8f6 c2c4 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8e7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,2 → −0,9. Refutación: e4 d6 Cf3 O-O Ad3 e5"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 d7d6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,2 → −0,8. Refutación: e4 c5 d5 g6 Cf3 Ag7"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1c2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1c2 e8g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1c2 b4e7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 12 puntos de chances: −0,1 → −1,4. Refutación: e4 d6 Af4 Cc6 Td1 Cd7"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1c2 b7b5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,1 → −0,9. Refutación: cxb5 a6 e3 Ab7 Cf3 axb5"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3 e8g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3 b4e7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,1 → −1,0. Refutación: e4 d6 Cf3 O-O Ad3 e5"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 a2a3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 a2a3 b4c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 a2a3 b4c3 b2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 a2a3 b4c3 b2c3 b7b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 a2a3 b4c3 b2c3 e6e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 12 puntos de chances: +0,1 → −1,2. Refutación: dxe5 Cg4 Cf3 Cc6 Ag5 f6"
+      }
+    }
+  }
+}

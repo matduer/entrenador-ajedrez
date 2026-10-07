@@ -1,0 +1,232 @@
+{
+  "id": "india-de-rey",
+  "nombre": "Defensa India de Rey",
+  "raiz": "d2d4 g8f6 c2c4 g7g6",
+  "resumen": "Defensa hipermoderna: el negro deja que las blancas armen un gran centro (c4, d4, e4) y lo ataca después con ...e5 (o ...c5). El alfil de g7, en la diagonal larga, es la pieza clave. Cuando las blancas cierran el centro con d5, el juego se divide: las blancas atacan en el flanco de dama y el negro en el de rey, contra el enroque blanco.",
+  "planesBlancas": [
+    "Ganar espacio con el centro de peones y, cuando el negro juega ...e5, cerrar con d5 o mantener la tensión.",
+    "Con el centro cerrado, atacar en el flanco de dama con b4 y c5, para abrir la columna c.",
+    "Frenar el ataque negro en el flanco de rey (Ce1-d3, f3, g4 en algunos casos)."
+  ],
+  "planesNegras": [
+    "Enrocar primero y recién después desafiar el centro con ...e5: con el rey en el centro, abrir el juego es peligroso.",
+    "Con el centro cerrado (d5), mover el caballo de f6 (a e8 o d7) para empujar ...f5, después ...f4 y ...g5-g4 contra el enroque blanco.",
+    "Si las blancas no cierran, presionar d4 con ...Cc6 y el alfil de g7."
+  ],
+  "estructura": "Tras ...e5 y d5, cadena blanca c4-d5-e4 contra la negra d6-e5: el centro queda cerrado. Las blancas avanzan en el flanco de dama (c5) y el negro en el de rey (...f5). Si las blancas cambian en e5, se cambian las damas y queda un medio juego sin damas bastante parejo.",
+  "rupturas": [
+    "...e5 (o ...c5) contra d4, siempre con el rey ya enrocado.",
+    "...f5 contra e4 cuando el centro está cerrado.",
+    "c5 de las blancas contra d6, para abrir el flanco de dama."
+  ],
+  "piezas": [
+    "Alfil negro de g7: la diagonal larga; muchas veces se queda en g7 defendiendo el rey aunque esté tapado por e5.",
+    "Caballo negro de f6: deja libre el peón de f (va a e8 o d7) cuando llega la hora de ...f5.",
+    "Caballo negro de c6: tras d5, a e7, desde donde apoya ...f5 y va a g6.",
+    "Alfil blanco de f1: e2, cubriendo el flanco de rey."
+  ],
+  "trampas": [
+    {
+      "jugadas": "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e7e5 d4e5 d6e5 d1d8 e8d8 f3e5",
+      "texto": "...e5 antes de enrocar: dxe5 dxe5 Dxd8+ y el rey negro tiene que retomar, perdiendo el enroque, y después Cxe5 gana el peón."
+    }
+  ],
+  "notas": {
+    "d2d4 g8f6": {
+      "porQue": "Controla e4 sin comprometer todavía la estructura de peones: el negro decide después entre India de Rey, Nimzoindia u otras."
+    },
+    "d2d4 g8f6 c2c4": {
+      "porQue": "Suma espacio en el centro y prepara Cc3 y e4."
+    },
+    "d2d4 g8f6 c2c4 g7g6": {
+      "porQue": "Prepara el fianchetto del alfil de casillas negras: la India de Rey deja el centro a las blancas para atacarlo después."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3": {
+      "porQue": "Prepara e4 para armar el centro completo."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7": {
+      "porQue": "El alfil se instala en la diagonal larga, donde presiona d4 y defiende el enroque."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4": {
+      "porQue": "Las blancas ocupan el centro con tres peones: es lo que la India de Rey les permite a propósito."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6": {
+      "porQue": "Impide e5, que echaría al caballo de f6, y prepara ...e5 o ...c5 más adelante.",
+      "porQueNo": [
+        {
+          "uci": "e7e5",
+          "texto": "Todavía no: dxe5 y el caballo de f6 no tiene casilla buena (tiene que volver a g8)."
+        },
+        {
+          "uci": "f6e4",
+          "texto": "La combinación no funciona: Cxe4 y el negro no recupera la pieza con ventaja."
+        },
+        {
+          "uci": "f6g4",
+          "texto": "El caballo en g4 queda colgado de la dama: Dxg4."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3": {
+      "porQue": "Desarrollo clásico: el caballo defiende d4 y prepara Ae2 y el enroque."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8": {
+      "porQue": "Primero el rey a salvo: recién después ...e5 abre el centro.",
+      "porQueNo": [
+        {
+          "uci": "e7e5",
+          "texto": "Con el rey en el centro, dxe5 dxe5 Dxd8+ Rxd8 y Cxe5: el negro pierde el enroque y un peón."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2": {
+      "porQue": "Variante Clásica: desarrollo tranquilo y enroque."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2 e7e5": {
+      "porQue": "Ahora sí, con el rey enrocado: el negro desafía el centro y obliga a las blancas a decidir (cerrar con d5, cambiar o mantener)."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2 e7e5 e1g1": {
+      "porQue": "Las blancas enrocan y mantienen la tensión."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2 e7e5 e1g1 b8c6": {
+      "porQue": "Suma presión sobre d4 y obliga a las blancas a cerrar el centro con d5 (o a cambiar).",
+      "porQueNo": [
+        {
+          "uci": "c8d7",
+          "texto": "Deja e5 sin suficiente apoyo: dxe5 dxe5 Cxe5 y el negro pierde un peón."
+        },
+        {
+          "uci": "g8h8",
+          "texto": "Una jugada de espera que no hace nada: dxe5 dxe5 Dxd8 Txd8 Cxe5 gana un peón."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2 e7e5 e1g1 b8c6 d4d5": {
+      "porQue": "Cierra el centro con ganancia de tiempo: el caballo de c6 tiene que moverse. Desde acá, cada uno ataca en su flanco."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2 e7e5 e1g1 b8c6 d4d5 c6e7": {
+      "porQue": "La casilla del caballo: desde e7 apoya ...f5 y puede ir a g6. Es la variante Mar del Plata.",
+      "porQueNo": [
+        {
+          "uci": "c6a5",
+          "texto": "En a5 el caballo queda atrapado: b4 lo caza."
+        },
+        {
+          "uci": "c6b4",
+          "texto": "En b4 el caballo no tiene futuro: a3 lo echa y pierde tiempo."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "King's Indian Defence (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/King%27s_Indian_Defence",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "d2d4 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 e7e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 23 puntos de chances: −0,6 → −3,4. Refutación: dxe5 Cg8 Cf3 h6 h4 Cc6"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 f6e4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 32 puntos de chances: −0,6 → −5,3. Refutación: Cxe4 d5 cxd5 Dxd5 Cc3 Dxd4"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 f6g4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 36 puntos de chances: −0,6 → −6,2. Refutación: Dxg4 d5 Dh4 dxe4 Ah6 Axh6"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e7e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: −0,5 → −1,7. Refutación: dxe5 dxe5 Dxd8+ Rxd8 Cxe5 Ae6"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2 e7e5 e1g1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2 e7e5 e1g1 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2 e7e5 e1g1 c8d7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,5 → −1,3. Refutación: dxe5 dxe5 Cxe5 Cxe4 Cxe4 Axe5"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2 e7e5 e1g1 g8h8 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: −0,5 → −1,9. Refutación: dxe5 dxe5 Cxe5 De7 f4 c6"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2 e7e5 e1g1 b8c6 d4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2 e7e5 e1g1 b8c6 d4d5 c6e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2 e7e5 e1g1 b8c6 d4d5 c6a5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 32 puntos de chances: −0,7 → −5,3. Refutación: b4 b5 bxa5 b4 Ca4 Cxe4"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2 e7e5 e1g1 b8c6 d4d5 c6b4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,7 → −1,4. Refutación: a3 Ca6 b4 c5 dxc6 bxc6"
+      }
+    }
+  }
+}

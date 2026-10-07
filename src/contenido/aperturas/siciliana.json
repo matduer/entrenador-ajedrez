@@ -1,0 +1,281 @@
+{
+  "id": "siciliana",
+  "nombre": "Defensa Siciliana",
+  "raiz": "e2e4 c7c5",
+  "resumen": "La respuesta más combativa a 1.e4. El negro rompe la simetría: controla d4 con un peón lateral y, cuando las blancas abren con d4, cambia un peón de flanco por uno central. Queda con dos peones centrales contra uno y la columna c semiabierta; las blancas, con ventaja de desarrollo y espacio para atacar al rey.",
+  "planesBlancas": [
+    "Siciliana abierta (Cf3 y d4): desarrollo rápido, centralizar el caballo en d4 y atacar en el flanco de rey (f4, g4, a veces enroque largo).",
+    "Usar la casilla d5 (Cd5) y los ataques al peón de d6.",
+    "Alternativas sin abrir el centro: Alapin (2.c3) para jugar d4 con un peón."
+  ],
+  "planesNegras": [
+    "Tomar en d4 cuando las blancas lo jueguen, para ganar la mayoría central.",
+    "Contrajuego en el flanco de dama y la columna c (...a6, ...b5, ...Tc8).",
+    "La ruptura ...d5 libera el juego; si sale bien, el negro suele igualar o más."
+  ],
+  "estructura": "Tras ...cxd4 y Cxd4, el negro tiene peones en d6 y e6 (o e5) y la columna c abierta; las blancas, el peón de e4 y la columna d. Las estructuras dependen de la variante: Najdorf (...a6), Dragón (...g6), Scheveningen (...e6 y ...d6).",
+  "rupturas": [
+    "...d5 del negro: la liberación central.",
+    "...b5 para ganar espacio en el flanco de dama.",
+    "f4-f5 y g4-g5 de las blancas en el ataque."
+  ],
+  "piezas": [
+    "Caballo blanco de d4: centralizado; muchas veces el negro lo cambia o lo hostiga con ...e5.",
+    "Torre negra: c8, en la columna semiabierta.",
+    "Dama negra: c7 o b6, mirando la columna c o el peón de b2.",
+    "Alfil negro de c8: d7, b7 o e6, según la variante."
+  ],
+  "trampas": [],
+  "notas": {
+    "e2e4 c7c5": {
+      "porQue": "Controla d4 desde el costado y prepara cambiar un peón de flanco por uno central."
+    },
+    "e2e4 c7c5 g1f3": {
+      "porQue": "Prepara d4: es el camino a la Siciliana abierta."
+    },
+    "e2e4 c7c5 g1f3 d7d6": {
+      "porQue": "Prepara ...Cf6 sin que e5 lo eche, y abre la diagonal del alfil de c8.",
+      "porQueNo": [
+        {
+          "uci": "d7d5",
+          "texto": "Abrir el centro tan temprano no funciona: exd5 y, tras ...Cf6, Ab5+ complica el desarrollo negro."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4": {
+      "porQue": "Abre el centro: las blancas ganan desarrollo a cambio de la mayoría central negra."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4": {
+      "porQue": "Toma el peón central con el de flanco: el negro queda con más peones en el centro.",
+      "porQueNo": [
+        {
+          "uci": "e7e6",
+          "texto": "Si el negro no toma, dxc5 y queda con el peón de d6 aislado y el desarrollo atrasado."
+        },
+        {
+          "uci": "b8c6",
+          "texto": "d5 echa al caballo y las blancas ganan espacio con tiempo."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4": {
+      "porQue": "El caballo retoma y queda centralizado."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6": {
+      "porQue": "Ataca e4 y obliga a Cc3, que tapa el peón de c y quita opciones a las blancas.",
+      "porQueNo": [
+        {
+          "uci": "d8b6",
+          "texto": "Atacar b2 y d4 tan pronto pierde tiempo: Cb3 o Cc3 con Ae3 desarrollan con tiempo sobre la dama."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3": {
+      "porQue": "Defiende e4. Ahora el negro elige su sistema: Najdorf (...a6), Dragón (...g6), Clásica (...Cc6) o Scheveningen (...e6)."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6": {
+      "porQue": "Najdorf: quita b5 a los caballos y al alfil blancos y prepara ...e5 o ...b5. Es la jugada más flexible.",
+      "porQueNo": [
+        {
+          "uci": "d8b6",
+          "texto": "Ae3 defiende b2 con tiempo y Cdb5 o Ce6 amenazan: la dama queda mal parada."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 b8c6": {
+      "porQue": "Desarrolla y controla d4; puede llevar a la Clásica, la Sveshnikov o el Dragón acelerado."
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4": {
+      "porQue": "Igual que contra 2...d6: abre el centro."
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4": {
+      "porQue": "Toma en d4 para obtener la mayoría central."
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4": {
+      "porQue": "El caballo retoma centralizado."
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6": {
+      "porQue": "Ataca e4 con tiempo.",
+      "porQueNo": [
+        {
+          "uci": "c6d4",
+          "texto": "Cambiar caballos le da a la dama blanca una gran casilla en d4: Dxd4."
+        },
+        {
+          "uci": "d7d5",
+          "texto": "Sin preparación, exd5 Dxd5 y la dama negra queda expuesta al desarrollo blanco."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 e7e6": {
+      "porQue": "Prepara ...d5 y deja libre el alfil de f8: lleva a la Paulsen o la Taimanov."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4": {
+      "porQue": "Abre el centro."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4": {
+      "porQue": "Toma en d4."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4": {
+      "porQue": "Retoma con el caballo."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6": {
+      "porQue": "Paulsen (Kan): quita b5 a las piezas blancas, sobre todo al caballo, que de ahí saltaría a d6.",
+      "porQueNo": [
+        {
+          "uci": "d8c7",
+          "texto": "Sin ...a6, la dama en c7 queda expuesta: Cb5 la ataca y amenaza Cd6+."
+        },
+        {
+          "uci": "d7d5",
+          "texto": "Ab5+ y el negro no puede sostener el centro con comodidad."
+        }
+      ]
+    },
+    "e2e4 c7c5 c2c3": {
+      "porQue": "Alapin: prepara d4 apoyado por un peón, para que el negro no pueda cambiar con ganancia."
+    },
+    "e2e4 c7c5 c2c3 g8f6": {
+      "porQue": "Ataca e4 enseguida: si e5, el caballo salta a d5 y el negro juega contra el centro avanzado."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Sicilian Defence (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Sicilian_Defence",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,4 → −1,1. Refutación: exd5 Cf6 Ab5+ Ad7 Axd7+ Dxd7"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 e7e6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 12 puntos de chances: −0,4 → −1,8. Refutación: dxc5 Da5+ Cc3 Dxc5 Ae3 Dc7"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 b8c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: −0,4 → −1,4. Refutación: d5 Cb8 Ae2 Cf6 Cc3 g6"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 d8b6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,4 → −1,1. Refutación: Cc3 Cf6 Ae3 a6 Ce6 Da5"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 d8b6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,4 → −1,3. Refutación: Ae3 a6 Ce6 Da5 b4 Dxb4"
+      },
+      "e2e4 c7c5 g1f3 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 c6d4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,4 → −1,0. Refutación: Dxd4 d6 Cc3 Ad7 f3 Cf6"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 d7d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,4 → −1,0. Refutación: exd5 Dxd5 Ae3 Cf6 Cc3 Dd6"
+      },
+      "e2e4 c7c5 g1f3 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 d8c7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 12 puntos de chances: −0,4 → −1,7. Refutación: Cb5 Dc6 Af4 Dxe4+ Ae3 Ca6"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 d7d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,4 → −1,3. Refutación: Ab5+ Ad7 exd5 exd5 O-O Ac5"
+      },
+      "e2e4 c7c5 c2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 c2c3 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      }
+    }
+  }
+}

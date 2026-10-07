@@ -1,0 +1,482 @@
+{
+  "id": "espanola-italiana",
+  "nombre": "1.e4 e5: Española e Italiana",
+  "raiz": "e2e4 e7e5",
+  "resumen": "El juego abierto clásico. Tras 1.e4 e5 2.Cf3 Cc6, las blancas eligen dónde poner el alfil: en b5 (Española o Ruy López), presionando al caballo que defiende e5, o en c4 (Italiana), apuntando a f7, el punto débil del enroque negro. En las dos, el plan blanco es preparar d4 con c3 y desarrollarse rápido; el negro defiende e5, se desarrolla y busca contrajuego en el centro o en el flanco de dama.",
+  "planesBlancas": [
+    "Española: presión sostenida sobre e5 (el alfil de b5 amenaza cambiar el defensor), enroque, Te1, c3 y d4; maniobra típica del caballo Cbd2-f1-g3.",
+    "Italiana: alfil sobre f7, c3 para preparar d4; en la versión lenta (d3), maniobras y ataque en el flanco de rey.",
+    "Aprovechar cualquier descuido sobre f7 o sobre el peón de e5."
+  ],
+  "planesNegras": [
+    "Mantener el punto e5 bien defendido: cada vez que deja de estarlo, Axc6 seguido de Cxe5 o una combinación sobre f7 aparecen.",
+    "Española: ...a6 y ...b5 para echar al alfil, ...Ae7, ...d6, enroque; después ...Ca5 y ...c5 para ganar espacio en el flanco de dama.",
+    "Italiana: desarrollo armónico (...Ac5, ...Cf6, ...d6) y la ruptura ...d5 en el momento justo."
+  ],
+  "estructura": "Peones en e4 y e5 enfrentados. Si las blancas logran d4 con apoyo de c3, ganan espacio; el negro sostiene e5 con ...d6 o cambia en d4. En la Española cerrada se forma la cadena blanca c3-d4-e4 contra la negra c5-d6-e5.",
+  "rupturas": [
+    "d4 de las blancas, preparada con c3.",
+    "...d5 del negro, sobre todo en la Italiana y en la Abierta de la Española.",
+    "...c5 y ...b5 del negro para ganar espacio en el flanco de dama."
+  ],
+  "piezas": [
+    "Alfil blanco de f1: b5 (Española) o c4 (Italiana); en la Española se retira a a4 y b3 ante ...a6 y ...b5, y desde b3 sigue mirando f7.",
+    "Caballo negro de c6: el defensor de e5; en la Española a veces va a a5 para cambiar el alfil de b3.",
+    "Torre blanca: e1, para sostener e4 y hacer real la amenaza sobre e5.",
+    "Alfil negro de f8: e7 (Española cerrada) o c5 (Italiana)."
+  ],
+  "trampas": [
+    {
+      "jugadas": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5c6 d7c6 f3e5 d8d4",
+      "texto": "En la variante del Cambio de la Española, el peón de e5 parece regalado, pero tras Cxe5? la dama negra contesta Dd4: ataca el caballo y el peón de e4, y recupera el material con buena posición."
+    },
+    {
+      "jugadas": "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 f6d5 g5f7",
+      "texto": "Hígado frito: en la defensa de los dos caballos, 5...Cxd5? permite el sacrificio Cxf7 y el rey negro queda expuesto."
+    },
+    {
+      "jugadas": "e2e4 e7e5 g1f3 b8c6 f1c4 c6d4 f3e5 d8g5",
+      "texto": "La trampa de Blackburne contra la Italiana: si el blanco toma el peón con Cxe5?, Dg5 ataca el caballo y g2 a la vez. Contra 3...Cd4, lo correcto es Cxd4."
+    }
+  ],
+  "notas": {
+    "e2e4 e7e5": {
+      "porQue": "Ocupa el centro con el mismo peón: el juego queda abierto y el desarrollo rápido de las piezas pesa mucho."
+    },
+    "e2e4 e7e5 g1f3": {
+      "porQue": "Desarrolla atacando e5: el negro tiene que defenderlo."
+    },
+    "e2e4 e7e5 g1f3 b8c6": {
+      "porQue": "La defensa más natural de e5: desarrolla una pieza hacia el centro.",
+      "porQueNo": [
+        {
+          "uci": "f8c5",
+          "texto": "Desarrolla, pero deja e5 sin defensa: Cxe5."
+        },
+        {
+          "uci": "f7f6",
+          "texto": "Defiende e5 con un peón, pero debilita el rey: Cxe5 igual funciona porque ...fxe5 abre la diagonal h5-e8."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5": {
+      "porQue": "Española: ataca al caballo que defiende e5. No amenaza ganar el peón enseguida (todavía hay que cuidar e4), pero la presión dura toda la apertura.",
+      "porQueNo": [
+        {
+          "uci": "f3e5",
+          "texto": "Tomar el peón ya no funciona: Cxe5 y el negro recupera la pieza con ventaja."
+        },
+        {
+          "uci": "f3g5",
+          "texto": "Atacar f7 con un caballo solo es prematuro, y en g5 el caballo queda colgado de la dama negra."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6": {
+      "porQue": "Defensa Morphy: pregunta al alfil antes de seguir. Si las blancas cambian en c6, el negro queda con la pareja de alfiles.",
+      "porQueNo": [
+        {
+          "uci": "d7d5",
+          "texto": "Abrir el centro sin desarrollo falla: Cxe5 y el negro pierde un peón."
+        },
+        {
+          "uci": "c6a5",
+          "texto": "Alejar el caballo deja e5 sin su defensor y pierde tiempo."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4": {
+      "porQue": "El alfil mantiene la clavada sobre c6 sin cambiarse."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6": {
+      "porQue": "Desarrolla atacando e4, que obliga a las blancas a decidir cómo cuidarlo.",
+      "porQueNo": [
+        {
+          "uci": "d7d5",
+          "texto": "Igual que antes: abrir el centro con el rey en e8 y e5 sin defensa pierde un peón tras Cxe5."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1": {
+      "porQue": "Enroca dejando e4 'colgado': si ...Cxe4, Te1 lo recupera (es la variante Abierta)."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7": {
+      "porQue": "Española cerrada: desarrolla y prepara el enroque sin abrir el juego.",
+      "porQueNo": [
+        {
+          "uci": "c6d4",
+          "texto": "El caballo se va de c6 y deja e5 sin defensa: Cxe5."
+        },
+        {
+          "uci": "d7d5",
+          "texto": "exd5 Cxd5 y Cxe5: el centro abierto favorece a quien está más desarrollado."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1": {
+      "porQue": "Defiende e4 con la torre. Ahora sí amenaza Axc6 y Cxe5, porque e4 ya no queda colgado después."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5": {
+      "porQue": "Echa al alfil y corta la amenaza sobre c6: con el alfil en b3, Axc6 ya no existe.",
+      "porQueNo": [
+        {
+          "uci": "e8g8",
+          "texto": "El error clásico: Axc6 dxc6 (o bxc6) y Cxe5 gana un peón, porque con la torre en e1 el peón de e4 está defendido."
+        },
+        {
+          "uci": "c6d4",
+          "texto": "Cxd4 exd4 y el negro queda con un peón débil en d4."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3": {
+      "porQue": "Desde b3 el alfil sigue apuntando a f7."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6": {
+      "porQue": "Sostiene e5 para siempre y abre la diagonal del alfil de c8.",
+      "porQueNo": [
+        {
+          "uci": "d7d5",
+          "texto": "La idea del ataque Marshall, pero sin enrocar llega temprano: exd5 Cxd5 y d4, y el negro tiene problemas con el centro."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5c6": {
+      "porQue": "Variante del Cambio: entrega la pareja de alfiles a cambio de una mejor estructura de peones para el final."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5c6 d7c6": {
+      "porQue": "Retoma hacia el centro y abre la diagonal del alfil de c8 y la columna d."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5c6 d7c6 e1g1": {
+      "porQue": "Enroca y recién después amenaza Cxe5: hoy el peón está defendido indirectamente.",
+      "porQueNo": [
+        {
+          "uci": "f3e5",
+          "texto": "Dd4 ataca el caballo y e4 a la vez: el negro recupera el peón con buena posición."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6": {
+      "porQue": "Defensa Berlinesa: contraataca e4 en vez de echar al alfil. Muy sólida."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1": {
+      "porQue": "Enroca: si ...Cxe4, Te1 recupera el peón."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4": {
+      "porQue": "Toma el peón: las blancas lo recuperan, pero el negro simplifica hacia el final Berlinés, muy difícil de ganar para las blancas.",
+      "porQueNo": [
+        {
+          "uci": "a7a6",
+          "texto": "Ahora es tarde: Axc6 dxc6 y Cxe5 gana un peón, porque e4 está protegido por la amenaza de Te1."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4": {
+      "porQue": "Italiana: el alfil apunta a f7, el punto que solo defiende el rey."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5": {
+      "porQue": "Giuoco Piano: el alfil negro hace lo mismo, apuntando a f2.",
+      "porQueNo": [
+        {
+          "uci": "d7d5",
+          "texto": "Abrir el centro sin desarrollo: exd5 y el negro no recupera el peón con comodidad."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 c2c3": {
+      "porQue": "Prepara d4 para ganar el centro con tiempo sobre el alfil de c5."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 c2c3 g8f6": {
+      "porQue": "Contraataca e4: si las blancas juegan d4 enseguida, el negro tiene recursos con ...exd4 y ...Cxe4.",
+      "porQueNo": [
+        {
+          "uci": "d7d5",
+          "texto": "exd5 y el negro no puede retomar con comodidad: pierde un peón."
+        },
+        {
+          "uci": "f7f5",
+          "texto": "Debilita el rey con el alfil blanco apuntando a f7: d4 y el centro negro se derrumba."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 c2c3 g8f6 d2d3": {
+      "porQue": "Giuoco Pianissimo: defiende e4 y deja d4 para más adelante. Juego lento y de maniobras."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 c2c3 g8f6 d2d3 d7d6": {
+      "porQue": "Sostiene e5 y abre el alfil de c8: estructura sólida y simétrica.",
+      "porQueNo": [
+        {
+          "uci": "d7d5",
+          "texto": "Prematuro: exd5 Cxd5 y Db3 ataca d5 y f7."
+        },
+        {
+          "uci": "c6a5",
+          "texto": "Ir a cambiar el alfil cuesta caro: Axf7+ Rxf7 y b4 gana el alfil de c5."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6": {
+      "porQue": "Defensa de los dos caballos: contraataca e4 en vez de desarrollar el alfil."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5": {
+      "porQue": "Ataca f7 con dos piezas: el negro tiene que reaccionar."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5": {
+      "porQue": "La única defensa buena: tapa la diagonal del alfil sobre f7.",
+      "porQueNo": [
+        {
+          "uci": "f8c5",
+          "texto": "Ignorar la amenaza no funciona: Axf7+ y el rey negro pierde el enroque."
+        },
+        {
+          "uci": "f6e4",
+          "texto": "Contraatacar e4 llega tarde: Axf7+ y el negro queda mal."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5": {
+      "porQue": "Las blancas toman y amenazan otra vez f7."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5": {
+      "porQue": "Ataca el alfil de c4: el negro sacrifica un peón a cambio de tiempo y desarrollo.",
+      "porQueNo": [
+        {
+          "uci": "f6d5",
+          "texto": "Retomar con el caballo permite Cxf7: el Hígado frito. El rey negro sale al centro."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Ruy Lopez (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Ruy_Lopez",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Italian Game (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Italian_Game",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 f8c5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 15 puntos de chances: −0,2 → −1,9. Refutación: Cxe5 d6 Cf3 Cf6 d4 Ab6"
+      },
+      "e2e4 e7e5 g1f3 f7f6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 14 puntos de chances: −0,2 → −1,9. Refutación: Cxe5 De7 Cf3 d5 d3 dxe4"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f3e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 33 puntos de chances: +0,2 → −4,0. Refutación: Cxe5 d4 Cg6 Cc3 Ab4 h4"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f3g5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 46 puntos de chances: +0,2 → −7,4. Refutación: Dxg5 Cc3 Dg6 f4 exf4 d4"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 d7d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 12 puntos de chances: −0,3 → −1,6. Refutación: Cxe5 a6 Axc6+ bxc6 O-O dxe4"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 c6a5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,3 → −1,1. Refutación: Aa4 c6 c3 Cf6 De2 d6"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 d7d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: −0,3 → −1,3. Refutación: Cxe5 De7 d4 b5 Ab3 Cxe5"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 c6d4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 15 puntos de chances: −0,3 → −2,1. Refutación: Cxe5 b5 c3 Ce6 Ab3 d6"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 d7d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 20 puntos de chances: −0,3 → −2,8. Refutación: exd5 Dxd5 Cc3 Dd6 Cxe5 b5"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 e8g8 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: −0,3 → −1,4. Refutación: Axc6 dxc6 Cxe5 Te8 Cf3 c5"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 c6d4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: −0,3 → −1,3. Refutación: Cxe5 b5 Cf3 Cxf3+ Dxf3 bxa4"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,4 → −1,0. Refutación: exd5 Cxd5 Cxe5 Cxe5 Txe5 c6"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5c6 d7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5c6 d7c6 e1g1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5c6 d7c6 f3e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,1 → −0,7. Refutación: Dd4 Cf3 Dxe4+ De2 Dxe2+ Rxe2"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 a7a6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 12 puntos de chances: −0,2 → −1,6. Refutación: Axc6 dxc6 Cxe5 Ac5 Cc3 Ae6"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 d7d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: −0,2 → −1,4. Refutación: exd5 Cd4 Cxd4 exd4 O-O Ad6"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 c2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 c2c3 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 c2c3 d7d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 24 puntos de chances: −0,2 → −3,1. Refutación: exd5 Cce7 Cxe5 Cf6 d4 Ad6"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 c2c3 f7f5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 13 puntos de chances: −0,2 → −1,7. Refutación: d4 exd4 e5 d5 exd6 cxd6"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 c2c3 g8f6 d2d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 c2c3 g8f6 d2d3 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 c2c3 g8f6 d2d3 d7d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,3 → −1,1. Refutación: exd5 Cxd5 Db3 Cf6 Axf7+ Rf8"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 c2c3 g8f6 d2d3 c6a5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,3 → −1,1. Refutación: Axf7+ Rxf7 b4 Te8 bxc5 b6"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 f8c5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: −0,2 → −1,2. Refutación: Cxf7 Axf2+ Rf1 De7 Cxh8 d5"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 f6e4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 18 puntos de chances: −0,2 → −2,3. Refutación: Axf7+ Re7 d4 h6 Cxe4 Rxf7"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 f6d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: −0,1 → −1,2. Refutación: Cxf7 Rxf7 Df3+ Re6 Cc3 Cb4"
+      }
+    }
+  }
+}

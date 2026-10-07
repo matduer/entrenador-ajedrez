@@ -56,7 +56,7 @@ Contexto del jugador: `docs/contexto/analisis-partidas-avatargs.md` y `docs/cont
 0. ✅ Preparación: repo, esqueleto PWA, licencia, deploy.
 1. ✅ Stockfish offline + importación incremental + análisis previo + errores + táctica desde mis errores + FSRS + respaldo.
 2. ✅ Estadísticas por apertura/color/fase + **reloj**.
-3. ✅ Aperturas: explorador, repertorio, práctica por niveles, FSRS, por qué sí / por qué no. Explicaciones escritas y verificadas: Caro-Kann (54 comprobaciones), Eslava (31), Francesa (30). Faltan 1.e4 e5 (Española/Italiana), Siciliana, Gambito de Dama, India de Rey, Nimzoindia. Método: `explorar-posicion.ts` para elegir con datos qué errores explicar → redactar → `verificar-explicaciones.ts 18` (un hilo, reproducible). Si un "por qué no" no llega a 0,08, se saca: no se fuerza el ejemplo.
+3. ✅ Aperturas: explorador, repertorio, práctica por niveles, FSRS, por qué sí / por qué no. Explicaciones escritas y verificadas (258 comprobaciones): Caro-Kann (54), Eslava (31), Francesa (30), 1.e4 e5 Española e Italiana (52), Siciliana (30), Gambito de Dama (21), India de Rey (23), Nimzoindia (17). El orden lo aprobó el usuario el 2026-10-07; no hay más en la lista acordada. Método: `explorar-posicion.ts` para elegir con datos qué errores explicar → redactar → `verificar-explicaciones.ts 18` (un hilo, reproducible). Si un "por qué no" no llega a 0,08, se saca: no se fuerza el ejemplo.
 4. ✅ Problemas de Lichess (4.550, CC0).
 5. ✅ Finales: temario verificado con tablebases, juego contra tablebase/Stockfish, finales propios, editor.
 6. ✅ Progreso.
