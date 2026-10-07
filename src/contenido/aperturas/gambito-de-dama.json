@@ -2,7 +2,7 @@
   "id": "gambito-de-dama",
   "nombre": "Gambito de Dama",
   "raiz": "d2d4 d7d5 c2c4",
-  "resumen": "Las blancas ofrecen el peón de c4 para desviar el peón negro de d5 y quedarse con el centro. No es un gambito de verdad: si el negro toma (Gambito aceptado), las blancas lo recuperan casi siempre. Lo más común es rehusarlo con 2...e6 (sólido, pero encierra el alfil de c8) o con 2...c6 (Eslava).",
+  "resumen": "Tras 1.d4 d5 el peón de d5 está bien defendido, pero las blancas pueden atacarlo con 2.c4. No es un gambito de verdad: si el negro toma en c4, las blancas lo recuperan casi siempre. El ataque es más lento que en 1.e4 e5 y de naturaleza estratégica. El negro tiene tres defensas principales. Con 2...e6 (Rehusado) sostiene d5 y abre su alfil de rey, aunque encierra el de dama. Con 2...c6 (Eslava) mantiene libre el alfil de c8. Con 2...dxc4 (Aceptado) cede el centro un momento para contraatacarlo con ...c5 o ...e5 mientras las blancas recuperan el peón.",
   "planesBlancas": [
     "Presión sobre d5 con Cc3, Ag5 (clavando el caballo de f6) y la columna c.",
     "En la variante del Cambio, el ataque de minorías: b4-b5 contra la cadena negra c6-d5 para dejar un peón débil.",
@@ -112,9 +112,34 @@
     },
     "d2d4 d7d5 c2c4 d5c4 e2e3 g8f6": {
       "porQue": "Desarrolla sin aferrarse al peón: después vienen ...e6 y ...c5 contra el centro."
+    },
+    "d2d4 d7d5 c2c4 d5c4 g1f3": {
+      "porQue": "Lo más flexible: desarrolla sin apurarse a recuperar el peón y no ofrece blancos al contraataque."
+    },
+    "d2d4 d7d5 c2c4 d5c4 g1f3 g8f6 e2e3 e7e6 f1c4 c7c5 e1g1 a7a6": {
+      "porQue": "La línea principal: prepara ...b5 y ...Ab7, y espera un mejor momento para cambiar en d4."
+    },
+    "d2d4 d7d5 c2c4 d5c4 e2e4": {
+      "porQue": "Toma el centro con los dos peones; el negro lo ataca con ...e5, ...c5 o ...Cf6."
+    },
+    "d2d4 d7d5 c2c4 d5c4 e2e4 e7e5": {
+      "porQue": "Contraataca el centro enseguida."
+    },
+    "d2d4 d7d5 c2c4 d5c4 e2e3 e7e5 f1c4": {
+      "porQue": "Lo correcto: tras ...exd4 exd4, el peón aislado de d4 está bien apoyado por las piezas blancas.",
+      "porQueNo": [
+        {
+          "uci": "d4e5",
+          "texto": "Dxd1+ Rxd1: el negro queda cómodo en el final, sin el rey blanco enrocado."
+        }
+      ]
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Queen's Gambit Declined» y «Queen's Gambit Accepted»"
+    },
     {
       "titulo": "Queen's Gambit Declined (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Queen%27s_Gambit_Declined",
@@ -214,6 +239,30 @@
       "d2d4 d7d5 c2c4 d5c4 e2e3 g8f6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 d5c4 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 d5c4 g1f3 g8f6 e2e3 e7e6 f1c4 c7c5 e1g1 a7a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 d5c4 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 d5c4 e2e4 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 d5c4 e2e3 e7e5 f1c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 d5c4 e2e3 e7e5 d4e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,3 → −0,5. Refutación: Dxd1+ Rxd1 Cc6 Cd2 Cxe5 Cxc4"
       }
     }
   }

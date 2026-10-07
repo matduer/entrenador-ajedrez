@@ -75,9 +75,22 @@
           "texto": "La dama en d5 es un blanco: el enroque, Cc3 y Ce5 ganan tiempo sobre ella."
         }
       ]
+    },
+    "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 f8e7 e1g1 e8g8 d1c2 a7a6": {
+      "porQue": "Prepara ...b5: si las blancas recuperan el peón, el alfil irá a b7 a neutralizar al de g2."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 f8e7 e1g1 e8g8 d1c2 a7a6 c2c4 b7b5 c4c2 c8b7": {
+      "porQue": "El alfil de b7 neutraliza al de g2; después ...Cbd7 y ...c5 completan el desarrollo."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 f8e7 g1f3 e8g8 e1g1 b8d7": {
+      "porQue": "Catalana Cerrada: desarrolla y prepara ...c6 y ...b6, o la ruptura ...c5."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Queen's Gambit Declined», sección «The Catalan»"
+    },
     {
       "titulo": "Catalan Opening (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Catalan_Opening",
@@ -141,6 +154,18 @@
       "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 d8d5 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 8 puntos de chances: −0,2 → −1,1. Refutación: O-O Ae7 Cc3 Dd8 Da4+ c6"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 f8e7 e1g1 e8g8 d1c2 a7a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 f8e7 e1g1 e8g8 d1c2 a7a6 c2c4 b7b5 c4c2 c8b7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 f8e7 g1f3 e8g8 e1g1 b8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
       }
     }
   }

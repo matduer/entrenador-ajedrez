@@ -103,9 +103,40 @@
           "texto": "...g5: el alfil queda atrapado."
         }
       ]
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 f8e7 e2e3 c7c6 f1d3 b8d7 d1c2 e8g8 g1f3 f8e8 e1g1": {
+      "porQue": "Enroque corto: el plan es el ataque de minorías (Tab1, b4 y b5) para dejar un peón débil en c6 o en d5."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 f8e7 e2e3 c7c6 f1d3 b8d7 d1c2 e8g8 g1e2": {
+      "porQue": "Con Ce2 las blancas guardan dos planes: enroque largo y ataque con g4, o enroque corto, f3 y e4."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 f8e7 e2e3 e8g8 g1f3 h7h6 g5h4 b7b6": {
+      "porQue": "Tartakower: el fianchetto de dama y la ruptura ...c5 resuelven el problema del alfil de c8."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 f8e7 e2e3 e8g8 g1f3 b8d7 a1c1 c7c6 f1d3 d5c4 d3c4 f6d5": {
+      "porQue": "Liberación de Capablanca: cambia piezas y prepara ...e5."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 g1f3 f8b4": {
+      "porQue": "Ragozin: clava el caballo, como en la Nimzoindia, y busca ...c5, ...Ce4 o ...dxc4."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 g1f3 f8b4 c4d5": {
+      "porQue": "Fija la estructura antes de que el negro gane actividad."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 g1f3 c7c5 c4d5 f6d5": {
+      "porQue": "Semi-Tarrasch: retoma con el caballo para no quedarse con un peón aislado."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 g1f3 f8e7 c1f4": {
+      "porQue": "Con el alfil en f4 no hay clavada que aliviar con ...h6 o ...Ce4."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 g1f3 f8e7 c1f4 e8g8 e2e3 c7c5": {
+      "porQue": "Con el alfil en f4, el peón de d5 no está presionado y ...c5 es posible."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Queen's Gambit Declined»: Exchange Variation, 4 Bg5 (Capablanca, Lasker, Tartakower), 4 Nf3 (5 Bf4, Semi-Tarrasch, Ragozin)"
+    },
     {
       "titulo": "Queen's Gambit Declined (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Queen%27s_Gambit_Declined",
@@ -201,6 +232,42 @@
       "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 f8e7 e2e3 e8g8 g1f3 h7h6 g5h4 f6e4 g2g3 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 27 puntos de chances: +0,2 → −3,1. Refutación: g5 Ce5 Rg7 Axg5 hxg5 h4"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 f8e7 e2e3 c7c6 f1d3 b8d7 d1c2 e8g8 g1f3 f8e8 e1g1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 f8e7 e2e3 c7c6 f1d3 b8d7 d1c2 e8g8 g1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 f8e7 e2e3 e8g8 g1f3 h7h6 g5h4 b7b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 f8e7 e2e3 e8g8 g1f3 b8d7 a1c1 c7c6 f1d3 d5c4 d3c4 f6d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 g1f3 f8b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 g1f3 f8b4 c4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 g1f3 c7c5 c4d5 f6d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 g1f3 f8e7 c1f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 g1f3 f8e7 c1f4 e8g8 e2e3 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
       }
     }
   }

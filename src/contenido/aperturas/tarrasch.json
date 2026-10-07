@@ -70,9 +70,25 @@
           "texto": "e4 abre el juego cuando el negro todavía no se desarrolló."
         }
       ]
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3": {
+      "porQue": "El fianchetto presiona d5 desde g2: el plan más peligroso contra el peón aislado."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8": {
+      "porQue": "La posición básica de la Tarrasch: el desarrollo negro es muy libre, pero d5 está bajo presión."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5": {
+      "porQue": "Presiona d5 indirectamente, a través del caballo de f6."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 c5d4": {
+      "porQue": "Gambito Schara-Hennig: entrega un peón a cambio de desarrollo rápido."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Queen's Gambit Declined», sección «Tarrasch Defence»"
+    },
     {
       "titulo": "Tarrasch Defense (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Tarrasch_Defense",
@@ -136,6 +152,22 @@
       "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 c8f5 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 12 puntos de chances: −0,3 → −1,7. Refutación: Db3 Cc6 e4 De7 Ab5 Axe4"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 c5d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
       }
     }
   }

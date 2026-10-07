@@ -158,9 +158,31 @@
           "texto": "Abrir el centro sin estar desarrollado falla: dxe5 Ce4 Cxe4 dxe4 Dxd8+."
         }
       ]
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 e2e3 e7e6 f1c4 f8b4 e1g1 e8g8 d1e2": {
+      "porQue": "Prepara e4 para ganar espacio; a cambio, la casilla b4 quedó en manos del negro."
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 e2e3 e7e6 f1c4 f8b4 e1g1 e8g8 f3h4": {
+      "porQue": "Busca cambiar el alfil de f5."
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5": {
+      "porQue": "Más ambicioso: prepara f3 y e4 para formar un centro fuerte."
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7": {
+      "porQue": "Si Cxc4, ...Dc7 y ...e5 golpean el centro."
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 a7a6": {
+      "porQue": "Variante Chebanenko: flexible; prepara ...b5 y deja para después la salida del alfil."
+    },
+    "d2d4 d7d5 c2c4 c7c6 c4d5 c6d5 b1c3 g8f6 c1f4 b8c6 e2e3 c8f5": {
+      "porQue": "Mantiene la simetría y desafía a las blancas a sacar algo de la jugada de ventaja."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Slav and Semi-Slav»: Exchange Variation, Slav Accepted y 4...a6"
+    },
     {
       "titulo": "Slav Defense (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Slav_Defense",
@@ -305,6 +327,30 @@
       "d2d4 d7d5 c2c4 c7c6 c4d5 c6d5 b1c3 g8f6 c1f4 e7e5 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 14 puntos de chances: −0,2 → −1,9. Refutación: dxe5 Ce4 Cxe4 dxe4 Dxd8+ Rxd8"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 e2e3 e7e6 f1c4 f8b4 e1g1 e8g8 d1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 e2e3 e7e6 f1c4 f8b4 e1g1 e8g8 f3h4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 a7a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 c4d5 c6d5 b1c3 g8f6 c1f4 b8c6 e2e3 c8f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
       }
     }
   }
