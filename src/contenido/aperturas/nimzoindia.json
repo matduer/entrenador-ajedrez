@@ -2,7 +2,7 @@
   "id": "nimzoindia",
   "nombre": "Defensa Nimzoindia",
   "raiz": "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4",
-  "resumen": "Una de las defensas más sólidas contra 1.d4. Con 3...Ab4 el negro clava el caballo que prepara e4 y controla esa casilla con piezas en vez de con peones. Está dispuesto a cambiar el alfil por el caballo: entrega la pareja de alfiles a cambio de doblar los peones blancos en la columna c y jugar contra ellos.",
+  "resumen": "El negro impide e4 clavando el caballo, pero sin comprometer sus peones: según lo que hagan las blancas, puede armar el centro con ...d5, ...c5, ...b6 o ...d6. La gran pregunta de la Nimzoindia es el cambio en c3: las blancas obtienen la pareja de alfiles y a veces un centro fuerte, a cambio de peones doblados. Cada sistema responde distinto. La Sämisch (4.a3) acepta los peones doblados y busca e4. La Clásica (4.Dc2) quiere los alfiles sin doblar peones. La Rubinstein (4.e3) desarrolla y deja que el negro decida. La Leningrado (4.Ag5) contraclava.",
   "planesBlancas": [
     "Evitar los peones doblados recapturando con la dama (4.Dc2) o desarrollar con calma (4.e3) y aceptar el cambio en condiciones favorables.",
     "Si el negro cambia en c3, aprovechar la pareja de alfiles abriendo el juego y empujar el centro con e4.",
@@ -92,9 +92,64 @@
           "texto": "Abrir el centro favorece a los alfiles blancos: dxe5 y el caballo tiene que salir de f6."
         }
       ]
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1c2 d7d5": {
+      "porQue": "Ataca el centro enseguida."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1c2 d7d5 c4d5 d8d5": {
+      "porQue": "Retoma con la dama: con ...Df5 o ...c5 el negro se desarrolla con comodidad."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1c2 b8c6": {
+      "porQue": "Prepara ...d6 y ...e5, un plan simple contra la Clásica."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1c2 e8g8 a2a3 b4c3 c2c3 b7b6": {
+      "porQue": "Fianchetto de dama: ...Ab7 y ...Ce4 pelean por e4 y compensan la pareja de alfiles."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 a2a3 b4c3 b2c3 c7c5": {
+      "porQue": "Ataca el centro y prepara ...Cc6; si f3, ...d5 frena e4."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 a2a3 b4c3 b2c3 b7b6 f2f3 c8a6": {
+      "porQue": "Ataca c4, el más débil de los peones doblados."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 a2a3 b4c3 b2c3 b7b6 f2f3 c8a6 e2e4 b8c6": {
+      "porQue": "Suma presión sobre c4: ...Ca5 viene después."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3 b7b6": {
+      "porQue": "El alfil irá a b7 para reforzar el control de e4."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3 b7b6 g1e2": {
+      "porQue": "La idea: a3 y retomar en c3 con el caballo, sin peones doblados."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3 c7c5 f1d3 b8c6 g1f3 b4c3 b2c3 d7d6": {
+      "porQue": "Variante Hübner: cambia en c3 sin esperar a3, prepara ...e5 y juega contra los peones doblados."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3 e8g8 f1d3 d7d5 g1f3 c7c5 e1g1 c5d4 e3d4 d5c4 d3c4 b7b6": {
+      "porQue": "Variante Karpov: juega contra el peón aislado de d4, con el alfil de c8 rumbo a b7."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 c1g5": {
+      "porQue": "Leningrado: contraclava el caballo."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 c1g5 h7h6 g5h4 c7c5": {
+      "porQue": "La reacción necesaria: ataca d4 antes de que las blancas aprovechen la clavada."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 f2f3": {
+      "porQue": "Prepara e4 sin más: un primo de la Sämisch."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 f2f3 d7d5": {
+      "porQue": "Pelea por e4 enseguida."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 g1f3": {
+      "porQue": "Desarrollo flexible: puede transponer a la Rubinstein con e3 o al sistema con g3."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 g1f3 c7c5 g2g3": {
+      "porQue": "Sistema Romanishin-Kasparov: el alfil de g2 presiona el flanco de dama."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Nimzo-Indian Defence»"
+    },
     {
       "titulo": "Nimzo-Indian Defence (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Nimzo-Indian_Defence",
@@ -178,6 +233,74 @@
       "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 a2a3 b4c3 b2c3 e6e5 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 11 puntos de chances: −0,0 → −1,2. Refutación: dxe5 Cg4 Cf3 Cc6 Ag5 f6"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1c2 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1c2 d7d5 c4d5 d8d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1c2 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1c2 e8g8 a2a3 b4c3 c2c3 b7b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 a2a3 b4c3 b2c3 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 a2a3 b4c3 b2c3 b7b6 f2f3 c8a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 a2a3 b4c3 b2c3 b7b6 f2f3 c8a6 e2e4 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3 b7b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3 b7b6 g1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3 c7c5 f1d3 b8c6 g1f3 b4c3 b2c3 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3 e8g8 f1d3 d7d5 g1f3 c7c5 e1g1 c5d4 e3d4 d5c4 d3c4 b7b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 c1g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 c1g5 h7h6 g5h4 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 f2f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 f2f3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 g1f3 c7c5 g2g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
       }
     }
   }

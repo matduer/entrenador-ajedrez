@@ -3,7 +3,7 @@
   "id": "india-de-dama",
   "nombre": "Defensa India de Dama",
   "raiz": "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6",
-  "resumen": "Cuando las blancas evitan la Nimzoindia con 3.Cf3, el negro saca el alfil de dama en fianchetto para controlar e4 y d5 con piezas. Es una defensa muy sólida. En la línea principal (4.g3) el negro ataca c4 con ...Aa6 para obligar a las blancas a debilitarse con b3.",
+  "resumen": "Con 3.Cf3 las blancas evitan la clavada de la Nimzoindia, y el negro responde ...b6 para pelear por e4 y d5 con el alfil en la diagonal larga. Durante mucho tiempo tuvo fama de pacífica, hasta que Kasparov convirtió 4.a3 y 4.Cc3 Ab4 5.Ag5 en armas peligrosas. Un tema que se repite: el avance d5 de las blancas, que corta al alfil de b7 de la lucha por e4. Contra 4.g3, la respuesta 4...Aa6 ataca c4 y obliga a las blancas a decidir enseguida cómo defenderlo.",
   "planesBlancas": [
     "Fianchetto propio (g3, Ag2) para disputar la diagonal larga.",
     "Ganar el centro con Cc3 y e4 si el negro descuida e4."
@@ -61,9 +61,40 @@
           "texto": "La dama no hace nada en e7: Ag2 y el enroque dejan a las blancas cómodas."
         }
       ]
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 g2g3 c8b7": {
+      "porQue": "La respuesta clásica: el alfil disputa la diagonal larga y la casilla e4."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 g2g3 c8b7 f1g2 f8e7 e1g1 e8g8 b1c3 f6e4": {
+      "porQue": "Ocupa e4 antes de que las blancas lo controlen con Dc2 o Dd3."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 g2g3 c8b7 f1g2 f8e7 e1g1 e8g8 b1c3 f6e4 c1d2": {
+      "porQue": "Más ambicioso: prepara d5 aunque ceda la pareja de alfiles."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 g2g3 c8a6 b2b3 f8b4 c1d2 b4e7": {
+      "porQue": "El alfil retrocede: ahora el de d2 estorba al caballo de b1."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 g2g3 c8a6 b2b3 f8b4 c1d2 b4e7 f1g2 c7c6": {
+      "porQue": "Prepara ...d5 para poder retomar con el peón de c."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 a2a3": {
+      "porQue": "Sistema Petrosian: impide ...Ab4 para poder jugar Cc3 sin la clavada."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 a2a3 c8b7 b1c3 d7d5": {
+      "porQue": "Pelea por el centro: tras cxd5 el negro elige entre ...exd5, sólido, y ...Cxd5, más dinámico."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 b1c3 f8b4 c1g5": {
+      "porQue": "Mezcla de India de Dama y Nimzoindia: muy agudo si el negro rompe la clavada con ...h6 y ...g5."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 e2e3": {
+      "porQue": "Desarrollo tranquilo: la lucha se posterga al medio juego."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Queen's Indian Defence»"
+    },
     {
       "titulo": "Queen's Indian Defense (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Queen%27s_Indian_Defense",
@@ -119,6 +150,42 @@
       "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 g2g3 c8a6 b2b3 d8e7 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 7 puntos de chances: −0,2 → −1,0. Refutación: Ag2 Ab7 O-O g6 Cc3 Ag7"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 g2g3 c8b7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 g2g3 c8b7 f1g2 f8e7 e1g1 e8g8 b1c3 f6e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 g2g3 c8b7 f1g2 f8e7 e1g1 e8g8 b1c3 f6e4 c1d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 g2g3 c8a6 b2b3 f8b4 c1d2 b4e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 g2g3 c8a6 b2b3 f8b4 c1d2 b4e7 f1g2 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 a2a3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 a2a3 c8b7 b1c3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 b1c3 f8b4 c1g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
       }
     }
   }

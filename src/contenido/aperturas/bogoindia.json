@@ -3,7 +3,7 @@
   "id": "bogoindia",
   "nombre": "Defensa Bogoindia",
   "raiz": "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4",
-  "resumen": "Una alternativa a la India de Dama: el negro da jaque con el alfil en b4 para provocar Ad2 o Cbd2 y desarrollarse con comodidad. Es sólida y deja menos teoría que la Nimzoindia.",
+  "resumen": "El jaque en b4 es flexible y sólido: el negro se reserva cuatro planes (...d5 como en el Gambito de Dama, ...b6 como en la India de Dama, ...d6 con ...e5 y ...c5) y casi siempre cambia el alfil en d2, lo que alivia la presión típica de la apertura. Si algo sale mal, el negro suele quedar algo pasivo, no perdido. Las blancas responden con 4.Ad2, que acepta los cambios, o con 4.Cbd2, que busca a3 para quedarse con la pareja de alfiles sin peones doblados.",
   "planesBlancas": [
     "Interponer con Ad2 (para cambiar alfiles) o Cbd2, y ganar espacio en el centro."
   ],
@@ -38,9 +38,34 @@
           "texto": "En d6 el alfil tapa el peón de d y las blancas juegan e4 con tiempo."
         }
       ]
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 b4d2": {
+      "porQue": "El cambio simple: después ...d5 lleva a estructuras del Gambito de Dama o la Catalana."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 a7a5": {
+      "porQue": "Si Axb4 axb4, el negro gana la columna a y control del centro."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 c7c5": {
+      "porQue": "Provocador: tras Axb4 cxb4 el negro juega ...d6 y ...e5, con una posición flexible."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 d8e7 g2g3 b8c6": {
+      "porQue": "Prepara ...Axd2+: si Dxd2, ...Ce4 molesta; por eso las blancas suelen retomar con el caballo."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 b1d2": {
+      "porQue": "Busca a3 para quedarse con la pareja de alfiles sin peones doblados."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 b1d2 d7d5": {
+      "porQue": "Si a3, ...Ae7: el caballo de d2 queda menos activo que en c3."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 b1d2 b7b6": {
+      "porQue": "Si a3, el negro cambia en d2 y juega como en la Nimzoindia con ...Ab7."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Bogo-Indian Defence»"
+    },
     {
       "titulo": "Bogo-Indian Defence (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Bogo-Indian_Defence",
@@ -76,6 +101,34 @@
       "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 b4d6 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 7 puntos de chances: −0,3 → −1,0. Refutación: Dc2 Ae7 Cc3 d5 e4 dxe4"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 b4d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 a7a5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 d8e7 g2g3 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 b1d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 b1d2 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 b1d2 b7b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
       }
     }
   }
