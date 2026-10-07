@@ -1,0 +1,147 @@
+{
+  "trampas": [
+    {
+      "jugadas": "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 b7b5 a2a4",
+      "texto": "Sostener el peón de c4 con ...b5 parece natural, pero a4 ataca la cadena y la diagonal del alfil de g2 apunta a la torre de a8."
+    }
+  ],
+  "id": "catalana",
+  "nombre": "Apertura Catalana",
+  "raiz": "d2d4 g8f6 c2c4 e7e6 g2g3",
+  "resumen": "Gambito de Dama con el alfil de rey en fianchetto: el alfil de g2 presiona la diagonal larga y, sobre todo, el flanco de dama negro (b7, c6). Si el negro toma en c4 (Catalana abierta), las blancas suelen recuperar el peón con Da4+ o Ce5 y quedan con el alfil muy activo; si no lo toma (cerrada), el negro queda sólido pero algo apretado.",
+  "planesBlancas": [
+    "Presionar la diagonal larga con el alfil de g2 y la dama (Dc2, Da4).",
+    "Recuperar el peón de c4 en la Catalana abierta y aprovechar el desarrollo.",
+    "e4 para ganar el centro cuando el negro se descuida."
+  ],
+  "planesNegras": [
+    "Liberar el alfil de c8 (...b6 y ...Ab7, o ...dxc4 seguido de ...c5 o ...b5 con cuidado).",
+    "Rupturas ...c5 o ...e5 para no quedar encerrado."
+  ],
+  "estructura": "Peones de Gambito de Dama (d4, c4 contra d5, e6) con el alfil blanco en g2. En la abierta, el negro cambia en c4 y el juego se abre en el flanco de dama.",
+  "rupturas": [
+    "...c5 y ...dxc4 del negro.",
+    "e4 y Ce5 de las blancas."
+  ],
+  "piezas": [
+    "Alfil blanco de f1: g2, la pieza clave de la Catalana.",
+    "Alfil negro de c8: el problema; sale por b7 o d7.",
+    "Dama blanca: c2 o a4 para recuperar el peón de c4."
+  ],
+  "notas": {
+    "d2d4 g8f6 c2c4 e7e6 g2g3": {
+      "porQue": "Prepara el fianchetto del alfil de rey: la idea de la Catalana."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5": {
+      "porQue": "Ocupa el centro: estructura de Gambito de Dama.",
+      "porQueNo": [
+        {
+          "uci": "e6e5",
+          "texto": "dxe5 y el negro no recupera el peón con comodidad: el caballo tiene que ir a g4 y las blancas juegan e4."
+        },
+        {
+          "uci": "d8e7",
+          "texto": "La dama no hace nada en e7 y tapa el alfil: Ag2 y las blancas quedan cómodas."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2": {
+      "porQue": "El alfil en la diagonal larga: presiona d5 y b7."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4": {
+      "porQue": "Catalana abierta: toma el peón y obliga a las blancas a gastar tiempo para recuperarlo.",
+      "porQueNo": [
+        {
+          "uci": "b7b5",
+          "texto": "Sin haber tomado en c4, ...b5 regala el peón: cxb5."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 f8e7": {
+      "porQue": "Catalana cerrada: desarrolla y enroca sin tomar el peón. Sólida aunque algo apretada."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3": {
+      "porQue": "Desarrolla y prepara el enroque; el peón se recupera después con Da4+ o Ce5."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 c7c5": {
+      "porQue": "Ataca el centro mientras las blancas se ocupan de recuperar el peón.",
+      "porQueNo": [
+        {
+          "uci": "f6e4",
+          "texto": "El caballo en e4 queda expuesto: el enroque y Cd2 lo echan."
+        },
+        {
+          "uci": "d8d5",
+          "texto": "La dama en d5 es un blanco: el enroque, Cc3 y Ce5 ganan tiempo sobre ella."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Catalan Opening (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Catalan_Opening",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "d2d4 g8f6 c2c4 e7e6 g2g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g2g3 e6e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,3 → −1,1. Refutación: dxe5 Cg4 Af4 Ab4+ Cc3 Axc3+"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g2g3 d8e7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,3 → −0,9. Refutación: Ag2 d5 Cf3 g6 Cc3 Ag7"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 b7b5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 4 puntos de chances: −0,2 → −0,6. Refutación: cxb5 c6 bxc6 Cxc6 Cf3 Ad6"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 f8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 f6e4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,2 → −0,9. Refutación: Da4+ Dd7 Dxc4 Dc6 Cfd2 Dxc4"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 d8d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,2 → −1,1. Refutación: O-O Ae7 Cc3 Dd8 Da4+ c6"
+      }
+    }
+  }
+}

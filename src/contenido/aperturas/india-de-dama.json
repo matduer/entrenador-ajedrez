@@ -1,0 +1,125 @@
+{
+  "trampas": [],
+  "id": "india-de-dama",
+  "nombre": "Defensa India de Dama",
+  "raiz": "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6",
+  "resumen": "Cuando las blancas evitan la Nimzoindia con 3.Cf3, el negro saca el alfil de dama en fianchetto para controlar e4 y d5 con piezas. Es una defensa muy sólida. En la línea principal (4.g3) el negro ataca c4 con ...Aa6 para obligar a las blancas a debilitarse con b3.",
+  "planesBlancas": [
+    "Fianchetto propio (g3, Ag2) para disputar la diagonal larga.",
+    "Ganar el centro con Cc3 y e4 si el negro descuida e4."
+  ],
+  "planesNegras": [
+    "Controlar e4 con el alfil de b7, el caballo de f6 y a veces ...Ce4.",
+    "Presionar c4 con ...Aa6 y liberar el juego con ...c5 o ...d5."
+  ],
+  "estructura": "Peones blancos en c4 y d4 contra los negros en b6 y e6: el negro controla el centro con piezas.",
+  "rupturas": [
+    "...c5 y ...d5 del negro.",
+    "d5 y e4 de las blancas."
+  ],
+  "piezas": [
+    "Alfil negro de c8: b7 o a6, la pieza clave.",
+    "Alfil blanco de f1: g2, para neutralizar el de b7."
+  ],
+  "notas": {
+    "d2d4 g8f6 c2c4 e7e6 g1f3": {
+      "porQue": "Desarrolla y evita la clavada de la Nimzoindia (no hay caballo en c3 para clavar)."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6": {
+      "porQue": "Prepara el fianchetto del alfil de dama para controlar e4."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 g2g3": {
+      "porQue": "Fianchetto propio: el alfil de g2 va a disputar la diagonal larga.",
+      "porQueNo": [
+        {
+          "uci": "d4d5",
+          "texto": "Avanzar sin preparación: exd5 cxd5 y el negro tiene buen juego contra el peón de d5."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 g2g3 c8a6": {
+      "porQue": "Ataca c4: las blancas tienen que defenderlo con b3, Da4 o Cbd2.",
+      "porQueNo": [
+        {
+          "uci": "d7d6",
+          "texto": "Lento: Cc3 y Ag2 y las blancas controlan el centro."
+        },
+        {
+          "uci": "b6b5",
+          "texto": "El gambito no da nada: cxb5."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 g2g3 c8a6 b2b3": {
+      "porQue": "Defiende c4 con un peón."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 g2g3 c8a6 b2b3 f8b4": {
+      "porQue": "Jaque que obliga a Ad2: después el alfil vuelve a e7 y las blancas quedaron con el alfil en d2, menos activo.",
+      "porQueNo": [
+        {
+          "uci": "d8e7",
+          "texto": "La dama no hace nada en e7: Ag2 y el enroque dejan a las blancas cómodas."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Queen's Indian Defense (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Queen%27s_Indian_Defense",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "d2d4 g8f6 c2c4 e7e6 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 g2g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 d4d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,2 → −0,5. Refutación: Ab7 dxe6 dxe6 Dxd8+ Rxd8 Cc3"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 g2g3 c8a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 g2g3 d7d6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 4 puntos de chances: −0,4 → −0,9. Refutación: Cc3 Ae7 Ag2 d5 cxd5 exd5"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 g2g3 b6b5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,4 → −1,3. Refutación: cxb5 c6 Cc3 cxb5 Cxb5 Cc6"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 g2g3 c8a6 b2b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 g2g3 c8a6 b2b3 f8b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 g2g3 c8a6 b2b3 d8e7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,2 → −1,0. Refutación: Ag2 Ab7 O-O g6 Cc3 Ag7"
+      }
+    }
+  }
+}

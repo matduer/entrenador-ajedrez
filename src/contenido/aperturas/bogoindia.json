@@ -1,0 +1,82 @@
+{
+  "trampas": [],
+  "id": "bogoindia",
+  "nombre": "Defensa Bogoindia",
+  "raiz": "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4",
+  "resumen": "Una alternativa a la India de Dama: el negro da jaque con el alfil en b4 para provocar Ad2 o Cbd2 y desarrollarse con comodidad. Es sólida y deja menos teoría que la Nimzoindia.",
+  "planesBlancas": [
+    "Interponer con Ad2 (para cambiar alfiles) o Cbd2, y ganar espacio en el centro."
+  ],
+  "planesNegras": [
+    "Cambiar el alfil cuando convenga, sostener el centro con ...d5 o ...d6 y ...e5."
+  ],
+  "estructura": "Similar a la Nimzoindia sin el caballo en c3: el negro suele cambiar el alfil de casillas negras.",
+  "rupturas": [
+    "...e5 o ...c5 del negro.",
+    "e4 de las blancas."
+  ],
+  "piezas": [
+    "Alfil negro de f8: b4, para cambiarse.",
+    "Dama negra: e7, defendiendo el alfil y apoyando ...e5."
+  ],
+  "notas": {
+    "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4": {
+      "porQue": "Jaque con desarrollo: obliga a las blancas a decidir cómo interponer."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2": {
+      "porQue": "Interpone ofreciendo el cambio de alfiles."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 d8e7": {
+      "porQue": "Defiende el alfil y prepara ...e5 o el cambio en d2.",
+      "porQueNo": [
+        {
+          "uci": "b4f8",
+          "texto": "Volver con el alfil es perder dos tiempos: Cc3 y e4."
+        },
+        {
+          "uci": "b4d6",
+          "texto": "En d6 el alfil tapa el peón de d y las blancas juegan e4 con tiempo."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Bogo-Indian Defence (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Bogo-Indian_Defence",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 d8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 b4f8 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,3 → −0,8. Refutación: Cc3 d5 Dc2 Ab4 e3 O-O"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 b4d6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,3 → −1,0. Refutación: Dc2 Ae7 Cc3 d5 e4 dxe4"
+      }
+    }
+  }
+}

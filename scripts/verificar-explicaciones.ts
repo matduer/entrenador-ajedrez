@@ -6,7 +6,7 @@
  *  - las trampas tienen que ser jugables.
  * Guarda el resultado en el campo `verificacion` de cada archivo y termina con código 1 si algo falla.
  *
- * Uso: node scripts/verificar-explicaciones.ts [profundidad]
+ * Uso: node scripts/verificar-explicaciones.ts [profundidad] [archivo ...]
  * Motor: variable de entorno STOCKFISH (ruta al ejecutable); por defecto, el que ya estaba instalado.
  */
 import { readFileSync, readdirSync, writeFileSync } from 'node:fs'
@@ -28,7 +28,9 @@ const motor = new MotorNativo(PROFUNDIDAD)
 const evaluarJugada = (prefijo: string[], uci: string) => motor.evaluarJugada(prefijo, uci)
 
 let fallas = 0
-for (const archivo of readdirSync(CARPETA).filter((f) => f.endsWith('.json'))) {
+// Opcional: verificar solo algunos archivos (por nombre, con o sin .json) después de la profundidad.
+const SOLO = process.argv.slice(3).map((a) => (a.endsWith('.json') ? a : `${a}.json`))
+for (const archivo of readdirSync(CARPETA).filter((f) => f.endsWith('.json') && (!SOLO.length || SOLO.includes(f)))) {
   const ruta = `${CARPETA}/${archivo}`
   const e: Explicacion = JSON.parse(readFileSync(ruta, 'utf8'))
   const resultados: Record<string, ResultadoVerificacion> = {}

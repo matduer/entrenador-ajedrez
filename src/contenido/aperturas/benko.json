@@ -1,0 +1,116 @@
+{
+  "trampas": [],
+  "id": "benko",
+  "nombre": "Gambito Benko",
+  "raiz": "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5",
+  "resumen": "El negro entrega el peón de b para abrir las columnas a y b y presionar a largo plazo el flanco de dama, con el alfil en a6 y el de g7 en la diagonal larga. La compensación no es un ataque al rey sino una presión que dura todo el medio juego y muchas veces el final.",
+  "planesBlancas": [
+    "Aceptar y consolidar: e4, Cf3, enroque y defender el flanco de dama.",
+    "Devolver el peón en el momento justo para liberarse."
+  ],
+  "planesNegras": [
+    "Torres en las columnas a y b, alfil en a6 y g7, damas en a5 o b6: presión sobre a2 y b2."
+  ],
+  "estructura": "Tras ...axb5 o ...Axa6, las columnas a y b quedan abiertas para el negro; las blancas tienen un peón de más en el centro.",
+  "rupturas": [
+    "...e6 o ...c4 del negro en algunas líneas.",
+    "e5 de las blancas."
+  ],
+  "piezas": [
+    "Alfil negro de c8: a6.",
+    "Alfil negro de f8: g7.",
+    "Torres negras: a8 y b8."
+  ],
+  "notas": {
+    "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5": {
+      "porQue": "Gambito: entrega el peón de b para abrir las columnas del flanco de dama."
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5": {
+      "porQue": "Aceptar es lo más directo: las blancas se quedan con el peón y tienen que defenderlo.",
+      "porQueNo": [
+        {
+          "uci": "f2f3",
+          "texto": "Pasivo: ...bxc4 y el negro recupera el peón con buen juego."
+        },
+        {
+          "uci": "f2f4",
+          "texto": "Debilita el rey: ...e6 y el negro abre el centro con ventaja."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6": {
+      "porQue": "Sigue con el plan: abrir la columna a."
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6": {
+      "porQue": "Toma el segundo peón; el negro retoma con el alfil y queda muy activo.",
+      "porQueNo": [
+        {
+          "uci": "g1f3",
+          "texto": "Deja que el negro tome en b5: ...axb5 y el negro recupera el peón con buen juego."
+        },
+        {
+          "uci": "a2a4",
+          "texto": "Tampoco sirve: ...axb5 y el negro queda activo."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6": {
+      "porQue": "El alfil va a a6: impide el enroque cómodo de las blancas y apunta al flanco de dama."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Benko Gambit (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Benko_Gambit",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 f2f3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,6 → −0,1. Refutación: bxc4 e4 d6 Axc4 g6 Ce2"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 f2f4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: +0,6 → −0,2. Refutación: e6 dxe6 fxe6 cxb5 d5 e3"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 g1f3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,7 → −0,1. Refutación: axb5 Cc3 b4 Cb5 d6 e4"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 a2a4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: +0,7 → −0,1. Refutación: axb5 e4 Da5+ Cd2 Cxe4 Axb5"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      }
+    }
+  }
+}

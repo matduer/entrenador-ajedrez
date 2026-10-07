@@ -39,12 +39,35 @@
   <button role="tab" aria-selected={modo === 'practica'} onclick={() => (modo = 'practica')} disabled={!practica}>Práctica</button>
 </div>
 
+<style>
+  .con-explicacion {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .con-explicacion select {
+    flex: 1;
+    min-width: 200px;
+  }
+</style>
+
 {#if modo === 'explorar'}
   {#if EXPLICACIONES.length}
-    <p class="suave">
-      Con explicación escrita:
-      {#each EXPLICACIONES as e, i (e.id)}{i ? ' · ' : ''}<button class="boton enlace" onclick={() => explorar(e.raiz.split(' '))}>{e.nombre}</button>{/each}
-    </p>
+    <label class="con-explicacion">
+      <span class="suave">Con explicación escrita ({EXPLICACIONES.length}):</span>
+      <select
+        onchange={(ev) => {
+          const e = EXPLICACIONES.find((x) => x.id === ev.currentTarget.value)
+          if (e) explorar(e.raiz.split(' '))
+          ev.currentTarget.value = ''
+        }}
+      >
+        <option value="">Elegí una apertura…</option>
+        {#each EXPLICACIONES as e (e.id)}<option value={e.id}>{e.nombre}</option>{/each}
+      </select>
+    </label>
   {/if}
   {#key claveExplorador}
     <Explorador {inicial} alPracticar={practicarDesde} />

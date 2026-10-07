@@ -1,0 +1,155 @@
+{
+  "trampas": [],
+  "id": "trompowsky",
+  "nombre": "Ataque Trompowsky",
+  "raiz": "d2d4 g8f6 c1g5",
+  "resumen": "Las blancas sacan el alfil a g5 enseguida y amenazan cambiarlo por el caballo para doblar los peones negros. Evita casi toda la teoría de las defensas indias. El negro suele responder ...Ce4 (mueve otra vez el caballo, pero ataca el alfil), ...e6 o ...d5.",
+  "planesBlancas": [
+    "Cambiar en f6 cuando deje peones doblados.",
+    "Contra ...Ce4, Af4 y f3 para echar al caballo y armar el centro."
+  ],
+  "planesNegras": [
+    "Atacar el alfil con ...Ce4 o ...h6, o prepararse para retomar con la dama.",
+    "Contraatacar el centro con ...c5 o ...d5."
+  ],
+  "estructura": "Muy variable; en muchas líneas el negro queda con la pareja de alfiles y las blancas con mejor estructura.",
+  "rupturas": [
+    "...c5 del negro contra d4.",
+    "e4 de las blancas."
+  ],
+  "piezas": [
+    "Alfil blanco de c1: g5, después f4 o h4.",
+    "Caballo negro: e4."
+  ],
+  "notas": {
+    "d2d4 g8f6 c1g5": {
+      "porQue": "Amenaza Axf6 para doblar los peones negros y evita la teoría habitual."
+    },
+    "d2d4 g8f6 c1g5 d7d5": {
+      "porQue": "Ocupa el centro y acepta que, si las blancas cambian en f6, el negro retome con el peón.",
+      "porQueNo": [
+        {
+          "uci": "e7e5",
+          "texto": "dxe5 y el peón se pierde: el caballo tiene que moverse."
+        },
+        {
+          "uci": "f6g4",
+          "texto": "e4 y h3 echan al caballo con tiempo."
+        }
+      ]
+    },
+    "d2d4 g8f6 c1g5 f6e4": {
+      "porQue": "Mueve otra vez el caballo, pero ataca el alfil con tiempo."
+    },
+    "d2d4 g8f6 c1g5 f6e4 g5f4": {
+      "porQue": "El alfil se retira a una buena diagonal; después f3 echa al caballo."
+    },
+    "d2d4 g8f6 c1g5 f6e4 g5f4 d7d5": {
+      "porQue": "Sostiene el caballo de e4 con un peón.",
+      "porQueNo": [
+        {
+          "uci": "f7f6",
+          "texto": "Debilita el rey: f3 y e4 echan al caballo y las blancas toman el centro."
+        },
+        {
+          "uci": "f7f5",
+          "texto": "f3 y e4 y el negro queda debilitado."
+        }
+      ]
+    },
+    "d2d4 g8f6 c1g5 e7e6": {
+      "porQue": "Si el alfil cambia en f6, la dama retoma y no hay peones doblados."
+    },
+    "d2d4 g8f6 c1g5 e7e6 e2e4": {
+      "porQue": "Las blancas ocupan el centro aprovechando la clavada."
+    },
+    "d2d4 g8f6 c1g5 e7e6 e2e4 h7h6": {
+      "porQue": "Pregunta al alfil antes de que e5 se vuelva una amenaza.",
+      "porQueNo": [
+        {
+          "uci": "d7d5",
+          "texto": "e5 echa al caballo y las blancas ganan espacio."
+        },
+        {
+          "uci": "f8b4",
+          "texto": "c3 y el alfil tiene que retroceder."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Trompowsky Attack (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Trompowsky_Attack",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "d2d4 g8f6 c1g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 e7e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 13 puntos de chances: −0,0 → −1,4. Refutación: dxe5 h6 Ah4 g5 exf6 gxh4"
+      },
+      "d2d4 g8f6 c1g5 f6g4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: −0,0 → −1,2. Refutación: e4 d6 Cc3 h6 Ah4 g5"
+      },
+      "d2d4 g8f6 c1g5 f6e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 f6e4 g5f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 f6e4 g5f4 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 f6e4 g5f4 f7f6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,2 → −0,7. Refutación: f3 e5 fxe4 exf4 Ch3 Ad6"
+      },
+      "d2d4 g8f6 c1g5 f6e4 g5f4 f7f5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,2 → −0,7. Refutación: f3 Cf6 e4 d5 e5 Cfd7"
+      },
+      "d2d4 g8f6 c1g5 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 e7e6 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 e7e6 e2e4 h7h6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 e7e6 e2e4 d7d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,1 → −0,7. Refutación: e5 h6 Ae3 Cfd7 c3 c5"
+      },
+      "d2d4 g8f6 c1g5 e7e6 e2e4 f8b4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,1 → −0,8. Refutación: c3 Ae7 Ad3 d6 Cf3 Cbd7"
+      }
+    }
+  }
+}

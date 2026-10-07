@@ -1,0 +1,148 @@
+{
+  "trampas": [],
+  "id": "cuatro-caballos",
+  "nombre": "Partida de los cuatro caballos",
+  "raiz": "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6",
+  "resumen": "Desarrollo clásico y simétrico: los cuatro caballos salen hacia el centro. Es sólida y fácil de jugar. Las blancas eligen entre la versión española (Ab5) y la escocesa (d4).",
+  "planesBlancas": [
+    "Española de cuatro caballos: Ab5, enroque y d3, juego tranquilo.",
+    "Escocesa de cuatro caballos: d4 para abrir el centro."
+  ],
+  "planesNegras": [
+    "Contra Ab5, el contragambito Rubinstein (...Cd4) o la simétrica (...Ab4).",
+    "Contra d4, tomar y desarrollarse con ...Ab4."
+  ],
+  "estructura": "Simétrica al principio; tras d4 y ...exd4 se abre el centro.",
+  "rupturas": [
+    "d4 de las blancas.",
+    "...d5 del negro."
+  ],
+  "piezas": [
+    "Caballos: c3, f3, c6 y f6.",
+    "Alfiles: b5 y b4 en la simétrica."
+  ],
+  "notas": {
+    "e2e4 e7e5 g1f3 b8c6 b1c3": {
+      "porQue": "Desarrolla el otro caballo antes de decidir dónde va el alfil."
+    },
+    "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6": {
+      "porQue": "El negro también desarrolla: los cuatro caballos."
+    },
+    "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1b5": {
+      "porQue": "Variante española: presiona el defensor de e5.",
+      "porQueNo": [
+        {
+          "uci": "f3g5",
+          "texto": "Atacar f7 sin el alfil en c4 no hace nada: ...d5 y el negro toma la iniciativa."
+        },
+        {
+          "uci": "d1e2",
+          "texto": "Tapa el alfil de f1: ...d5 y el negro iguala con comodidad."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1b5 c6d4": {
+      "porQue": "Contragambito Rubinstein: el caballo ataca el alfil de b5 y el de f3, y ofrece el peón de e5.",
+      "porQueNo": [
+        {
+          "uci": "d7d6",
+          "texto": "Pasivo: d4 y las blancas ganan el centro."
+        },
+        {
+          "uci": "d8e7",
+          "texto": "La dama no ayuda: el enroque y d4 dejan a las blancas mejor."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1b5 f8b4": {
+      "porQue": "Variante simétrica: el negro copia la idea de las blancas."
+    },
+    "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 d2d4": {
+      "porQue": "Escocesa de cuatro caballos: abre el centro."
+    },
+    "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 d2d4 e5d4": {
+      "porQue": "Toma y prepara ...Ab4 contra el caballo de c3.",
+      "porQueNo": [
+        {
+          "uci": "d7d6",
+          "texto": "d5 echa al caballo con tiempo."
+        },
+        {
+          "uci": "c6d4",
+          "texto": "Cxd4 exd4 Dxd4 y la dama blanca queda centralizada."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Four Knights Game (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Four_Knights_Game",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 e7e5 g1f3 b8c6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f3g5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: 0,0 → −0,5. Refutación: d5 exd5 Cxd5 Ac4 Dxg5 Axd5"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 d1e2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: 0,0 → −0,5. Refutación: d5 exd5 Cxd5 d4 Ab4 Ad2"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1b5 c6d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1b5 d7d6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,0 → −0,7. Refutación: d4 exd4 Cxd4 Ad7 O-O Ae7"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1b5 d8e7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: −0,0 → −1,1. Refutación: O-O a6 Aa4 Cd4 Cxd4 exd4"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1b5 f8b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 d2d4 e5d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 d2d4 d7d6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,1 → −0,7. Refutación: d5 Ce7 Ag5 a6 g3 h6"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 d2d4 c6d4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: −0,1 → −1,1. Refutación: Cxd4 exd4 Dxd4 d6 Af4 Ae7"
+      }
+    }
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "trampas": [],
+  "id": "reti",
+  "nombre": "Apertura Réti",
+  "raiz": "g1f3 d7d5",
+  "resumen": "Hipermoderna: las blancas no ocupan el centro, lo atacan desde el costado con c4 y el fianchetto. Muy flexible: puede transponer a una Catalana, una Inglesa o un Gambito de Dama.",
+  "planesBlancas": [
+    "c4 contra d5, fianchetto con g3 y Ag2, a veces b3 y Ab2.",
+    "Contra ...d4, expansión con e3 o b4."
+  ],
+  "planesNegras": [
+    "Sostener d5 con ...e6 o ...c6, o avanzar con ...d4 y ganar espacio."
+  ],
+  "estructura": "Muy variable: si el negro juega ...d4 queda una Benoni invertida; si sostiene con ...c6 o ...e6, estructuras de Gambito de Dama.",
+  "rupturas": [
+    "c4 y b4 de las blancas.",
+    "...e5 y ...c5 del negro."
+  ],
+  "piezas": [
+    "Alfil blanco de f1: g2.",
+    "Caballo blanco: f3, control de e5 y d4."
+  ],
+  "notas": {
+    "g1f3": {
+      "porQue": "Desarrollo flexible: controla e5 y d4 sin comprometer los peones."
+    },
+    "g1f3 d7d5": {
+      "porQue": "El negro ocupa el centro."
+    },
+    "g1f3 d7d5 c2c4": {
+      "porQue": "Ataca d5 desde el flanco: la idea de la Réti.",
+      "porQueNo": [
+        {
+          "uci": "e2e4",
+          "texto": "dxe4 y el caballo tiene que moverse otra vez: las blancas pierden tiempo."
+        },
+        {
+          "uci": "f3e5",
+          "texto": "Mover dos veces el caballo sin motivo: ...f6 y lo echan."
+        }
+      ]
+    },
+    "g1f3 d7d5 c2c4 d5d4": {
+      "porQue": "Avanza y gana espacio: una Benoni con colores invertidos.",
+      "porQueNo": [
+        {
+          "uci": "g8f6",
+          "texto": "cxd5 y el negro no recupera el peón con comodidad."
+        },
+        {
+          "uci": "c8g4",
+          "texto": "Db3 ataca b7 y d5 a la vez."
+        }
+      ]
+    },
+    "g1f3 d7d5 c2c4 d5d4 e2e3": {
+      "porQue": "Ataca el peón avanzado de d4.",
+      "porQueNo": [
+        {
+          "uci": "e2e4",
+          "texto": "Encierra a las blancas: ...Cc6 y ...e5 dejan al negro con espacio."
+        },
+        {
+          "uci": "d1a4",
+          "texto": "El jaque no logra nada: ...Ad7 y la dama queda expuesta."
+        }
+      ]
+    },
+    "g1f3 d7d5 c2c4 e7e6": {
+      "porQue": "Sostiene d5: puede transponer al Gambito de Dama o a la Catalana."
+    },
+    "g1f3 d7d5 c2c4 c7c6": {
+      "porQue": "Sostiene d5 al estilo eslavo."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Réti Opening (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/R%C3%A9ti_Opening",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "g1f3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "g1f3 d7d5 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "g1f3 d7d5 e2e4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: +0,2 → −0,9. Refutación: dxe4 Cg5 Af5 Cc3 Cf6 d3"
+      },
+      "g1f3 d7d5 f3e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,2 → −0,5. Refutación: f6 Cf3 e5 d4 e4 Cfd2"
+      },
+      "g1f3 d7d5 c2c4 d5d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "g1f3 d7d5 c2c4 g8f6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: +0,1 → −0,9. Refutación: cxd5 Cxd5 d4 Cb6 Cc3 g6"
+      },
+      "g1f3 d7d5 c2c4 c8g4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: +0,1 → −1,1. Refutación: Db3 Axf3 Dxb7 Cd7 gxf3 d4"
+      },
+      "g1f3 d7d5 c2c4 d5d4 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "g1f3 d7d5 c2c4 d5d4 e2e4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,1 → −0,6. Refutación: Cc6 e5 g6 d3 Ag7 Af4"
+      },
+      "g1f3 d7d5 c2c4 d5d4 d1a4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,1 → −0,7. Refutación: Ad7 Dd1 c5 Ce5 Ac8 Da4+"
+      },
+      "g1f3 d7d5 c2c4 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "g1f3 d7d5 c2c4 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      }
+    }
+  }
+}

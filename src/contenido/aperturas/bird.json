@@ -1,0 +1,186 @@
+{
+  "trampas": [
+    {
+      "jugadas": "f2f4 e7e5 f4e5 d7d6 e5d6 f8d6 b1c3 d8h4 g2g3 h4g3 h2g3 d6g3",
+      "texto": "Gambito From: si las blancas no tapan h4 con el caballo, ...Dh4+ g3 Dxg3+ hxg3 Axg3 es mate."
+    }
+  ],
+  "id": "bird",
+  "nombre": "Apertura Bird",
+  "raiz": "f2f4",
+  "resumen": "Las blancas controlan e5 con el peón de f: es una Holandesa con colores invertidos. Da juego de ataque en el flanco de rey, a costa de debilitar el propio rey. Contra 1...e5 (Gambito From) hay que conocer la trampa de Dh4+.",
+  "planesBlancas": [
+    "Fianchetto (Cf3, g3, Ag2) o Stonewall (d4, e3).",
+    "Controlar e5 y atacar en el flanco de rey."
+  ],
+  "planesNegras": [
+    "Ocupar el centro con ...d5 y aprovechar la debilidad de e3 y de la diagonal e1-h4.",
+    "Gambito From (...e5) para abrir el juego contra el rey blanco."
+  ],
+  "estructura": "Peón blanco en f4, a veces d4 y e3 (Stonewall).",
+  "rupturas": [
+    "e4 de las blancas.",
+    "...e5 del negro."
+  ],
+  "piezas": [
+    "Alfil blanco de f1: g2 o d3.",
+    "Caballo blanco: f3, cubriendo h4."
+  ],
+  "notas": {
+    "f2f4": {
+      "porQue": "Controla e5 desde el costado: una Holandesa con colores invertidos.",
+      "inferior": true
+    },
+    "f2f4 d7d5": {
+      "porQue": "Ocupa el centro: la respuesta más natural.",
+      "porQueNo": [
+        {
+          "uci": "h7h6",
+          "texto": "Lento: e4 y las blancas toman el centro."
+        }
+      ]
+    },
+    "f2f4 d7d5 g1f3": {
+      "porQue": "Desarrolla y cubre h4, el punto débil tras f4."
+    },
+    "f2f4 d7d5 g1f3 g7g6": {
+      "porQue": "Fianchetto: el alfil de g7 apunta a la diagonal larga, debilitada por f4.",
+      "porQueNo": [
+        {
+          "uci": "d5d4",
+          "texto": "Avanza sin apoyo: e4 y el peón queda débil."
+        },
+        {
+          "uci": "e7e5",
+          "texto": "fxe5 y el negro no tiene compensación por el peón."
+        }
+      ]
+    },
+    "f2f4 e7e5": {
+      "porQue": "Gambito From: entrega un peón para abrir el juego contra el rey blanco.",
+      "inferior": true
+    },
+    "f2f4 e7e5 f4e5": {
+      "porQue": "Aceptar es lo mejor.",
+      "porQueNo": [
+        {
+          "uci": "e2e4",
+          "texto": "Transpone a un Gambito de Rey con las blancas peor ubicadas: ...exf4."
+        },
+        {
+          "uci": "b1c3",
+          "texto": "...exf4 y el negro queda con un peón de más."
+        }
+      ]
+    },
+    "f2f4 e7e5 f4e5 d7d6": {
+      "porQue": "Ofrece otro peón para abrir líneas."
+    },
+    "f2f4 e7e5 f4e5 d7d6 e5d6": {
+      "porQue": "Toma el segundo peón."
+    },
+    "f2f4 e7e5 f4e5 d7d6 e5d6 f8d6": {
+      "porQue": "El alfil apunta a g3 y h2: amenaza ...Dh4+."
+    },
+    "f2f4 e7e5 f4e5 d7d6 e5d6 f8d6 g1f3": {
+      "porQue": "La única jugada que tapa h4: frena ...Dh4+.",
+      "porQueNo": [
+        {
+          "uci": "g2g3",
+          "texto": "...h5 y la columna h se abre contra el rey blanco."
+        },
+        {
+          "uci": "e2e3",
+          "texto": "...Dh4+ y el rey blanco queda expuesto."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Bird's Opening (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Bird%27s_Opening",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "f2f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere e4: +0,4 contra −0,3 (marcada como inferior pero jugable)"
+      },
+      "f2f4 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "f2f4 h7h6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,3 → −0,3. Refutación: e4 e6 Cc3 d5 d4 c5"
+      },
+      "f2f4 d7d5 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "f2f4 d7d5 g1f3 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "f2f4 d7d5 g1f3 d5d4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,3 → −0,5. Refutación: e4 dxe3 d4 Cf6 Axe3 Af5"
+      },
+      "f2f4 d7d5 g1f3 e7e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: +0,3 → −0,8. Refutación: fxe5 f6 d4 Cc6 Cc3 Ab4"
+      },
+      "f2f4 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Cf6: +0,3 contra −0,5 (marcada como inferior pero jugable)"
+      },
+      "f2f4 e7e5 f4e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "f2f4 e7e5 e2e4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: +0,5 → −0,4. Refutación: exf4 Cf3 g5 Cc3 Cc6 g3"
+      },
+      "f2f4 e7e5 b1c3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: +0,5 → −0,5. Refutación: exf4 Cf3 Cf6 d4 Ab4 Axf4"
+      },
+      "f2f4 e7e5 f4e5 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "f2f4 e7e5 f4e5 d7d6 e5d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "f2f4 e7e5 f4e5 d7d6 e5d6 f8d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "f2f4 e7e5 f4e5 d7d6 e5d6 f8d6 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "f2f4 e7e5 f4e5 d7d6 e5d6 f8d6 g2g3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: +0,4 → −0,6. Refutación: h5 Cf3 h4 d4 hxg3 h3"
+      },
+      "f2f4 e7e5 f4e5 d7d6 e5d6 f8d6 e2e3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: +0,4 → −0,5. Refutación: Dh4+ Re2 Dh5+ Cf3 g5 Cc3"
+      }
+    }
+  }
+}

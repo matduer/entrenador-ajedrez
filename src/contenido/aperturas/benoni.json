@@ -1,0 +1,164 @@
+{
+  "trampas": [],
+  "id": "benoni",
+  "nombre": "Defensa Benoni Moderna",
+  "raiz": "d2d4 g8f6 c2c4 c7c5",
+  "resumen": "Una defensa de desequilibrio: tras d5 el negro cambia en d5 y queda con mayoría de peones en el flanco de dama (contra la mayoría central blanca). El alfil en g7 apoya el avance ...b5. Es muy combativa, pero las blancas tienen más espacio y la ruptura e5.",
+  "planesBlancas": [
+    "Usar la mayoría central: e4, f4 y la ruptura e5.",
+    "Frenar ...b5 con a4."
+  ],
+  "planesNegras": [
+    "...a6, ...b5 y la mayoría del flanco de dama apoyada por el alfil de g7.",
+    "Presionar e4 con ...Te8 y los caballos."
+  ],
+  "estructura": "Peón blanco en d5, peones negros en c5 y d6: el negro tiene mayoría en el flanco de dama y las blancas en el centro.",
+  "rupturas": [
+    "...b5 del negro.",
+    "e5 y f4-f5 de las blancas."
+  ],
+  "piezas": [
+    "Alfil negro de f8: g7, sobre la diagonal larga.",
+    "Torre negra: e8, contra e4.",
+    "Caballos negros: d7 y e5, o a6 y c7."
+  ],
+  "notas": {
+    "d2d4 g8f6 c2c4 c7c5": {
+      "porQue": "Desafía d4 desde el costado para provocar d5 y desequilibrar la estructura.",
+      "inferior": true
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5": {
+      "porQue": "Gana espacio: el peón de d5 corta el juego negro en dos."
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6": {
+      "porQue": "Benoni Moderna: va a cambiar en d5 para crear la mayoría en el flanco de dama.",
+      "porQueNo": [
+        {
+          "uci": "e7e5",
+          "texto": "Benoni checa: cierra todo y el negro queda pasivo, con Cc3, e4 y el juego en el flanco de rey para las blancas."
+        },
+        {
+          "uci": "d8c7",
+          "texto": "La dama no ayuda: Cc3, e5 y e4 y las blancas toman el centro."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3": {
+      "porQue": "Defiende d5 y desarrolla."
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5": {
+      "porQue": "Cambia: crea la estructura de la Benoni.",
+      "porQueNo": [
+        {
+          "uci": "b7b5",
+          "texto": "Cxb5 y el negro pierde un peón sin compensación."
+        },
+        {
+          "uci": "d8b6",
+          "texto": "La dama sale sin función: e4 y f4 ganan espacio."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5": {
+      "porQue": "Retoma con el peón: mayoría central para las blancas."
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6": {
+      "porQue": "Frena e5 y abre el alfil de c8."
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 e2e4": {
+      "porQue": "Completa el centro: la idea es e5 algún día."
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 e2e4 g7g6": {
+      "porQue": "Fianchetto: el alfil de g7 apoya ...b5 y vigila e5.",
+      "porQueNo": [
+        {
+          "uci": "c8g4",
+          "texto": "Db3 ataca b7 y el alfil queda mal."
+        },
+        {
+          "uci": "a7a6",
+          "texto": "Antes de desarrollar el flanco de rey: f4 y e5 llegan con fuerza."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Benoni Defense (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Benoni_Defense",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "d2d4 g8f6 c2c4 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 e7e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,6 → −1,2. Refutación: Cc3 d6 e4 g6 Ae2 h5"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 d8c7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,6 → −1,5. Refutación: Cc3 d6 e4 e5 Ae2 h6"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,9 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 b7b5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,8 → −1,6. Refutación: Cxb5 d6 Cf3 exd5 cxd5 Cbd7"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 d8b6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: −0,8 → −1,8. Refutación: e4 d6 f4 g6 Cf3 exd5"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,9 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 e2e4 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,9 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 e2e4 c8g4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: −0,9 → −2,2. Refutación: f3 Ad7 f4 g6 e5 Ch5"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 e2e4 a7a6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,9 → −1,6. Refutación: f4 Ag4 Dd2 Ch5 Df2 Ae7"
+      }
+    }
+  }
+}
