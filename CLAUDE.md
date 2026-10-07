@@ -86,6 +86,7 @@ Contexto del jugador: `docs/contexto/analisis-partidas-avatargs.md` y `docs/cont
 
 - Publicada en https://matduer.github.io/entrenador-ajedrez/ (repo público `matduer/entrenador-ajedrez`, Pages con fuente "GitHub Actions"). Cada push a `main` publica.
 - Resumen de la etapa 0: https://claude.ai/code/artifact/5b9365d9-6bcd-4878-bc38-93eb32cf98e6
+- Resumen de las etapas 1 a 6 (hallazgos, decisiones, pendientes): https://claude.ai/code/artifact/f0fda316-1db4-4e28-8998-249168a9573a
 - Git y Node 24 LTS instalados con winget. Si `node`/`git` no se encuentran en PowerShell: `$env:Path = [Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [Environment]::GetEnvironmentVariable('Path','User')`.
 - Push: credencial guardada en el Git Credential Manager. Si falla por "terminal prompts disabled", abrir una ventana aparte (`Start-Process powershell -NoExit`) con `$env:GCM_INTERACTIVE='auto'`.
 
