@@ -74,9 +74,34 @@
     },
     "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8e7 e4e5 f6d7 g5e7": {
       "porQue": "Lo clásico: cambia alfiles y sigue con f4."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 e4e5 f6d7 f2f4 c7c5 g1f3": {
+      "porQue": "Desarrolla y vigila d4 y e5."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 e4e5 f6d7 f2f4 c7c5 g1f3 b8c6": {
+      "porQue": "Suma presión sobre d4."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 e4e5 f6d7 f2f4 c7c5 g1f3 b8c6 c1e3": {
+      "porQue": "Sostiene d4: la posición básica de la Steinitz."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 e4e5 f6d7 f2f4 c7c5 g1f3 b8c6 c1e3 c5d4 f3d4 f8c5": {
+      "porQue": "Cambia en d4 y opone el alfil al de e3: prepara ...Db6."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 d5e4": {
+      "porQue": "Variante Burn: cambia en e4 ahora que el alfil ya salió a g5."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8b4": {
+      "porQue": "McCutcheon: contraataca en lugar de defenderse del avance e5."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8e7 e4e5 f6d7 g5e7 d8e7 f2f4": {
+      "porQue": "Sostiene e5. Con los alfiles de casillas negras cambiados, el negro tiene más libertad y rompe con ...c5 y ...f6."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«French Defence», secciones «Classical», «Steinitz», «Burn» y «McCutcheon Variation»"
+    },
     {
       "titulo": "French Defence (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/French_Defence",
@@ -148,6 +173,34 @@
       "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8e7 e4e5 f6d7 g5e7": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 e4e5 f6d7 f2f4 c7c5 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 e4e5 f6d7 f2f4 c7c5 g1f3 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 e4e5 f6d7 f2f4 c7c5 g1f3 b8c6 c1e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 e4e5 f6d7 f2f4 c7c5 g1f3 b8c6 c1e3 c5d4 f3d4 f8c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 d5e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8e7 e4e5 f6d7 g5e7 d8e7 f2f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
       }
     }
   }

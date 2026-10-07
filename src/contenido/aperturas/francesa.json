@@ -2,7 +2,7 @@
   "id": "francesa",
   "nombre": "Defensa Francesa",
   "raiz": "e2e4 e7e6",
-  "resumen": "Defensa de contraataque al centro: tras 1.e4 e6 2.d4 d5 el negro discute e4 con un peón apoyado por e6. Las posiciones suelen ser cerradas, con cadenas de peones enfrentadas: las blancas tienen espacio en el flanco de rey y el negro juega en el de dama atacando la base de la cadena con ...c5. El problema clásico es el alfil de c8, encerrado detrás de e6.",
+  "resumen": "Con 1...e6 el negro acepta menos espacio que con 1...e5, pero no le da a las blancas ningún blanco: no hay peón en e5 que atacar y la diagonal a2-g8 queda cerrada, así que no habrá un alfil blanco apuntando a f7. El plan es atacar el centro con ...d5 y después con ...c5. Las blancas eligen entre cerrar con e5 (Avance), mantener la tensión con Cc3 o Cd2, o cambiar en d5. El precio de la Francesa es el alfil de c8, encerrado detrás de e6: muchos planes del negro buscan activarlo o cambiarlo (...b6 y ...Aa6, o ...Ad7 y ...Ab5).",
   "planesBlancas": [
     "Avance: sostener la cadena d4-e5 con c3 y Cf3, desarrollar y aprovechar el espacio en el flanco de rey (ataque con f4-f5, Dg4 o el sacrificio en h7 si el caballo negro de f6 desaparece).",
     "Con Cc3 o Cd2: mantener la tensión en el centro y elegir el momento de e5.",
@@ -147,9 +147,40 @@
     },
     "e2e4 e7e6 d2d4 d7d5 e4d5 e6d5": {
       "porQue": "Estructura simétrica: la Francesa pierde su problema del alfil malo, pero también sus planes de contraataque."
+    },
+    "e2e4 e7e6 d2d4 d7d5 e4e5 c7c5 c2c3 b8c6 g1f3 d8b6 a2a3": {
+      "porQue": "El plan más ambicioso: b4 para ganar espacio en el flanco de dama y darle una casilla al alfil de c1."
+    },
+    "e2e4 e7e6 d2d4 d7d5 e4e5 c7c5 c2c3 b8c6 g1f3 d8b6 a2a3 c5c4": {
+      "porQue": "Cierra el flanco de dama e impide b4 sin perder material; el negro apunta a b3 con ...Ca5."
+    },
+    "e2e4 e7e6 d2d4 d7d5 e4e5 c7c5 c2c3 d8b6 g1f3 c8d7": {
+      "porQue": "Prepara ...Ab5 para cambiar el alfil malo de la Francesa."
+    },
+    "e2e4 e7e6 d2d4 d7d5 e4d5 e6d5 g1f3": {
+      "porQue": "Desarrollo flexible: según lo que haga el negro, c4 puede abrir el juego."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 d5e4": {
+      "porQue": "Variante Rubinstein: cede el centro, pero no deja debilidades. El plan es ...Cd7, ...Cgf6 y ...c5."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7": {
+      "porQue": "Prepara ...Cgf6: si Cxf6+, el negro retoma con el otro caballo."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 d5e4 c3e4 c8d7": {
+      "porQue": "La otra idea: ...Ac6 para activar el alfil de c8 antes que nada."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 b7b6": {
+      "porQue": "El plan de Nimzowitsch: ...Aa6 para cambiar el alfil malo de la Francesa."
+    },
+    "e2e4 e7e6 d2d3": {
+      "porQue": "Prepara el Ataque Indio de Rey (Cd2, Cf3, g3 y Ag2) y evita la lucha central inmediata."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«French Defence» (introducción, Exchange, Advance y Rubinstein Variation)"
+    },
     {
       "titulo": "French Defence (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/French_Defence",
@@ -285,6 +316,42 @@
       "e2e4 e7e6 d2d4 d7d5 e4d5 e6d5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 e4e5 c7c5 c2c3 b8c6 g1f3 d8b6 a2a3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 e4e5 c7c5 c2c3 b8c6 g1f3 d8b6 a2a3 c5c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 e4e5 c7c5 c2c3 d8b6 g1f3 c8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 e4d5 e6d5 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 d5e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 d5e4 c3e4 c8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 b7b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,0 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
       }
     }
   }

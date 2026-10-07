@@ -2,7 +2,7 @@
   "id": "francesa-winawer",
   "nombre": "Francesa Winawer",
   "raiz": "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3",
-  "resumen": "Tras 5.a3 Axc3+ 6.bxc3 las blancas tienen la pareja de alfiles y espacio, pero peones doblados en c. Como el negro cambió su alfil de casillas negras, el punto g7 queda débil: 7.Dg4 lo ataca enseguida. El negro contraataca en el flanco de dama y en c3 con ...Dc7, ...cxd4 y ...Cbc6.",
+  "resumen": "Como en la Nimzoindia, el negro cambia el alfil por el caballo y deja a las blancas con la pareja de alfiles y peones doblados en c. Es una posición muy difícil de evaluar: las blancas atacan las casillas negras que quedaron débiles (g7 con Dg4, el alfil de c1 por a3), y el negro presiona c3 y d4 y usa la columna c. Contra 7.Dg4, la respuesta moderna es enrocar \"hacia el ataque\" (7...O-O) y defenderse con precisión; la alternativa aguda, 7...Dc7, entrega el flanco de rey a cambio de presión sobre c3.",
   "planesBlancas": [
     "Dg4 contra g7 y ataque en el flanco de rey.",
     "Usar la pareja de alfiles, sobre todo el de casillas negras."
@@ -65,9 +65,22 @@
           "texto": "Dxg7: el peón cae con tiempo."
         }
       ]
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4a5": {
+      "porQue": "Mantiene la clavada; si b4, lo consecuente es ...cxd4."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 e8g8": {
+      "porQue": "La interpretación moderna: enroca hacia el ataque y confía en una defensa precisa."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 g1f3": {
+      "porQue": "El enfoque posicional: desarrollo y a4 más adelante, sin la salida de la dama."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«French Defence», sección «Winawer Variation»"
+    },
     {
       "titulo": "French Defence (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/French_Defence",
@@ -127,6 +140,18 @@
       "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 c8d7 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 16 puntos de chances: −0,7 → −2,5. Refutación: Dxg7 Tg8 Dxh7 Dc7 Tb1 Cbc6"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4a5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 e8g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
       }
     }
   }
