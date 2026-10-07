@@ -2,7 +2,7 @@
   "id": "caro-kann",
   "nombre": "Defensa Caro-Kann",
   "raiz": "e2e4 c7c6",
-  "resumen": "Defensa sólida contra 1.e4: el negro prepara ...d5 apoyado por el peón de c6 y, a diferencia de la Francesa, todavía puede sacar el alfil de c8 antes de cerrar la cadena con ...e6. Las posiciones suelen ser más de maniobra que de cálculo. Para las blancas, la Variante del Avance (3.e5) gana espacio; la Clásica (3.Cc3) abre el juego y busca ventaja de desarrollo; la del Cambio (3.exd5) da una estructura simétrica y tranquila.",
+  "resumen": "Como en la Francesa, el negro ataca e4 con ...d5, pero lo apoya con el peón de c y no con el de e: así la diagonal c8-h3 queda libre y el alfil de dama puede salir antes de jugar ...e6. Esa pequeña diferencia lo cambia todo. Tras 3.Cc3 (o 3.Cd2) dxe4 4.Cxe4, el negro elige entre desarrollar enseguida el alfil (4...Af5, la Clásica, la base de toda la Caro-Kann) o prepararlo con 4...Cd7 (Karpov). Las blancas también tienen el Avance (3.e5), muy jugado desde los años ochenta, el Cambio y el Ataque Panov, que lleva a estructuras del Gambito de Dama.",
   "planesBlancas": [
     "Avance: aprovechar el espacio que da el peón de e5. En el sistema Short (Cf3, Ae2, O-O) se desarrolla sin apuro y se juega c3 o Ae3 según cómo ataque el negro el centro con ...c5.",
     "Avance: el alfil negro de f5 es la pieza que justifica la defensa. Ideas típicas para molestarlo: Ch4 (cuando ya no se lo puede comer la dama), h4-h5, o g4 cuando la dama defiende la casilla (variante Van der Wiel, con Cc3 y Cge2).",
@@ -37,6 +37,10 @@
     {
       "jugadas": "e2e4 c7c6 d2d4 d7d5 e4e5 c8g4 d1g4",
       "texto": "Tras 3.e5, el alfil a g4 no está defendido: la diagonal d1-g4 está abierta porque el peón de e2 ya salió. 3...Ag4?? 4.Dxg4 gana una pieza."
+    },
+    {
+      "jugadas": "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 d1e2 g8f6 e4d6",
+      "texto": "Contra la Variante Karpov: 5.De2 Cgf6?? 6.Cd6 es mate ahogado (el peón de e7 está clavado). Lo correcto es 5...Cdf6."
     }
   ],
   "notas": {
@@ -233,9 +237,62 @@
     },
     "e2e4 c7c6 d2d4 d7d5 e4d5 c6d5 f1d3": {
       "porQue": "El alfil apunta al flanco de rey negro y controla f5, para que el alfil de c8 no salga con comodidad."
+    },
+    "e2e4 c7c6 d2d4 d7d5 e4d5 c6d5 c2c4": {
+      "porQue": "Ataque Panov: ataca d5 como en un Gambito de Dama. Suele quedar un peón aislado blanco en d4."
+    },
+    "e2e4 c7c6 d2d4 d7d5 e4d5 c6d5 c2c4 g8f6": {
+      "porQue": "Presiona d5 y e4 antes de decidir el resto del desarrollo."
+    },
+    "e2e4 c7c6 d2d4 d7d5 e4d5 c6d5 c2c4 g8f6 b1c3 e7e6": {
+      "porQue": "Refuerza d5 y prepara el desarrollo del alfil de f8: se llega a estructuras del Gambito de Dama."
+    },
+    "e2e4 c7c6 d2d4 d7d5 e4d5 c6d5 c2c4 g8f6 b1c3 b8c6": {
+      "porQue": "Presiona d4 enseguida y limita la libertad de las blancas."
+    },
+    "e2e4 c7c6 d2d4 d7d5 e4d5 c6d5 f1d3 b8c6 c2c3": {
+      "porQue": "Variante del Cambio: como el Cambio del Gambito de Dama con colores invertidos, pero aquí al negro le cuesta más desarrollar el alfil de c8."
+    },
+    "e2e4 c7c6 d2d4 d7d5 e4d5 c6d5 f1d3 b8c6 c2c3 g8f6 c1f4": {
+      "porQue": "Desarrolla el alfil antes de jugar Cf3, para que ...Ag4 deje b7 expuesto."
+    },
+    "e2e4 c7c6 d2d4 d7d5 e4d5 c6d5 f1d3 b8c6 c2c3 g8f6 c1f4 c8g4 d1b3": {
+      "porQue": "Ataca b7, que quedó sin defensa cuando el alfil salió a g4."
+    },
+    "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7": {
+      "porQue": "Variante Karpov: prepara ...Cgf6 para poder retomar con el otro caballo, y recién después saca el alfil por f5 o g4."
+    },
+    "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 e4g5": {
+      "porQue": "La idea moderna: presiona f7 y e6 para obligar al negro a encerrar su alfil con ...e6."
+    },
+    "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 e4g5 g8f6": {
+      "porQue": "Desarrolla y defiende e6 y f7."
+    },
+    "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 e4g5 g8f6 f1d3 e7e6": {
+      "porQue": "Lo habitual: cubre f7 y e6 y prepara ...Ad6. El precio es el alfil de c8, que queda encerrado: justo lo que buscaba 5.Cg5."
+    },
+    "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 g8f6 e4f6 e7f6": {
+      "porQue": "Sólido: desarrollo libre y rey seguro, a cambio de una mayoría de peones en el flanco de rey que no puede crear un peón pasado."
+    },
+    "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 g8f6 e4f6 g7f6": {
+      "porQue": "Flexible y desequilibrado: el negro controla el centro con los peones de f y juega con mucha libertad, aunque su estructura queda dañada.",
+      "inferior": true
+    },
+    "e2e4 c7c6 b1c3 d7d5 g1f3": {
+      "porQue": "Variante de los Dos Caballos: retrasa d4. Si ...dxe4 Cxe4 Af5, Cg3 Ag6 h4 h6 y Ce5 deja incómodo al negro."
+    },
+    "e2e4 c7c6 b1c3 d7d5 g1f3 c8g4": {
+      "porQue": "La respuesta más popular: clava el caballo antes de que salte a e5."
+    },
+    "e2e4 c7c6 c2c4": {
+      "porQue": "Prepara una versión acelerada del Panov."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Caro-Kann Defence»"
+    },
     {
       "titulo": "Caro–Kann Defence (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Caro%E2%80%93Kann_Defence",
@@ -472,6 +529,70 @@
       "e2e4 c7c6 d2d4 d7d5 e4d5 c6d5 f1d3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4d5 c6d5 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4d5 c6d5 c2c4 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4d5 c6d5 c2c4 g8f6 b1c3 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4d5 c6d5 c2c4 g8f6 b1c3 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4d5 c6d5 f1d3 b8c6 c2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4d5 c6d5 f1d3 b8c6 c2c3 g8f6 c1f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 e4d5 c6d5 f1d3 b8c6 c2c3 g8f6 c1f4 c8g4 d1b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 e4g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 e4g5 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 e4g5 g8f6 f1d3 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 g8f6 e4f6 e7f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 g8f6 e4f6 g7f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere exf6: −0,2 contra −0,9 (marcada como inferior pero jugable)"
+      },
+      "e2e4 c7c6 b1c3 d7d5 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c6 b1c3 d7d5 g1f3 c8g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 c7c6 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
       }
     }
   }
