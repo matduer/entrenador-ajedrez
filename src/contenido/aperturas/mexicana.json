@@ -1,0 +1,105 @@
+{
+  "id": "mexicana",
+  "nombre": "Defensa Mexicana (Tango)",
+  "raiz": "d2d4 g8f6 c2c4 b8c6",
+  "resumen": "El \"Tango de los caballos negros\": ...Cf6 y ...Cc6 contra 1.d4 y 2.c4. Inventada por Carlos Torre, es una apertura joven en la práctica magistral. La idea es jugar ...e5 (por ejemplo, si 3.Cc3) o, si las blancas avanzan 3.d5, ...Ce5 y ...e6 para atacar el centro. Tras 3.Cf3, la respuesta más sólida es ...e6, que puede llevar a la Nimzoindia.",
+  "planesBlancas": [
+    "Mantener el centro con Cf3 y Cc3 y aprovechar que el caballo de c6 tapa el peón de c negro.",
+    "Si el negro juega ...e5, d5 para ganar espacio con tiempo."
+  ],
+  "planesNegras": [
+    "...e5 para disputar el centro de casillas negras.",
+    "...e6 y ...Ab4, pasando a una Nimzoindia o a un esquema propio."
+  ],
+  "estructura": "Abierta y flexible; depende de si el negro juega ...e5 o ...e6.",
+  "rupturas": [
+    "d5 de las blancas.",
+    "...e5 y ...d6 del negro."
+  ],
+  "piezas": [
+    "Caballo negro de b8: c6, sobre d4 y e5.",
+    "Alfil negro de f8: b4 en las líneas de tipo Nimzoindia."
+  ],
+  "trampas": [],
+  "notas": {
+    "d2d4 g8f6 c2c4 b8c6": {
+      "porQue": "Desarrollo provocador: presiona d4 y prepara ...e5."
+    },
+    "d2d4 g8f6 c2c4 b8c6 g1f3": {
+      "porQue": "Impide ...e5.",
+      "porQueNo": [
+        {
+          "uci": "f2f3",
+          "texto": "...d5: el negro ataca el centro y f3 debilitó al blanco."
+        },
+        {
+          "uci": "c1e3",
+          "texto": "...d5 y el alfil queda expuesto en e3."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 b8c6 g1f3 e7e6": {
+      "porQue": "Lo más sólido: prepara ...Ab4 y ...d5 o ...d6.",
+      "porQueNo": [
+        {
+          "uci": "b7b6",
+          "texto": "Cc3 e6 d5: el caballo de c6 tiene que retroceder."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 b8c6 b1c3": {
+      "porQue": "Desarrolla y deja que el negro juegue ...e5."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Other 1 d4 Nf6 Openings» (2...Cc6, el Tango)"
+    },
+    {
+      "titulo": "Black Knights' Tango (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Black_Knights%27_Tango",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "d2d4 g8f6 c2c4 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 b8c6 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 b8c6 f2f3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,5 → −0,1. Refutación: d5 cxd5 Dxd5 e3 e5 Cc3"
+      },
+      "d2d4 g8f6 c2c4 b8c6 c1e3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,5 → −0,2. Refutación: d5 Cc3 dxc4 d5 Ca5 Cf3"
+      },
+      "d2d4 g8f6 c2c4 b8c6 g1f3 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 b8c6 g1f3 b7b6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,6 → −1,2. Refutación: Cc3 e6 d5 Ca5 a3 d6"
+      },
+      "d2d4 g8f6 c2c4 b8c6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      }
+    }
+  }
+}

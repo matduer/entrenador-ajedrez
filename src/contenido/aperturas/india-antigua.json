@@ -1,0 +1,141 @@
+{
+  "id": "india-antigua",
+  "nombre": "Defensa India Antigua",
+  "raiz": "d2d4 g8f6 c2c4 d7d6",
+  "resumen": "La precursora de la India de Rey: ...d6 y ...e5 con el alfil de rey en e7 en lugar de g7. Tiene fama de pasiva, pero FCO advierte que es una etiqueta engañosa: el negro tiene una posición sólida y puede pasar a la India de Rey con ...g6 en cualquier momento. El plan tradicional es ...Ae7, ...O-O, ...c6, ...a6 y ...b5.",
+  "planesBlancas": [
+    "e4, Ae2 y enroque; d5 en el momento justo para ganar espacio.",
+    "Con Ag5, impedir que el negro pase a la India de Rey."
+  ],
+  "planesNegras": [
+    "...Ae7, ...O-O, ...c6 y ...a6 para preparar ...b5.",
+    "Pasar a la India de Rey con ...g6 si conviene."
+  ],
+  "estructura": "Peones negros en d6 y e5 contra d4, c4 y e4 blancos: como en la India de Rey Clásica.",
+  "rupturas": [
+    "d5 de las blancas.",
+    "...exd4 y ...b5 del negro."
+  ],
+  "piezas": [
+    "Alfil negro de f8: e7, más modesto que en g7.",
+    "Caballo negro de b8: d7, apoyando e5."
+  ],
+  "trampas": [],
+  "notas": {
+    "d2d4 g8f6 c2c4 d7d6": {
+      "porQue": "Prepara ...e5 sin comprometer el alfil de rey."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3": {
+      "porQue": "Desarrolla y apoya e4."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5": {
+      "porQue": "El avance característico de la India Antigua."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3": {
+      "porQue": "Mantiene la tensión y presiona e5.",
+      "porQueNo": [
+        {
+          "uci": "c1e3",
+          "texto": "...exd4 Axd4 Cc6: el negro desarrolla con tiempo sobre el alfil."
+        },
+        {
+          "uci": "d4e5",
+          "texto": "...dxe5 Dxd8+ Rxd8: final sin ventaja y el blanco ya no tiene d4."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7": {
+      "porQue": "El plan clásico: sostiene e5 con el caballo."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4": {
+      "porQue": "La forma más natural: centro completo."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7": {
+      "porQue": "El desarrollo típico de la India Antigua.",
+      "porQueNo": [
+        {
+          "uci": "f6h5",
+          "texto": "dxe5 dxe5 Cxe5: el negro pierde el peón de e5."
+        },
+        {
+          "uci": "f6g4",
+          "texto": "h3: el caballo tiene que volver y el negro perdió tiempo."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 g7g6": {
+      "porQue": "Pasa a la India de Rey Clásica con ...Cbd7."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Other 1 d4 Nf6 Openings», sección «Old Indian Defence»"
+    },
+    {
+      "titulo": "Old Indian Defense (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Old_Indian_Defense",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "d2d4 g8f6 c2c4 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 c1e3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,6 → −0,0. Refutación: exd4 Axd4 Cc6 Axf6 Dxf6 e3"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 d4e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,6 → −0,1. Refutación: dxe5 Dxd8+ Rxd8 Cf3 Cc6 a3"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f6h5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,7 → −1,6. Refutación: dxe5 dxe5 Cxe5 Cxe5 Dxh5 Ad6"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f6g4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,7 → −1,5. Refutación: h3 exd4 Cxd4 Cge5 Ae3 Ae7"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      }
+    }
+  }
+}

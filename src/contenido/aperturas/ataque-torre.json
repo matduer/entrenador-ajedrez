@@ -1,0 +1,113 @@
+{
+  "id": "ataque-torre",
+  "nombre": "Ataque Torre",
+  "raiz": "d2d4 g8f6 g1f3 e7e6 c1g5",
+  "resumen": "El sistema de Carlos Torre: d4, Cf3 y Ag5 sin jugar c4, seguido de e3, Cbd2, c3 y Ad3. Es sencillo de jugar y tiene potencial de ataque contra el enroque negro si el negro se desarrolla sin un plan claro, como le pasó a Lasker contra Torre en 1925. La respuesta más común es ...c5, y la más aguda ...c5 con ...Db6, que ataca b2.",
+  "planesBlancas": [
+    "e3, Cbd2, c3, Ad3 y enroque; después e4 para abrir el centro.",
+    "Atacar en el flanco de rey si el negro enroca sin contrajuego."
+  ],
+  "planesNegras": [
+    "...c5 y ...Db6 contra b2, el punto débil del sistema.",
+    "...h6 para preguntarle al alfil y conseguir la pareja de alfiles."
+  ],
+  "estructura": "Flexible: peones blancos en d4, e3 y c3; el negro elige entre ...d5 y ...d6.",
+  "rupturas": [
+    "e4 de las blancas.",
+    "...c5 y ...e5 del negro."
+  ],
+  "piezas": [
+    "Alfil blanco de c1: g5, clavando el caballo.",
+    "Dama negra: b6, contra b2."
+  ],
+  "trampas": [],
+  "notas": {
+    "d2d4 g8f6 g1f3 e7e6 c1g5": {
+      "porQue": "El Ataque Torre: clava el caballo antes de jugar c4 (que muchas veces no se juega)."
+    },
+    "d2d4 g8f6 g1f3 e7e6 c1g5 c7c5": {
+      "porQue": "La respuesta más popular: ataca d4 y prepara ...Db6.",
+      "porQueNo": [
+        {
+          "uci": "c7c6",
+          "texto": "e4: las blancas ocupan el centro con tiempo."
+        },
+        {
+          "uci": "f8d6",
+          "texto": "e4 Ae7 e5: el negro perdió un tiempo con el alfil."
+        }
+      ]
+    },
+    "d2d4 g8f6 g1f3 e7e6 c1g5 c7c5 e2e3": {
+      "porQue": "La forma típica: mantiene el esquema y la estructura.",
+      "porQueNo": [
+        {
+          "uci": "g5e3",
+          "texto": "...cxd4: el alfil se retiró sin motivo y el negro libera su juego."
+        },
+        {
+          "uci": "h2h3",
+          "texto": "...Db6: el peón de b2 queda colgando."
+        }
+      ]
+    },
+    "d2d4 g8f6 g1f3 e7e6 c1g5 h7h6": {
+      "porQue": "Le pregunta al alfil: si Axf6, el negro tiene la pareja de alfiles."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Other 1 d4 Nf6 Openings», sección «Torre Attack»"
+    },
+    {
+      "titulo": "Torre Attack (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Torre_Attack",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "d2d4 g8f6 g1f3 e7e6 c1g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 g1f3 e7e6 c1g5 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 g1f3 e7e6 c1g5 c7c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,0 → −0,6. Refutación: e4 d6 Cbd2 Cbd7 e5 dxe5"
+      },
+      "d2d4 g8f6 g1f3 e7e6 c1g5 f8d6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,0 → −0,9. Refutación: e4 Ae7 e5 Cd5 Axe7 Cxe7"
+      },
+      "d2d4 g8f6 g1f3 e7e6 c1g5 c7c5 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 g1f3 e7e6 c1g5 c7c5 g5e3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,2 → −0,6. Refutación: cxd4 Axd4 Cc6 e3 Cxd4 exd4"
+      },
+      "d2d4 g8f6 g1f3 e7e6 c1g5 c7c5 h2h3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,2 → −0,6. Refutación: Db6 Cc3 Dxb2 Ad2 cxd4 Tb1"
+      },
+      "d2d4 g8f6 g1f3 e7e6 c1g5 h7h6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      }
+    }
+  }
+}

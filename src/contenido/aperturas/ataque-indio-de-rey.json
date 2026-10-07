@@ -1,0 +1,195 @@
+{
+  "id": "ataque-indio-de-rey",
+  "nombre": "Ataque Indio de Rey",
+  "raiz": "e2e4 e7e6 d2d3",
+  "resumen": "Las blancas juegan con colores invertidos el esquema de la India de Rey: d3, Cd2, Cgf3, g3, Ag2, enroque y, cuando el negro se compromete, e5 para ganar espacio en el flanco de rey. Es un sistema más que una variante: se puede usar contra la Francesa, la Siciliana con ...e6 o tras 1.Cf3 y 2.g3. Lo bueno es que no hay que memorizar mucha teoría; el precio es que el negro iguala sin problemas si juega con naturalidad.",
+  "planesBlancas": [
+    "Te1 y e5: con el peón en e5 el negro pierde el caballo de f6 como defensor y las blancas atacan en el flanco de rey (h4, Cf1-h2-g4, Af4).",
+    "Si el negro cambia en e4, juego de piezas contra un centro abierto."
+  ],
+  "planesNegras": [
+    "Ganar espacio en el flanco de dama con ...c5, ...Cc6, ...b5-b4 y ...a5.",
+    "Cambiar en e4 o jugar ...e5 a tiempo para que el avance e5 no sea fuerte."
+  ],
+  "estructura": "Peones blancos en d3 y e4 (después e5) contra d5 y e6 negros, como una Francesa invertida.",
+  "rupturas": [
+    "e5 de las blancas.",
+    "...b5-b4 y ...c4 del negro en el flanco de dama."
+  ],
+  "piezas": [
+    "Alfil blanco de f1: g2, detrás del peón de e4.",
+    "Caballos blancos: d2 y f3, con la ruta Cf1-h2 o e3 después de Te1."
+  ],
+  "trampas": [],
+  "notas": {
+    "e2e4 e7e6 d2d3 d7d5": {
+      "porQue": "Lo más natural: ocupa el centro.",
+      "porQueNo": [
+        {
+          "uci": "f7f5",
+          "texto": "exf5 exf5 g3: el negro debilita su rey sin necesidad."
+        },
+        {
+          "uci": "f8b4",
+          "texto": "c3 y el alfil tiene que volver: el negro pierde dos tiempos."
+        }
+      ]
+    },
+    "e2e4 e7e6 d2d3 d7d5 b1d2": {
+      "porQue": "Sostiene e4 con una pieza y deja libre el peón de c.",
+      "porQueNo": [
+        {
+          "uci": "c2c4",
+          "texto": "...dxe4 dxe4 Dxd1+: cambio de damas sin ventaja y con d4 debilitada."
+        },
+        {
+          "uci": "d3d4",
+          "texto": "Entra en una Francesa con un tiempo menos (d3-d4)."
+        }
+      ]
+    },
+    "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6": {
+      "porQue": "Desarrollo clásico.",
+      "porQueNo": [
+        {
+          "uci": "f7f6",
+          "texto": "d4 c5 exd5 exd5: el negro debilitó su flanco de rey sin ganar nada."
+        },
+        {
+          "uci": "f8b4",
+          "texto": "Cf3, y el alfil no hace nada en b4: c3 lo echa con tiempo."
+        }
+      ]
+    },
+    "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3": {
+      "porQue": "Completa el desarrollo del flanco de rey."
+    },
+    "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3 c7c5": {
+      "porQue": "Gana espacio en el flanco de dama: el plan típico del negro."
+    },
+    "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3 c7c5 g2g3": {
+      "porQue": "El fianchetto: el alfil irá a g2, detrás del peón de e4.",
+      "porQueNo": [
+        {
+          "uci": "f3g5",
+          "texto": "Movida prematura: ...Ae7 y el caballo vuelve sin haber hecho nada."
+        },
+        {
+          "uci": "c2c4",
+          "texto": "...Ae7: el peón de c4 deja debilitada d4 sin compensación."
+        }
+      ]
+    },
+    "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3 c7c5 g2g3 b8c6 f1g2 f8e7 e1g1 e8g8": {
+      "porQue": "Los dos enrocaron: posición base del Ataque Indio de Rey."
+    },
+    "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3 c7c5 g2g3 b8c6 f1g2 f8e7 e1g1 e8g8 f1e1": {
+      "porQue": "Prepara e5 y deja libre f1 para el caballo de d2.",
+      "porQueNo": [
+        {
+          "uci": "f3e1",
+          "texto": "...e5: el negro ocupa el centro y el caballo quedó pasivo."
+        },
+        {
+          "uci": "f3g5",
+          "texto": "...e5 y ...Ag4: el caballo en g5 no tiene futuro."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Réti Opening», sección sobre el Ataque Indio de Rey (2 g3 con d3 y e4)"
+    },
+    {
+      "titulo": "King's Indian Attack (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/King%27s_Indian_Attack",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 e7e6 d2d3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d3 f7f5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,1 → −0,8. Refutación: exf5 exf5 d4 Cf6 Cf3 d5"
+      },
+      "e2e4 e7e6 d2d3 f8b4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,1 → −0,7. Refutación: c3 Ae7 d4 c5 Cf3 d5"
+      },
+      "e2e4 e7e6 d2d3 d7d5 b1d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d3 d7d5 c2c4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,0 → −0,7. Refutación: dxe4 Cc3 exd3 Cf3 Cc6 a3"
+      },
+      "e2e4 e7e6 d2d3 d7d5 d3d4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: −0,0 → −1,0. Refutación: dxe4 Cc3 f5 f3 Ab4 a3"
+      },
+      "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d3 d7d5 b1d2 f7f6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,1 → −0,5. Refutación: d4 c5 exd5 exd5 Cgf3 Cc6"
+      },
+      "e2e4 e7e6 d2d3 d7d5 b1d2 f8b4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 4 puntos de chances: +0,1 → −0,4. Refutación: Cf3 Ae7 d4 c5 dxc5 Cf6"
+      },
+      "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3 c7c5 g2g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3 c7c5 f3g5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: 0,0 → −0,6. Refutación: Cc6 g3 Ae7 Ag2 O-O O-O"
+      },
+      "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3 c7c5 c2c4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: 0,0 → −0,8. Refutación: Cc6 cxd5 exd5 Ae2 Ae7 O-O"
+      },
+      "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3 c7c5 g2g3 b8c6 f1g2 f8e7 e1g1 e8g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3 c7c5 g2g3 b8c6 f1g2 f8e7 e1g1 e8g8 f1e1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3 c7c5 g2g3 b8c6 f1g2 f8e7 e1g1 e8g8 f3e1 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,0 → −0,6. Refutación: e5 c3 Te8 De2 h6 a4"
+      },
+      "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3 c7c5 g2g3 b8c6 f1g2 f8e7 e1g1 e8g8 f3g5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 4 puntos de chances: −0,0 → −0,5. Refutación: Dc7 Te1 Td8 exd5 exd5 Cgf3"
+      }
+    }
+  }
+}

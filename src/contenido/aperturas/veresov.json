@@ -1,0 +1,87 @@
+{
+  "id": "veresov",
+  "nombre": "Apertura Veresov",
+  "raiz": "d2d4 g8f6 b1c3 d7d5 c1g5",
+  "resumen": "Richter-Veresov: las blancas renuncian a c4 y bloquean su peón de c con el caballo para buscar e4 cuanto antes. Es una apertura de 1.d4 con espíritu de 1.e4, con poca teoría. FCO señala que hoy se prefiere preparar e4 con Cf3 en lugar del viejo f3, que estorba el desarrollo.",
+  "planesBlancas": [
+    "Jugar e4, preparado con Cf3, e3 y Ad3 o con f3.",
+    "Si el negro juega pasivo, Axf6 para dañarle la estructura."
+  ],
+  "planesNegras": [
+    "Impedir e4 con ...Af5 o ...Cbd7 y ...c6.",
+    "...c5 para atacar el centro aprovechando que el blanco no tiene c4."
+  ],
+  "estructura": "Peón blanco en d4 y caballo en c3 delante del peón de c: si llega e4, estructura de apertura abierta.",
+  "rupturas": [
+    "e4 de las blancas.",
+    "...c5 y ...e5 del negro."
+  ],
+  "piezas": [
+    "Alfil blanco de c1: g5.",
+    "Caballo blanco de c3, que tapa el peón de c pero apoya e4."
+  ],
+  "trampas": [],
+  "notas": {
+    "d2d4 g8f6 b1c3 d7d5 c1g5": {
+      "porQue": "Clava el caballo de f6, que es el que defiende e4."
+    },
+    "d2d4 g8f6 b1c3 d7d5 c1g5 b8d7": {
+      "porQue": "La respuesta principal: deja que Axf6 se conteste con el caballo.",
+      "porQueNo": [
+        {
+          "uci": "f6e4",
+          "texto": "Cxe4 dxe4 e3: el peón de e4 queda débil y el negro perdió tiempo."
+        }
+      ]
+    },
+    "d2d4 g8f6 b1c3 d7d5 c1g5 b8d7 g1f3": {
+      "porQue": "El plan moderno: prepara e4 sin el viejo f3, que estorba el desarrollo."
+    },
+    "d2d4 g8f6 b1c3 d7d5 c1g5 c8f5": {
+      "porQue": "Impide e4 directamente."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Other 1 d4 d5 Openings», sección «Richter-Veresov Opening»"
+    },
+    {
+      "titulo": "Richter–Veresov Attack (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Richter%E2%80%93Veresov_Attack",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "d2d4 g8f6 b1c3 d7d5 c1g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 b1c3 d7d5 c1g5 b8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 b1c3 d7d5 c1g5 f6e4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,1 → −0,6. Refutación: Cxe4 dxe4 e3 c6 c3 Dd5"
+      },
+      "d2d4 g8f6 b1c3 d7d5 c1g5 b8d7 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 b1c3 d7d5 c1g5 c8f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      }
+    }
+  }
+}
