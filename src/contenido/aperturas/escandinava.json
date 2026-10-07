@@ -29,7 +29,13 @@
       "porQue": "Ataca e4 enseguida: obliga a las blancas a decidir antes de completar el centro."
     },
     "e2e4 d7d5 e4d5": {
-      "porQue": "La respuesta más directa: toma el peón y obliga a la dama negra a salir para recuperarlo."
+      "porQue": "La respuesta más directa: toma el peón y obliga a la dama negra a salir para recuperarlo.",
+      "porQueNo": [
+        {
+          "uci": "e4e5",
+          "texto": "...Af5, d4 y ...e6: una Caro-Kann del Avance con un tiempo de más para el negro, que no gastó ...c6."
+        }
+      ]
     },
     "e2e4 d7d5 e4d5 d8d5": {
       "porQue": "Recupera el peón con la dama: pierde algo de tiempo, pero el juego queda abierto y simple.",
@@ -89,9 +95,32 @@
     },
     "e2e4 d7d5 e4d5 g8f6 d2d4": {
       "porQue": "Ocupa el centro y deja que el negro recupere el peón: las blancas quedan con más espacio."
+    },
+    "e2e4 d7d5 e4d5 d8d5 b1c3 d5a5 d2d4 g8f6 g1f3 c8g4": {
+      "porQue": "La línea más aguda: clava el caballo. Si h3, ...Ah5 mantiene la clavada."
+    },
+    "e2e4 d7d5 e4d5 d8d5 b1c3 d5a5 d2d4 g8f6 g1f3 c7c6": {
+      "porQue": "Le da un escape a la dama y deja para después la elección entre ...Ag4 y ...Af5."
+    },
+    "e2e4 d7d5 e4d5 g8f6 d2d4 f6d5": {
+      "porQue": "Recupera el peón: las blancas pueden ganar espacio con c4 más adelante."
+    },
+    "e2e4 d7d5 e4d5 g8f6 d2d4 f6d5 g1f3 g7g6": {
+      "porQue": "Invita a c4: el alfil de g7 presionará el centro blanco.",
+      "inferior": true
+    },
+    "e2e4 d7d5 e4d5 g8f6 d2d4 f6d5 g1f3 c8g4": {
+      "porQue": "Más sólido: presiona d4 sin darle objetivos al blanco."
+    },
+    "e2e4 d7d5 e4d5 g8f6 d2d4 c8g4": {
+      "porQue": "Variante Portuguesa: desarrolla el alfil antes de recuperar el peón, con juego muy activo."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Other 1 e4 Openings», sección «Scandinavian Defence»"
+    },
     {
       "titulo": "Scandinavian Defense (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Scandinavian_Defense",
@@ -115,6 +144,10 @@
       "e2e4 d7d5 e4d5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,6 → −0,0. Refutación: c5 c3 Af5 d4 e6 Cf3"
       },
       "e2e4 d7d5 e4d5 d8d5": {
         "ok": true,
@@ -175,6 +208,30 @@
       "e2e4 d7d5 e4d5 g8f6 d2d4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4d5 d8d5 b1c3 d5a5 d2d4 g8f6 g1f3 c8g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,2 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4d5 d8d5 b1c3 d5a5 d2d4 g8f6 g1f3 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4d5 g8f6 d2d4 f6d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4d5 g8f6 d2d4 f6d5 g1f3 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Af5: −0,6 contra −1,0 (marcada como inferior pero jugable)"
+      },
+      "e2e4 d7d5 e4d5 g8f6 d2d4 f6d5 g1f3 c8g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,9 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4d5 g8f6 d2d4 c8g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
       }
     }
   }

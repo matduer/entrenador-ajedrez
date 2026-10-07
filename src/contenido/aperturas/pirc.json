@@ -75,9 +75,38 @@
           "texto": "Lento: e5 echa al caballo y las blancas toman la iniciativa."
         }
       ]
+    },
+    "e2e4 d7d6 d2d4 g8f6 b1c3 e7e5": {
+      "porQue": "Busca la Philidor (si Cf3) aunque permite dxe5 y el cambio de damas, con el rey negro en el centro."
+    },
+    "e2e4 d7d6 d2d4 g8f6 b1c3 c7c6": {
+      "porQue": "Variante Checa: contra f4 prepara ...Da5 y ...e5.",
+      "inferior": true
+    },
+    "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 c1e3": {
+      "porQue": "El sistema 4.Ae3, la línea principal moderna: deja abiertos Dd2 con Ah6, el enroque a cualquier lado y el avance f3 o f4."
+    },
+    "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 g1f3": {
+      "porQue": "La Pirc Clásica: desarrollo sólido sin comprometerse; el problema del negro es encontrar contrajuego."
+    },
+    "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 g1f3 f8g7 f1e2 e8g8 e1g1 c8g4": {
+      "porQue": "Amenaza tomar en f3 para debilitar el control blanco de d4 y e5."
+    },
+    "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 g1f3 f8g7 f1e2 e8g8 e1g1 c7c6": {
+      "porQue": "Tranquila: prepara ...Cbd7, ...Dc7 o ...Da5 y, con eso, la ruptura ...e5."
+    },
+    "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f2f4 f8g7 g1f3 c7c5": {
+      "porQue": "Contra el Ataque Austríaco, ataca el centro de inmediato y busca un juego de tipo siciliano."
+    },
+    "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f2f4 f8g7 g1f3 e8g8": {
+      "porQue": "Completa el enroque primero; según lo que haga el blanco, después ...c5 o ...Ca6."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Pirc Defence»"
+    },
     {
       "titulo": "Pirc Defence (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Pirc_Defence",
@@ -145,6 +174,38 @@
       "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f2f4 b7b6 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 7 puntos de chances: −0,7 → −1,5. Refutación: e5 Cg8 Df3 c6 h3 h5"
+      },
+      "e2e4 d7d6 d2d4 g8f6 b1c3 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 d7d6 d2d4 g8f6 b1c3 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere e5: −0,5 contra −1,1 (marcada como inferior pero jugable)"
+      },
+      "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 c1e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 g1f3 f8g7 f1e2 e8g8 e1g1 c8g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 g1f3 f8g7 f1e2 e8g8 e1g1 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f2f4 f8g7 g1f3 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f2f4 f8g7 g1f3 e8g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
       }
     }
   }
