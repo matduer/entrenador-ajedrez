@@ -1,0 +1,133 @@
+{
+  "id": "francesa-winawer",
+  "nombre": "Francesa Winawer",
+  "raiz": "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3",
+  "resumen": "Tras 5.a3 Axc3+ 6.bxc3 las blancas tienen la pareja de alfiles y espacio, pero peones doblados en c. Como el negro cambió su alfil de casillas negras, el punto g7 queda débil: 7.Dg4 lo ataca enseguida. El negro contraataca en el flanco de dama y en c3 con ...Dc7, ...cxd4 y ...Cbc6.",
+  "planesBlancas": [
+    "Dg4 contra g7 y ataque en el flanco de rey.",
+    "Usar la pareja de alfiles, sobre todo el de casillas negras."
+  ],
+  "planesNegras": [
+    "Presión sobre c3 y d4: ...Dc7, ...cxd4, ...Cbc6.",
+    "Si Dxg7, ...Tg8 y juego por la columna g."
+  ],
+  "estructura": "Cadena blanca c3-d4-e5 con peones doblados en c; negra e6-d5 y peón de c que se cambia.",
+  "rupturas": [
+    "...f6 del negro.",
+    "a4 y Aa3 de las blancas."
+  ],
+  "piezas": [
+    "Alfil blanco de c1: a3 o d2, sin rival de su color.",
+    "Caballo negro de g8: e7 y f5."
+  ],
+  "trampas": [],
+  "notas": {
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3": {
+      "porQue": "Obliga a definir: el alfil cambia en c3 y las blancas se quedan con la pareja de alfiles.",
+      "porQueNo": [
+        {
+          "uci": "f1d3",
+          "texto": "...cxd4 a3 Ad6: el negro gana el peón de d4."
+        }
+      ]
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3": {
+      "porQue": "Lo consecuente: cambia y dobla los peones blancos."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3": {
+      "porQue": "Única."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7": {
+      "porQue": "El caballo va a f5 o c6 y le deja libre la casilla c7 a la dama.",
+      "porQueNo": [
+        {
+          "uci": "g8h6",
+          "texto": "Axh6 gxh6: la estructura negra queda rota."
+        },
+        {
+          "uci": "d8b6",
+          "texto": "Dg4: el peón de g7 queda atacado."
+        }
+      ]
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4": {
+      "porQue": "Ataca g7: el negro ya no tiene su alfil de casillas negras para defenderlo."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 d8c7": {
+      "porQue": "Contraataca c3 y e5: si Dxg7, ...Tg8 y ...cxd4 con juego.",
+      "porQueNo": [
+        {
+          "uci": "h7h5",
+          "texto": "Dxg7 Tg8 Dh6: el negro pierde un peón sin compensación."
+        },
+        {
+          "uci": "c8d7",
+          "texto": "Dxg7: el peón cae con tiempo."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "French Defence (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/French_Defence",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 f1d3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: +0,8 → −0,3. Refutación: cxd4 a3 Ad6 exd6 dxc3 Dg4"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8h6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,6 → −1,4. Refutación: Axh6 gxh6 Cf3 Da5 Dd2 Ad7"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 d8b6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,6 → −1,4. Refutación: Dg4 Rf8 h4 h5 Dg5 Cc6"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 d8c7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 h7h5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: −0,7 → −1,7. Refutación: Dxg7 Tg8 Dh7 Ad7 Cf3 Da5"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 c8d7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 16 puntos de chances: −0,7 → −2,5. Refutación: Dxg7 Tg8 Dxh7 Dc7 Tb1 Cbc6"
+      }
+    }
+  }
+}

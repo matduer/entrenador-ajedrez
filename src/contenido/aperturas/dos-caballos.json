@@ -1,0 +1,243 @@
+{
+  "id": "dos-caballos",
+  "nombre": "Defensa de los Dos Caballos",
+  "raiz": "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6",
+  "resumen": "Con 3...Cf6 el negro contraataca e4 y permite 4.Cg5, que ataca f7. La respuesta correcta es 4...d5 5.exd5 Ca5: el negro entrega un peón a cambio de desarrollo y tiempos sobre el alfil blanco. Retomar en d5 con el caballo permite el famoso ataque Fried Liver (Cxf7). La alternativa aguda es el Contraataque Traxler (4...Ac5), que Stockfish no aprueba.",
+  "planesBlancas": [
+    "Conservar el peón de más y completar el desarrollo.",
+    "Contra errores del negro, atacar f7 (Fried Liver)."
+  ],
+  "planesNegras": [
+    "Ganar tiempos sobre el alfil y el caballo blancos (...Ca5, ...c6, ...h6, ...e4).",
+    "Compensar el peón con desarrollo rápido y espacio."
+  ],
+  "estructura": "Tras ...e4, el negro tiene espacio en el flanco de rey; las blancas un peón de más en el flanco de dama.",
+  "rupturas": [
+    "...e4 del negro.",
+    "d4 o d3 de las blancas para deshacer el peón de e4."
+  ],
+  "piezas": [
+    "Caballo blanco: g5, después f3 o h3 y e5.",
+    "Caballo negro de c6: a5, atacando al alfil de c4."
+  ],
+  "trampas": [
+    {
+      "jugadas": "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 f6d5 g5f7 e8f7 d1f3 f7e6 b1c3",
+      "texto": "Fried Liver: tras 5...Cxd5? 6.Cxf7! Rxf7 7.Df3+ Re6 8.Cc3, el rey negro queda en el centro y el caballo de d5 está clavado."
+    }
+  ],
+  "notas": {
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5": {
+      "porQue": "Jaque que salva el alfil con tiempo y conserva el peón de más.",
+      "porQueNo": [
+        {
+          "uci": "d2d3",
+          "texto": "...h6 Cf3 e4: el negro gana tiempos y cambia el alfil."
+        },
+        {
+          "uci": "c4e2",
+          "texto": "...h6 Cf3 e4 y ...Dxd5: el negro recupera el peón con buen juego."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6": {
+      "porQue": "Entrega otro peón para seguir ganando tiempos."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6 d5c6": {
+      "porQue": "Tomar es lo único bueno.",
+      "porQueNo": [
+        {
+          "uci": "b5e2",
+          "texto": "...cxd5: el negro recupera el peón con un buen centro."
+        },
+        {
+          "uci": "b5a4",
+          "texto": "...b5 y el alfil queda atrapado."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6 d5c6 b7c6": {
+      "porQue": "Retoma y ataca al alfil: el negro queda con un peón de menos, pero con mucho desarrollo."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6 d5c6 b7c6 b5e2": {
+      "porQue": "La retirada clásica.",
+      "porQueNo": [
+        {
+          "uci": "b5a4",
+          "texto": "...h6 Ch3 Ag4: el alfil queda lejos y el caballo de h3, fuera de juego."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6 d5c6 b7c6 b5d3": {
+      "porQue": "La línea moderna: el alfil vuelve por d3."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6 d5c6 b7c6 b5e2 h7h6": {
+      "porQue": "Echa al caballo con tiempo."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6 d5c6 b7c6 b5e2 h7h6 g5f3": {
+      "porQue": "El caballo vuelve al centro; también se juega Ch3 (variante Steinitz).",
+      "porQueNo": [
+        {
+          "uci": "g5f7",
+          "texto": "Rxf7: el ataque no tiene fuerza y el negro gana una pieza por un peón."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6 d5c6 b7c6 b5e2 h7h6 g5f3 e5e4": {
+      "porQue": "Echa otra vez al caballo con tiempo."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6 d5c6 b7c6 b5e2 h7h6 g5f3 e5e4 f3e5": {
+      "porQue": "El caballo se instala en e5.",
+      "porQueNo": [
+        {
+          "uci": "f3g1",
+          "texto": "Volver a g1 pierde demasiado tiempo: ...Ac5 y el negro ataca."
+        },
+        {
+          "uci": "e1g1",
+          "texto": "...exf3: el caballo se pierde."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 f6d5 g5f7": {
+      "porQue": "Ataque Fried Liver: sacrifica el caballo para sacar al rey negro al centro.",
+      "porQueNo": [
+        {
+          "uci": "d2d3",
+          "texto": "Demasiado lento: ...f6 y el negro consolida."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 f6d5 g5f7 e8f7 d1f3 f7e6": {
+      "porQue": "Lo único: defiende el caballo de d5.",
+      "porQueNo": [
+        {
+          "uci": "f7e7",
+          "texto": "Axd5: las blancas recuperan la pieza y el rey sigue expuesto."
+        },
+        {
+          "uci": "f7g6",
+          "texto": "Axd5 y el rey negro queda a la intemperie."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 f8c5 c4f7": {
+      "porQue": "Contra el Traxler, Axf7+ saca al rey negro del enroque. Cxf7 también es fuerte."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Two Knights Defense (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Two_Knights_Defense",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 d2d3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,2 → −0,4. Refutación: h6 Cf3 e4 Cd4 Ac5 c3"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4e2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: +0,2 → −0,7. Refutación: h6 Cf3 e4 Cd4 Dxd5 Cb5"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6 d5c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6 b5e2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 12 puntos de chances: +0,1 → −1,2. Refutación: cxd5 Cf3 Ad6 d4 e4 Ce5"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6 b5a4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 17 puntos de chances: +0,1 → −1,8. Refutación: b5 Ab3 cxd5 d3 Ad6 Cf3"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6 d5c6 b7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6 d5c6 b7c6 b5e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6 d5c6 b7c6 b5a4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 17 puntos de chances: +0,2 → −1,7. Refutación: h6 Ch3 Ag4 f3 Axh3 gxh3"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6 d5c6 b7c6 b5d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6 d5c6 b7c6 b5e2 h7h6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6 d5c6 b7c6 b5e2 h7h6 g5f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6 d5c6 b7c6 b5e2 h7h6 g5f7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 28 puntos de chances: −0,0 → −3,4. Refutación: Rxf7 O-O Ad6 d3 Tf8 a3"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6 d5c6 b7c6 b5e2 h7h6 g5f3 e5e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6 d5c6 b7c6 b5e2 h7h6 g5f3 e5e4 f3e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6 d5c6 b7c6 b5e2 h7h6 g5f3 e5e4 f3g1 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 13 puntos de chances: −0,0 → −1,5. Refutación: Ac5 d4 exd3 Dxd3 Db6 Cc3"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6 d5c6 b7c6 b5e2 h7h6 g5f3 e5e4 e1g1 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 29 puntos de chances: −0,0 → −3,7. Refutación: exf3 Axf3 Ad6 Te1+ Ae6 b3"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 f6d5 g5f7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 f6d5 d2d3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 12 puntos de chances: +1,0 → −0,3. Refutación: f6 Cc3 Ab4 Ce4 Cb6 Ab3"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 f6d5 g5f7 e8f7 d1f3 f7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 f6d5 g5f7 e8f7 d1f3 f7e7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 14 puntos de chances: −1,1 → −2,9. Refutación: Axd5 Cd4 Df7+ Rd6 Ca3 De7"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 f6d5 g5f7 e8f7 d1f3 f7g6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 23 puntos de chances: −1,1 → −4,3. Refutación: Axd5 Df6 Dg3+ Dg5 Axc6 bxc6"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 f8c5 c4f7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,1 para el bando que mueve"
+      }
+    }
+  }
+}

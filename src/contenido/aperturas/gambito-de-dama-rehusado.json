@@ -1,0 +1,207 @@
+{
+  "id": "gambito-de-dama-rehusado",
+  "nombre": "Gambito de Dama Rehusado: Cambio, Cambridge Springs y Lasker",
+  "raiz": "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5",
+  "resumen": "Tres sistemas clásicos del Gambito de Dama Rehusado. En la Variante del Cambio (cxd5) se forma la estructura Carlsbad y las blancas suelen jugar el ataque de minorías (Tb1, b4 y b5) para crear debilidades en el flanco de dama. En la Cambridge Springs, la dama negra va a a5 y clava el caballo de c3. En la Lasker, el negro busca cambios con ...Ce4 para aliviar la posición.",
+  "planesBlancas": [
+    "Ataque de minorías: b4-b5 contra los peones c6 y d5.",
+    "Alternativa: f3 y e4 para un centro grande."
+  ],
+  "planesNegras": [
+    "Juego en el flanco de rey con ...Ce4, ...f5 o maniobras de piezas.",
+    "Cambiar piezas menores para aliviar la falta de espacio."
+  ],
+  "estructura": "Carlsbad: peones blancos en d4 y e3 contra negros en c6 y d5, columna c semiabierta para las blancas y e para el negro.",
+  "rupturas": [
+    "b4-b5 o e4 de las blancas.",
+    "...c5 o ...f5 del negro."
+  ],
+  "piezas": [
+    "Alfil blanco de c1: g5.",
+    "Dama negra: a5 en la Cambridge Springs."
+  ],
+  "trampas": [],
+  "notas": {
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5": {
+      "porQue": "Variante del Cambio: define la estructura Carlsbad.",
+      "porQueNo": [
+        {
+          "uci": "d1d3",
+          "texto": "...c5 y el negro libera el juego."
+        },
+        {
+          "uci": "c4c5",
+          "texto": "...b6: la cadena de peones se rompe."
+        }
+      ]
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5": {
+      "porQue": "Retoma con el peón: estructura Carlsbad."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5": {
+      "porQue": "Clava el caballo."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 f8e7": {
+      "porQue": "Desclava.",
+      "porQueNo": [
+        {
+          "uci": "h7h6",
+          "texto": "Axf6 gxf6: la estructura negra queda dañada."
+        },
+        {
+          "uci": "c8g4",
+          "texto": "Axf6 gxf6 Db3: presión sobre b7 y d5."
+        }
+      ]
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 f8e7 e2e3": {
+      "porQue": "Desarrollo; el plan es el ataque de minorías: Tb1, b4 y b5."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 f8e7 e2e3 c7c6": {
+      "porQue": "Sostiene d5 y le da a la dama la casilla c7.",
+      "porQueNo": [
+        {
+          "uci": "f6g4",
+          "texto": "Axe7 Rxe7: el negro pierde el enroque."
+        }
+      ]
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 b8d7 e2e3 c7c6 g1f3 d8a5": {
+      "porQue": "Cambridge Springs: la dama clava el caballo de c3 y amenaza ...Ce4 o ...dxc4.",
+      "porQueNo": [
+        {
+          "uci": "d8c7",
+          "texto": "Tc1 y la dama no hace nada en c7."
+        },
+        {
+          "uci": "b7b6",
+          "texto": "cxd5 exd5 Ad3: estructura cómoda para las blancas."
+        }
+      ]
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 b8d7 e2e3 c7c6 g1f3 d8a5 f3d2": {
+      "porQue": "Defiende c4 y prepara Db3 o Dc2 para romper la clavada.",
+      "porQueNo": [
+        {
+          "uci": "d1d2",
+          "texto": "...Ab4: la clavada se vuelve molesta."
+        },
+        {
+          "uci": "a1b1",
+          "texto": "...Ce4: el caballo de c3 cae y el negro gana un peón."
+        }
+      ]
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 f8e7 e2e3 e8g8 g1f3 h7h6 g5h4 f6e4": {
+      "porQue": "Defensa Lasker: busca cambios de piezas menores para aliviar la posición."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 f8e7 e2e3 e8g8 g1f3 h7h6 g5h4 f6e4 h4e7": {
+      "porQue": "Lo mejor: cambiar alfiles.",
+      "porQueNo": [
+        {
+          "uci": "g2g3",
+          "texto": "...g5: el alfil queda atrapado."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Queen's Gambit Declined (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Queen%27s_Gambit_Declined",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 d1d3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,3 → −0,5. Refutación: c5 e3 cxd4 exd4 dxc4 Dxc4"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4c5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,3 → −0,5. Refutación: b6 cxb6 axb6 Cf3 Ce4 e3"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 f8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 h7h6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,3 → −1,0. Refutación: Axf6 gxf6 e3 c6 Ad3 h5"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 c8g4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: −0,3 → −1,2. Refutación: Axf6 Dxf6 Cxd5 Dd6 Cc3 Cc6"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 f8e7 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 f8e7 e2e3 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 f8e7 e2e3 f6g4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,3 → −1,0. Refutación: Axe7 Rxe7 Df3 Cf6 Ad3 Cc6"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 b8d7 e2e3 c7c6 g1f3 d8a5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 b8d7 e2e3 c7c6 g1f3 d8c7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,2 → −0,9. Refutación: Tc1 Ae7 Ad3 h6 Ah4 dxc4"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 b8d7 e2e3 c7c6 g1f3 b7b6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,2 → −1,1. Refutación: cxd5 exd5 Ce5 Cxe5 dxe5 h6"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 b8d7 e2e3 c7c6 g1f3 d8a5 f3d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 b8d7 e2e3 c7c6 g1f3 d8a5 d1d2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: +0,2 → −0,6. Refutación: Ab4 Axf6 Cxf6 Dc1 Ce4 a3"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 b8d7 e2e3 c7c6 g1f3 d8a5 a1b1 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,2 → −0,5. Refutación: Ce4 cxd5 Cxc3 bxc3 Dxc3+ Cd2"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 f8e7 e2e3 e8g8 g1f3 h7h6 g5h4 f6e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 f8e7 e2e3 e8g8 g1f3 h7h6 g5h4 f6e4 h4e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 f8e7 e2e3 e8g8 g1f3 h7h6 g5h4 f6e4 g2g3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 27 puntos de chances: +0,2 → −3,1. Refutación: g5 Ce5 Rg7 Axg5 hxg5 h4"
+      }
+    }
+  }
+}

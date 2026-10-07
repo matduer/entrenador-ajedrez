@@ -1,0 +1,153 @@
+{
+  "id": "berlina",
+  "nombre": "Defensa Berlinesa",
+  "raiz": "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6",
+  "resumen": "La defensa que popularizó Kramnik en 2000. Tras 4.O-O Cxe4 5.d4 Cd6 6.Axc6 dxc6 7.dxe5 Cf5 8.Dxd8+ Rxd8 se llega al famoso final de la Berlina: sin damas, el rey negro perdió el enroque, pero tiene la pareja de alfiles y una estructura sin debilidades. Las blancas tienen una mayoría de peones sana en el flanco de rey.",
+  "planesBlancas": [
+    "Avanzar la mayoría del flanco de rey (f4, g4, f5).",
+    "Torres en la columna d y el rey hacia el centro."
+  ],
+  "planesNegras": [
+    "Rey a c8 o e8, alfiles activos y paciencia.",
+    "Usar la pareja de alfiles cuando el juego se abra."
+  ],
+  "estructura": "Peones doblados negros en c; mayoría blanca 4 contra 3 en el flanco de rey, negra en el de dama (no se puede convertir fácilmente).",
+  "rupturas": [
+    "f4-f5 o e6 de las blancas.",
+    "...c5-c4 o ...h5 del negro."
+  ],
+  "piezas": [
+    "Caballo negro: e4, d6 y f5.",
+    "Rey negro: d8, después c8 o e8."
+  ],
+  "trampas": [],
+  "notas": {
+    "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4": {
+      "porQue": "Lo más directo: amenaza dxe5 y abre el centro.",
+      "porQueNo": [
+        {
+          "uci": "b1c3",
+          "texto": "...Cxc3 bxc3: las blancas quedan con peones doblados sin compensación."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 f1e1": {
+      "porQue": "También bueno: recupera el peón después de ...Cd6."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4 e4d6": {
+      "porQue": "El caballo ataca al alfil de b5."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4 e4d6 b5c6": {
+      "porQue": "Cambia para entrar en el final de la Berlina.",
+      "porQueNo": [
+        {
+          "uci": "b5e2",
+          "texto": "...e4: el negro gana espacio con tiempo."
+        },
+        {
+          "uci": "b1c3",
+          "texto": "...Cxb5: el negro se queda con la pareja de alfiles."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4 e4d6 b5c6 d7c6": {
+      "porQue": "Retoma hacia afuera: abre la columna d y el alfil de c8."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4 e4d6 b5c6 d7c6 d4e5": {
+      "porQue": "Echa al caballo."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4 e4d6 b5c6 d7c6 d4e5 d6f5": {
+      "porQue": "Desde f5 el caballo vigila d4 y e7."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4 e4d6 b5c6 d7c6 d4e5 d6f5 d1d8": {
+      "porQue": "Cambia damas: el rey negro pierde el enroque. Es el famoso final de la Berlina."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4 e4d6 b5c6 d7c6 d4e5 d6f5 d1d8 e8d8": {
+      "porQue": "Única: el rey retoma."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4 e4d6 b5c6 d7c6 d4e5 d6f5 d1d8 e8d8 b1c3": {
+      "porQue": "Desarrollo; el plan blanco es avanzar la mayoría del flanco de rey.",
+      "porQueNo": [
+        {
+          "uci": "c1e3",
+          "texto": "...Cxe3: el negro se queda con los dos alfiles."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Ruy Lopez (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Ruy_Lopez",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 b1c3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,3 → −0,3. Refutación: Cxc3 bxc3 Ae7 Te1 O-O Cxe5"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 f1e1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4 e4d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4 e4d6 b5c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4 e4d6 b5e2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,1 → −0,6. Refutación: e4 Ce5 f6 Cg4 f5 Ce3"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4 e4d6 b1c3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: +0,1 → −1,0. Refutación: Cxb5 Cxb5 a6 Cc3 d6 dxe5"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4 e4d6 b5c6 d7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4 e4d6 b5c6 d7c6 d4e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4 e4d6 b5c6 d7c6 d4e5 d6f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4 e4d6 b5c6 d7c6 d4e5 d6f5 d1d8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4 e4d6 b5c6 d7c6 d4e5 d6f5 d1d8 e8d8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4 e4d6 b5c6 d7c6 d4e5 d6f5 d1d8 e8d8 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4 e4d6 b5c6 d7c6 d4e5 d6f5 d1d8 e8d8 c1e3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,2 → −0,4. Refutación: Cxe3 fxe3 Re8 Cbd2 c5 Tac1"
+      }
+    }
+  }
+}

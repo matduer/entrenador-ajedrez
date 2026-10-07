@@ -1,0 +1,225 @@
+{
+  "id": "espanola-cerrada",
+  "nombre": "Española Cerrada y Ataque Marshall",
+  "raiz": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3",
+  "resumen": "La línea principal de la Española. Tras ...b5 y Ab3, las blancas preparan d4 con c3 y h3 (que impide ...Ag4), y llevan el caballo de b1 por d2, f1 y g3. El negro elige entre varios sistemas: Chigorin (...Ca5), Breyer (...Cb8) y Zaitsev (...Ab7). Si el negro enroca antes de jugar ...d6, aparece el Ataque Marshall: ...d5, entregando un peón por un ataque contra el rey blanco.",
+  "planesBlancas": [
+    "c3, h3 y d4; maniobra Cbd2-f1-g3.",
+    "Contra el Marshall, aceptar el peón y defenderse con cuidado, o evitarlo con a4 o h3."
+  ],
+  "planesNegras": [
+    "Sistemas Chigorin, Breyer o Zaitsev para presionar el centro.",
+    "Marshall: ...d5, ...Ad6, ...Dh4 y piezas contra el enroque blanco."
+  ],
+  "estructura": "Centro cerrado o tenso: peones blancos en c3, d4 y e4; negros en b5, d6 y e5.",
+  "rupturas": [
+    "d4 y a4 de las blancas.",
+    "...c5, ...d5 y ...f5 del negro."
+  ],
+  "piezas": [
+    "Alfil blanco: b3 y después c2.",
+    "Caballo blanco de b1: d2, f1 y g3."
+  ],
+  "trampas": [
+    {
+      "jugadas": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 d7d6 d2d4 b7b5 a4b3 c6d4 f3d4 e5d4 d1d4 c7c5 d4d5 c8e6 d5c6 e6d7 c6d5 c5c4",
+      "texto": "Arca de Noé: 8.Dxd4?? c5 9.Dd5 Ae6 10.Dc6+ Ad7 11.Dd5 c4 y el alfil de b3 queda atrapado."
+    }
+  ],
+  "notas": {
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3": {
+      "porQue": "Prepara d4 y deja al alfil la retirada a c2.",
+      "porQueNo": [
+        {
+          "uci": "h2h3",
+          "texto": "...Ca5: el negro cambia el alfil de b3 antes de que tenga refugio."
+        },
+        {
+          "uci": "d1e2",
+          "texto": "...Ca5 y el alfil de b3 se cambia."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8": {
+      "porQue": "Enroca y espera para elegir sistema."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3": {
+      "porQue": "Impide ...Ag4, que clavaría el caballo de f3 cuando llegue d4.",
+      "porQueNo": [
+        {
+          "uci": "d1c2",
+          "texto": "...Ca5: el alfil de b3 se cambia."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 c6b8": {
+      "porQue": "Breyer: el caballo vuelve para ir a d7 y deja libre el peón de c.",
+      "porQueNo": [
+        {
+          "uci": "f6e4",
+          "texto": "Txe4: el caballo se pierde por un peón."
+        },
+        {
+          "uci": "g7g5",
+          "texto": "Cxg5: el peón cae y el rey queda abierto."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 c8b7": {
+      "porQue": "Zaitsev: presiona e4 y prepara ...Te8 y ...Af8."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 e8g8": {
+      "porQue": "Enroca antes de ...d6: deja abierta la posibilidad del Ataque Marshall."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 e8g8 c2c3": {
+      "porQue": "Lo natural: permite el Marshall.",
+      "porQueNo": [
+        {
+          "uci": "c2c4",
+          "texto": "...bxc4 Axc4 Cxe4: el centro blanco se rompe."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 e8g8 h2h3": {
+      "porQue": "Anti-Marshall: prepara d4 sin permitir el gambito con comodidad."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 e8g8 a2a4": {
+      "porQue": "Anti-Marshall: presiona b5 y evita el gambito."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 e8g8 c2c3 d7d5": {
+      "porQue": "Ataque Marshall: entrega un peón para lanzar las piezas contra el rey blanco."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 e8g8 c2c3 d7d5 e4d5": {
+      "porQue": "Aceptar es lo más fuerte.",
+      "porQueNo": [
+        {
+          "uci": "d2d3",
+          "texto": "...dxe4 y se cambian damas sin ventaja para las blancas."
+        },
+        {
+          "uci": "b3d5",
+          "texto": "...Cxd5 exd5 Dxd5: el negro recupera el peón con piezas activas."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 e8g8 c2c3 d7d5 e4d5 f6d5 f3e5 c6e5 e1e5 c7c6": {
+      "porQue": "La línea principal del Marshall: sostiene el caballo de d5 y prepara ...Ad6 y ...Dh4 contra el rey."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 d7d6 d2d4 b7b5 a4b3 c6d4 f3d4 e5d4 c2c3": {
+      "porQue": "Lo correcto: recupera el peón con c3, sin tomar con la dama.",
+      "porQueNo": [
+        {
+          "uci": "d1d4",
+          "texto": "...c5 y ...c4: la trampa del Arca de Noé atrapa al alfil de b3."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Ruy Lopez (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Ruy_Lopez",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 h2h3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,4 → −0,2. Refutación: Ca5 d3 O-O Cc3 Te8 Ad2"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 d1e2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,4 → −0,2. Refutación: Ca5 a4 b4 Aa2 c5 d3"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 d1c2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,3 → −0,4. Refutación: Ca5 d4 Ab7 dxe5 dxe5 Ag5"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 c6b8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 f6e4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 28 puntos de chances: −0,4 → −4,1. Refutación: Txe4 Ca5 Ac2 f5 Te1 e4"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 g7g5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 16 puntos de chances: −0,4 → −2,3. Refutación: Cxg5 h6 Cf3 Rh8 Rh1 Tg8"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 c8b7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 e8g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 e8g8 c2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 e8g8 c2c4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,4 → −0,2. Refutación: bxc4 Axc4 Cxe4 Ad5 Cf6 Axc6"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 e8g8 h2h3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 e8g8 a2a4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 e8g8 c2c3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 e8g8 c2c3 d7d5 e4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 e8g8 c2c3 d7d5 d2d3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,6 → −0,1. Refutación: dxe4 dxe4 Dxd1 Axd1 h6 a4"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 e8g8 c2c3 d7d5 b3d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 18 puntos de chances: +0,6 → −1,4. Refutación: Cxd5 exd5 Dxd5 d4 Ag4 dxe5"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 e8g8 c2c3 d7d5 e4d5 f6d5 f3e5 c6e5 e1e5 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 d7d6 d2d4 b7b5 a4b3 c6d4 f3d4 e5d4 c2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 d7d6 d2d4 b7b5 a4b3 c6d4 f3d4 e5d4 d1d4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 34 puntos de chances: +0,0 → −4,4. Refutación: c5 Dd5 Ae6 Dc6+ Ad7 Db7"
+      }
+    }
+  }
+}

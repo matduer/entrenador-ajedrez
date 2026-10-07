@@ -1,0 +1,154 @@
+{
+  "id": "francesa-clasica",
+  "nombre": "Francesa Clásica y Steinitz",
+  "raiz": "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6",
+  "resumen": "Con 3...Cf6 el negro ataca e4. Las blancas pueden clavar con 4.Ag5 (Clásica) o avanzar con 4.e5 (Steinitz), en ambos casos echando al caballo a d7. En la Steinitz siguen con f4 para sostener e5; el negro ataca la base de la cadena con ...c5. En la Clásica, la idea de Alekhine y Chatard es h4: si el negro toma en g5, la columna h se abre.",
+  "planesBlancas": [
+    "Sostener e5 con f4 y atacar en el flanco de rey.",
+    "Ataque Alekhine-Chatard con h4."
+  ],
+  "planesNegras": [
+    "...c5 contra d4 y ...f6 contra e5.",
+    "Juego en el flanco de dama con ...Cc6 y ...Db6."
+  ],
+  "estructura": "Cadena blanca d4-e5 (más f4); cadena negra e6-d5.",
+  "rupturas": [
+    "...c5 y ...f6 del negro.",
+    "f4-f5 de las blancas."
+  ],
+  "piezas": [
+    "Caballo negro de f6: d7, desde donde apoya ...c5.",
+    "Alfil negro de c8: el \"alfil malo\" de la Francesa."
+  ],
+  "trampas": [],
+  "notas": {
+    "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5": {
+      "porQue": "Clava el caballo y mantiene la tensión.",
+      "porQueNo": [
+        {
+          "uci": "g2g3",
+          "texto": "...Cxe4: el peón se pierde."
+        },
+        {
+          "uci": "a2a3",
+          "texto": "...Cxe4: el peón de e4 no tiene defensa."
+        }
+      ]
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 e4e5": {
+      "porQue": "Steinitz: gana espacio y echa al caballo."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 e4e5 f6d7 f2f4": {
+      "porQue": "Sostiene e5 con otro peón."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 e4e5 f6d7 f2f4 c7c5": {
+      "porQue": "Ataca la base de la cadena.",
+      "porQueNo": [
+        {
+          "uci": "b8c6",
+          "texto": "Cf3 y Ae3: las blancas consolidan antes de que llegue ...c5."
+        },
+        {
+          "uci": "f8b4",
+          "texto": "Dg4: ataca g7."
+        }
+      ]
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8e7": {
+      "porQue": "Desclava."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8e7 e4e5": {
+      "porQue": "Echa al caballo."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8e7 e4e5 f6d7": {
+      "porQue": "La retirada útil: desde d7 apoya ...c5."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8e7 e4e5 f6d7 h2h4": {
+      "porQue": "Ataque Alekhine-Chatard: si ...Axg5, hxg5 abre la columna h.",
+      "porQueNo": [
+        {
+          "uci": "f2f4",
+          "texto": "...Axg5 fxg5 Dxg5: el peón se pierde."
+        }
+      ]
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8e7 e4e5 f6d7 g5e7": {
+      "porQue": "Lo clásico: cambia alfiles y sigue con f4."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "French Defence (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/French_Defence",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 g2g3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,3 → −0,4. Refutación: Cxe4 Cxe4 dxe4 Ag2 c5 Axe4"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 a2a3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: +0,3 → −0,7. Refutación: Cxe4 Cxe4 dxe4 Ce2 Ae7 Cc3"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 e4e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 e4e5 f6d7 f2f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 e4e5 f6d7 f2f4 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 e4e5 f6d7 f2f4 b8c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,4 → −0,9. Refutación: Cf3 Ce7 a3 a6 Dd2 b6"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 e4e5 f6d7 f2f4 f8b4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,4 → −0,9. Refutación: Cf3 Ae7 Ae3 c5 dxc5 Cxc5"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8e7 e4e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8e7 e4e5 f6d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8e7 e4e5 f6d7 h2h4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8e7 e4e5 f6d7 f2f4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 14 puntos de chances: +0,6 → −1,0. Refutación: Axg5 fxg5 Dxg5 Cf3 De3+ De2"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8e7 e4e5 f6d7 g5e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      }
+    }
+  }
+}
