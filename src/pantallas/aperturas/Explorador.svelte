@@ -50,13 +50,19 @@
   let explicacion = $derived(explicacionPara(actual))
   let nota = $derived(notaPara(actual))
   // Las explicaciones arrancan cerradas para poder pensar la posición antes de leerlas.
-  let abrirSiempre = $state(leerAbrirSiempre())
-  function leerAbrirSiempre(): boolean {
-    try { return localStorage.getItem('explorador-abrir-explicaciones') === 'si' } catch { return false }
+  // Lo mismo con Stockfish y Masters: se abren a pedido y el dispositivo recuerda la elección.
+  function leerSiNo(clave: string): boolean {
+    try { return localStorage.getItem(clave) === 'si' } catch { return false }
   }
-  $effect(() => {
-    try { localStorage.setItem('explorador-abrir-explicaciones', abrirSiempre ? 'si' : 'no') } catch { /* sin almacenamiento */ }
-  })
+  function guardarSiNo(clave: string, v: boolean) {
+    try { localStorage.setItem(clave, v ? 'si' : 'no') } catch { /* sin almacenamiento */ }
+  }
+  let abrirSiempre = $state(leerSiNo('explorador-abrir-explicaciones'))
+  let verMotor = $state(leerSiNo('explorador-ver-stockfish'))
+  let verMasters = $state(leerSiNo('explorador-ver-masters'))
+  $effect(() => guardarSiNo('explorador-abrir-explicaciones', abrirSiempre))
+  $effect(() => guardarSiNo('explorador-ver-stockfish', verMotor))
+  $effect(() => guardarSiNo('explorador-ver-masters', verMasters))
 
   const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
   let resultados = $derived.by((): Apertura[] => {
@@ -159,7 +165,7 @@
   let ultimaTablero = $derived(verLinea && vista ? vista.ultima : idx > 0 ? linea[idx - 1] : undefined)
   let flechas = $derived.by(() => {
     if (verLinea && vista?.proxima) return [{ de: vista.proxima.slice(0, 2), a: vista.proxima.slice(2, 4), color: 'blue' as const }]
-    if (!verLinea && motor?.fen === fen && motor.lineas[0]?.linea[0]) {
+    if (!verLinea && verMotor && motor?.fen === fen && motor.lineas[0]?.linea[0]) {
       const u = motor.lineas[0].linea[0]
       return [{ de: u.slice(0, 2), a: u.slice(2, 4), color: 'green' as const }]
     }
@@ -257,8 +263,8 @@
       {/if}
     </section>
 
-    <section class="tarjeta">
-      <h2>Stockfish</h2>
+    <details class="tarjeta desplegable" bind:open={verMotor}>
+      <summary><h2>Stockfish</h2>{#if !verMotor}<span class="suave"> · evaluación y mejor jugada (tocá para ver)</span>{/if}</summary>
       {#if motor?.fen === fen && motor.lineas.length}
         <ul class="lista">
           {#each motor.lineas as l, i (i)}
@@ -274,11 +280,11 @@
       {:else}
         <p class="suave">Calculando…</p>
       {/if}
-    </section>
+    </details>
 
     {#if masters && masters !== 'sin-token'}
-      <section class="tarjeta">
-        <h2>Masters (en línea)</h2>
+      <details class="tarjeta desplegable" bind:open={verMasters}>
+        <summary><h2>Masters (en línea)</h2>{#if !verMasters}<span class="suave"> · qué juegan los maestros (tocá para ver)</span>{/if}</summary>
         {#if masters === 'error'}
           <p class="suave">No se pudo consultar. Revisá el token en Ajustes.</p>
         {:else if masters.moves.length}
@@ -297,7 +303,7 @@
         {:else}
           <p class="suave">Ningún maestro llegó a esta posición.</p>
         {/if}
-      </section>
+      </details>
     {/if}
 
     {#if explicacion}
