@@ -1146,6 +1146,115 @@
           "capitulo": "Parte Cinco (ELO 1600-1799): «Triangulación» y «Rodeo»"
         }
       ]
+    },
+    {
+      "id": "zorro-en-el-gallinero",
+      "titulo": "Finales de peones: el zorro en el gallinero",
+      "nivel": 3,
+      "explicacion": [
+        "Silman llama así a una técnica muy común: un final de rey y peón contra rey en un flanco, más algunos peones trabados en el otro. Solo, el peón pasado podría ser tablas; pero sirve de señuelo.",
+        "El rey del bando fuerte acompaña el peón hasta que el rey rival tiene que quedarse frente a él. En ese momento abandona el peón y se va a comer los peones indefensos del otro flanco (los pollos), mientras el rey rival pierde tiempo capturando el peón señuelo."
+      ],
+      "ideas": [
+        "El peón pasado no tiene que coronar: alcanza con que ate al rey rival.",
+        "Contá: ¿llega tu rey a los peones del otro flanco antes de que el rival vuelva?",
+        "Cuidado con el ahogado al empujar el peón señuelo hasta el final."
+      ],
+      "posiciones": [
+        {
+          "id": "senuelo-y-pollos",
+          "fen": "8/8/1k3p2/6p1/KP4P1/8/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 45,
+          "consigna": "Ganá: una sola jugada mantiene la ventaja.",
+          "pista": "b5: el peón ata al rey negro. Después, cuando el rey negro quede frente al peón, tu rey se va a comer f6 y g5.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "b4b5",
+            "dtm": 59,
+            "fecha": "2026-10-07"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jeremy Silman — El curso de finales completo (Siles Press, 2007)",
+          "capitulo": "Parte Tres (ELO 1200-1399): «El Zorro en el gallinero»"
+        }
+      ]
+    },
+    {
+      "id": "congelacion",
+      "titulo": "Finales de peones: cuando un peón congela a dos",
+      "nivel": 3,
+      "explicacion": [
+        "Una mayoría de peones solo vale si puede crear un peón pasado. Si un solo peón rival se adelanta y bloquea a dos de los nuestros, la mayoría queda congelada: ya no puede avanzar sin que la capturen, y el rival juega como si tuviera un peón de más.",
+        "Por eso, antes de mover los peones de la mayoría, hay que mirar si el rival puede congelarlos. Silman lo muestra con un error típico: adelantar el peón equivocado y permitir que un solo peón rival detenga a los dos."
+      ],
+      "ideas": [
+        "Con dos contra uno, primero avanza el peón que no tiene enfrente al rival.",
+        "Si el rival puede congelar tu mayoría con un avance, impedilo antes de hacer otra cosa."
+      ],
+      "posiciones": [
+        {
+          "id": "no-dejarse-congelar",
+          "fen": "8/8/2k3p1/1p6/1K6/6PP/8/8 w - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 25,
+          "consigna": "Hacé tablas. Un avance de peón pierde: elegí bien.",
+          "pista": "h4, para que el peón de g6 no pueda ir a g5. Con g4?? las negras juegan ...g5 y un solo peón frena a tus dos.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "h3h4",
+            "dtm": 0,
+            "fecha": "2026-10-07"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jeremy Silman — El curso de finales completo (Siles Press, 2007)",
+          "capitulo": "Parte Tres (ELO 1200-1399): «La congelación profunda (cuando un peón mata a dos)»"
+        }
+      ]
+    },
+    {
+      "id": "dos-alfiles",
+      "titulo": "Mate con dos alfiles",
+      "nivel": 3,
+      "explicacion": [
+        "Los dos alfiles juntos forman una pared que el rey no puede cruzar: colocados uno al lado del otro, cortan dos diagonales vecinas. Con esa pared se empuja al rey rival hacia la banda y después a un rincón, donde se da el mate.",
+        "El rey propio acompaña a los alfiles desde cerca. Como en todos los mates básicos, el peligro es el ahogado: cuando el rey rival tiene pocas casillas, cada jugada de espera tiene que dejarle al menos una."
+      ],
+      "ideas": [
+        "Alfiles uno al lado del otro: la pared.",
+        "Rincón cualquiera: con dos alfiles sirven los cuatro."
+      ],
+      "posiciones": [
+        {
+          "id": "mate-aa",
+          "fen": "8/8/8/4k3/8/8/8/2B1KB2 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 35,
+          "consigna": "Dá mate con los dos alfiles.",
+          "pista": "Armá la pared con los alfiles en casillas vecinas y achicá el espacio del rey negro de a una diagonal.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "c1b2",
+            "dtm": 33,
+            "fecha": "2026-10-07"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jeremy Silman — El curso de finales completo (Siles Press, 2007)",
+          "capitulo": "Parte Cinco (ELO 1600-1799): «Dos Alfiles contra el Rey»"
+        }
+      ]
     }
   ]
 }
