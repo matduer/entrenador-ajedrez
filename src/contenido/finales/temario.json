@@ -1308,6 +1308,44 @@
           "capitulo": "Parte Seis (ELO 1800-1999): «“Lucena” con un peón de Torre»"
         }
       ]
+    },
+    {
+      "id": "torre-dos-peones",
+      "titulo": "Finales de torres: dos peones conectados contra torre",
+      "nivel": 4,
+      "explicacion": [
+        "Con dos peones conectados de más se gana casi siempre, pero hay que hacerlo con método: los peones avanzan juntos, defendiéndose entre sí, y el rey va pegado a ellos. Así los peones le sirven de escudo contra los jaques de la torre rival.",
+        "El plan de Silman: empujar al rey defensor hacia atrás con jaques de torre, llevar los peones a la sexta, traer el rey a la séptima y ofrecer el cambio de torres en la octava. El final de peones resultante se gana solo.",
+        "Con peones de caballo y de torre hay trampas de ahogado: el peón de torre en séptima con el rey defensor en la esquina puede dejarlo sin jugadas, y entonces la torre defensora se entrega para ahogarse. Ese avance se hace solo cuando no queda ese recurso."
+      ],
+      "ideas": [
+        "Peones juntos y rey pegado a ellos: ningún peón sale solo.",
+        "Los peones tapan los jaques: el rey se esconde detrás de ellos.",
+        "Antes de llevar un peón de torre a la séptima, mirá si el rival queda ahogado."
+      ],
+      "posiciones": [
+        {
+          "id": "peones-de-escudo",
+          "fen": "8/8/5k2/3R3P/8/6PK/8/5r2 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 45,
+          "consigna": "Ganá con los dos peones conectados.",
+          "pista": "Rg4, y Td6+ para echar al rey negro. Después, peones juntos con el rey pegado: los jaques se tapan con un peón.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "h3g4",
+            "dtm": 59,
+            "fecha": "2026-10-07"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jeremy Silman — El curso de finales completo (Siles Press, 2007)",
+          "capitulo": "Parte Cinco (ELO 1600-1799): «Torre y dos Peones contra Torre conectados»"
+        }
+      ]
     }
   ]
 }
