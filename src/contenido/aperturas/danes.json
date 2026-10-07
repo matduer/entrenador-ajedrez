@@ -62,9 +62,16 @@
     },
     "e2e4 e7e5 d2d4 e5d4 c2c3 d4c3 f1c4 c3b2 c1b2 g8f6": {
       "porQue": "Desarrolla y prepara ...d5 para devolver material."
+    },
+    "e2e4 e7e5 d2d4 e5d4 c2c3 d7d5 e4d5 d8d5 c3d4 b8c6 g1f3": {
+      "porQue": "Una posición tipo Escocesa: el negro iguala con comodidad. Por eso ...d5 es la forma más simple de neutralizar el gambito."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Other 1 e4 e5 Openings», sección «Centre Game» (Danish Gambit)"
+    },
     {
       "titulo": "Danish Gambit (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Danish_Gambit",
@@ -124,6 +131,10 @@
       "e2e4 e7e5 d2d4 e5d4 c2c3 d4c3 f1c4 c3b2 c1b2 g8f6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 d2d4 e5d4 c2c3 d7d5 e4d5 d8d5 c3d4 b8c6 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
       }
     }
   }

@@ -72,9 +72,33 @@
           "texto": "Cxd4 exd4 Dxd4 y la dama blanca queda centralizada."
         }
       ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1b5 f8b4 e1g1 e8g8 d2d3 d7d6 c1g5 b4c3": {
+      "porQue": "Elimina el caballo antes de que salte a d5; los peones doblados blancos le quitan juego en el flanco de dama."
+    },
+    "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1b5 c6d4 b5a4": {
+      "porQue": "La retirada habitual en la práctica: mantiene el alfil en la diagonal. Stockfish prefiere simplificar con Cxd4.",
+      "inferior": true
+    },
+    "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1b5 c6d4 b5a4 f8c5": {
+      "porQue": "Variante Rubinstein: desarrolla sin preocuparse por e5. Stockfish prefiere ...c6, más sólido.",
+      "inferior": true
+    },
+    "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 d2d4 e5d4 c3d5": {
+      "porQue": "Gambito Belgrado: evita la clavada ...Ab4 a costa de complicaciones muy agudas."
+    },
+    "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 g2g3": {
+      "porQue": "El enfoque moderno: fianchetto, inspirado en la Vienesa con g3."
+    },
+    "e2e4 e7e5 g1f3 b8c6 b1c3 f8c5 f3e5": {
+      "porQue": "El truco de la horquilla: si ...Cxe5, d4 recupera la pieza con un centro ideal."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Four Knights Game»"
+    },
     {
       "titulo": "Four Knights Game (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Four_Knights_Game",
@@ -142,6 +166,30 @@
       "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 d2d4 c6d4 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 9 puntos de chances: −0,1 → −1,1. Refutación: Cxd4 exd4 Dxd4 d6 Af4 Ae7"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1b5 f8b4 e1g1 e8g8 d2d3 d7d6 c1g5 b4c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1b5 c6d4 b5a4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Cxd4: +0,3 contra −0,5 (marcada como inferior pero jugable)"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1b5 c6d4 b5a4 f8c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere c6: +0,5 contra −0,0 (marcada como inferior pero jugable)"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 d2d4 e5d4 c3d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 g2g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 f8c5 f3e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
       }
     }
   }

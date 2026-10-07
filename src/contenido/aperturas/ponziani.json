@@ -60,9 +60,16 @@
     },
     "e2e4 e7e5 g1f3 b8c6 c2c3 g8f6 d2d4 f6e4": {
       "porQue": "También bueno: toma el peón central y el juego se abre enseguida."
+    },
+    "e2e4 e7e5 g1f3 b8c6 c2c3 g8f6 d2d4 f6e4 d4d5": {
+      "porQue": "Gana espacio con tiempo: el caballo de c6 tiene que moverse."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Other 1 e4 e5 Openings», sección «Ponziani Opening»"
+    },
     {
       "titulo": "Ponziani Opening (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Ponziani_Opening",
@@ -118,6 +125,10 @@
       "e2e4 e7e5 g1f3 b8c6 c2c3 g8f6 d2d4 f6e4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 c2c3 g8f6 d2d4 f6e4 d4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
       }
     }
   }

@@ -73,9 +73,41 @@
           "texto": "La trampa: Dh4+ g3 Dxe4+ y la dama negra gana la torre de h1."
         }
       ]
+    },
+    "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 h2h4": {
+      "porQue": "Ataca la cadena de peones antes de que el negro la refuerce con ...h6."
+    },
+    "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 h2h4 g5g4 f3e5": {
+      "porQue": "Gambito Kieseritzky: el caballo se instala en e5."
+    },
+    "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 f1c4": {
+      "porQue": "Prepara el Gambito Muzio (si ...g4, enroque y entrega del caballo). Muy agudo; Stockfish prefiere d4.",
+      "inferior": true
+    },
+    "e2e4 e7e5 f2f4 e5f4 g1f3 d7d5": {
+      "porQue": "Variante Moderna: lucha por el centro sin debilitar el flanco de rey."
+    },
+    "e2e4 e7e5 f2f4 e5f4 g1f3 d7d6": {
+      "porQue": "Defensa Fischer: prepara ...g5 sin permitir Ce5."
+    },
+    "e2e4 e7e5 f2f4 e5f4 f1c4": {
+      "porQue": "Gambito de Alfil: si ...Dh4+, el rey va a f1 y el negro perdió tiempo con la dama."
+    },
+    "e2e4 e7e5 f2f4 d7d5": {
+      "porQue": "Contragambito Falkbeer: responde al gambito con otro."
+    },
+    "e2e4 e7e5 f2f4 d7d5 e4d5 c7c6": {
+      "porQue": "La interpretación moderna: entrega un peón por desarrollo, como en la Variante Moderna."
+    },
+    "e2e4 e7e5 f2f4 f8c5 g1f3 d7d6 c2c3": {
+      "porQue": "Prepara d4 para cerrar la diagonal del alfil y poder enrocar."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«King's Gambit»"
+    },
     {
       "titulo": "King's Gambit (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/King%27s_Gambit",
@@ -135,6 +167,42 @@
       "e2e4 e7e5 f2f4 f8c5 f4e5 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 40 puntos de chances: +0,1 → −5,8. Refutación: Dh4+ g3 Dxe4+ De2 Dxh1 d4"
+      },
+      "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 h2h4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 h2h4 g5g4 f3e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 f1c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere d4: −0,5 contra −1,2 (marcada como inferior pero jugable)"
+      },
+      "e2e4 e7e5 f2f4 e5f4 g1f3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 f2f4 e5f4 g1f3 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 f2f4 e5f4 f1c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 f2f4 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 f2f4 d7d5 e4d5 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 f2f4 f8c5 g1f3 d7d6 c2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
       }
     }
   }

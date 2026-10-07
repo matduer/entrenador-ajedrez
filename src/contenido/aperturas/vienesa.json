@@ -67,9 +67,28 @@
           "texto": "Prematuro: exd5 y el negro no recupera el peón."
         }
       ]
+    },
+    "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 f4e5 f6e4": {
+      "porQue": "El caballo en e4 es la pieza clave: las blancas tienen que desalojarlo."
+    },
+    "e2e4 e7e5 b1c3 g8f6 f1c4 f6e4 d1h5": {
+      "porQue": "Ataca f7 y el caballo de e4 a la vez."
+    },
+    "e2e4 e7e5 b1c3 g8f6 f1c4 f6e4 d1h5 e4d6 c4b3": {
+      "porQue": "Entrega un peón para mantener el ataque: lleva a la caótica variante \"Frankenstein-Drácula\"."
+    },
+    "e2e4 e7e5 b1c3 g8f6 g2g3": {
+      "porQue": "El plan moderno: fianchetto y, más adelante, f4."
+    },
+    "e2e4 e7e5 b1c3 b8c6 f2f4 e5f4 g1f3 g7g5": {
+      "porQue": "Como en el Gambito de Rey Clásico: defiende f4."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Other 1 e4 e5 Openings», sección «Vienna Game»"
+    },
     {
       "titulo": "Vienna Game (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Vienna_Game",
@@ -129,6 +148,26 @@
       "e2e4 e7e5 b1c3 g8f6 f1c4 d7d5 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 10 puntos de chances: +0,1 → −1,0. Refutación: exd5 Ad6 d3 O-O Cf3 h6"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 f4e5 f6e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f1c4 f6e4 d1h5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f1c4 f6e4 d1h5 e4d6 c4b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6 g2g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 b8c6 f2f4 e5f4 g1f3 g7g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
       }
     }
   }

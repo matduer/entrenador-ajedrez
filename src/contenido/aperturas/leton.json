@@ -20,7 +20,12 @@
     "Dama blanca: h5, aprovechando la diagonal.",
     "Dama negra: f6, defendiendo f5."
   ],
-  "trampas": [],
+  "trampas": [
+    {
+      "jugadas": "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 e5c4 f5e4 b1c3 f6g6 d2d3 e4d3 f1d3 g6g2 d1h5",
+      "texto": "6...exd3? 7.Axd3 Dxg2?? 8.Dh5+: el rey negro queda expuesto y las blancas ganan."
+    }
+  ],
   "notas": {
     "e2e4 e7e5 g1f3 f7f5 f3e5": {
       "porQue": "Lo mejor: toma e5 y amenaza Dh5+.",
@@ -63,9 +68,22 @@
           "texto": "Cc3 y el negro no tiene compensación."
         }
       ]
+    },
+    "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 e5c4": {
+      "porQue": "El caballo se retira con tiempo y deja libre el peón de d."
+    },
+    "e2e4 e7e5 g1f3 f7f5 e4f5 e5e4 f3e5 g8f6 f1e2": {
+      "porQue": "Tomar el peón también es peligroso para el negro: su peón de e4 queda muy expuesto."
+    },
+    "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 e5c4 f5e4 b1c3 f6g6 d2d3": {
+      "porQue": "Abre líneas aprovechando la ventaja de desarrollo."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Other 1 e4 e5 Openings», sección «Latvian Gambit»"
+    },
     {
       "titulo": "Latvian Gambit (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Latvian_Gambit",
@@ -121,6 +139,18 @@
       "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 d2d4 b8c6 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 8 puntos de chances: −1,5 → −2,5. Refutación: Cc3 Ab4 Ad2 Cxd4 Cd3 Ad6"
+      },
+      "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 e5c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 f7f5 e4f5 e5e4 f3e5 g8f6 f1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,9 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 e5c4 f5e4 b1c3 f6g6 d2d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,9 para el bando que mueve"
       }
     }
   }
