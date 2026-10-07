@@ -2,6 +2,8 @@
  * Verifica las posiciones del temario de finales (src/contenido/finales/temario.json) contra las
  * tablebases de Lichess (resultado exacto con hasta 7 piezas): el objetivo de cada posición
  * ("ganar" o "tablas", para el bando que mueve) tiene que coincidir con el resultado teórico.
+ * Con más de 7 piezas no hay tablebase: se usa Stockfish nativo a profundidad 30 y se exige
+ * +3 o más (o mate) para "ganar" y menos de 0,5 en valor absoluto para "tablas".
  * Guarda la mejor jugada y la distancia en el JSON. Termina con código 1 si algo no coincide.
  *
  * Uso: node scripts/verificar-finales.ts            (verifica el temario)
@@ -9,6 +11,10 @@
  */
 import { readFileSync, writeFileSync } from 'node:fs'
 import type { Temario } from '../src/lib/finales/tipos.ts'
+import { MotorNativo } from './lib-motor.ts'
+
+const piezas = (fen: string) => fen.split(' ')[0].replace(/[^a-z]/gi, '').length
+let motor: MotorNativo | undefined
 
 const RUTA = 'src/contenido/finales/temario.json'
 const espera = (ms: number) => new Promise((r) => setTimeout(r, ms))
@@ -47,6 +53,17 @@ const temario: Temario = JSON.parse(readFileSync(RUTA, 'utf8'))
 let fallas = 0
 for (const tema of temario.temas) {
   for (const p of tema.posiciones) {
+    if (piezas(p.fen) > 7) {
+      motor ??= new MotorNativo(30)
+      const a = await motor.analizar(p.fen)
+      const ev = a.ev.mate !== undefined ? (a.ev.mate > 0 ? 10000 : -10000) : (a.ev.cp ?? 0)
+      const ok = p.objetivo === 'ganar' ? ev >= 300 : Math.abs(ev) < 50
+      const texto = a.ev.mate !== undefined ? `mate en ${a.ev.mate}` : (ev / 100).toFixed(2)
+      p.verificacion = { ok, resultado: `stockfish ${texto}`, mejor: a.mejor, fecha: new Date().toISOString().slice(0, 10) }
+      console.log(`${ok ? '✓' : '✗'} ${tema.id}/${p.id}: objetivo ${p.objetivo}, Stockfish prof. 30 ${texto}, mejor ${a.mejor}`)
+      if (!ok) fallas++
+      continue
+    }
     const r = await consultar(p.fen)
     const esperado = p.objetivo === 'ganar' ? ['win'] : ['draw', 'cursed-win', 'blessed-loss']
     const ok = esperado.includes(r.category)
@@ -62,6 +79,7 @@ for (const tema of temario.temas) {
     await espera(1100)
   }
 }
+motor?.cerrar()
 writeFileSync(RUTA, JSON.stringify(temario, null, 2) + '\n')
 console.log(fallas ? `${fallas} posición(es) no coinciden con su objetivo.` : 'Todas las posiciones verificadas.')
 process.exit(fallas ? 1 : 0)
