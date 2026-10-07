@@ -1,0 +1,189 @@
+{
+  "id": "alekhine",
+  "nombre": "Defensa Alekhine",
+  "raiz": "e2e4 g8f6",
+  "resumen": "Una provocación: el negro ataca e4 con el caballo para que las blancas avancen sus peones y después atacarlos. Si las blancas se extienden demasiado, el centro queda débil; si juegan con moderación, tienen una ventaja de espacio cómoda.",
+  "planesBlancas": [
+    "Variante Moderna (d4 y Cf3): espacio sin extenderse demasiado.",
+    "Ataque de los cuatro peones (c4, d4, e5, f4): máxima ambición, con riesgo de que el centro se derrumbe.",
+    "Variante del Cambio (exd6): una estructura más simple con algo de espacio."
+  ],
+  "planesNegras": [
+    "Atacar el centro avanzado con ...d6, ...Cc6, ...Ag4 (contra el defensor de d4) y a veces ...f6.",
+    "Fianchetto con ...g6 y ...Ag7 en las líneas tranquilas."
+  ],
+  "estructura": "Peones blancos avanzados en e5 y d4 (y a veces c4 y f4) contra un negro con piezas activas que los presionan desde atrás.",
+  "rupturas": [
+    "...d6 y ...c5 del negro contra la cadena.",
+    "c4-c5 y f4-f5 de las blancas para ganar más espacio."
+  ],
+  "piezas": [
+    "Caballo negro: d5 y después b6, donde molesta c4 y d5.",
+    "Alfil negro de c8: g4, contra el caballo de f3 que defiende d4.",
+    "Peones blancos: el centro avanzado es la fuerza y la debilidad."
+  ],
+  "trampas": [],
+  "notas": {
+    "e2e4 g8f6": {
+      "porQue": "Provoca el avance del peón para atacarlo después.",
+      "inferior": true
+    },
+    "e2e4 g8f6 e4e5": {
+      "porQue": "Acepta el desafío: gana espacio echando al caballo."
+    },
+    "e2e4 g8f6 e4e5 f6d5": {
+      "porQue": "El caballo se centraliza: desde d5 puede ir a b6 si lo echan con c4.",
+      "porQueNo": [
+        {
+          "uci": "f6e4",
+          "texto": "En e4 el caballo queda sin retirada segura: d3 y lo persiguen."
+        },
+        {
+          "uci": "b8c6",
+          "texto": "Deja el caballo de f6 atacado: exf6."
+        }
+      ]
+    },
+    "e2e4 g8f6 e4e5 f6d5 d2d4": {
+      "porQue": "Centro sólido con dos peones."
+    },
+    "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6": {
+      "porQue": "Ataca el peón de e5 enseguida: es el plan de la Alekhine.",
+      "porQueNo": [
+        {
+          "uci": "c7c5",
+          "texto": "dxc5 y el negro no recupera el peón con comodidad."
+        },
+        {
+          "uci": "d5b4",
+          "texto": "El caballo se va lejos sin hacer nada: a3 lo echa."
+        }
+      ]
+    },
+    "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 g1f3": {
+      "porQue": "Variante Moderna: defiende e5 sin extenderse."
+    },
+    "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 g1f3 g7g6": {
+      "porQue": "Fianchetto: el alfil de g7 va a presionar e5 y d4 desde lejos.",
+      "porQueNo": [
+        {
+          "uci": "b8d7",
+          "texto": "c4 echa al caballo de d5 y e6 aparece con fuerza contra f7."
+        }
+      ]
+    },
+    "e2e4 g8f6 e4e5 f6d5 c2c4": {
+      "porQue": "Echa al caballo y gana más espacio."
+    },
+    "e2e4 g8f6 e4e5 f6d5 c2c4 d5b6": {
+      "porQue": "La casilla del caballo: desde b6 presiona c4 y d5."
+    },
+    "e2e4 g8f6 e4e5 f6d5 c2c4 d5b6 d2d4": {
+      "porQue": "Completa el gran centro."
+    },
+    "e2e4 g8f6 e4e5 f6d5 c2c4 d5b6 d2d4 d7d6": {
+      "porQue": "Ataca e5: el centro blanco empieza a necesitar defensa.",
+      "porQueNo": [
+        {
+          "uci": "b8c6",
+          "texto": "d5 echa al caballo y c5 deja al otro sin casillas: el negro pierde material."
+        },
+        {
+          "uci": "h7h6",
+          "texto": "Lento: d5 y d6 encierran al negro."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Alekhine's Defence (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Alekhine%27s_Defence",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere e5: −0,3 contra −0,9 (marcada como inferior pero jugable)"
+      },
+      "e2e4 g8f6 e4e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,9 para el bando que mueve"
+      },
+      "e2e4 g8f6 e4e5 f6d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 g8f6 e4e5 f6e4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,6 → −1,5. Refutación: d4 f6 f3 Cg5 f4 Cf7"
+      },
+      "e2e4 g8f6 e4e5 b8c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 31 puntos de chances: −0,6 → −5,1. Refutación: exf6 e5 fxg7 Axg7 c3 d5"
+      },
+      "e2e4 g8f6 e4e5 f6d5 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 g8f6 e4e5 f6d5 d2d4 c7c5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,7 → −1,2. Refutación: dxc5 e6 c4 Ce7 Cc3 Cg6"
+      },
+      "e2e4 g8f6 e4e5 f6d5 d2d4 d5b4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: −0,7 → −1,8. Refutación: a3 C4c6 Ae3 e6 Cc3 d5"
+      },
+      "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 g1f3 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 g1f3 b8d7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,5 → −1,5. Refutación: c4 Cb4 e6 fxe6 a3 Cc6"
+      },
+      "e2e4 g8f6 e4e5 f6d5 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "e2e4 g8f6 e4e5 f6d5 c2c4 d5b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "e2e4 g8f6 e4e5 f6d5 c2c4 d5b6 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 g8f6 e4e5 f6d5 c2c4 d5b6 d2d4 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "e2e4 g8f6 e4e5 f6d5 c2c4 d5b6 d2d4 b8c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 15 puntos de chances: −0,8 → −2,6. Refutación: d5 Cxe5 c5 Cxd5 Dxd5 Cc6"
+      },
+      "e2e4 g8f6 e4e5 f6d5 c2c4 d5b6 d2d4 h7h6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 15 puntos de chances: −0,8 → −2,5. Refutación: d5 e6 d6 Cc6 Cf3 g5"
+      }
+    }
+  }
+}

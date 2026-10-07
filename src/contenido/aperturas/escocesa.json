@@ -1,0 +1,158 @@
+{
+  "id": "escocesa",
+  "nombre": "Apertura Escocesa",
+  "raiz": "e2e4 e7e5 g1f3 b8c6 d2d4",
+  "resumen": "Las blancas abren el centro enseguida con 3.d4: tras ...exd4 y Cxd4 quedan con el peón de e4 contra el de d7 y un desarrollo libre. Es más directa que la Española: menos presión a largo plazo, pero juego claro y activo. El negro responde atacando el caballo de d4 o e4 (...Ac5, ...Cf6).",
+  "planesBlancas": [
+    "Centralizar el caballo en d4 y desarrollar rápido (Ae3, Cc3, Ad3, enroque).",
+    "Contra 4...Cf6, Cxc6 seguido de e5 para ganar espacio y echar al caballo.",
+    "Usar la ventaja de espacio que da el peón de e4."
+  ],
+  "planesNegras": [
+    "Atacar e4 o el caballo de d4 para ganar tiempo: ...Cf6 o ...Ac5.",
+    "Tras Cxc6 bxc6, usar los peones del centro (...d5) y la columna b.",
+    "Desarrollo rápido y enroque: la estructura es sólida."
+  ],
+  "estructura": "Peón blanco en e4 contra el negro en d7 (o d6): las blancas tienen más espacio en el centro. Tras Cxc6 bxc6, el negro queda con peones en c6 y c7 pero con la columna b y la posibilidad de ...d5.",
+  "rupturas": [
+    "e5 de las blancas para echar al caballo de f6.",
+    "...d5 del negro para liberar el juego."
+  ],
+  "piezas": [
+    "Caballo blanco: d4, centralizado.",
+    "Alfil negro de f8: c5 (atacando d4) o b4.",
+    "Dama negra: f6 en algunas líneas, sobre d4 y f2."
+  ],
+  "trampas": [],
+  "notas": {
+    "e2e4 e7e5 g1f3 b8c6 d2d4": {
+      "porQue": "Abre el centro enseguida: las blancas buscan juego libre y espacio en vez de la presión lenta de la Española."
+    },
+    "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4": {
+      "porQue": "Lo natural: el peón de e5 estaba atacado dos veces.",
+      "porQueNo": [
+        {
+          "uci": "d7d6",
+          "texto": "d5 echa al caballo y las blancas ganan espacio con tiempo."
+        },
+        {
+          "uci": "g8f6",
+          "texto": "d5 y el caballo de c6 tiene que irse; después cae el peón de e5."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4": {
+      "porQue": "El caballo retoma centralizado."
+    },
+    "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 g8f6": {
+      "porQue": "Ataca e4: obliga a las blancas a decidir cómo defenderlo (Cc3, o Cxc6 y e5).",
+      "porQueNo": [
+        {
+          "uci": "d8h4",
+          "texto": "La dama sale demasiado pronto: Cc3 y Cb5 la usan para ganar tiempo."
+        },
+        {
+          "uci": "f8e7",
+          "texto": "Pasivo: no ataca nada y Cc3 deja a las blancas cómodas."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 g8f6 d4c6": {
+      "porQue": "Cambia caballos para jugar e5 sin que el caballo de c6 ataque ese peón."
+    },
+    "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 g8f6 d4c6 b7c6": {
+      "porQue": "Retoma hacia el centro: el peón de c6 apoya ...d5."
+    },
+    "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 f8c5": {
+      "porQue": "Variante Clásica: el alfil ataca el caballo de d4 y apunta a f2."
+    },
+    "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 f8c5 c1e3": {
+      "porQue": "Defiende d4 desarrollando (también se juegan Cb3 y Cxc6).",
+      "porQueNo": [
+        {
+          "uci": "d4f5",
+          "texto": "El caballo se aleja del centro: d5 y el negro toma la iniciativa."
+        },
+        {
+          "uci": "d4b5",
+          "texto": "Amenaza c7, pero Cf6 y el enroque dejan al caballo fuera de juego."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Scotch Game (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Scotch_Game",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 e7e5 g1f3 b8c6 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 d2d4 d7d6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,0 → −0,8. Refutación: d5 Cce7 c4 g6 c5 Ag7"
+      },
+      "e2e4 e7e5 g1f3 b8c6 d2d4 g8f6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 12 puntos de chances: −0,0 → −1,3. Refutación: d5 Cb8 Cxe5 De7 Cd3 Dxe4+"
+      },
+      "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 d8h4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,1 → −0,7. Refutación: Cc3 Ab4 Ae2 Dxe4 Cb5 Axc3+"
+      },
+      "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 f8e7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,1 → −0,6. Refutación: Cc3 Cf6 Af4 O-O e5 Ce8"
+      },
+      "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 g8f6 d4c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 g8f6 d4c6 b7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 f8c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 f8c5 c1e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 f8c5 d4f5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 4 puntos de chances: +0,2 → −0,3. Refutación: d5 Cxg7+ Rf8 Ch5 Dh4 Cg3"
+      },
+      "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 f8c5 d4b5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: +0,2 → −0,8. Refutación: Cf6 Cd2 a6 Cc3 O-O Ad3"
+      }
+    }
+  }
+}

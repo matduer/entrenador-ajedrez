@@ -1,0 +1,153 @@
+{
+  "id": "holandesa",
+  "nombre": "Defensa Holandesa",
+  "raiz": "d2d4 f7f5",
+  "resumen": "El negro controla e4 con el peón de f y busca juego en el flanco de rey. Es combativa pero debilita el rey negro (la diagonal e8-h5 y la casilla e6). Los sistemas principales son la Leningrado (...g6), el Stonewall (...d5, ...e6, ...c6) y la Clásica (...e6 y ...d6). Las blancas suelen responder con el fianchetto g3 y Ag2.",
+  "planesBlancas": [
+    "Fianchetto (g3, Ag2) para presionar e4 y la diagonal larga.",
+    "e4 en el momento justo para abrir el centro contra el rey negro.",
+    "Gambito Staunton (e4) como intento directo."
+  ],
+  "planesNegras": [
+    "Controlar e4 con piezas y peones.",
+    "Ataque en el flanco de rey con ...De8-h5 o ...g5 en algunos sistemas.",
+    "Stonewall: casillas fuertes en e4 para el caballo."
+  ],
+  "estructura": "Peón negro en f5; según el sistema, d5 y e6 (Stonewall) o d6 y g6 (Leningrado). Las blancas suelen tener c4, d4 y el alfil en g2.",
+  "rupturas": [
+    "e4 de las blancas.",
+    "...e5 del negro en la Leningrado y la Clásica."
+  ],
+  "piezas": [
+    "Alfil blanco de f1: g2, sobre e4 y la diagonal larga.",
+    "Caballo negro: f6 y después e4.",
+    "Alfil negro de c8: el problema del Stonewall, como en la Francesa."
+  ],
+  "trampas": [],
+  "notas": {
+    "d2d4 f7f5": {
+      "porQue": "Controla e4 desde el costado y prepara juego en el flanco de rey.",
+      "inferior": true
+    },
+    "d2d4 f7f5 g2g3": {
+      "porQue": "Prepara el fianchetto: el alfil en g2 presiona e4, la casilla que el negro quiere controlar."
+    },
+    "d2d4 f7f5 g2g3 g8f6": {
+      "porQue": "Desarrolla y suma control sobre e4.",
+      "porQueNo": [
+        {
+          "uci": "e7e5",
+          "texto": "Sin preparación: dxe5 y el negro no recupera el peón."
+        },
+        {
+          "uci": "c7c5",
+          "texto": "d5 gana espacio y el negro queda con el centro débil."
+        }
+      ]
+    },
+    "d2d4 f7f5 g2g3 g8f6 f1g2": {
+      "porQue": "Completa el fianchetto."
+    },
+    "d2d4 f7f5 g2g3 g8f6 f1g2 e7e6": {
+      "porQue": "Prepara ...d5 (Stonewall) o ...d6 (Clásica) y abre el alfil de f8.",
+      "porQueNo": [
+        {
+          "uci": "f6g4",
+          "texto": "El caballo se aleja de e4: e4 y las blancas toman el centro."
+        },
+        {
+          "uci": "e7e5",
+          "texto": "dxe5 Ce4 y el negro queda sin compensación por el peón."
+        }
+      ]
+    },
+    "d2d4 f7f5 e2e4": {
+      "porQue": "Gambito Staunton: entrega un peón para abrir el juego contra el rey negro.",
+      "inferior": true
+    },
+    "d2d4 f7f5 e2e4 f5e4": {
+      "porQue": "Aceptar es lo más fuerte: las blancas tienen que demostrar la compensación.",
+      "porQueNo": [
+        {
+          "uci": "d7d6",
+          "texto": "Cc3 y Cxe4 dejan a las blancas con el centro y mejor desarrollo."
+        },
+        {
+          "uci": "e7e6",
+          "texto": "exf5 exf5 y el rey negro queda expuesto en la columna e."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Dutch Defence (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Dutch_Defence",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "d2d4 f7f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "d2d4 f7f5 g2g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 f7f5 g2g3 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 f7f5 g2g3 e7e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 18 puntos de chances: −0,5 → −2,6. Refutación: dxe5 Cc6 Cf3 h6 Cc3 d6"
+      },
+      "d2d4 f7f5 g2g3 c7c5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 4 puntos de chances: −0,5 → −0,9. Refutación: d5 Cf6 Cc3 g6 Ch3 Ag7"
+      },
+      "d2d4 f7f5 g2g3 g8f6 f1g2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 f7f5 g2g3 g8f6 f1g2 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 f7f5 g2g3 g8f6 f1g2 f6g4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 17 puntos de chances: −0,5 → −2,5. Refutación: e4 g6 Cc3 c6 exf5 gxf5"
+      },
+      "d2d4 f7f5 g2g3 g8f6 f1g2 e7e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 18 puntos de chances: −0,5 → −2,6. Refutación: dxe5 Ce4 Cd2 d5 exd6 Cxd6"
+      },
+      "d2d4 f7f5 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Ag5: +0,6 contra +0,0 (marcada como inferior pero jugable)"
+      },
+      "d2d4 f7f5 e2e4 f5e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "d2d4 f7f5 e2e4 d7d6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: −0,0 → −1,2. Refutación: Cc3 Cf6 Ad3 Cxe4 Cxe4 fxe4"
+      },
+      "d2d4 f7f5 e2e4 e7e6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 16 puntos de chances: −0,0 → −1,9. Refutación: exf5 exf5 Ad3 Cf6 Cf3 Ce4"
+      }
+    }
+  }
+}

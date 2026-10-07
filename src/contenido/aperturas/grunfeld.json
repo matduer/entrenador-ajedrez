@@ -1,0 +1,176 @@
+{
+  "id": "grunfeld",
+  "nombre": "Defensa Grünfeld",
+  "raiz": "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5",
+  "resumen": "Defensa hipermoderna agresiva: el negro ataca c4 con ...d5 y, si las blancas cambian y arman un gran centro con e4, lo ataca desde los costados con el alfil de g7, ...c5 y ...Cc6. Es una lucha entre el centro blanco y la presión negra sobre d4.",
+  "planesBlancas": [
+    "Variante del Cambio: centro e4-d4 sostenido por c3, desarrollo con Ac4 o Ae3 y Tb1; a veces ataque en el flanco de rey.",
+    "Sistema ruso (Cf3 y Db3): presionar d5 y obligar a ...dxc4."
+  ],
+  "planesNegras": [
+    "Tras el cambio en c3, ...Ag7, ...c5, ...Cc6 y ...Ag4 contra d4.",
+    "Contra el centro, la presión de piezas es más importante que el material: a veces se sacrifica un peón por actividad."
+  ],
+  "estructura": "En la variante del Cambio, peones blancos en c3, d4 y e4 contra un negro sin peón en d: la columna c y la diagonal g7-a1 son el campo de batalla.",
+  "rupturas": [
+    "...c5 contra d4.",
+    "d5 de las blancas para ganar espacio, o e5 en algunos casos."
+  ],
+  "piezas": [
+    "Alfil negro de g7: la pieza clave, contra d4 y c3.",
+    "Caballo negro de b8: c6, sumando presión sobre d4.",
+    "Torre blanca: b1, en la columna b semiabierta."
+  ],
+  "trampas": [],
+  "notas": {
+    "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5": {
+      "porQue": "Ataca c4 y desafía el centro: es lo que distingue la Grünfeld de la India de Rey."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5": {
+      "porQue": "Variante del Cambio: las blancas cambian para armar un gran centro con e4.",
+      "porQueNo": [
+        {
+          "uci": "e2e4",
+          "texto": "e4 directo no funciona: dxe4 y las blancas no recuperan el peón con comodidad."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5": {
+      "porQue": "Recupera el peón con el caballo; el plan es cambiarlo después en c3.",
+      "porQueNo": [
+        {
+          "uci": "f8g7",
+          "texto": "Dejar el peón de d5 a las blancas: e4 y el negro queda con un peón menos y sin centro."
+        },
+        {
+          "uci": "c7c6",
+          "texto": "dxc6 y el negro no tiene compensación por el peón."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4": {
+      "porQue": "Echa al caballo con tiempo y arma el centro e4-d4."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3": {
+      "porQue": "Cambia caballos: el peón de c3 va a quedar como blanco del alfil de g7.",
+      "porQueNo": [
+        {
+          "uci": "d5b6",
+          "texto": "El caballo se aleja y las blancas consolidan el centro sin problemas."
+        },
+        {
+          "uci": "d5b4",
+          "texto": "Da4+ c6 y Dxb4: el caballo se pierde."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3 b2c3": {
+      "porQue": "Retoma hacia el centro: c3 sostiene d4."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3 b2c3 f8g7": {
+      "porQue": "El alfil apunta a c3 y d4: después vienen ...c5 y ...Cc6.",
+      "porQueNo": [
+        {
+          "uci": "e7e5",
+          "texto": "Abrir con ...e5 sin preparación: Cf3 y el centro blanco aguanta."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3 b2c3 f8g7 f1c4": {
+      "porQue": "El alfil apunta a f7 y prepara Ce2, para que el peón de f quede libre.",
+      "porQueNo": [
+        {
+          "uci": "d1f3",
+          "texto": "La dama en f3 no defiende nada útil: el negro enroca y ...c5 llega con fuerza."
+        },
+        {
+          "uci": "g1h3",
+          "texto": "Axh3 y las blancas quedan con la estructura del flanco de rey rota."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Grünfeld Defence (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Gr%C3%BCnfeld_Defence",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 e2e4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: +0,3 → −0,6. Refutación: dxe4 Cge2 Ag7 h3 O-O Ae3"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f8g7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 13 puntos de chances: −0,4 → −1,9. Refutación: e4 O-O Cf3 c6 dxc6 Cxc6"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 c7c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 17 puntos de chances: −0,4 → −2,4. Refutación: dxc6 bxc6 g3 Ag7 Ag2 O-O"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5b6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,3 → −1,2. Refutación: h3 Ag7 Cf3 O-O Ae3 f5"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5b4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 31 puntos de chances: −0,3 → −4,5. Refutación: Da4+ c6 Dxb4 e5 Db3 exd4"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3 b2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3 b2c3 f8g7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3 b2c3 e7e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,4 → −1,1. Refutación: Cf3 exd4 cxd4 Ag4 Tb1 Ag7"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3 b2c3 f8g7 f1c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3 b2c3 f8g7 d1f3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 13 puntos de chances: +0,3 → −1,2. Refutación: O-O De3 c5 Cf3 cxd4 Cxd4"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3 b2c3 f8g7 g1h3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 14 puntos de chances: +0,3 → −1,3. Refutación: c5 Tb1 O-O Cf4 Cc6 Ac4"
+      }
+    }
+  }
+}

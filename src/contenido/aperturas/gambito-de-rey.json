@@ -1,0 +1,141 @@
+{
+  "id": "gambito-de-rey",
+  "nombre": "Gambito de Rey",
+  "raiz": "e2e4 e7e5 f2f4",
+  "resumen": "Las blancas ofrecen el peón de f para desviar el peón negro de e5 y abrir la columna f contra f7. Es una de las aperturas más agudas: con buen juego el negro iguala, pero los errores se pagan enseguida. El negro puede aceptarlo (...exf4) o rehusarlo (...Ac5, ...d5).",
+  "planesBlancas": [
+    "Centro fuerte con d4 tras recuperar o ignorar el peón, desarrollo rápido y ataque sobre f7 por la columna f.",
+    "Contra ...g5, minar la cadena negra con h4."
+  ],
+  "planesNegras": [
+    "Aceptar y sostener el peón con ...g5, o devolverlo con ...d5 para desarrollarse.",
+    "Rehusar con ...Ac5, que impide el enroque blanco por un tiempo."
+  ],
+  "estructura": "Columna f abierta para las blancas; peones negros en f4 y g5 si el negro sostiene el gambito.",
+  "rupturas": [
+    "d4 y h4 de las blancas.",
+    "...d5 del negro."
+  ],
+  "piezas": [
+    "Alfil blanco de f1: c4 contra f7.",
+    "Torre blanca: f1, en la columna abierta.",
+    "Alfil negro de f8: c5 en el gambito rehusado, contra el enroque."
+  ],
+  "trampas": [
+    {
+      "jugadas": "e2e4 e7e5 f2f4 f8c5 f4e5 d8h4 g2g3 h4e4",
+      "texto": "Contra el gambito rehusado, tomar el peón con fxe5?? permite Dh4+: g3 Dxe4+ ataca el rey y la torre de h1 a la vez."
+    }
+  ],
+  "notas": {
+    "e2e4 e7e5 f2f4": {
+      "porQue": "Ofrece el peón de f para desviar el peón de e5 y abrir la columna f contra f7.",
+      "inferior": true
+    },
+    "e2e4 e7e5 f2f4 e5f4": {
+      "porQue": "Gambito aceptado: toma el peón y obliga a las blancas a demostrar la compensación.",
+      "porQueNo": [
+        {
+          "uci": "d8h4",
+          "texto": "El jaque no sirve: g3 y la dama tiene que retirarse habiendo perdido tiempo."
+        },
+        {
+          "uci": "d7d6",
+          "texto": "Pasivo: d3 o Cf3 y el negro queda sin ningún contrajuego."
+        }
+      ]
+    },
+    "e2e4 e7e5 f2f4 e5f4 g1f3": {
+      "porQue": "Impide ...Dh4+ y prepara d4."
+    },
+    "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5": {
+      "porQue": "Sostiene el peón de f4 y, si las blancas no hacen nada, sigue con ...g4.",
+      "porQueNo": [
+        {
+          "uci": "b8c6",
+          "texto": "d4 y d5 echan al caballo con tiempo: las blancas recuperan el centro."
+        },
+        {
+          "uci": "c7c6",
+          "texto": "Lento: d4 y las blancas tienen el centro con un desarrollo más rápido."
+        }
+      ]
+    },
+    "e2e4 e7e5 f2f4 f8c5": {
+      "porQue": "Gambito rehusado clásico: el alfil en c5 impide que las blancas enroquen corto por un tiempo y deja una trampa sobre e5.",
+      "inferior": true
+    },
+    "e2e4 e7e5 f2f4 f8c5 g1f3": {
+      "porQue": "Desarrolla y defiende contra ...Dh4+; recién después se puede pensar en fxe5.",
+      "porQueNo": [
+        {
+          "uci": "f4e5",
+          "texto": "La trampa: Dh4+ g3 Dxe4+ y la dama negra gana la torre de h1."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "King's Gambit (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/King%27s_Gambit",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 e7e5 f2f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Cf3: +0,3 contra −0,4 (marcada como inferior pero jugable)"
+      },
+      "e2e4 e7e5 f2f4 e5f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 f2f4 d8h4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: +0,4 → −0,8. Refutación: g3 De7 Cc3 exf4 d4 fxg3"
+      },
+      "e2e4 e7e5 f2f4 d7d6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,4 → −0,2. Refutación: d3 f5 Cf3 Cf6 Cc3 Cc6"
+      },
+      "e2e4 e7e5 f2f4 e5f4 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 f2f4 e5f4 g1f3 b8c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,5 → −0,2. Refutación: d4 g5 d5 g4 dxc6 gxf3"
+      },
+      "e2e4 e7e5 f2f4 e5f4 g1f3 c7c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,5 → −0,2. Refutación: d4 d5 exd5 Ad6 Cc3 Cf6"
+      },
+      "e2e4 e7e5 f2f4 f8c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere exf4: +0,4 contra −0,1 (marcada como inferior pero jugable)"
+      },
+      "e2e4 e7e5 f2f4 f8c5 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 f2f4 f8c5 f4e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 40 puntos de chances: +0,1 → −5,8. Refutación: Dh4+ g3 Dxe4+ De2 Dxh1 d4"
+      }
+    }
+  }
+}

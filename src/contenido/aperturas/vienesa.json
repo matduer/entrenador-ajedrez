@@ -1,0 +1,135 @@
+{
+  "id": "vienesa",
+  "nombre": "Partida Vienesa",
+  "raiz": "e2e4 e7e5 b1c3",
+  "resumen": "Las blancas desarrollan el caballo de dama antes que el de rey para dejar libre el peón de f: la idea original es jugar f4, un Gambito de Rey con una pieza más desarrollada. Hoy también se juega de forma tranquila con Ac4 o g3. Contra el gambito, la respuesta clave del negro es contraatacar en el centro con ...d5.",
+  "planesBlancas": [
+    "Gambito vienés (f4): abrir la columna f y atacar f7.",
+    "Con Ac4, presión sobre f7 y juego tranquilo con d3.",
+    "Controlar d5 con el caballo de c3."
+  ],
+  "planesNegras": [
+    "Contra f4, ...d5 enseguida: abrir el centro antes de que las blancas aprovechen la columna f.",
+    "Contra Ac4, la línea aguda ...Cxe4 o el desarrollo sólido con ...Ac5 o ...Cc6."
+  ],
+  "estructura": "Muy abierta en las líneas del gambito; con Ac4 y d3, estructura de Italiana tranquila.",
+  "rupturas": [
+    "f4 de las blancas.",
+    "...d5 del negro."
+  ],
+  "piezas": [
+    "Caballo blanco de b1: c3, dejando libre el peón de f.",
+    "Alfil blanco de f1: c4, sobre f7.",
+    "Caballo negro de f6: e4 en las líneas agudas."
+  ],
+  "trampas": [],
+  "notas": {
+    "e2e4 e7e5 b1c3": {
+      "porQue": "Desarrolla y deja libre el peón de f para un gambito con f4."
+    },
+    "e2e4 e7e5 b1c3 g8f6": {
+      "porQue": "Desarrollo natural que ataca e4.",
+      "porQueNo": [
+        {
+          "uci": "f8e7",
+          "texto": "Pasivo: d4 y las blancas ocupan el centro."
+        },
+        {
+          "uci": "c7c6",
+          "texto": "Lento: d4 y el negro queda sin espacio."
+        }
+      ]
+    },
+    "e2e4 e7e5 b1c3 g8f6 f2f4": {
+      "porQue": "Gambito vienés: abre la columna f y busca echar al caballo de f6 con e5."
+    },
+    "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5": {
+      "porQue": "La respuesta correcta: contraataca en el centro antes de que el gambito tome fuerza.",
+      "porQueNo": [
+        {
+          "uci": "e5f4",
+          "texto": "e5 echa al caballo a g8 y las blancas toman la iniciativa."
+        },
+        {
+          "uci": "b8c6",
+          "texto": "fxe5 y el negro no recupera el peón en buenas condiciones: el caballo de f6 tiene que moverse."
+        }
+      ]
+    },
+    "e2e4 e7e5 b1c3 g8f6 f1c4": {
+      "porQue": "El alfil apunta a f7. Juego más tranquilo que el gambito."
+    },
+    "e2e4 e7e5 b1c3 g8f6 f1c4 f6e4": {
+      "porQue": "La línea aguda: toma el peón aprovechando un golpe táctico (si Cxe4, ...d5 recupera la pieza).",
+      "porQueNo": [
+        {
+          "uci": "d7d5",
+          "texto": "Prematuro: exd5 y el negro no recupera el peón."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Vienna Game (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Vienna_Game",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 e7e5 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 f8e7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,2 → −0,7. Refutación: d4 d6 dxe5 dxe5 Dxd8+ Axd8"
+      },
+      "e2e4 e7e5 b1c3 c7c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 4 puntos de chances: −0,2 → −0,6. Refutación: d4 d6 Cf3 Dc7 Ac4 Cf6"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f2f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f2f4 e5f4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,2 → −0,5. Refutación: e5 Cg8 Cf3 d6 d4 dxe5"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f2f4 b8c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 17 puntos de chances: +0,2 → −1,7. Refutación: fxe5 Cxe5 d4 Cg6 e5 Cg8"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f1c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f1c4 f6e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f1c4 d7d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: +0,1 → −1,0. Refutación: exd5 Ad6 d3 O-O Cf3 h6"
+      }
+    }
+  }
+}
