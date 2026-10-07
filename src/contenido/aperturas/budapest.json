@@ -76,9 +76,32 @@
           "texto": "exd6 y el negro no tiene compensación por el peón."
         }
       ]
+    },
+    "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 e2e4": {
+      "porQue": "Variante Alekhine: devuelve el peón para armar un centro grande."
+    },
+    "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 e2e4 g4e5 f2f4": {
+      "porQue": "Gana espacio y echa al caballo; queda por ver si el centro es fuerte o débil."
+    },
+    "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 g1f3": {
+      "porQue": "Desarrollo simple: el negro recupera el peón con ...Ac5 y ...Cc6, pero no tiene mucho para atacar."
+    },
+    "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 c1f4 b8c6 g1f3 f8b4 b1d2 d8e7": {
+      "porQue": "Ataca e5 por tercera vez."
+    },
+    "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 c1f4 b8c6 g1f3 f8b4 b1c3": {
+      "porQue": "Conserva el peón aunque ...Axc3+ le doble los peones."
+    },
+    "d2d4 g8f6 c2c4 e7e5 d4e5 f6e4": {
+      "porQue": "Gambito Fajarowicz: no busca recuperar el peón sino crear amenazas sobre la diagonal e1-a5.",
+      "inferior": true
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Other 1 d4 Nf6 Openings», sección «Budapest Gambit»"
+    },
     {
       "titulo": "Budapest Gambit (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Budapest_Gambit",
@@ -142,6 +165,30 @@
       "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 c1f4 d7d6 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 6 puntos de chances: −0,5 → −1,2. Refutación: exd6 Df6 dxc7 Cc6 Dd2 Cxf2"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 e2e4 g4e5 f2f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 c1f4 b8c6 g1f3 f8b4 b1d2 d8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 c1f4 b8c6 g1f3 f8b4 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Cg4: −0,6 contra −1,1 (marcada como inferior pero jugable)"
       }
     }
   }

@@ -75,9 +75,19 @@
           "texto": "c3 y el alfil tiene que retroceder."
         }
       ]
+    },
+    "d2d4 g8f6 c1g5 d7d5 g5f6 e7f6": {
+      "porQue": "Retoma con el peón de e: columna e abierta y un bloque firme en el flanco de rey."
+    },
+    "d2d4 g8f6 c1g5 c7c5 g5f6 g7f6 d4d5 d8b6": {
+      "porQue": "Presiona b2: la idea típica contra el Trompowsky cuando el alfil ya no está en c1."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Other 1 d4 Nf6 Openings», sección «Trompowsky Attack»"
+    },
     {
       "titulo": "Trompowsky Attack (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Trompowsky_Attack",
@@ -149,6 +159,14 @@
       "d2d4 g8f6 c1g5 e7e6 e2e4 f8b4 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 6 puntos de chances: −0,1 → −0,8. Refutación: c3 Ae7 Ad3 d6 Cf3 Cbd7"
+      },
+      "d2d4 g8f6 c1g5 d7d5 g5f6 e7f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 c7c5 g5f6 g7f6 d4d5 d8b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
       }
     }
   }

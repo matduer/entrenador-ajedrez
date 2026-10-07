@@ -2,7 +2,7 @@
   "id": "holandesa",
   "nombre": "Defensa Holandesa",
   "raiz": "d2d4 f7f5",
-  "resumen": "El negro controla e4 con el peón de f y busca juego en el flanco de rey. Es combativa pero debilita el rey negro (la diagonal e8-h5 y la casilla e6). Los sistemas principales son la Leningrado (...g6), el Stonewall (...d5, ...e6, ...c6) y la Clásica (...e6 y ...d6). Las blancas suelen responder con el fianchetto g3 y Ag2.",
+  "resumen": "La Holandesa es a 1.d4 lo que la Siciliana a 1.e4: impide el centro ideal (aquí e4) sin buscar simetría ni cambios, y a cambio el negro se adueña de un flanco. Es una apertura para luchadores. Hay tres sistemas. El Stonewall (...d5, ...e6, ...c6) hace casi imposible e4, a cambio de dejar débil la casilla e5. La Clásica (...e6, ...Ae7, ...d6) busca ...De8-h5 o ...e5. La Leningrado (...g6, ...Ag7, ...d6) prepara ...e5 con el alfil apoyando desde g7. Contra todos, las blancas suelen hacer el fianchetto del rey.",
   "planesBlancas": [
     "Fianchetto (g3, Ag2) para presionar e4 y la diagonal larga.",
     "e4 en el momento justo para abrir el centro contra el rey negro.",
@@ -77,9 +77,34 @@
           "texto": "exf5 exf5 y el rey negro queda expuesto en la columna e."
         }
       ]
+    },
+    "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6": {
+      "porQue": "Leningrado: el alfil irá a g7 para apoyar la ruptura ...e5."
+    },
+    "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 d8e8": {
+      "porQue": "La dama apoya ...e5 y puede ir a h5 o f7 según convenga."
+    },
+    "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 c7c6": {
+      "porQue": "Protege b7 y d5 y le da a la dama la casilla a5."
+    },
+    "d2d4 f7f5 g2g3 g8f6 f1g2 e7e6 g1f3 d7d5": {
+      "porQue": "Stonewall: con peones en d5, e6 y f5, la ruptura e4 es casi imposible; a cambio, e5 queda débil."
+    },
+    "d2d4 f7f5 g2g3 g8f6 f1g2 e7e6 g1f3 d7d5 e1g1 f8d6": {
+      "porQue": "El Stonewall moderno: el alfil está más activo en d6 que en e7."
+    },
+    "d2d4 f7f5 g2g3 g8f6 f1g2 e7e6 g1f3 f8e7 e1g1 e8g8 c2c4 d7d6": {
+      "porQue": "Holandesa Clásica: estructura flexible; el negro prepara ...De8-h5 o ...e5."
+    },
+    "d2d4 f7f5 b1c3": {
+      "porQue": "Prepara e4 y obliga al negro a mostrar su plan."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Dutch Defence»"
+    },
     {
       "titulo": "Dutch Defence (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Dutch_Defence",
@@ -147,6 +172,34 @@
       "d2d4 f7f5 e2e4 e7e6 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 16 puntos de chances: −0,0 → −1,9. Refutación: exf5 exf5 Ad3 Cf6 Cf3 Ce4"
+      },
+      "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 d8e8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "d2d4 f7f5 g2g3 g8f6 f1g2 e7e6 g1f3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 f7f5 g2g3 g8f6 f1g2 e7e6 g1f3 d7d5 e1g1 f8d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 f7f5 g2g3 g8f6 f1g2 e7e6 g1f3 f8e7 e1g1 e8g8 c2c4 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "d2d4 f7f5 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
       }
     }
   }
