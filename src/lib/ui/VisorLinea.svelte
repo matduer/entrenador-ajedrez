@@ -14,9 +14,13 @@
     linea: Linea
     /** Informa la posición a mostrar en el tablero, la última jugada y la próxima. */
     alMover: (fen: string, ultima?: string, proxima?: string) => void
+    /** Comentario después de la media jugada n (1 = después de la primera jugada). */
+    comentarios?: Record<number, string>
+    /** Si arranca reproduciendo sola (las partidas largas, mejor que no). */
+    autoReproducir?: boolean
   }
 
-  let { linea, alMover }: Props = $props()
+  let { linea, alMover, comentarios, autoReproducir = true }: Props = $props()
 
   let fens = $derived.by(() => {
     const lista = [linea.fen]
@@ -53,7 +57,7 @@
   $effect(() => {
     void linea
     idx = 0
-    reproduciendo = true
+    reproduciendo = autoReproducir
     ir(0)
   })
 
@@ -76,10 +80,11 @@
   <div class="titulo">{linea.titulo}</div>
   <div class="jugadas">
     {#each etiquetas as e, i (i)}
-      <button class:actual={i === idx - 1} onclick={() => manual(i + 1)}>{e}</button>
+      <button class:actual={i === idx - 1} class:comentada={!!comentarios?.[i + 1]} onclick={() => manual(i + 1)}>{e}</button>
     {/each}
     {#if etiquetas.length === 0}<span class="vacio">Sin jugadas.</span>{/if}
   </div>
+  {#if comentarios?.[idx]}<p class="comentario">{comentarios[idx]}</p>{/if}
   <div class="controles">
     <button onclick={() => manual(0)} aria-label="Al principio">⏮</button>
     <button onclick={() => manual(idx - 1)} aria-label="Anterior">◀</button>
@@ -118,6 +123,15 @@
   .jugadas button.actual {
     background: var(--acento);
     color: var(--acento-texto);
+  }
+  .jugadas button.comentada {
+    text-decoration: underline dotted;
+  }
+  .comentario {
+    margin: 8px 0 0;
+    padding: 6px 8px;
+    border-left: 3px solid var(--acento);
+    background: var(--fondo);
   }
   .vacio {
     color: var(--texto-suave);

@@ -5,6 +5,7 @@
   import type { Partida } from '../lib/datos/tipos.ts'
   import { importarNuevas, type ResultadoImportacion } from '../lib/importar/importar.ts'
   import Estadisticas from './Estadisticas.svelte'
+  import PartidasLibros from './PartidasLibros.svelte'
 
   const POR_PAGINA = 30
   const NOMBRE_RITMO: Record<Partida['ritmo'], string> = {
@@ -31,7 +32,7 @@
   let mensaje = $state('')
   let resultados = $state<ResultadoImportacion[]>([])
   let ultimaImportacion = $state<number>()
-  let vista = $state<'estadisticas' | 'lista'>('estadisticas')
+  let vista = $state<'estadisticas' | 'lista' | 'libros'>('estadisticas')
   let version = $state(0) // sube cuando cambian los datos, para refrescar las estadísticas
 
   async function cargar() {
@@ -130,12 +131,17 @@
   {#if cola.error}<p class="aviso">Error del motor: {cola.error}</p>{/if}
 </section>
 
-{#if total > 0}
-  <div class="pestanas" role="tablist">
+<div class="pestanas" role="tablist">
+  {#if total > 0}
     <button role="tab" aria-selected={vista === 'estadisticas'} onclick={() => (vista = 'estadisticas')}>Estadísticas</button>
     <button role="tab" aria-selected={vista === 'lista'} onclick={() => (vista = 'lista')}>Partidas ({total})</button>
-  </div>
+  {/if}
+  <button role="tab" aria-selected={vista === 'libros'} onclick={() => (vista = 'libros')}>Partidas de libros</button>
+</div>
 
+{#if vista === 'libros'}
+  <PartidasLibros />
+{:else if total > 0}
   {#if vista === 'estadisticas'}
     <Estadisticas {version} />
   {:else}
