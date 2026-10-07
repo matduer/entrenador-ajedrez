@@ -111,9 +111,46 @@
           "texto": "La dama sale demasiado temprano: e3, d4 y d5 la usan como blanco."
         }
       ]
+    },
+    "c2c4 c7c5 b1c3 g7g6 g2g3 f8g7 f1g2 b8c6": {
+      "porQue": "Posición clave de la Simétrica: los dos refuerzan el centro desde el flanco y ninguno puede jugar d4/...d5 con éxito todavía."
+    },
+    "c2c4 c7c5 b1c3 g7g6 g2g3 f8g7 f1g2 b8c6 a2a3": {
+      "porQue": "Ataca en el flanco antes de terminar el desarrollo: Tb1 y b4."
+    },
+    "c2c4 c7c5 b1c3 g7g6 g2g3 f8g7 f1g2 b8c6 e2e4": {
+      "porQue": "Sistema Botvinnik: descarta ...d5 y prepara la expansión en los dos flancos (b4 o f4)."
+    },
+    "c2c4 c7c5 b1c3 g8f6 g2g3 d7d5 c4d5 f6d5 f1g2": {
+      "porQue": "El alfil presiona el caballo de d5 y, detrás, el peón de b7."
+    },
+    "c2c4 c7c5 b1c3 g8f6 g2g3 d7d5 c4d5 f6d5 f1g2 d5c7": {
+      "porQue": "Variante Rubinstein: refuerza d4 y prepara ...e5, una Maroczy con colores invertidos."
+    },
+    "c2c4 e7e5 b1c3 d7d6": {
+      "porQue": "Variante Smyslov: prepara ...e5 con más apoyo y se adelanta a d4."
+    },
+    "c2c4 e7e5 b1c3 f8b4": {
+      "porQue": "Si Cd5, el alfil se retira y ...c6 expulsa al caballo."
+    },
+    "c2c4 e7e5 b1c3 b8c6 g2g3 g7g6 f1g2 f8g7": {
+      "porQue": "Variante Cerrada: posición base. Las blancas juegan en el flanco de dama (Tb1 y b4) o en el centro (e3 o e4); el negro, en el flanco de rey."
+    },
+    "c2c4 e7e5 b1c3 g8f6 g1f3 b8c6 g2g3": {
+      "porQue": "La línea principal moderna de los Cuatro Caballos: no apura d4 y suma el alfil de g2 al centro."
+    },
+    "c2c4 e7e5 b1c3 g8f6 g1f3 b8c6 g2g3 d7d5": {
+      "porQue": "Un Dragón con colores invertidos: el tiempo de más está del lado blanco."
+    },
+    "c2c4 e7e5 b1c3 g8f6 g2g3 d7d5 c4d5 f6d5 f1g2 d5b6": {
+      "porQue": "Impide d4 y consolida el centro; el negro planea ...Ae7, ...O-O y ...f5."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Symmetrical English» y «Reversed Sicilian»"
+    },
     {
       "titulo": "English Opening (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/English_Opening",
@@ -217,6 +254,50 @@
       "c2c4 c7c5 b1c3 d8b6 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 6 puntos de chances: −0,3 → −0,9. Refutación: e3 g6 Cf3 Ag7 d4 d6"
+      },
+      "c2c4 c7c5 b1c3 g7g6 g2g3 f8g7 f1g2 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "c2c4 c7c5 b1c3 g7g6 g2g3 f8g7 f1g2 b8c6 a2a3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "c2c4 c7c5 b1c3 g7g6 g2g3 f8g7 f1g2 b8c6 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "c2c4 c7c5 b1c3 g8f6 g2g3 d7d5 c4d5 f6d5 f1g2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "c2c4 c7c5 b1c3 g8f6 g2g3 d7d5 c4d5 f6d5 f1g2 d5c7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "c2c4 e7e5 b1c3 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "c2c4 e7e5 b1c3 f8b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "c2c4 e7e5 b1c3 b8c6 g2g3 g7g6 f1g2 f8g7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "c2c4 e7e5 b1c3 g8f6 g1f3 b8c6 g2g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "c2c4 e7e5 b1c3 g8f6 g1f3 b8c6 g2g3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "c2c4 e7e5 b1c3 g8f6 g2g3 d7d5 c4d5 f6d5 f1g2 d5b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
       }
     }
   }

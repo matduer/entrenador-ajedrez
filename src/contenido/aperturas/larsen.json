@@ -54,9 +54,22 @@
           "texto": "Defiende e5 pero debilita el rey: d4 y el centro negro se resiente."
         }
       ]
+    },
+    "b2b3 e7e5 c1b2 b8c6 e2e3": {
+      "porQue": "Modesta en apariencia pero valiente: permite ...d5 para después atacar ese centro."
+    },
+    "b2b3 e7e5 c1b2 b8c6 e2e3 d7d5": {
+      "porQue": "Ocupa el centro: ahora le toca al blanco mostrar sus planes (f4, c4 o Cf3)."
+    },
+    "b2b3 e7e5 c1b2 d7d6": {
+      "porQue": "Esquema de India de Rey: el negro renuncia a ...d5."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Other Flank Openings», sección 1 b3"
+    },
     {
       "titulo": "Larsen's Opening (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Larsen's_Opening",
@@ -104,6 +117,18 @@
       "b2b3 e7e5 c1b2 f7f6 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 7 puntos de chances: +0,3 → −0,5. Refutación: e4 d5 exd5 Dxd5 Cc3 Dc5"
+      },
+      "b2b3 e7e5 c1b2 b8c6 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "b2b3 e7e5 c1b2 b8c6 e2e3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "b2b3 e7e5 c1b2 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
       }
     }
   }

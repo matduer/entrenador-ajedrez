@@ -50,9 +50,22 @@
           "texto": "Axe5 y el negro pierde el peón central."
         }
       ]
+    },
+    "b2b4 e7e5 c1b2 f8b4 b2e5 g8f6": {
+      "porQue": "Desarrollo rápido y sencillo a cambio del peón central."
+    },
+    "b2b4 e7e5 c1b2 d7d6": {
+      "porQue": "Sólida: el peón de e5 queda bien protegido."
+    },
+    "b2b4 e7e5 c1b2 f7f6": {
+      "porQue": "Otra forma sólida de sostener e5, a costa de debilitar un poco el flanco de rey."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Other Flank Openings», 1 b4"
+    },
     {
       "titulo": "Polish Opening (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Polish_Opening",
@@ -96,6 +109,18 @@
       "b2b4 e7e5 c1b2 c7c6 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 10 puntos de chances: +0,4 → −0,8. Refutación: Axe5 d5 Cf3 Cf6 a3 a5"
+      },
+      "b2b4 e7e5 c1b2 f8b4 b2e5 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "b2b4 e7e5 c1b2 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "b2b4 e7e5 c1b2 f7f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
       }
     }
   }

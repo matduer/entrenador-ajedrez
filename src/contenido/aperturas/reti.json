@@ -71,9 +71,37 @@
     },
     "g1f3 d7d5 c2c4 c7c6": {
       "porQue": "Sostiene d5 al estilo eslavo."
+    },
+    "g1f3 d7d5 c2c4 d5d4 g2g3": {
+      "porQue": "La forma más flexible contra la Benoni invertida: alfil a g2 y elegir después entre e3 y b4."
+    },
+    "g1f3 d7d5 c2c4 d5d4 b2b4": {
+      "porQue": "Rodea el peón de d4: b4 y Ab2 lo presionan desde el flanco."
+    },
+    "g1f3 d7d5 c2c4 c7c6 b2b3": {
+      "porQue": "Lo más simple: protege c4 de antemano, porque Da4+ y Dxc4 ya no es tan fácil."
+    },
+    "g1f3 d7d5 c2c4 c7c6 b2b3 g8f6 g2g3 c8f5": {
+      "porQue": "Variante Lasker (o Nueva York): esquema sólido y sin debilidades, de mucha maniobra."
+    },
+    "g1f3 d7d5 c2c4 c7c6 b2b3 g8f6 g2g3 c8g4": {
+      "porQue": "La idea de Capablanca: con el alfil en g4, d3 y e4 no ganan un tiempo sobre él."
+    },
+    "g1f3 d7d5 c2c4 d5c4": {
+      "porQue": "Al estilo del Gambito de Dama Aceptado: no busca quedarse con el peón sino adaptarse a cómo lo recupera el blanco."
+    },
+    "g1f3 d7d5 g2g3": {
+      "porQue": "Más flexible que 2.c4: deja abiertos c4, d4 y el Ataque Indio de Rey (d3 y e4)."
+    },
+    "g1f3 d7d5 b2b3": {
+      "porQue": "El esquema de Nimzowitsch: un solo plan de desarrollo, flanco puro."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Réti Opening»"
+    },
     {
       "titulo": "Réti Opening (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/R%C3%A9ti_Opening",
@@ -141,6 +169,38 @@
       "g1f3 d7d5 c2c4 c7c6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "g1f3 d7d5 c2c4 d5d4 g2g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "g1f3 d7d5 c2c4 d5d4 b2b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "g1f3 d7d5 c2c4 c7c6 b2b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "g1f3 d7d5 c2c4 c7c6 b2b3 g8f6 g2g3 c8f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "g1f3 d7d5 c2c4 c7c6 b2b3 g8f6 g2g3 c8g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "g1f3 d7d5 c2c4 d5c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "g1f3 d7d5 g2g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "g1f3 d7d5 b2b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
       }
     }
   }
