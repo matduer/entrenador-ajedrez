@@ -49,6 +49,14 @@
   let teoria = $derived(arbol ? continuaciones(arbol, fen) : [])
   let explicacion = $derived(explicacionPara(actual))
   let nota = $derived(notaPara(actual))
+  // Las explicaciones arrancan cerradas para poder pensar la posición antes de leerlas.
+  let abrirSiempre = $state(leerAbrirSiempre())
+  function leerAbrirSiempre(): boolean {
+    try { return localStorage.getItem('explorador-abrir-explicaciones') === 'si' } catch { return false }
+  }
+  $effect(() => {
+    try { localStorage.setItem('explorador-abrir-explicaciones', abrirSiempre ? 'si' : 'no') } catch { /* sin almacenamiento */ }
+  })
 
   const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
   let resultados = $derived.by((): Apertura[] => {
@@ -215,12 +223,17 @@
     {/if}
 
     {#if nota}
-      <section class="tarjeta">
-        <h2>¿Por qué {sanDeUci(posDesdeFen(fens[idx - 1]), linea[idx - 1])}?</h2>
-        <p>{nota.nota.porQue}</p>
-        {#if nota.nota.inferior}<p class="suave">Stockfish la considera algo inferior a la mejor jugada: es teoría reconocida y jugable, no la más precisa.</p>{/if}
-        <p class="aviso-contenido">{AVISO}</p>
-      </section>
+      {#key actual.join(' ')}
+        <details class="tarjeta desplegable" open={abrirSiempre}>
+          <summary><h2>¿Por qué {sanDeUci(posDesdeFen(fens[idx - 1]), linea[idx - 1])}?</h2></summary>
+          <p>{nota.nota.porQue}</p>
+          {#if nota.nota.inferior}<p class="suave">Stockfish la considera algo inferior a la mejor jugada: es teoría reconocida y jugable, no la más precisa.</p>{/if}
+          <p class="aviso-contenido">{AVISO}</p>
+        </details>
+      {/key}
+    {/if}
+    {#if nota || explicacion}
+      <label class="suave abrir-siempre"><input type="checkbox" bind:checked={abrirSiempre} /> Abrir las explicaciones sin tener que tocarlas</label>
     {/if}
 
     <section class="tarjeta">
@@ -234,7 +247,7 @@
                 <b>{san}</b>
                 <span class="suave">{[c.apertura && nombreEnEspanol(c.apertura), `${c.lineas} línea${c.lineas === 1 ? '' : 's'}`].filter(Boolean).join(' · ')}</span>
               </button>
-              {#if porQueNoPara(actual, c.uci)}<span class="etiqueta alerta-etiqueta">ojo</span>{/if}
+              {#if abrirSiempre && porQueNoPara(actual, c.uci)}<span class="etiqueta alerta-etiqueta">ojo</span>{/if}
             </li>
           {/each}
         </ul>
@@ -288,8 +301,8 @@
     {/if}
 
     {#if explicacion}
-      <section class="tarjeta">
-        <h2>Ideas: {explicacion.nombre}</h2>
+      <details class="tarjeta desplegable" open={abrirSiempre}>
+        <summary><h2>Ideas: {explicacion.nombre}</h2></summary>
         <p>{explicacion.resumen}</p>
         <details>
           <summary>Planes, estructura y trampas</summary>
@@ -319,7 +332,7 @@
           </ul>
         </details>
         <p class="aviso-contenido">{AVISO}</p>
-      </section>
+      </details>
     {/if}
 
     <section class="tarjeta">
@@ -336,6 +349,10 @@
 </div>
 
 <style>
+  .desplegable > summary { cursor: pointer; list-style: revert; }
+  .desplegable > summary h2 { display: inline; margin: 0; }
+  .desplegable[open] > summary { margin-bottom: 0.5rem; }
+  .abrir-siempre { display: flex; gap: 0.4rem; align-items: center; font-size: 0.85rem; }
   .explorador {
     display: grid;
     gap: 16px;
