@@ -15,7 +15,7 @@ import { MotorNativo } from './lib-motor.ts'
 const prefijo = (process.argv[2] ?? '').split(' ').filter(Boolean)
 const profundidad = Number(process.argv[3] ?? 16)
 const cantidad = Number(process.argv[4] ?? 40)
-const motor = new MotorNativo(profundidad)
+const motor = new MotorNativo(profundidad, 4)
 const fen = fensDeLinea(prefijo).at(-1)!
 const pos = posDesdeFen(fen)
 

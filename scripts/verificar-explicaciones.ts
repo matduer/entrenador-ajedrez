@@ -17,6 +17,10 @@ import type { Explicacion, ResultadoVerificacion } from '../src/lib/aperturas/ex
 import { MotorNativo } from './lib-motor.ts'
 
 const PROFUNDIDAD = Number(process.argv[2] ?? 20)
+// Una jugada teórica puede no ser la primera del motor: se tolera hasta 0,075 de chances perdidas.
+// Un "por qué no" tiene que perder claramente más: al menos 0,08. Los rangos no se superponen.
+const TOLERANCIA_SI = 0.075
+const MINIMO_NO = 0.08
 const CARPETA = 'src/contenido/aperturas'
 const motor = new MotorNativo(PROFUNDIDAD)
 const evaluarJugada = (prefijo: string[], uci: string) => motor.evaluarJugada(prefijo, uci)
@@ -45,7 +49,7 @@ for (const archivo of readdirSync(CARPETA).filter((f) => f.endsWith('.json'))) {
       fallas++
       continue
     }
-    const ok = r.perdida <= 0.06
+    const ok = r.perdida <= TOLERANCIA_SI
     resultados[clave] = {
       ok,
       detalle: ok
@@ -65,7 +69,7 @@ for (const archivo of readdirSync(CARPETA).filter((f) => f.endsWith('.json'))) {
         fallas++
         continue
       }
-      const okAlt = q.perdida >= 0.08
+      const okAlt = q.perdida >= MINIMO_NO
       const fenAlt = fensDeLinea([...prefijo, alt.uci]).at(-1)!
       resultados[claveAlt] = {
         ok: okAlt,

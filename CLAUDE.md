@@ -47,36 +47,56 @@ Contexto del jugador: `docs/contexto/analisis-partidas-avatargs.md` y `docs/cont
 
 ## Datos previos (no repetir el trabajo)
 
-- Partidas: `docs/contexto/partidas/*.pgn` (5.961 partidas Lichess + Chess.com hasta 2026-09-21). **Excluidas de git** (nombres de rivales).
-- Análisis Stockfish ya hecho: `D:\Documentos de Mati\Facultad\2025 - 1er cuatrimestre\Ajedrez\Claude Ajedrez\Claude outputs\Stockfish - instalar y analizar\`:
-  - `posiciones_completo.json` (posiciones) + `resultados_completo.jsonl` (10.058 líneas: `id`, `engine_bestmove`, `score_type`, `score_value`, `pv`). ~1.536 errores tácticos confirmados (≥150 cp).
-  - Ojo: la reorganización pendiente de `Facultad` mueve `2025 - 1er cuatrimestre\Ajedrez` a `2 - Docencia\Ajedrez`. **Verificar la ruta antes de usarla.** En la etapa 1 conviene copiar lo necesario a `datos-privados/` (excluido de git) y transformarlo con un script.
+- Partidas: `docs/contexto/partidas/*.pgn`. **Excluidas de git** (nombres de rivales). Son 5.790 partidas distintas (5.650 Lichess + 140 Chess.com): los tres PGN de Chess.com se superponen (290 entradas, 150 repetidas), así que el análisis previo que decía "290 de Chess.com" contó partidas dos veces.
+- Análisis Stockfish previo: `D:\Documentos de Mati\Facultad\2025 - 1er cuatrimestre\Ajedrez\Claude Ajedrez\Claude outputs\Stockfish - instalar y analizar\` (`posiciones_completo.json` + `resultados_completo.jsonl`, 10.059 posiciones con FEN + evaluación, **sin** decir de qué partida ni qué jugada). Ojo: la reorganización pendiente de `Facultad` mueve esa carpeta a `2 - Docencia\Ajedrez`; el script acepta la ruta como argumento.
+- **`datos-privados/analisis-previo.json`** (excluido de git, ~5 MB): el respaldo listo para importar en la app, generado por `npm run analisis-previo` y completado con `node scripts/completar-relojes.ts`. Contiene las 5.790 partidas (5.576 de Lichess con reloj completado desde la API), 1.460 errores (956 graves, 168 errores, 336 imprecisiones) ubicados en su partida, y los cursores de importación.
 
 ## Etapas
 
-0. ✅ Preparación: repo, esqueleto PWA, licencia, deploy, este archivo.
-1. Base + Stockfish offline + importación incremental (Lichess/Chess.com/PGN) + carga del análisis previo + detección de errores + ejercicios de táctica desde mis errores + FSRS + exportar/importar progreso.
-2. Mis partidas: estadísticas por apertura/color/fase + **reloj**.
-3. Aperturas: explorador de cualquier apertura, repertorio (sugerido desde lo que juego), práctica por niveles, FSRS, por qué sí / por qué no, primeras explicaciones.
-4. Táctica general: subconjunto de problemas de Lichess.
-5. Finales: temario + editor + finales mal jugados propios + tablebases online opcionales.
-6. Progreso y pulido.
+0. ✅ Preparación: repo, esqueleto PWA, licencia, deploy.
+1. ✅ Stockfish offline + importación incremental + análisis previo + errores + táctica desde mis errores + FSRS + respaldo.
+2. ✅ Estadísticas por apertura/color/fase + **reloj**.
+3. ✅ Aperturas: explorador, repertorio, práctica por niveles, FSRS, por qué sí / por qué no. Explicaciones escritas: Caro-Kann (hecha); Eslava en curso; faltan Francesa, 1.e4 e5, Siciliana, Gambito de Dama, India de Rey, Nimzoindia.
+4. ✅ Problemas de Lichess (4.550, CC0).
+5. ✅ Finales: temario verificado con tablebases, juego contra tablebase/Stockfish, finales propios, editor.
+6. ✅ Progreso.
+
+## Mapa del código
+
+- `src/lib/ajedrez/` — posiciones (chessops), evaluación (curva de chances de Lichess, umbrales 0,1/0,2/0,3), fase, detectores de temas y del motivo del error. Notación en español (`aEspanol`).
+- `src/lib/motor/motor.ts` — Stockfish en Web Workers: `motorFondo` (cola de análisis), `motorInteractivo` (ejercicios, verificaciones), `motorTablero` (análisis continuo del explorador, se corta y relanza).
+- `src/lib/datos/` — Dexie (`db.ts`, versión 2: partidas, errores, repasos, ajustes, repertorio, repasosLineas), tipos, normalización de PGN, respaldo (combina sin pisar progreso más nuevo; nunca incluye el token).
+- `src/lib/importar/` — Lichess (NDJSON en streaming) y Chess.com (archivos mensuales). Id de Chess.com = jugadores + hash de las jugadas (la fecha no sirve: la exportación web da la de inicio y la API la de fin).
+- `src/lib/analisis/` — `errores.ts` (arma un error a partir de dos evaluaciones, compartido con el script del análisis previo) y `cola.svelte.ts` (análisis de fondo).
+- `src/lib/repaso/repaso.ts` — FSRS para la tabla `repasos`, compartida por mis errores, problemas (`lichess-problema:`) y finales (`final:`, `final-propio:`); cada grupo tiene su límite diario.
+- `src/lib/aperturas/` — catálogo (dataset CC0 en `public/datos/aperturas.json`), árbol de teoría, explicaciones, repertorio, práctica/niveles, Masters en línea.
+- `src/lib/estadisticas/`, `src/lib/problemas/`, `src/lib/finales/`, `src/lib/progreso.ts`.
+- `src/contenido/aperturas/*.json`, `src/contenido/finales/temario.json` — contenido escrito y verificado.
+- `scripts/` — `preparar-analisis-previo.ts`, `completar-relojes.ts`, `preparar-aperturas.ts`, `preparar-problemas.ts`, `verificar-explicaciones.ts`, `verificar-finales.ts`, `explorar-posicion.ts`, `lib-motor.ts` (Stockfish nativo; ruta por `STOCKFISH`), `copiar-motor.mjs`.
+
+## Hallazgos verificados
+
+- El explorador de aperturas de Lichess (Masters y Lichess DB) **exige token** desde 2025: responde 401 sin él. Las tablebases (`tablebase.lichess.ovh`) y las APIs de partidas de Lichess y Chess.com siguen siendo públicas y aceptan CORS.
+- La base de problemas de Lichess usa zstd *seekable*: el descompresor de Node no acepta el frame saltable inicial (hay que saltear 12 bytes) y se detiene tras ~180.000 filas; alcanza para la selección.
+- Node 24 corre TypeScript con borrado de tipos: los imports llevan `.ts` y no se pueden usar parameter properties ni enums en código que corren los scripts.
+- chessground: ignora eventos simulados salvo `trustAllEvents` (activado solo en `DEV`), y guarda las medidas del tablero (por eso el `ResizeObserver`). Con la ventana minimizada el viewport mide 0 y no se puede probar el tablero: emular un tamaño con `resize_window`.
+- En PowerShell, el falso positivo "Remove-Item on system path" aparece con here-strings largos en `git commit -m`: escribir el mensaje a un archivo y usar `git commit -F`.
 
 ## Estado actual (2026-10-06)
 
-- Etapa 0 hecha: Vite + Svelte 5 + TS + vite-plugin-pwa; app con navegación de las 5 secciones (pantallas vacías "en construcción"), aviso de actualización y de modo offline, íconos PNG, tema claro/oscuro, workflow `.github/workflows/deploy.yml`. `npm run check` y `npm run build` sin errores.
-- Git y Node 24 LTS instalados con winget en esta máquina. En PowerShell, si `node`/`git` no se encuentran, refrescar el PATH: `$env:Path = [Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [Environment]::GetEnvironmentVariable('Path','User')`.
+- Publicada en https://matduer.github.io/entrenador-ajedrez/ (repo público `matduer/entrenador-ajedrez`, Pages con fuente "GitHub Actions"). Cada push a `main` publica.
+- Resumen de la etapa 0: https://claude.ai/code/artifact/5b9365d9-6bcd-4878-bc38-93eb32cf98e6
+- Git y Node 24 LTS instalados con winget. Si `node`/`git` no se encuentran en PowerShell: `$env:Path = [Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [Environment]::GetEnvironmentVariable('Path','User')`.
+- Push: credencial guardada en el Git Credential Manager. Si falla por "terminal prompts disabled", abrir una ventana aparte (`Start-Process powershell -NoExit`) con `$env:GCM_INTERACTIVE='auto'`.
 
-- Publicada en https://matduer.github.io/entrenador-ajedrez/ (repo público `matduer/entrenador-ajedrez`, Pages con fuente "GitHub Actions"). Primer deploy OK, service worker registrado.
-- Resumen de la etapa 0 (documento de Claude): https://claude.ai/code/artifact/5b9365d9-6bcd-4878-bc38-93eb32cf98e6
-- Push: la credencial de GitHub quedó guardada en el Git Credential Manager. Si un push desde la herramienta falla por "terminal prompts disabled", abrir una ventana aparte (`Start-Process powershell -NoExit`) con `$env:GCM_INTERACTIVE='auto'` para que el usuario inicie sesión.
+## Pendiente de decisión o acción del usuario (no resolver por cuenta propia)
 
-## Próximos pasos
-
-1. Etapa 1, previa aprobación del usuario.
+1. **Cargar su análisis previo en la app**: Ajustes → Importar respaldo → `datos-privados/analisis-previo.json` (en la compu). Para el celular: exportar respaldo en la compu e importarlo allá.
+2. **Token de Lichess** (opcional): para ver Masters en el explorador. Con el token se puede además generar un snapshot offline de frecuencias Masters para los niveles (script por hacer).
+3. Revisar el orden de las explicaciones de aperturas que siguen.
 
 ## Comandos
 
-- `npm run dev` — desarrollo en la compu (`http://localhost:5173`).
-- `npm run dev:red` — expone en la red local para probar en el celular por Wi-Fi (sin service worker: requiere HTTPS o localhost).
-- `npm run check` — chequeo de tipos. `npm run build` — build de producción en `dist/`.
+- `npm run dev` — desarrollo (`http://localhost:5173`). `npm run dev:red` — red local para el celular (sin service worker: requiere HTTPS o localhost).
+- `npm run check` — tipos (app y scripts). `npm run build` — build de producción.
+- `npm run analisis-previo`, `npm run aperturas`, `node scripts/preparar-problemas.ts`, `node scripts/verificar-explicaciones.ts [prof]`, `node scripts/verificar-finales.ts [FEN…]`, `node scripts/explorar-posicion.ts "<ucis>" [prof] [n]`.

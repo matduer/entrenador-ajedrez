@@ -25,12 +25,13 @@ export class MotorNativo {
   private listo: Promise<void>
   private profundidad: number
 
-  constructor(profundidad: number) {
+  /** Con un solo hilo, Stockfish da siempre el mismo resultado: necesario para verificaciones reproducibles. */
+  constructor(profundidad: number, hilos = 1) {
     this.profundidad = profundidad
     createInterface({ input: this.proc.stdout }).on('line', (l) => this.oyente?.(l))
     this.listo = this.esperar((l) => l === 'readyok')
     this.enviar('uci')
-    this.enviar('setoption name Threads value 4')
+    this.enviar(`setoption name Threads value ${hilos}`)
     this.enviar('setoption name Hash value 256')
     this.enviar('isready')
   }
