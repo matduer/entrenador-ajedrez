@@ -1,0 +1,149 @@
+{
+  "id": "siciliana-rossolimo",
+  "nombre": "Siciliana Rossolimo",
+  "raiz": "e2e4 c7c5 g1f3 b8c6 f1b5",
+  "resumen": "En lugar de abrir el juego con d4, las blancas sacan el alfil a b5 y amenazan cambiarlo por el caballo para doblar los peones del negro. Es una forma de evitar la teoría de las Sicilianas abiertas. El negro suele responder con el fianchetto (...g6) o con ...e6 y ...Cge7.",
+  "planesBlancas": [
+    "Axc6 para doblar peones y jugar contra ellos.",
+    "Enroque, Te1, c3 y d4."
+  ],
+  "planesNegras": [
+    "Fianchetto con ...g6 y ...Ag7.",
+    "Pareja de alfiles si las blancas cambian en c6."
+  ],
+  "estructura": "Si Axc6, peones negros doblados en c; el negro gana la pareja de alfiles.",
+  "rupturas": [
+    "d4 de las blancas.",
+    "...d5 o ...e5 del negro."
+  ],
+  "piezas": [
+    "Alfil blanco de f1: b5, para cambiarse por el caballo.",
+    "Alfil negro de f8: g7."
+  ],
+  "trampas": [],
+  "notas": {
+    "e2e4 c7c5 g1f3 b8c6 f1b5": {
+      "porQue": "Rossolimo: amenaza cambiar en c6 para doblarle peones al negro y evita las líneas abiertas.",
+      "porQueNo": [
+        {
+          "uci": "b2b4",
+          "texto": "...Cxb4: el gambito no da suficiente."
+        },
+        {
+          "uci": "f3g5",
+          "texto": "Mueve otra vez la misma pieza: ...Cf6 y el negro se desarrolla con tiempo."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6": {
+      "porQue": "Fianchetto: el alfil de g7 compensa si las blancas cambian en c6.",
+      "porQueNo": [
+        {
+          "uci": "c6a5",
+          "texto": "El caballo en el borde: enroque y Ae2, y el negro pierde tiempo."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 b8c6 f1b5 e7e6": {
+      "porQue": "La alternativa: prepara ...Cge7 para retomar en c6 con pieza."
+    },
+    "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 e1g1": {
+      "porQue": "Enroca antes de decidir si cambia en c6."
+    },
+    "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 e1g1 f8g7": {
+      "porQue": "Completa el fianchetto.",
+      "porQueNo": [
+        {
+          "uci": "d7d6",
+          "texto": "d4: el centro se abre cuando el negro todavía no enrocó."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 b5c6": {
+      "porQue": "Dobla los peones del negro a cambio de la pareja de alfiles."
+    },
+    "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 b5c6 d7c6": {
+      "porQue": "Retoma hacia afuera: abre la diagonal del alfil de c8 y la columna d.",
+      "porQueNo": [
+        {
+          "uci": "g8f6",
+          "texto": "Hay que recuperar la pieza: Aa4 y el alfil se salva."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 b5c6 b7c6": {
+      "porQue": "También bueno: retoma hacia el centro y prepara ...d5."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Sicilian Defence (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Sicilian_Defence",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 c7c5 g1f3 b8c6 f1b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 b2b4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,3 → −0,3. Refutación: Cxb4 c3 Cc6 d4 cxd4 cxd4"
+      },
+      "e2e4 c7c5 g1f3 b8c6 f3g5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: +0,3 → −0,6. Refutación: Cf6 Cc3 e6 f4 Ae7 Cf3"
+      },
+      "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 f1b5 c6a5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,3 → −0,9. Refutación: O-O a6 Ae2 Cc6 d4 cxd4"
+      },
+      "e2e4 c7c5 g1f3 b8c6 f1b5 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 e1g1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 e1g1 f8g7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 e1g1 d7d6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,4 → −1,0. Refutación: d4 cxd4 Dxd4 Cf6 e5 dxe5"
+      },
+      "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 b5c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 b5c6 d7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 b5c6 g8f6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 38 puntos de chances: −0,3 → −6,3. Refutación: Aa4 Cxe4 O-O b6 Te1 Ab7"
+      },
+      "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 b5c6 b7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      }
+    }
+  }
+}

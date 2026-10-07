@@ -1,0 +1,101 @@
+{
+  "id": "siciliana-moscu",
+  "nombre": "Siciliana Moscú (3.Ab5+)",
+  "raiz": "e2e4 c7c5 g1f3 d7d6 f1b5",
+  "resumen": "Contra 2...d6, las blancas dan jaque con el alfil en lugar de abrir con d4. Evitan la Najdorf y el Dragón y buscan un juego más tranquilo, muchas veces cambiando alfiles en d7. El negro tapa con el alfil (lo más sólido), con el caballo o con ...Cc6.",
+  "planesBlancas": [
+    "Cambiar alfiles en d7 y jugar c4 o c3 y d4.",
+    "Desarrollo rápido y enroque corto."
+  ],
+  "planesNegras": [
+    "Igualar con ...Axd7, ...Cf6 y ...g6 o ...e6.",
+    "Con ...Cd7, conservar los alfiles."
+  ],
+  "estructura": "Muchas veces el bind de Maroczy (c4 y e4) contra d6.",
+  "rupturas": [
+    "d4 de las blancas.",
+    "...d5 o ...b5 del negro."
+  ],
+  "piezas": [
+    "Alfil blanco de f1: b5 y se cambia.",
+    "Alfil negro de c8: d7 para taparlo."
+  ],
+  "trampas": [],
+  "notas": {
+    "e2e4 c7c5 g1f3 d7d6 f1b5": {
+      "porQue": "Jaque que evita las líneas abiertas de la Najdorf y el Dragón.",
+      "porQueNo": [
+        {
+          "uci": "f3g5",
+          "texto": "...Cc6: mover el caballo otra vez es perder tiempo."
+        },
+        {
+          "uci": "e4e5",
+          "texto": "Prematuro: ...Cc6 y el peón de e5 no se sostiene."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 d7d6 f1b5 c8d7": {
+      "porQue": "Lo más sólido: ofrece cambiar alfiles.",
+      "porQueNo": [
+        {
+          "uci": "d8d7",
+          "texto": "Axd7+ y la dama se pierde."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 d7d6 f1b5 b8d7": {
+      "porQue": "Conserva los alfiles a cambio de algo de pasividad."
+    },
+    "e2e4 c7c5 g1f3 d7d6 f1b5 b8c6": {
+      "porQue": "Lleva a estructuras parecidas a la Rossolimo."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Sicilian Defence (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Sicilian_Defence",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 c7c5 g1f3 d7d6 f1b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 f3g5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,3 → −0,3. Refutación: Cc6 Cf3 Cf6 Cc3 g6 d4"
+      },
+      "e2e4 c7c5 g1f3 d7d6 e4e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,3 → −0,2. Refutación: Cc6 Ab5 Ad7 exd6 e6 d4"
+      },
+      "e2e4 c7c5 g1f3 d7d6 f1b5 c8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 f1b5 d8d7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 45 puntos de chances: −0,2 → −9,2. Refutación: Axd7+ Axd7 d4 Cc6 c3 e6"
+      },
+      "e2e4 c7c5 g1f3 d7d6 f1b5 b8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 f1b5 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      }
+    }
+  }
+}

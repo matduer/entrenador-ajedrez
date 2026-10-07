@@ -1,0 +1,123 @@
+{
+  "id": "dragon-acelerado",
+  "nombre": "Siciliana Dragón Acelerado",
+  "raiz": "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6",
+  "resumen": "El negro hace el fianchetto antes de jugar ...d6, para poder romper con ...d5 de una sola vez y evitar el Ataque Yugoslavo. La respuesta más posicional de las blancas es el bind de Maroczy (c4): con peones en c4 y e4 controlan d5 y limitan al negro. Contra Cc3, Ae3 y Ac4 hay una trampa conocida si las blancas juegan Dd2 antes de enrocar.",
+  "planesBlancas": [
+    "Bind de Maroczy: c4 y e4 para controlar d5.",
+    "Desarrollo clásico con Cc3, Ae3, Ac4 y enroque."
+  ],
+  "planesNegras": [
+    "...d5 en una sola jugada cuando sea posible.",
+    "Contra el Maroczy, cambiar caballos y jugar con paciencia."
+  ],
+  "estructura": "Con c4 y e4 de las blancas, el negro queda con poco espacio pero sin debilidades.",
+  "rupturas": [
+    "...d5 o ...b5 del negro.",
+    "c5 o f4-f5 de las blancas."
+  ],
+  "piezas": [
+    "Alfil negro de f8: g7.",
+    "Caballo negro de f6: e4 en las líneas tácticas."
+  ],
+  "trampas": [
+    {
+      "jugadas": "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 b1c3 f8g7 c1e3 g8f6 f1c4 d8a5 d1d2 f6e4 d4c6 a5c3 d2c3 g7c3 b2c3 b7c6",
+      "texto": "7...Da5 8.Dd2? Cxe4! 9.Cxc6 Dxc3! 10.Dxc3 Axc3+ 11.bxc3 bxc6: el negro gana un peón. Lo correcto es 8.O-O."
+    }
+  ],
+  "notas": {
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6": {
+      "porQue": "Dragón Acelerado: fianchetto antes de ...d6, para poder jugar ...d5 de una sola vez."
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 c2c4": {
+      "porQue": "Bind de Maroczy: los peones de c4 y e4 controlan d5.",
+      "porQueNo": [
+        {
+          "uci": "h2h3",
+          "texto": "Lento: ...Ag7 y el negro se desarrolla sin problemas."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 c2c4 g8f6": {
+      "porQue": "Ataca e4.",
+      "porQueNo": [
+        {
+          "uci": "e7e5",
+          "texto": "Cc2 y el agujero en d5 favorece a las blancas."
+        },
+        {
+          "uci": "c6d4",
+          "texto": "Dxd4: la dama blanca queda centralizada."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 b1c3": {
+      "porQue": "Desarrollo clásico; aquí el negro puede liberarse con ...d5 en el momento justo."
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 b1c3 f8g7 c1e3 g8f6 f1c4 d8a5 e1g1": {
+      "porQue": "Lo correcto: enroca y el negro no tiene tiempo de tomar en e4.",
+      "porQueNo": [
+        {
+          "uci": "d1d2",
+          "texto": "...Cxe4! Cxc6 Dxc3: el negro gana material."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Sicilian Defence, Accelerated Dragon (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Sicilian_Defence,_Accelerated_Dragon",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 h2h3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,6 → −0,0. Refutación: Ag7 Ae3 Cf6 Cc3 O-O Dd2"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 c2c4 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 c2c4 e7e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,4 → −1,1. Refutación: Cc2 d6 Cc3 f5 exf5 Axf5"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 c2c4 c6d4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,4 → −1,3. Refutación: Dxd4 Cf6 e5 Ch5 Cc3 Cg7"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 b1c3 f8g7 c1e3 g8f6 f1c4 d8a5 e1g1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 b1c3 f8g7 c1e3 g8f6 f1c4 d8a5 d1d2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: +0,4 → −0,8. Refutación: Cxe4 Cxc6 Dxc3 Dxc3 Axc3+ bxc3"
+      }
+    }
+  }
+}

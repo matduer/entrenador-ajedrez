@@ -1,0 +1,195 @@
+{
+  "id": "siciliana-dragon",
+  "nombre": "Siciliana Dragón",
+  "raiz": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6",
+  "resumen": "El negro hace el fianchetto del alfil de rey: desde g7 apunta al centro y al flanco de dama. La respuesta más peligrosa es el Ataque Yugoslavo (Ae3, f3, Dd2, enroque largo), con ataques en flancos opuestos: las blancas avanzan h4-h5 y buscan cambiar el alfil del Dragón con Ah6; el negro ataca por la columna c, a veces entregando la calidad con ...Txc3.",
+  "planesBlancas": [
+    "Ataque Yugoslavo: Ae3, f3, Dd2, enroque largo, h4-h5 y Ah6.",
+    "Ac4 para impedir ...d5 y apuntar a f7."
+  ],
+  "planesNegras": [
+    "Columna c: ...Tc8, ...Ce5-c4 y el sacrificio ...Txc3.",
+    "Liberarse con ...d5 si las blancas se descuidan."
+  ],
+  "estructura": "Peones negros en d6 y g6, alfil en g7; columna c semiabierta para el negro y columna d para las blancas.",
+  "rupturas": [
+    "h4-h5 y g4 de las blancas.",
+    "...d5, ...b5 y ...Txc3 del negro."
+  ],
+  "piezas": [
+    "Alfil negro de f8: g7, la pieza clave del Dragón.",
+    "Alfil blanco de c1: e3 y después h6, para cambiar el alfil del Dragón."
+  ],
+  "trampas": [
+    {
+      "jugadas": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f6g4 f1b5 c8d7 d1g4",
+      "texto": "6.Ae3 Cg4? 7.Ab5+! Ad7 8.Dxg4: el alfil de d7 está clavado y no puede retomar."
+    }
+  ],
+  "notas": {
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6": {
+      "porQue": "Dragón: el alfil irá a g7, sobre el centro y la diagonal larga."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3": {
+      "porQue": "Prepara Dd2, f3 y enroque largo: el Ataque Yugoslavo.",
+      "porQueNo": [
+        {
+          "uci": "f2f4",
+          "texto": "Prematuro: el negro se desarrolla con ...Cc6 y ...Ag7 y el peón de e4 queda flojo."
+        },
+        {
+          "uci": "g2g3",
+          "texto": "Lento: ...Cc6, el negro cambia en d4 y se libera."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7": {
+      "porQue": "El alfil del Dragón ocupa la diagonal larga.",
+      "porQueNo": [
+        {
+          "uci": "f6g4",
+          "texto": "Ab5+ y Dxg4: el caballo se pierde."
+        },
+        {
+          "uci": "d8a5",
+          "texto": "Cb3 echa a la dama con tiempo."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3": {
+      "porQue": "Sostiene e4 e impide ...Cg4, que molestaría al alfil de e3."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8": {
+      "porQue": "Enroca: el contraataque del negro va a ir por la columna c.",
+      "porQueNo": [
+        {
+          "uci": "d6d5",
+          "texto": "e5 echa al caballo antes de que el negro esté preparado."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2": {
+      "porQue": "Prepara Ah6 para cambiar el alfil del Dragón y el enroque largo."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6": {
+      "porQue": "Desarrolla y presiona d4.",
+      "porQueNo": [
+        {
+          "uci": "a7a6",
+          "texto": "g4 y el ataque blanco llega primero."
+        },
+        {
+          "uci": "c8e6",
+          "texto": "Enroque largo y Cxe6: tras ...fxe6 el peón de e6 queda débil."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6 f1c4": {
+      "porQue": "Ataque Yugoslavo con Ac4: impide ...d5 y apunta a f7.",
+      "porQueNo": [
+        {
+          "uci": "f1e2",
+          "texto": "...d5 libera el juego del negro."
+        },
+        {
+          "uci": "a2a3",
+          "texto": "...d5 y el negro rompe el centro."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6 e1c1": {
+      "porQue": "Enroque largo inmediato: si ...d5, el juego se abre enseguida."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Sicilian Defence, Dragon Variation (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Sicilian_Defence,_Dragon_Variation",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 f2f4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,6 → +0,0. Refutación: Cc6 Ae2 Cxd4 Dxd4 Ag7 Df2"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 g2g3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,6 → 0,0. Refutación: Cc6 Ag2 Cxd4 Dxd4 Ag7 a4"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f6g4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 32 puntos de chances: −0,7 → −5,3. Refutación: Ab5+ Cc6 Cxc6 bxc6 Axc6+ Ad7"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 d8a5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,7 → −1,4. Refutación: Cb3 Dd8 Dd2 Ag7 O-O-O Cc6"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 d6d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 12 puntos de chances: −0,7 → −2,1. Refutación: Ab5+ Cfd7 Cxd5 O-O c3 e6"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 a7a6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,6 → −1,4. Refutación: O-O-O Cc6 h4 h5 Rb1 Tb8"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 c8e6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,6 → −1,2. Refutación: Cxe6 fxe6 Ac4 Dc8 Ab3 Cc6"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6 f1c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6 f1e2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 4 puntos de chances: +0,6 → +0,1. Refutación: d5 O-O-O dxe4 Cxc6 Dxd2+ Txd2"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6 a2a3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,6 → −0,2. Refutación: d5 O-O-O dxe4 Cxc6 Dxd2+ Axd2"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6 e1c1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      }
+    }
+  }
+}

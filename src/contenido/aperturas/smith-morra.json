@@ -1,0 +1,193 @@
+{
+  "id": "smith-morra",
+  "nombre": "Gambito Smith-Morra",
+  "raiz": "e2e4 c7c5 d2d4 c5d4 c2c3",
+  "resumen": "Las blancas entregan un peón para desarrollarse rápido: caballos en c3 y f3, alfil en c4, enroque, dama en e2 y torres en c1 y d1 por las columnas abiertas. Es popular en el ajedrez de club. El negro tiene que desarrollarse con cuidado; hay que conocer la trampa siberiana.",
+  "planesBlancas": [
+    "Desarrollo rápido y torres en las columnas c y d.",
+    "Presión sobre d6 y f7; Cd5 o e5 en el momento justo."
+  ],
+  "planesNegras": [
+    "Desarrollo prudente: ...e6, ...a6, ...Cge7 o ...Cf6.",
+    "Devolver el peón si hace falta para terminar el desarrollo."
+  ],
+  "estructura": "Columnas c y d abiertas; peón blanco en e4 contra peones negros en d6 o d7 y e6.",
+  "rupturas": [
+    "e5 y Cd5 de las blancas.",
+    "...d5 o ...b5 del negro."
+  ],
+  "piezas": [
+    "Alfil blanco de f1: c4, contra f7 y e6.",
+    "Dama blanca: e2, con las torres en c1 y d1."
+  ],
+  "trampas": [
+    {
+      "jugadas": "e2e4 c7c5 d2d4 c5d4 c2c3 d4c3 b1c3 b8c6 g1f3 e7e6 f1c4 d8c7 e1g1 g8f6 d1e2 f6g4 h2h3 c6d4",
+      "texto": "Trampa siberiana: 8.De2 Cg4 9.h3?? Cd4! La dama de e2 está atacada, y si 10.Cxd4, ...Dh2#."
+    }
+  ],
+  "notas": {
+    "e2e4 c7c5 d2d4 c5d4": {
+      "porQue": "Tomar es lo natural.",
+      "porQueNo": [
+        {
+          "uci": "e7e6",
+          "texto": "d5 gana espacio y el negro queda encerrado."
+        },
+        {
+          "uci": "d7d5",
+          "texto": "dxc5 y el negro queda atrasado en desarrollo."
+        }
+      ]
+    },
+    "e2e4 c7c5 d2d4 c5d4 c2c3": {
+      "porQue": "Gambito Smith-Morra: entrega el peón para desarrollarse rápido."
+    },
+    "e2e4 c7c5 d2d4 c5d4 c2c3 d4c3": {
+      "porQue": "Aceptar: el negro se queda con el peón y tiene que desarrollarse con cuidado.",
+      "porQueNo": [
+        {
+          "uci": "d4d3",
+          "texto": "Axd3: devolver así el peón ayuda al desarrollo blanco."
+        },
+        {
+          "uci": "g7g6",
+          "texto": "cxd4: las blancas se quedan con el centro sin haber entregado nada."
+        }
+      ]
+    },
+    "e2e4 c7c5 d2d4 c5d4 c2c3 g8f6": {
+      "porQue": "Rehúsa: ataca e4 y lleva a estructuras de la Alapin."
+    },
+    "e2e4 c7c5 d2d4 c5d4 c2c3 d4c3 b1c3": {
+      "porQue": "Desarrollo con tiempo: las columnas c y d quedan abiertas para las torres."
+    },
+    "e2e4 c7c5 d2d4 c5d4 c2c3 d4c3 b1c3 b8c6": {
+      "porQue": "Desarrollo natural.",
+      "porQueNo": [
+        {
+          "uci": "d8a5",
+          "texto": "Cf3 y Ad2: la dama sale demasiado pronto."
+        }
+      ]
+    },
+    "e2e4 c7c5 d2d4 c5d4 c2c3 d4c3 b1c3 b8c6 g1f3": {
+      "porQue": "Sigue el plan: Ac4, enroque, De2 y torres a c1 y d1."
+    },
+    "e2e4 c7c5 d2d4 c5d4 c2c3 d4c3 b1c3 b8c6 g1f3 e7e6": {
+      "porQue": "Cierra la diagonal del alfil sobre f7 antes de que llegue a c4."
+    },
+    "e2e4 c7c5 d2d4 c5d4 c2c3 d4c3 b1c3 b8c6 g1f3 e7e6 f1c4": {
+      "porQue": "El alfil apunta a e6 y f7."
+    },
+    "e2e4 c7c5 d2d4 c5d4 c2c3 d4c3 b1c3 b8c6 g1f3 e7e6 f1c4 a7a6": {
+      "porQue": "Prepara ...b5 y ...Dc7 sin que Cb5 moleste.",
+      "porQueNo": [
+        {
+          "uci": "g8h6",
+          "texto": "Axh6: el caballo se cambia y la estructura queda rota."
+        }
+      ]
+    },
+    "e2e4 c7c5 d2d4 c5d4 c2c3 d4c3 b1c3 b8c6 g1f3 e7e6 f1c4 d8c7 e1g1 g8f6 d1e2 f6g4 f1d1": {
+      "porQue": "Lo correcto: la torre se va de f1 y presiona por la columna d.",
+      "porQueNo": [
+        {
+          "uci": "h2h3",
+          "texto": "...Cd4!: ataca la dama y amenaza ...Dh2#. Es la trampa siberiana."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Smith–Morra Gambit (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Smith%E2%80%93Morra_Gambit",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 c7c5 d2d4 c5d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 d2d4 e7e6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,2 → −0,7. Refutación: d5 Cf6 Cc3 d6 a4 exd5"
+      },
+      "e2e4 c7c5 d2d4 d7d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,2 → −1,1. Refutación: dxc5 Cf6 exd5 Cxd5 Ac4 e6"
+      },
+      "e2e4 c7c5 d2d4 c5d4 c2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 d2d4 c5d4 c2c3 d4c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 d2d4 c5d4 c2c3 d4d3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,1 → −0,6. Refutación: Axd3 d6 c4 Cd7 Cc3 Cgf6"
+      },
+      "e2e4 c7c5 d2d4 c5d4 c2c3 g7g6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,1 → −0,7. Refutación: cxd4 d5 e5 Ag7 Cc3 f6"
+      },
+      "e2e4 c7c5 d2d4 c5d4 c2c3 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 d2d4 c5d4 c2c3 d4c3 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 d2d4 c5d4 c2c3 d4c3 b1c3 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 d2d4 c5d4 c2c3 d4c3 b1c3 d8a5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,1 → −0,5. Refutación: Cf3 Cc6 Ac4 Cf6 O-O e6"
+      },
+      "e2e4 c7c5 d2d4 c5d4 c2c3 d4c3 b1c3 b8c6 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 d2d4 c5d4 c2c3 d4c3 b1c3 b8c6 g1f3 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 d2d4 c5d4 c2c3 d4c3 b1c3 b8c6 g1f3 e7e6 f1c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 d2d4 c5d4 c2c3 d4c3 b1c3 b8c6 g1f3 e7e6 f1c4 a7a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 d2d4 c5d4 c2c3 d4c3 b1c3 b8c6 g1f3 e7e6 f1c4 g8h6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,3 → −0,5. Refutación: Af4 Ab4 O-O O-O Dc1 Cg4"
+      },
+      "e2e4 c7c5 d2d4 c5d4 c2c3 d4c3 b1c3 b8c6 g1f3 e7e6 f1c4 d8c7 e1g1 g8f6 d1e2 f6g4 f1d1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 d2d4 c5d4 c2c3 d4c3 b1c3 b8c6 g1f3 e7e6 f1c4 d8c7 e1g1 g8f6 d1e2 f6g4 h2h3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 36 puntos de chances: −0,1 → −5,0. Refutación: Cd4 hxg4 Cxe2+ Axe2 Ac5 Cb5"
+      }
+    }
+  }
+}

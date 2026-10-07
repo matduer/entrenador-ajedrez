@@ -1,0 +1,206 @@
+{
+  "id": "siciliana-sveshnikov",
+  "nombre": "Siciliana Sveshnikov",
+  "raiz": "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5",
+  "resumen": "Con 5...e5 el negro echa al caballo de d4 con tiempo, a cambio de un agujero en d5 y un peón retrasado en d6. En la línea principal (Cdb5, Ag5, Ca3) el caballo blanco queda en a3 y el negro gana espacio con ...b5. La lucha gira alrededor de d5: las blancas quieren un caballo ahí, el negro busca ...f5 y la pareja de alfiles.",
+  "planesBlancas": [
+    "Dominar d5 con un caballo (Ag5xf6 y Cd5).",
+    "Devolver el caballo de a3 al juego por c2 o c4."
+  ],
+  "planesNegras": [
+    "...b5 para quitarle c4 al caballo de a3.",
+    "...f5 para pelear el centro; la pareja de alfiles."
+  ],
+  "estructura": "Peones negros en d6 y e5: d5 es un agujero, d6 un peón retrasado. A menudo ...gxf6 tras Axf6.",
+  "rupturas": [
+    "...f5 del negro.",
+    "c4 o a4 de las blancas."
+  ],
+  "piezas": [
+    "Caballo blanco: b5, a3 y después c2 o c4.",
+    "Alfil negro de f8: e7 o g7."
+  ],
+  "trampas": [],
+  "notas": {
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3": {
+      "porQue": "Defiende e4 desarrollando.",
+      "porQueNo": [
+        {
+          "uci": "f1e2",
+          "texto": "...Cxe4: el peón de e4 se pierde."
+        },
+        {
+          "uci": "f1c4",
+          "texto": "...Cxe4, aprovechando que nadie defiende e4."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5": {
+      "porQue": "Sveshnikov: echa al caballo con tiempo. A cambio quedan el agujero en d5 y el peón de d6 retrasado.",
+      "porQueNo": [
+        {
+          "uci": "d8b6",
+          "texto": "Ae3 y Cb3 ganan tiempos sobre la dama."
+        },
+        {
+          "uci": "c6d4",
+          "texto": "Dxd4: la dama blanca queda centralizada."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5": {
+      "porQue": "El caballo va a b5 con la amenaza de Cd6+."
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6": {
+      "porQue": "Lo único: tapa d6.",
+      "porQueNo": [
+        {
+          "uci": "a7a6",
+          "texto": "Cd6+: las blancas cambian el alfil de casillas negras y dominan d6."
+        },
+        {
+          "uci": "h7h6",
+          "texto": "Cd6+ y el negro pierde el alfil de f8."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5": {
+      "porQue": "Clava el caballo para cambiarlo y dominar d5."
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c3d5": {
+      "porQue": "La otra línea principal: ocupa d5 enseguida, con juego más tranquilo."
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6": {
+      "porQue": "Echa al caballo de b5 a la banda.",
+      "porQueNo": [
+        {
+          "uci": "c8e6",
+          "texto": "Cd5: la clavada y el caballo en d5 deciden."
+        },
+        {
+          "uci": "f8e7",
+          "texto": "Axf6 gxf6 Cd5: el negro pierde el control de d5."
+        },
+        {
+          "uci": "c8d7",
+          "texto": "Cxd6+: el peón de d6 se pierde."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6 b5a3": {
+      "porQue": "El caballo queda en a3, mal ubicado, pero vuelve al juego por c2 o c4."
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6 b5a3 b7b5": {
+      "porQue": "Variante Chelyabinsk: le quita c4 al caballo de a3 y gana espacio.",
+      "porQueNo": [
+        {
+          "uci": "h7h6",
+          "texto": "Axf6 gxf6 y Cc4: el caballo vuelve al juego."
+        },
+        {
+          "uci": "d6d5",
+          "texto": "Cxd5: la ruptura llega antes de tiempo."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Sicilian Defence, Sveshnikov Variation (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Sicilian_Defence,_Sveshnikov_Variation",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 f1e2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: +0,3 → −0,7. Refutación: Cxe4 O-O g6 Af3 Cd6 Te1"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 f1c4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 12 puntos de chances: +0,3 → −0,9. Refutación: Cxe4 Axf7+ Rxf7 Dh5+ Rg8 Dd5+"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 d8b6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: −0,3 → −1,3. Refutación: Ae3 Dd8 f4 d6 Ab5 Ad7"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 c6d4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: −0,3 → −1,5. Refutación: Dxd4 d6 Ag5 Ad7 O-O-O Da5"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 a7a6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,4 → −1,1. Refutación: Cd6+ Axd6 Dxd6 De7 Dxe7+ Cxe7"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 h7h6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 4 puntos de chances: −0,4 → −0,8. Refutación: Cd6+ Axd6 Dxd6 De7 Dxe7+ Rxe7"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c3d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 c8e6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: −0,2 → −1,4. Refutación: Cd5 Axd5 exd5 Ce7 Df3 a6"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 f8e7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 17 puntos de chances: −0,2 → −2,1. Refutación: Axf6 gxf6 Cd5 O-O Cxe7+ Dxe7"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 c8d7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 28 puntos de chances: −0,2 → −3,7. Refutación: Cxd6+ Axd6 Dxd6 Ae6 O-O-O Dxd6"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6 b5a3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6 b5a3 b7b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6 b5a3 h7h6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,2 → −1,1. Refutación: Axf6 Dxf6 Cd5 Dd8 Cc4 Tb8"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6 b5a3 d6d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,2 → −1,0. Refutación: Cxd5 Da5+ Dd2 Dxd2+ Axd2 Cxd5"
+      }
+    }
+  }
+}
