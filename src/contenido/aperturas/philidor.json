@@ -1,0 +1,203 @@
+{
+  "id": "philidor",
+  "nombre": "Defensa Philidor",
+  "raiz": "e2e4 e7e5 g1f3 d7d6",
+  "resumen": "El negro defiende e5 con un peón en vez de con el caballo. Es sólida pero pasiva: el peón de d6 tapa el alfil de f8. Las blancas suelen ganar espacio con d4 y el negro elige entre cambiar en d4 (más simple) o mantener el punto e5 (variante Hanham), donde hay varias trampas sobre f7.",
+  "planesBlancas": [
+    "Abrir con d4 y aprovechar el mayor espacio.",
+    "Presionar f7 con Ac4 cuando el negro mantiene la tensión en e5.",
+    "Contra ...exd4, centralizar el caballo en d4 y desarrollarse con naturalidad."
+  ],
+  "planesNegras": [
+    "Mantener e5 con ...Cd7 y ...c6 (Hanham), o cambiar en d4 y desarrollarse con ...Cf6, ...Ae7 y enroque.",
+    "Jugar ...c6, ...b5 o ...f5 según el momento, para ganar espacio.",
+    "No dejar f7 sin cubrir: es el punto débil de la defensa."
+  ],
+  "estructura": "Peones negros en d6 y e5 contra e4 y d4: si el negro mantiene la tensión, las blancas tienen más espacio; si cambia en d4, las blancas quedan con el peón de e4 contra el de d6.",
+  "rupturas": [
+    "dxe5 de las blancas cuando el negro no puede retomar bien.",
+    "...f5 o ...d5 del negro, bien preparadas."
+  ],
+  "piezas": [
+    "Alfil blanco de f1: c4, sobre f7.",
+    "Caballo negro de b8: d7 en la Hanham, para sostener e5.",
+    "Alfil negro de f8: e7, detrás del peón de d6."
+  ],
+  "trampas": [
+    {
+      "jugadas": "e2e4 e7e5 g1f3 d7d6 d2d4 b8d7 f1c4 g8f6 d4e5 d7e5 f3e5 d6e5 c4f7 e8f7 d1d8",
+      "texto": "En la Hanham, desarrollar el caballo de g8 a f6 con el alfil blanco en c4 pierde la dama: dxe5, el negro retoma, Cxe5 dxe5 y Axf7+ deja la dama de d8 sin defensa."
+    }
+  ],
+  "notas": {
+    "e2e4 e7e5 g1f3 d7d6": {
+      "porQue": "Defiende e5 con un peón: sólido, pero tapa el alfil de f8 y le da a las blancas más espacio. Stockfish prefiere 2...Cc6 (la diferencia es chica): la Philidor se elige por su solidez y porque evita la teoría de la Española y la Italiana.",
+      "inferior": true
+    },
+    "e2e4 e7e5 g1f3 d7d6 d2d4": {
+      "porQue": "Desafía e5 enseguida: el negro tiene que decidir si mantiene el punto o cambia."
+    },
+    "e2e4 e7e5 g1f3 d7d6 d2d4 g8f6": {
+      "porQue": "Desarrolla atacando e4 y mantiene la tensión.",
+      "porQueNo": [
+        {
+          "uci": "c8e6",
+          "texto": "El alfil no defiende e5: dxe5 y el negro pierde un peón o queda mal."
+        },
+        {
+          "uci": "d8d7",
+          "texto": "Tapa el alfil y no ayuda: dxe5 dxe5 Cxe5 gana un peón."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 d7d6 d2d4 g8f6 b1c3": {
+      "porQue": "Defiende e4 y sigue presionando."
+    },
+    "e2e4 e7e5 g1f3 d7d6 d2d4 g8f6 b1c3 b8d7": {
+      "porQue": "Sostiene e5 con el caballo: es la Hanham por transposición.",
+      "porQueNo": [
+        {
+          "uci": "c8g4",
+          "texto": "dxe5 Axf3 Dxf3 dxe5 y las blancas tienen la pareja de alfiles y mejor desarrollo."
+        },
+        {
+          "uci": "d6d5",
+          "texto": "Abrir el centro sin estar desarrollado falla: dxe5 y el negro pierde material."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 d7d6 d2d4 e5d4": {
+      "porQue": "La forma más simple: cambia en el centro y busca un desarrollo cómodo."
+    },
+    "e2e4 e7e5 g1f3 d7d6 d2d4 e5d4 f3d4": {
+      "porQue": "El caballo retoma centralizado."
+    },
+    "e2e4 e7e5 g1f3 d7d6 d2d4 e5d4 f3d4 g8f6": {
+      "porQue": "Desarrolla atacando e4.",
+      "porQueNo": [
+        {
+          "uci": "c8e6",
+          "texto": "Cxe6 fxe6 y Dh5+ deja expuesto al rey negro y su estructura rota."
+        },
+        {
+          "uci": "d6d5",
+          "texto": "exd5 Dxd5 y la dama negra queda expuesta a Cc3 con tiempo."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 d7d6 d2d4 b8d7": {
+      "porQue": "Variante Hanham: mantiene e5 con el caballo."
+    },
+    "e2e4 e7e5 g1f3 d7d6 d2d4 b8d7 f1c4": {
+      "porQue": "Apunta a f7: el negro tiene que tener cuidado con cómo desarrolla el caballo de g8."
+    },
+    "e2e4 e7e5 g1f3 d7d6 d2d4 b8d7 f1c4 c7c6": {
+      "porQue": "Prepara ...b5 o ...d5 y deja b6 para el caballo; recién después ...Ae7 y ...Cgf6.",
+      "porQueNo": [
+        {
+          "uci": "g8f6",
+          "texto": "La trampa clásica: dxe5 Cxe5 Cxe5 dxe5 Axf7+ Rxf7 Dxd8 y el negro pierde la dama."
+        },
+        {
+          "uci": "h7h6",
+          "texto": "Lento: dxe5 y el negro queda con problemas en el centro."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Philidor Defence (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Philidor_Defence",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 e7e5 g1f3 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 d7d6 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 d7d6 d2d4 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 d7d6 d2d4 c8e6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: −0,5 → −1,6. Refutación: dxe5 a6 Cc3 Cc6 Af4 dxe5"
+      },
+      "e2e4 e7e5 g1f3 d7d6 d2d4 d8d7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: −0,5 → −1,4. Refutación: dxe5 Cc6 exd6 Dxd6 Ad3 Ag4"
+      },
+      "e2e4 e7e5 g1f3 d7d6 d2d4 g8f6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 d7d6 d2d4 g8f6 b1c3 b8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 d7d6 d2d4 g8f6 b1c3 c8g4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,4 → −1,4. Refutación: dxe5 Axf3 Dxf3 dxe5 Ad2 Ad6"
+      },
+      "e2e4 e7e5 g1f3 d7d6 d2d4 g8f6 b1c3 d6d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 16 puntos de chances: −0,4 → −2,3. Refutación: dxe5 Cxe4 Cxe4 dxe4 Dxd8+ Rxd8"
+      },
+      "e2e4 e7e5 g1f3 d7d6 d2d4 e5d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 d7d6 d2d4 e5d4 f3d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 d7d6 d2d4 e5d4 f3d4 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 d7d6 d2d4 e5d4 f3d4 c8e6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: −0,6 → −1,8. Refutación: Cxe6 fxe6 Dh5+ g6 Dh3 De7"
+      },
+      "e2e4 e7e5 g1f3 d7d6 d2d4 e5d4 f3d4 d6d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,6 → −1,4. Refutación: exd5 Dxd5 De2+ Ae6 Cb5 Dd7"
+      },
+      "e2e4 e7e5 g1f3 d7d6 d2d4 b8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 d7d6 d2d4 b8d7 f1c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 d7d6 d2d4 b8d7 f1c4 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,9 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 d7d6 d2d4 b8d7 f1c4 g8f6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 14 puntos de chances: −0,6 → −2,2. Refutación: dxe5 Cxe5 Cxe5 dxe5 Axf7+ Re7"
+      },
+      "e2e4 e7e5 g1f3 d7d6 d2d4 b8d7 f1c4 h7h6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,6 → −1,3. Refutación: dxe5 De7 exd6 Dxe4+ Ae2 Axd6"
+      }
+    }
+  }
+}

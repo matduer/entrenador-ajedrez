@@ -75,7 +75,8 @@
       ]
     },
     "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 a2a3": {
-      "porQue": "Variante Sämisch: obliga al negro a decidir ya. Las blancas aceptan los peones doblados a cambio de la pareja de alfiles."
+      "porQue": "Variante Sämisch: obliga al negro a decidir ya. Las blancas aceptan los peones doblados a cambio de la pareja de alfiles y de un centro más fuerte. Stockfish prefiere 4.e3: la Sämisch gasta un tiempo con a3, pero es una línea seria y muy jugada.",
+      "inferior": true
     },
     "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 a2a3 b4c3": {
       "porQue": "El cambio lógico: retroceder el alfil haría perder tiempo, y los peones doblados son el objetivo."
@@ -112,7 +113,7 @@
     "resultados": {
       "d2d4 g8f6 c2c4 e7e6": {
         "ok": true,
-        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
       },
       "d2d4 g8f6 c2c4 e7e6 b1c3": {
         "ok": true,
@@ -124,11 +125,11 @@
       },
       "d2d4 g8f6 c2c4 e7e6 b1c3 f8e7 (por qué no)": {
         "ok": true,
-        "detalle": "Pierde 7 puntos de chances: −0,2 → −0,9. Refutación: e4 d6 Cf3 O-O Ad3 e5"
+        "detalle": "Pierde 7 puntos de chances: −0,2 → −1,0. Refutación: e4 d6 Cf3 O-O h3 e5"
       },
       "d2d4 g8f6 c2c4 e7e6 b1c3 d7d6 (por qué no)": {
         "ok": true,
-        "detalle": "Pierde 6 puntos de chances: −0,2 → −0,8. Refutación: e4 c5 d5 g6 Cf3 Ag7"
+        "detalle": "Pierde 6 puntos de chances: −0,2 → −0,9. Refutación: e4 Ae7 Cf3 O-O Ad3 e5"
       },
       "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1c2": {
         "ok": true,
@@ -136,15 +137,15 @@
       },
       "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1c2 e8g8": {
         "ok": true,
-        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
       },
       "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1c2 b4e7 (por qué no)": {
         "ok": true,
-        "detalle": "Pierde 12 puntos de chances: −0,1 → −1,4. Refutación: e4 d6 Af4 Cc6 Td1 Cd7"
+        "detalle": "Pierde 10 puntos de chances: −0,1 → −1,3. Refutación: e4 d6 Af4 Cc6 O-O-O O-O"
       },
       "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1c2 b7b5 (por qué no)": {
         "ok": true,
-        "detalle": "Pierde 8 puntos de chances: −0,1 → −0,9. Refutación: cxb5 a6 e3 Ab7 Cf3 axb5"
+        "detalle": "Pierde 7 puntos de chances: −0,1 → −0,9. Refutación: cxb5 a6 e3 Axc3+ bxc3 axb5"
       },
       "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3": {
         "ok": true,
@@ -152,31 +153,31 @@
       },
       "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3 e8g8": {
         "ok": true,
-        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
       },
       "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3 b4e7 (por qué no)": {
         "ok": true,
-        "detalle": "Pierde 8 puntos de chances: −0,1 → −1,0. Refutación: e4 d6 Cf3 O-O Ad3 e5"
+        "detalle": "Pierde 7 puntos de chances: −0,2 → −0,9. Refutación: e4 d6 Cf3 O-O Ad3 e5"
       },
       "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 a2a3": {
         "ok": true,
-        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
       },
       "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 a2a3 b4c3": {
         "ok": true,
-        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
       },
       "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 a2a3 b4c3 b2c3": {
         "ok": true,
-        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
       },
       "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 a2a3 b4c3 b2c3 b7b6": {
         "ok": true,
-        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
       },
       "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 a2a3 b4c3 b2c3 e6e5 (por qué no)": {
         "ok": true,
-        "detalle": "Pierde 12 puntos de chances: +0,1 → −1,2. Refutación: dxe5 Cg4 Cf3 Cc6 Ag5 f6"
+        "detalle": "Pierde 11 puntos de chances: −0,0 → −1,2. Refutación: dxe5 Cg4 Cf3 Cc6 Ag5 f6"
       }
     }
   }

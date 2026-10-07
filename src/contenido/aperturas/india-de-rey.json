@@ -145,11 +145,11 @@
       },
       "d2d4 g8f6 c2c4 g7g6": {
         "ok": true,
-        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
       },
       "d2d4 g8f6 c2c4 g7g6 b1c3": {
         "ok": true,
-        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
       },
       "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7": {
         "ok": true,
@@ -165,7 +165,7 @@
       },
       "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 e7e5 (por qué no)": {
         "ok": true,
-        "detalle": "Pierde 23 puntos de chances: −0,6 → −3,4. Refutación: dxe5 Cg8 Cf3 h6 h4 Cc6"
+        "detalle": "Pierde 21 puntos de chances: −0,6 → −3,2. Refutación: dxe5 Cg8 Cf3 h6 Ae3 Cc6"
       },
       "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 f6e4 (por qué no)": {
         "ok": true,
@@ -173,7 +173,7 @@
       },
       "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 f6g4 (por qué no)": {
         "ok": true,
-        "detalle": "Pierde 36 puntos de chances: −0,6 → −6,2. Refutación: Dxg4 d5 Dh4 dxe4 Ah6 Axh6"
+        "detalle": "Pierde 35 puntos de chances: −0,6 → −6,0. Refutación: Dxg4 d5 Dh4 dxe4 Ah6 Axh6"
       },
       "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3": {
         "ok": true,
@@ -185,15 +185,15 @@
       },
       "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e7e5 (por qué no)": {
         "ok": true,
-        "detalle": "Pierde 10 puntos de chances: −0,5 → −1,7. Refutación: dxe5 dxe5 Dxd8+ Rxd8 Cxe5 Ae6"
+        "detalle": "Pierde 10 puntos de chances: −0,5 → −1,6. Refutación: dxe5 dxe5 Dxd8+ Rxd8 Cxe5 Ae6"
       },
       "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2": {
         "ok": true,
-        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
       },
       "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2 e7e5": {
         "ok": true,
-        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
       },
       "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2 e7e5 e1g1": {
         "ok": true,
@@ -205,11 +205,11 @@
       },
       "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2 e7e5 e1g1 c8d7 (por qué no)": {
         "ok": true,
-        "detalle": "Pierde 7 puntos de chances: −0,5 → −1,3. Refutación: dxe5 dxe5 Cxe5 Cxe4 Cxe4 Axe5"
+        "detalle": "Pierde 6 puntos de chances: −0,6 → −1,3. Refutación: dxe5 dxe5 Cxe5 Cxe4 Cxe4 Axe5"
       },
       "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2 e7e5 e1g1 g8h8 (por qué no)": {
         "ok": true,
-        "detalle": "Pierde 11 puntos de chances: −0,5 → −1,9. Refutación: dxe5 dxe5 Cxe5 De7 f4 c6"
+        "detalle": "Pierde 12 puntos de chances: −0,6 → −2,0. Refutación: dxe5 dxe5 Cxe5 De7 f4 Cbd7"
       },
       "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2 e7e5 e1g1 b8c6 d4d5": {
         "ok": true,
@@ -217,15 +217,15 @@
       },
       "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2 e7e5 e1g1 b8c6 d4d5 c6e7": {
         "ok": true,
-        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
       },
       "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2 e7e5 e1g1 b8c6 d4d5 c6a5 (por qué no)": {
         "ok": true,
-        "detalle": "Pierde 32 puntos de chances: −0,7 → −5,3. Refutación: b4 b5 bxa5 b4 Ca4 Cxe4"
+        "detalle": "Pierde 31 puntos de chances: −0,6 → −5,2. Refutación: b4 b5 bxa5 b4 Ca4 Cxe4"
       },
       "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 g1f3 e8g8 f1e2 e7e5 e1g1 b8c6 d4d5 c6b4 (por qué no)": {
         "ok": true,
-        "detalle": "Pierde 7 puntos de chances: −0,7 → −1,4. Refutación: a3 Ca6 b4 c5 dxc6 bxc6"
+        "detalle": "Pierde 6 puntos de chances: −0,6 → −1,3. Refutación: a3 Ca6 b4 c5 Tb1 b6"
       }
     }
   }

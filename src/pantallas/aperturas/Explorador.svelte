@@ -218,6 +218,7 @@
       <section class="tarjeta">
         <h2>¿Por qué {sanDeUci(posDesdeFen(fens[idx - 1]), linea[idx - 1])}?</h2>
         <p>{nota.nota.porQue}</p>
+        {#if nota.nota.inferior}<p class="suave">Stockfish la considera algo inferior a la mejor jugada: es teoría reconocida y jugable, no la más precisa.</p>{/if}
         <p class="aviso-contenido">{AVISO}</p>
       </section>
     {/if}

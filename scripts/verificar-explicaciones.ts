@@ -21,6 +21,8 @@ const PROFUNDIDAD = Number(process.argv[2] ?? 20)
 // Un "por qué no" tiene que perder claramente más: al menos 0,08. Los rangos no se superponen.
 const TOLERANCIA_SI = 0.075
 const MINIMO_NO = 0.08
+// Jugadas marcadas como "inferior" (teoría reconocida, algo peor según el motor): hasta 0,15.
+const TOLERANCIA_INFERIOR = 0.15
 const CARPETA = 'src/contenido/aperturas'
 const motor = new MotorNativo(PROFUNDIDAD)
 const evaluarJugada = (prefijo: string[], uci: string) => motor.evaluarJugada(prefijo, uci)
@@ -49,11 +51,13 @@ for (const archivo of readdirSync(CARPETA).filter((f) => f.endsWith('.json'))) {
       fallas++
       continue
     }
-    const ok = r.perdida <= TOLERANCIA_SI
+    const ok = r.perdida <= (nota.inferior ? TOLERANCIA_INFERIOR : TOLERANCIA_SI)
     resultados[clave] = {
       ok,
       detalle: ok
-        ? `Stockfish (prof. ${PROFUNDIDAD}): ${textoEvaluacion(r.despues)} para el bando que mueve`
+        ? nota.inferior && r.perdida > TOLERANCIA_SI
+          ? `Stockfish (prof. ${PROFUNDIDAD}) prefiere ${lineaSan(fensDeLinea(prefijo).at(-1)!, [r.mejor])[0]}: ${textoEvaluacion(r.antes)} contra ${textoEvaluacion(r.despues)} (marcada como inferior pero jugable)`
+          : `Stockfish (prof. ${PROFUNDIDAD}): ${textoEvaluacion(r.despues)} para el bando que mueve`
         : `Stockfish (prof. ${PROFUNDIDAD}) prefiere ${lineaSan(fensDeLinea(prefijo).at(-1)!, [r.mejor])[0]}: ${textoEvaluacion(r.antes)} contra ${textoEvaluacion(r.despues)}`,
     }
     if (!ok) {

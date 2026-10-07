@@ -54,6 +54,12 @@ export class MotorNativo {
     const clave = `${fen}|${multipv}`
     const previo = this.cache.get(clave)
     if (previo) return previo
+    // Borra la tabla hash: si no, el resultado depende de qué posiciones se analizaron antes
+    // y una verificación puede pasar o fallar según el orden.
+    const limpio = this.esperar((l) => l === 'readyok')
+    this.enviar('ucinewgame')
+    this.enviar('isready')
+    await limpio
     const lineas: { ev: Evaluacion; pv: string[] }[] = []
     let mejor = ''
     const fin = this.esperar(

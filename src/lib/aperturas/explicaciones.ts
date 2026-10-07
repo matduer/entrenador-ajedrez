@@ -18,6 +18,12 @@ export interface PorQueNo {
 export interface NotaJugada {
   /** Por qué se juega esta jugada (la última de la clave). */
   porQue: string
+  /**
+   * La jugada es teoría reconocida pero Stockfish la considera algo inferior a la mejor (típico de
+   * las jugadas que definen defensas de segunda línea, como 2...d6 en la Philidor). El verificador
+   * la acepta hasta 0,15 de pérdida (sigue rechazando errores) y la app lo avisa.
+   */
+  inferior?: boolean
   /** Alternativas tentadoras en la posición ANTERIOR a esta jugada, y cómo se castigan. */
   porQueNo?: PorQueNo[]
 }

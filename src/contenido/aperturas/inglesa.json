@@ -1,0 +1,223 @@
+{
+  "id": "inglesa",
+  "nombre": "Apertura Inglesa",
+  "raiz": "c2c4",
+  "resumen": "Apertura de flanco: con 1.c4 las blancas controlan d5 desde el costado en vez de ocuparlo. Suele llevar a posiciones de maniobra, con el alfil de rey en fianchetto (g3 y Ag2). Contra 1...e5 es una Siciliana invertida: la Siciliana del negro, pero con un tiempo de más para las blancas.",
+  "planesBlancas": [
+    "Controlar d5 con Cc3, el peón de c4 y el alfil de g2.",
+    "Expandirse en el flanco de dama con Tb1, b4 y b5.",
+    "Elegir el momento para el centro: d3 tranquilo, o d4 cuando el negro se descuida."
+  ],
+  "planesNegras": [
+    "Ocupar el centro con ...e5 (y a veces ...d5) aprovechando que las blancas no lo hacen.",
+    "Contra el fianchetto, ...d5 tras cxd5 Cxd5 da un juego activo, como una Siciliana del Dragón invertida.",
+    "Posiciones simétricas con ...c5 si el negro busca solidez."
+  ],
+  "estructura": "Muy variable. Contra 1...e5, peones blancos en c4 y d3 contra e5 y d6 (o un centro abierto tras ...d5 y cxd5). En la Simétrica, peones c4 contra c5 con juego en el flanco de dama.",
+  "rupturas": [
+    "b4-b5 de las blancas en el flanco de dama.",
+    "d4 de las blancas cuando el negro no lo controla.",
+    "...d5 y ...f5 del negro."
+  ],
+  "piezas": [
+    "Alfil blanco de f1: g2, en la diagonal larga, apuntando a d5 y b7.",
+    "Caballo blanco de b1: c3, sobre d5.",
+    "Torre blanca: b1, para apoyar b4-b5."
+  ],
+  "trampas": [],
+  "notas": {
+    "c2c4": {
+      "porQue": "Controla d5 desde el flanco y deja abiertas varias estructuras: el negro no sabe todavía si va a enfrentar una d4 o una e4."
+    },
+    "c2c4 e7e5": {
+      "porQue": "Ocupa el centro con el peón de rey: es una Siciliana con los colores invertidos."
+    },
+    "c2c4 e7e5 b1c3": {
+      "porQue": "Refuerza el control de d5, la casilla clave de la Inglesa.",
+      "porQueNo": [
+        {
+          "uci": "f2f4",
+          "texto": "Abrir el flanco de rey tan pronto falla: exf4 y el negro queda cómodo con un peón de más."
+        },
+        {
+          "uci": "f2f3",
+          "texto": "Debilita la diagonal e1-h4: Dh4+ y la dama negra entra con tiempo."
+        }
+      ]
+    },
+    "c2c4 e7e5 b1c3 g8f6": {
+      "porQue": "Desarrolla y prepara ...d5 o ...Ab4.",
+      "porQueNo": [
+        {
+          "uci": "d7d5",
+          "texto": "Sin el caballo en f6, ...d5 entrega el peón: cxd5."
+        }
+      ]
+    },
+    "c2c4 e7e5 b1c3 g8f6 g2g3": {
+      "porQue": "Prepara el fianchetto: el alfil en g2 suma presión sobre d5 y sobre todo el flanco de dama."
+    },
+    "c2c4 e7e5 b1c3 g8f6 g2g3 d7d5": {
+      "porQue": "El negro ocupa el centro antes de que el alfil llegue a g2.",
+      "porQueNo": [
+        {
+          "uci": "e5e4",
+          "texto": "El peón avanzado queda débil: Ag2 y el negro lo pierde."
+        }
+      ]
+    },
+    "c2c4 e7e5 b1c3 g8f6 g2g3 d7d5 c4d5": {
+      "porQue": "Cambia el peón de flanco por el central del negro."
+    },
+    "c2c4 e7e5 b1c3 g8f6 g2g3 d7d5 c4d5 f6d5": {
+      "porQue": "Retoma con el caballo: es una Siciliana del Dragón con colores invertidos.",
+      "porQueNo": [
+        {
+          "uci": "e5e4",
+          "texto": "Dejar el peón de d5 sin recuperar pierde material: Ag2 y el negro no puede sostener e4."
+        },
+        {
+          "uci": "f8d6",
+          "texto": "Ag2 y el peón de d5 queda de más para las blancas."
+        }
+      ]
+    },
+    "c2c4 g8f6": {
+      "porQue": "Respuesta flexible: puede llevar a una India, a una Simétrica o a una Siciliana invertida."
+    },
+    "c2c4 g8f6 b1c3": {
+      "porQue": "Controla d5 y e4."
+    },
+    "c2c4 g8f6 b1c3 e7e6": {
+      "porQue": "Prepara ...d5 o ...Ab4 contra el caballo de c3.",
+      "porQueNo": [
+        {
+          "uci": "b7b5",
+          "texto": "El gambito no da compensación: Cxb5."
+        }
+      ]
+    },
+    "c2c4 c7c5": {
+      "porQue": "Variante Simétrica: el negro copia la idea y también controla d4 desde el flanco."
+    },
+    "c2c4 c7c5 b1c3": {
+      "porQue": "Desarrollo flexible, controlando d5."
+    },
+    "c2c4 c7c5 b1c3 g7g6": {
+      "porQue": "Fianchetto negro: el juego queda simétrico y de maniobra.",
+      "porQueNo": [
+        {
+          "uci": "d8b6",
+          "texto": "La dama sale demasiado temprano: e3, d4 y d5 la usan como blanco."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "English Opening (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/English_Opening",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "c2c4 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "c2c4 e7e5 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "c2c4 e7e5 f2f4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 12 puntos de chances: +0,2 → −1,1. Refutación: exf4 Cf3 Ae7 d3 Ah4+ Rd2"
+      },
+      "c2c4 e7e5 f2f3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 13 puntos de chances: +0,2 → −1,3. Refutación: Dh4+ g3 Dxc4 e3 Dc6 d4"
+      },
+      "c2c4 e7e5 b1c3 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "c2c4 e7e5 b1c3 d7d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: −0,1 → −1,1. Refutación: cxd5 Cf6 Cf3 Ad6 e4 O-O"
+      },
+      "c2c4 e7e5 b1c3 g8f6 g2g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "c2c4 e7e5 b1c3 g8f6 g2g3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "c2c4 e7e5 b1c3 g8f6 g2g3 e5e4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: −0,1 → −1,2. Refutación: Ag2 c6 Cxe4 Cxe4 Axe4 d5"
+      },
+      "c2c4 e7e5 b1c3 g8f6 g2g3 d7d5 c4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "c2c4 e7e5 b1c3 g8f6 g2g3 d7d5 c4d5 f6d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "c2c4 e7e5 b1c3 g8f6 g2g3 d7d5 c4d5 e5e4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 17 puntos de chances: −0,1 → −2,1. Refutación: Ag2 Ae7 Cxe4 Cxd5 Cc3 Cxc3"
+      },
+      "c2c4 e7e5 b1c3 g8f6 g2g3 d7d5 c4d5 f8d6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,1 → −1,0. Refutación: Ag2 c6 dxc6 Cxc6 Cf3 Ae7"
+      },
+      "c2c4 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "c2c4 g8f6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "c2c4 g8f6 b1c3 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "c2c4 g8f6 b1c3 b7b5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: 0,0 → −1,1. Refutación: Cxb5 e5 e3 Ae7 Cf3 e4"
+      },
+      "c2c4 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "c2c4 c7c5 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "c2c4 c7c5 b1c3 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "c2c4 c7c5 b1c3 d8b6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,3 → −0,9. Refutación: e3 g6 Cf3 Ag7 d4 d6"
+      }
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "id": "petrov",
+  "nombre": "Defensa Petrov",
+  "raiz": "e2e4 e7e5 g1f3 g8f6",
+  "resumen": "En vez de defender e5, el negro contraataca e4. La posición suele quedar simétrica y muy sólida. El detalle clave: tras 3.Cxe5 el negro no recupera el peón enseguida, sino que primero echa al caballo con ...d6; recién después toma en e4.",
+  "planesBlancas": [
+    "Aprovechar el tiempo de más: d4, Ad3, enroque y c4 para presionar el centro negro.",
+    "Buscar pequeñas ventajas en posiciones simétricas, o el enroque largo con Cc3 en las líneas más agudas."
+  ],
+  "planesNegras": [
+    "Recuperar el peón en el momento justo y mantener la simetría.",
+    "Caballo fuerte en e4 apoyado por ...d5; desarrollo con ...Ad6 o ...Ae7 y enroque."
+  ],
+  "estructura": "Simétrica: peones en d4 y d5 sin peones e. Las columnas e quedan abiertas y la lucha es por las casillas e4 y e5.",
+  "rupturas": [
+    "c4 de las blancas contra d5.",
+    "...c5 del negro en algunas líneas."
+  ],
+  "piezas": [
+    "Caballo negro: e4, apoyado por ...d5.",
+    "Alfil blanco: d3, cuestionando el caballo de e4.",
+    "Torres: a la columna e abierta."
+  ],
+  "trampas": [
+    {
+      "jugadas": "e2e4 e7e5 g1f3 g8f6 f3e5 f6e4 d1e2 e4f6 e5c6",
+      "texto": "Si el negro toma en e4 sin echar antes al caballo, De2 lo pone en apuros: la natural 4...Cf6?? permite Cc6+, jaque descubierto que gana la dama."
+    }
+  ],
+  "notas": {
+    "e2e4 e7e5 g1f3 g8f6": {
+      "porQue": "Contraataca e4 en vez de defender e5."
+    },
+    "e2e4 e7e5 g1f3 g8f6 f3e5": {
+      "porQue": "Toma el peón: ahora el negro tiene que recuperarlo con cuidado."
+    },
+    "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6": {
+      "porQue": "Primero echa al caballo: así, cuando tome en e4, no va a haber descubiertos por la columna e. Es la forma más segura (3...Cxe4 también se juega, pero tras 4.De2 hay que conocer las trampas).",
+      "porQueNo": [
+        {
+          "uci": "b8c6",
+          "texto": "Gambito Stafford: tiene trampas, pero con buen juego las blancas se quedan con el peón de más (Cxc6)."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3": {
+      "porQue": "El caballo se retira a una buena casilla."
+    },
+    "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4": {
+      "porQue": "Ahora sí recupera el peón, sin peligro de descubiertos.",
+      "porQueNo": [
+        {
+          "uci": "b8c6",
+          "texto": "Olvidarse de recuperar el peón: Cc3 y las blancas quedan con un peón de más."
+        },
+        {
+          "uci": "f8e7",
+          "texto": "Mismo problema: Cc3 defiende e4 y el negro queda con un peón menos."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4": {
+      "porQue": "Ocupa el centro; después vienen Ad3 y el enroque."
+    },
+    "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5": {
+      "porQue": "Sostiene el caballo de e4 con un peón: estructura simétrica y sólida."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Petrov's Defence (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Petrov%27s_Defence",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 e7e5 g1f3 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 b8c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 13 puntos de chances: −0,5 → −2,0. Refutación: Cxc6 bxc6 Cc3 g6 d4 Ag7"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 b8c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 12 puntos de chances: −0,5 → −1,8. Refutación: Cc3 d5 exd5 Cxd5 Cxd5 Dxd5"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f8e7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 12 puntos de chances: −0,5 → −1,8. Refutación: Cc3 d5 exd5 Cxd5 Cxd5 Dxd5"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      }
+    }
+  }
+}

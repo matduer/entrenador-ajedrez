@@ -1,0 +1,98 @@
+{
+  "id": "moderna",
+  "nombre": "Defensa Moderna",
+  "raiz": "e2e4 g7g6",
+  "resumen": "Pariente de la Pirc: el negro hace el fianchetto antes de sacar el caballo a f6. Así evita que e5 eche al caballo y conserva más opciones (...d6, ...c6, ...a6 y ...b5), pero deja a las blancas todavía más libertad en el centro.",
+  "planesBlancas": [
+    "Armar el centro con e4, d4 y Cc3 y desarrollarse con Ae3, Dd2 y a veces el enroque largo.",
+    "Atacar con h4-h5 o f4 si el negro tarda en desafiar el centro."
+  ],
+  "planesNegras": [
+    "Fianchetto y ataque al centro con ...c5, ...e5 o ...d5 en el momento justo.",
+    "Expansión en el flanco de dama con ...a6 y ...b5."
+  ],
+  "estructura": "Las blancas tienen e4 y d4; el negro, peones en g6 y d6 (o c6). Como en la Pirc, la lucha es por cuándo y cómo el negro rompe el centro.",
+  "rupturas": [
+    "...c5, ...e5 o ...d5 del negro.",
+    "e5, f4-f5 y h4-h5 de las blancas."
+  ],
+  "piezas": [
+    "Alfil negro de f8: g7, apuntando a d4.",
+    "Caballo negro de g8: e7 o f6 según la estructura."
+  ],
+  "trampas": [],
+  "notas": {
+    "e2e4 g7g6": {
+      "porQue": "Fianchetto inmediato: el negro deja el centro para atacarlo con el alfil desde g7."
+    },
+    "e2e4 g7g6 d2d4": {
+      "porQue": "Las blancas ocupan el centro con los dos peones."
+    },
+    "e2e4 g7g6 d2d4 f8g7": {
+      "porQue": "El alfil presiona d4 desde lejos."
+    },
+    "e2e4 g7g6 d2d4 f8g7 b1c3": {
+      "porQue": "Defiende e4 y completa el centro."
+    },
+    "e2e4 g7g6 d2d4 f8g7 b1c3 d7d6": {
+      "porQue": "Sostiene e5 y prepara ...Cf6 (transponiendo a la Pirc) o ...c6 y ...b5.",
+      "porQueNo": [
+        {
+          "uci": "e7e5",
+          "texto": "Sin ...d6, dxe5 gana un peón: el alfil de g7 no alcanza para recuperarlo."
+        },
+        {
+          "uci": "e7e6",
+          "texto": "Debilita las casillas negras sin necesidad: h4-h5 y las blancas atacan el flanco de rey."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Modern Defense (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Modern_Defense",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 g7g6 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 g7g6 d2d4 f8g7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 g7g6 d2d4 f8g7 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 g7g6 d2d4 f8g7 b1c3 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 g7g6 d2d4 f8g7 b1c3 e7e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,6 → −1,5. Refutación: dxe5 Cc6 f4 Cge7 Cf3 O-O"
+      },
+      "e2e4 g7g6 d2d4 f8g7 b1c3 e7e6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,6 → −1,3. Refutación: h4 Cc6 Cf3 h6 d5 Ce5"
+      }
+    }
+  }
+}

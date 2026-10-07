@@ -1,0 +1,220 @@
+{
+  "id": "londres",
+  "nombre": "Sistema Londres",
+  "raiz": "d2d4 d7d5 c1f4",
+  "resumen": "Un sistema más que una apertura: las blancas arman casi siempre la misma pirámide (d4, Af4, e3, Cf3, c3, Cbd2, Ad3), con el alfil de casillas negras afuera antes de e3. Es sólido y fácil de aprender. Su punto sensible es b2: con el alfil fuera de c1, la respuesta más incómoda es ...c5 con ...Db6.",
+  "planesBlancas": [
+    "Completar la pirámide y llevar el caballo a e5, apoyado por d4 y el alfil de f4.",
+    "Ataque en el flanco de rey con Dh5, Tf3 o g4 en algunas líneas.",
+    "Si el negro juega ...Db6, defender b2 sin perder estructura (Db3, Dc2 o b3)."
+  ],
+  "planesNegras": [
+    "...c5 enseguida para atacar d4 antes de que c3 llegue cómodo, y ...Cc6 con ...Db6 contra b2.",
+    "Cambiar el alfil de f4 con ...Ad6 o ...Ch5.",
+    "Estructuras de Gambito de Dama con ...e6, o fianchetto con ...g6."
+  ],
+  "estructura": "Pirámide blanca c3-d4-e3 con el alfil de f4 por fuera. El negro suele tener d5 y c5 (o e6).",
+  "rupturas": [
+    "...c5 y ...e5 del negro.",
+    "e4 o c4 de las blancas en el momento oportuno."
+  ],
+  "piezas": [
+    "Alfil blanco de c1: f4, afuera antes de e3. Si lo atacan, puede ir a g3 o h2 (por eso a veces h3).",
+    "Caballo blanco de g1: f3 y después e5.",
+    "Dama negra: b6, contra b2."
+  ],
+  "trampas": [],
+  "notas": {
+    "d2d4 d7d5 c1f4": {
+      "porQue": "Saca el alfil antes de e3 para que no quede encerrado: es la idea básica del Londres."
+    },
+    "d2d4 d7d5 c1f4 g8f6": {
+      "porQue": "Desarrollo natural.",
+      "porQueNo": [
+        {
+          "uci": "e7e5",
+          "texto": "El peón no está defendido: Axe5."
+        },
+        {
+          "uci": "f7f5",
+          "texto": "Debilita e5 y el flanco de rey sin ganar nada: e3 y las blancas quedan cómodas."
+        }
+      ]
+    },
+    "d2d4 d7d5 c1f4 g8f6 e2e3": {
+      "porQue": "Sostiene d4 y abre el alfil de f1."
+    },
+    "d2d4 d7d5 c1f4 g8f6 e2e3 c7c5": {
+      "porQue": "La respuesta más incómoda: ataca d4 y prepara ...Cc6 y ...Db6 contra b2.",
+      "porQueNo": [
+        {
+          "uci": "f6e4",
+          "texto": "Prematuro: Ad3 cuestiona el caballo enseguida y el negro pierde tiempo."
+        }
+      ]
+    },
+    "d2d4 d7d5 c1f4 g8f6 e2e3 c7c5 c2c3": {
+      "porQue": "Sostiene d4 con otro peón: completa la pirámide."
+    },
+    "d2d4 d7d5 c1f4 g8f6 e2e3 c7c5 c2c3 b8c6": {
+      "porQue": "Presiona d4 y prepara ...Db6."
+    },
+    "d2d4 d7d5 c1f4 c7c5": {
+      "porQue": "Ataque inmediato a d4."
+    },
+    "d2d4 d7d5 c1f4 c7c5 e2e3": {
+      "porQue": "Mantiene la estructura."
+    },
+    "d2d4 d7d5 c1f4 c7c5 e2e3 b8c6": {
+      "porQue": "Presiona d4 y prepara ...Db6 con el caballo ya en juego.",
+      "porQueNo": [
+        {
+          "uci": "d8b6",
+          "texto": "Antes de ...Cc6, la dama en b6 da a las blancas Cc3 y Cb5 con amenazas sobre c7."
+        },
+        {
+          "uci": "c5c4",
+          "texto": "Cerrar con ...c4 suelta la presión sobre d4: b3 y las blancas atacan la cadena."
+        }
+      ]
+    },
+    "d2d4 d7d5 c1f4 c7c5 e2e3 b8c6 c2c3": {
+      "porQue": "Completa la pirámide."
+    },
+    "d2d4 d7d5 c1f4 c7c5 e2e3 b8c6 c2c3 d8b6": {
+      "porQue": "Ataca b2, que el alfil de c1 ya no defiende."
+    },
+    "d2d4 d7d5 c1f4 c7c5 e2e3 b8c6 c2c3 d8b6 d1b3": {
+      "porQue": "Defiende b2 ofreciendo el cambio de damas (también sirven Dc2 o b3).",
+      "porQueNo": [
+        {
+          "uci": "f1e2",
+          "texto": "Desarrollar como si nada: Dxb2 y el negro gana un peón."
+        },
+        {
+          "uci": "f4g3",
+          "texto": "Tampoco defiende b2: cxd4 y Dxb2."
+        }
+      ]
+    },
+    "d2d4 g8f6 c1f4": {
+      "porQue": "El Londres también se juega contra 1...Cf6: misma idea, el alfil afuera antes de e3."
+    },
+    "d2d4 g8f6 c1f4 d7d5": {
+      "porQue": "Ocupa el centro y lleva al esquema principal.",
+      "porQueNo": [
+        {
+          "uci": "e7e5",
+          "texto": "El gambito no funciona: dxe5 y el caballo tiene que irse a una casilla mala."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "London System (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/London_System",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "d2d4 d7d5 c1f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 c1f4 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 c1f4 e7e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: −0,1 → −1,3. Refutación: Axe5 Cc6 Ag3 h5 h4 Cge7"
+      },
+      "d2d4 d7d5 c1f4 f7f5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,1 → −0,9. Refutación: c4 e6 e3 Cf6 Cc3 Ad6"
+      },
+      "d2d4 d7d5 c1f4 g8f6 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 c1f4 g8f6 e2e3 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "d2d4 d7d5 c1f4 g8f6 e2e3 f6e4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,1 → −0,8. Refutación: Ad3 Cf6 Cf3 e6 c4 Ad6"
+      },
+      "d2d4 d7d5 c1f4 g8f6 e2e3 c7c5 c2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "d2d4 d7d5 c1f4 g8f6 e2e3 c7c5 c2c3 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "d2d4 d7d5 c1f4 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 c1f4 c7c5 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 c1f4 c7c5 e2e3 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 c1f4 c7c5 e2e3 d8b6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 4 puntos de chances: −0,1 → −0,6. Refutación: Cc3 e6 Cb5 Ca6 a4 Ae7"
+      },
+      "d2d4 d7d5 c1f4 c7c5 e2e3 c5c4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 4 puntos de chances: −0,1 → −0,6. Refutación: b3 cxb3 axb3 Cc6 Cf3 e6"
+      },
+      "d2d4 d7d5 c1f4 c7c5 e2e3 b8c6 c2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 c1f4 c7c5 e2e3 b8c6 c2c3 d8b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 c1f4 c7c5 e2e3 b8c6 c2c3 d8b6 d1b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c1f4 c7c5 e2e3 b8c6 c2c3 d8b6 f1e2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,0 → −0,8. Refutación: Dxb2 Cd2 e6 Cgf3 Dxc3 O-O"
+      },
+      "d2d4 d7d5 c1f4 c7c5 e2e3 b8c6 c2c3 d8b6 f4g3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 16 puntos de chances: −0,0 → −1,9. Refutación: cxd4 cxd4 Dxb2 Cd2 Af5 Dc1"
+      },
+      "d2d4 g8f6 c1f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1f4 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1f4 e7e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 17 puntos de chances: −0,1 → −2,0. Refutación: dxe5 Ch5 Ad2 d6 e4 g6"
+      }
+    }
+  }
+}

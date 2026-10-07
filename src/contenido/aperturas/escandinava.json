@@ -1,0 +1,181 @@
+{
+  "id": "escandinava",
+  "nombre": "Defensa Escandinava",
+  "raiz": "e2e4 d7d5",
+  "resumen": "El negro ataca e4 desde la primera jugada. Tras 2.exd5 Dxd5 la dama queda en el centro y las blancas ganan un tiempo con Cc3; a cambio, el negro tiene un desarrollo fácil y una estructura sólida, parecida a la de la Caro-Kann, con el alfil de c8 afuera.",
+  "planesBlancas": [
+    "Ganar tiempo atacando a la dama negra (Cc3, Ad2, Cf3-e5) y desarrollar más rápido.",
+    "Ocupar el centro con d4 y usar la ventaja de espacio.",
+    "Contra 2...Cf6, intentar conservar el peón con c4 o desarrollar con d4 y Cf3."
+  ],
+  "planesNegras": [
+    "Ubicar la dama en una casilla segura (a5, d6 o d8) y desarrollar rápido.",
+    "Sacar el alfil de c8 a f5 o g4 antes de ...e6, como en la Caro-Kann.",
+    "Estructura c6-e6 sólida y juego con ...Cbd7, ...e6 y ...Ae7 o ...Ab4."
+  ],
+  "estructura": "Las blancas tienen el peón de d4 contra los de c6 y e6 del negro: estructura tipo Caro-Kann, con más espacio para las blancas.",
+  "rupturas": [
+    "...c5 o ...e5 del negro para cuestionar d4.",
+    "d5 de las blancas en algunas líneas, para abrir el juego."
+  ],
+  "piezas": [
+    "Dama negra: a5 (clavando contra el rey en algunas líneas), d6 o d8.",
+    "Alfil negro de c8: f5 o g4, afuera antes de ...e6.",
+    "Caballo blanco: c3 con tiempo sobre la dama, y e5 en algunas líneas."
+  ],
+  "trampas": [],
+  "notas": {
+    "e2e4 d7d5": {
+      "porQue": "Ataca e4 enseguida: obliga a las blancas a decidir antes de completar el centro."
+    },
+    "e2e4 d7d5 e4d5": {
+      "porQue": "La respuesta más directa: toma el peón y obliga a la dama negra a salir para recuperarlo."
+    },
+    "e2e4 d7d5 e4d5 d8d5": {
+      "porQue": "Recupera el peón con la dama: pierde algo de tiempo, pero el juego queda abierto y simple.",
+      "porQueNo": [
+        {
+          "uci": "c8f5",
+          "texto": "Sin recuperar el peón, Ab5+ complica el desarrollo y las blancas quedan con un peón de más."
+        },
+        {
+          "uci": "e7e6",
+          "texto": "Gambito sin compensación: Ab5+ y el negro no recupera el material con comodidad."
+        }
+      ]
+    },
+    "e2e4 d7d5 e4d5 d8d5 b1c3": {
+      "porQue": "Desarrolla atacando a la dama: es el tiempo que el negro paga por la Escandinava."
+    },
+    "e2e4 d7d5 e4d5 d8d5 b1c3 d5a5": {
+      "porQue": "La casilla más usada: desde a5 la dama clava a veces el caballo de c3 y no queda en el camino de las piezas.",
+      "porQueNo": [
+        {
+          "uci": "d5d4",
+          "texto": "En d4 la dama sigue siendo un blanco: Cf3 la ataca otra vez y el negro sigue perdiendo tiempo."
+        }
+      ]
+    },
+    "e2e4 d7d5 e4d5 d8d5 b1c3 d5a5 d2d4": {
+      "porQue": "Ocupa el centro: la ventaja de espacio es lo que las blancas obtienen del tiempo ganado."
+    },
+    "e2e4 d7d5 e4d5 d8d5 b1c3 d5a5 d2d4 g8f6": {
+      "porQue": "Desarrolla y controla e4 y d5.",
+      "porQueNo": [
+        {
+          "uci": "b8c6",
+          "texto": "d5 echa al caballo y las blancas ganan más espacio con tiempo."
+        }
+      ]
+    },
+    "e2e4 d7d5 e4d5 d8d5 b1c3 d5a5 d2d4 g8f6 g1f3": {
+      "porQue": "Desarrollo natural; el caballo puede ir a e5 más adelante."
+    },
+    "e2e4 d7d5 e4d5 d8d5 b1c3 d5a5 d2d4 g8f6 g1f3 c8f5": {
+      "porQue": "El alfil sale antes de ...e6 y controla e4.",
+      "porQueNo": [
+        {
+          "uci": "a5b6",
+          "texto": "Mover otra vez la dama sin necesidad: a4 y Ce5 ganan más tiempo."
+        },
+        {
+          "uci": "c8d7",
+          "texto": "Pasivo: el alfil no hace nada en d7 y Ac4 deja a las blancas muy activas."
+        }
+      ]
+    },
+    "e2e4 d7d5 e4d5 g8f6": {
+      "porQue": "Escandinava moderna: recupera el peón con el caballo en vez de con la dama, para no perder tiempo."
+    },
+    "e2e4 d7d5 e4d5 g8f6 d2d4": {
+      "porQue": "Ocupa el centro y deja que el negro recupere el peón: las blancas quedan con más espacio."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Scandinavian Defense (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Scandinavian_Defense",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4d5 d8d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4d5 c8f5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,7 → −1,3. Refutación: Ab5+ Cd7 Cf3 Cf6 Cc3 a6"
+      },
+      "e2e4 d7d5 e4d5 e7e6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,7 → −1,2. Refutación: Ab5+ c6 dxc6 bxc6 Ae2 Ab7"
+      },
+      "e2e4 d7d5 e4d5 d8d5 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4d5 d8d5 b1c3 d5a5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4d5 d8d5 b1c3 d5d4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,7 → −1,3. Refutación: Cf3 Dd8 Ac4 Cf6 d4 e6"
+      },
+      "e2e4 d7d5 e4d5 d8d5 b1c3 d5a5 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4d5 d8d5 b1c3 d5a5 d2d4 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4d5 d8d5 b1c3 d5a5 d2d4 b8c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,8 → −1,6. Refutación: d5 Cd8 Ad2 c6 Cf3 Cf6"
+      },
+      "e2e4 d7d5 e4d5 d8d5 b1c3 d5a5 d2d4 g8f6 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4d5 d8d5 b1c3 d5a5 d2d4 g8f6 g1f3 c8f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4d5 d8d5 b1c3 d5a5 d2d4 g8f6 g1f3 a5b6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,8 → −1,6. Refutación: a4 a5 Ac4 e6 O-O Ae7"
+      },
+      "e2e4 d7d5 e4d5 d8d5 b1c3 d5a5 d2d4 g8f6 g1f3 c8d7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,8 → −1,5. Refutación: Ad2 e6 Ac4 Ab4 O-O O-O"
+      },
+      "e2e4 d7d5 e4d5 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4d5 g8f6 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      }
+    }
+  }
+}

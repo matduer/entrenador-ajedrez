@@ -92,7 +92,7 @@
 
     if (uci === esperada) {
       const nota = notaPara(objetivo.slice(0, ply + 1))
-      porQue = nota?.nota.porQue
+      porQue = nota ? nota.nota.porQue + (nota.nota.inferior ? " (Stockfish la considera algo inferior, pero es teoría jugable.)" : "") : undefined
       mensaje = { tipo: 'bien', texto: `✓ ${san}` }
       ply++
       erroresAca = 0
@@ -139,7 +139,7 @@
     const nota = notaPara(objetivo.slice(0, ply + 1))
     const san = sanDeUci(posDesdeFen(fen), esperada)
     if (nota) {
-      porQue = `${san}: ${nota.nota.porQue}`
+      porQue = `${san}: ${nota.nota.porQue}${nota.nota.inferior ? " (Stockfish la considera algo inferior, pero es teoría jugable.)" : ""}`
       return
     }
     const r = await motorInteractivo().analizar(fen, { profundidad: 16, multipv: 3 })

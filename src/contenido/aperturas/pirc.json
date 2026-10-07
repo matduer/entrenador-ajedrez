@@ -1,0 +1,151 @@
+{
+  "id": "pirc",
+  "nombre": "Defensa Pirc",
+  "raiz": "e2e4 d7d6",
+  "resumen": "Defensa hipermoderna contra 1.e4: el negro deja que las blancas armen el centro con e4 y d4 y lo ataca después desde el costado, con el alfil en fianchetto en g7 y rupturas como ...c5, ...e5 o ...c6 y ...b5. A diferencia de la India de Rey, las blancas no jugaron c4, así que tienen más opciones de atacar.",
+  "planesBlancas": [
+    "Ataque Austriaco (f4): ganar espacio y empujar e5 para echar al caballo de f6.",
+    "Sistema 150 (Ae3, Dd2, Ah6): cambiar el alfil de g7 y atacar con h4-h5.",
+    "Variante Clásica (Cf3, Ae2, O-O): ventaja de espacio sin riesgos."
+  ],
+  "planesNegras": [
+    "Enrocar corto con el alfil en g7 y atacar el centro con ...c5 o ...e5.",
+    "Contra el Austriaco, ...c5 enseguida o ...O-O y ...c5.",
+    "...c6 y ...b5 para ganar espacio en el flanco de dama."
+  ],
+  "estructura": "Las blancas tienen el centro clásico (e4-d4) y el negro peones en d6 y g6. Todo depende de cuándo el negro rompe con ...c5 o ...e5.",
+  "rupturas": [
+    "e5 de las blancas contra el caballo de f6.",
+    "...c5 y ...e5 del negro contra d4."
+  ],
+  "piezas": [
+    "Alfil negro de f8: g7, en la diagonal larga.",
+    "Caballo negro de g8: f6, que puede ser hostigado por e5.",
+    "Alfil blanco de c1: e3 y a veces h6, para cambiar el alfil de g7."
+  ],
+  "trampas": [],
+  "notas": {
+    "e2e4 d7d6": {
+      "porQue": "Prepara ...Cf6 sin que e5 lo eche y deja el centro para atacarlo después."
+    },
+    "e2e4 d7d6 d2d4": {
+      "porQue": "Las blancas ocupan el centro: es lo que la Pirc les ofrece."
+    },
+    "e2e4 d7d6 d2d4 g8f6": {
+      "porQue": "Ataca e4 y obliga a Cc3.",
+      "porQueNo": [
+        {
+          "uci": "d6d5",
+          "texto": "Volver a mover el peón: exd5 Dxd5 y es una Escandinava con un tiempo de menos."
+        },
+        {
+          "uci": "f7f5",
+          "texto": "Abre el rey sin preparación: Cc3 y exf5 dejan al negro expuesto."
+        }
+      ]
+    },
+    "e2e4 d7d6 d2d4 g8f6 b1c3": {
+      "porQue": "Defiende e4 desarrollando."
+    },
+    "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6": {
+      "porQue": "Prepara el fianchetto: la Pirc propiamente dicha.",
+      "porQueNo": [
+        {
+          "uci": "d6d5",
+          "texto": "e5 echa al caballo con tiempo y el negro pierde dos jugadas."
+        },
+        {
+          "uci": "c8g4",
+          "texto": "f3 y Ae3 dejan al alfil sin función y las blancas con un centro fuerte."
+        }
+      ]
+    },
+    "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f2f4": {
+      "porQue": "Ataque Austriaco: prepara e5 para echar al caballo de f6 y ganar espacio."
+    },
+    "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f2f4 f8g7": {
+      "porQue": "Completa el fianchetto y prepara el enroque y ...c5.",
+      "porQueNo": [
+        {
+          "uci": "b8d7",
+          "texto": "e5 y el caballo de f6 no tiene buena casilla: tiene que volver a g8."
+        },
+        {
+          "uci": "b7b6",
+          "texto": "Lento: e5 echa al caballo y las blancas toman la iniciativa."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Pirc Defence (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Pirc_Defence",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 d7d6 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 d7d6 d2d4 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 d7d6 d2d4 d6d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: −0,4 → −1,4. Refutación: exd5 Dxd5 c4 Dd8 Cf3 Cf6"
+      },
+      "e2e4 d7d6 d2d4 f7f5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,4 → −1,2. Refutación: Cc3 Cf6 Ad3 Cxe4 Cxe4 fxe4"
+      },
+      "e2e4 d7d6 d2d4 g8f6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 d7d6 d2d4 g8f6 b1c3 d6d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,5 → −1,3. Refutación: e5 Cg8 h4 e6 Ae3 b6"
+      },
+      "e2e4 d7d6 d2d4 g8f6 b1c3 c8g4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,5 → −1,3. Refutación: f3 Ac8 Ae3 c6 g4 g6"
+      },
+      "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f2f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f2f4 f8g7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f2f4 b8d7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,7 → −1,5. Refutación: e5 Ch5 Cf3 Cg7 Ad3 Cb6"
+      },
+      "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f2f4 b7b6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,7 → −1,5. Refutación: e5 Cg8 Df3 c6 h3 h5"
+      }
+    }
+  }
+}
