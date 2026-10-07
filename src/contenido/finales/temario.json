@@ -891,6 +891,169 @@
           "capitulo": "cap. 13, Finales 94 a 100 (dama contra torre; dama contra torre y peón)"
         }
       ]
+    },
+    {
+      "id": "peones-bloqueados",
+      "titulo": "Finales de peones: peones bloqueados",
+      "nivel": 3,
+      "explicacion": [
+        "Con dos peones bloqueados uno contra otro también hay casillas críticas, pero sirven para comerse el peón rival, no para coronar: son las casillas de la misma fila del peón rival, las tres de cada costado (con un peón negro en d6: a6, b6 y c6, y e6, f6 y g6).",
+        "El rey que llega primero a una de ellas captura el peón, y al hacerlo suele quedar en una casilla crítica de su propio peón. Por eso se cuenta: ¿qué rey llega antes a las casillas críticas del peón rival?",
+        "De la Villa subraya que esta regla vale también con más peones: si la base de una cadena está bloqueada, el rey que alcanza sus casillas críticas la gana."
+      ],
+      "ideas": [
+        "El rey va por el costado del peón rival, no por delante.",
+        "Contá jugadas hasta las casillas críticas de cada lado."
+      ],
+      "posiciones": [
+        {
+          "id": "rodeo-lateral",
+          "fen": "8/3k4/3p4/3P4/2K5/8/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 35,
+          "consigna": "Ganá: el peón de d6 se puede capturar.",
+          "pista": "Rb5 (o Rb4), rumbo a b6 o c6, por el costado del peón. Por el otro lado (Rd4) no se llega.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "c4b5",
+            "dtm": 37,
+            "fecha": "2026-10-07"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 12 «Finales de peones», Final 79 «Peones bloqueados. Las casillas críticas»"
+        }
+      ]
+    },
+    {
+      "id": "lado-largo",
+      "titulo": "Finales de torres: el lado largo",
+      "nivel": 4,
+      "explicacion": [
+        "Cuando el peón no es de torre ni de caballo, divide el tablero en un lado corto y un lado largo. Si el rey defensor no puede ponerse delante del peón, tiene que irse al lado corto y dejar el lado largo para su torre.",
+        "Desde el lado largo, la torre da jaques laterales desde lejos: con tres o más columnas de distancia al peón, el rey atacante no puede acercarse a la torre sin abandonar a su peón.",
+        "El error típico es al revés: rey al lado largo y torre al lado corto, donde está demasiado cerca para dar jaques útiles."
+      ],
+      "ideas": [
+        "Rey al lado corto, torre al lado largo.",
+        "Jaques laterales desde lejos, no desde cerca."
+      ],
+      "posiciones": [
+        {
+          "id": "jaques-laterales",
+          "fen": "5k2/1R6/4K3/4P3/8/8/8/r7 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 25,
+          "consigna": "Jugás con negras. Las blancas amenazan mate en la octava: defendé.",
+          "pista": "Ta6+ y jaques desde el costado, desde la columna a: tu torre está en el lado largo.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "a1c1",
+            "dtm": 0,
+            "fecha": "2026-10-07"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 10 «Torre y peón contra torre», Final 54 «El lado largo»"
+        }
+      ]
+    },
+    {
+      "id": "alfil-mismo-color",
+      "titulo": "Alfil y peón contra alfil del mismo color",
+      "nivel": 4,
+      "explicacion": [
+        "Si el rey defensor se instala delante del peón en una casilla del color contrario al de los alfiles, es tablas sin discusión. El interés empieza cuando no puede.",
+        "Si el rey defensor está lejos, el bando fuerte gana expulsando al alfil rival de las dos diagonales que controlan la casilla de avance del peón: ofrece el cambio de alfiles en una casilla que no tape a su propio peón, y el alfil rival tiene que irse o cambiarse.",
+        "La defensa ideal, cuando el rey no llega adelante, es la oposición por detrás: el rey defensor se pone detrás del rey atacante e impide que ofrezca el cambio sin tapar su peón. Esto alcanza si las dos diagonales tienen cuatro casillas o más; si una es más corta, el alfil y el rey atacante pueden dominarla y se gana."
+      ],
+      "ideas": [
+        "Atacando: ofrecer el cambio de alfiles en una casilla que no bloquee el peón.",
+        "Defendiendo: rey delante en casilla del otro color, o en oposición por detrás.",
+        "Contar las casillas de las diagonales: menos de cuatro es una diagonal corta."
+      ],
+      "posiciones": [
+        {
+          "id": "expulsion",
+          "fen": "8/2K5/3P3k/8/8/7b/4B3/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 30,
+          "consigna": "El rey negro está lejos: expulsá al alfil de las diagonales que vigilan d7.",
+          "pista": "Primero el alfil a una casilla desde donde ofrezca el cambio sin tapar tu peón (Af3, Ac4 o Ab5 sirven; Ag4 no). Si cambian, el peón corona.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "e2a6",
+            "dtm": 25,
+            "fecha": "2026-10-07"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 7 «Alfil y peón contra alfil del mismo color», Finales 33 a 36"
+        }
+      ]
+    },
+    {
+      "id": "alfiles-distinto-color",
+      "titulo": "Alfiles de distinto color con dos peones",
+      "nivel": 4,
+      "explicacion": [
+        "Con alfiles de distinto color, aun dos peones de ventaja pueden no alcanzar. Si los peones están juntos, el bando débil arma un bloqueo: el rey frena a uno y el alfil vigila la casilla de avance del otro, que es del color de su alfil, y el atacante no tiene cómo disputarla.",
+        "Si los peones están separados por varias columnas, el bloqueo se rompe: el rey defensor no puede atender a los dos y el alfil solo frena a uno. Ahí el atacante suele ganar llevando su rey a apoyar al peón que vigila el rey rival."
+      ],
+      "ideas": [
+        "Defendiendo: casillas del color del propio alfil delante de los peones; el rey, en las otras.",
+        "Atacando: separar los peones lo más posible."
+      ],
+      "posiciones": [
+        {
+          "id": "bloqueo",
+          "fen": "8/2b5/4k3/8/4PP2/5K2/8/3B4 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 25,
+          "consigna": "Jugás con negras con dos peones menos: armá el bloqueo.",
+          "pista": "El alfil vigila e5 (Ad6 o Ab8) y el rey se queda frente a los peones.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "c7d6",
+            "dtm": 0,
+            "fecha": "2026-10-07"
+          }
+        },
+        {
+          "id": "peones-separados",
+          "fen": "8/4k3/8/P5P1/3K4/8/4B3/6b1 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 45,
+          "consigna": "Los peones están lejos entre sí: ganá.",
+          "pista": "Acercá tu rey a los peones: el rey negro no puede cuidar los dos y el alfil solo frena a uno.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "d4d5",
+            "dtm": 39,
+            "fecha": "2026-10-07"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 9 «Alfil y dos peones contra alfil, de distinto color», Finales 41 a 51"
+        }
+      ]
     }
   ]
 }
