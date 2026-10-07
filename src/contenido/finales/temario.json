@@ -21,13 +21,13 @@
           "objetivo": "ganar",
           "consigna": "Dá mate con dama y rey.",
           "pista": "Encerrá al rey con la dama a salto de caballo y traé tu rey.",
-          "maxJugadas": 15,
+          "maxJugadas": 22,
           "verificacion": {
             "ok": true,
             "resultado": "win",
             "mejor": "d1d7",
             "dtm": 13,
-            "fecha": "2026-10-06"
+            "fecha": "2026-10-07"
           }
         },
         {
@@ -42,7 +42,7 @@
             "resultado": "win",
             "mejor": "a1a5",
             "dtm": 27,
-            "fecha": "2026-10-06"
+            "fecha": "2026-10-07"
           }
         }
       ],
@@ -80,7 +80,7 @@
             "resultado": "win",
             "mejor": "a4a5",
             "dtm": 25,
-            "fecha": "2026-10-06"
+            "fecha": "2026-10-07"
           }
         },
         {
@@ -95,11 +95,15 @@
             "resultado": "draw",
             "mejor": "d1e1",
             "dtm": 0,
-            "fecha": "2026-10-06"
+            "fecha": "2026-10-07"
           }
         }
       ],
       "fuentes": [
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 1, Final 1 «El cuadrado del peón»"
+        },
         {
           "titulo": "Rule of the square (Wikipedia)",
           "url": "https://en.wikipedia.org/wiki/Rule_of_the_square",
@@ -129,13 +133,13 @@
           "objetivo": "ganar",
           "consigna": "Ganá el final. Solo una jugada de rey gana: las de peón tablean.",
           "pista": "Re3-d3 enfrentando al rey negro: tomá la oposición.",
-          "maxJugadas": 30,
+          "maxJugadas": 36,
           "verificacion": {
             "ok": true,
             "resultado": "win",
             "mejor": "e2d3",
             "dtm": 41,
-            "fecha": "2026-10-06"
+            "fecha": "2026-10-07"
           }
         },
         {
@@ -150,7 +154,7 @@
             "resultado": "win",
             "mejor": "d1c2",
             "dtm": 43,
-            "fecha": "2026-10-06"
+            "fecha": "2026-10-07"
           }
         },
         {
@@ -165,7 +169,7 @@
             "resultado": "win",
             "mejor": "e6d6",
             "dtm": 21,
-            "fecha": "2026-10-06"
+            "fecha": "2026-10-07"
           }
         },
         {
@@ -180,11 +184,15 @@
             "resultado": "draw",
             "mejor": "e2e1",
             "dtm": 0,
-            "fecha": "2026-10-06"
+            "fecha": "2026-10-07"
           }
         }
       ],
       "fuentes": [
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 1, Finales 2 y 3 «El peón en sexta» y «Las casillas críticas»"
+        },
         {
           "titulo": "Opposition (chess) (Wikipedia)",
           "url": "https://en.wikipedia.org/wiki/Opposition_(chess)",
@@ -203,11 +211,13 @@
       "nivel": 2,
       "explicacion": [
         "Con un peón de torre las reglas cambian: si el rey que defiende llega a la esquina de coronación, son tablas aunque el bando fuerte tenga el rey cerca. El rey defensor no puede ser expulsado de la esquina y los intentos de echarlo terminan en ahogado.",
-        "Por eso el peón de torre vale mucho menos que los demás en finales de peones, y también con alfil del color que no controla la casilla de coronación."
+        "Por eso el peón de torre vale mucho menos que los demás en finales de peones, y también con alfil del color que no controla la casilla de coronación.",
+        "Hay una segunda forma de hacer tablas sin llegar a la esquina: encerrar al rey del bando fuerte delante de su propio peón. Si el rey defensor ocupa una de las casillas de la columna del alfil junto a la esquina (c1/c2 contra un peón de a que baja), el rey rival queda atrapado en la columna de torre y el peón solo puede avanzar hasta ahogarlo."
       ],
       "ideas": [
         "Si defendés, corré a la esquina.",
-        "Si atacás, impedí que el rey rival llegue a la esquina antes de avanzar."
+        "Si atacás, impedí que el rey rival llegue a la esquina antes de avanzar.",
+        "Contra el peón de torre también sirve encerrar al rey rival en la banda desde la columna del alfil."
       ],
       "posiciones": [
         {
@@ -222,11 +232,30 @@
             "resultado": "draw",
             "mejor": "h8h7",
             "dtm": 0,
-            "fecha": "2026-10-06"
+            "fecha": "2026-10-07"
+          }
+        },
+        {
+          "id": "encierro",
+          "fen": "8/8/8/p7/8/1k6/3K4/8 w - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 15,
+          "consigna": "Las negras amenazan Rb2 y abrirle paso al peón. Hay una sola jugada que tablea.",
+          "pista": "Rc1: impedí Rb2. Si el rey negro va a a2, mantenelo encerrado yendo y viniendo entre c1 y c2.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "d2c1",
+            "dtm": 0,
+            "fecha": "2026-10-07"
           }
         }
       ],
       "fuentes": [
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 1, Finales 4 y 5 «El peón de torre» y «El encierro del rey fuerte»"
+        },
         {
           "titulo": "King and pawn versus king endgame (Wikipedia)",
           "url": "https://en.wikipedia.org/wiki/King_and_pawn_versus_king_endgame",
@@ -260,11 +289,15 @@
             "resultado": "win",
             "mejor": "c1d1",
             "dtm": 41,
-            "fecha": "2026-10-06"
+            "fecha": "2026-10-07"
           }
         }
       ],
       "fuentes": [
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 10, Final 53 «Posición Lucena. El puente»"
+        },
         {
           "titulo": "Lucena position (Wikipedia)",
           "url": "https://en.wikipedia.org/wiki/Lucena_position",
@@ -298,11 +331,15 @@
             "resultado": "draw",
             "mejor": "a6a1",
             "dtm": 0,
-            "fecha": "2026-10-06"
+            "fecha": "2026-10-07"
           }
         }
       ],
       "fuentes": [
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 10, Final 52 «Posición Philidor»"
+        },
         {
           "titulo": "Philidor position (Wikipedia)",
           "url": "https://en.wikipedia.org/wiki/Philidor_position",
@@ -335,7 +372,7 @@
             "resultado": "draw",
             "mejor": "b7a6",
             "dtm": 0,
-            "fecha": "2026-10-06"
+            "fecha": "2026-10-07"
           }
         }
       ],
@@ -353,7 +390,8 @@
       "nivel": 4,
       "explicacion": [
         "Contra un peón central o de caballo en séptima apoyado por su rey, la dama gana con un método fijo: jaques y clavadas para obligar al rey defensor a ponerse delante de su peón; cada vez que lo hace, el rey propio se acerca una casilla. Cuando el rey llega, se gana el peón o se da mate.",
-        "Contra un peón de alfil o de torre en séptima, en cambio, el defensor suele tener tablas por ahogado si el rey atacante está lejos."
+        "Contra un peón de alfil o de torre en séptima, en cambio, el defensor suele tener tablas por ahogado si el rey atacante está lejos.",
+        "La clave contra el peón de alfil es el truco del ahogado: cuando la dama se pone delante del peón, el rey defensor se mete en la esquina y, si la dama toma el peón, queda ahogado. Por eso la regla práctica es mirar dónde está el rey atacante: si llega a tiempo cerca del peón, hay mate o se gana el peón; si está lejos, son tablas."
       ],
       "ideas": [
         "Obligar al rey rival a bloquear su propio peón para ganar un tiempo.",
@@ -372,15 +410,485 @@
             "resultado": "win",
             "mejor": "h1e4",
             "dtm": 15,
-            "fecha": "2026-10-06"
+            "fecha": "2026-10-07"
+          }
+        },
+        {
+          "id": "peon-c-tablas",
+          "fen": "K7/8/8/8/8/8/2pk4/6Q1 w - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 12,
+          "consigna": "Tu rey está muy lejos: no hay forma de ganar. Aguantá sin perder la dama y sin dejar coronar.",
+          "pista": "Dama a la primera fila o jaques: no la pongas donde el peón corone con jaque o capture.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "g1a1",
+            "dtm": 0,
+            "fecha": "2026-10-07"
+          }
+        },
+        {
+          "id": "peon-c-gana",
+          "fen": "8/8/8/8/2K5/8/2pk4/6Q1 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 21,
+          "consigna": "Con el rey cerca, el peón de alfil sí pierde. Ganá.",
+          "pista": "Jaques para que el rey negro no se esconda en la esquina (Df2+, Dd4+), y acercá tu rey hacia b3 o d3.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "g1f2",
+            "dtm": 11,
+            "fecha": "2026-10-07"
           }
         }
       ],
       "fuentes": [
         {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 4, Finales 16 a 18 «Dama contra peón en séptima»"
+        },
+        {
           "titulo": "Queen versus pawn endgame (Wikipedia)",
           "url": "https://en.wikipedia.org/wiki/Queen_versus_pawn_endgame",
           "licencia": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    {
+      "id": "casillas-criticas",
+      "titulo": "Casillas críticas, oposición a distancia y tiempo de reserva",
+      "nivel": 2,
+      "explicacion": [
+        "De la Villa propone pensar los finales de rey y peón contra rey con las casillas críticas antes que con la oposición: si el rey del bando fuerte pisa una casilla crítica, el peón corona, mueva quien mueva.",
+        "Para un peón que no es de torre y no pasó de la cuarta fila, las casillas críticas son las tres que están dos filas delante del peón (con el peón en d4: c6, d6 y e6). Con el peón en quinta o sexta, son las tres de la fila siguiente.",
+        "La oposición sirve para lo contrario: impedir que el rey rival llegue a esas casillas. Cuando los reyes están lejos, la oposición a distancia (en la misma columna, con un número impar de casillas entre ambos) frena el avance del rey rival antes de que llegue.",
+        "El peón tiene además un recurso propio, el tiempo de reserva: si los reyes están enfrentados, un paso del peón cede el turno y el rey fuerte gana las casillas críticas de la nueva posición."
+      ],
+      "ideas": [
+        "El rey va a la casilla crítica más alejada del rey rival, no a la que lo enfrenta.",
+        "Defendiendo, la oposición a distancia (tres o cinco casillas de por medio) frena al rey rival desde lejos.",
+        "Un paso de peón a tiempo vale como una jugada de espera."
+      ],
+      "posiciones": [
+        {
+          "id": "rodeo",
+          "fen": "8/5k2/8/8/3PK3/8/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 30,
+          "consigna": "Ganá: llevá el rey a una casilla crítica del peón.",
+          "pista": "Rd5 rumbo a c6, la casilla crítica más alejada del rey negro.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "e4d5",
+            "dtm": 29,
+            "fecha": "2026-10-07"
+          }
+        },
+        {
+          "id": "oposicion-distante",
+          "fen": "8/8/8/1kp5/8/8/8/2K5 w - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 20,
+          "consigna": "Defendé: una sola jugada tablea.",
+          "pista": "Rb1: oposición a distancia con el rey de b5. Cuando el rey negro avance, enfrentalo de nuevo.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "c1b1",
+            "dtm": 0,
+            "fecha": "2026-10-07"
+          }
+        },
+        {
+          "id": "tiempo-de-reserva",
+          "fen": "8/6k1/8/6K1/8/6P1/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 34,
+          "consigna": "Los reyes están enfrentados y te toca. Ganá.",
+          "pista": "g4: el paso del peón cede el turno, y el rey negro tiene que dejar pasar al tuyo.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "g3g4",
+            "dtm": 37,
+            "fecha": "2026-10-07"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 1, Final 3 «Las casillas críticas» (la oposición distante y el tiempo de reserva)"
+        }
+      ]
+    },
+    {
+      "id": "peon-de-caballo",
+      "titulo": "El peón de caballo y el ahogado",
+      "nivel": 2,
+      "explicacion": [
+        "El peón de caballo cumple las reglas de los demás peones, pero la cercanía de la banda agrega trucos de ahogado para los dos bandos.",
+        "Defendiendo, a veces el rey se salva yendo a la esquina en vez de buscar la oposición: si el rey rival se adelanta, el defensor queda ahogado.",
+        "Atacando, el rey tiene que pasar al otro lado del peón (al lado de la columna de torre) antes de avanzarlo; si el peón llega a sexta con el rey defensor en la esquina, es ahogado."
+      ],
+      "ideas": [
+        "Con peón de caballo, antes de cada avance mirá si el rey rival queda ahogado.",
+        "El rey atacante pasa por el lado de la columna de torre."
+      ],
+      "posiciones": [
+        {
+          "id": "ahogado-defensa",
+          "fen": "8/8/8/8/8/5kp1/8/6K1 w - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 15,
+          "consigna": "Jugás con blancas y defendés. Hacé tablas.",
+          "pista": "Rh1 (o Rf1). Si el rey negro va a f2, quedás ahogado; si el peón avanza, volvé delante de él.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "g1f1",
+            "dtm": 0,
+            "fecha": "2026-10-07"
+          }
+        },
+        {
+          "id": "pasar-al-otro-lado",
+          "fen": "7k/5K2/8/6P1/8/8/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 30,
+          "consigna": "Ganá. Si avanzás el peón ahora, es ahogado.",
+          "pista": "Rg6 y después Rh6: con tu rey del lado de la columna h, el peón avanza tranquilo.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "f7g6",
+            "dtm": 29,
+            "fecha": "2026-10-07"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 1, Finales 2 y 3, apartados «El peón de caballo»"
+        }
+      ]
+    },
+    {
+      "id": "torre-contra-pieza-menor",
+      "titulo": "Torre contra alfil y torre contra caballo",
+      "nivel": 3,
+      "explicacion": [
+        "Torre contra alfil suele ser tablas, pero depende del rincón: el rincón malo es el del color del alfil, porque ahí el alfil no puede tapar los jaques de la torre en la última fila. En el rincón del otro color, el alfil cubre el jaque desde la casilla de al lado del rey y la defensa es sencilla.",
+        "Torre contra caballo también es tablas casi siempre, con dos condiciones: el caballo no se separa del rey (separado, la torre lo encierra y lo gana) y las dos piezas no se meten juntas en un rincón."
+      ],
+      "ideas": [
+        "Con alfil, refugiate en el rincón del color contrario al del alfil.",
+        "Con caballo, caballo pegado al rey, aunque las jugadas sean feas.",
+        "Atacando contra el alfil, obligalo a salir de su escondite antes de amenazar mate."
+      ],
+      "posiciones": [
+        {
+          "id": "rincon-malo",
+          "fen": "7k/8/5K2/8/8/8/1R6/4b3 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 19,
+          "consigna": "El rey negro está en el rincón del color de su alfil: ganá.",
+          "pista": "Llevá tu rey a g6 y usá la torre para quitarle al alfil las casillas desde donde tapa el jaque en la octava.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "f6g6",
+            "dtm": 7,
+            "fecha": "2026-10-07"
+          }
+        },
+        {
+          "id": "rincon-bueno",
+          "fen": "7k/R7/6K1/8/8/8/8/5b2 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 20,
+          "consigna": "Jugás con negras, en el rincón bueno. Hacé tablas.",
+          "pista": "El alfil tiene que poder ir a g8 cuando haya jaque en la octava, y no puede quedar donde la torre lo ataque con tiempo (Ac4, Ad3+).",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "f1g2",
+            "dtm": 0,
+            "fecha": "2026-10-07"
+          }
+        },
+        {
+          "id": "caballo-junto-al-rey",
+          "fen": "8/8/8/8/8/5k2/r7/5NK1 w - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 20,
+          "consigna": "Jugás con blancas: hacé tablas. Hay una sola jugada.",
+          "pista": "Ch2+, y el caballo siempre cerca del rey.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "f1h2",
+            "dtm": 0,
+            "fecha": "2026-10-07"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 1, Finales 6 a 9 (torre contra alfil: el rincón malo y el bueno; torre contra caballo)"
+        }
+      ]
+    },
+    {
+      "id": "caballo-contra-peon",
+      "titulo": "Caballo contra peón",
+      "nivel": 3,
+      "explicacion": [
+        "Un caballo solo frena a un peón en séptima si controla la casilla de coronación o puede llegar a dar jaque cuando el peón corone. Lo más seguro es atacar la casilla de coronación desde el costado, porque desde ahí también se pueden dar jaques al rey que apoya el peón.",
+        "El peón de torre es el más incómodo para el caballo; el de caballo y el de alfil tienen sus propias trampas. De la Villa insiste en saber de memoria unas pocas posiciones clave para calcular rápido las liquidaciones a este final."
+      ],
+      "ideas": [
+        "Antes de cambiar piezas, mirá si el caballo llega a la casilla de coronación.",
+        "Un jaque de caballo puede ganar el tiempo que falta."
+      ],
+      "posiciones": [
+        {
+          "id": "peon-en-septima",
+          "fen": "7K/8/8/8/5N2/8/1kp5/8 w - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 20,
+          "consigna": "Tu rey está lejos: frená el peón solo con el caballo.",
+          "pista": "Ce2 o Cd3+: el caballo tiene que controlar c1.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "f4e2",
+            "dtm": 0,
+            "fecha": "2026-10-07"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 3 «Caballo contra un peón», Finales 10 a 15"
+        }
+      ]
+    },
+    {
+      "id": "torre-contra-peon",
+      "titulo": "Torre contra peón",
+      "nivel": 4,
+      "explicacion": [
+        "Es el más complejo de los finales de pieza contra peón. La pregunta es siempre la misma: ¿el rey de la torre llega a tiempo? Si llega delante del peón, gana; si el peón y su rey avanzan juntos y el otro rey está lejos, puede ser tablas o incluso ganar el peón.",
+        "El arma principal de la torre es el corte: horizontal, para que el rey rival no avance junto a su peón, o vertical, para alejarlo de su peón. Cada jugada de corte gana el tiempo que necesita el propio rey para acercarse.",
+        "Hay casos en que el peón le gana a la torre. El más famoso es la posición de Saavedra: el peón llega a séptima, la torre da jaques y, cuando se le acaban, prepara un ahogado: si el peón corona dama, la torre se entrega con jaque y el rey negro queda ahogado. La salida es coronar torre, que amenaza mate sin dejar el ahogado."
+      ],
+      "ideas": [
+        "Primero el corte, después el rey.",
+        "Contar los tiempos: ¿cuántas jugadas necesita cada rey?",
+        "Antes de coronar dama, mirá si queda ahogado o una clavada: a veces hay que coronar otra pieza."
+      ],
+      "posiciones": [
+        {
+          "id": "corte-horizontal",
+          "fen": "8/1K6/3k4/8/3p4/8/8/7R w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 33,
+          "consigna": "Ganá: el rey negro no tiene que poder acompañar a su peón.",
+          "pista": "Th5: el corte en la quinta fila deja al rey negro detrás de su peón mientras el tuyo se acerca.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "h1h5",
+            "dtm": 35,
+            "fecha": "2026-10-07"
+          }
+        },
+        {
+          "id": "saavedra",
+          "fen": "8/8/1KP5/3r4/8/8/8/k7 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 41,
+          "consigna": "La posición de Saavedra: el peón le gana a la torre.",
+          "pista": "c7, y el rey se acerca a la torre esquivando los jaques. Al final, coroná torre, no dama: con dama hay un ahogado.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "c6c7",
+            "dtm": 51,
+            "fecha": "2026-10-07"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 5 «Torre contra peón», Finales 21 a 29 (el corte horizontal y «El peón gana a la torre»)"
+        }
+      ]
+    },
+    {
+      "id": "vancura",
+      "titulo": "Finales de torres: la defensa Vancura",
+      "nivel": 4,
+      "explicacion": [
+        "Con el peón de torre en sexta y la torre atacante delante de él, la defensa Vancura consiste en atacar el peón desde el costado: la torre defensora se pone en la sexta fila, en la columna del alfil del otro lado, y obliga a la torre rival a quedarse defendiendo.",
+        "Si el rey atacante se acerca para proteger el peón, la torre defensora le da jaques desde el costado o desde atrás; si la torre atacante se aparta, la otra toma el peón."
+      ],
+      "ideas": [
+        "Torre al costado del peón de torre, no detrás de él.",
+        "El rey defensor se queda cerca de g7/h7 para no quedar expuesto."
+      ],
+      "posiciones": [
+        {
+          "id": "torre-al-costado",
+          "fen": "R7/6k1/P4r2/8/8/8/8/6K1 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 25,
+          "consigna": "Jugás con negras: mantené la defensa Vancura.",
+          "pista": "La torre ataca el peón desde la sexta fila; si el rey blanco se acerca, jaques desde el costado o desde atrás.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "f6f3",
+            "dtm": 0,
+            "fecha": "2026-10-07"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 10, Final 66 «Peón en sexta. La defensa de Vancura»"
+        }
+      ]
+    },
+    {
+      "id": "peon-pasado-alejado",
+      "titulo": "Finales de peones: el peón pasado alejado",
+      "nivel": 3,
+      "explicacion": [
+        "En los finales de peones, un peón pasado alejado del resto funciona como señuelo: obliga al rey rival a ir a frenarlo, y mientras tanto el rey propio se come los peones del otro flanco.",
+        "Por eso, cuando se puede elegir, conviene crear el peón pasado lo más lejos posible de donde están los reyes."
+      ],
+      "ideas": [
+        "El peón pasado alejado aleja al rey rival; el rey propio cobra en el otro flanco.",
+        "Contar: ¿llega mi rey a los peones rivales antes de que el suyo vuelva?"
+      ],
+      "posiciones": [
+        {
+          "id": "senuelo",
+          "fen": "8/8/8/3k2p1/P5P1/3K4/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 30,
+          "consigna": "Ganá con el peón pasado de a.",
+          "pista": "a5: el rey negro tiene que ir a frenarlo y el tuyo va por el peón de g5.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "a4a5",
+            "dtm": 31,
+            "fecha": "2026-10-07"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 12 «Finales de peones», Final 90 «El peón pasado alejado»"
+        }
+      ]
+    },
+    {
+      "id": "alfil-y-caballo",
+      "titulo": "Mate de alfil y caballo",
+      "nivel": 4,
+      "explicacion": [
+        "Es el mate básico más difícil: solo se puede dar en un rincón del color del alfil. El método es empujar al rey rival a la banda y después llevarlo por el borde hacia el rincón correcto, con el caballo cortándole las casillas que el alfil no controla.",
+        "Hay 50 jugadas para lograrlo, y con el método se necesitan menos de 35 desde cualquier posición. De la Villa lo cuenta entre los finales que hay que saber porque, si aparece, no hay tiempo de inventarlo en la partida."
+      ],
+      "ideas": [
+        "El rincón del mate es el del color del alfil.",
+        "El rey propio hace la mayor parte del trabajo de encierro; caballo y alfil cierran las salidas."
+      ],
+      "posiciones": [
+        {
+          "id": "mate-ac",
+          "fen": "7k/8/5K2/8/8/8/8/3BN3 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 40,
+          "consigna": "Dá mate con alfil y caballo.",
+          "pista": "El alfil es de casillas blancas: el mate es en a8 o h1. Llevá al rey negro por la octava fila hacia a8.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "e1d3",
+            "dtm": 43,
+            "fecha": "2026-10-07"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 13, Final 93 «Mate de alfil y caballo»"
+        }
+      ]
+    },
+    {
+      "id": "dama-contra-torre",
+      "titulo": "Dama contra torre",
+      "nivel": 4,
+      "explicacion": [
+        "Dama contra torre se gana, pero no es inmediato: el objetivo es llegar a la posición de Philidor, con el rey defensor en la banda, la torre pegada a él y el rey atacante enfrente. Desde ahí, con jugadas de espera de la dama, la torre se tiene que separar del rey y cae por un jaque doble.",
+        "Si el defensor tiene además un peón que protege a la torre, aparecen fortalezas: con el peón en su segunda fila y la torre en la tercera, la dama no puede entrar y son tablas."
+      ],
+      "ideas": [
+        "Atacando: rey rival a la banda y jugadas de espera para que la torre se separe.",
+        "Defendiendo con un peón: armar la fortaleza y mover la torre de un lado al otro de la fila protegida."
+      ],
+      "posiciones": [
+        {
+          "id": "philidor-dama",
+          "fen": "1k6/1r6/2K5/8/8/8/8/4Q3 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 30,
+          "consigna": "Ganá la torre o dá mate.",
+          "pista": "Jugadas de espera con la dama hasta que la torre tenga que alejarse del rey; ahí, el jaque doble.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "e1a5",
+            "dtm": 15,
+            "fecha": "2026-10-07"
+          }
+        },
+        {
+          "id": "fortaleza",
+          "fen": "6k1/6p1/5r2/8/8/8/Q7/4K3 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 25,
+          "consigna": "Jugás con negras: mantené la fortaleza.",
+          "pista": "El rey se queda entre g8, h8, h7 y f8; la torre va y viene por la sexta fila protegida por el peón.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "g8h7",
+            "dtm": 0,
+            "fecha": "2026-10-07"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 13, Finales 94 a 100 (dama contra torre; dama contra torre y peón)"
         }
       ]
     }
