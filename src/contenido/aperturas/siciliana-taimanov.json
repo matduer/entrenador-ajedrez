@@ -1,0 +1,141 @@
+{
+  "id": "siciliana-taimanov",
+  "nombre": "Siciliana Taimanov",
+  "raiz": "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6",
+  "resumen": "Con ...e6 y ...Cc6, el negro no apura ...Cf6 ni ...d6: deja abiertas las casillas del alfil de rey (b4 o c5) y la posibilidad de pasar a una Scheveningen cuando le convenga. Es la opción de los jugadores posicionales que quieren evitar la teoría ultrafilosa de la Najdorf o la Sveshnikov sin caer en algo aburrido. La respuesta más agresiva de las blancas hoy es el Ataque Inglés: Ae3, Dd2, enroque largo, f3 y g4.",
+  "planesBlancas": [
+    "Desarrollo clásico (Ae2, O-O, Ae3, f4) o Ataque Inglés (Ae3, Dd2, O-O-O, f3, g4).",
+    "Con Cb5 y c4, armar una estructura de tipo erizo con ventaja de espacio."
+  ],
+  "planesNegras": [
+    "...Dc7, ...a6, ...Cf6 y, según convenga, ...Ab4, ...Ac5 o ...d6 (Scheveningen).",
+    "Cambiar en d4 con ...Cxd4 y jugar ...b5 en el flanco de dama."
+  ],
+  "estructura": "Siciliana abierta con ...e6: el peón de d7 todavía no se movió y el alfil de f8 tiene la diagonal a3-f8 libre.",
+  "rupturas": [
+    "...d5 y ...b5 del negro.",
+    "f4-f5 o g4-g5 de las blancas."
+  ],
+  "piezas": [
+    "Dama negra: c7, controlando e5 y la columna c.",
+    "Caballo blanco de d4: centro de la lucha; el negro lo cambia o lo ataca."
+  ],
+  "trampas": [],
+  "notas": {
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3": {
+      "porQue": "Desarrollo sano. FCO: la idea de la Taimanov es que el negro no teme a c4, así que no necesita provocar Cc3 con ...Cf6."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7": {
+      "porQue": "Elástica: controla e5 y deja al rival adivinando dónde irá el alfil de rey.",
+      "porQueNo": [
+        {
+          "uci": "f8e7",
+          "texto": "Cdb5 a6 Cd6+: el caballo se instala en d6 con jaque."
+        },
+        {
+          "uci": "b7b6",
+          "texto": "Cdb5: amenaza Cd6+ y el negro no llega a cubrirse bien."
+        },
+        {
+          "uci": "c6e5",
+          "texto": "Ae3 y f4: el caballo es echado con tiempo."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 c1e3": {
+      "porQue": "Desarrollo flexible: puede seguir con Dd2 y enroque largo o con Ad3 y enroque corto.",
+      "porQueNo": [
+        {
+          "uci": "d4e2",
+          "texto": "...a6 y ...b5: retirada pasiva que le cede la iniciativa al negro."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 c1e3 a7a6 d1d2": {
+      "porQue": "El Ataque Inglés: enroque largo y avance de peones en el flanco de rey. Hoy es la prueba más dura de la Taimanov."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 c1e3 a7a6 f1d3": {
+      "porQue": "Protege e4 y prepara el enroque corto: posición común a la Taimanov y a la Kan."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 f1e2": {
+      "porQue": "El método clásico: Ae2, O-O, Ae3 y f4."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 d4b5": {
+      "porQue": "Prepara c4 cuando el negro juegue ...d6: estructura de tipo erizo con ventaja de espacio."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 d4b5 d7d6 c2c4": {
+      "porQue": "La estructura Maroczy: más espacio para las blancas; el negro buscará ...b5 o ...d5 más adelante."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Sicilian Defence», sección «Taimanov Variation»"
+    },
+    {
+      "titulo": "Sicilian Defence, Taimanov Variation (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Sicilian_Defence,_Taimanov_Variation",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 f8e7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: −0,4 → −1,4. Refutación: Cdb5 Cf6 Cd6+ Rf8 Af4 Ce8"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 b7b6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,4 → −1,3. Refutación: Cdb5 Aa6 Af4 Axb5 Axb5 Ab4"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 c6e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: −0,4 → −1,7. Refutación: Ae3 a6 f4 Cc6 Df3 Dc7"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 c1e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 d4e2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,5 → −0,3. Refutación: a6 Af4 Ce5 Dd2 Ae7 Cd4"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 c1e3 a7a6 d1d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 c1e3 a7a6 f1d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 f1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 d4b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 d4b5 d7d6 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      }
+    }
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "id": "siciliana-kan",
+  "nombre": "Siciliana Kan (Paulsen)",
+  "raiz": "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6",
+  "resumen": "La interpretación más antigua de la Siciliana todavía vigente, inventada por Louis Paulsen en el siglo XIX: ...e6 y ...a6 sin comprometer los caballos ni el alfil de rey. Suele seguir ...Dc7, ...b5 y ...Ab7, y muchas veces termina en una estructura de erizo. FCO destaca 5.Ad3 como la única prueba que separa de verdad a la Kan del resto de los sistemas con ...e6, porque fija el alfil y deja abierto c4.",
+  "planesBlancas": [
+    "Ad3, O-O y c4 para una estructura Maroczy contra el erizo.",
+    "Con Cc3, desarrollo normal; el negro puede pasar a la Taimanov o a la Scheveningen."
+  ],
+  "planesNegras": [
+    "...Dc7, ...b5 y ...Ab7 contra e4; ...b4 para echar al caballo de c3.",
+    "Atacar el caballo de d4 con ...Ac5 o ...Cc6 cuando el alfil blanco está en d3."
+  ],
+  "estructura": "Siciliana abierta con ...e6 y ...a6; si las blancas juegan c4 y el negro ...d6 y ...b6, erizo.",
+  "rupturas": [
+    "...b5-b4 y ...d5 del negro.",
+    "c4 y e5 de las blancas."
+  ],
+  "piezas": [
+    "Alfil negro de c8: b7, contra e4.",
+    "Alfil blanco de f1: d3, defendiendo e4."
+  ],
+  "trampas": [],
+  "notas": {
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 f1d3": {
+      "porQue": "La prueba principal: protege e4 y deja abierta la posibilidad de c4.",
+      "porQueNo": [
+        {
+          "uci": "f2f3",
+          "texto": "Pasivo: ...Cf6 y ...d5 y el negro iguala sin problemas."
+        },
+        {
+          "uci": "d1g4",
+          "texto": "...Cf6 De2 d5: la dama salió temprano y el negro gana tiempos."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 f1d3 f8c5": {
+      "porQue": "Aprovecha que nadie protege al caballo de d4: lo ataca y después decide dónde dejar el alfil.",
+      "porQueNo": [
+        {
+          "uci": "d8e7",
+          "texto": "Cc3 d6 Ae3: la dama no hace nada en e7 y el negro queda atrasado."
+        },
+        {
+          "uci": "f7f6",
+          "texto": "Ae3 y el negro debilitó e6 sin necesidad."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 f1d3 g8f6 e1g1 d8c7": {
+      "porQue": "El esquema más moderno: deja abierta la diagonal a3-f8 y sigue amenazando ...Cc6 o ...Ac5."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 f1d3 b8c6 d4c6": {
+      "porQue": "La prueba crítica contra 5...Cc6: si ...bxc6, O-O y c4 contra el centro negro."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 b1c3": {
+      "porQue": "Desarrollo sano; el negro puede pasar a la Taimanov (...Cc6) o a la Scheveningen (...d6)."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 b1c3 d8c7": {
+      "porQue": "Controla e5 y aumenta la presión sobre la columna c sin comprometerse."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 b1c3 b7b5": {
+      "porQue": "El plan más directo: ...Ab7 y ...b4 contra el peón de e4."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 c2c4": {
+      "porQue": "Estructura Maroczy: más espacio, aunque contra la Kan no se considera tan peligrosa como parece."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Sicilian Defence», sección «Paulsen Variation»"
+    },
+    {
+      "titulo": "Sicilian Defence, Kan Variation (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Sicilian_Defence,_Kan_Variation",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 f1d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 f2f3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 4 puntos de chances: +0,5 → −0,0. Refutación: Cf6 c4 Cc6 Cc3 d5 Ae3"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 d1g4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,5 → −0,1. Refutación: Cf6 De2 Dc7 e5 Cd5 c4"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 f1d3 f8c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 f1d3 d8e7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,4 → −1,3. Refutación: Ae3 d6 c4 Dc7 O-O Ae7"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 f1d3 f7f6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: −0,4 → −1,6. Refutación: Ae3 Ce7 Cd2 Dc7 c3 Cbc6"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 f1d3 g8f6 e1g1 d8c7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 f1d3 b8c6 d4c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 b1c3 d8c7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 b1c3 b7b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      }
+    }
+  }
+}
