@@ -3,7 +3,7 @@
   "id": "benoni",
   "nombre": "Defensa Benoni Moderna",
   "raiz": "d2d4 g8f6 c2c4 c7c5",
-  "resumen": "Una defensa de desequilibrio: tras d5 el negro cambia en d5 y queda con mayoría de peones en el flanco de dama (contra la mayoría central blanca). El alfil en g7 apoya el avance ...b5. Es muy combativa, pero las blancas tienen más espacio y la ruptura e5.",
+  "resumen": "Con ...c5 el negro hace un sacrificio posicional de espacio: tras d5 las blancas tienen más terreno y, en la Benoni Moderna (...e6 y ...exd5), además una mayoría de peones en el centro. A cambio, el negro tiene la diagonal larga para el alfil de g7, una mayoría en el flanco de dama (...b5 y ...c4) y juego muy activo; tiene que jugar con energía y aprovechar cada oportunidad. El punto débil es d6. Los sistemas blancos más peligrosos son el Ataque Taimanov (f4 y Ab5+) y los Cuatro Peones. La Clásica (Cd2-c4 contra d6) y la Moderna (h3 y Ad3) son más tranquilas.",
   "planesBlancas": [
     "Usar la mayoría central: e4, f4 y la ruptura e5.",
     "Frenar ...b5 con a4."
@@ -80,9 +80,44 @@
           "texto": "Antes de desarrollar el flanco de rey: f4 y e5 llegan con fuerza."
         }
       ]
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 e2e4 g7g6 f2f4": {
+      "porQue": "Ataque de los Cuatro Peones: amenaza e5."
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 e2e4 g7g6 f2f4 f8g7 f1b5": {
+      "porQue": "Ataque Taimanov: el jaque obliga a una respuesta incómoda."
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 e2e4 g7g6 f2f4 f8g7 f1b5 f6d7": {
+      "porQue": "Prácticamente forzada: tapar con el otro caballo o con el alfil permite e5 con mucha fuerza."
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 e2e4 g7g6 g1f3": {
+      "porQue": "Variante Clásica: desarrollo sencillo. Después vienen Ae2 y Cd2-c4 contra d6."
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 e2e4 g7g6 g1f3 f8g7 f1e2 e8g8 e1g1 f8e8 f3d2": {
+      "porQue": "El caballo va a c4 a presionar d6, la debilidad del negro."
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 e2e4 g7g6 g1f3 f8g7 f1e2 e8g8 e1g1 a7a6 a2a4 c8g4": {
+      "porQue": "Cambia el alfil por el caballo para aliviar la falta de espacio."
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 e2e4 g7g6 g1f3 f8g7 h2h3": {
+      "porQue": "Variante Moderna: impide ...Ag4; el alfil irá a d3 para sostener e4."
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 e2e4 g7g6 g1f3 f8g7 h2h3 e8g8 f1d3 b7b5": {
+      "porQue": "Sacrificio de peón típico para abrir el flanco de dama."
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 e7e5": {
+      "porQue": "Benoni Checa: cierra el centro. El plan es ...Ae7, ...Ce8 y ...f5, o cambiar alfiles con ...Ag5.",
+      "inferior": true
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 g7g6": {
+      "porQue": "La Benoni antigua, muy cercana a la India de Rey."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Benoni and Benko»"
+    },
     {
       "titulo": "Benoni Defense (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Benoni_Defense",
@@ -158,6 +193,46 @@
       "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 e2e4 a7a6 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 6 puntos de chances: −0,9 → −1,6. Refutación: f4 Ag4 Dd2 Ch5 Df2 Ae7"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 e2e4 g7g6 f2f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 e2e4 g7g6 f2f4 f8g7 f1b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,9 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 e2e4 g7g6 f2f4 f8g7 f1b5 f6d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 e2e4 g7g6 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 e2e4 g7g6 g1f3 f8g7 f1e2 e8g8 e1g1 f8e8 f3d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 e2e4 g7g6 g1f3 f8g7 f1e2 e8g8 e1g1 a7a6 a2a4 c8g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 e2e4 g7g6 g1f3 f8g7 h2h3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 d7d6 e2e4 g7g6 g1f3 f8g7 h2h3 e8g8 f1d3 b7b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere b5: −0,6 contra −1,2 (marcada como inferior pero jugable)"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
       }
     }
   }

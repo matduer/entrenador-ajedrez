@@ -2,7 +2,7 @@
   "id": "grunfeld",
   "nombre": "Defensa Grünfeld",
   "raiz": "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5",
-  "resumen": "Defensa hipermoderna agresiva: el negro ataca c4 con ...d5 y, si las blancas cambian y arman un gran centro con e4, lo ataca desde los costados con el alfil de g7, ...c5 y ...Cc6. Es una lucha entre el centro blanco y la presión negra sobre d4.",
+  "resumen": "A diferencia de la India de Rey, el negro golpea el centro con ...d5 antes de que las blancas jueguen e4. Toda la Grünfeld gira alrededor de una pregunta: el centro grande de las blancas, ¿es fuerte o es un blanco? En la Variante del Cambio, tras cxd5 Cxd5 e4 Cxc3 bxc3, el negro ataca d4 con ...c5, ...Cc6, ...Ag4 o ...Ad7, y el alfil de g7. Como c3 queda sin defensa, las blancas no pueden responder cómodamente con d5 ni dxc5: muchas veces tienen que limitarse a sostener d4. Otros sistemas: la Rusa (Cf3 y Db3), 4.Af4, 4.Ag5 y el fianchetto con g3.",
   "planesBlancas": [
     "Variante del Cambio: centro e4-d4 sostenido por c3, desarrollo con Ac4 o Ae3 y Tb1; a veces ataque en el flanco de rey.",
     "Sistema ruso (Cf3 y Db3): presionar d5 y obligar a ...dxc4."
@@ -88,9 +88,58 @@
           "texto": "Axh3 y las blancas quedan con la estructura del flanco de rey rota."
         }
       ]
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3 b2c3 f8g7 g1f3": {
+      "porQue": "El desarrollo moderno: con Ae3 o Tb1 las blancas sostienen d4 y se reservan d5."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3 b2c3 f8g7 g1f3 c7c5": {
+      "porQue": "La ruptura típica: ataca d4."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3 b2c3 f8g7 g1f3 c7c5 a1b1": {
+      "porQue": "Tb1: si ...Cc6, d5 llega con tiempo; además, el peón de b7 queda atacado."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3 b2c3 f8g7 g1f3 c7c5 c1e3": {
+      "porQue": "Refuerza d4 y prepara Tc1."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3 b2c3 f8g7 f1c4 c7c5 g1e2": {
+      "porQue": "El caballo en e2 evita la clavada ...Ag4 y cubre c3."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c1f4": {
+      "porQue": "Ataca c7 y presiona d5."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c1f4 f8g7 e2e3 c7c5": {
+      "porQue": "La respuesta temática: entrega un peón para abrir la diagonal del alfil de g7."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c1g5": {
+      "porQue": "Amenaza Axf6 para debilitar d5."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c1g5 f6e4": {
+      "porQue": "La respuesta clásica: ataca el alfil y el caballo de c3."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 g1f3 f8g7 d1b3": {
+      "porQue": "Variante Rusa: presiona d5 para ocupar el centro con e4."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 g1f3 f8g7 d1b3 d5c4 b3c4 e8g8 e2e4": {
+      "porQue": "El centro ideal: e4 y d4. El negro lo va a atacar aprovechando que la dama está expuesta en c4."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 g1f3 f8g7 d1b3 d5c4 b3c4 e8g8 e2e4 c8g4": {
+      "porQue": "Variante Smyslov: ...Cfd7-b6 echa a la dama y presiona d4."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 g1f3 f8g7 d1b3 d5c4 b3c4 e8g8 e2e4 a7a6": {
+      "porQue": "Variante Húngara: ...b5 para echar a la dama y después ...c5."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 g1f3 f8g7 d1b3 d5c4 b3c4 e8g8 e2e4 b8a6": {
+      "porQue": "Variante Prins: prepara ...c5."
+    },
+    "d2d4 g8f6 c2c4 g7g6 g2g3 c7c6": {
+      "porQue": "Contra el fianchetto, ...c6 y ...d5 retomando con el peón de c: una Grünfeld sólida."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Grünfeld Defence»"
+    },
     {
       "titulo": "Grünfeld Defence (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Gr%C3%BCnfeld_Defence",
@@ -170,6 +219,66 @@
       "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3 b2c3 f8g7 g1h3 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 14 puntos de chances: +0,3 → −1,3. Refutación: c5 Tb1 O-O Cf4 Cc6 Ac4"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3 b2c3 f8g7 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3 b2c3 f8g7 g1f3 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3 b2c3 f8g7 g1f3 c7c5 a1b1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3 b2c3 f8g7 g1f3 c7c5 c1e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c4d5 f6d5 e2e4 d5c3 b2c3 f8g7 f1c4 c7c5 g1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c1f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c1f4 f8g7 e2e3 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c1g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c1g5 f6e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 g1f3 f8g7 d1b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 g1f3 f8g7 d1b3 d5c4 b3c4 e8g8 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 g1f3 f8g7 d1b3 d5c4 b3c4 e8g8 e2e4 c8g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 g1f3 f8g7 d1b3 d5c4 b3c4 e8g8 e2e4 a7a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 g1f3 f8g7 d1b3 d5c4 b3c4 e8g8 e2e4 b8a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 g2g3 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
       }
     }
   }

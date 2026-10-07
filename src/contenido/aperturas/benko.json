@@ -3,7 +3,7 @@
   "id": "benko",
   "nombre": "Gambito Benko",
   "raiz": "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5",
-  "resumen": "El negro entrega el peón de b para abrir las columnas a y b y presionar a largo plazo el flanco de dama, con el alfil en a6 y el de g7 en la diagonal larga. La compensación no es un ataque al rey sino una presión que dura todo el medio juego y muchas veces el final.",
+  "resumen": "Un sacrificio posicional: el negro entrega un peón por ventajas que no dependen de la táctica. Tiene las columnas a y b abiertas, ventaja de desarrollo (la torre de a8 ya está en su mejor casilla) y un plan claro: Ag7, torres en a8 y b8, dama en b6 o a5, y caballos hacia c4 o d3. Además, sin el peón de c4, el centro blanco pierde fuerza y d3 queda débil. Lo más llamativo es que los cambios no alivian a las blancas: la presión del negro sigue en el final. Por eso las blancas suelen buscar desvíos como 5.b6, 5.e3 o 5.f3.",
   "planesBlancas": [
     "Aceptar y consolidar: e4, Cf3, enroque y defender el flanco de dama.",
     "Devolver el peón en el momento justo para liberarse."
@@ -56,9 +56,33 @@
     },
     "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6": {
       "porQue": "El alfil va a a6: impide el enroque cómodo de las blancas y apunta al flanco de dama."
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 e2e4 a6f1 e1f1 g7g6": {
+      "porQue": "El rey blanco perdió el enroque; lo hará \"a mano\" con g3 y Rg2."
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 e2e4 a6f1 e1f1 g7g6 g2g3 f8g7 f1g2 e8g8 g1f3 b8d7": {
+      "porQue": "El plan estándar: ...Db6 o ...Da5 y ...Tfb8 contra el flanco de dama."
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5b6": {
+      "porQue": "Rehúsa: devuelve el peón para que la columna a no se abra.",
+      "inferior": true
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 e2e3": {
+      "porQue": "Acepta, pero con la idea de neutralizar el juego del negro en el flanco de dama antes de jugar e4."
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 f2f3": {
+      "porQue": "Devuelve el peón a cambio de un centro fuerte con e4.",
+      "inferior": true
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 g1f3": {
+      "porQue": "Sin tomar el peón: si ...bxc4, Cc3 y e4 llevan a una Benoni normal; ...b4 o ...Ab7 son buenas respuestas."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Benoni and Benko», sección «Benko (or Volga) Gambit»"
+    },
     {
       "titulo": "Benko Gambit (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Benko_Gambit",
@@ -110,6 +134,30 @@
       "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 e2e4 a6f1 e1f1 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 e2e4 a6f1 e1f1 g7g6 g2g3 f8g7 f1g2 e8g8 g1f3 b8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere e3: +0,7 contra +0,3 (marcada como inferior pero jugable)"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 f2f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere e3: +0,7 contra +0,1 (marcada como inferior pero jugable)"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
       }
     }
   }
