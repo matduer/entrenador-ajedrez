@@ -1,0 +1,110 @@
+{
+  "id": "larsen",
+  "nombre": "Apertura Larsen",
+  "raiz": "b2b3",
+  "resumen": "Las blancas hacen el fianchetto del alfil de dama de entrada: el alfil en b2 controla e5 y la diagonal larga. Es una apertura hipermoderna: no ocupa el centro con peones sino que lo controla de lejos. La respuesta más directa del negro es ocupar el centro con ...e5.",
+  "planesBlancas": [
+    "Alfil en b2 contra e5 y la diagonal larga.",
+    "Desarrollo flexible: e3, Cf3, c4 o f4 según lo que haga el negro."
+  ],
+  "planesNegras": [
+    "Ocupar el centro con ...e5 y ...d5.",
+    "Tapar la diagonal del alfil de b2."
+  ],
+  "estructura": "Flexible; el negro suele tener más peones en el centro.",
+  "rupturas": [
+    "c4 o f4 de las blancas.",
+    "...d5 y ...e4 del negro."
+  ],
+  "piezas": [
+    "Alfil blanco de c1: b2.",
+    "Caballo negro de b8: c6, defendiendo e5."
+  ],
+  "trampas": [],
+  "notas": {
+    "b2b3": {
+      "porQue": "Prepara el fianchetto del alfil de dama, que desde b2 controla e5 y la diagonal larga.",
+      "inferior": true
+    },
+    "b2b3 e7e5": {
+      "porQue": "Ocupa el centro y tapa la diagonal del alfil que va a b2.",
+      "porQueNo": [
+        {
+          "uci": "f7f5",
+          "texto": "Debilita el rey sin ocupar el centro."
+        }
+      ]
+    },
+    "b2b3 e7e5 c1b2": {
+      "porQue": "Presiona e5 desde el comienzo."
+    },
+    "b2b3 e7e5 c1b2 b8c6": {
+      "porQue": "Defiende e5 desarrollando una pieza.",
+      "porQueNo": [
+        {
+          "uci": "g8f6",
+          "texto": "Axe5: el peón de e5 queda sin defensa."
+        },
+        {
+          "uci": "d7d5",
+          "texto": "Axe5 y el negro pierde el peón."
+        },
+        {
+          "uci": "f7f6",
+          "texto": "Defiende e5 pero debilita el rey: d4 y el centro negro se resiente."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Larsen's Opening (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Larsen's_Opening",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "b2b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere e4: +0,4 contra −0,2 (marcada como inferior pero jugable)"
+      },
+      "b2b3 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "b2b3 f7f5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,2 → −0,4. Refutación: Ab2 Cf6 e3 e6 Ae2 d5"
+      },
+      "b2b3 e7e5 c1b2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "b2b3 e7e5 c1b2 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "b2b3 e7e5 c1b2 g8f6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: +0,3 → −1,0. Refutación: Axe5 Ae7 e3 c5 Ab2 O-O"
+      },
+      "b2b3 e7e5 c1b2 d7d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 12 puntos de chances: +0,3 → −1,0. Refutación: Axe5 c5 Cf3 Cc6 Ab2 Cf6"
+      },
+      "b2b3 e7e5 c1b2 f7f6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,3 → −0,5. Refutación: e4 d5 exd5 Dxd5 Cc3 Dc5"
+      }
+    }
+  }
+}

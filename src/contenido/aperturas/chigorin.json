@@ -1,0 +1,85 @@
+{
+  "id": "chigorin",
+  "nombre": "Defensa Chigorin",
+  "raiz": "d2d4 d7d5 c2c4 b8c6",
+  "resumen": "Contra el Gambito de Dama, el negro saca el caballo a c6 aunque tape el peón de c. Busca juego de piezas: presión sobre d4, el alfil a g4 y a menudo la entrega de la pareja de alfiles. Es poco ortodoxa pero jugable.",
+  "planesBlancas": [
+    "Cf3 y cxd5 para que la dama negra salga temprano y ganar tiempos sobre ella.",
+    "Centro de peones con e4."
+  ],
+  "planesNegras": [
+    "Presión sobre d4 con ...Ag4 (cambiando el caballo de f3) y ...e5.",
+    "Juego de piezas activo aunque se ceda la pareja de alfiles."
+  ],
+  "estructura": "Variable: muchas veces el negro cambia en d5 o rompe con ...e5.",
+  "rupturas": [
+    "...e5 del negro.",
+    "e4 de las blancas."
+  ],
+  "piezas": [
+    "Caballo negro de b8: c6, sobre d4.",
+    "Alfil negro de c8: g4, contra el caballo de f3."
+  ],
+  "trampas": [],
+  "notas": {
+    "d2d4 d7d5 c2c4 b8c6": {
+      "porQue": "Desarrollo poco ortodoxo: tapa el peón de c pero ataca d4 enseguida.",
+      "inferior": true
+    },
+    "d2d4 d7d5 c2c4 b8c6 g1f3": {
+      "porQue": "Desarrolla y controla e5, la ruptura que busca el negro.",
+      "porQueNo": [
+        {
+          "uci": "c1g5",
+          "texto": "...h6 y ...g5 echan al alfil con tiempo."
+        },
+        {
+          "uci": "f2f4",
+          "texto": "...Ag4 y el negro presiona d4 sin problemas."
+        }
+      ]
+    },
+    "d2d4 d7d5 c2c4 b8c6 c4d5": {
+      "porQue": "Tomar obliga a la dama negra a salir temprano y las blancas ganan tiempos sobre ella."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Chigorin Defense (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Chigorin_Defense",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "d2d4 d7d5 c2c4 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 b8c6 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 b8c6 c1g5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,5 → 0,0. Refutación: dxc4 d5 f6 Ac1 Ce5 Cf3"
+      },
+      "d2d4 d7d5 c2c4 b8c6 f2f4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,5 → −0,1. Refutación: Ag4 h3 Af5 Cf3 e6 g4"
+      },
+      "d2d4 d7d5 c2c4 b8c6 c4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "id": "englund",
+  "nombre": "Gambito Englund",
+  "raiz": "d2d4 e7e5",
+  "resumen": "Un gambito dudoso: el negro entrega el peón de e5 sin compensación real. Vale la pena conocerlo por la trampa que tiene (4.Af4 Db4+ 5.Ad2 Dxb2 6.Ac3?? Ab4 y mate). Con juego correcto las blancas quedan claramente mejor.",
+  "planesBlancas": [
+    "Quedarse con el peón de e5 y desarrollarse rápido (Cf3, Af4, Cc3).",
+    "Evitar la trampa: tras ...Dxb2, defender con Cc3, no con Ac3."
+  ],
+  "planesNegras": [
+    "Recuperar e5 con ...Cc6 y ...De7.",
+    "Si las blancas se equivocan, ...Db4+ y ...Dxb2."
+  ],
+  "estructura": "Peón blanco en e5 de más; el negro sin peón central.",
+  "rupturas": [
+    "...f6 o ...d6 del negro para recuperar e5."
+  ],
+  "piezas": [
+    "Dama negra: e7 y después b4 con jaque.",
+    "Alfil blanco de c1: f4, defendiendo e5."
+  ],
+  "trampas": [
+    {
+      "jugadas": "d2d4 e7e5 d4e5 b8c6 g1f3 d8e7 c1f4 e7b4 f4d2 b4b2 d2c3 f8b4 d1d2 b4c3 d2c3 b2c1",
+      "texto": "4.Af4 Db4+ 5.Ad2 Dxb2 6.Ac3?? Ab4! 7.Dd2 Axc3 8.Dxc3 Dc1#. Lo correcto es 6.Cc3."
+    }
+  ],
+  "notas": {
+    "d2d4 e7e5 d4e5": {
+      "porQue": "Tomar: el gambito no da compensación suficiente.",
+      "porQueNo": [
+        {
+          "uci": "c2c4",
+          "texto": "...exd4 Dxd4 Cc6 y la dama blanca pierde tiempos."
+        },
+        {
+          "uci": "g1f3",
+          "texto": "...e4 echa al caballo con ganancia de tiempo."
+        }
+      ]
+    },
+    "d2d4 e7e5 d4e5 b8c6": {
+      "porQue": "Ataca e5 para recuperarlo."
+    },
+    "d2d4 e7e5 d4e5 b8c6 g1f3": {
+      "porQue": "Defiende e5 y desarrolla."
+    },
+    "d2d4 e7e5 d4e5 b8c6 g1f3 d8e7": {
+      "porQue": "La línea del gambito: ataca e5 una vez más y prepara ...Db4+."
+    },
+    "d2d4 e7e5 d4e5 b8c6 g1f3 d8e7 c1f4": {
+      "porQue": "Defiende e5. Hay que conocer la trampa: tras ...Db4+ Ad2 Dxb2, nunca Ac3.",
+      "porQueNo": [
+        {
+          "uci": "c2c4",
+          "texto": "...Cxe5 y el negro recupera el peón."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Englund Gambit (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Englund_Gambit",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "d2d4 e7e5 d4e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,4 para el bando que mueve"
+      },
+      "d2d4 e7e5 c2c4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 13 puntos de chances: +1,4 → −0,0. Refutación: exd4 Dxd4 Cc6 Dd1 Cf6 Cc3"
+      },
+      "d2d4 e7e5 g1f3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 15 puntos de chances: +1,4 → −0,3. Refutación: e4 Cfd2 d5 c4 c6 Cc3"
+      },
+      "d2d4 e7e5 d4e5 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,5 para el bando que mueve"
+      },
+      "d2d4 e7e5 d4e5 b8c6 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,5 para el bando que mueve"
+      },
+      "d2d4 e7e5 d4e5 b8c6 g1f3 d8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,9 para el bando que mueve"
+      },
+      "d2d4 e7e5 d4e5 b8c6 g1f3 d8e7 c1f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,8 para el bando que mueve"
+      },
+      "d2d4 e7e5 d4e5 b8c6 g1f3 d8e7 c2c4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: +1,9 → +0,8. Refutación: Cxe5 Cc3 Cf6 e4 d6 Cd4"
+      }
+    }
+  }
+}

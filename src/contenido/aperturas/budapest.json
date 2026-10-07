@@ -1,0 +1,148 @@
+{
+  "id": "budapest",
+  "nombre": "Gambito Budapest",
+  "raiz": "d2d4 g8f6 c2c4 e7e5",
+  "resumen": "El negro entrega el peón de e5 para desarrollarse rápido. Tras 3.dxe5 Cg4 ataca el peón y casi siempre lo recupera; a cambio, las blancas suelen quedarse con más espacio o con la pareja de alfiles. La línea más seria es la Rubinstein, 4.Af4, donde hay que conocer la trampa de Kieninger.",
+  "planesBlancas": [
+    "Defender e5 con Af4 y Cf3 el mayor tiempo posible.",
+    "Ganar espacio con c5 o con el centro de peones (e4, f4)."
+  ],
+  "planesNegras": [
+    "Recuperar e5 con ...Cc6, ...Ab4+ y ...De7.",
+    "Llevar la torre por a6 hasta el flanco de rey (la \"torre de Budapest\")."
+  ],
+  "estructura": "Tras recuperar el peón, el negro queda sin peón central y las blancas con c4 y d-columna abierta.",
+  "rupturas": [
+    "c5 de las blancas.",
+    "...d6 del negro para recuperar e5."
+  ],
+  "piezas": [
+    "Caballo negro: g4 y después e5.",
+    "Alfil negro de f8: b4 con jaque, a veces cambiándose por el caballo."
+  ],
+  "trampas": [
+    {
+      "jugadas": "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 c1f4 b8c6 g1f3 f8b4 b1d2 d8e7 a2a3 g4e5 a3b4 e5d3",
+      "texto": "Trampa de Kieninger: 7.a3 Cgxe5 8.axb4?? Cd3#. Mate ahogado: el rey no tiene casillas porque lo tapan sus propias piezas."
+    }
+  ],
+  "notas": {
+    "d2d4 g8f6 c2c4 e7e5": {
+      "porQue": "Gambito Budapest: entrega el peón para desarrollarse rápido y presionar e5.",
+      "inferior": true
+    },
+    "d2d4 g8f6 c2c4 e7e5 d4e5": {
+      "porQue": "Aceptar es lo más fuerte.",
+      "porQueNo": [
+        {
+          "uci": "d4d5",
+          "texto": "...Ab4+ y el negro se desarrolla cómodo sin haber entregado nada."
+        },
+        {
+          "uci": "e2e3",
+          "texto": "...exd4 exd4 Ab4+ y el negro iguala sin gambito."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4": {
+      "porQue": "Ataca e5 para recuperar el peón."
+    },
+    "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 c1f4": {
+      "porQue": "Variante Rubinstein: el alfil defiende e5 y se desarrolla.",
+      "porQueNo": [
+        {
+          "uci": "b1d2",
+          "texto": "...Cxe5 y el negro recupera el peón con buen juego."
+        },
+        {
+          "uci": "e5e6",
+          "texto": "Devolver el peón así ayuda al negro: dxe6 y se cambian las damas."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 c1f4 f8b4": {
+      "porQue": "Jaque que desarrolla y gana tiempo para presionar e5.",
+      "porQueNo": [
+        {
+          "uci": "d8e7",
+          "texto": "Prematura: Cf3 y tras ...Db4+ Dd2 se cambian las damas con un peón de menos."
+        },
+        {
+          "uci": "f8c5",
+          "texto": "e3 cierra la diagonal y el peón de e5 queda firme."
+        },
+        {
+          "uci": "d7d6",
+          "texto": "exd6 y el negro no tiene compensación por el peón."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Budapest Gambit (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Budapest_Gambit",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "d2d4 g8f6 c2c4 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,6 → −0,2. Refutación: Ab4+ Ad2 a5 e3 d6 Ad3"
+      },
+      "d2d4 g8f6 c2c4 e7e5 e2e3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,6 → −0,0. Refutación: exd4 exd4 Ab4+ Cc3 d5 Ad3"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 c1f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 b1d2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,7 → 0,0. Refutación: Cxe5 Cgf3 Cbc6 g3 d5 Ag2"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 e5e6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,7 → −0,1. Refutación: dxe6 Dxd8+ Rxd8 Cf3 Cd7 e3"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 c1f4 f8b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 c1f4 d8e7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 18 puntos de chances: −0,5 → −2,6. Refutación: Cc3 De6 Cd5 Ca6 Cf3 d6"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 c1f4 f8c5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 22 puntos de chances: −0,5 → −3,3. Refutación: e3 d6 exd6 Cc6 Cc3 cxd6"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 c1f4 d7d6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,5 → −1,2. Refutación: exd6 Df6 dxc7 Cc6 Dd2 Cxf2"
+      }
+    }
+  }
+}

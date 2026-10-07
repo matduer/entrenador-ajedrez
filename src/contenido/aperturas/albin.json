@@ -1,0 +1,140 @@
+{
+  "id": "albin",
+  "nombre": "Contragambito Albin",
+  "raiz": "d2d4 d7d5 c2c4 e7e5",
+  "resumen": "El negro entrega el peón de e5 para clavar una cuña en d4 (tras 3.dxe5 d4). Esa cuña quita c3 y e3 a las blancas y les incomoda el desarrollo. Las blancas se quedan con el peón y se desarrollan con Cf3, g3, Ag2 y Cd2. El error más famoso es 4.e3?, que cae en la trampa de Lasker.",
+  "planesBlancas": [
+    "Fianchetto (g3, Ag2) y Cbd2 para rodear el peón de d4.",
+    "Conservar el peón extra de e5 y cambiar piezas."
+  ],
+  "planesNegras": [
+    "Sostener la cuña de d4 con ...Cc6.",
+    "Enrocar largo y atacar en el flanco de rey."
+  ],
+  "estructura": "Peón blanco en e5 (de más) y peón negro en d4 que corta el tablero.",
+  "rupturas": [
+    "e3 de las blancas, bien preparada, para deshacer la cuña.",
+    "...f6 del negro para recuperar e5."
+  ],
+  "piezas": [
+    "Caballo negro de b8: c6, sosteniendo d4 y atacando e5.",
+    "Alfil blanco de f1: g2."
+  ],
+  "trampas": [
+    {
+      "jugadas": "d2d4 d7d5 c2c4 e7e5 d4e5 d5d4 e2e3 f8b4 c1d2 d4e3 d2b4 e3f2 e1e2 f2g1n",
+      "texto": "Trampa de Lasker: 4.e3? Ab4+ 5.Ad2 dxe3 6.Axb4?? exf2+ 7.Re2 fxg1=C+! Coronar en caballo con jaque; si 8.Txg1, ...Ag4+ gana la dama."
+    }
+  ],
+  "notas": {
+    "d2d4 d7d5 c2c4 e7e5": {
+      "porQue": "Contragambito: entrega el peón para clavar una cuña en d4 después de dxe5 d4.",
+      "inferior": true
+    },
+    "d2d4 d7d5 c2c4 e7e5 d4e5": {
+      "porQue": "Tomar es lo mejor: el peón de más es real.",
+      "porQueNo": [
+        {
+          "uci": "e2e3",
+          "texto": "...exd4 exd4 Ab4+ y el negro se libera sin haber entregado nada."
+        },
+        {
+          "uci": "g1f3",
+          "texto": "...e4 echa al caballo con ganancia de tiempo."
+        }
+      ]
+    },
+    "d2d4 d7d5 c2c4 e7e5 d4e5 d5d4": {
+      "porQue": "La cuña en d4 quita c3 y e3 a las blancas y frena su desarrollo."
+    },
+    "d2d4 d7d5 c2c4 e7e5 d4e5 d5d4 g1f3": {
+      "porQue": "Desarrollo natural; después vienen g3, Ag2 y Cbd2.",
+      "porQueNo": [
+        {
+          "uci": "e2e3",
+          "texto": "La trampa de Lasker: ...Ab4+ Ad2 dxe3 y las blancas tienen que tener mucho cuidado."
+        },
+        {
+          "uci": "d1c2",
+          "texto": "...Cc6 y ...Cb4 echan a la dama con tiempo."
+        }
+      ]
+    },
+    "d2d4 d7d5 c2c4 e7e5 d4e5 d5d4 e2e3 f8b4 c1d2 d4e3 f2e3": {
+      "porQue": "Lo único: tomar con el peón, aunque el rey quede algo expuesto.",
+      "porQueNo": [
+        {
+          "uci": "d2b4",
+          "texto": "exf2+ Re2 fxg1=C+: la trampa de Lasker."
+        },
+        {
+          "uci": "g1f3",
+          "texto": "...exd2+ y el negro gana una pieza."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Albin Countergambit (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Albin_Countergambit",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "d2d4 d7d5 c2c4 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere e6: −0,2 contra −0,8 (marcada como inferior pero jugable)"
+      },
+      "d2d4 d7d5 c2c4 e7e5 d4e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e5 e2e3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: +0,8 → −0,1. Refutación: exd4 exd4 Ab4+ Cc3 Cf6 Ad3"
+      },
+      "d2d4 d7d5 c2c4 e7e5 g1f3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: +0,8 → −0,2. Refutación: e4 Cfd2 c6 Cc3 Cf6 e3"
+      },
+      "d2d4 d7d5 c2c4 e7e5 d4e5 d5d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e5 d4e5 d5d4 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e5 d4e5 d5d4 e2e3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: +0,7 → −0,3. Refutación: Ab4+ Ad2 dxe3 fxe3 Dh4+ g3"
+      },
+      "d2d4 d7d5 c2c4 e7e5 d4e5 d5d4 d1c2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,7 → +0,1. Refutación: Cc6 Cf3 Ab4+ Ad2 a5 Axb4"
+      },
+      "d2d4 d7d5 c2c4 e7e5 d4e5 d5d4 e2e3 f8b4 c1d2 d4e3 f2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e5 d4e5 d5d4 e2e3 f8b4 c1d2 d4e3 d2b4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 43 puntos de chances: −0,1 → −7,6. Refutación: exf2+ Re2 fxg1=C+ Re1 Dh4+ Rd2"
+      },
+      "d2d4 d7d5 c2c4 e7e5 d4e5 d5d4 e2e3 f8b4 c1d2 d4e3 g1f3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 40 puntos de chances: −0,1 → −6,4. Refutación: exd2+ Cbxd2 Cc6 a3 Axd2+ Dxd2"
+      }
+    }
+  }
+}

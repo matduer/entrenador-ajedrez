@@ -1,0 +1,102 @@
+{
+  "id": "polaca",
+  "nombre": "Apertura Polaca",
+  "raiz": "b2b4",
+  "resumen": "También llamada Orangután. Las blancas ganan espacio en el flanco de dama y preparan Ab2 contra e5. El peón de b4 queda algo flojo: el negro puede atacarlo con ...e5 y ...Axb4, o con ...a5.",
+  "planesBlancas": [
+    "Ab2 contra e5 y la diagonal larga.",
+    "Espacio en el flanco de dama con a3, c4 o b5."
+  ],
+  "planesNegras": [
+    "...e5 y ...Axb4 aprovechando el peón suelto.",
+    "Ocupar el centro con ...d5 y ...e5."
+  ],
+  "estructura": "Peón blanco adelantado en b4; el centro suele quedar en manos del negro.",
+  "rupturas": [
+    "c4 de las blancas.",
+    "...a5 del negro contra b4."
+  ],
+  "piezas": [
+    "Alfil blanco de c1: b2.",
+    "Alfil negro de f8: b4, tomando el peón."
+  ],
+  "trampas": [],
+  "notas": {
+    "b2b4": {
+      "porQue": "Gana espacio en el flanco de dama y prepara Ab2 contra e5.",
+      "inferior": true
+    },
+    "b2b4 e7e5": {
+      "porQue": "Ocupa el centro y ataca b4 con el alfil de f8.",
+      "porQueNo": [
+        {
+          "uci": "f7f6",
+          "texto": "Debilita el rey sin necesidad: c4 y las blancas ganan espacio."
+        }
+      ]
+    },
+    "b2b4 e7e5 c1b2": {
+      "porQue": "Ataca e5: el negro tiene que decidir entre defenderlo y tomar en b4."
+    },
+    "b2b4 e7e5 c1b2 f8b4": {
+      "porQue": "Toma el peón: b4 quedó sin defensa.",
+      "porQueNo": [
+        {
+          "uci": "a7a6",
+          "texto": "Axe5: defender b4 cuesta el peón de e5."
+        },
+        {
+          "uci": "c7c6",
+          "texto": "Axe5 y el negro pierde el peón central."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Polish Opening (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Polish_Opening",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "b2b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere e4: +0,4 contra −0,4 (marcada como inferior pero jugable)"
+      },
+      "b2b4 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "b2b4 f7f6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,4 → −0,4. Refutación: e4 e5 a3 d5 exd5 Dxd5"
+      },
+      "b2b4 e7e5 c1b2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "b2b4 e7e5 c1b2 f8b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "b2b4 e7e5 c1b2 a7a6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: +0,4 → −0,5. Refutación: Axe5 Cc6 Ab2 Cxb4 c4 Cf6"
+      },
+      "b2b4 e7e5 c1b2 c7c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: +0,4 → −0,8. Refutación: Axe5 d5 Cf3 Cf6 a3 a5"
+      }
+    }
+  }
+}

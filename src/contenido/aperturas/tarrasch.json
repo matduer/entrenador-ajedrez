@@ -1,0 +1,142 @@
+{
+  "id": "tarrasch",
+  "nombre": "Defensa Tarrasch",
+  "raiz": "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5",
+  "resumen": "El negro desafía el centro enseguida con ...c5 y acepta quedarse con un peón aislado en d5. Tarrasch sostenía que la actividad de las piezas compensa esa debilidad. Las blancas suelen hacer el fianchetto (g3, Ag2) para presionar d5.",
+  "planesBlancas": [
+    "Fianchetto del rey y presión sobre d5.",
+    "Cambiar piezas y llegar a un final donde el peón aislado pese."
+  ],
+  "planesNegras": [
+    "Piezas activas: alfiles en líneas abiertas, caballos en e4 y c6.",
+    "Avanzar ...d4 cuando sea posible."
+  ],
+  "estructura": "Peón aislado negro en d5 tras cxd5 exd5 y el cambio en c5 o d4.",
+  "rupturas": [
+    "...d4 del negro.",
+    "dxc5 de las blancas para aislar el peón."
+  ],
+  "piezas": [
+    "Alfil blanco de f1: g2, contra d5.",
+    "Caballo negro de b8: c6, presionando d4."
+  ],
+  "trampas": [],
+  "notas": {
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5": {
+      "porQue": "Desafía el centro enseguida y acepta un peón aislado en d5 a cambio de piezas activas."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5": {
+      "porQue": "Lo más incisivo: obliga al negro a definir la estructura.",
+      "porQueNo": [
+        {
+          "uci": "e2e4",
+          "texto": "...cxd4 Dxd4 Cc6 y ...d4: el centro blanco se desarma ganándole tiempos a la dama."
+        },
+        {
+          "uci": "c1e3",
+          "texto": "...e5 gana espacio con tiempo sobre el alfil."
+        }
+      ]
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5": {
+      "porQue": "Recaptura con el peón: el negro acepta el peón aislado a cambio de líneas abiertas para los alfiles.",
+      "porQueNo": [
+        {
+          "uci": "f8e7",
+          "texto": "Sin recapturar: e4 y las blancas se quedan con el centro."
+        },
+        {
+          "uci": "c8d7",
+          "texto": "dxe6 fxe6 y el negro queda con el peón de e6 débil y el rey expuesto."
+        }
+      ]
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3": {
+      "porQue": "Desarrollo; el plan clásico sigue con g3 y Ag2 contra d5."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6": {
+      "porQue": "Desarrolla y presiona d4.",
+      "porQueNo": [
+        {
+          "uci": "c8g4",
+          "texto": "Db3 ataca d5 y b7 a la vez."
+        },
+        {
+          "uci": "a7a6",
+          "texto": "dxc5 Axc5 Dxd5 y el negro pierde el peón."
+        },
+        {
+          "uci": "c8f5",
+          "texto": "e4 abre el juego cuando el negro todavía no se desarrolló."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Tarrasch Defense (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Tarrasch_Defense",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 e2e4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 17 puntos de chances: +0,4 → −1,5. Refutación: cxd4 Dxd4 Cc6 Dd1 d4 Ca4"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c1e3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 13 puntos de chances: +0,4 → −1,0. Refutación: e5 Cxd5 cxd4 Ad2 Cf6 e3"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 f8e7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: −0,3 → −1,5. Refutación: e4 exd5 Cxd5 cxd4 Af4 Da5+"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 c8d7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 18 puntos de chances: −0,3 → −2,4. Refutación: dxe6 fxe6 e3 Cf6 Cf3 Cc6"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 c8g4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,3 → −1,3. Refutación: Db3 cxd4 Cxd4 Cc6 e3 Dd7"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 a7a6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,3 → −1,0. Refutación: dxc5 Axc5 Dxd5 Db6 Ce4 Ab4+"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 c8f5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 12 puntos de chances: −0,3 → −1,7. Refutación: Db3 Cc6 e4 De7 Ab5 Axe4"
+      }
+    }
+  }
+}

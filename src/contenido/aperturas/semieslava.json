@@ -1,0 +1,141 @@
+{
+  "id": "semieslava",
+  "nombre": "Defensa Semieslava",
+  "raiz": "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6",
+  "resumen": "El negro sostiene d5 con dos peones (c6 y e6). La amenaza escondida es ...dxc4 seguida de ...b5 para quedarse con el peón. Las blancas eligen entre el juego tranquilo con e3 (que lleva a la Merano) y las líneas muy agudas con Ag5 (Moscú y Botvinnik).",
+  "planesBlancas": [
+    "Con e3 y Ad3: ganar el tiempo que pierde el negro al tomar en c4 y buscar e4.",
+    "Con Ag5: clavar el caballo y entrar en líneas tácticas."
+  ],
+  "planesNegras": [
+    "Merano: ...dxc4 cuando el alfil ya está en d3, ...b5 y ...Ab7 con juego en el flanco de dama.",
+    "Liberarse con ...c5 o ...e5 en el momento justo."
+  ],
+  "estructura": "Peones negros en c6, d5 y e6 (el \"triángulo\"); tras ...dxc4 y ...b5 el negro gana espacio en el flanco de dama.",
+  "rupturas": [
+    "e4 de las blancas.",
+    "...c5 y ...e5 del negro."
+  ],
+  "piezas": [
+    "Alfil negro de c8: queda encerrado; en la Merano sale por b7.",
+    "Alfil blanco de f1: d3, apuntando a h7."
+  ],
+  "trampas": [],
+  "notas": {
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6": {
+      "porQue": "Sostiene d5 con los dos peones y abre el alfil de f8. Amenaza ...dxc4 y ...b5 para quedarse con el peón."
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6 e2e3": {
+      "porQue": "Sostiene d4 y deja salir al alfil de f1: lleva a la Merano.",
+      "porQueNo": [
+        {
+          "uci": "e2e4",
+          "texto": "Prematuro: ...dxe4 y el negro rompe con ...c5; el centro blanco se desarma."
+        },
+        {
+          "uci": "d1d2",
+          "texto": "La dama tapa al alfil de c1 y el negro toma en c4 con ...b5 para sostenerlo."
+        }
+      ]
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6 c1g5": {
+      "porQue": "Clava el caballo: lleva a las variantes Moscú (...h6) y Botvinnik (...dxc4), muy tácticas."
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6 e2e3 b8d7": {
+      "porQue": "Desarrolla y prepara ...dxc4 con ...b5, o la ruptura ...e5.",
+      "porQueNo": [
+        {
+          "uci": "d5c4",
+          "texto": "Prematuro: el alfil de f1 toma en c4 de una sola vez, sin perder el tiempo que pierde en la Merano (Ad3 y después Axc4)."
+        },
+        {
+          "uci": "d8a5",
+          "texto": "Ad2 y la dama tiene que volver: pierde tiempo."
+        }
+      ]
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6 e2e3 b8d7 f1d3": {
+      "porQue": "Desarrolla apuntando a h7. Ahora sí, ...dxc4 obliga al alfil a mover dos veces."
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6 e2e3 b8d7 f1d3 d5c4": {
+      "porQue": "Merano: el alfil tiene que volver a mover para tomar, y el negro sigue con ...b5 ganando espacio con tiempo.",
+      "porQueNo": [
+        {
+          "uci": "b7b5",
+          "texto": "Sin tomar antes en c4: cxb5 cxb5 Cxb5 y el peón se pierde."
+        },
+        {
+          "uci": "a8b8",
+          "texto": "Lenta: e4 y las blancas ocupan el centro."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Semi-Slav Defense (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Semi-Slav_Defense",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6 e2e4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: +0,2 → −0,6. Refutación: dxe4 Ce5 c5 Ae3 cxd4 Axd4"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6 d1d2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,2 → −0,5. Refutación: dxc4 e4 b5 Df4 h6 Ae2"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6 c1g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6 e2e3 b8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6 e2e3 d5c4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,2 → −0,9. Refutación: Axc4 c5 O-O cxd4 exd4 Ae7"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6 e2e3 d8a5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,2 → −1,0. Refutación: Ad2 Dc7 Ad3 Ae7 O-O O-O"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6 e2e3 b8d7 f1d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6 e2e3 b8d7 f1d3 d5c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6 e2e3 b8d7 f1d3 b7b5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 12 puntos de chances: −0,1 → −1,5. Refutación: cxb5 cxb5 Cxb5 a6 Cc3 Ab4"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6 e2e3 b8d7 f1d3 a8b8 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,1 → −0,8. Refutación: e4 dxe4 Cxe4 Cxe4 Axe4 Ab4+"
+      }
+    }
+  }
+}

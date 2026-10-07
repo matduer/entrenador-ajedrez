@@ -1,0 +1,116 @@
+{
+  "id": "evans",
+  "nombre": "Gambito Evans",
+  "raiz": "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4",
+  "resumen": "Dentro de la Italiana, las blancas entregan el peón de b para desviar al alfil de c5 y ganar tiempos: c3 y d4 arman un centro de peones y abren líneas contra el rey negro. No tiene refutación conocida; el negro suele devolver material en algún momento.",
+  "planesBlancas": [
+    "c3 y d4 con tiempo sobre el alfil.",
+    "Abrir líneas: Db3 contra f7, alfil a a3, enroque rápido."
+  ],
+  "planesNegras": [
+    "Retirar el alfil a a5 (manteniendo la clavada de c3) o a e7 (más seguro).",
+    "Devolver el peón a tiempo para completar el desarrollo."
+  ],
+  "estructura": "Abierta: las blancas con c3 y d4, el negro con un peón de más pero menos desarrollo.",
+  "rupturas": [
+    "d4 de las blancas.",
+    "...d5 del negro para liberarse."
+  ],
+  "piezas": [
+    "Alfil blanco de c4: sobre f7.",
+    "Alfil negro: c5, después b4 y la retirada."
+  ],
+  "trampas": [],
+  "notas": {
+    "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4": {
+      "porQue": "Gambito Evans: entrega el peón para ganar tiempos con c3 y d4."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4": {
+      "porQue": "Aceptar es lo más directo: el negro se queda con el peón y obliga a demostrar la compensación.",
+      "porQueNo": [
+        {
+          "uci": "d7d5",
+          "texto": "exd5 y el centro se abre cuando el negro está menos desarrollado."
+        },
+        {
+          "uci": "c5d6",
+          "texto": "El alfil tapa el peón de d: c3, d4 y las blancas dominan el centro."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3": {
+      "porQue": "Ataca el alfil con tiempo y prepara d4."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3 b4a5": {
+      "porQue": "La retirada principal: mantiene la clavada sobre c3."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3 b4e7": {
+      "porQue": "Variante Anderssen: la retirada más segura, el alfil ayuda a defender el rey.",
+      "porQueNo": [
+        {
+          "uci": "b4f8",
+          "texto": "Deshace el desarrollo: d4 y las blancas tienen todo el centro."
+        },
+        {
+          "uci": "b7b5",
+          "texto": "Axb5 y el negro pierde otro peón sin compensación."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Evans Gambit (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Evans_Gambit",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 d7d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,1 → −0,7. Refutación: exd5 Cxb4 O-O Ce7 Cxe5 Cbxd5"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5d6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: +0,1 → −0,9. Refutación: c3 Cf6 d4 exd4 b5 Ca5"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3 b4a5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3 b4e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3 b4f8 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 4 puntos de chances: +0,1 → −0,4. Refutación: d4 d6 O-O Ca5 Da4+ c6"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3 b7b5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 13 puntos de chances: +0,1 → −1,4. Refutación: Axb5 Ad6 d4 Cge7 O-O O-O"
+      }
+    }
+  }
+}
