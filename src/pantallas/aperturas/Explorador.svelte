@@ -310,7 +310,13 @@
             </ul>
           {/if}
           <h3>Fuentes</h3>
-          <ul>{#each explicacion.fuentes as f (f.url)}<li><a href={f.url} target="_blank" rel="noopener">{f.titulo}</a>{f.licencia ? ` (${f.licencia})` : ''}</li>{/each}</ul>
+          <ul>
+            {#each explicacion.fuentes as f (f.titulo + (f.capitulo ?? ''))}
+              <li>
+                {#if f.url}<a href={f.url} target="_blank" rel="noopener">{f.titulo}</a>{:else}<cite>{f.titulo}</cite>{/if}{f.capitulo ? `, ${f.capitulo}` : ''}{f.licencia ? ` (${f.licencia})` : ''}
+              </li>
+            {/each}
+          </ul>
         </details>
         <p class="aviso-contenido">{AVISO}</p>
       </section>

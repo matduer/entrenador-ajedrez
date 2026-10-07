@@ -48,7 +48,7 @@
         },
         {
           "uci": "c6d4",
-          "texto": "Dxd4: la dama blanca queda centralizada."
+          "texto": "Dxd4: la dama ataca la torre de h8 y, si ...Cf6, e5 echa al caballo."
         }
       ]
     },
@@ -63,9 +63,16 @@
           "texto": "...Cxe4! Cxc6 Dxc3: el negro gana material."
         }
       ]
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 c2c4 g8f6 b1c3 d7d6": {
+      "porQue": "Más fino que cambiar en d4 enseguida: si Ag5, el negro responde ...Ag7 y el caballo de d4 queda sin el apoyo del alfil de e3."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Sicilian Defence», sección «Accelerated Dragon» y «Maroczy Bind»"
+    },
     {
       "titulo": "Sicilian Defence, Accelerated Dragon (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Sicilian_Defence,_Accelerated_Dragon",
@@ -117,6 +124,10 @@
       "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 b1c3 f8g7 c1e3 g8f6 f1c4 d8a5 d1d2 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 11 puntos de chances: +0,4 → −0,8. Refutación: Cxe4 Cxc6 Dxc3 Dxc3 Axc3+ bxc3"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 c2c4 g8f6 b1c3 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
       }
     }
   }

@@ -2,7 +2,7 @@
   "id": "siciliana-najdorf",
   "nombre": "Siciliana Najdorf",
   "raiz": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6",
-  "resumen": "Con 5...a6 el negro le quita b5 a los caballos y al alfil blanco y se guarda la decisión sobre el resto de sus piezas: puede seguir con ...e5 o ...e6, y casi siempre con ...b5. Las blancas eligen entre el Ataque Inglés (Ae3, f3, Dd2, g4 y enroque largo), la línea aguda 6.Ag5 con f4 y el juego posicional con 6.Ae2.",
+  "resumen": "Con 5...a6 el negro le quita b5 a los caballos y al alfil blanco y prepara ...b5. La idea original de Najdorf era responder al tranquilo 6.Ae2 con 6...e5: gana espacio y el caballo de d4 tiene que retroceder, porque Cf5 se responde con ...d5. Sin haber jugado ...Cc6, el caballo de dama puede ir a d7, muchas veces mejor casilla. Hoy las blancas eligen entre el Ataque Inglés (Ae3, f3, Dd2, enroque largo y g4: la idea del Ataque Keres adaptada), la línea aguda 6.Ag5 con f4, la variante Fischer 6.Ac4 y el juego posicional con 6.Ae2.",
   "planesBlancas": [
     "Ataque Inglés: Ae3, f3, Dd2, enroque largo y avance g4-g5.",
     "Con Ag5 y f4: presión central y ataque rápido.",
@@ -115,9 +115,40 @@
           "texto": "Cxc6 bxc6 y e5: el caballo de f6 tiene que retirarse."
         }
       ]
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 f1e2 e7e5": {
+      "porQue": "La idea original de la Najdorf: gana espacio y obliga al caballo a retroceder."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 f1e2 e7e5 d4b3": {
+      "porQue": "Retrocede a b3.",
+      "porQueNo": [
+        {
+          "uci": "d4f5",
+          "texto": "...d5: el negro libera el juego con tiempo."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 f1c4": {
+      "porQue": "Variante Fischer: el alfil apunta a d5 y f7, como en el Ataque Sozin."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 f1c4 e7e6": {
+      "porQue": "Cierra la diagonal hacia f7. Contra Ac4, ...e5 es menos atractivo porque el alfil controla d5."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1e3 f6g4": {
+      "porQue": "Ataca al alfil antes de que las blancas jueguen f3."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1e3 f6g4 e3g5": {
+      "porQue": "El alfil se aparta y mantiene la presión sobre e7."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1e3 f6g4 e3g5 h7h6 g5h4 g7g5": {
+      "porQue": "Echa al alfil y gana espacio: una especie de Dragón ampliado, más agresivo pero más vulnerable (f5 queda débil)."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Sicilian Defence», sección «Najdorf Variation»"
+    },
     {
       "titulo": "Sicilian Defence, Najdorf Variation (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Sicilian_Defence,_Najdorf_Variation",
@@ -225,6 +256,38 @@
       "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1g5 e7e6 f2f4 b8c6 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 10 puntos de chances: −0,1 → −1,2. Refutación: Cxc6 bxc6 e5 h6 Ah4 g5"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 f1e2 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 f1e2 e7e5 d4b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 f1e2 e7e5 d4f5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,3 → −0,5. Refutación: d5 Ag5 d4 Axf6 Dxf6 Cd5"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 f1c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 f1c4 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1e3 f6g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1e3 f6g4 e3g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1e3 f6g4 e3g5 h7h6 g5h4 g7g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
       }
     }
   }

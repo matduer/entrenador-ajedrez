@@ -49,9 +49,19 @@
     },
     "e2e4 c7c5 g1f3 d7d6 f1b5 b8c6": {
       "porQue": "Lleva a estructuras parecidas a la Rossolimo."
+    },
+    "e2e4 c7c5 g1f3 d7d6 f1b5 c8d7 b5d7": {
+      "porQue": "Cambia alfiles. Después las blancas eligen entre c4 (estructura Maroczy) y c3 con d4."
+    },
+    "e2e4 c7c5 g1f3 d7d6 f1b5 c8d7 b5d7 d8d7 c2c4": {
+      "porQue": "Bind de Maroczy: con c4 y e4, las blancas controlan d5."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Sicilian Defence», sección «2 Nf3 d6»"
+    },
     {
       "titulo": "Sicilian Defence (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Sicilian_Defence",
@@ -95,6 +105,14 @@
       "e2e4 c7c5 g1f3 d7d6 f1b5 b8c6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 f1b5 c8d7 b5d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 f1b5 c8d7 b5d7 d8d7 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
       }
     }
   }

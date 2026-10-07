@@ -74,9 +74,19 @@
           "texto": "Cxb5: el peón se pierde."
         }
       ]
+    },
+    "e2e4 c7c5 b1c3 b8c6 g2g3 g7g6 f1g2 f8g7 d2d3 d7d6 f2f4": {
+      "porQue": "El plan de Spassky: f4 concentra las fuerzas en el flanco de rey."
+    },
+    "e2e4 c7c5 b1c3 b8c6 g2g3 g7g6 f1g2 f8g7 d2d3 d7d6 f2f4 e7e6": {
+      "porQue": "Lo más sólido: si g4, ...f5 frena el avance blanco."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Sicilian Defence», sección «Closed Sicilian»"
+    },
     {
       "titulo": "Sicilian Defence (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Sicilian_Defence",
@@ -144,6 +154,14 @@
       "e2e4 c7c5 b1c3 b8c6 g2g3 g7g6 f1g2 f8g7 d2d3 b7b5 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 10 puntos de chances: +0,1 → −1,0. Refutación: Cxb5 Tb8 c4 Cf6 Ce2 O-O"
+      },
+      "e2e4 c7c5 b1c3 b8c6 g2g3 g7g6 f1g2 f8g7 d2d3 d7d6 f2f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 b1c3 b8c6 g2g3 g7g6 f1g2 f8g7 d2d3 d7d6 f2f4 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
       }
     }
   }

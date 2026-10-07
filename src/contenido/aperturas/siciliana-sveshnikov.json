@@ -2,7 +2,7 @@
   "id": "siciliana-sveshnikov",
   "nombre": "Siciliana Sveshnikov",
   "raiz": "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5",
-  "resumen": "Con 5...e5 el negro echa al caballo de d4 con tiempo, a cambio de un agujero en d5 y un peón retrasado en d6. En la línea principal (Cdb5, Ag5, Ca3) el caballo blanco queda en a3 y el negro gana espacio con ...b5. La lucha gira alrededor de d5: las blancas quieren un caballo ahí, el negro busca ...f5 y la pareja de alfiles.",
+  "resumen": "Con 5...e5 el negro echa al caballo de d4 con tiempo, a cambio de un agujero en d5 y un peón retrasado en d6. En la línea principal (Cdb5, Ag5, Ca3, ...b5) el caballo blanco queda en a3 y el negro gana espacio. La clave de la Sveshnikov es que, tras Axf6 gxf6, los peones doblados de f no son una debilidad sino un arma: ...f5 golpea el centro y la columna g puede servir para atacar. Si las blancas ocupan d5 sin cambiar en f6 (9.Cd5), el juego se calma y el alfil negro de casillas negras encuentra la diagonal c1-h6.",
   "planesBlancas": [
     "Dominar d5 con un caballo (Ag5xf6 y Cd5).",
     "Devolver el caballo de a3 al juego por c2 o c4."
@@ -102,9 +102,37 @@
           "texto": "Cxd5: la ruptura llega antes de tiempo."
         }
       ]
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6 b5a3 b7b5 g5f6": {
+      "porQue": "Cambia en f6 para dañar la estructura negra y dominar d5."
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6 b5a3 b7b5 g5f6 g7f6": {
+      "porQue": "Retomar con el peón: los dos peones de f golpean el centro con ...f5.",
+      "porQueNo": [
+        {
+          "uci": "d8f6",
+          "texto": "Cd5 y c4: el flanco de dama del negro se derrumba."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6 b5a3 b7b5 g5f6 g7f6 c3d5": {
+      "porQue": "El caballo ocupa d5."
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6 b5a3 b7b5 g5f6 g7f6 c3d5 f6f5": {
+      "porQue": "La ruptura clave de la Sveshnikov: ataca e4."
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6 b5a3 b7b5 c3d5": {
+      "porQue": "La alternativa tranquila: ocupa d5 sin cambiar en f6."
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6 b5a3 b7b5 c3d5 f8e7": {
+      "porQue": "Prepara cambiar el alfil de g5; tras Axf6 Axf6, el alfil negro llega a la diagonal c1-h6."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Sicilian Defence», sección «Sveshnikov Variation»"
+    },
     {
       "titulo": "Sicilian Defence, Sveshnikov Variation (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Sicilian_Defence,_Sveshnikov_Variation",
@@ -200,6 +228,34 @@
       "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6 b5a3 d6d5 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 7 puntos de chances: −0,2 → −1,0. Refutación: Cxd5 Da5+ Dd2 Dxd2+ Axd2 Cxd5"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6 b5a3 b7b5 g5f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6 b5a3 b7b5 g5f6 g7f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6 b5a3 b7b5 g5f6 d8f6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 17 puntos de chances: −0,2 → −2,1. Refutación: Cd5 Dd8 Axb5 axb5 Cxb5 Da5+"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6 b5a3 b7b5 g5f6 g7f6 c3d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6 b5a3 b7b5 g5f6 g7f6 c3d5 f6f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6 b5a3 b7b5 c3d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6 b5a3 b7b5 c3d5 f8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
       }
     }
   }

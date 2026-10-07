@@ -2,7 +2,7 @@
   "id": "siciliana-alapin",
   "nombre": "Siciliana Alapin (2.c3)",
   "raiz": "e2e4 c7c5 c2c3",
-  "resumen": "Las blancas preparan d4 para poder retomar con peón y quedarse con un centro de dos peones. Es una de las anti-sicilianas más sólidas. El negro tiene dos respuestas principales: 2...Cf6, que provoca e5 y lleva a estructuras parecidas a la Alekhine, y 2...d5, donde la dama retoma en d5 sin que Cc3 la moleste.",
+  "resumen": "Con 2.c3 las blancas preparan d4 para retomar con peón y formar un centro de dos peones. Su defecto es el mismo de 1...c5: no desarrolla, y además le quita c3 al caballo. Por eso el negro ataca el centro enseguida. Con 2...d5 la dama retoma en d5 sin que Cc3 la moleste; con 2...Cf6 se provoca e5 y se llega a estructuras parecidas a la Alekhine, aunque el peón de c5 impide que las blancas formen un centro grande. Muchas líneas terminan con un peón aislado blanco en d4.",
   "planesBlancas": [
     "d4 para formar el centro de peones.",
     "Desarrollo tranquilo: Cf3, Ad3 o Ac4, enroque."
@@ -95,9 +95,19 @@
           "texto": "Cambiar damas tan pronto no da nada."
         }
       ]
+    },
+    "e2e4 c7c5 c2c3 d7d5 e4d5 d8d5 d2d4 g8f6": {
+      "porQue": "Desarrolla y mantiene la tensión: conviene cambiar en d4 recién cuando las blancas hayan puesto alguna pieza en una casilla menos activa."
+    },
+    "e2e4 c7c5 c2c3 g8f6 e4e5 f6d5 d2d4 c5d4 g1f3": {
+      "porQue": "Retrasa cxd4: si ...Cc6, Ac4 presiona el caballo de d5 y f7."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Sicilian Defence», sección «Alapin Variation»"
+    },
     {
       "titulo": "Sicilian Defence, Alapin Variation (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Sicilian_Defence,_Alapin_Variation",
@@ -185,6 +195,14 @@
       "e2e4 c7c5 c2c3 d7d5 e4d5 d8d5 d1f3 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 6 puntos de chances: +0,3 → −0,4. Refutación: Cf6 Dxd5 Cxd5 Cf3 Cc6 Ac4"
+      },
+      "e2e4 c7c5 c2c3 d7d5 e4d5 d8d5 d2d4 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 c2c3 g8f6 e4e5 f6d5 d2d4 c5d4 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
       }
     }
   }

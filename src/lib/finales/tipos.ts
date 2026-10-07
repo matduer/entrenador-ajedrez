@@ -1,3 +1,4 @@
+import type { Fuente } from '../aperturas/explicaciones.ts'
 export type Objetivo = 'ganar' | 'tablas'
 
 export interface PosicionFinal {
@@ -19,7 +20,7 @@ export interface TemaFinal {
   explicacion: string[]
   ideas: string[]
   posiciones: PosicionFinal[]
-  fuentes: { titulo: string; url: string; licencia?: string }[]
+  fuentes: Fuente[]
 }
 
 export interface Temario {

@@ -2,16 +2,16 @@
   "id": "siciliana",
   "nombre": "Defensa Siciliana",
   "raiz": "e2e4 c7c5",
-  "resumen": "La respuesta más combativa a 1.e4. El negro rompe la simetría: controla d4 con un peón lateral y, cuando las blancas abren con d4, cambia un peón de flanco por uno central. Queda con dos peones centrales contra uno y la columna c semiabierta; las blancas, con ventaja de desarrollo y espacio para atacar al rey.",
+  "resumen": "Con 1...c5 el negro impide el centro ideal (d4) igual que con 1...e5, pero sin ofrecer los blancos típicos de las aperturas abiertas: no hay peón en e5 que atacar ni un f7 expuesto en la diagonal a2-g8. Controla el centro desde el flanco y se guarda la ruptura ...d5 y el plan ...a6 y ...b5. Las blancas tienen tres caminos: cerrar el juego con d3 (Siciliana Cerrada), preparar d4 con c3 (Alapin) o jugar d4 y retomar con pieza (Siciliana Abierta). En la Abierta tienen espacio y desarrollo fácil; el negro, una mayoría central de dos peones contra uno, la columna c semiabierta y una posición compacta y elástica. Por eso casi siempre el juego es agudo.",
   "planesBlancas": [
     "Siciliana abierta (Cf3 y d4): desarrollo rápido, centralizar el caballo en d4 y atacar en el flanco de rey (f4, g4, a veces enroque largo).",
     "Usar la casilla d5 (Cd5) y los ataques al peón de d6.",
     "Alternativas sin abrir el centro: Alapin (2.c3) para jugar d4 con un peón."
   ],
   "planesNegras": [
-    "Tomar en d4 cuando las blancas lo jueguen, para ganar la mayoría central.",
-    "Contrajuego en el flanco de dama y la columna c (...a6, ...b5, ...Tc8).",
-    "La ruptura ...d5 libera el juego; si sale bien, el negro suele igualar o más."
+    "Contrajuego en el flanco de dama: ...a6, ...b5, ...Dc7 y la columna c.",
+    "Romper con ...d5 en el momento justo: con la mayoría central, esa ruptura libera el juego.",
+    "Elegir la estructura según el segundo movimiento: 2...d6 (Najdorf, Dragón), 2...Cc6 (Clásica, Sveshnikov) o 2...e6 (Taimanov, Kan, Scheveningen)."
   ],
   "estructura": "Tras ...cxd4 y Cxd4, el negro tiene peones en d6 y e6 (o e5) y la columna c abierta; las blancas, el peón de e4 y la columna d. Las estructuras dependen de la variante: Najdorf (...a6), Dragón (...g6), Scheveningen (...e6 y ...d6).",
   "rupturas": [
@@ -137,9 +137,40 @@
     },
     "e2e4 c7c5 c2c3 g8f6": {
       "porQue": "Ataca e4 enseguida: si e5, el caballo salta a d5 y el negro juega contra el centro avanzado."
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 d7d6 c1g5": {
+      "porQue": "Ataque Richter-Rauzer: clava el caballo y prepara Dd2 y enroque largo, con presión sobre d6. Contra ...e5, Axf6 y Cd5 dejan a las blancas dominando d5."
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 d7d6 c1g5 e7e6": {
+      "porQue": "Lo habitual: con ...Ae7 el negro neutraliza la clavada.",
+      "porQueNo": [
+        {
+          "uci": "e7e5",
+          "texto": "Axf6 y Cd5: las blancas dominan d5."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 d7d6 f1c4": {
+      "porQue": "Ataque Sozin: el alfil apunta a d5 y f7. Si el negro juega ...e5, el alfil queda idealmente ubicado sobre d5."
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 d7d6 f1c4 e7e6": {
+      "porQue": "Cierra la diagonal del alfil hacia f7 (estructura Scheveningen)."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6": {
+      "porQue": "Taimanov: deja libre la diagonal a3-f8 para el alfil (...Ab4 o ...Ac5) y no se apura con ...d6, que siempre queda disponible."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 d7d6": {
+      "porQue": "Scheveningen: peones en e6 y d6. Parece pasivo pero es muy sólido, y el negro tiene ...a6, ...Dc7 y ...Cc6 para atacar en el flanco de dama."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 d7d6 g2g4": {
+      "porQue": "Ataque Keres: amenaza g5 para echar al caballo de f6 y gana espacio en el flanco de rey."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Sicilian Defence»: introducción, «2 Nf3», «Classical Variation», «Taimanov Variation» y «Scheveningen Variation»"
+    },
     {
       "titulo": "Sicilian Defence (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Sicilian_Defence",
@@ -275,6 +306,38 @@
       "e2e4 c7c5 c2c3 g8f6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 d7d6 c1g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 d7d6 c1g5 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 d7d6 c1g5 e7e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,4 → −1,3. Refutación: Axf6 gxf6 Cf5 Axf5 exf5 d5"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 d7d6 f1c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 d7d6 f1c4 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 d7d6 g2g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
       }
     }
   }

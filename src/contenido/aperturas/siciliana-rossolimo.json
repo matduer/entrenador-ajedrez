@@ -2,7 +2,7 @@
   "id": "siciliana-rossolimo",
   "nombre": "Siciliana Rossolimo",
   "raiz": "e2e4 c7c5 g1f3 b8c6 f1b5",
-  "resumen": "En lugar de abrir el juego con d4, las blancas sacan el alfil a b5 y amenazan cambiarlo por el caballo para doblar los peones del negro. Es una forma de evitar la teoría de las Sicilianas abiertas. El negro suele responder con el fianchetto (...g6) o con ...e6 y ...Cge7.",
+  "resumen": "En lugar de abrir el juego con d4, las blancas sacan el alfil a b5. El tema central es el cambio en c6: no siempre conviene hacerlo, y cuando se hace no siempre está claro si el negro debe retomar con el peón de b o con el de d. Contra 3...g6, las blancas eligen entre el plan clásico (enroque, Te1 y c3 con d4) y el cambio inmediato en c6. Si el negro retoma hacia afuera (...dxc6), la columna d abierta hace menos atractivo d4 y las blancas juegan d3, h3, Cc3, Ae3 y Dd2 para cambiar el alfil de g7 con Ah6.",
   "planesBlancas": [
     "Axc6 para doblar peones y jugar contra ellos.",
     "Enroque, Te1, c3 y d4."
@@ -73,9 +73,22 @@
     },
     "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 b5c6 b7c6": {
       "porQue": "También bueno: retoma hacia el centro y prepara ...d5."
+    },
+    "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 e1g1 f8g7 f1e1": {
+      "porQue": "Sostiene e4 y prepara c3 y d4."
+    },
+    "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 b5c6 d7c6 d2d3": {
+      "porQue": "Con la columna d abierta, d4 ya no es tan atractivo: las blancas juegan d3, h3, Cc3, Ae3 y Dd2, con Ah6."
+    },
+    "e2e4 c7c5 g1f3 b8c6 f1b5 e7e6 e1g1 g8e7": {
+      "porQue": "Prepara ...a6 y poder retomar en c6 con el caballo."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Sicilian Defence», sección «2 Nf3 Nc6» (Rossolimo Variation)"
+    },
     {
       "titulo": "Sicilian Defence (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Sicilian_Defence",
@@ -141,6 +154,18 @@
         "detalle": "Pierde 38 puntos de chances: −0,3 → −6,3. Refutación: Aa4 Cxe4 O-O b6 Te1 Ab7"
       },
       "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 b5c6 b7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 e1g1 f8g7 f1e1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 b5c6 d7c6 d2d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 f1b5 e7e6 e1g1 g8e7": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
       }

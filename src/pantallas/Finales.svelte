@@ -82,7 +82,7 @@
       <h3>Ideas clave</h3>
       <ul>{#each tema.ideas as idea (idea)}<li>{idea}</li>{/each}</ul>
       <p class="suave">
-        Fuentes: {#each tema.fuentes as f, i (f.url)}{i ? ' · ' : ''}<a href={f.url} target="_blank" rel="noopener">{f.titulo}</a>{/each}.
+        Fuentes: {#each tema.fuentes as f, i (f.titulo + (f.capitulo ?? ''))}{i ? ' · ' : ''}{#if f.url}<a href={f.url} target="_blank" rel="noopener">{f.titulo}</a>{:else}<cite>{f.titulo}</cite>{/if}{f.capitulo ? `, ${f.capitulo}` : ''}{/each}.
         Explicación generada, puede contener errores; las posiciones están verificadas con las tablebases de Lichess.
       </p>
     </section>

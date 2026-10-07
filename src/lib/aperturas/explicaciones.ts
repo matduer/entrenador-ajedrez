@@ -1,13 +1,16 @@
 /**
  * Explicaciones de aperturas escritas durante el desarrollo (src/contenido/aperturas/*.json).
- * Redacción propia a partir de fuentes abiertas, con las jugadas verificadas por Stockfish
+ * Redacción propia a partir de fuentes abiertas y de libros de la biblioteca del usuario (citados por
+ * capítulo, sin copiar texto), con las jugadas verificadas por Stockfish
  * (scripts/verificar-explicaciones.ts). Siempre se muestran con la advertencia de contenido generado.
  */
 
+/** Una fuente web lleva url; un libro de la biblioteca lleva capítulo y no tiene enlace. */
 export interface Fuente {
   titulo: string
-  url: string
+  url?: string
   licencia?: string
+  capitulo?: string
 }
 
 export interface PorQueNo {

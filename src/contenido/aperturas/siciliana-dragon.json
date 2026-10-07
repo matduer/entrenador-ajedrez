@@ -2,7 +2,7 @@
   "id": "siciliana-dragon",
   "nombre": "Siciliana Dragón",
   "raiz": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6",
-  "resumen": "El negro hace el fianchetto del alfil de rey: desde g7 apunta al centro y al flanco de dama. La respuesta más peligrosa es el Ataque Yugoslavo (Ae3, f3, Dd2, enroque largo), con ataques en flancos opuestos: las blancas avanzan h4-h5 y buscan cambiar el alfil del Dragón con Ah6; el negro ataca por la columna c, a veces entregando la calidad con ...Txc3.",
+  "resumen": "El negro hace el fianchetto del alfil de rey: desde g7 apunta al centro y al flanco de dama. El orden 2...d6 lleva al Dragón de forma segura, pero también le da a las blancas su arma más peligrosa: el Ataque Yugoslavo (Ae3, f3, Dd2, enroque largo, Ah6 y h4-h5), con ataques en flancos opuestos. El negro contraataca por la columna c, a veces con el sacrificio de calidad ...Txc3, y si las blancas enrocan largo antes de jugar Ac4, golpea en el centro con ...d5.",
   "planesBlancas": [
     "Ataque Yugoslavo: Ae3, f3, Dd2, enroque largo, h4-h5 y Ah6.",
     "Ac4 para impedir ...d5 y apuntar a f7."
@@ -99,9 +99,19 @@
     },
     "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6 e1c1": {
       "porQue": "Enroque largo inmediato: si ...d5, el juego se abre enseguida."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6 e1c1 d6d5": {
+      "porQue": "El contragolpe típico contra el enroque largo inmediato: si las blancas ganan el peón de d5, el negro obtiene las columnas b y c y la diagonal larga."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 f1e2": {
+      "porQue": "Dragón Clásico: un plan más tranquilo, con enroque corto. Menos peligroso para el negro que el Yugoslavo."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Sicilian Defence», sección «Dragon Variation»"
+    },
     {
       "titulo": "Sicilian Defence, Dragon Variation (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Sicilian_Defence,_Dragon_Variation",
@@ -189,6 +199,14 @@
       "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6 e1c1": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6 e1c1 d6d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 f1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
       }
     }
   }
