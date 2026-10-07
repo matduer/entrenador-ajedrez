@@ -108,9 +108,25 @@
           "texto": "El gambito no funciona: dxe5 y el caballo tiene que irse a una casilla mala."
         }
       ]
+    },
+    "d2d4 d7d5 g1f3 g8f6 c1f4": {
+      "porQue": "Sistema Londres por la vía de Cf3: el esquema (Af4, e3, c3, Ad3, Cbd2 y Ce5) sirve contra casi cualquier defensa."
+    },
+    "d2d4 d7d5 g1f3 e7e6 c1f4": {
+      "porQue": "El Londres rinde más cuando el negro ya encerró su alfil de dama con ...e6."
+    },
+    "d2d4 d7d5 g1f3 e7e6 c1f4 c7c5 e2e3 d8b6": {
+      "porQue": "Presiona b2 para que la dama blanca tenga que ir a c1, donde queda pasiva."
+    },
+    "d2d4 d7d5 g1f3 g8f6 c1f4 c8f5": {
+      "porQue": "Contra el Londres, sacar el alfil antes de ...e6 le da al negro un juego cómodo."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Other 1 d4 d5 Openings», sección «Queen's Pawn Game» (London System)"
+    },
     {
       "titulo": "London System (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/London_System",
@@ -214,6 +230,22 @@
       "d2d4 g8f6 c1f4 e7e5 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 17 puntos de chances: −0,1 → −2,0. Refutación: dxe5 Ch5 Ad2 d6 e4 g6"
+      },
+      "d2d4 d7d5 g1f3 g8f6 c1f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 e7e6 c1f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 e7e6 c1f4 c7c5 e2e3 d8b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 g8f6 c1f4 c8f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
       }
     }
   }

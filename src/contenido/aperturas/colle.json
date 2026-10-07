@@ -61,9 +61,19 @@
           "texto": "Enroque y e4: el caballo queda fuera de juego."
         }
       ]
+    },
+    "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 c7c5 b2b3": {
+      "porQue": "Colle-Zukertort: el alfil va a b2. El plan es Ce5 y f4, o c4 para jugar con peones colgantes."
+    },
+    "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 c7c5 c2c3 b8c6 e1g1 f8d6 b1d2 e8g8 d4c5 d6c5 e3e4": {
+      "porQue": "La posición básica del Colle: la ruptura e4 se cumplió y el negro debe vigilar e5 con ...Dc7."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Other 1 d4 d5 Openings», sección «Queen's Pawn Game» (Colle y Zukertort)"
+    },
     {
       "titulo": "Colle System (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Colle_System",
@@ -123,6 +133,14 @@
       "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 c7c5 c2c3 b8c6 b1d2 f6h5 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 4 puntos de chances: −0,1 → −0,6. Refutación: O-O cxd4 exd4 Ad6 Te1 O-O"
+      },
+      "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 c7c5 b2b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 c7c5 c2c3 b8c6 e1g1 f8d6 b1d2 e8g8 d4c5 d6c5 e3e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
       }
     }
   }

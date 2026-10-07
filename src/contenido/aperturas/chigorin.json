@@ -2,7 +2,7 @@
   "id": "chigorin",
   "nombre": "Defensa Chigorin",
   "raiz": "d2d4 d7d5 c2c4 b8c6",
-  "resumen": "Contra el Gambito de Dama, el negro saca el caballo a c6 aunque tape el peón de c. Busca juego de piezas: presión sobre d4, el alfil a g4 y a menudo la entrega de la pareja de alfiles. Es poco ortodoxa pero jugable.",
+  "resumen": "Contra el Gambito de Dama, el negro saca el caballo a c6 aunque tape el peón de c. La esencia de la Chigorin es crear posiciones desequilibradas: el negro entrega sin problema la pareja de alfiles (...Ag4xf3) y acepta estructuras raras a cambio de juego de piezas activo y presión sobre d4. Contra cxd5 y Dxd5, tiene que golpear rápido con ...e5 antes de que Cc3 gane tiempo sobre la dama. Contra e3, ...e5 es como un Contragambito Albin en mejores condiciones.",
   "planesBlancas": [
     "Cf3 y cxd5 para que la dama negra salga temprano y ganar tiempos sobre ella.",
     "Centro de peones con e4."
@@ -41,9 +41,28 @@
     },
     "d2d4 d7d5 c2c4 b8c6 c4d5": {
       "porQue": "Tomar obliga a la dama negra a salir temprano y las blancas ganan tiempos sobre ella."
+    },
+    "d2d4 d7d5 c2c4 b8c6 c4d5 d8d5 e2e3 e7e5": {
+      "porQue": "Lo vital contra cxd5: ...e5 enseguida, antes de que Cc3 gane tiempo sobre la dama."
+    },
+    "d2d4 d7d5 c2c4 b8c6 c4d5 d8d5 e2e3 e7e5 b1c3 f8b4": {
+      "porQue": "Clava el caballo y suma presión sobre d4."
+    },
+    "d2d4 d7d5 c2c4 b8c6 g1f3 c8g4": {
+      "porQue": "El plan típico: cambiar el alfil por el caballo para presionar d4."
+    },
+    "d2d4 d7d5 c2c4 b8c6 g1f3 c8g4 c4d5 g4f3": {
+      "porQue": "Cede la pareja de alfiles a cambio de peones doblados blancos y juego de piezas."
+    },
+    "d2d4 d7d5 c2c4 b8c6 e2e3 e7e5": {
+      "porQue": "Contra e3, ...e5 da un Contragambito Albin en mejores condiciones para el negro."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Other 1 d4 d5 Openings», sección «Chigorin Defence»"
+    },
     {
       "titulo": "Chigorin Defense (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Chigorin_Defense",
@@ -79,6 +98,26 @@
       "d2d4 d7d5 c2c4 b8c6 c4d5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 b8c6 c4d5 d8d5 e2e3 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 b8c6 c4d5 d8d5 e2e3 e7e5 b1c3 f8b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 b8c6 g1f3 c8g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 b8c6 g1f3 c8g4 c4d5 g4f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,9 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 b8c6 e2e3 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
       }
     }
   }

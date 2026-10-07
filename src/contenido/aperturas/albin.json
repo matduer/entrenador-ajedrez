@@ -72,9 +72,26 @@
           "texto": "...exd2+ y el negro gana una pieza."
         }
       ]
+    },
+    "d2d4 d7d5 c2c4 e7e5 d4e5 d5d4 g1f3 b8c6": {
+      "porQue": "Sostiene la cuña de d4 y ataca e5."
+    },
+    "d2d4 d7d5 c2c4 e7e5 d4e5 d5d4 g1f3 b8c6 g2g3": {
+      "porQue": "El fianchetto: tras ...d4, la diagonal larga quedó abierta y el alfil presiona el flanco de dama."
+    },
+    "d2d4 d7d5 c2c4 e7e5 d4e5 d5d4 g1f3 b8c6 g2g3 c8g4": {
+      "porQue": "Prepara ...Dd7 y el enroque largo, con ideas de ...Ah3 y ...h5.",
+      "inferior": true
+    },
+    "d2d4 d7d5 c2c4 e7e5 d4e5 d5d4 g1f3 b8c6 b1d2": {
+      "porQue": "El caballo va a b3 para atacar el peón de d4."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Other 1 d4 d5 Openings», sección «Albin Counter-Gambit»"
+    },
     {
       "titulo": "Albin Countergambit (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Albin_Countergambit",
@@ -134,6 +151,22 @@
       "d2d4 d7d5 c2c4 e7e5 d4e5 d5d4 e2e3 f8b4 c1d2 d4e3 g1f3 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 40 puntos de chances: −0,1 → −6,4. Refutación: exd2+ Cbxd2 Cc6 a3 Axd2+ Dxd2"
+      },
+      "d2d4 d7d5 c2c4 e7e5 d4e5 d5d4 g1f3 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e5 d4e5 d5d4 g1f3 b8c6 g2g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e5 d4e5 d5d4 g1f3 b8c6 g2g3 c8g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Cge7: −0,7 contra −1,2 (marcada como inferior pero jugable)"
+      },
+      "d2d4 d7d5 c2c4 e7e5 d4e5 d5d4 g1f3 b8c6 b1d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
       }
     }
   }
