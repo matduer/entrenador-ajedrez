@@ -32,7 +32,7 @@ export function cumple(e: ErrorPartida, f: Filtros): boolean {
 
 /** Repasos que no son ejercicios de mis errores (problemas de Lichess, finales). */
 export function esOtroRepaso(id: string): boolean {
-  return id.startsWith('lichess-problema:') || id.startsWith('final:') || id.startsWith('final-propio:')
+  return id.startsWith('lichess-problema:') || id.startsWith('libro-problema:') || id.startsWith('final:') || id.startsWith('final-propio:')
 }
 
 function inicioDelDia(): number {

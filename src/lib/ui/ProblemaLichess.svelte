@@ -4,7 +4,7 @@
   import { detectarMotivoError } from '../ajedrez/temas.ts'
   import type { Position } from 'chessops/chess'
   import { motorInteractivo } from '../motor/motor.ts'
-  import { idRepaso, nombreTema, type Problema } from '../problemas/problemas.ts'
+  import { esDeLibro, idRepaso, nombreTema, type Problema } from '../problemas/problemas.ts'
   import { registrarIntento, type ResultadoIntento } from '../repaso/repaso.ts'
   import Tablero, { type Flecha } from './Tablero.svelte'
   import VisorLinea, { type Linea } from './VisorLinea.svelte'
@@ -27,7 +27,10 @@
     }
     return lista
   })
-  let miColor = $derived<'white' | 'black'>(fens[1]?.split(' ')[1] === 'w' ? 'white' : 'black')
+  // En los problemas de libros no hay jugada previa del rival: se resuelve desde fens[0].
+  let libro = $derived(esDeLibro(problema))
+  let inicio = $derived(libro ? 0 : 1)
+  let miColor = $derived<'white' | 'black'>(fens[inicio]?.split(' ')[1] === 'w' ? 'white' : 'black')
 
   let paso = $state(0) // cantidad de jugadas de la solución ya jugadas
   let estado = $state<'inicio' | 'resolver' | 'verificando' | 'resuelto'>('inicio')
@@ -39,6 +42,10 @@
 
   // La jugada del rival se muestra animada después de un momento.
   $effect(() => {
+    if (libro) {
+      estado = 'resolver'
+      return
+    }
     const t = setTimeout(() => {
       paso = 1
       estado = 'resolver'
@@ -81,6 +88,12 @@
     const evMia = invertir(r.ev)
     const motivo = detectarMotivoError(fenDespues, r.linea, r.ev)
     const perdida = chancesDeGanar(antes.ev) - chancesDeGanar(evMia)
+    // En un libro puede haber más de una solución: si tu jugada gana igual, cuenta como bien.
+    if (libro && perdida < 0.03 && chancesDeGanar(evMia) > 0.5) {
+      mensaje = `✓ ${san}: también gana (${textoEvaluacion(evMia)}), aunque el libro sigue otra línea.`
+      terminar(pista ? 'pista' : 'bien')
+      return
+    }
     mensaje = `✗ ${san}: de ${textoEvaluacion(antes.ev)} a ${textoEvaluacion(evMia)}${motivo.length ? ` (${motivo.join(', ')})` : ''}.${perdida < 0.1 ? ' No pierde mucho, pero no es la solución del problema.' : ''}`
     linea = { titulo: `Por qué no ${san}`, fen: fenDespues, ucis: r.linea }
     terminar('mal')
@@ -99,7 +112,11 @@
 <article class="problema">
   <header>
     <div class="consigna"><b class:bien={estado === 'resuelto' && resultado !== 'mal'} class:mal={resultado === 'mal'}>{titulo}</b></div>
-    <div class="suave">Problema de Lichess · rating {problema.rating}</div>
+    {#if problema.fuente}
+      <div class="suave">Del libro: <cite>{problema.fuente.titulo}</cite>{problema.fuente.capitulo ? `, ${problema.fuente.capitulo}` : ''}</div>
+    {:else}
+      <div class="suave">Problema de Lichess · rating {problema.rating}</div>
+    {/if}
   </header>
 
   <Tablero fen={fenTablero} orientacion={miColor} puedeMover={estado === 'resolver' ? miColor : undefined} ultimaJugada={ultima} {flechas} {alJugar} />
@@ -116,8 +133,8 @@
   {#if estado === 'resuelto'}
     <div class="etiquetas">{#each problema.temas.filter((t) => !['short', 'long', 'oneMove', 'veryLong', 'middlegame', 'endgame', 'opening', 'advantage', 'crushing', 'master', 'masterVsMaster', 'superGM'].includes(t)) as t (t)}<span class="etiqueta">{nombreTema(t)}</span>{/each}</div>
     <div class="fila">
-      <button class="boton" onclick={() => (linea = { titulo: 'Solución', fen: fens[1], ucis: problema.jugadas.slice(1) })}>Ver la solución</button>
-      <a class="boton enlace" href={`https://lichess.org/training/${problema.id}`} target="_blank" rel="noopener">Ver en Lichess</a>
+      <button class="boton" onclick={() => (linea = { titulo: libro ? 'Solución del libro' : 'Solución', fen: fens[inicio], ucis: problema.jugadas.slice(inicio) })}>Ver la solución</button>
+      {#if !libro}<a class="boton enlace" href={`https://lichess.org/training/${problema.id}`} target="_blank" rel="noopener">Ver en Lichess</a>{/if}
     </div>
     {#if linea}
       <VisorLinea {linea} alMover={(f, u, p) => (vista = { fen: f, ultima: u, proxima: p })} />

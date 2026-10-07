@@ -7,7 +7,7 @@
   import Ejercicio from '../lib/ui/Ejercicio.svelte'
   import TacticaLichess from './TacticaLichess.svelte'
 
-  let fuente = $state<'propios' | 'lichess'>('propios')
+  let fuente = $state<'propios' | 'lichess' | 'libros'>('propios')
 
   const MOTIVOS = [
     'pieza colgada',
@@ -101,6 +101,7 @@
   <div class="pestanas" role="tablist">
     <button role="tab" aria-selected={fuente === 'propios'} onclick={() => (fuente = 'propios')}>Mis errores</button>
     <button role="tab" aria-selected={fuente === 'lichess'} onclick={() => (fuente = 'lichess')}>Problemas de Lichess</button>
+    <button role="tab" aria-selected={fuente === 'libros'} onclick={() => (fuente = 'libros')}>Problemas de libros</button>
   </div>
 {/if}
 
@@ -108,6 +109,8 @@
   <!-- sesión en curso: ya se mostró arriba -->
 {:else if fuente === 'lichess'}
   <TacticaLichess />
+{:else if fuente === 'libros'}
+  {#key fuente}<TacticaLichess origen="libros" />{/key}
 {:else}
   <p class="suave">
     Ejercicios armados con tus propios errores: la posición antes de la jugada mala, para encontrar la buena. Lo que

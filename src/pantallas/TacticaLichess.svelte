@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { armarSesionProblemas, cargarProblemas, estadoProblemas, FILTROS_PROBLEMAS, nombreTema, TEMAS_FILTRO, type FiltrosProblemas, type Problema } from '../lib/problemas/problemas.ts'
+  import { armarSesionProblemas, cargarProblemas, estadoProblemas, FILTROS_PROBLEMAS, nombreTema, TEMAS_FILTRO, TEMAS_LIBROS, type FiltrosProblemas, type Origen, type Problema } from '../lib/problemas/problemas.ts'
   import type { ResultadoIntento } from '../lib/repaso/repaso.ts'
   import ProblemaLichess from '../lib/ui/ProblemaLichess.svelte'
 
@@ -11,7 +11,13 @@
     [1400, 2200, 'Todos'],
   ]
 
-  let filtros = $state<FiltrosProblemas>({ ...FILTROS_PROBLEMAS })
+  let { origen = 'lichess' }: { origen?: Origen } = $props()
+  let temas = $derived(origen === 'libros' ? TEMAS_LIBROS : TEMAS_FILTRO)
+
+  // El componente se crea de nuevo al cambiar de origen (está dentro de un {#key}).
+  // svelte-ignore state_referenced_locally
+  let filtros = $state<FiltrosProblemas>({ ...FILTROS_PROBLEMAS, origen })
+  let libros = $state<string[]>([])
   let rango = $state(1)
   let resumen = $state<{ total: number; vencidos: number; nuevosHoy: number; nuevos: number }>()
   let hayDatos = $state(true)
@@ -20,7 +26,11 @@
   let enSesion = $state(false)
   let resultados = $state<ResultadoIntento[]>([])
 
-  cargarProblemas().then((p) => (hayDatos = p.length > 0))
+  // svelte-ignore state_referenced_locally
+  cargarProblemas(origen).then((p) => {
+    hayDatos = p.length > 0
+    libros = [...new Set(p.map((x) => x.fuente?.titulo).filter((t): t is string => !!t))].sort()
+  })
 
   $effect(() => {
     filtros.ratingMin = RANGOS[rango][0]
@@ -33,7 +43,7 @@
   }
 
   $effect(() => {
-    void [filtros.tema, filtros.ratingMin, filtros.ratingMax]
+    void [filtros.tema, filtros.libro, filtros.ratingMin, filtros.ratingMax]
     actualizar()
   })
 
@@ -65,10 +75,17 @@
 {:else if !hayDatos}
   <p class="suave">La selección de problemas no está disponible en esta versión.</p>
 {:else}
-  <p class="suave">
-    Una selección de la base pública de problemas de Lichess (CC0): problemas probados por miles de jugadores y bien
-    valorados, filtrados por tema y rating. Los que fallás vuelven antes.
-  </p>
+  {#if origen === 'libros'}
+    <p class="suave">
+      Problemas tomados de los libros de tu biblioteca, cada uno con su libro y capítulo. Solo entran los que Stockfish
+      (o la tablebase, en los finales) confirma; si encontrás otra jugada que también gana, cuenta como bien.
+    </p>
+  {:else}
+    <p class="suave">
+      Una selección de la base pública de problemas de Lichess (CC0): problemas probados por miles de jugadores y bien
+      valorados, filtrados por tema y rating. Los que fallás vuelven antes.
+    </p>
+  {/if}
   {#if resultados.length}
     <p><b>Sesión terminada: {resultados.filter((r) => r !== 'mal').length} de {resultados.length} bien.</b></p>
   {/if}
@@ -90,15 +107,25 @@
       Tema
       <select bind:value={filtros.tema}>
         <option value={undefined}>Todos</option>
-        {#each TEMAS_FILTRO as t (t)}<option value={t}>{nombreTema(t)}</option>{/each}
+        {#each temas as t (t)}<option value={t}>{nombreTema(t)}</option>{/each}
       </select>
     </label>
-    <label>
-      Rating
-      <select bind:value={rango}>
-        {#each RANGOS as r, i (i)}<option value={i}>{r[2]}</option>{/each}
-      </select>
-    </label>
+    {#if origen === 'libros'}
+      <label>
+        Libro
+        <select bind:value={filtros.libro}>
+          <option value={undefined}>Todos</option>
+          {#each libros as l (l)}<option value={l}>{l}</option>{/each}
+        </select>
+      </label>
+    {:else}
+      <label>
+        Rating
+        <select bind:value={rango}>
+          {#each RANGOS as r, i (i)}<option value={i}>{r[2]}</option>{/each}
+        </select>
+      </label>
+    {/if}
   </section>
 {/if}
 

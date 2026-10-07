@@ -1,7 +1,7 @@
 import { db } from './datos/db.ts'
 import type { Repaso } from './datos/tipos.ts'
 import { NIVELES, lineasDelNivel, estadoLineas } from './aperturas/practica.ts'
-import { cargarProblemas, nombreTema } from './problemas/problemas.ts'
+import { cargarProblemas, idRepaso, nombreTema } from './problemas/problemas.ts'
 import temario from '../contenido/finales/temario.json'
 import type { Temario } from './finales/tipos.ts'
 
@@ -57,10 +57,10 @@ export async function calcularProgreso(): Promise<Progreso> {
   }
   const tacticaPorMotivo = [...grupos].map(([m, g]) => fila(m, g.total, g.repasos, ahora)).sort((a, b) => b.total - a.total)
 
-  // Problemas de Lichess, por tema principal de la selección.
-  const problemas = await cargarProblemas()
-  const repProblemas = repasos.filter((r) => r.errorId.startsWith('lichess-problema:'))
-  const temaDe = new Map(problemas.map((p) => [`lichess-problema:${p.id}`, p.temas]))
+  // Problemas de Lichess y de libros, por tema.
+  const problemas = [...(await cargarProblemas('lichess')), ...(await cargarProblemas('libros'))]
+  const repProblemas = repasos.filter((r) => r.errorId.startsWith('lichess-problema:') || r.errorId.startsWith('libro-problema:'))
+  const temaDe = new Map(problemas.map((p) => [idRepaso(p), p.temas]))
   const porTema = new Map<string, Repaso[]>()
   for (const r of repProblemas) {
     for (const t of temaDe.get(r.errorId) ?? []) {

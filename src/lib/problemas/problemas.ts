@@ -1,13 +1,21 @@
 import { db, leerPreferencias } from '../datos/db.ts'
+import type { Fuente } from '../aperturas/explicaciones.ts'
 
-/** Problema de la base pública de Lichess (CC0). `jugadas[0]` es la jugada del rival que plantea el problema. */
+/**
+ * Problema de la base pública de Lichess (CC0): `jugadas[0]` es la jugada del rival que plantea el problema.
+ * Problema de un libro: tiene `fuente` y `jugadas[0]` ya es la jugada que hay que encontrar.
+ */
 export interface Problema {
   id: string
   fen: string
   jugadas: string[]
-  rating: number
+  rating?: number
   temas: string[]
+  fuente?: Fuente
 }
+
+export type Origen = 'lichess' | 'libros'
+export const esDeLibro = (p: Problema) => p.fuente !== undefined
 
 export const NOMBRE_TEMA: Record<string, string> = {
   hangingPiece: 'Pieza colgada',
@@ -70,7 +78,12 @@ export const NOMBRE_TEMA: Record<string, string> = {
   superGM: 'Súper GM',
   mateIn4: 'Mate en 4',
   mateIn5: 'Mate en 5 o más',
+  miniatura: 'Miniatura (partida corta)',
+  partidaPolgar: 'Partidas de las hermanas Polgár',
 }
+
+/** Temas que se ofrecen como filtro en los problemas de libros. */
+export const TEMAS_LIBROS = ['mateIn1', 'mateIn2', 'mateIn3', 'miniatura', 'endgame', 'defensiveMove', 'partidaPolgar']
 
 /** Temas que se ofrecen como filtro (los de la selección). */
 export const TEMAS_FILTRO = [
@@ -97,18 +110,23 @@ export const TEMAS_FILTRO = [
 
 export const nombreTema = (t: string) => NOMBRE_TEMA[t] ?? t
 
-let promesa: Promise<Problema[]> | undefined
-export function cargarProblemas(): Promise<Problema[]> {
-  promesa ??= fetch(`${import.meta.env.BASE_URL}datos/problemas.json`)
+const promesas: Partial<Record<Origen, Promise<Problema[]>>> = {}
+/** Problemas de Lichess (`problemas.json`) o de libros (`problemas-libros.json`), cargados una sola vez. */
+export function cargarProblemas(origen: Origen = 'lichess'): Promise<Problema[]> {
+  promesas[origen] ??= fetch(`${import.meta.env.BASE_URL}datos/${origen === 'lichess' ? 'problemas' : 'problemas-libros'}.json`)
     .then((r) => (r.ok ? (r.json() as Promise<Problema[]>) : []))
     .catch(() => [])
-  return promesa
+  return promesas[origen]!
 }
 
-export const idRepaso = (p: Problema) => `lichess-problema:${p.id}`
+const PREFIJO: Record<Origen, string> = { lichess: 'lichess-problema:', libros: 'libro-problema:' }
+export const idRepaso = (p: Problema) => `${PREFIJO[esDeLibro(p) ? 'libros' : 'lichess']}${p.id}`
 
 export interface FiltrosProblemas {
+  origen?: Origen
   tema?: string
+  /** Solo problemas de libros: título del libro. */
+  libro?: string
   ratingMin: number
   ratingMax: number
 }
@@ -122,8 +140,14 @@ function inicioDelDia(): number {
 }
 
 export async function estadoProblemas(f: FiltrosProblemas) {
-  const todos = (await cargarProblemas()).filter((p) => (!f.tema || p.temas.includes(f.tema)) && p.rating >= f.ratingMin && p.rating <= f.ratingMax)
-  const repasos = await db.repasos.where('errorId').startsWith('lichess-problema:').toArray()
+  const origen = f.origen ?? 'lichess'
+  const todos = (await cargarProblemas(origen)).filter(
+    (p) =>
+      (!f.tema || p.temas.includes(f.tema)) &&
+      (!f.libro || p.fuente?.titulo === f.libro) &&
+      (origen === 'libros' || ((p.rating ?? 0) >= f.ratingMin && (p.rating ?? 0) <= f.ratingMax)),
+  )
+  const repasos = await db.repasos.where('errorId').startsWith(PREFIJO[origen]).toArray()
   const porId = new Map(repasos.map((r) => [r.errorId, r]))
   const ahora = Date.now()
   const { nuevosPorDia } = await leerPreferencias()
