@@ -1,0 +1,127 @@
+{
+  "id": "leton",
+  "nombre": "Gambito Letón",
+  "raiz": "e2e4 e7e5 g1f3 f7f5",
+  "resumen": "Un contragambito muy arriesgado: el negro ataca e4 con el peón de f aunque eso debilita su rey. Stockfish le da a las blancas una ventaja clara después de 3.Cxe5. Vale la pena conocerlo porque en partidas rápidas sorprende; la clave para las blancas es aprovechar la diagonal h5-e8 con Dh5+.",
+  "planesBlancas": [
+    "Cxe5 y Dh5+ aprovechando el rey debilitado.",
+    "d4 y desarrollo rápido; el centro se abre a favor de las blancas."
+  ],
+  "planesNegras": [
+    "...Df6 para sostener f5 y atacar el caballo.",
+    "Recuperar e4 y buscar complicaciones."
+  ],
+  "estructura": "Muy abierta; el rey negro queda expuesto en la diagonal h5-e8.",
+  "rupturas": [
+    "d4 de las blancas.",
+    "...fxe4 del negro."
+  ],
+  "piezas": [
+    "Dama blanca: h5, aprovechando la diagonal.",
+    "Dama negra: f6, defendiendo f5."
+  ],
+  "trampas": [],
+  "notas": {
+    "e2e4 e7e5 g1f3 f7f5 f3e5": {
+      "porQue": "Lo mejor: toma e5 y amenaza Dh5+.",
+      "porQueNo": [
+        {
+          "uci": "d2d4",
+          "texto": "...fxe4 Cxe5 Cf6: el negro se libera."
+        },
+        {
+          "uci": "d2d3",
+          "texto": "Pasivo: el negro sigue con ...Cc6 y ...d6."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6": {
+      "porQue": "La línea principal: ataca el caballo y defiende f5 con la dama.",
+      "porQueNo": [
+        {
+          "uci": "b8c6",
+          "texto": "Dh5+ g6 Cxg6: el ataque blanco gana."
+        },
+        {
+          "uci": "d8e7",
+          "texto": "Dh5+ g6 Cxg6: el negro pierde material."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 d2d4": {
+      "porQue": "Defiende el caballo y ocupa el centro."
+    },
+    "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 d2d4 d7d6": {
+      "porQue": "Echa al caballo.",
+      "porQueNo": [
+        {
+          "uci": "f5e4",
+          "texto": "Ac4: amenaza Af7+ y el negro queda muy mal."
+        },
+        {
+          "uci": "b8c6",
+          "texto": "Cc3 y el negro no tiene compensación."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Latvian Gambit (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Latvian_Gambit",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 e7e5 g1f3 f7f5 f3e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 f7f5 d2d4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: +1,5 → +0,5. Refutación: fxe4 Cxe5 Cf6 Ae2 Ae7 O-O"
+      },
+      "e2e4 e7e5 g1f3 f7f5 d2d3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 12 puntos de chances: +1,5 → +0,1. Refutación: Cc6 d4 fxe4 Cxe5 Cf6 Ac4"
+      },
+      "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 f7f5 f3e5 b8c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: −1,6 → −3,0. Refutación: Dh5+ g6 Cxg6 Cf6 Dh4 Tg8"
+      },
+      "e2e4 e7e5 g1f3 f7f5 f3e5 d8e7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: −1,6 → −2,9. Refutación: Dh5+ g6 Cxg6 Dxe4+ Ae2 Cf6"
+      },
+      "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 d2d4 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 d2d4 f5e4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 23 puntos de chances: −1,5 → −5,2. Refutación: Ac4 Ce7 Af7+ Rd8 Ab3 Re8"
+      },
+      "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 d2d4 b8c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −1,5 → −2,5. Refutación: Cc3 Ab4 Ad2 Cxd4 Cd3 Ad6"
+      }
+    }
+  }
+}

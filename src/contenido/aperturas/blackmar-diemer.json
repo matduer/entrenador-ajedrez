@@ -1,0 +1,140 @@
+{
+  "id": "blackmar-diemer",
+  "nombre": "Gambito Blackmar-Diemer",
+  "raiz": "d2d4 d7d5 e2e4",
+  "resumen": "Las blancas entregan el peón de e4 y después ofrecen el de f3 para abrir la columna f y desarrollarse rápido. Es popular en el ajedrez de club; Stockfish lo considera dudoso: con 2.e4 las blancas pierden buena parte de su ventaja inicial. El negro puede aceptar y defenderse con el fianchetto (...g6) o rehusar con ...Af5.",
+  "planesBlancas": [
+    "Columna f abierta, Ad3, De1-h4 y ataque contra el enroque.",
+    "Desarrollo rápido a cambio del peón."
+  ],
+  "planesNegras": [
+    "Aceptar el peón y defenderse con ...g6 o ...e6.",
+    "Devolver material si hace falta para consolidar."
+  ],
+  "estructura": "Peón blanco aislado en d4 en muchas líneas; columna f abierta.",
+  "rupturas": [
+    "d5 o Ce5 de las blancas.",
+    "...c5 del negro."
+  ],
+  "piezas": [
+    "Caballo blanco de g1: f3 tras retomar en f3.",
+    "Alfil negro de c8: f5 o g4."
+  ],
+  "trampas": [],
+  "notas": {
+    "d2d4 d7d5 e2e4 d5e4": {
+      "porQue": "Aceptar es lo más fuerte.",
+      "porQueNo": [
+        {
+          "uci": "c7c6",
+          "texto": "e5: las blancas ganan espacio con tiempo."
+        },
+        {
+          "uci": "e7e6",
+          "texto": "Cc3 y se llega a una Francesa cómoda para las blancas."
+        }
+      ]
+    },
+    "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3": {
+      "porQue": "Ofrece el peón de f: si ...exf3, Cxf3 con desarrollo rápido."
+    },
+    "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3": {
+      "porQue": "Acepta el segundo peón.",
+      "porQueNo": [
+        {
+          "uci": "b8d7",
+          "texto": "fxe4 e5: las blancas se quedan con el centro."
+        }
+      ]
+    },
+    "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 c8f5": {
+      "porQue": "Rehúsa y desarrolla el alfil."
+    },
+    "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3 g1f3": {
+      "porQue": "Retoma desarrollando: la columna f queda abierta."
+    },
+    "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3 g1f3 g7g6": {
+      "porQue": "Fianchetto: el alfil defiende el rey y presiona d4.",
+      "porQueNo": [
+        {
+          "uci": "c8g4",
+          "texto": "h3: el alfil tiene que retroceder o cambiarse."
+        },
+        {
+          "uci": "c7c5",
+          "texto": "dxc5 y tras el cambio de damas el rey negro pierde el enroque."
+        }
+      ]
+    },
+    "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3 g1f3 c7c6": {
+      "porQue": "También bueno: refuerza d5 y prepara ...Af5 o ...Ag4."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Blackmar–Diemer Gambit (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Blackmar%E2%80%93Diemer_Gambit",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "d2d4 d7d5 e2e4 d5e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "d2d4 d7d5 e2e4 c7c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: +0,6 → −0,3. Refutación: e5 Af5 Cf3 e6 Ae2 c5"
+      },
+      "d2d4 d7d5 e2e4 e7e6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: +0,6 → −0,4. Refutación: Cc3 Cf6 e5 Cfd7 f4 c5"
+      },
+      "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 b8d7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: +0,7 → −0,3. Refutación: fxe4 e5 dxe5 Cxe5 Dxd8+ Rxd8"
+      },
+      "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 c8f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3 g1f3 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3 g1f3 c8g4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,7 → +0,2. Refutación: h3 Ah5 De2 Cc6 g4 Ag6"
+      },
+      "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3 g1f3 c7c5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,7 → −0,1. Refutación: dxc5 Dxd1+ Rxd1 Ad7 Ad2 e6"
+      },
+      "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3 g1f3 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      }
+    }
+  }
+}

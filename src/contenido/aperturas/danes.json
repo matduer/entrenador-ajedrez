@@ -1,0 +1,130 @@
+{
+  "id": "danes",
+  "nombre": "Gambito Danés",
+  "raiz": "e2e4 e7e5 d2d4 e5d4 c2c3",
+  "resumen": "Las blancas entregan uno o dos peones para desarrollar los alfiles en c4 y b2, apuntando a f7 y g7. Si el negro acepta todo y no se defiende con precisión, el ataque es muy peligroso. La forma más simple de neutralizarlo es devolver material a tiempo con ...d5.",
+  "planesBlancas": [
+    "Alfiles en c4 y b2 contra el enroque negro.",
+    "Desarrollo rápido y columnas abiertas."
+  ],
+  "planesNegras": [
+    "Devolver material con ...d5 para terminar el desarrollo.",
+    "Cambiar piezas para aliviar el ataque."
+  ],
+  "estructura": "Abierta; el negro con peones de más y las blancas con mucha ventaja de desarrollo.",
+  "rupturas": [
+    "e5 de las blancas.",
+    "...d5 del negro."
+  ],
+  "piezas": [
+    "Alfiles blancos: c4 y b2.",
+    "Alfil negro de f8: b4 con jaque."
+  ],
+  "trampas": [],
+  "notas": {
+    "e2e4 e7e5 d2d4 e5d4 c2c3": {
+      "porQue": "Gambito Danés: entrega peones para desarrollar los alfiles contra el rey negro.",
+      "inferior": true
+    },
+    "e2e4 e7e5 d2d4 e5d4 c2c3 d7d5": {
+      "porQue": "La respuesta más simple: devuelve el peón y libera el juego."
+    },
+    "e2e4 e7e5 d2d4 e5d4 c2c3 d4c3": {
+      "porQue": "Aceptar."
+    },
+    "e2e4 e7e5 d2d4 e5d4 c2c3 d4c3 f1c4": {
+      "porQue": "Ofrece un segundo peón para ganar más tiempo."
+    },
+    "e2e4 e7e5 d2d4 e5d4 c2c3 d4c3 f1c4 c3b2": {
+      "porQue": "Toma el segundo peón: el negro queda con dos de más, pero con los alfiles blancos apuntando a su rey.",
+      "porQueNo": [
+        {
+          "uci": "c3c2",
+          "texto": "Dxc2: el negro devuelve el peón sin ganar nada."
+        }
+      ]
+    },
+    "e2e4 e7e5 d2d4 e5d4 c2c3 d4c3 f1c4 c3b2 c1b2": {
+      "porQue": "Los dos alfiles apuntan a f7 y g7."
+    },
+    "e2e4 e7e5 d2d4 e5d4 c2c3 d4c3 f1c4 c3b2 c1b2 f8b4": {
+      "porQue": "Jaque que desarrolla y obliga a las blancas a decidir.",
+      "porQueNo": [
+        {
+          "uci": "d8e7",
+          "texto": "Cc3 y Cge2: el desarrollo blanco es demasiado rápido."
+        },
+        {
+          "uci": "g8h6",
+          "texto": "Cd2 y el caballo de h6 queda mal ubicado."
+        }
+      ]
+    },
+    "e2e4 e7e5 d2d4 e5d4 c2c3 d4c3 f1c4 c3b2 c1b2 g8f6": {
+      "porQue": "Desarrolla y prepara ...d5 para devolver material."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Danish Gambit (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Danish_Gambit",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 e7e5 d2d4 e5d4 c2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 d2d4 e5d4 c2c3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 d2d4 e5d4 c2c3 d4c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 d2d4 e5d4 c2c3 d4c3 f1c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 d2d4 e5d4 c2c3 d4c3 f1c4 c3b2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 d2d4 e5d4 c2c3 d4c3 f1c4 c3c2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,4 → −0,3. Refutación: Dxc2 d5 exd5 Ad6 h3 Ce7"
+      },
+      "e2e4 e7e5 d2d4 e5d4 c2c3 d4c3 f1c4 c3b2 c1b2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 d2d4 e5d4 c2c3 d4c3 f1c4 c3b2 c1b2 f8b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 d2d4 e5d4 c2c3 d4c3 f1c4 c3b2 c1b2 d8e7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: +0,6 → −0,6. Refutación: Cc3 Cf6 Cge2 d5 Cxd5 Cxd5"
+      },
+      "e2e4 e7e5 d2d4 e5d4 c2c3 d4c3 f1c4 c3b2 c1b2 g8h6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: +0,6 → −0,3. Refutación: Cd2 b5 Axb5 Dg5 De2 Dxg2"
+      },
+      "e2e4 e7e5 d2d4 e5d4 c2c3 d4c3 f1c4 c3b2 c1b2 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      }
+    }
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "id": "nimzowitsch",
+  "nombre": "Defensa Nimzowitsch",
+  "raiz": "e2e4 b8c6",
+  "resumen": "El negro desarrolla el caballo de dama de entrada para presionar d4 y e5. A cambio tapa su peón de c y deja que las blancas ocupen el centro. Tras 2.d4 lo más enérgico es 2...d5, y si 3.e5 se llega a una estructura francesa en la que el caballo de c6 estorba al peón de c.",
+  "planesBlancas": [
+    "Centro de peones con d4 y e4, o e5 para ganar espacio.",
+    "Desarrollo normal; aprovechar que el negro no puede jugar ...c5 fácilmente."
+  ],
+  "planesNegras": [
+    "Presionar d4 con ...d5, ...Af5 o ...Ag4 y ...e6.",
+    "Juego de piezas activo en lugar de peones en el centro."
+  ],
+  "estructura": "Con 3.e5, cadena blanca d4-e5 contra d5 y e6, pero sin la ruptura ...c5 para el negro.",
+  "rupturas": [
+    "...f6 del negro.",
+    "c4 de las blancas."
+  ],
+  "piezas": [
+    "Caballo negro de b8: c6, sobre d4.",
+    "Alfil negro de c8: f5 o g4, fuera de la cadena."
+  ],
+  "trampas": [],
+  "notas": {
+    "e2e4 b8c6": {
+      "porQue": "Desarrolla el caballo y presiona d4, pero tapa el peón de c y cede el centro."
+    },
+    "e2e4 b8c6 d2d4": {
+      "porQue": "Ocupa el centro con los dos peones.",
+      "porQueNo": [
+        {
+          "uci": "f2f4",
+          "texto": "...d5 e5 d4: el negro gana espacio en el centro."
+        },
+        {
+          "uci": "d2d3",
+          "texto": "Pasivo: ...e5 y el negro iguala sin problemas."
+        }
+      ]
+    },
+    "e2e4 b8c6 d2d4 d7d5": {
+      "porQue": "Ataca e4 enseguida: la idea original de Nimzowitsch.",
+      "porQueNo": [
+        {
+          "uci": "g8f6",
+          "texto": "d5 echa al caballo, que no tiene buenas casillas."
+        },
+        {
+          "uci": "h7h6",
+          "texto": "d5 echa al caballo y el negro perdió un tiempo."
+        }
+      ]
+    },
+    "e2e4 b8c6 d2d4 e7e5": {
+      "porQue": "La alternativa: discute el centro con el peón de e."
+    },
+    "e2e4 b8c6 d2d4 d7d5 e4e5": {
+      "porQue": "Gana espacio: estructura francesa en la que el caballo de c6 estorba al peón de c.",
+      "porQueNo": [
+        {
+          "uci": "c1e3",
+          "texto": "...dxe4 y el caballo salta a b4 o e5 con tiempo."
+        },
+        {
+          "uci": "f2f3",
+          "texto": "...e6 y ...Dh4+: el rey blanco queda debilitado."
+        }
+      ]
+    },
+    "e2e4 b8c6 d2d4 d7d5 b1c3": {
+      "porQue": "Defiende e4 desarrollando."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Nimzowitsch Defence (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Nimzowitsch_Defence",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 b8c6 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 b8c6 f2f4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,6 → −0,2. Refutación: d5 e5 d4 Cf3 e6 a3"
+      },
+      "e2e4 b8c6 d2d3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,6 → +0,0. Refutación: e5 Cf3 Cf6 g3 Ac5 Ag2"
+      },
+      "e2e4 b8c6 d2d4 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 b8c6 d2d4 g8f6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,6 → −1,5. Refutación: d5 Ce5 f4 Cg6 e5 Cg8"
+      },
+      "e2e4 b8c6 d2d4 h7h6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,6 → −1,1. Refutación: d5 Cb8 Cf3 e6 Ad3 d6"
+      },
+      "e2e4 b8c6 d2d4 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 b8c6 d2d4 d7d5 e4e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 b8c6 d2d4 d7d5 c1e3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: +0,5 → −0,4. Refutación: dxe4 Cc3 Cf6 a3 e6 Cge2"
+      },
+      "e2e4 b8c6 d2d4 d7d5 f2f3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,5 → −0,3. Refutación: e6 exd5 exd5 Ce2 Cf6 Cbc3"
+      },
+      "e2e4 b8c6 d2d4 d7d5 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "id": "colle",
+  "nombre": "Sistema Colle",
+  "raiz": "d2d4 d7d5 g1f3 g8f6 e2e3",
+  "resumen": "Un sistema para las blancas: peones en c3, d4 y e3, alfil en d3, caballo en d2 y enroque corto. El plan es preparar la ruptura e4, que abre el juego contra el enroque negro, con el alfil de d3 apuntando a h7. Es sólido y fácil de aprender; su punto débil es que el alfil de c1 queda encerrado.",
+  "planesBlancas": [
+    "Preparar e4 con Cbd2, Te1 y Dc2 o De2.",
+    "Ataque contra h7 con el alfil de d3."
+  ],
+  "planesNegras": [
+    "...c5 y ...Cc6 para presionar d4.",
+    "Oponer el alfil a d6 y vigilar e5."
+  ],
+  "estructura": "Cadena c3-d4-e3 de las blancas; el negro con d5 y e6, y ...c5.",
+  "rupturas": [
+    "e4 de las blancas.",
+    "...c5 y ...e5 del negro."
+  ],
+  "piezas": [
+    "Alfil blanco de f1: d3, sobre h7.",
+    "Alfil blanco de c1: encerrado detrás de e3; a veces sale por b2 (Colle-Zukertort)."
+  ],
+  "trampas": [],
+  "notas": {
+    "d2d4 d7d5 g1f3 g8f6 e2e3": {
+      "porQue": "Sistema Colle: cadena c3-d4-e3, Ad3, Cbd2 y la ruptura e4."
+    },
+    "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6": {
+      "porQue": "Desarrollo sólido.",
+      "porQueNo": [
+        {
+          "uci": "c8e6",
+          "texto": "c4 y Cg5: el alfil de e6 queda expuesto."
+        }
+      ]
+    },
+    "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3": {
+      "porQue": "El alfil apunta a h7."
+    },
+    "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 c7c5": {
+      "porQue": "Ataca d4."
+    },
+    "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 c7c5 c2c3": {
+      "porQue": "Sostiene d4: la cadena típica del Colle."
+    },
+    "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 c7c5 c2c3 b8c6": {
+      "porQue": "Desarrolla y presiona d4."
+    },
+    "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 c7c5 c2c3 b8c6 b1d2": {
+      "porQue": "El caballo apoya la ruptura e4."
+    },
+    "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 c7c5 c2c3 b8c6 b1d2 f8d6": {
+      "porQue": "El alfil se opone al de d3 y vigila e5.",
+      "porQueNo": [
+        {
+          "uci": "c5c4",
+          "texto": "Ac2 y la ruptura e4 llega con más fuerza."
+        },
+        {
+          "uci": "f6h5",
+          "texto": "Enroque y e4: el caballo queda fuera de juego."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Colle System (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Colle_System",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "d2d4 d7d5 g1f3 g8f6 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 g8f6 e2e3 c8e6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 4 puntos de chances: −0,1 → −0,5. Refutación: c4 dxc4 Cc3 c5 Cg5 Ag4"
+      },
+      "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 c7c5 c2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 c7c5 c2c3 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 c7c5 c2c3 b8c6 b1d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 c7c5 c2c3 b8c6 b1d2 f8d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 c7c5 c2c3 b8c6 b1d2 c5c4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,1 → −1,0. Refutación: Ac2 b5 e4 a5 O-O Ae7"
+      },
+      "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 c7c5 c2c3 b8c6 b1d2 f6h5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 4 puntos de chances: −0,1 → −0,6. Refutación: O-O cxd4 exd4 Ad6 Te1 O-O"
+      }
+    }
+  }
+}

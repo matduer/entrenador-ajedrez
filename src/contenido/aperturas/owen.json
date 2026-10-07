@@ -1,0 +1,132 @@
+{
+  "id": "owen",
+  "nombre": "Defensa Owen",
+  "raiz": "e2e4 b7b6",
+  "resumen": "El negro hace el fianchetto del alfil de dama para presionar e4 desde b7. Es una defensa poco común y algo pasiva: las blancas ocupan el centro con d4 y defienden e4 con Ad3 o Cc3. Hay que tener cuidado con ...f5, que abre el rey negro a una trampa conocida.",
+  "planesBlancas": [
+    "Centro con d4 y e4, defendido por Ad3, Cc3 o Cd2.",
+    "Desarrollo rápido y juego contra el rey negro si se debilita."
+  ],
+  "planesNegras": [
+    "Presión sobre e4 con ...Ab7, ...e6 y ...Cf6 o ...Ab4.",
+    "Ruptura ...c5 o ...d5 contra el centro."
+  ],
+  "estructura": "Flexible: el negro sin peones centrales al principio, las blancas con d4 y e4.",
+  "rupturas": [
+    "...c5 y ...d5 del negro.",
+    "e5 o d5 de las blancas."
+  ],
+  "piezas": [
+    "Alfil negro de c8: b7, contra e4.",
+    "Alfil blanco de f1: d3, defendiendo e4."
+  ],
+  "trampas": [
+    {
+      "jugadas": "e2e4 b7b6 d2d4 c8b7 f1d3 f7f5 e4f5 b7g2 d1h5 g7g6 f5g6 g2f1 g6h7",
+      "texto": "3...f5? 4.exf5 Axg2 5.Dh5+ g6 6.fxg6: la amenaza de jaque descubierto es demoledora. Por ejemplo, 6...Af1? 7.gxh7 es mate."
+    }
+  ],
+  "notas": {
+    "e2e4 b7b6": {
+      "porQue": "Fianchetto del alfil de dama contra e4.",
+      "inferior": true
+    },
+    "e2e4 b7b6 d2d4": {
+      "porQue": "Ocupa el centro con los dos peones.",
+      "porQueNo": [
+        {
+          "uci": "e4e5",
+          "texto": "...c5: el peón de e5 queda adelantado sin apoyo."
+        }
+      ]
+    },
+    "e2e4 b7b6 d2d4 c8b7": {
+      "porQue": "Presiona e4."
+    },
+    "e2e4 b7b6 d2d4 c8b7 f1d3": {
+      "porQue": "Defiende e4 desarrollando el alfil.",
+      "porQueNo": [
+        {
+          "uci": "c2c4",
+          "texto": "...Axe4: el peón se pierde."
+        },
+        {
+          "uci": "c1g5",
+          "texto": "...Axe4: nadie defiende e4."
+        }
+      ]
+    },
+    "e2e4 b7b6 d2d4 c8b7 f1d3 e7e6": {
+      "porQue": "Desarrollo sólido: prepara ...c5 o ...Cf6.",
+      "porQueNo": [
+        {
+          "uci": "f7f5",
+          "texto": "exf5 Axg2 Dh5+ g6 fxg6: el ataque blanco es decisivo."
+        },
+        {
+          "uci": "b7a6",
+          "texto": "Axa6 Cxa6: el caballo queda mal y el negro pierde tiempo."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Owen's Defence (Wikipedia en inglés)",
+      "url": "https://en.wikipedia.org/wiki/Owen%27s_Defence",
+      "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-07",
+    "resultados": {
+      "e2e4 b7b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 b7b6 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 b7b6 e4e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,7 → +0,2. Refutación: c5 Cf3 Cc6 d4 e6 Cc3"
+      },
+      "e2e4 b7b6 d2d4 c8b7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,9 para el bando que mueve"
+      },
+      "e2e4 b7b6 d2d4 c8b7 f1d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,9 para el bando que mueve"
+      },
+      "e2e4 b7b6 d2d4 c8b7 c2c4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: +0,9 → −0,1. Refutación: Axe4 Cc3 Ab7 d5 Ca6 g4"
+      },
+      "e2e4 b7b6 d2d4 c8b7 c1g5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: +0,9 → −0,1. Refutación: h6 Ah4 Axe4 d5 c6 c4"
+      },
+      "e2e4 b7b6 d2d4 c8b7 f1d3 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,1 para el bando que mueve"
+      },
+      "e2e4 b7b6 d2d4 c8b7 f1d3 f7f5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 22 puntos de chances: −1,1 → −4,0. Refutación: exf5 Cf6 Cf3 e6 fxe6 Cc6"
+      },
+      "e2e4 b7b6 d2d4 c8b7 f1d3 b7a6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −1,1 → −1,8. Refutación: Axa6 Cxa6 De2 Dc8 Cf3 e6"
+      }
+    }
+  }
+}
