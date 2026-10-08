@@ -955,6 +955,59 @@
       ]
     },
     {
+      "id": "carreras",
+      "titulo": "Carreras de peones: contar y el doble objetivo",
+      "nivel": 3,
+      "explicacion": [
+        "Cuando los dos bandos tienen peones pasados que corren a coronar, hay una carrera. En vez de imaginar jugada por jugada, Flear recomienda contar: cuántas jugadas necesita cada uno para coronar. Si la diferencia es de dos o más, el resultado es claro; si es de una, hay que mirar la posición que queda.",
+        "Al mirar esa posición final aparecen los detalles que deciden: coronar con jaque, que la dama nueva controle la casilla de coronación del rival, o que un jaque en rayos X gane la dama recién coronada.",
+        "Y antes de lanzarse a una carrera, conviene ver si hay algo mejor: frenar el peón rival con el rey y ganar sin sobresaltos. El rey, además, puede perseguir dos objetivos a la vez, como en el famoso estudio de Réti: acercarse al peón enemigo mientras amenaza apoyar al propio."
+      ],
+      "ideas": [
+        "Contá las jugadas hasta coronar de cada lado; con una de diferencia, mirá la posición final.",
+        "Después de coronar los dos, buscá jaques que ganen la dama rival (rayos X).",
+        "Una jugada de rey puede servir para dos cosas: acercarse a un peón y apoyar el otro."
+      ],
+      "posiciones": [
+        {
+          "id": "coronar-y-ganar-la-dama",
+          "fen": "8/8/1P6/8/8/7p/8/K3k3 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 30,
+          "consigna": "Los dos coronan, pero vos primero. Ganá.",
+          "pista": "Avanzá sin desviarte: b7, b8=D. Cuando las negras coronen en h1, un jaque en la primera fila (Db1+) pone al rey y a la dama en la misma línea.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "b6b7",
+            "dtm": 29,
+            "fecha": "2026-10-08"
+          }
+        },
+        {
+          "id": "estudio-de-reti",
+          "fen": "7K/8/k1P5/7p/8/8/8/8 w - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 20,
+          "consigna": "Estudio de Réti (1921). Tu rey parece no llegar al peón de h. Sacá las tablas.",
+          "pista": "Rg7 y Rf6: el rey va en diagonal, que es igual de rápido, hacia el peón de h y a la vez hacia tu peón de c. Si las negras corren con el peón, tu rey apoya a c7; si van a frenar tu peón, entrás en el cuadrado del suyo.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "h8g7",
+            "dtm": 0,
+            "fecha": "2026-10-08"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Glenn Flear — Starting Out: Pawn Endgames (Everyman, 2004)",
+          "capitulo": "Cap. 6, «Races!»: «Counting»; cap. 7, ejemplo 137 (estudio de Réti, 1921)"
+        }
+      ]
+    },
+    {
       "id": "alfil-y-caballo",
       "titulo": "Mate de alfil y caballo",
       "nivel": 4,
