@@ -1944,6 +1944,58 @@
           "capitulo": "cap. 12 «Finales de peones», Final 77 «Peones doblados»"
         }
       ]
+    },
+    {
+      "id": "defensa-primera-fila",
+      "titulo": "Peón de caballo: la defensa de la primera fila",
+      "nivel": 3,
+      "explicacion": [
+        "Cuando el rey defensor está delante del peón pero ya no llega a armar el Philidor (la torre en la tercera fila), con el peón de caballo hay otro método, incluso más sencillo: la torre se va a la primera fila y el rey espera delante del peón. Las blancas no tienen por dónde progresar: del lado de la columna de torre no hay espacio para su rey.",
+        "Ojo: con peón de alfil o central esta defensa no sirve, porque el bando fuerte tiene espacio de los dos lados del peón. Y aun con el peón de caballo hay un detalle: cuando llega el jaque en la séptima, el rey va al rincón (a8), no hacia el centro."
+      ],
+      "ideas": [
+        "Peón de caballo sin Philidor posible: torre a la primera fila, rey delante del peón.",
+        "Al jaque en la séptima, el rey al rincón.",
+        "Con peón de alfil o central, este método pierde."
+      ],
+      "posiciones": [
+        {
+          "id": "torre-a-la-primera",
+          "fen": "1k6/7R/K7/1P6/8/8/8/3r4 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 50,
+          "consigna": "El rey blanco ya está en a6. Juegan las negras: elegí la defensa.",
+          "pista": "Td8: la torre a la primera fila, y tu rey se queda delante del peón esperando. (Td6+ también aguanta.) Las demás jugadas pierden.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "d1d6",
+            "dtm": 0,
+            "fecha": "2026-10-08"
+          }
+        },
+        {
+          "id": "al-rincon",
+          "fen": "1k1r4/1R6/KP6/8/8/8/8/8 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 50,
+          "consigna": "Jaque en la séptima. ¿Adónde va tu rey?",
+          "pista": "Ra8, al rincón. Rc8 parece más natural pero pierde: Ra7 y el peón corona.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "b8a8",
+            "dtm": 0,
+            "fecha": "2026-10-08"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 10 «Torre y peón contra torre», Final 55 «Peón de caballo. Defensa de la primera fila»"
+        }
+      ]
     }
   ]
 }
