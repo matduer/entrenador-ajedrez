@@ -164,12 +164,29 @@
     },
     "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 d7d6 g2g4": {
       "porQue": "Ataque Keres: amenaza g5 para echar al caballo de f6 y gana espacio en el flanco de rey."
+    },
+    "e2e4 c7c5 a2a3": {
+      "inferior": true,
+      "porQue": "Antisiciliana poco común: prepara b4 para desviar el peón de c5, como el Gambito del Ala, pero sin entregar el peón enseguida (si ...cxb4, axb4 recupera la columna a abierta). Stockfish la considera algo inferior a 2.Cf3."
+    },
+    "e2e4 c7c5 a2a3 g8f6 e4e5": {
+      "porQue": "Como en la Alapin, el peón echa al caballo y gana espacio; la diferencia es que a3 ya prepara b4."
+    },
+    "e2e4 c7c5 a2a3 b8c6 b2b4": {
+      "porQue": "El gambito para el que se jugó a3: si ...cxb4 axb4 Cxb4, las blancas siguen con d4 o Da4 y juegan por el centro y por la columna a abierta. Stockfish lo considera aceptable."
+    },
+    "e2e4 c7c5 a2a3 d7d5 e4d5": {
+      "porQue": "La mejor: tras ...Dxd5, Cc3 gana tiempo atacando la dama."
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Sicilian Defence»: introducción, «2 Nf3», «Classical Variation», «Taimanov Variation» y «Scheveningen Variation»"
+    },
+    {
+      "titulo": "Alexei Bezgodov — Challenging the Sicilian with 2.a3! (Chess Stars, 2004)",
+      "capitulo": "Caps. 3 (2...Cc6 3.b4), 6 (2...d5 3.exd5) y 7 (2...Cf6 3.e5)"
     },
     {
       "titulo": "Sicilian Defence (Wikipedia en inglés)",
@@ -185,7 +202,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-08",
     "resultados": {
       "e2e4 c7c5": {
         "ok": true,
@@ -338,6 +355,22 @@
       "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 d7d6 g2g4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 c7c5 a2a3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Cf3: +0,3 contra −0,1 (marcada como inferior pero jugable)"
+      },
+      "e2e4 c7c5 a2a3 g8f6 e4e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 a2a3 b8c6 b2b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 a2a3 d7d5 e4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
       }
     }
   }
