@@ -278,12 +278,37 @@
     },
     "e2e4 e7e5 g1f3 b8c6 f1c4 f8e7": {
       "porQue": "Defensa Húngara: sólida y con poca teoría; prepara ...d6."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5c6 d7c6 e1g1 c8g4": {
+      "porQue": "Más combativa que ...f6: el alfil clava el caballo que amenaza e5. Si 6.h3, el negro tiene preparado ...h5, el Gambito Héctor."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5c6 d7c6 e1g1 c8g4 h2h3 h7h5": {
+      "porQue": "El Gambito Héctor, y la mejor jugada según Stockfish: el negro deja el alfil en g4 porque, si las blancas lo toman, la columna h se abre contra su rey.",
+      "porQueNo": [
+        {
+          "uci": "g4h5",
+          "texto": "La retirada natural es floja: g4, el alfil queda encerrado y el blanco puede tomar e5."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5c6 d7c6 e1g1 c8g4 h2h3 h7h5 d2d3": {
+      "porQue": "Lo prudente: no tomar el alfil y defender e4. El negro sigue con ...Df6 y ...Ce7, y la partida queda igualada.",
+      "porQueNo": [
+        {
+          "uci": "h3g4",
+          "texto": "Tomar el alfil abre la columna h: tras ...hxg4, si el caballo se va o toma e5, ...Dh4 llega con un ataque de mate. Lo mejor allí es devolver material con d3."
+        }
+      ]
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Ruy Lopez» (Exchange Variation, Open Variation) e «Italian Game» (Giuoco Piano, Giuoco Pianissimo)"
+    },
+    {
+      "titulo": "Boris Alterman — The Alterman Gambit Guide: Black Gambits 2 (Quality Chess, 2012)",
+      "capitulo": "Cap. 2, «The Hector Gambit» (Española del Cambio)"
     },
     {
       "titulo": "Ruy Lopez (Wikipedia en inglés)",
@@ -304,7 +329,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-08",
     "resultados": {
       "e2e4 e7e5": {
         "ok": true,
@@ -557,6 +582,26 @@
       "e2e4 e7e5 g1f3 b8c6 f1c4 f8e7": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5c6 d7c6 e1g1 c8g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5c6 d7c6 e1g1 c8g4 h2h3 h7h5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5c6 d7c6 e1g1 c8g4 h2h3 g4h5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,0 → −0,5. Refutación: g4 Ag6 Cxe5 Ad6 Cxg6 hxg6"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5c6 d7c6 e1g1 c8g4 h2h3 h7h5 d2d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5c6 d7c6 e1g1 c8g4 h2h3 h7h5 h3g4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,0 → −0,6. Refutación: hxg4 d3 gxf3 Dxf3 g6 Te1"
       }
     }
   }
