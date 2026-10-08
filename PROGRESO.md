@@ -58,7 +58,7 @@ Regla de trabajo pedida por el usuario: **si un libro trae un problema, se anota
 5. Partidas comentadas: ✅ Capablanca *Fundamentos* (14). Siguen: Keres (2 tomos), Rubinstein (Donaldson y Minev; *Masterpieces*), Kasparov *Mis geniales predecesores*, Bronstein *Zúrich 1953*, Tal (Hajtun).
 6. Libros del registro de problemas (al final de la etapa).
 
-### Etapa 2 — Finales
+### Etapa 2 — Finales (en curso desde el 2026-10-08 a la tarde)
 1. Alfil contra caballo (Averbakh).
 2. De la Villa: los capítulos que faltan (Caballo contra peón, Torre contra dos peones, A+P contra A, alfiles de distinto color, T+2P contra T).
 3. Keres *Finales prácticos*, Dvoretsky *Endgame Manual*, Chernev *Capablanca's Best Chess Endings* (posiciones de partidas reales).
@@ -80,6 +80,8 @@ Regla de trabajo pedida por el usuario: **si un libro trae un problema, se anota
 | Aagaard, *Maestría en el cálculo* (Chessy, 2008) | 426 diagramas detectados (`CIERRE_EXTRA=9 UMBRAL_EXTRA=200`) y etiquetados (`img/aagaard_etiquetas.json`), pero el clasificador confunde piezas blancas sobre casillas rayadas con casillas vacías, y los ejercicios no tienen solución numerada: sin la jugada del libro, un tablero mal leído podría pasar como problema | Mejor separación vacía/pieza blanca en casillas oscuras, y emparejar cada ejercicio con su solución |
 | Chernev, *Ajedrez lógico, jugada a jugada* | Notación descriptiva con OCR roto («A4A», «C5C») | Lector de notación descriptiva |
 | Larsen, *Todas las piezas atacan* | Figuras ilegibles en el OCR, como Crouch | Lo mismo que Crouch |
+| Bronstein, *Zúrich 1953* (CDA 19) | `scripts/preparar-partidas-zurich.ts` (lector con búsqueda hacia adelante para «&» = 5 o 6) todavía da 0 partidas: el OCR confunde c/e y l/1, hay figuras ilegibles («ʥ»), las columnas blancas/negras se separan y el final de cada partida va en prosa, donde el lector se mete en variantes | Corregir el OCR (otra pasada de OCR sobre las páginas, o leer los diagramas) y marcar mejor dónde termina la línea principal |
+| Keres, Kasparov, Rubinstein, Tal (partidas comentadas) | Escaneos con figuras ilegibles, mismo problema que Crouch y Larsen | Lo mismo que Crouch |
 | Bondarewsky, *Táctica del medio juego* | Escaneo pobre: solo 3 problemas confirmados | Mejor escaneo |
 
 ## Para el usuario: qué probar
