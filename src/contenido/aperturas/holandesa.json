@@ -98,12 +98,49 @@
     },
     "d2d4 f7f5 b1c3": {
       "porQue": "Prepara e4 y obliga al negro a mostrar su plan."
+    },
+    "d2d4 f7f5 c1g5": {
+      "porQue": "Para Stockfish, la respuesta más fuerte a la Holandesa: el alfil sale antes de e3, molesta el desarrollo natural con ...Cf6 y deja abiertas las ideas Cd2 y e4."
+    },
+    "d2d4 f7f5 c1g5 h7h6": {
+      "porQue": "La respuesta radical que propone McDonald: echar al alfil y seguir con ...g5, moviendo primero los peones del flanco de rey y recién después las piezas. Parece suicida, pero mientras el negro evite un par de mates de principiante, su rey no corre peligro."
+    },
+    "d2d4 f7f5 c1g5 h7h6 g5h4": {
+      "porQue": "La mejor: el alfil mantiene la presión sobre e7 y obliga al negro a cumplir con ...g5.",
+      "porQueNo": [
+        {
+          "uci": "g5c1",
+          "texto": "Volver a c1 es admitir que la salida del alfil fue una pérdida de tiempo: el negro se desarrolla con comodidad."
+        }
+      ]
+    },
+    "d2d4 f7f5 c1g5 h7h6 g5h4 g7g5": {
+      "porQue": "La continuación consecuente: el peón echa al alfil del flanco de rey.",
+      "porQueNo": [
+        {
+          "uci": "g8f6",
+          "texto": "Axf6 exf6 y el negro queda con una estructura dañada sin haber ganado nada a cambio."
+        }
+      ]
+    },
+    "d2d4 f7f5 c1g5 h7h6 g5h4 g7g5 e2e3": {
+      "porQue": "Lo más sólido: el blanco no se apura, deja que el alfil vuelva a g3 y prepara el desarrollo.",
+      "porQueNo": [
+        {
+          "uci": "d1d3",
+          "texto": "La dama apunta a f5, pero no hay ningún mate: ...gxh4 y el blanco simplemente perdió el alfil."
+        }
+      ]
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Dutch Defence»"
+    },
+    {
+      "titulo": "Neil McDonald — Play the Dutch (Everyman, 2010)",
+      "capitulo": "Cap. 3, «White Plays 2 Bg5» (2...h6 3.Ah4 g5)"
     },
     {
       "titulo": "Dutch Defence (Wikipedia en inglés)",
@@ -119,7 +156,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-08",
     "resultados": {
       "d2d4 f7f5": {
         "ok": true,
@@ -200,6 +237,38 @@
       "d2d4 f7f5 b1c3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 f7f5 c1g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "d2d4 f7f5 c1g5 h7h6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "d2d4 f7f5 c1g5 h7h6 g5h4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "d2d4 f7f5 c1g5 h7h6 g5c1 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,7 → +0,1. Refutación: Cf6 e3 e6 Cf3 g5 Ce5"
+      },
+      "d2d4 f7f5 c1g5 h7h6 g5h4 g7g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "d2d4 f7f5 c1g5 h7h6 g5h4 g8f6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,6 → −1,1. Refutación: Axf6 exf6 e3 h5 Ae2 g6"
+      },
+      "d2d4 f7f5 c1g5 h7h6 g5h4 g7g5 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "d2d4 f7f5 c1g5 h7h6 g5h4 g7g5 d1d3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 31 puntos de chances: +0,6 → −3,0. Refutación: gxh4 Dxf5 d6 Dh5+ Rd7 Cc3"
       }
     }
   }
