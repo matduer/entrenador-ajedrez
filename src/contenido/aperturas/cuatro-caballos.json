@@ -38,6 +38,10 @@
         {
           "uci": "d1e2",
           "texto": "Tapa el alfil de f1: ...d5 y el negro iguala con comodidad."
+        },
+        {
+          "uci": "f3e5",
+          "texto": "El Gambito Halloween: el caballo se entrega por un peón para echar a los caballos negros con d4 y e5. Bien defendido (...Cxe5 d4 Cg6 e5 Cg8), el negro conserva la pieza de más y Stockfish le da ventaja clara."
         }
       ]
     },
@@ -100,6 +104,10 @@
       "capitulo": "«Four Knights Game»"
     },
     {
+      "titulo": "Paul Keiser — Critical Lines in the Halloween Gambit (UON 13, 2005)",
+      "capitulo": "Línea principal 4.Cxe5 Cxe5 5.d4"
+    },
+    {
       "titulo": "Four Knights Game (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Four_Knights_Game",
       "licencia": "CC BY-SA 4.0"
@@ -113,7 +121,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-08",
     "resultados": {
       "e2e4 e7e5 g1f3 b8c6 b1c3": {
         "ok": true,
@@ -134,6 +142,10 @@
       "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 d1e2 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 5 puntos de chances: 0,0 → −0,5. Refutación: d5 exd5 Cxd5 d4 Ab4 Ad2"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f3e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 15 puntos de chances: 0,0 → −1,7. Refutación: Cxe5 d4 Cg6 e5 Cg8 Ac4"
       },
       "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1b5 c6d4": {
         "ok": true,
