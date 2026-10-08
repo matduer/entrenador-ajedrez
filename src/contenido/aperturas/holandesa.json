@@ -131,6 +131,28 @@
           "texto": "La dama apunta a f5, pero no hay ningún mate: ...gxh4 y el blanco simplemente perdió el alfil."
         }
       ]
+    },
+    "d2d4 f7f5 b1c3 g8f6": {
+      "porQue": "Lo más importante contra 2.Cc3 es impedir e4, y el caballo lo hace de inmediato (McDonald).",
+      "porQueNo": [
+        {
+          "uci": "d7d6",
+          "texto": "Permite e4: tras ...fxe4 Cxe4 queda una especie de Siciliana al revés, pero con el rey negro más débil y la dama y el alfil de f8 todavía encerrados."
+        },
+        {
+          "uci": "g7g6",
+          "texto": "h4! y el peón de h avanza contra el enroque antes de que el negro termine de desarrollarse."
+        }
+      ]
+    },
+    "d2d4 f7f5 b1c3 g8f6 c1g5 d7d5 g5f6 e7f6": {
+      "porQue": "Retomar hacia el centro: el negro queda con la pareja de alfiles y un centro sólido, a cambio de una estructura algo rara.",
+      "porQueNo": [
+        {
+          "uci": "g7f6",
+          "texto": "Tomar con el peón de g deja al rey sin refugio: e4 abre el centro y el negro sufre."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -140,7 +162,7 @@
     },
     {
       "titulo": "Neil McDonald — Play the Dutch (Everyman, 2010)",
-      "capitulo": "Cap. 3, «White Plays 2 Bg5» (2...h6 3.Ah4 g5)"
+      "capitulo": "Caps. 2, «White Plays 2 Nc3», y 3, «White Plays 2 Bg5» (2...h6 3.Ah4 g5)"
     },
     {
       "titulo": "Dutch Defence (Wikipedia en inglés)",
@@ -269,6 +291,26 @@
       "d2d4 f7f5 c1g5 h7h6 g5h4 g7g5 d1d3 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 31 puntos de chances: +0,6 → −3,0. Refutación: gxh4 Dxf5 d6 Dh5+ Rd7 Cc3"
+      },
+      "d2d4 f7f5 b1c3 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 f7f5 b1c3 d7d6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,3 → −1,0. Refutación: e4 Cf6 Ad3 Cxe4 Cxe4 fxe4"
+      },
+      "d2d4 f7f5 b1c3 g7g6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: −0,3 → −1,4. Refutación: h4 Ag7 h5 d5 Af4 c6"
+      },
+      "d2d4 f7f5 b1c3 g8f6 c1g5 d7d5 g5f6 e7f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 f7f5 b1c3 g8f6 c1g5 d7d5 g5f6 g7f6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 18 puntos de chances: −0,3 → −2,4. Refutación: e4 h5 exd5 c6 Ae2 cxd5"
       }
     }
   }
