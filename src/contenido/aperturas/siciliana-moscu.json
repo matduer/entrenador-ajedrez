@@ -55,12 +55,37 @@
     },
     "e2e4 c7c5 g1f3 d7d6 f1b5 c8d7 b5d7 d8d7 c2c4": {
       "porQue": "Bind de Maroczy: con c4 y e4, las blancas controlan d5."
+    },
+    "e2e4 c7c5 g1f3 d7d6 f1b5 b8d7 d2d4": {
+      "porQue": "Jones recomienda abrir el centro enseguida: el caballo de d7 tapa al alfil de c8 y el negro todavía no enrocó."
+    },
+    "e2e4 c7c5 g1f3 d7d6 f1b5 b8d7 d2d4 g8f6 e1g1": {
+      "porQue": "La idea del repertorio de Jones: enroca y deja el peón de e4 en el aire. Si el negro lo toma, la columna e se abre contra su rey sin enrocar.",
+      "porQueNo": [
+        {
+          "uci": "d4c5",
+          "texto": "Cambiar en c5 le da al negro ...Da5+ y el caballo de f6 se queda con e4: el negro recupera el material con buen juego."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 d7d6 f1b5 b8d7 d2d4 g8f6 e1g1 c5d4": {
+      "porQue": "La respuesta más común y la mejor: el negro ignora el peón de e4 y sigue desarrollándose.",
+      "porQueNo": [
+        {
+          "uci": "f6e4",
+          "texto": "Tomar e4 es muy arriesgado: Te1 echa al caballo y las blancas ganan tiempo para atacar en el centro con el rey negro todavía allí."
+        }
+      ]
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Sicilian Defence», sección «2 Nf3 d6»"
+    },
+    {
+      "titulo": "Gawain Jones — How to Beat the Sicilian Defence (Everyman, 2011)",
+      "capitulo": "Cap. 1, «Moscow Variation: 3...Nd7»"
     },
     {
       "titulo": "Sicilian Defence (Wikipedia en inglés)",
@@ -76,7 +101,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-08",
     "resultados": {
       "e2e4 c7c5 g1f3 d7d6 f1b5": {
         "ok": true,
@@ -113,6 +138,26 @@
       "e2e4 c7c5 g1f3 d7d6 f1b5 c8d7 b5d7 d8d7 c2c4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 f1b5 b8d7 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 f1b5 b8d7 d2d4 g8f6 e1g1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 f1b5 b8d7 d2d4 g8f6 d4c5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,3 → −0,3. Refutación: Da5+ Cc3 Cxe4 a4 Cxc3 Dd2"
+      },
+      "e2e4 c7c5 g1f3 d7d6 f1b5 b8d7 d2d4 g8f6 e1g1 c5d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 f1b5 b8d7 d2d4 g8f6 e1g1 f6e4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,2 → −0,8. Refutación: Te1 Cf6 dxc5 dxc5 Cg5 e6"
       }
     }
   }
