@@ -48,7 +48,7 @@
       ]
     },
     "e2e4 g7g6 d2d4 f8g7 b1c3 c7c6": {
-      "porQue": "Parece lenta pero es venenosa: prepara ...d5 o ...b5 según lo que haga el blanco."
+      "porQue": "Parece lenta pero es venenosa: prepara ...d5 o ...b5 según lo que haga el blanco. Soltis la convierte en un sistema: en vez de pelear por las casillas oscuras con ...d6 y ...e5, como en la India de Rey, el negro ataca e4 con ...d5, al estilo de la Caro-Kann."
     },
     "e2e4 g7g6 d2d4 f8g7 b1c3 c7c6 f2f4 d7d5": {
       "porQue": "Contra el avance de f4, ...d5: si e5, el negro frena los peones del flanco de rey con ...h5 y después juega ...c5."
@@ -58,12 +58,31 @@
     },
     "e2e4 g7g6 d2d4 f8g7 c2c3": {
       "porQue": "Un esquema sólido que la Pirc no permite: c3, Cf3, Ad3 y enroque."
+    },
+    "e2e4 g7g6 d2d4 f8g7 b1c3 c7c6 g1f3 d7d5": {
+      "porQue": "La idea del sistema: el peón de d ataca e4 y, junto con el alfil de g7, también presiona d4. Las blancas tienen que decidir cómo sostener el centro."
+    },
+    "e2e4 g7g6 d2d4 f8g7 b1c3 c7c6 f1c4 d7d6": {
+      "porQue": "Contra el alfil en c4, Soltis prefiere ...d6: el negro sigue con ...e6 y ...e5 sin dejar f7 desprotegido. Para Stockfish, el ...d5 directo también es bueno."
+    },
+    "e2e4 g7g6 d2d4 f8g7 b1c3 c7c6 f1c4 d7d6 d1f3 e7e6": {
+      "porQue": "Obligada: la dama y el alfil apuntan a f7. Después el negro sigue con ...De7, ...Cd7 y ...e5, y la dama blanca en f3 termina mal ubicada.",
+      "porQueNo": [
+        {
+          "uci": "a7a6",
+          "texto": "Ignorar la amenaza pierde enseguida: Dxf7+ y la dama llega a g7."
+        }
+      ]
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Other 1 e4 Openings», sección «Modern Defence»"
+    },
+    {
+      "titulo": "Andrew Soltis — Black to Play and Win with 1...g6 (Chess Digest, 1988)",
+      "capitulo": "Sección I, variante A (3.Cc3 c6): 4.Cf3 d5 y 4.Ac4 d6"
     },
     {
       "titulo": "Modern Defense (Wikipedia en inglés)",
@@ -79,7 +98,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-08",
     "resultados": {
       "e2e4 g7g6": {
         "ok": true,
@@ -124,6 +143,22 @@
       "e2e4 g7g6 d2d4 f8g7 c2c3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 g7g6 d2d4 f8g7 b1c3 c7c6 g1f3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 g7g6 d2d4 f8g7 b1c3 c7c6 f1c4 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 g7g6 d2d4 f8g7 b1c3 c7c6 f1c4 d7d6 d1f3 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 g7g6 d2d4 f8g7 b1c3 c7c6 f1c4 d7d6 d1f3 a7a6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 44 puntos de chances: −0,4 → −9,8. Refutación: Dxf7+ Rd7 Dxg7 Cf6 e5 Ch5"
       }
     }
   }
