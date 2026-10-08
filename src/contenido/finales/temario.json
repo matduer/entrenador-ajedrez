@@ -810,6 +810,43 @@
       ]
     },
     {
+      "id": "torre-en-septima",
+      "titulo": "Finales de torres: la torre en séptima",
+      "nivel": 3,
+      "explicacion": [
+        "Silman explica por qué la séptima fila es tan buena para la torre: ahí suelen estar los peones rivales que todavía no se movieron, que quedan como blancos fáciles, y el rey enemigo, encerrado en la última fila, no puede salir a jugar.",
+        "Una torre en séptima obliga a la torre rival a defender peones desde atrás y al rey a quedarse cuidando los suyos. Con las piezas rivales atadas, el rey propio entra caminando, y a veces eso vale más que un peón de ventaja.",
+        "Lo que importa no es la fila en sí sino lo que hace la torre: si en la sexta ataca peones y le corta el paso al rey, cumple la misma función. Y con paciencia: el rival no tiene jugadas útiles, así que no hace falta apurarse (cuidado con las posiciones de ahogado al avanzar peones al lado del rey rival)."
+      ],
+      "ideas": [
+        "La torre en séptima ataca peones y encierra al rey en la última fila.",
+        "Con el rival atado, entrá con el rey: es la pieza que decide.",
+        "Paciencia: si el rival no tiene jugadas útiles, no hay apuro."
+      ],
+      "posiciones": [
+        {
+          "id": "rival-atado",
+          "fen": "r4k2/pR3p2/Pp4p1/1P4Pp/2P4P/8/2K5/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 60,
+          "consigna": "Material parejo, pero tu torre en séptima ata todo. Ganá.",
+          "pista": "La torre negra no puede dejar a8 (defiende a7) y el rey negro tiene que cuidar f7. Entrá con el rey por el centro (Rd3, Re4, Rd5…) hacia c6 y b7.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "stockfish 7.73",
+            "mejor": "c2c3",
+            "fecha": "2026-10-08"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jeremy Silman — El curso de finales completo (Siles Press, 2007)",
+          "capitulo": "Parte Cinco (ELO 1600-1799): «¡Saluden todos a la 7.ª fila!»"
+        }
+      ]
+    },
+    {
       "id": "torre-delante-del-peon",
       "titulo": "Finales de torres: torre delante de su peón en séptima",
       "nivel": 4,
