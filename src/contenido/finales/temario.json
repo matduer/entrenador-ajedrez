@@ -1518,12 +1518,31 @@
             "mejor": "e2f2",
             "fecha": "2026-10-08"
           }
+        },
+        {
+          "id": "casillas-posteriores",
+          "fen": "8/2k5/p1P5/P1K5/8/8/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 50,
+          "consigna": "Las blancas quieren entrar por d6 o b6. Si el negro tuviera que mover, perdería. Ganá el tiempo que falta.",
+          "pista": "Rd5!: el rey blanco usa las casillas de atrás (c4 y d4) para perder un tiempo, y el negro no puede imitarlo porque su rey no tiene c6. Por ejemplo Rd5 Rc8 Rc4! Rd8 Rd4 Rc8 Rd5 y ahora el negro está en zugzwang.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "c5d5",
+            "dtm": 33,
+            "fecha": "2026-10-08"
+          }
         }
       ],
       "fuentes": [
         {
           "titulo": "Jeremy Silman — El curso de finales completo (Siles Press, 2007)",
           "capitulo": "Parte Cinco (ELO 1600-1799): «Triangulación» y «Rodeo»"
+        },
+        {
+          "titulo": "Jon Speelman — Preparación de finales (Paidotribo, col. Caissa, D. L. 1995; orig. Endgame Preparation, Batsford)",
+          "capitulo": "cap. 4 «La teoría de las casillas conjugadas», «Triangulación», diagrama 97"
         }
       ]
     },

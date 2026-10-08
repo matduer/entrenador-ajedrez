@@ -38,7 +38,7 @@ function leer(token: string): Lectura | undefined {
   const cols = COLUMNA[col.toLowerCase()] ?? [col.toLowerCase()]
   const filas = FILA[fila] ?? [fila]
   cols.forEach((c, i) => filas.forEach((f, j) => destinos.push({ sq: c + f, costo: i + j })))
-  const pieza = p && PIEZA[p]
+  const pieza = p ? PIEZA[p] : undefined
   if (!p) {
     // peón: "e4", o captura a la antigua "ed5" (columna de origen y casilla)
     if (medio && !/[a-h]/.test(medio)) return undefined

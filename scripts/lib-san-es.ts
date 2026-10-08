@@ -7,4 +7,4 @@ export const sanIngles = (t: string) =>
     .replace(/^0-0/, 'O-O')
     .replace(/\+\+$/, '#')
     .replace(/^[RDTAC]/, (p) => PIEZA[p])
-    .replace(/=?([DTAC])([+#]?)$/, (x, p, j, i, s) => (/[a-h][18]=?[DTAC]/.test(s) ? '=' + PIEZA[p] + j : x))
+    .replace(/=?([DTAC])([+#]?)$/, (x, p, j, _i, s) => (/[a-h][18]=?[DTAC]/.test(s) ? '=' + PIEZA[p] + j : x))
