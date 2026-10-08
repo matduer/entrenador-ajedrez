@@ -113,5 +113,5 @@ Contexto del jugador: `docs/contexto/analisis-partidas-avatargs.md` y `docs/cont
 ## Comandos
 
 - `npm run dev` — desarrollo (`http://localhost:5173`). `npm run dev:red` — red local para el celular (sin service worker: requiere HTTPS o localhost).
-- `npm run check` — tipos (app y scripts). `npm run build` — build de producción.
+- `npm run check` — tipos (app y scripts). `npm run build` — build de producción. **Correr `npm run check` antes de cada push**: el despliegue de GitHub Pages lo corre primero y, si falla (aunque sea por un script de `scripts/` que la app no usa), el sitio no se publica y llega un mail de «Run failed» por cada commit. Pasó el 2026-10-08: dos errores de tipos en scripts nuevos frenaron la publicación durante varias horas.
 - `npm run analisis-previo`, `npm run aperturas`, `node scripts/preparar-problemas.ts`, `node scripts/verificar-explicaciones.ts [prof]`, `node scripts/verificar-finales.ts [FEN…]`, `node scripts/explorar-posicion.ts "<ucis>" [prof] [n]`.
