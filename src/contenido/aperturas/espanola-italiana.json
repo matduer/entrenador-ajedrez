@@ -299,6 +299,34 @@
           "texto": "Tomar el alfil abre la columna h: tras ...hxg4, si el caballo se va o toma e5, ...Dh4 llega con un ataque de mate. Lo mejor allí es devolver material con d3."
         }
       ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 c2c3": {
+      "porQue": "La continuación más jugada: refuerza d4 y le guarda al alfil de b3 la retirada a c2.",
+      "porQueNo": [
+        {
+          "uci": "b1c3",
+          "texto": "9.Cc3? Cxc3 10.bxc3 Ce7: peones doblados y el alfil de b3 sin juego; Larsen lo da como la refutación, y Stockfish coincide."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 c2c3 f8c5": {
+      "porQue": "La «variante italiana»: el alfil apunta a f2. Es más activo que ...Ae7, aunque no ayuda a defender el enroque y estorba el avance ...c5."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 c2c3 e4c5": {
+      "porQue": "La «variante Berlín»: el caballo vuelve sin que lo ataquen, para echar al alfil de b3 a c2 y después presionar e5 con ...Ag4 o preparar ...d4. Stockfish la considera algo inferior a ...Ac5.",
+      "inferior": true
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 c2c3 e4c5 b3c2": {
+      "porQue": "La retirada que Larsen pronosticaba que se iba a imponer; Stockfish también la prefiere.",
+      "porQueNo": [
+        {
+          "uci": "f3d4",
+          "texto": "10.Cd4!?, entregando el peón de e5, fue durante mucho tiempo lo más jugado; tras 10...Cxd4 11.cxd4 Cb3 las negras cambian el alfil de b3 y están bien."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 c2c3 f8c5 b1d2 e8g8 b3c2 e4f2": {
+      "porQue": "El Ataque Dilworth: las negras dan sus dos piezas menores por la torre de f1 y un peón, y abren la columna f contra el rey blanco. Larsen dudaba de que fuera correcto, aunque nadie había mostrado cómo refutarlo; Stockfish la considera la mejor jugada de la posición."
     }
   },
   "fuentes": [
@@ -309,6 +337,10 @@
     {
       "titulo": "Boris Alterman — The Alterman Gambit Guide: Black Gambits 2 (Quality Chess, 2012)",
       "capitulo": "Cap. 2, «The Hector Gambit» (Española del Cambio)"
+    },
+    {
+      "titulo": "Bent Larsen — Teoría y práctica en los juegos abiertos (trad. Franco L. Di Luca, Ediciones Hache-Efe, Buenos Aires)",
+      "capitulo": "«Apertura Española, Variante Abierta»: 9.P3A con las variantes «italiana» (9...A4AD) y «Berlín» (9...C4A)"
     },
     {
       "titulo": "Ruy Lopez (Wikipedia en inglés)",
@@ -602,6 +634,34 @@
       "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5c6 d7c6 e1g1 c8g4 h2h3 h7h5 h3g4 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 6 puntos de chances: +0,0 → −0,6. Refutación: hxg4 d3 gxf3 Dxf3 g6 Te1"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 c2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 b1c3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: +0,3 → −0,6. Refutación: Cxc3 bxc3 Ce7 Ae3 Tc8 Ac5"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 c2c3 f8c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 c2c3 e4c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Ac5: −0,2 contra −0,7 (marcada como inferior pero jugable)"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 c2c3 e4c5 b3c2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 c2c3 e4c5 f3d4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,7 → +0,1. Refutación: Cxd4 cxd4 Cxb3 axb3 Ae7 Cc3"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 c2c3 f8c5 b1d2 e8g8 b3c2 e4f2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
       }
     }
   }

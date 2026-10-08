@@ -45,6 +45,7 @@ Resumen para retomar el trabajo en cualquier sesión. El detalle de métodos y h
 - Pendiente: más de Flear y Silman; De la Villa caps. 11 (T+2P contra T) y 13, y el final 56 (Kling y Horwitz). Hecho también el final 55 (defensa de la primera fila con peón de caballo).
 
 ### Aperturas: 74 archivos
+- 2026-10-08 (tarde): notas de Larsen, *Teoría y práctica en los juegos abiertos*, en la Española Abierta (9.c3 con las variantes «italiana» y «Berlín», 9.Cc3?, Ataque Dilworth). Nuevo `scripts/lib-descriptiva.ts`: lee notación descriptiva española con ruido de OCR (restricciones + legalidad + búsqueda hacia adelante).
 - 2026-10-08: nuevos Blumenfeld, Vaganian y San Jorge; notas de libros en Moderna (Soltis, Storey), Dos Caballos (Traxler), Gambito de Rey (Falkbeer), Vienesa (Frankenstein-Drácula), Española del Cambio (Héctor), Cuatro Caballos (Halloween), Siciliana (2.a3), Moscú y Rossolimo (Jones), Mexicana (Palliser), Holandesa (McDonald).
 - Los libros de aperturas con texto que quedan repiten líneas ya cubiertas con FCO.
 
@@ -65,8 +66,8 @@ Regla de trabajo pedida por el usuario: **si un libro trae un problema, se anota
 2. ⏳ De la Villa: hechos cap. 6, cortes del cap. 10 y peones doblados; faltan T+2P contra T (cap. 11), finales 55-56 y más del cap. 12.
 3. Keres *Finales prácticos*, Dvoretsky *Endgame Manual*, Chernev *Capablanca's Best Chess Endings* (posiciones de partidas reales).
 
-### Etapa 3 — Aperturas
-1. Aguilera *El error en la apertura* (los "por qué no", verificados con Stockfish).
+### Etapa 3 — Aperturas (en curso)
+1. ✅ Larsen *Teoría y práctica en los juegos abiertos* (Española Abierta). Aguilera *El error en la apertura*: al registro de problemas.
 2. Aguilera *El espíritu de la apertura*, Larsen *Teoría y práctica en los juegos abiertos*.
 3. Monografías que todavía no se usaron (Bologan Española, Anti-Sicilianas, Pirc, Catalana, Makogonov, Veresov, Londres de Lemos…).
 
@@ -84,6 +85,7 @@ Regla de trabajo pedida por el usuario: **si un libro trae un problema, se anota
 | Larsen, *Todas las piezas atacan* | Figuras ilegibles en el OCR, como Crouch | Lo mismo que Crouch |
 | Bronstein, *Zúrich 1953* (CDA 19) | `scripts/preparar-partidas-zurich.ts` (lector con búsqueda hacia adelante para «&» = 5 o 6) todavía da 0 partidas: el OCR confunde c/e y l/1, hay figuras ilegibles («ʥ»), las columnas blancas/negras se separan y el final de cada partida va en prosa, donde el lector se mete en variantes | Corregir el OCR (otra pasada de OCR sobre las páginas, o leer los diagramas) y marcar mejor dónde termina la línea principal |
 | Keres, Kasparov, Rubinstein, Tal (partidas comentadas) | Escaneos con figuras ilegibles, mismo problema que Crouch y Larsen | Lo mismo que Crouch |
+| Aguilera, *El error en la apertura* (5.ª ed., 1988) | Notación descriptiva con OCR muy ruidoso («NR» por P4R, «%.» por 2., jugadas sueltas como «⁵»), y en dos columnas | `lib-descriptiva.ts` ya lee la notación; falta un OCR mejor de las páginas |
 | Bondarewsky, *Táctica del medio juego* | Escaneo pobre: solo 3 problemas confirmados | Mejor escaneo |
 
 ## Para el usuario: qué probar
