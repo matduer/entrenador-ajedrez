@@ -202,9 +202,25 @@
     },
     "d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 e8g8 b1c3 d7d6 g1f3 b8c6 e1g1 a7a6": {
       "porQue": "Variante Panno: ...Tb8 y ...b5 para abrir juego en el flanco de dama."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 h2h3": {
+      "porQue": "El sistema Makogonov: h3 le quita g4 a las piezas negras (ni ...Cg4 contra un alfil en e3 ni ...Ag4 contra el caballo de f3) y prepara g4 para ganar espacio en el flanco de rey."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 h2h3 e8g8 c1e3": {
+      "porQue": "La versión que recomiendan Lakdawala y Hansen: con h3 ya jugado, el alfil en e3 no puede ser molestado por ...Cg4."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 h2h3 e8g8 c1e3 e7e5 d4d5": {
+      "porQue": "Cierra el centro. El plan blanco es g4 (y a veces g5); si el negro busca juego con ...f5, abre su propio enroque."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 h2h3 e8g8 c1e3 e7e5 d4d5 a7a5 g2g4": {
+      "porQue": "El avance típico del Makogonov: controla f5 y h5 (frena ...Ch5 y ...f5) y prepara g5 para echar al caballo de f6. En Anand-Ponomariov (Bilbao, 2014), las blancas siguieron con g5 y h4 y enrocaron largo."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Cyrus Lakdawala y Carsten Hansen — Makogonov Variation: A ruthless King's Indian killer (CarstenChess, 2022)",
+      "capitulo": "cap. 2 «Black opts for a Traditional ...e7–e5 Structure» (alfil en e3)"
+    },
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«King's Indian Defence»"
@@ -223,7 +239,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-08",
     "resultados": {
       "d2d4 g8f6": {
         "ok": true,
@@ -420,6 +436,22 @@
       "d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 e8g8 b1c3 d7d6 g1f3 b8c6 e1g1 a7a6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 h2h3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 h2h3 e8g8 c1e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 h2h3 e8g8 c1e3 e7e5 d4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 h2h3 e8g8 c1e3 e7e5 d4d5 a7a5 g2g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
       }
     }
   }
