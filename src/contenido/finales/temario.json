@@ -1821,6 +1821,59 @@
           "capitulo": "cap. 6 «Torre contra dos peones», finales 30 a 32"
         }
       ]
+    },
+    {
+      "id": "rey-cortado",
+      "titulo": "Torre y peón contra torre: el rey cortado por columnas",
+      "nivel": 4,
+      "explicacion": [
+        "Con el peón todavía lejos de coronar, el rey defensor tiene tiempo de ponerse delante y armar un Philidor. Para ganar, el bando fuerte necesita cortarlo con la torre, impidiéndole cruzar hacia la zona del peón.",
+        "Si el corte es de una sola columna, el defensor aguanta: la torre se instala en su primera fila y da jaques de frente al rey atacante desde lejos (para que esos jaques sirvan, tiene que haber al menos tres filas de distancia), y cuando el rey se esconde, vuelve a la columna del peón para frenarlo. El rey defensor espera en la tercera o cuarta fila, listo para volver.",
+        "Con el corte de dos columnas y un peón de alfil o central, el bando fuerte gana con la maniobra de Grigoriev: el rey avanza por el costado del peón contrario al rey rival, escapando de los jaques frontales, y cuando los jaques se agotan, la torre corta o tapa y el peón avanza. Con el peón de caballo la maniobra tiene menos lugar (del otro lado solo queda la columna de torre) y el resultado depende de los detalles."
+      ],
+      "ideas": [
+        "Contar las columnas de corte: con una, el defensor aguanta; con dos y peón de alfil o central, suele ganar el atacante.",
+        "Defensa: torre en la primera fila, jaques de frente desde lejos, rey en tercera o cuarta.",
+        "Ataque: el rey por el lado contrario al rey rival, y la torre lista para tapar los jaques."
+      ],
+      "posiciones": [
+        {
+          "id": "corte-de-una-columna",
+          "fen": "7r/8/8/4k3/1KP5/8/8/3R4 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 50,
+          "consigna": "Tu rey está cortado en una columna. Juegan las negras: aguantá las tablas.",
+          "pista": "Tb8+: jaque de frente, con varias filas de distancia. Cuando el rey blanco se esconda, la torre vuelve a la columna c para frenar el peón, y tu rey espera en la tercera o cuarta fila para volver a la zona de tablas. Cuidado con los jaques de más: si la torre pierde la distancia, el rey blanco se le acerca y el peón avanza.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "h8b8",
+            "dtm": 0,
+            "fecha": "2026-10-08"
+          }
+        },
+        {
+          "id": "corte-de-dos-columnas",
+          "fen": "2r5/8/8/5k2/1KP5/8/8/4R3 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 60,
+          "consigna": "El rey negro está cortado a dos columnas. Ganá.",
+          "pista": "Maniobra de Grigoriev: el rey sube por el lado de la columna b (b5, y si hace falta a6) para salir de los jaques frontales; cuando la torre negra se queda sin jaques, la tuya corta o tapa y el peón avanza. El rey negro, a dos columnas, no llega a tiempo a ponerse delante.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "c4c5",
+            "dtm": 55,
+            "fecha": "2026-10-08"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 10 «Torre y peón contra torre», finales 59 «El corte vertical en una columna» y 60 «Corte en dos columnas. Método combinado de Grigoriev»"
+        }
+      ]
     }
   ]
 }
