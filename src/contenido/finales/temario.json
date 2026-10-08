@@ -2180,6 +2180,56 @@
           "capitulo": "cap. 2 «Combinaciones para forzar tablas», diagramas 46 a 48 (Fichtl-Hort, Kosice 1961; Auni-Radashkovich, Israel 1978)"
         }
       ]
+    },
+    {
+      "id": "gana-el-que-mueve",
+      "titulo": "Finales de peones: gana el que mueve primero",
+      "nivel": 4,
+      "explicacion": [
+        "Hay finales de peones de zugzwang recíproco en los que gana el bando que tiene la jugada. La técnica, según Speelman, es en dos tiempos: primero forzar el zugzwang en el flanco donde están los reyes y los peones centrales (el rey rival tiene que ceder terreno), y después «corregir» la situación en el otro flanco, donde uno puede estar en desventaja.",
+        "Por eso, en estas posiciones el primer movimiento del rey es el que decide: hay que ir a tomar la oposición o la casilla clave antes que el rival."
+      ],
+      "ideas": [
+        "Primero el zugzwang con los reyes, después el otro flanco.",
+        "Contar los tiempos de reserva de los peones del flanco alejado.",
+        "El rey va primero a la casilla clave: un tiempo de diferencia decide."
+      ],
+      "posiciones": [
+        {
+          "id": "juegan-las-negras",
+          "fen": "8/1p5p/p4k2/8/4Pp2/7P/PP2K3/8 b - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 60,
+          "consigna": "Jugás con las negras y tenés la jugada: aprovechala.",
+          "pista": "Re5!: el rey ocupa la casilla clave antes que el blanco. Si Rf3, a5! y los peones del flanco de dama se encargan de que las blancas se queden sin jugadas útiles.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "stockfish 8.56",
+            "mejor": "f6e5",
+            "fecha": "2026-10-08"
+          }
+        },
+        {
+          "id": "juegan-las-blancas",
+          "fen": "8/1p5p/p4k2/8/4Pp2/7P/PP2K3/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 60,
+          "consigna": "La misma posición, pero ahora la jugada es tuya.",
+          "pista": "Rf3!: ahora es el rey blanco el que llega primero. Después, h4 y el avance de los peones del flanco de rey dejan al negro sin jugadas. Con otras jugadas el blanco no gana: h4 de entrada solo empata y Rd2 hasta pierde.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "stockfish 5.85",
+            "mejor": "e2f3",
+            "fecha": "2026-10-08"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jon Speelman — Preparación de finales (Paidotribo, col. Caissa, D. L. 1995; orig. Endgame Preparation, Batsford)",
+          "capitulo": "cap. 3 «Zugzwang», diagrama 83 (Schwiede-Sika, Brno 1929)"
+        }
+      ]
     }
   ]
 }
