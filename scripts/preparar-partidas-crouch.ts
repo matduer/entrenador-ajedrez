@@ -39,7 +39,7 @@ for (let k = 0; k < partidas.length; k++) {
   const tokens: string[] = []
   let esperado = 1
   let negras = false
-  let resultado: string | undefined
+  let resultado: PartidaLibro['resultado']
   // "..." separado de la jugada; ojo: el alfil a veces sale como "..t" o ".i", que no hay que partir.
   const partir = (r: string) =>
     r
@@ -57,7 +57,7 @@ for (let k = 0; k < partidas.length; k++) {
   for (let i = p.desde; i < hasta; i++) {
     const t0 = partir(renglones[i] + (/^\d{1,3}$/.test(renglones[i]) && i + 1 < hasta ? ' ' + renglones[i + 1] : ''))
     if (!t0.length) continue
-    if (/^(1-0|0-1|1\/2-1\/2|½-½)$/.test(t0[0])) { resultado = t0[0]; break }
+    if (/^(1-0|0-1|1\/2-1\/2|½-½)$/.test(t0[0])) { resultado = (t0[0] === '½-½' ? '1/2-1/2' : t0[0]) as PartidaLibro['resultado']; break }
     if (numero(t0[0]) !== esperado || (negras && t0[1] !== '...') || (!negras && t0[1] === '...')) continue
     // Juntar el tramo: solo renglones enteros de jugadas. Un renglón con alguna palabra es comentario (aunque
     // empiece con el número esperado, como "6 'iVc2 .td6 7 g4!? is an extremely") y corta el tramo.

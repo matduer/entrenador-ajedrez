@@ -1,0 +1,130 @@
+{
+  "id": "blumenfeld",
+  "nombre": "Gambito Blumenfeld",
+  "raiz": "d2d4 g8f6 c2c4 e7e6 g1f3 c7c5 d4d5 b7b5",
+  "resumen": "Pariente del Benko pero con otra lógica: tras 1.d4 Cf6 2.c4 e6 3.Cf3 c5 4.d5, el negro ofrece el peón de b para bombardear el centro blanco desde todos los lados y quedarse él con los peones centrales (...exd5, ...d5). Lo popularizó la victoria de Alekhine sobre Tarrasch en 1922. Para Stockfish 4...b5 es la mejor jugada del negro en esa posición; las blancas tienen que elegir entre aceptar, declinar con 5.Ag5 o reforzar el centro con 5.e4.",
+  "planesBlancas": [
+    "Mantener el peón de d5 y la ventaja de espacio (5.e4 o 5.Ag5).",
+    "Si el negro gana el centro, atacar los peones e6 y d5 con Cc3 y e4."
+  ],
+  "planesNegras": [
+    "Destruir el centro blanco con ...exd5, ...bxc4 o ...d5.",
+    "Alfil a b7 apuntando a la gran diagonal y desarrollo rápido."
+  ],
+  "estructura": "Si el blanco acepta, el negro queda con un centro de peones en e6 y d5 a cambio del peón; si declina, la lucha es por el peón de d5.",
+  "rupturas": [
+    "...exd5, ...bxc4 y ...d5 del negro.",
+    "e4 y Cc3 de las blancas para sostener el centro."
+  ],
+  "piezas": [
+    "Alfil negro de c8: b7, sobre la gran diagonal.",
+    "Caballo blanco de b1: c3 cuando pueda, sin que ...b4 lo eche."
+  ],
+  "trampas": [
+    {
+      "jugadas": "d2d4 g8f6 c2c4 e7e6 g1f3 c7c5 d4d5 b7b5 b1c3 b5b4 c3b5 a7a6",
+      "texto": "Si el caballo blanco, atacado por ...b4, se va a b5, ...a6 lo deja sin casillas."
+    }
+  ],
+  "notas": {
+    "d2d4 g8f6 c2c4 e7e6 g1f3 c7c5 d4d5 b7b5": {
+      "porQue": "El gambito: el negro entrega el peón de b para atacar el centro blanco desde los costados y quedarse con los peones centrales."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 c7c5 d4d5 b7b5 e2e4": {
+      "porQue": "Para Stockfish, la respuesta más incisiva: refuerza el centro y deja que el negro tome en e4 si quiere.",
+      "porQueNo": [
+        {
+          "uci": "b2b3",
+          "texto": "Sostener la cadena con b3 es lento: ...bxc4 y ...exd5 deshacen el centro blanco."
+        },
+        {
+          "uci": "d1c2",
+          "texto": "...bxc4 y el negro gana la lucha por el centro antes de que llegue e4."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 c7c5 d4d5 b7b5 c1g5": {
+      "porQue": "La que Alterman considera más fuerte: clava el caballo y ataca la defensa de d5, sin aceptar el peón."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 c7c5 d4d5 b7b5 c1g5 e6d5": {
+      "porQue": "La mejor: el negro toma enseguida en d5 para no dejarse atar.",
+      "porQueNo": [
+        {
+          "uci": "h7h6",
+          "texto": "Axf6 Dxf6 Cc3 y el blanco conserva el control de d5."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 c7c5 d4d5 b7b5 b1c3 b5b4 c3a4": {
+      "porQue": "La única buena: el caballo queda en el borde, pero no se pierde.",
+      "porQueNo": [
+        {
+          "uci": "c3b5",
+          "texto": "...a6 y el caballo no tiene adónde ir."
+        },
+        {
+          "uci": "c3b1",
+          "texto": "Volver a b1 pierde demasiado tiempo: el negro juega ...Ab7 y ...exd5 con ventaja."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Boris Alterman — The Alterman Gambit Guide: Black Gambits 1 (Quality Chess, 2011)",
+      "capitulo": "Cap. 2, «The Blumenfeld Gambit»"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-08",
+    "resultados": {
+      "d2d4 g8f6 c2c4 e7e6 g1f3 c7c5 d4d5 b7b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 c7c5 d4d5 b7b5 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 c7c5 d4d5 b7b5 b2b3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,6 → +0,0. Refutación: bxc4 bxc4 exd5 cxd5 g6 e4"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 c7c5 d4d5 b7b5 d1c2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: +0,6 → −0,3. Refutación: bxc4 e4 exd5 exd5 Cxd5 Axc4"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 c7c5 d4d5 b7b5 c1g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 c7c5 d4d5 b7b5 c1g5 e6d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 c7c5 d4d5 b7b5 c1g5 h7h6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,4 → −1,3. Refutación: Axf6 Dxf6 Cc3 bxc4 e4 Aa6"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 c7c5 d4d5 b7b5 b1c3 b5b4 c3a4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 c7c5 d4d5 b7b5 b1c3 b5b4 c3b5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 16 puntos de chances: +0,1 → −1,7. Refutación: a6 dxe6 dxe6 Dxd8+ Rxd8 Cg5"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 c7c5 d4d5 b7b5 b1c3 b5b4 c3b1 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,1 → −0,6. Refutación: Ab7 dxe6 dxe6 Dxd8+ Rxd8 Ce5"
+      }
+    }
+  }
+}
