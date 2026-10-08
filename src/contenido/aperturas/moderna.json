@@ -79,6 +79,15 @@
     },
     "e2e4 g7g6 d2d4 f8g7 b1c3 c7c6 f2f4 d7d5 e4e5 h7h5 g1f3 c8g4 h2h3 g4f3 d1f3 e7e6": {
       "porQue": "La mejor según Stockfish. El negro cambió su alfil y, como explica Soltis, tiene que impedir f5, que liberaría a los alfiles blancos: ...e6 lo frena y completa la cadena de peones en casillas blancas."
+    },
+    "e2e4 g7g6 d2d4 f8g7 b1c3 c7c5": {
+      "porQue": "El \"Sniper\" de Storey: el alfil de g7 y el peón de c5 atacan d4 a la vez, con aire de Siciliana Dragón. Stockfish la considera tan buena como ...d6."
+    },
+    "e2e4 g7g6 d2d4 f8g7 b1c3 c7c5 d4c5 g7c3": {
+      "porQue": "El \"sacrificio del francotirador\": el negro entrega su alfil para doblar los peones blancos y después recupera el peón de c5 con ...Da5. Es la mejor jugada según Stockfish."
+    },
+    "e2e4 g7g6 d2d4 f8g7 b1c3 c7c5 d4c5 g7c3 b2c3 d8a5": {
+      "porQue": "La dama ataca c3 y c5 a la vez: el negro recupera el peón y las blancas quedan con los peones de c doblados y aislados."
     }
   },
   "fuentes": [
@@ -89,6 +98,10 @@
     {
       "titulo": "Andrew Soltis — Black to Play and Win with 1...g6 (Chess Digest, 1988)",
       "capitulo": "Sección I, variante A (3.Cc3 c6): 4.Cf3 d5, 4.Ac4 d6 y 4.f4 d5 5.e5 h5 (Gurgenidze)"
+    },
+    {
+      "titulo": "Charlie Storey — The Sniper: Play 1...g6, ...Bg7 and ...c5! (Everyman, 2011)",
+      "capitulo": "Cap. 1, «Queenside Knight: 3 Nc3 c5!», «The Sniper Sacrifice: 4...Bxc3+»"
     },
     {
       "titulo": "Modern Defense (Wikipedia en inglés)",
@@ -171,6 +184,18 @@
         "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
       },
       "e2e4 g7g6 d2d4 f8g7 b1c3 c7c6 f2f4 d7d5 e4e5 h7h5 g1f3 c8g4 h2h3 g4f3 d1f3 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,9 para el bando que mueve"
+      },
+      "e2e4 g7g6 d2d4 f8g7 b1c3 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 g7g6 d2d4 f8g7 b1c3 c7c5 d4c5 g7c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "e2e4 g7g6 d2d4 f8g7 b1c3 c7c5 d4c5 g7c3 b2c3 d8a5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,9 para el bando que mueve"
       }
