@@ -76,7 +76,8 @@ export class MotorNativo {
     )
     this.enviar(`setoption name MultiPV value ${multipv}`)
     this.enviar(`position fen ${fen}`)
-    this.enviar(`go depth ${this.profundidad}`)
+    // Tope de tiempo opcional (TOPE_MS): una posición patológica no puede colgar una verificación larga.
+    this.enviar(`go depth ${this.profundidad}${process.env.TOPE_MS ? ` movetime ${process.env.TOPE_MS}` : ""}`)
     await fin
     const r: Analisis = { ev: lineas[0]?.ev ?? { cp: 0 }, mejor, pv: lineas[0]?.pv ?? [], lineas: lineas.filter(Boolean) }
     this.cache.set(clave, r)

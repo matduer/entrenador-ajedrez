@@ -94,6 +94,8 @@ Contexto del jugador: `docs/contexto/analisis-partidas-avatargs.md` y `docs/cont
 - chessground: ignora eventos simulados salvo `trustAllEvents` (activado solo en `DEV`), y guarda las medidas del tablero (por eso el `ResizeObserver`). Con la ventana minimizada el viewport mide 0 y no se puede probar el tablero: emular un tamaño con `resize_window`.
 - En PowerShell, el falso positivo "Remove-Item on system path" aparece con here-strings largos en `git commit -m`: escribir el mensaje a un archivo y usar `git commit -F`.
 
+**Progreso y pendientes al día: ver `PROGRESO.md`.**
+
 ## Estado actual (2026-10-06)
 
 - Publicada en https://matduer.github.io/entrenador-ajedrez/ (repo público `matduer/entrenador-ajedrez`, Pages con fuente "GitHub Actions"). Cada push a `main` publica.

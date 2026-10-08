@@ -88,8 +88,26 @@ async function verificar(e: Entrada, fenN: string, uciLibro: string | undefined)
   return { ok: true, fen: fenN, jugadas: elegida.pv.slice(0, largo % 2 === 1 ? largo : largo - 1), temas }
 }
 
+// Avance guardado cada 25 posiciones en <base>_avance.json: si la corrida se corta (pasó al reiniciarse la sesión
+// con verificaciones de varias horas), con REANUDAR=1 se retoma desde ahí en vez de empezar de cero.
+const AVANCE = `${DIR}/${base}_avance.json`
+const hechos = new Set<string>()
+if (process.env.REANUDAR && existsSync(AVANCE)) {
+  const a = JSON.parse(readFileSync(AVANCE, 'utf8')) as { hechos: string[]; nuevos: typeof nuevos; cuenta: typeof cuenta; informe: string[] }
+  a.hechos.forEach((h) => hechos.add(h))
+  nuevos.push(...a.nuevos)
+  Object.assign(cuenta, a.cuenta)
+  informe.push(...a.informe)
+  console.error(`Reanudando: ${hechos.size} posiciones ya verificadas`)
+}
+const guardarAvance = () => writeFileSync(AVANCE, JSON.stringify({ hechos: [...hechos], nuevos, cuenta, informe }))
+
 for (const e of entradas) {
   const n = e.n
+  const clave = String(e.clave ?? n)
+  if (hechos.has(clave)) continue
+  hechos.add(clave)
+  if (hechos.size % 25 === 0) guardarAvance()
   // Tableros candidatos legales (y en los que la jugada del libro sea legal, si la hay). Con solución del libro
   // se prueban todos (p. ej. variantes de color de una pieza dudosa) y vale el primero que la confirma; sin
   // solución, solo el primero, porque cualquier posición errónea podría tener una jugada decisiva.
@@ -120,6 +138,7 @@ for (const e of entradas) {
   nuevos.push({ id: `${prefijo}-${e.clave ?? n}`, fen: r.fen, jugadas: r.jugadas, temas: r.temas, fuente: { titulo, capitulo: [e.capitulo, e.etiqueta ?? `n.º ${n}`].filter(Boolean).join(', ') } })
 }
 motor.cerrar()
+guardarAvance()
 
 const RUTA = 'public/datos/problemas-libros.json'
 const previos = existsSync(RUTA) ? (JSON.parse(readFileSync(RUTA, 'utf8')) as { id: string }[]).filter((p) => !p.id.startsWith(`${prefijo}-`)) : []
