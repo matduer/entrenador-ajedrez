@@ -88,6 +88,15 @@
     },
     "e2e4 g7g6 d2d4 f8g7 b1c3 c7c5 d4c5 g7c3 b2c3 d8a5": {
       "porQue": "La dama ataca c3 y c5 a la vez: el negro recupera el peón y las blancas quedan con los peones de c doblados y aislados."
+    },
+    "e2e4 g7g6 d2d4 f8g7 g1f3 c7c5 d4c5 d8a5": {
+      "porQue": "Jaque que recupera el peón de c5: el negro no tiene por qué apurarse, pero esta es la forma más directa y la mejor según Stockfish.",
+      "porQueNo": [
+        {
+          "uci": "b8a6",
+          "texto": "Axa6 y el negro, además de no recuperar el peón todavía, queda con los peones del flanco de dama doblados."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -101,7 +110,7 @@
     },
     {
       "titulo": "Charlie Storey — The Sniper: Play 1...g6, ...Bg7 and ...c5! (Everyman, 2011)",
-      "capitulo": "Cap. 1, «Queenside Knight: 3 Nc3 c5!», «The Sniper Sacrifice: 4...Bxc3+»"
+      "capitulo": "Cap. 1, «Queenside Knight: 3 Nc3 c5!» (el sacrificio 4...Axc3+), y cap. 2, «Kingside Knight: 3 Nf3 c5!» (4.dxc5)"
     },
     {
       "titulo": "Modern Defense (Wikipedia en inglés)",
@@ -198,6 +207,14 @@
       "e2e4 g7g6 d2d4 f8g7 b1c3 c7c5 d4c5 g7c3 b2c3 d8a5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,9 para el bando que mueve"
+      },
+      "e2e4 g7g6 d2d4 f8g7 g1f3 c7c5 d4c5 d8a5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "e2e4 g7g6 d2d4 f8g7 g1f3 c7c5 d4c5 b8a6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: −0,8 → −2,0. Refutación: Axa6 Da5+ Ad2 Dxa6 Cc3 Dc4"
       }
     }
   }
