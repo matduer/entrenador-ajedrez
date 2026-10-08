@@ -2433,6 +2433,73 @@
           "capitulo": "cap. 2 «Finales de peones», diagramas 24 y 26"
         }
       ]
+    },
+    {
+      "id": "casillas-conjugadas",
+      "titulo": "Casillas conjugadas y oposición distante",
+      "nivel": 4,
+      "explicacion": [
+        "En muchos finales de peones hay casillas clave a las que el rey atacante quiere llegar (aquí, c5, d5 y e5, desde donde gana el peón de a6 o entra en la posición). El defensor tiene que poder contestar cada jugada del rey rival con una jugada a la casilla «conjugada»: la que le permite llegar a tiempo a la casilla clave correspondiente.",
+        "La oposición es el caso más simple de conjugación: los reyes enfrentados con una casilla en el medio. Pero a veces la casilla conjugada está más lejos: la oposición distante, con tres o cinco casillas de separación en la misma columna."
+      ],
+      "ideas": [
+        "Primero marcar las casillas clave: a las que el rey atacante quiere llegar.",
+        "Para cada casilla del rey atacante, buscar la que le corresponde al defensor.",
+        "Si la oposición cercana no alcanza, pensar en la distante."
+      ],
+      "posiciones": [
+        {
+          "id": "ganar-la-oposicion",
+          "fen": "8/8/p2k4/8/PP6/3K4/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 50,
+          "consigna": "Las blancas quieren llegar a c5, d5 o e5. Te toca: tomá la oposición.",
+          "pista": "Rd4! (también sirve Rd2, oposición distante): oposición directa. Si Rc6, Re5; si Re6, Rc5, y el rey blanco llega al peón de a6 o entra por el otro lado.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "d3d4",
+            "dtm": 49,
+            "fecha": "2026-10-08"
+          }
+        },
+        {
+          "id": "oposicion-distante-defensa",
+          "fen": "8/8/p2k4/8/PP6/3K4/8/8 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 50,
+          "consigna": "La misma posición, pero ahora mueven las negras. Hay una sola jugada que salva.",
+          "pista": "Rd7!: oposición distante (tres casillas entre los reyes en la columna d). Cuando el rey blanco avance a d4, el negro vuelve a d6 y conserva la oposición; Rd5? pierde.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "d6d7",
+            "dtm": 0,
+            "fecha": "2026-10-08"
+          }
+        },
+        {
+          "id": "oposicion-distante-ataque",
+          "fen": "8/3k4/p7/8/PP6/8/8/4K3 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 60,
+          "consigna": "Ahora los reyes están lejos. Ganá con la única jugada.",
+          "pista": "Rd1!: oposición distante, cinco casillas entre los reyes. A cada movimiento del rey negro, el blanco contesta manteniéndola mientras se acerca, hasta llegar a la oposición directa en la cuarta fila.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "e1d1",
+            "dtm": 61,
+            "fecha": "2026-10-08"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jon Speelman — Preparación de finales (Paidotribo, col. Caissa, D. L. 1995; orig. Endgame Preparation, Batsford)",
+          "capitulo": "cap. 4 «La teoría de las casillas conjugadas», «La oposición», diagrama 93"
+        }
+      ]
     }
   ]
 }
