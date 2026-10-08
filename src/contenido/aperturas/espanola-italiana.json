@@ -368,6 +368,36 @@
     },
     "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 b1d2 e4c5 c2c3 d5d4": {
       "porQue": "El contragolpe por el que 9.Cbd2 se dejó de lado después de la Primera Guerra Mundial: el peón avanza atacando c3 y abre la diagonal del alfil de e6."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 d2d4 e5d4 e4e5": {
+      "porQue": "Lo correcto: echa al caballo de f6 antes de recuperar el peón.",
+      "porQueNo": [
+        {
+          "uci": "f3d4",
+          "texto": "7.Cxd4? Cxd4 8.Dxd4 c5 y ...b5 con ...c4: el alfil de a4 queda encerrado, como en el Arca de Noé."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 d1e2 b7b5 a4b3 f8e7 a2a4 b5b4 d2d4 d7d5": {
+      "porQue": "El contragolpe central, lo mejor según Stockfish.",
+      "porQueNo": [
+        {
+          "uci": "d7d6",
+          "texto": "8...d6?? 9.Dc4: la dama ataca f7 junto con el alfil de b3 y el caballo de c6 a la vez; las negras pierden material."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 d2d3 f8c5 a4c6 d7c6 b1d2": {
+      "porQue": "Desarrollo tranquilo: el peón de e5 no se puede tomar todavía.",
+      "porQueNo": [
+        {
+          "uci": "f3e5",
+          "texto": "7.Cxe5? Dd4: la dama ataca el caballo de e5 y amenaza mate en f2 con el alfil de c5; las blancas pierden una pieza."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 d2d3 f8e7 a4c6 d7c6 f3e5": {
+      "porQue": "Con el alfil negro en e7 (y no en c5), la captura sí gana un peón: ...Dd4 ya no viene con amenaza en f2."
     }
   },
   "fuentes": [
@@ -382,6 +412,10 @@
     {
       "titulo": "Bent Larsen — Teoría y práctica en los juegos abiertos (trad. Franco L. Di Luca, Ediciones Hache-Efe, Buenos Aires)",
       "capitulo": "«Apertura Española, Variante Abierta»: 9.P3A con las variantes «italiana» (9...A4AD) y «Berlín» (9...C4A), 9.D2R (la idea de Ekström) y otras novenas jugadas blancas"
+    },
+    {
+      "titulo": "Victor Bologan — Bologan's Ruy Lopez for Black (New In Chess, 2015)",
+      "capitulo": "resúmenes «Traps» de los caps. 7 (Löwenthal-Anderssen), 10 (Wormald cerrada), 11 (Steinitz: 5.d3) y 14 (Anti-Marshall con 8.d4)"
     },
     {
       "titulo": "Ruy Lopez (Wikipedia en inglés)",
@@ -747,6 +781,34 @@
       "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 b1d2 e4c5 c2c3 d5d4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 d2d4 e5d4 e4e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 d2d4 e5d4 f3d4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 13 puntos de chances: −0,0 → −1,4. Refutación: Cxd4 e5 b5 exf6 Axf6 Te1+"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 d1e2 b7b5 a4b3 f8e7 a2a4 b5b4 d2d4 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 d1e2 b7b5 a4b3 f8e7 a2a4 b5b4 d2d4 d7d6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 31 puntos de chances: −0,2 → −4,2. Refutación: Dc4 Dd7 Dxf7+ Rd8 dxe5 Tf8"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 d2d3 f8c5 a4c6 d7c6 b1d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 d2d3 f8c5 a4c6 d7c6 f3e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 39 puntos de chances: 0,0 → −5,8. Refutación: Dd4 De2 Dxe5 h3 Ad7 Cd2"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 d2d3 f8e7 a4c6 d7c6 f3e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,6 para el bando que mueve"
       }
     }
   }

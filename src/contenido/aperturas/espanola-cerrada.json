@@ -125,12 +125,25 @@
     },
     "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 c8b7 d2d4 f8e8": {
       "porQue": "Zaitsev: presiona e4 y prepara ...Af8."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 e8g8 d2d4 c6d4": {
+      "porQue": "Contra 8.d4, el negro cambia en d4 con el caballo y mantiene la tensión.",
+      "porQueNo": [
+        {
+          "uci": "e5d4",
+          "texto": "8...exd4? 9.e5: el caballo de f6 tiene que retroceder (9...Ce8) y las blancas quedan con ventaja de espacio y desarrollo."
+        }
+      ]
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Ruy Lopez», secciones «Closed Variation», «Chigorin», «Breyer», «Zaitsev» y «Marshall Attack»"
+    },
+    {
+      "titulo": "Victor Bologan — Bologan's Ruy Lopez for Black (New In Chess, 2015)",
+      "capitulo": "cap. 14 «The Judd Anti-Marshall» (8.d4), resumen «Traps»"
     },
     {
       "titulo": "Ruy Lopez (Wikipedia en inglés)",
@@ -146,7 +159,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-08",
     "resultados": {
       "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3": {
         "ok": true,
@@ -251,6 +264,14 @@
       "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 c8b7 d2d4 f8e8": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 e8g8 d2d4 c6d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 e8g8 d2d4 e5d4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,1 → −0,7. Refutación: e5 Ce8 Ad5 Tb8 c3 dxc3"
       }
     }
   }
