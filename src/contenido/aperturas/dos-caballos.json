@@ -154,9 +154,60 @@
           "texto": "Contraataque que sale mal: 5.Axf7+! Re7 6.d4 y el rey negro queda expuesto en el centro."
         }
       ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6 d5c6 b7c6 b5e2 h7h6 g5f3 e5e4 f3e5 f8d6 f2f4 e4f3": {
+      "porQue": "La captura al paso, que Estrin da como la respuesta correcta a 11.f4: el negro abre la posición y aprovecha su ventaja de desarrollo.",
+      "porQueNo": [
+        {
+          "uci": "d8c7",
+          "texto": "11...Dc7, defendiendo sin cambiar, deja a las blancas consolidar con O-O y d4."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6 d5c6 b7c6 d1f3 c6b5": {
+      "porQue": "Contra la variante Bogoljubov (8.Df3), tomar el alfil es lo mejor según Stockfish, aunque Estrin la desaconsejaba; su recomendación, 8...Tb8, también es buena.",
+      "porQueNo": [
+        {
+          "uci": "d8c7",
+          "texto": "8...Dc7 es demasiado lento: 9.Aa4 y las blancas conservan el peón de más."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6d4": {
+      "inferior": true,
+      "porQue": "Variante Fritz: el caballo salta al centro amenazando ...b5 y ...Cxd5. Es teoría antigua; según Stockfish, algo inferior a 5...Ca5."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6d4 c2c3": {
+      "porQue": "Lo más fuerte: echa al caballo de d4 de inmediato.",
+      "porQueNo": [
+        {
+          "uci": "d2d3",
+          "texto": "6.d3? b5! y el alfil de c4 se queda sin buena retirada: tras 7.c3 bxc4 8.cxd4 Dxd5 las negras están mejor."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 b7b5": {
+      "porQue": "Variante Ulvestad: ofrece un peón para desviar al alfil de la diagonal a2-g8 y recuperar d5."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 b7b5 c4f1": {
+      "porQue": "La retirada que recomienda Estrin, y la mejor según Stockfish: el alfil no se deja desviar.",
+      "porQueNo": [
+        {
+          "uci": "c4b5",
+          "texto": "6.Axb5 Dxd5: la dama recupera el peón con buena posición."
+        },
+        {
+          "uci": "d5c6",
+          "texto": "6.dxc6 bxc4 y el negro recupera la pieza con un buen juego."
+        }
+      ]
     }
   },
   "fuentes": [
+    {
+      "titulo": "Jacob B. Estrin — La Defensa de los Dos Caballos (trad. Victor Andresco y Yolanda Peralta; prólogo y partidas comentadas por Tigran Petrosian; Ricardo Aguilera, Madrid; © 1968, depósito legal 1973)",
+      "capitulo": "«Primer sistema: 4.C5C»: variante principal con 8.A2R y 11.P4AR, variante de Bogoljubov (8.D3A), variantes de Fritz (5...C5D) y Ulvestad (5...P4C)"
+    },
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Italian Game», sección «Two Knights Defence»"
@@ -312,6 +363,50 @@
       "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 f6e4 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 21 puntos de chances: −0,1 → −2,6. Refutación: Axf7+ Re7 d4 h6 Cxe4 Rxf7"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6 d5c6 b7c6 b5e2 h7h6 g5f3 e5e4 f3e5 f8d6 f2f4 e4f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6 d5c6 b7c6 b5e2 h7h6 g5f3 e5e4 f3e5 f8d6 f2f4 d8c7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,2 → −0,5. Refutación: O-O O-O Cc3 Af5 Rh1 Cd5"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6 d5c6 b7c6 d1f3 c6b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5 c7c6 d5c6 b7c6 d1f3 d8c7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,2 → −0,6. Refutación: Ad3 Ae7 Cc3 O-O Af5 h6"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6d4 c2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6d4 d2d3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,4 → −0,2. Refutación: b5 c3 bxc4 cxd4 Dxd5 O-O"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 b7b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 b7b5 c4f1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 b7b5 c4b5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,4 → −0,1. Refutación: Dxd5 Ae2 Ab7 d3 Cd4 Cf3"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 b7b5 d5c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,4 → −0,1. Refutación: bxc4 Cc3 Ab4 O-O O-O d3"
       }
     }
   }

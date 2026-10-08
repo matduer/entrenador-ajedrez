@@ -45,6 +45,7 @@ Resumen para retomar el trabajo en cualquier sesión. El detalle de métodos y h
 - Pendiente: más de Flear y Silman; De la Villa caps. 11 (T+2P contra T) y 13, y el final 56 (Kling y Horwitz). Hecho también el final 55 (defensa de la primera fila con peón de caballo).
 
 ### Aperturas: 74 archivos
+- 2026-10-08 (tarde): Estrin, *La Defensa de los Dos Caballos*, en los Dos Caballos (Polerio, Bogoljubov, Fritz, Ulvestad).
 - 2026-10-08 (tarde): Lakdawala y Hansen, *Makogonov Variation*, en la India de Rey (5.h3).
 - 2026-10-08 (tarde): Dembo, *Fighting the Anti-King's Indians*, en el Trompowsky.
 - 2026-10-08 (tarde): Sielecki, *Opening Repertoire: Nimzo and Bogo Indian*, en la Nimzoindia y la Bogoindia.
@@ -91,6 +92,8 @@ Regla de trabajo pedida por el usuario: **si un libro trae un problema, se anota
 | Bronstein, *Zúrich 1953* (CDA 19) | `scripts/preparar-partidas-zurich.ts` (lector con búsqueda hacia adelante para «&» = 5 o 6) todavía da 0 partidas: el OCR confunde c/e y l/1, hay figuras ilegibles («ʥ»), las columnas blancas/negras se separan y el final de cada partida va en prosa, donde el lector se mete en variantes | Corregir el OCR (otra pasada de OCR sobre las páginas, o leer los diagramas) y marcar mejor dónde termina la línea principal |
 | Keres, Kasparov, Rubinstein, Tal (partidas comentadas) | Escaneos con figuras ilegibles, mismo problema que Crouch y Larsen | Lo mismo que Crouch |
 | Aguilera, *El error en la apertura* (5.ª ed., 1988) | Notación descriptiva con OCR muy ruidoso («NR» por P4R, «%.» por 2., jugadas sueltas como «⁵»), y en dos columnas | `lib-descriptiva.ts` ya lee la notación; falta un OCR mejor de las páginas |
+| Tiviakov y Gökbulut, *Rock Solid Chess* (2 tomos) | Es un libro de estrategia (estructuras de peones), no de aperturas: no hay un módulo donde encaje | Un módulo de estrategia o de estructuras |
+| *London Pet Line 4...Qxb2* (2025) | No es un libro: es una exportación de partidas rápidas entre bots y jugadores online | — (descartado) |
 | Bondarewsky, *Táctica del medio juego* | Escaneo pobre: solo 3 problemas confirmados | Mejor escaneo |
 
 ## Para el usuario: qué probar
