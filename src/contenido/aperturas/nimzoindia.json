@@ -170,12 +170,31 @@
     },
     "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3 b7b6 g1e2 c8a6": {
       "porQue": "Busca cambiar los alfiles de casillas blancas y dejar al blanco con el alfil de casillas negras, que choca con sus propios peones."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3 e8g8 g1e2 f8e8": {
+      "porQue": "Contra 5.Ce2 (la idea de Reshevsky: a3 y retomar en c3 con el caballo), el negro prepara ...Af8 para no entregar el alfil: la torre en e8 apoya ...e5 o ...d5 más adelante."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3 e8g8 g1e2 f8e8 a2a3 b4f8": {
+      "porQue": "El alfil vuelve a f8 en vez de cambiarse: si cambiara en c3, las blancas retomarían con el caballo, sin peones doblados, y se quedarían con la pareja de alfiles. El esquema ...Te8 y ...Af8 se adapta a casi cualquier estructura de peones."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 f2f3 c7c5": {
+      "porQue": "Contra 4.f3, ataca d4 de inmediato. Tras 5.d5 O-O 6.e4 d6 se llega a una estructura Benoni cómoda, con poca teoría."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 f2f3 c7c5 d4d5 e8g8 e2e4 d7d6": {
+      "porQue": "Cierra la estructura tipo Benoni: el negro ya enrocó y tiene el alfil de b4 activo."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 g1f3 c7c5 g2g3 b8c6 f1g2 f6e4 c1d2": {
+      "porQue": "Lo más sólido contra la presión sobre c3. Con 7.Dd3, en cambio, el negro cambia en d4 y queda con mejor estructura de peones sin entregar la pareja de alfiles."
     }
   },
   "fuentes": [
     {
       "titulo": "Chris Ward — Starting Out: The Nimzo-Indian (Everyman, 2002)",
       "capitulo": "cap. 1, «The Rubinstein Variation: 4 e3 b6»"
+    },
+    {
+      "titulo": "Christof Sielecki — Opening Repertoire: Nimzo and Bogo Indian (Everyman, 2015)",
+      "capitulo": "caps. 3 (4.f3), 4 (Kasparov-Romanishin, 4.Cf3 y 5.g3) y 6 (Reshevsky, 4.e3 O-O 5.Ce2), con sus resúmenes"
     },
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
@@ -195,7 +214,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-08",
     "resultados": {
       "d2d4 g8f6 c2c4 e7e6": {
         "ok": true,
@@ -360,6 +379,26 @@
       "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3 b7b6 g1e2 c8a6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3 e8g8 g1e2 f8e8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3 e8g8 g1e2 f8e8 a2a3 b4f8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 f2f3 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 f2f3 c7c5 d4d5 e8g8 e2e4 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 g1f3 c7c5 g2g3 b8c6 f1g2 f6e4 c1d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
       }
     }
   }
