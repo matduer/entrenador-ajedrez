@@ -1,0 +1,76 @@
+{
+  "id": "gambito-vaganian",
+  "nombre": "Gambito Vaganian",
+  "raiz": "d2d4 g8f6 c2c4 c7c5 g1f3 c5d4 f3d4 e7e5",
+  "resumen": "Cuando las blancas evitan el Benko con 3.Cf3 (en vez de 3.d5), el negro cambia en d4 y echa al caballo con ...e5. El hueco que queda en d5 lo obliga casi siempre a jugar ...d5 aunque cueste un peón. Stockfish lo considera jugable (4...e5 pierde muy poco), y la respuesta más fuerte de las blancas es 5.Cb5, que apunta a d6 y d5.",
+  "planesBlancas": [
+    "5.Cb5 para presionar d6 y controlar d5.",
+    "Cc3, Ag5 y Cd5 para ocupar el hueco."
+  ],
+  "planesNegras": [
+    "...d5 cuanto antes, aunque cueste un peón, para liberar el juego.",
+    "...Cc6 y ...Ab4 para controlar e4 y d5 antes del ...d5."
+  ],
+  "estructura": "El negro queda con un peón en e5 y la casilla d5 débil; todo gira alrededor de si logra jugar ...d5.",
+  "rupturas": [
+    "...d5 del negro.",
+    "Cd5 y e4 de las blancas."
+  ],
+  "piezas": [
+    "Caballo blanco de d4: b5, apuntando a d6.",
+    "Alfil negro de f8: b4 para clavar el caballo de c3."
+  ],
+  "trampas": [],
+  "notas": {
+    "d2d4 g8f6 c2c4 c7c5 g1f3 c5d4 f3d4 e7e5": {
+      "porQue": "El peón echa al caballo con ganancia de tiempo, pero deja d5 debilitada: el negro queda casi comprometido a jugar ...d5 pronto, aunque cueste un peón."
+    },
+    "d2d4 g8f6 c2c4 c7c5 g1f3 c5d4 f3d4 e7e5 d4b5": {
+      "porQue": "La más fuerte: el caballo apunta a d6 y a d5, justo las casillas que debilitó ...e5.",
+      "porQueNo": [
+        {
+          "uci": "d4c2",
+          "texto": "Permite ...d5 enseguida: tras cxd5 Dxd5 el negro ya igualó y se desarrolla sin problemas."
+        },
+        {
+          "uci": "d4f3",
+          "texto": "...Cc6, ...Ab4 y ...d5: el negro se libera y el blanco no sacó nada."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Boris Alterman — The Alterman Gambit Guide: Black Gambits 1 (Quality Chess, 2011)",
+      "capitulo": "Cap. 3, «The Vaganian Gambit»"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-08",
+    "resultados": {
+      "d2d4 g8f6 c2c4 c7c5 g1f3 c5d4 f3d4 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 g1f3 c5d4 f3d4 e7e5 d4b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 g1f3 c5d4 f3d4 e7e5 d4c2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,4 → −0,2. Refutación: d5 cxd5 Dxd5 Dxd5 Cxd5 e4"
+      },
+      "d2d4 g8f6 c2c4 c7c5 g1f3 c5d4 f3d4 e7e5 d4f3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,4 → −0,3. Refutación: Cc6 Cc3 Ab4 Ad2 O-O e3"
+      }
+    }
+  }
+}
