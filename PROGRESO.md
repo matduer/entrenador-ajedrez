@@ -38,10 +38,11 @@ Resumen para retomar el trabajo en cualquier sesión. El detalle de métodos y h
 - Polgár: 467 miniaturas. Fischer, *My 60 Memorable Games*: 50 de 60. *Partidas de personajes históricos*: 33 (`scripts/preparar-partidas-personajes.ts`). Capablanca, *Fundamentos del ajedrez*: las 14 partidas modelo (`scripts/preparar-partidas-capablanca.ts`). Control: `scripts/verificar-partidas-libros.ts <prefijo>` (en la posición final, el ganador no puede estar peor para Stockfish).
 - Pendiente: Crouch *Modern Chess: Move by Move*, Rubinstein (Donaldson y Minev), Keres, Kasparov… El OCR tiene las figuras ilegibles; `scripts/lib-ocr-jugadas.ts` reconstruye jugadas, pero todavía no completa ninguna partida de Crouch.
 
-### Finales: 34 temas, 61 posiciones
+### Finales: 37 temas, 68 posiciones
 - Agregados el 2026-10-08: peones separados (cuadrado común), ruptura, carreras (Réti; mate con peones de Silman), torre en séptima, torre delante de su peón en séptima, torre y dos contra torre y uno; dama contra peón de torre con el rey cerca.
 - 2026-10-08 (tarde): alfil contra caballo con un peón (De la Villa, cap. 8): la diagonal larga, el recurso de Lloyd con peón de torre, el rey del color del caballo y el zugzwang con peón en séptima.
-- Pendiente: más de Flear y Silman.
+- 2026-10-08 (tarde): más De la Villa: torre contra dos peones ligados (cap. 6), el rey cortado (cortes de una y dos columnas con la maniobra de Grigoriev; corte horizontal perfecto e imperfecto, finales 59 a 63) y peones doblados (final 77).
+- Pendiente: más de Flear y Silman; De la Villa caps. 11 (T+2P contra T) y 13, y los finales 55-56 (defensa en primera fila, Kling y Horwitz).
 
 ### Aperturas: 74 archivos
 - 2026-10-08: nuevos Blumenfeld, Vaganian y San Jorge; notas de libros en Moderna (Soltis, Storey), Dos Caballos (Traxler), Gambito de Rey (Falkbeer), Vienesa (Frankenstein-Drácula), Española del Cambio (Héctor), Cuatro Caballos (Halloween), Siciliana (2.a3), Moscú y Rossolimo (Jones), Mexicana (Palliser), Holandesa (McDonald).
@@ -61,7 +62,7 @@ Regla de trabajo pedida por el usuario: **si un libro trae un problema, se anota
 
 ### Etapa 2 — Finales (en curso desde el 2026-10-08 a la tarde)
 1. ✅ Alfil contra caballo (De la Villa, cap. 8).
-2. De la Villa: los capítulos que faltan (Caballo contra peón, Torre contra dos peones, A+P contra A, alfiles de distinto color, T+2P contra T).
+2. ⏳ De la Villa: hechos cap. 6, cortes del cap. 10 y peones doblados; faltan T+2P contra T (cap. 11), finales 55-56 y más del cap. 12.
 3. Keres *Finales prácticos*, Dvoretsky *Endgame Manual*, Chernev *Capablanca's Best Chess Endings* (posiciones de partidas reales).
 
 ### Etapa 3 — Aperturas

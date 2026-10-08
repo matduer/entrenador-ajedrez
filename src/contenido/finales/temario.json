@@ -1906,6 +1906,44 @@
           "capitulo": "cap. 10 «Torre y peón contra torre», finales 59 a 63 (cortes vertical y horizontal; método de Grigoriev)"
         }
       ]
+    },
+    {
+      "id": "peones-doblados",
+      "titulo": "Peones doblados contra rey solo",
+      "nivel": 2,
+      "explicacion": [
+        "Dos peones doblados contra el rey solo ganan casi siempre. La clave es el peón de atrás: sirve para perder un tiempo justo cuando los reyes quedan en oposición y así ganarla.",
+        "Hay dos excepciones: los peones de torre (si el rey defensor llega al rincón, da igual cuántos peones haya) y el caso en que el peón de atrás ya está en quinta, porque entonces no le queda una jugada de reserva.",
+        "Con peones de caballo hay que cuidarse del ahogado; a veces conviene entregar el peón de adelante para que el rey propio gane las casillas críticas del otro."
+      ],
+      "ideas": [
+        "El peón de atrás es una reserva de tiempos: guardalo para ganar la oposición.",
+        "Excepciones: peones de torre, y peón de atrás ya en quinta.",
+        "Peones de caballo: atención al ahogado."
+      ],
+      "posiciones": [
+        {
+          "id": "peones-de-caballo",
+          "fen": "8/1k6/8/1P6/1P6/3K4/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 40,
+          "consigna": "Dos peones de caballo doblados. Ganá sin regalar el ahogado ni la oposición.",
+          "pista": "Rc3 o Rd4, no Rc4 (Rb6 y el rey negro se instala delante). Acercá el rey y guardá el peón de b4 para perder un tiempo cuando haga falta. Si el rey negro queda arrinconado en a8 o b8, mirá antes cada jugada: hay ahogados.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "d3d4",
+            "dtm": 47,
+            "fecha": "2026-10-08"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 12 «Finales de peones», Final 77 «Peones doblados»"
+        }
+      ]
     }
   ]
 }
