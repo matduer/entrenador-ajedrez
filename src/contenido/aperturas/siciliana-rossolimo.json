@@ -82,12 +82,28 @@
     },
     "e2e4 c7c5 g1f3 b8c6 f1b5 e7e6 e1g1 g8e7": {
       "porQue": "Prepara ...a6 y poder retomar en c6 con el caballo."
+    },
+    "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 b5c6 b7c6 e1g1": {
+      "porQue": "Enroca y prepara Te1 y e5: la idea es abrir el centro antes de que el negro aproveche la pareja de alfiles."
+    },
+    "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 b5c6 b7c6 e1g1 f8g7 f1e1": {
+      "porQue": "La torre apoya e5, el avance que le quita al negro las casillas d6 y f6 y le deja los peones doblados como debilidad."
+    },
+    "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 b5c6 b7c6 e1g1 f8g7 f1e1 d7d6 e4e5": {
+      "porQue": "Jones lo marca como el plan correcto: después de ...dxe5 Cxe5, los peones de c doblados del negro quedan aislados y las blancas tienen una ventaja estructural duradera."
+    },
+    "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 b5c6 b7c6 e1g1 f8g7 f1e1 e7e5 b2b4": {
+      "porQue": "El sacrificio posicional de Fischer: si ...cxb4, a3 abre la columna a y el alfil de c1 gana la gran diagonal, con las casillas oscuras del centro (d6) a su alcance. Stockfish lo considera tan bueno como el normal c3."
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Sicilian Defence», sección «2 Nf3 Nc6» (Rossolimo Variation)"
+    },
+    {
+      "titulo": "Gawain Jones — How to Beat the Sicilian Defence (Everyman, 2011)",
+      "capitulo": "Cap. 5, «Rossolimo Variation: 3...g6 4.Bxc6 bxc6»"
     },
     {
       "titulo": "Sicilian Defence (Wikipedia en inglés)",
@@ -103,7 +119,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-08",
     "resultados": {
       "e2e4 c7c5 g1f3 b8c6 f1b5": {
         "ok": true,
@@ -168,6 +184,22 @@
       "e2e4 c7c5 g1f3 b8c6 f1b5 e7e6 e1g1 g8e7": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 b5c6 b7c6 e1g1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 b5c6 b7c6 e1g1 f8g7 f1e1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 b5c6 b7c6 e1g1 f8g7 f1e1 d7d6 e4e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 b5c6 b7c6 e1g1 f8g7 f1e1 e7e5 b2b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
       }
     }
   }
