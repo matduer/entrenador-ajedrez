@@ -2249,6 +2249,42 @@
           "capitulo": "cap. 3 «Zugzwang», diagrama 83 (Schwiede-Sika, Brno 1929)"
         }
       ]
+    },
+    {
+      "id": "jaque-a-traves",
+      "titulo": "El jaque a través: una pieza que controla dos líneas",
+      "nivel": 4,
+      "explicacion": [
+        "Un alfil, una torre o una dama pueden detener un peón desde lejos aunque el rey rival esté en el medio: si el rey se interpone, recibe un jaque «a través» y, después de moverse, la pieza sigue controlando la casilla de coronación. Así un alfil puede vigilar dos diagonales a la vez.",
+        "Para usar el recurso hay que preparar la geometría: el rey propio tiene que estar libre para correr hacia los peones rivales mientras el alfil frena el peón más peligroso."
+      ],
+      "ideas": [
+        "Contar las diagonales (o columnas) que la pieza controla, también a través del rey rival.",
+        "Mientras el alfil frena, el rey propio gana tiempos comiendo peones.",
+        "Ubicar el alfil en la diagonal que permita dar el jaque a través en el momento justo."
+      ],
+      "posiciones": [
+        {
+          "id": "alfil-en-dos-diagonales",
+          "fen": "8/8/2p5/K1P1p3/4Pk2/8/3pB3/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 60,
+          "consigna": "El peón de d2 amenaza coronar y el rey negro se come e4. ¿Cómo ganás?",
+          "pista": "Rb6!: el rey va por el peón de c6 y después vuelve al centro. El alfil frena el peón de d con la ayuda de los jaques a través (Ad1 y, más adelante, Aa4 y Ab5+). Las demás jugadas solo empatan.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "stockfish 6.48",
+            "mejor": "a5b6",
+            "fecha": "2026-10-08"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jon Speelman — Preparación de finales (Paidotribo, col. Caissa, D. L. 1995; orig. Endgame Preparation, Batsford)",
+          "capitulo": "cap. 1 «Algunas ideas tácticas», diagrama 5 (posición original de Speelman)"
+        }
+      ]
     }
   ]
 }
