@@ -1649,6 +1649,42 @@
           "capitulo": "Parte Cinco (ELO 1600-1799): «Torre y dos Peones contra Torre conectados»"
         }
       ]
+    },
+    {
+      "id": "torre-dos-contra-uno",
+      "titulo": "Finales de torres: dos peones contra uno en el mismo flanco",
+      "nivel": 4,
+      "explicacion": [
+        "Con todos los peones en un mismo flanco, torre y dos peones contra torre y uno suele ser tablas si el defensor sabe lo que hace. Silman resume sus objetivos en tres: cambiar todos los peones que se pueda, mantener la torre activa (mejor si ata al rey rival a la defensa de sus peones) y simplificar hasta llegar a una posición de Philidor, que es tablas conocidas.",
+        "El error típico del defensor es la pasividad: una torre que solo espera en la primera fila deja al rey rival avanzar con sus peones. La torre activa da jaques desde lejos o ataca peones por detrás."
+      ],
+      "ideas": [
+        "Cambiá peones: con cada cambio, el final se acerca a un Philidor.",
+        "Torre activa: jaques desde lejos o atacando peones; nunca esperando pasiva.",
+        "El rey defensor delante de los peones rivales."
+      ],
+      "posiciones": [
+        {
+          "id": "defensa-activa",
+          "fen": "6k1/5p2/R7/6PP/6K1/8/8/1r6 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 50,
+          "consigna": "Jugás con las negras, con un peón de menos y todo en el flanco de rey. Aguantá las tablas.",
+          "pista": "Torre activa (jaques desde lejos, Tg1+ o Tb4+ según convenga) y el rey cerca de los peones blancos. Si aparece la ocasión de cambiar tu peón de f por uno blanco, aprovechala: con un solo peón blanco se llega a un Philidor.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "b1c1",
+            "fecha": "2026-10-08"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jeremy Silman — El curso de finales completo (Siles Press, 2007)",
+          "capitulo": "Parte Siete (ELO 2000-2199): «Torre y dos contra Torre y uno» y el resumen de la parte"
+        }
+      ]
     }
   ]
 }
