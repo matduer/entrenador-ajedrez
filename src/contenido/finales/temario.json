@@ -2381,6 +2381,58 @@
           "capitulo": "cap. 1 «Algunas ideas tácticas», diagrama 5 (posición original de Speelman)"
         }
       ]
+    },
+    {
+      "id": "peon-pasado-protegido",
+      "titulo": "El peón pasado protegido",
+      "nivel": 3,
+      "explicacion": [
+        "Un peón pasado protegido por otro peón no necesita la ayuda del rey: el rey rival no puede comerlo, porque el peón que lo protege se lo impide, y tampoco puede alejarse de él, porque el peón avanzaría. Así el rey del bando fuerte queda libre para ir a buscar los peones rivales.",
+        "Keres muestra que, con los peones en las columnas centrales o en las de alfil y dama, estas posiciones se ganan con independencia de dónde estén los reyes; con los peones de caballo y torre, en cambio, aparecen recursos de ahogado y algunas posiciones son tablas."
+      ],
+      "ideas": [
+        "El peón protegido ata al rey rival a su cuadrado.",
+        "El rey propio queda libre para comer los peones enemigos.",
+        "Cuidado con los ahogados cuando todo pasa cerca de la banda."
+      ],
+      "posiciones": [
+        {
+          "id": "rey-libre",
+          "fen": "8/8/1k6/pP6/P7/2K5/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 50,
+          "consigna": "Tu peón de b5 está protegido. El rey negro no lo puede tocar. Ganá.",
+          "pista": "El rey va a buscar el peón de a5 por el camino que le deje menos jugadas al negro (Rc4, Rd5, Rc4…), sin apurarse: el rey negro no puede abandonar el cuadrado del peón de b. Ojo con ahogarlo cuando quede en a7 o b7.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "c3c4",
+            "dtm": 37,
+            "fecha": "2026-10-08"
+          }
+        },
+        {
+          "id": "peones-centrales",
+          "fen": "8/8/8/8/2pP1k2/2P5/8/4K3 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 60,
+          "consigna": "Las blancas tienen un peón de más, protegido por el de c3. El rey negro está activo. Ganá.",
+          "pista": "El rey blanco va hacia el flanco de dama (Rd2-c2-b2-a3) para comerse el peón de c4, mientras el de d4 mantiene al rey negro ocupado. Si el rey negro va a d5 a defender c4, el blanco gana con una jugada de espera en el momento justo (Keres: Rc1!).",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "e1d1",
+            "dtm": 45,
+            "fecha": "2026-10-08"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Paul Keres — Finales prácticos (edición electrónica en notación algebraica, «Club de Ajedrez»)",
+          "capitulo": "cap. 2 «Finales de peones», diagramas 24 y 26"
+        }
+      ]
     }
   ]
 }
