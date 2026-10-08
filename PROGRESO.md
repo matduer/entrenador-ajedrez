@@ -10,7 +10,7 @@ Resumen para retomar el trabajo en cualquier sesión. El detalle de métodos y h
 
 ## Estado al 2026-10-08 (mediodía)
 
-### Problemas de libros (Táctica → "Problemas de libros"): 8.309
+### Problemas de libros (Táctica → "Problemas de libros"): 8.408
 
 | Libro | Problemas |
 |---|---|
@@ -25,6 +25,7 @@ Resumen para retomar el trabajo en cualquier sesión. El detalle de métodos y h
 | Schloss, *Problemas avanzados: mates en 3, 4 y 5* | 50 |
 | Gude, *Problemas de cálculo* (Tutor, 2007) | 38 |
 | Franco, *El arte del ataque* (Esfera, 2008) | 20 |
+| Williams, *Improve Your Attacking Chess* (Gambit, 2004) | 99 |
 | Rafa C. M., *Curso de ajedrez, Lección 5* | 24 |
 | Bondarewsky, *Táctica del medio juego* (Martínez Roca, 1972) | 3 |
 
@@ -67,7 +68,7 @@ Regla de trabajo pedida por el usuario: **si un libro trae un problema, se anota
 3. ✅ Franco *El arte del ataque*: 20 de 73 (`franco.py`: diagramas JBIG2 sin rayado por apertura morfológica; la mayoría de sus problemas son de plan, no de golpe táctico). Siguen, con texto:  Hansen *Mejore su ajedrez posicional* (caps. 11-12, solo los tácticos), Bronstein *El aprendiz de brujo* (40 combinaciones explicadas), Aagaard *Maestría en el cálculo*, Dvoretsky *El arte de maniobrar con las piezas* (solo los de solución forzada).
 4. Estudios: Troitzky *360 estudios* (OCR, notación descriptiva).
 5. Partidas comentadas: ✅ Capablanca *Fundamentos* (14). Siguen: Keres (2 tomos), Rubinstein (Donaldson y Minev; *Masterpieces*), Kasparov *Mis geniales predecesores*, Bronstein *Zúrich 1953*, Tal (Hajtun).
-6. Libros del registro de problemas (al final de la etapa). ⏳ Williams *Improve Your Attacking Chess*: resuelto el detector sin marco y el clasificador; verificación en curso.
+6. Libros del registro de problemas (al final de la etapa). ✅ Williams *Improve Your Attacking Chess*: 99 de 250, cada uno controlado a ojo con `control_visual.py` (la letra leída sobre cada casilla del escaneo); 21 aceptados por el verificador se descartaron por una pieza mal leída (`img/williams_excluir.json`).
 
 ### Etapa 2 — Finales (en curso desde el 2026-10-08 a la tarde)
 1. ✅ Alfil contra caballo (De la Villa, cap. 8).
