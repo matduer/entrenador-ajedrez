@@ -960,7 +960,7 @@
       "nivel": 3,
       "explicacion": [
         "Cuando los dos bandos tienen peones pasados que corren a coronar, hay una carrera. En vez de imaginar jugada por jugada, Flear recomienda contar: cuántas jugadas necesita cada uno para coronar. Si la diferencia es de dos o más, el resultado es claro; si es de una, hay que mirar la posición que queda.",
-        "Al mirar esa posición final aparecen los detalles que deciden: coronar con jaque, que la dama nueva controle la casilla de coronación del rival, o que un jaque en rayos X gane la dama recién coronada.",
+        "Al mirar esa posición final aparecen los detalles que deciden: coronar con jaque, que la dama nueva controle la casilla de coronación del rival, o que un jaque en rayos X gane la dama recién coronada. Silman agrega otra excepción: a veces el que llega segundo gana igual, porque los peones dan mate antes de que la dama nueva sirva.",
         "Y antes de lanzarse a una carrera, conviene ver si hay algo mejor: frenar el peón rival con el rey y ganar sin sobresaltos. El rey, además, puede perseguir dos objetivos a la vez, como en el famoso estudio de Réti: acercarse al peón enemigo mientras amenaza apoyar al propio."
       ],
       "ideas": [
@@ -998,12 +998,31 @@
             "dtm": 0,
             "fecha": "2026-10-08"
           }
+        },
+        {
+          "id": "mate-antes-que-dama",
+          "fen": "4k3/4P3/3P2K1/8/8/p7/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 25,
+          "consigna": "El peón negro corona antes que los tuyos. Igual se gana: buscá el mate.",
+          "pista": "Rf6 y Re6: el rey le quita casillas al rey negro y d7 da mate aunque las negras ya tengan dama. Si el rey negro sale a d7, Rf7 y el peón de e corona con jaque.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "g6f6",
+            "dtm": 23,
+            "fecha": "2026-10-08"
+          }
         }
       ],
       "fuentes": [
         {
           "titulo": "Glenn Flear — Starting Out: Pawn Endgames (Everyman, 2004)",
           "capitulo": "Cap. 6, «Races!»: «Counting»; cap. 7, ejemplo 137 (estudio de Réti, 1921)"
+        },
+        {
+          "titulo": "Jeremy Silman — El curso de finales completo (Siles Press, 2007)",
+          "capitulo": "Parte Seis (ELO 1800-1999): «Carreras extrañas»"
         }
       ]
     },
