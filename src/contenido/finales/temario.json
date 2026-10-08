@@ -1685,6 +1685,89 @@
           "capitulo": "Parte Siete (ELO 2000-2199): «Torre y dos contra Torre y uno» y el resumen de la parte"
         }
       ]
+    },
+    {
+      "id": "alfil-contra-caballo",
+      "titulo": "Alfil contra caballo con un solo peón",
+      "nivel": 4,
+      "explicacion": [
+        "Con caballo y peón contra alfil, el alfil suele hacer tablas con facilidad: le alcanza con vigilar una casilla del camino del peón. Lo que hay que mirar es el largo de las dos diagonales que pasan por esa casilla. Si las dos tienen cinco casillas o más, el alfil se defiende solo, aunque su rey esté lejos; si una tiene cuatro o menos, el rey y el caballo rivales pueden tapar todas sus casillas y desalojarlo. Por eso, en la duda, el alfil se va a la diagonal más larga.",
+        "El peón de torre es el peor caso para el alfil, porque una de sus diagonales se acorta o desaparece. Pero hay un recurso clásico (un estudio de Lloyd, 1860): sacrificar el alfil para dejar encerrado al rey rival en el rincón, delante de su propio peón, y después llevar el rey propio a una casilla del mismo color que la que ocupa el caballo. Como el caballo no puede perder un tiempo, cada vez que se acerca da jaque y nunca llega a controlar las casillas que necesita.",
+        "Con alfil y peón contra caballo, en cambio, el bando del caballo sufre. Aun cuando el rey y el caballo vigilan juntos la casilla de coronación, con el peón en séptima suele decidir el zugzwang: el caballo tiene que moverse y deja pasar al peón. La defensa vive de dos recursos tácticos, el jaque continuo del caballo y, cerca de la banda, el ahogado."
+      ],
+      "ideas": [
+        "Alfil contra peón: contar las casillas de las diagonales que vigilan el paso del peón y quedarse con la más larga.",
+        "Peón de torre: el rey defensor a una casilla del mismo color que la del caballo.",
+        "Alfil y peón contra caballo: primero quitarle los jaques al caballo, después buscar el zugzwang."
+      ],
+      "posiciones": [
+        {
+          "id": "diagonal-larga",
+          "fen": "K7/8/5B2/8/8/8/4pk2/7n w - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 40,
+          "consigna": "Tu rey está muy lejos y el peón negro amenaza coronar en e1. Elegí bien la diagonal del alfil.",
+          "pista": "Por e1 pasan dos diagonales: h4-e1 (cuatro casillas) y a5-e1 (cinco). En la corta, el rey y el caballo negros te tapan las cuatro casillas y te desalojan; en la larga no pueden. Ac3, no Ah4+.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "f6c3",
+            "dtm": 0,
+            "fecha": "2026-10-08"
+          }
+        },
+        {
+          "id": "recurso-de-lloyd",
+          "fen": "4B3/8/8/8/8/4n2p/6k1/4K3 w - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 40,
+          "consigna": "Las negras amenazan Rg1 y Cg2, tapando la única diagonal que vigila h1. Encontrá la defensa.",
+          "pista": "Ad7: obliga al peón a avanzar a h2 (también aguanta Re2, acercando el rey). Después de Ac6+ Rg1, Ah1: si el rey negro lo captura queda encerrado, y el rey blanco va a f2, una casilla del mismo color que la del caballo; así el caballo solo puede acercarse dando jaque.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "e8d7",
+            "dtm": 0,
+            "fecha": "2026-10-08"
+          }
+        },
+        {
+          "id": "rey-del-color-del-caballo",
+          "fen": "8/8/8/8/8/4n3/7p/4K2k w - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 40,
+          "consigna": "El rey negro quedó encerrado en h1 delante de su peón. ¿Adónde va tu rey?",
+          "pista": "A una casilla del mismo color que la que ocupa el caballo (e3 es oscura): Rf2. Con Rd2 o Re2, casillas claras, el caballo maniobra hasta controlar las casillas que tu rey necesita y el zugzwang te saca del rincón.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "e1f2",
+            "dtm": 0,
+            "fecha": "2026-10-08"
+          }
+        },
+        {
+          "id": "peon-en-septima",
+          "fen": "2K5/3Pkn2/8/8/4B3/8/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 40,
+          "consigna": "El rey y el caballo negros vigilan d8. Ganá sin dejarle jaques al caballo.",
+          "pista": "Rc7 (o Ac6), quitándole los jaques. Ad5 enseguida es un error: Cd6+ y el caballo da jaques sin fin. Después de Rc7 Cd8, Ad5 y el zugzwang le cuesta el caballo.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "c8c7",
+            "dtm": 27,
+            "fecha": "2026-10-08"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 8 «Alfil contra caballo con un peón», finales 37 a 39"
+        }
+      ]
     }
   ]
 }
