@@ -1139,6 +1139,36 @@
             "dtm": 23,
             "fecha": "2026-10-08"
           }
+        },
+        {
+          "id": "no-cambiar-sin-pensar",
+          "fen": "1K6/8/3p4/2P5/3P4/p7/8/7k b - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 60,
+          "consigna": "Jugás con las negras y vas adelante en la carrera. Las blancas acaban de jugar c5. ¿Tomás?",
+          "pista": "No: a2! (también d5). Si dxc5?, dxc5 a2 c6 a1=D c7 y es la posición de tablas de dama contra peón de alfil en séptima, con tu rey lejos. Sin el cambio, el peón de d4 impide el ahogado y la dama gana.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "a3a2",
+            "dtm": 51,
+            "fecha": "2026-10-08"
+          }
+        },
+        {
+          "id": "peones-de-torre-en-diagonal",
+          "fen": "6K1/8/8/P7/7p/8/8/1k6 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 30,
+          "consigna": "Los dos peones de torre corren. Te toca a vos.",
+          "pista": "a6: los dos coronan, pero la dama blanca llega primero a a8 y controla h1 por la gran diagonal; a ...h1=D sigue Dxh1. Con el rey negro en f1 en vez de b1, la misma carrera da tablas: el rey defiende la casilla de coronación.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "a5a6",
+            "dtm": 27,
+            "fecha": "2026-10-08"
+          }
         }
       ],
       "fuentes": [
@@ -1149,6 +1179,10 @@
         {
           "titulo": "Jeremy Silman — El curso de finales completo (Siles Press, 2007)",
           "capitulo": "Parte Seis (ELO 1800-1999): «Carreras extrañas»"
+        },
+        {
+          "titulo": "Jeremy Silman — El curso de finales completo (Siles Press, 2007)",
+          "capitulo": "Parte Seis (ELO 1800-1999), «Carreras extrañas», diagramas 213 y 215"
         }
       ]
     },
