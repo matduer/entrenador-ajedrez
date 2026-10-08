@@ -810,6 +810,75 @@
       ]
     },
     {
+      "id": "torre-delante-del-peon",
+      "titulo": "Finales de torres: torre delante de su peón en séptima",
+      "nivel": 4,
+      "explicacion": [
+        "Con el peón en séptima y la torre propia delante (en la casilla de coronación), la torre queda presa: si se mueve, el peón cae. La torre del defensor, en cambio, se ubica detrás del peón y lo vigila desde lejos. Silman lo resume como regla: los dos bandos tienen que tratar de poner la torre detrás del peón pasado.",
+        "Para el defensor es tablas, con dos cuidados. Primero, el rey se queda en g7 y h7, las únicas casillas donde no le alcanza el truco del rival. Segundo, cuando el rey atacante se acerca para proteger el peón y liberar a su torre, se le da jaque enseguida, y en cuanto se aleja la torre vuelve detrás del peón.",
+        "La trampa: si el rey defensor se aleja hacia el peón (por ejemplo a f7), la torre atacante sale con jaque o va a h8. Si la torre negra toma el peón, un jaque en la séptima fila la gana desde atrás (Th8 y Th7+): es una idea táctica que Silman considera de las más importantes de estos finales."
+      ],
+      "ideas": [
+        "Torre detrás del peón pasado, sea propio o del rival.",
+        "Defensor: el rey en g7/h7, sin moverse de ahí; la torre en la columna del peón.",
+        "Si el rey atacante protege el peón, jaque inmediato; después, otra vez detrás del peón.",
+        "Atacante: si el rey defensor se va, Th8 amenaza coronar y, si la torre toma, Th7+ la gana."
+      ],
+      "posiciones": [
+        {
+          "id": "defensa-pasiva",
+          "fen": "R7/P5k1/8/8/8/4K3/r7/8 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 40,
+          "consigna": "Jugás con las negras. Sacá las tablas: no te tientes con ir a buscar el peón.",
+          "pista": "La torre se queda en la columna a, detrás del peón, y el rey va y viene entre g7 y h7. Si el rey blanco se acerca al peón, jaques; cuando se aleja, la torre vuelve a la columna a.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "a2a1",
+            "dtm": 0,
+            "fecha": "2026-10-08"
+          }
+        },
+        {
+          "id": "jaque-a-tiempo",
+          "fen": "R7/P5k1/1K6/8/8/8/r7/8 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 40,
+          "consigna": "El rey blanco llegó al lado del peón y amenaza liberar a su torre. Hay una sola jugada que salva.",
+          "pista": "Tb2+: jaque inmediato. Cuando el rey se aleje del peón, la torre vuelve detrás de él.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "a2b2",
+            "dtm": 0,
+            "fecha": "2026-10-08"
+          }
+        },
+        {
+          "id": "trampa-th8",
+          "fen": "R7/P4k2/8/8/8/4K3/r7/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 40,
+          "consigna": "El rey negro salió de g7/h7 para buscar el peón. Castigalo.",
+          "pista": "Th8: amenaza a8=D, y si Txa7, Th7+ gana la torre.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "a8h8",
+            "dtm": 37,
+            "fecha": "2026-10-08"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jeremy Silman — El curso de finales completo (Siles Press, 2007)",
+          "capitulo": "Parte Seis (ELO 1800-1999): «Torre frente a su peón de 7.ª fila»"
+        }
+      ]
+    },
+    {
       "id": "peon-pasado-alejado",
       "titulo": "Finales de peones: el peón pasado alejado",
       "nivel": 3,
