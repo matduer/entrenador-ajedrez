@@ -327,6 +327,47 @@
     },
     "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 c2c3 f8c5 b1d2 e8g8 b3c2 e4f2": {
       "porQue": "El Ataque Dilworth: las negras dan sus dos piezas menores por la torre de f1 y un peón, y abren la columna f contra el rey blanco. Larsen dudaba de que fuera correcto, aunque nadie había mostrado cómo refutarlo; Stockfish la considera la mejor jugada de la posición."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 d1e2": {
+      "porQue": "La idea es Td1, con la torre frente a la dama negra en la columna d. Tras las victorias de Smyslov y Keres con esta jugada en el Torneo de Candidatos de 1948, muchos abandonaron la Abierta."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 d1e2 f8e7 f1d1 e8g8": {
+      "porQue": "El enroque natural, que durante años se tuvo por un error; para Larsen (y para Stockfish) es lo mejor.",
+      "porQueNo": [
+        {
+          "uci": "e4c5",
+          "texto": "10...Cc5, la alternativa complicada que se analizaba antes, se encuentra con 11.Axd5! Axd5 12.Cc3 y las negras pasan apuros."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 d1e2 f8e7 f1d1 e8g8 c2c4 b5c4 b3c4 d8d7": {
+      "porQue": "La idea del sueco Ekström, que Larsen llevó a la práctica en su match con Geller: la dama cuida d5 y deja libre la columna d."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 d1e2 f8e7 f1d1 e8g8 c2c4 b5c4 b3c4 d8d7 b1c3": {
+      "porQue": "Lo más fuerte, según Larsen y según Stockfish.",
+      "porQueNo": [
+        {
+          "uci": "a2a3",
+          "texto": "13.a3? f6! y la iniciativa pasa a las negras. (En Svensson-Ekström, por correspondencia, 1964, las negras también quedaron mejor con 13...Ca5.)"
+        },
+        {
+          "uci": "c4a6",
+          "texto": "13.Axa6? Cb4! y las negras quedan mejor."
+        },
+        {
+          "uci": "c4d3",
+          "texto": "13.Ad3 Cc5 deja a las blancas con un juego poco atractivo."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 d1e2 f8e7 f1d1 e8g8 c2c4 b5c4 b3c4 d8d7 b1c3 e4c3 b2c3 f7f6": {
+      "porQue": "Lo que aconsejaba Ekström: abrir la columna f para las piezas negras."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 d1e2 f8e7 f1d1 e8g8 c2c4 b5c4 b3c4 d8d7 b1c3 e4c3 b2c3 f7f6 e5f6 e7f6 f3g5 f6g5 c1g5 h7h6": {
+      "porQue": "La mejora de Larsen sobre su propia partida contra Geller (Copenhague, 1966): echar primero al alfil de g5."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 b1d2 e4c5 c2c3 d5d4": {
+      "porQue": "El contragolpe por el que 9.Cbd2 se dejó de lado después de la Primera Guerra Mundial: el peón avanza atacando c3 y abre la diagonal del alfil de e6."
     }
   },
   "fuentes": [
@@ -340,7 +381,7 @@
     },
     {
       "titulo": "Bent Larsen — Teoría y práctica en los juegos abiertos (trad. Franco L. Di Luca, Ediciones Hache-Efe, Buenos Aires)",
-      "capitulo": "«Apertura Española, Variante Abierta»: 9.P3A con las variantes «italiana» (9...A4AD) y «Berlín» (9...C4A)"
+      "capitulo": "«Apertura Española, Variante Abierta»: 9.P3A con las variantes «italiana» (9...A4AD) y «Berlín» (9...C4A), 9.D2R (la idea de Ekström) y otras novenas jugadas blancas"
     },
     {
       "titulo": "Ruy Lopez (Wikipedia en inglés)",
@@ -662,6 +703,50 @@
       "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 c2c3 f8c5 b1d2 e8g8 b3c2 e4f2": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 d1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 d1e2 f8e7 f1d1 e8g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 d1e2 f8e7 f1d1 e4c5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,1 → −0,7. Refutación: Axd5 Axd5 Cc3 Cb4 Ce1 c6"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 d1e2 f8e7 f1d1 e8g8 c2c4 b5c4 b3c4 d8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 d1e2 f8e7 f1d1 e8g8 c2c4 b5c4 b3c4 d8d7 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 d1e2 f8e7 f1d1 e8g8 c2c4 b5c4 b3c4 d8d7 a2a3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: +0,5 → −0,6. Refutación: f6 Aa2 fxe5 Dxe4 dxe4 Txd7"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 d1e2 f8e7 f1d1 e8g8 c2c4 b5c4 b3c4 d8d7 c4a6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: +0,5 → −0,5. Refutación: Cb4 Ac4 Dc8 Ab3 Cc5 Ca3"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 d1e2 f8e7 f1d1 e8g8 c2c4 b5c4 b3c4 d8d7 c4d3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,5 → −0,2. Refutación: Cc5 Ac2 Ag4 h3 Ah5 g4"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 d1e2 f8e7 f1d1 e8g8 c2c4 b5c4 b3c4 d8d7 b1c3 e4c3 b2c3 f7f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 d1e2 f8e7 f1d1 e8g8 c2c4 b5c4 b3c4 d8d7 b1c3 e4c3 b2c3 f7f6 e5f6 e7f6 f3g5 f6g5 c1g5 h7h6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6 b1d2 e4c5 c2c3 d5d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
       }
     }
   }
