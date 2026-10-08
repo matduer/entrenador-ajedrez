@@ -1,0 +1,104 @@
+{
+  "id": "san-jorge",
+  "nombre": "Defensa San Jorge",
+  "raiz": "e2e4 a7a6",
+  "resumen": "Una defensa irregular: 1...a6 y ...b5 para fianchetar el alfil de dama y controlar las casillas blancas, con los peones d7, e6 y f7 como fortaleza del rey. Se hizo famosa cuando Tony Miles le ganó con ella a Karpov, campeón del mundo, en 1980. Stockfish considera 1...a6 jugable (pierde poco), aunque 2...b5 ya concede algo más de ventaja a las blancas.",
+  "planesBlancas": [
+    "Ocupar el centro con e4 y d4 y atacar b5 con a4 o c4.",
+    "Avanzar e5 para quitarle al caballo negro la casilla f6."
+  ],
+  "planesNegras": [
+    "...Ab7, ...e6 y ...c5 para atacar el centro blanco desde los costados.",
+    "Mantener el rey detrás de los peones d7, e6 y f7 y decidir más tarde dónde enrocar."
+  ],
+  "estructura": "El negro deja el centro a las blancas y lo ataca con ...c5 y el alfil de b7; las casillas blancas son su base.",
+  "rupturas": [
+    "...c5 y ...d5 del negro.",
+    "a4, c4 y e5 de las blancas."
+  ],
+  "piezas": [
+    "Alfil negro de c8: b7, sobre la gran diagonal.",
+    "Caballo negro de g8: f6 o e7 según dónde esté el peón de e."
+  ],
+  "trampas": [],
+  "notas": {
+    "e2e4 a7a6": {
+      "porQue": "El primer paso del sistema: ...a6 prepara ...b5 y el fianchetto del alfil de dama. Stockfish la considera jugable."
+    },
+    "e2e4 a7a6 d2d4 b7b5": {
+      "inferior": true,
+      "porQue": "La idea de la San Jorge: ganar espacio en el flanco de dama y sacar el alfil a b7. Stockfish le da a las blancas algo más de ventaja que con 2...e6."
+    },
+    "e2e4 a7a6 d2d4 b7b5 a2a4": {
+      "porQue": "Para Stockfish, lo más fuerte: ataca b5 enseguida y obliga al negro a decidir antes de completar su esquema."
+    },
+    "e2e4 a7a6 d2d4 b7b5 g1f3 c8b7": {
+      "porQue": "El alfil a la gran diagonal, apuntando a e4: el corazón del sistema."
+    },
+    "e2e4 a7a6 d2d4 b7b5 g1f3 c8b7 f1d3 e7e6": {
+      "porQue": "Completa la fortaleza de peones en d7, e6 y f7. Miles jugó primero ...Cf6, que también es bueno."
+    },
+    "e2e4 a7a6 d2d4 b7b5 g1f3 c8b7 f1d3 g8f6 d1e2 e7e6 a2a4 c7c5": {
+      "porQue": "La jugada de Miles contra Karpov y la mejor según Stockfish: en lugar de defender b5, el negro ataca el centro."
+    },
+    "e2e4 a7a6 d2d4 b7b5 c2c4 c8b7": {
+      "porQue": "Contra el ataque de los tres peones (e4, d4 y c4), el alfil presiona e4 en vez de ganar un peón.",
+      "porQueNo": [
+        {
+          "uci": "b5c4",
+          "texto": "Tomar en c4 le deja a las blancas desarrollar el alfil con tiempo (Axc4) y con un centro muy fuerte."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Michael Basman — Play the St. George (Pergamon)",
+      "capitulo": "Parte I, cap. 1, «Introduction» (Karpov–Miles, Skara 1980), y cap. 4, «The Three Pawns Attack»"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-08",
+    "resultados": {
+      "e2e4 a7a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 a7a6 d2d4 b7b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere e6: −0,5 contra −1,3 (marcada como inferior pero jugable)"
+      },
+      "e2e4 a7a6 d2d4 b7b5 a2a4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,3 para el bando que mueve"
+      },
+      "e2e4 a7a6 d2d4 b7b5 g1f3 c8b7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,0 para el bando que mueve"
+      },
+      "e2e4 a7a6 d2d4 b7b5 g1f3 c8b7 f1d3 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,1 para el bando que mueve"
+      },
+      "e2e4 a7a6 d2d4 b7b5 g1f3 c8b7 f1d3 g8f6 d1e2 e7e6 a2a4 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 a7a6 d2d4 b7b5 c2c4 c8b7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 a7a6 d2d4 b7b5 c2c4 b5c4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,6 → −1,2. Refutación: Axc4 e6 Cc3 Ab4 Ch3 Ce7"
+      }
+    }
+  }
+}
