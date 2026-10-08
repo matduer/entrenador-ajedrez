@@ -2114,6 +2114,72 @@
           "capitulo": "cap. 11 «Exchanging into Pawn Endings»: ejemplos 213 y 215 (Karavade-Meenakshi, Bombay 2003)"
         }
       ]
+    },
+    {
+      "id": "recursos-de-ahogado",
+      "titulo": "Combinaciones para forzar tablas: el ahogado",
+      "nivel": 3,
+      "explicacion": [
+        "En los finales, el bando que está peor siempre tiene que preguntarse si puede quedarse sin jugadas legales: el ahogado convierte en tablas posiciones que parecen perdidas. Los recursos típicos son encerrar al propio rey en un rincón, bloquear los propios peones y entregar las piezas que todavía se pueden mover.",
+        "Para el bando que gana es la otra cara de la misma moneda: antes de cada jugada natural (un jaque, una coronación, una captura) hay que mirar si al rival le queda alguna jugada. Muchas partidas ganadas se tiran por un ahogado."
+      ],
+      "ideas": [
+        "Defendiendo: buscar posiciones donde el propio rey no tenga casillas y el resto de las piezas no pueda moverse.",
+        "Atacando: antes de jaquear o capturar, contar las jugadas que le quedan al rival.",
+        "Un peón que se bloquea solo puede ser parte del ahogado."
+      ],
+      "posiciones": [
+        {
+          "id": "cuidado-con-el-ahogado",
+          "fen": "8/7k/7P/r5PK/5R2/8/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 60,
+          "consigna": "Ganás con facilidad... si no regalás un ahogado.",
+          "pista": "Tf7+ Rg8 y Te7, y el rey blanco sale de la columna h. Lo que no hay que hacer: después de Tf7+ Rg8, h7+?? Rh8 y, si el rey blanco se acerca, la torre negra da jaques hasta entregarse: tras Tf6 Txf6+ gxf6, el rey negro queda ahogado.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "f4f7",
+            "dtm": 43,
+            "fecha": "2026-10-08"
+          }
+        },
+        {
+          "id": "rey-encerrado",
+          "fen": "8/2B2p1p/3K4/8/6k1/8/7P/8 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 50,
+          "consigna": "Jugás con las negras, con un peón de menos y el alfil blanco del color de la casilla de coronación. Hacé tablas.",
+          "pista": "f5!, y los peones avanzan: f4, f3, h5, h4, con el rey a h3. Las blancas no pueden comer en f3 porque el rey negro queda ahogado, y sin eso no progresan (así jugó Hort contra Fichtl en Kosice, 1961).",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "f7f6",
+            "dtm": 0,
+            "fecha": "2026-10-08"
+          }
+        },
+        {
+          "id": "tres-peones-contra-el-alfil",
+          "fen": "8/8/8/1p1bk3/pP6/P1P1KP2/6P1/8 w - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 60,
+          "consigna": "El peón de c3 es débil y el alfil negro amenaza entrar. Encontrá las tablas.",
+          "pista": "g4!: los peones del flanco de rey avanzan con jaques (f4+, f5) y el rey negro tiene que ocuparse de ellos. Es la única jugada que salva; al final, el recurso decisivo es otra vez un ahogado en el rincón.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "stockfish 0.00",
+            "mejor": "g2g4",
+            "fecha": "2026-10-08"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jon Speelman — Preparación de finales (Paidotribo, col. Caissa, D. L. 1995; orig. Endgame Preparation, Batsford)",
+          "capitulo": "cap. 2 «Combinaciones para forzar tablas», diagramas 46 a 48 (Fichtl-Hort, Kosice 1961; Auni-Radashkovich, Israel 1978)"
+        }
+      ]
     }
   ]
 }
