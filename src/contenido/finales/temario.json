@@ -2032,12 +2032,31 @@
             "dtm": 47,
             "fecha": "2026-10-08"
           }
+        },
+        {
+          "id": "estudio-de-grigoriev",
+          "fen": "8/5p2/5P2/3k4/5K2/5P2/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 60,
+          "consigna": "Peones doblados contra uno, con el rey negro más activo. Parece tablas, pero el peón de f3 tiene un tiempo de reserva.",
+          "pista": "Rf5!: primero el peón irá a f4 para que el rey negro no pueda acercarse por e5. Después, f4 y Rg4, maniobrando hasta que sea el negro el que quede en zugzwang y el rey blanco entre por g7 o por e7. Rg5 enseguida solo empata. (Estudio de N. Grigoriev, 1935.)",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "f4f5",
+            "dtm": 47,
+            "fecha": "2026-10-08"
+          }
         }
       ],
       "fuentes": [
         {
           "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
           "capitulo": "cap. 12 «Finales de peones», Final 77 «Peones doblados»"
+        },
+        {
+          "titulo": "Paul Keres — Finales prácticos (edición electrónica en notación algebraica, «Club de Ajedrez»)",
+          "capitulo": "cap. 2 «Finales de peones», diagrama 23 (estudio de N. Grigoriev, 1935)"
         }
       ]
     },
