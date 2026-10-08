@@ -25,7 +25,7 @@ const DIR = 'datos-privados/biblioteca/img'
  * candidatos (por ejemplo, el diagrama tal cual y dado vuelta) y la solución del libro: la jugada en SAN
  * si el texto es limpio, o solo la casilla de destino si el OCR estropea las piezas.
  */
-interface Entrada { n: number; clave?: string; color: 'w' | 'b'; tableros: string[]; san?: string; destino?: string; capitulo?: string }
+interface Entrada { n: number; clave?: string; color: 'w' | 'b'; tableros: string[]; san?: string; destino?: string; capitulo?: string; etiqueta?: string }
 const entradas: Entrada[] = JSON.parse(readFileSync(`${DIR}/${base}_entrada.json`, 'utf8'))
 
 function enroques(tablero: string): string {
@@ -117,7 +117,7 @@ for (const e of entradas) {
   const r = bueno ?? primero!
   if (!r.ok) { anotar(r.motivo, r.msg); continue }
   anotar('ok')
-  nuevos.push({ id: `${prefijo}-${e.clave ?? n}`, fen: r.fen, jugadas: r.jugadas, temas: r.temas, fuente: { titulo, capitulo: [e.capitulo, `n.º ${n}`].filter(Boolean).join(', ') } })
+  nuevos.push({ id: `${prefijo}-${e.clave ?? n}`, fen: r.fen, jugadas: r.jugadas, temas: r.temas, fuente: { titulo, capitulo: [e.capitulo, e.etiqueta ?? `n.º ${n}`].filter(Boolean).join(', ') } })
 }
 motor.cerrar()
 
