@@ -1996,6 +1996,57 @@
           "capitulo": "cap. 10 «Torre y peón contra torre», Final 55 «Peón de caballo. Defensa de la primera fila»"
         }
       ]
+    },
+    {
+      "id": "ventaja-de-espacio",
+      "titulo": "Finales de peones: espacio y tiempos de reserva",
+      "nivel": 4,
+      "explicacion": [
+        "En los finales de peones con muchos peones bloqueados, el espacio vale mucho: el rey del bando con más espacio tiene más casillas para maniobrar, y el rival termina quedándose sin jugadas útiles. Lo que decide es el zugzwang.",
+        "Por eso un tiempo de reserva (un peón que todavía puede avanzar una casilla sin consecuencias) es oro: no se gasta hasta el momento exacto en que obliga al rey rival a ceder terreno. Gastarlo antes de tiempo puede convertir una posición ganada en tablas.",
+        "Cuando el bloqueo parece impenetrable, a veces se abre con un sacrificio de peón que le da al rey una puerta de entrada."
+      ],
+      "ideas": [
+        "Contar los tiempos de reserva de cada bando antes de mover un peón.",
+        "No gastar el tiempo de reserva hasta que provoque un zugzwang.",
+        "Para romper un bloqueo, sacrificar un peón que abra paso al rey."
+      ],
+      "posiciones": [
+        {
+          "id": "tiempo-de-reserva",
+          "fen": "5k2/2p5/1p1p2p1/p2Pp1p1/2P1P1P1/PP6/6KP/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 60,
+          "consigna": "El flanco de rey está bloqueado y tenés más espacio. Ganá sin desperdiciar tu tiempo de reserva.",
+          "pista": "El peón de h2 es tu tiempo de reserva: guardalo. Primero el rey al centro y b4 para abrir el flanco de dama; cuando el rey negro tenga que defender y se quede sin jugadas, h3 lo obliga a ceder terreno. Si jugás h3 de entrada, la posición queda en tablas.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "stockfish 4.44",
+            "mejor": "g2f1",
+            "fecha": "2026-10-08"
+          }
+        },
+        {
+          "id": "ruptura-con-sacrificio",
+          "fen": "8/1p1k1pp1/p2p3p/2pP4/2P1K1P1/1P5P/P4P2/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 60,
+          "consigna": "Tenés más espacio, pero el negro parece bien atrincherado. ¿Cómo entra tu rey?",
+          "pista": "g5!: si hxg5, el rey entra por f5 y se come los peones del flanco de rey; si el negro no toma, gxh6 deja su estructura rota igual. Las demás jugadas no ganan.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "stockfish 6.07",
+            "mejor": "g4g5",
+            "fecha": "2026-10-08"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Glenn Flear — Starting Out: Pawn Endgames (Everyman, 2004)",
+          "capitulo": "cap. 9 «Further Positional Themes»: «Space Advantage», ejemplos 176 (Ivanov-Pereira Figueroa, Sevilla 2003) y 178 (Ekström-Jenni, Suiza 2003)"
+        }
+      ]
     }
   ]
 }
