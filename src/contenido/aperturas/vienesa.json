@@ -60,19 +60,19 @@
       "porQue": "El alfil apunta a f7. Juego más tranquilo que el gambito."
     },
     "e2e4 e7e5 b1c3 g8f6 f1c4 f6e4": {
-      "porQue": "La línea aguda: toma el peón aprovechando un golpe táctico (si Cxe4, ...d5 recupera la pieza).",
-      "porQueNo": [
-        {
-          "uci": "d7d5",
-          "texto": "Prematuro: exd5 y el negro no recupera el peón."
-        }
-      ]
+      "porQue": "Golpe táctico: el caballo toma e4 aprovechando que, si 4.Cxe4, ...d5 ataca alfil y caballo a la vez y recupera la pieza."
     },
     "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 f4e5 f6e4": {
       "porQue": "El caballo en e4 es la pieza clave: las blancas tienen que desalojarlo."
     },
     "e2e4 e7e5 b1c3 g8f6 f1c4 f6e4 d1h5": {
-      "porQue": "Ataca f7 y el caballo de e4 a la vez."
+      "porQue": "La respuesta más fuerte: la dama amenaza mate en f7 y ataca el caballo de e4 al mismo tiempo.",
+      "porQueNo": [
+        {
+          "uci": "c3e4",
+          "texto": "Tomar el caballo deja que ...d5 haga una horquilla sobre alfil y caballo: el negro recupera la pieza con buen juego."
+        }
+      ]
     },
     "e2e4 e7e5 b1c3 g8f6 f1c4 f6e4 d1h5 e4d6 c4b3": {
       "porQue": "Entrega un peón para mantener el ataque: lleva a la caótica variante \"Frankenstein-Drácula\"."
@@ -82,12 +82,38 @@
     },
     "e2e4 e7e5 b1c3 b8c6 f2f4 e5f4 g1f3 g7g5": {
       "porQue": "Como en el Gambito de Rey Clásico: defiende f4."
+    },
+    "e2e4 e7e5 b1c3 g8f6 f1c4 f6e4 d1h5 e4d6": {
+      "porQue": "La única: el caballo vuelve a defender f7 y ataca al alfil de c4.",
+      "porQueNo": [
+        {
+          "uci": "b8c6",
+          "texto": "Dxf7 es mate."
+        },
+        {
+          "uci": "d7d5",
+          "texto": "Defiende con el peón pero deja e5 sin protección: Dxe5+ y el negro pierde material."
+        }
+      ]
+    },
+    "e2e4 e7e5 b1c3 g8f6 f1c4 f6e4 d1h5 e4d6 c4b3 f8e7": {
+      "porQue": "La continuación segura: el alfil cubre las casillas oscuras, el negro enroca y la posición queda igualada.",
+      "porQueNo": [
+        {
+          "uci": "b8c6",
+          "texto": "El Gambito Frankenstein-Drácula: tras 6.Cb5 g6 7.Df3 f5 8.Dd5 De7 9.Cxc7+ Rd8 10.Cxa8 b6 el negro entrega una torre para encerrar al caballo de a8 y atacar. Alterman lo defiende, pero Stockfish lo considera bueno para las blancas."
+        }
+      ]
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Other 1 e4 e5 Openings», sección «Vienna Game»"
+    },
+    {
+      "titulo": "Boris Alterman — The Alterman Gambit Guide: Black Gambits 2 (Quality Chess, 2012)",
+      "capitulo": "Cap. 4, «The Frankenstein-Dracula Gambit»"
     },
     {
       "titulo": "Vienna Game (Wikipedia en inglés)",
@@ -103,7 +129,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-08",
     "resultados": {
       "e2e4 e7e5 b1c3": {
         "ok": true,
@@ -145,10 +171,6 @@
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
       },
-      "e2e4 e7e5 b1c3 g8f6 f1c4 d7d5 (por qué no)": {
-        "ok": true,
-        "detalle": "Pierde 10 puntos de chances: +0,1 → −1,0. Refutación: exd5 Ad6 d3 O-O Cf3 h6"
-      },
       "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 f4e5 f6e4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
@@ -156,6 +178,10 @@
       "e2e4 e7e5 b1c3 g8f6 f1c4 f6e4 d1h5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f1c4 f6e4 c3e4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: +0,1 → −0,8. Refutación: d5 Ad3 dxe4 Axe4 f5 Af3"
       },
       "e2e4 e7e5 b1c3 g8f6 f1c4 f6e4 d1h5 e4d6 c4b3": {
         "ok": true,
@@ -168,6 +194,26 @@
       "e2e4 e7e5 b1c3 b8c6 f2f4 e5f4 g1f3 g7g5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f1c4 f6e4 d1h5 e4d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f1c4 f6e4 d1h5 b8c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 49 puntos de chances: −0,2 → recibe mate en 1. Refutación: Dxf7#"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f1c4 f6e4 d1h5 d7d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 16 puntos de chances: −0,2 → −1,9. Refutación: Dxe5+ De7 Dxe7+ Axe7 Cxd5 Ad8"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f1c4 f6e4 d1h5 e4d6 c4b3 f8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f1c4 f6e4 d1h5 e4d6 c4b3 b8c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 21 puntos de chances: −0,0 → −2,5. Refutación: Cb5 g6 Df3 Cf5 Dd5 De7"
       }
     }
   }
