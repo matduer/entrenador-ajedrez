@@ -34,8 +34,8 @@ Resumen para retomar el trabajo en cualquier sesión. El detalle de métodos y h
 
 **Descartados por ahora**: Seneca (PDF se renderiza en blanco), Williams *Improve Your Attacking Chess* (diagramas sin marco), Speelman *Preparación de finales* (falta lector de soluciones en texto corrido), Khmelnitsky *Chess Exam* (opción múltiple), Crouch *Attacking Technique* (no son ejercicios), "chess problems (1).pdf" (es el mismo Polgár).
 
-### Partidas de libros (Mis partidas → "Partidas de libros"): 564
-- Polgár: 467 miniaturas. Fischer, *My 60 Memorable Games*: 50 de 60. *Partidas de personajes históricos*: 33 (`scripts/preparar-partidas-personajes.ts`). Capablanca, *Fundamentos del ajedrez*: las 14 partidas modelo (`scripts/preparar-partidas-capablanca.ts`). Control: `scripts/verificar-partidas-libros.ts <prefijo>` (en la posición final, el ganador no puede estar peor para Stockfish).
+### Partidas de libros (Mis partidas → "Partidas de libros"): 899
+- Polgár: 467 miniaturas. Fischer, *My 60 Memorable Games*: 50 de 60. *Partidas de personajes históricos*: 33 (`scripts/preparar-partidas-personajes.ts`). Capablanca, *Fundamentos del ajedrez*: las 14 partidas modelo (`scripts/preparar-partidas-capablanca.ts`). Lenyb, *Defensa de los Dos Caballos: 3750 partidas modelo* (2013): las 335 anteriores a 1950 que no estaban (3 excluidas porque el resultado no cuadra con la posición final) (`scripts/preparar-partidas-lenyb.ts`; las posteriores son casi todas de aficionados). Control: `scripts/verificar-partidas-libros.ts <prefijo>` (en la posición final, el ganador no puede estar peor para Stockfish).
 - Pendiente: Crouch *Modern Chess: Move by Move*, Rubinstein (Donaldson y Minev), Keres, Kasparov… El OCR tiene las figuras ilegibles; `scripts/lib-ocr-jugadas.ts` reconstruye jugadas, pero todavía no completa ninguna partida de Crouch.
 
 ### Finales: 38 temas, 70 posiciones
