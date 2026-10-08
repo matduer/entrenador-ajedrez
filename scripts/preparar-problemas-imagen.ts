@@ -44,6 +44,14 @@ const destino = (uci: string, fen: string) => {
   if (pieza?.role === 'king' && Math.abs(salto) === 2) return salto > 0 ? 'O-O' : 'O-O-O'
   return uci.slice(2, 4)
 }
+/** Material posible: cada pieza de más que la inicial necesita un peón coronado (si no, Stockfish rechaza la posición y no responde). */
+const materialPosible = (tab: string) =>
+  [/[PNBRQK]/g, /[pnbrqk]/g].every((re) => {
+    const c = (tab.match(re) ?? []).join('').toLowerCase()
+    const n = (x: string) => [...c].filter((y) => y === x).length
+    const extra = Math.max(0, n('q') - 1) + Math.max(0, n('r') - 2) + Math.max(0, n('b') - 2) + Math.max(0, n('n') - 2)
+    return n('p') + extra <= 8
+  })
 const fuerte = (e: Evaluacion) => (e.mate !== undefined ? e.mate > 0 : (e.cp ?? 0) >= 120)
 
 const motor = new MotorNativo(Number(prof), 4)
@@ -52,46 +60,64 @@ const cuenta: Record<string, number> = {}
 const informe: string[] = []
 const anotar = (k: string, msg?: string) => { cuenta[k] = (cuenta[k] ?? 0) + 1; if (msg) informe.push(msg) }
 
-for (const e of entradas) {
+type Resultado = { ok: true; fen: string; jugadas: string[]; temas: string[] } | { ok: false; motivo: string; msg: string }
+
+/** Verifica un tablero candidato ya legal contra la solución del libro (o, sin solución, la exige única y decisiva). */
+async function verificar(e: Entrada, fenN: string, uciLibro: string | undefined): Promise<Resultado> {
   const n = e.n
-  // Primer tablero candidato que sea legal (y en el que la jugada del libro sea legal, si la hay).
-  let fenN: string | undefined, uciLibro: string | undefined
-  for (const tab of e.tableros) {
-    if (tab.includes('?')) continue
-    try {
-      const pos = posDesdeFen(`${tab} ${e.color} ${enroques(tab)} - 0 1`)
-      if (e.san) {
-        const m = parseSan(pos, e.san)
-        if (!m) continue
-        uciLibro = uciEstandar(pos, m)
-      }
-      fenN = makeFen(pos.toSetup())
-      break
-    } catch { /* posición ilegal: probar el siguiente candidato */ }
-  }
-  if (!fenN) { anotar('ningún tablero legal', `${n}: ${e.tableros.join(' | ')} ${e.san ?? e.destino ?? ''}`); continue }
   if (process.env.DEPURAR) console.error(n, fenN)
   const a = await motor.analizar(fenN, 4)
   const mejor = a.lineas[0]
+  if (!mejor?.pv.length) return { ok: false, motivo: 'sin jugadas legales', msg: `${n}: ${fenN}` }
   // Sin solución legible del libro: la mejor de Stockfish, siempre que sea claramente única y decisiva.
   const sinSolucion = !e.san && !e.destino
   if (sinSolucion) {
     const segunda = a.lineas[1]
     const ventaja = chancesDeGanar(mejor.ev) - (segunda ? chancesDeGanar(segunda.ev) : -1)
     const decisiva = mejor.ev.mate !== undefined ? mejor.ev.mate > 0 : (mejor.ev.cp ?? 0) >= 200
-    if (!decisiva || ventaja < 0.15) { anotar('sin solución del libro: no hay una jugada única y decisiva', `${n}: ${JSON.stringify(mejor.ev)} vs ${JSON.stringify(segunda?.ev)} (${fenN})`); continue }
+    if (!decisiva || ventaja < 0.15) return { ok: false, motivo: 'sin solución del libro: no hay una jugada única y decisiva', msg: `${n}: ${JSON.stringify(mejor.ev)} vs ${JSON.stringify(segunda?.ev)} (${fenN})` }
   }
-  const elegida = sinSolucion ? mejor : a.lineas.find((l) => l.pv[0] && (uciLibro ? l.pv[0] === uciLibro : destino(l.pv[0], fenN!) === e.destino))
-  if (!elegida) { anotar('la jugada del libro no está entre las 4 mejores', `${n}: libro → ${e.san ?? e.destino}; Stockfish ${a.lineas.map((l) => l.pv[0]).join(' ')} (${fenN})`); continue }
+  const elegida = sinSolucion ? mejor : a.lineas.find((l) => l.pv[0] && (uciLibro ? l.pv[0] === uciLibro : destino(l.pv[0], fenN) === e.destino))
+  if (!elegida) return { ok: false, motivo: 'la jugada del libro no está entre las 4 mejores', msg: `${n}: libro → ${e.san ?? e.destino}; Stockfish ${a.lineas.map((l) => l.pv[0]).join(' ')} (${fenN})` }
   const perdida = chancesDeGanar(mejor.ev) - chancesDeGanar(elegida.ev)
-  if (perdida > 0.05 || !fuerte(elegida.ev)) { anotar('no confirmado', `${n}: pérdida ${perdida.toFixed(2)}, eval ${JSON.stringify(elegida.ev)} (${fenN})`); continue }
+  if (perdida > 0.05 || !fuerte(elegida.ev)) return { ok: false, motivo: 'no confirmado', msg: `${n}: pérdida ${perdida.toFixed(2)}, eval ${JSON.stringify(elegida.ev)} (${fenN})` }
   // Línea de la solución: hasta 5 medias jugadas, terminando con una jugada propia.
   const largo = Math.min(elegida.pv.length, 5)
-  const jugadas = elegida.pv.slice(0, largo % 2 === 1 ? largo : largo - 1)
   const temas: string[] = []
   if (elegida.ev.mate !== undefined && elegida.ev.mate > 0 && elegida.ev.mate <= 3) temas.push(`mateIn${elegida.ev.mate}`)
+  return { ok: true, fen: fenN, jugadas: elegida.pv.slice(0, largo % 2 === 1 ? largo : largo - 1), temas }
+}
+
+for (const e of entradas) {
+  const n = e.n
+  // Tableros candidatos legales (y en los que la jugada del libro sea legal, si la hay). Con solución del libro
+  // se prueban todos (p. ej. variantes de color de una pieza dudosa) y vale el primero que la confirma; sin
+  // solución, solo el primero, porque cualquier posición errónea podría tener una jugada decisiva.
+  const legales: { fen: string; uci?: string }[] = []
+  for (const tab of e.tableros) {
+    if (tab.includes('?') || !materialPosible(tab)) continue
+    try {
+      const pos = posDesdeFen(`${tab} ${e.color} ${enroques(tab)} - 0 1`)
+      let uci: string | undefined
+      if (e.san) {
+        const m = parseSan(pos, e.san)
+        if (!m) continue
+        uci = uciEstandar(pos, m)
+      }
+      legales.push({ fen: makeFen(pos.toSetup()), uci })
+    } catch { /* posición ilegal: probar el siguiente candidato */ }
+  }
+  if (!legales.length) { anotar('ningún tablero legal', `${n}: ${e.tableros.join(' | ')} ${e.san ?? e.destino ?? ''}`); continue }
+  let primero: Resultado | undefined, bueno: Resultado | undefined
+  for (const c of e.san || e.destino ? legales : legales.slice(0, 1)) {
+    const r = await verificar(e, c.fen, c.uci)
+    primero ??= r
+    if (r.ok) { bueno = r; break }
+  }
+  const r = bueno ?? primero!
+  if (!r.ok) { anotar(r.motivo, r.msg); continue }
   anotar('ok')
-  nuevos.push({ id: `${prefijo}-${e.clave ?? n}`, fen: fenN, jugadas, temas, fuente: { titulo, capitulo: [e.capitulo, `n.º ${n}`].filter(Boolean).join(', ') } })
+  nuevos.push({ id: `${prefijo}-${e.clave ?? n}`, fen: r.fen, jugadas: r.jugadas, temas: r.temas, fuente: { titulo, capitulo: [e.capitulo, `n.º ${n}`].filter(Boolean).join(', ') } })
 }
 motor.cerrar()
 
