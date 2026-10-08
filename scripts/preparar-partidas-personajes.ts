@@ -10,18 +10,9 @@ import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { parseSan } from 'chessops/san'
 import { FEN_INICIAL, posDesdeFen, uciEstandar } from '../src/lib/ajedrez/posicion.ts'
 import type { PartidaLibro } from '../src/lib/partidas-libros/partidas-libros.ts'
+import { sanIngles as ingles } from './lib-san-es.ts'
 
 const TITULO = 'Partidas de personajes históricos (recopilación de ajedrezdeataque.com)'
-const PIEZA: Record<string, string> = { R: 'K', D: 'Q', T: 'R', A: 'B', C: 'N' }
-const ingles = (t: string) =>
-  t
-    .replace(/[–—]/g, '-')
-    .replace(/^0-0-0/, 'O-O-O')
-    .replace(/^0-0/, 'O-O')
-    .replace(/\+\+$/, '#')
-    .replace(/^[RDTAC]/, (p) => PIEZA[p])
-    .replace(/=?([DTAC])([+#]?)$/, (x, p, j, i, s) => (/[a-h][18]=?[DTAC]/.test(s) ? '=' + PIEZA[p] + j : x))
-
 // Erratas del texto en nombres: "'Che' Guevara" y "Che Guevara" conviven; "Xavielly" por Savielly Tartakower.
 const limpiar = (s: string) => s.replace(/'Che' Guevara|^Che Guevara$/, 'Guevara, Ernesto «Che»').replace('Xavielly', 'Savielly')
 const renglones = readFileSync('datos-privados/biblioteca/textos/personajes.txt', 'utf8').split('\n').map((l) => l.trim())

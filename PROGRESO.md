@@ -34,8 +34,8 @@ Resumen para retomar el trabajo en cualquier sesión. El detalle de métodos y h
 
 **Descartados por ahora**: Seneca (PDF se renderiza en blanco), Williams *Improve Your Attacking Chess* (diagramas sin marco), Speelman *Preparación de finales* (falta lector de soluciones en texto corrido), Khmelnitsky *Chess Exam* (opción múltiple), Crouch *Attacking Technique* (no son ejercicios), "chess problems (1).pdf" (es el mismo Polgár).
 
-### Partidas de libros (Mis partidas → "Partidas de libros"): 550
-- Polgár: 467 miniaturas. Fischer, *My 60 Memorable Games*: 50 de 60. *Partidas de personajes históricos*: 33 (`scripts/preparar-partidas-personajes.ts`).
+### Partidas de libros (Mis partidas → "Partidas de libros"): 564
+- Polgár: 467 miniaturas. Fischer, *My 60 Memorable Games*: 50 de 60. *Partidas de personajes históricos*: 33 (`scripts/preparar-partidas-personajes.ts`). Capablanca, *Fundamentos del ajedrez*: las 14 partidas modelo (`scripts/preparar-partidas-capablanca.ts`). Control: `scripts/verificar-partidas-libros.ts <prefijo>` (en la posición final, el ganador no puede estar peor para Stockfish).
 - Pendiente: Crouch *Modern Chess: Move by Move*, Rubinstein (Donaldson y Minev), Keres, Kasparov… El OCR tiene las figuras ilegibles; `scripts/lib-ocr-jugadas.ts` reconstruye jugadas, pero todavía no completa ninguna partida de Crouch.
 
 ### Finales: 33 temas, 57 posiciones
@@ -55,7 +55,7 @@ Regla de trabajo pedida por el usuario: **si un libro trae un problema, se anota
 2. ✅ Mazja *Chess School 3*: 348 (395 sin solución legible quedaron afuera por no tener una jugada única y decisiva). ⏳ Polgár *Middlegame*: verificación en curso → commitear al terminar.
 3. ✅ Franco *El arte del ataque*: 20 de 73 (`franco.py`: diagramas JBIG2 sin rayado por apertura morfológica; la mayoría de sus problemas son de plan, no de golpe táctico). Siguen, con texto:  Hansen *Mejore su ajedrez posicional* (caps. 11-12, solo los tácticos), Bronstein *El aprendiz de brujo* (40 combinaciones explicadas), Aagaard *Maestría en el cálculo*, Dvoretsky *El arte de maniobrar con las piezas* (solo los de solución forzada).
 4. Estudios: Troitzky *360 estudios* (OCR, notación descriptiva).
-5. Partidas comentadas: Chernev *Ajedrez lógico, jugada a jugada*, Capablanca *Fundamentos*, Larsen (*Todas las piezas atacan*, *Yo juego para ganar*), Keres (2 tomos), Rubinstein (Donaldson y Minev; *Masterpieces*), Kasparov *Mis geniales predecesores*, Bronstein *Zúrich 1953*, Tal (Hajtun).
+5. Partidas comentadas: ✅ Capablanca *Fundamentos* (14). Siguen: Keres (2 tomos), Rubinstein (Donaldson y Minev; *Masterpieces*), Kasparov *Mis geniales predecesores*, Bronstein *Zúrich 1953*, Tal (Hajtun).
 6. Libros del registro de problemas (al final de la etapa).
 
 ### Etapa 2 — Finales
@@ -77,6 +77,9 @@ Regla de trabajo pedida por el usuario: **si un libro trae un problema, se anota
 | Speelman, *Preparación de finales* | Número de diagrama y solución en texto corrido | Lector de soluciones en prosa («el diagrama 20… 1. f6!!») |
 | Crouch, *Modern Chess: Move by Move* | OCR con figuras ilegibles: ninguna partida llega completa al resultado | Mejorar `lib-ocr-jugadas.ts` o leer las figuras como imágenes (como Fischer) |
 | *Partidas de personajes históricos* | Alekhine-Prokófiev (Moscú 1914) es con ventaja: 9.Tb1 es ilegal desde la posición inicial | Averiguar qué pieza falta y arrancar desde esa posición |
+| Aagaard, *Maestría en el cálculo* (Chessy, 2008) | 426 diagramas detectados (`CIERRE_EXTRA=9 UMBRAL_EXTRA=200`) y etiquetados (`img/aagaard_etiquetas.json`), pero el clasificador confunde piezas blancas sobre casillas rayadas con casillas vacías, y los ejercicios no tienen solución numerada: sin la jugada del libro, un tablero mal leído podría pasar como problema | Mejor separación vacía/pieza blanca en casillas oscuras, y emparejar cada ejercicio con su solución |
+| Chernev, *Ajedrez lógico, jugada a jugada* | Notación descriptiva con OCR roto («A4A», «C5C») | Lector de notación descriptiva |
+| Larsen, *Todas las piezas atacan* | Figuras ilegibles en el OCR, como Crouch | Lo mismo que Crouch |
 | Bondarewsky, *Táctica del medio juego* | Escaneo pobre: solo 3 problemas confirmados | Mejor escaneo |
 
 ## Para el usuario: qué probar
