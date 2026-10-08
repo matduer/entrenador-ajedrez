@@ -1824,17 +1824,19 @@
     },
     {
       "id": "rey-cortado",
-      "titulo": "Torre y peón contra torre: el rey cortado por columnas",
+      "titulo": "Torre y peón contra torre: el rey cortado",
       "nivel": 4,
       "explicacion": [
         "Con el peón todavía lejos de coronar, el rey defensor tiene tiempo de ponerse delante y armar un Philidor. Para ganar, el bando fuerte necesita cortarlo con la torre, impidiéndole cruzar hacia la zona del peón.",
         "Si el corte es de una sola columna, el defensor aguanta: la torre se instala en su primera fila y da jaques de frente al rey atacante desde lejos (para que esos jaques sirvan, tiene que haber al menos tres filas de distancia), y cuando el rey se esconde, vuelve a la columna del peón para frenarlo. El rey defensor espera en la tercera o cuarta fila, listo para volver.",
-        "Con el corte de dos columnas y un peón de alfil o central, el bando fuerte gana con la maniobra de Grigoriev: el rey avanza por el costado del peón contrario al rey rival, escapando de los jaques frontales, y cuando los jaques se agotan, la torre corta o tapa y el peón avanza. Con el peón de caballo la maniobra tiene menos lugar (del otro lado solo queda la columna de torre) y el resultado depende de los detalles."
+        "Con el corte de dos columnas y un peón de alfil o central, el bando fuerte gana con la maniobra de Grigoriev: el rey avanza por el costado del peón contrario al rey rival, escapando de los jaques frontales, y cuando los jaques se agotan, la torre corta o tapa y el peón avanza. Con el peón de caballo la maniobra tiene menos lugar (del otro lado solo queda la columna de torre) y el resultado depende de los detalles.",
+        "El corte horizontal (la torre impide que el rey defensor cruce una fila) es todavía más fuerte, siempre que el rey defensor esté del lado largo: si estuviera del corto, la torre rival tomaría el lado largo y daría jaques laterales. Si el rey cortado está en la misma fila que el peón, el corte es «perfecto» y el peón avanza fila por fila con el apoyo de su rey. Si está una fila más adelante, el corte es «imperfecto» y el defensor aguanta llevando su torre a la columna vecina al peón."
       ],
       "ideas": [
         "Contar las columnas de corte: con una, el defensor aguanta; con dos y peón de alfil o central, suele ganar el atacante.",
         "Defensa: torre en la primera fila, jaques de frente desde lejos, rey en tercera o cuarta.",
-        "Ataque: el rey por el lado contrario al rey rival, y la torre lista para tapar los jaques."
+        "Ataque: el rey por el lado contrario al rey rival, y la torre lista para tapar los jaques.",
+        "Corte horizontal: perfecto (rey defensor en la fila del peón) gana; imperfecto (una fila adelante) se defiende con la torre en la columna vecina al peón."
       ],
       "posiciones": [
         {
@@ -1866,12 +1868,42 @@
             "dtm": 55,
             "fecha": "2026-10-08"
           }
+        },
+        {
+          "id": "corte-horizontal-perfecto",
+          "fen": "r7/8/8/7R/1P2k3/1K6/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 60,
+          "consigna": "Tu torre corta al rey negro en la quinta fila, y está en la misma fila que tu peón. Ganá.",
+          "pista": "El peón avanza con el apoyo del rey (b5, o primero Rc4) mientras la torre mantiene el corte; cuando la torre negra dé jaques, el rey se acerca al peón. Fila por fila se repite la misma posición, hasta llegar a una Lucena.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "b4b5",
+            "dtm": 55,
+            "fecha": "2026-10-08"
+          }
+        },
+        {
+          "id": "corte-horizontal-imperfecto",
+          "fen": "2r5/8/6R1/4k3/2P5/1K6/8/8 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 50,
+          "consigna": "Tu rey está cortado, pero una fila por delante del peón. Juegan las negras: aguantá.",
+          "pista": "Tb8+, llevando la torre a la columna vecina al peón (Rd4 también sirve). Desde ahí la torre molesta al rey blanco y el peón no puede avanzar con apoyo.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "c8b8",
+            "dtm": 0,
+            "fecha": "2026-10-08"
+          }
         }
       ],
       "fuentes": [
         {
           "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
-          "capitulo": "cap. 10 «Torre y peón contra torre», finales 59 «El corte vertical en una columna» y 60 «Corte en dos columnas. Método combinado de Grigoriev»"
+          "capitulo": "cap. 10 «Torre y peón contra torre», finales 59 a 63 (cortes vertical y horizontal; método de Grigoriev)"
         }
       ]
     }
