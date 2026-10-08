@@ -10,7 +10,7 @@ Resumen para retomar el trabajo en cualquier sesión. El detalle de métodos y h
 
 ## Estado al 2026-10-08 (mediodía)
 
-### Problemas de libros (Táctica → "Problemas de libros"): 8.408
+### Problemas de libros (Táctica → "Problemas de libros"): 8.423
 
 | Libro | Problemas |
 |---|---|
@@ -26,6 +26,7 @@ Resumen para retomar el trabajo en cualquier sesión. El detalle de métodos y h
 | Gude, *Problemas de cálculo* (Tutor, 2007) | 38 |
 | Franco, *El arte del ataque* (Esfera, 2008) | 20 |
 | Williams, *Improve Your Attacking Chess* (Gambit, 2004) | 99 |
+| Aagaard, *Maestría en el cálculo* (Chessy, 2008) | 15 |
 | Rafa C. M., *Curso de ajedrez, Lección 5* | 24 |
 | Bondarewsky, *Táctica del medio juego* (Martínez Roca, 1972) | 3 |
 
@@ -88,7 +89,6 @@ Regla de trabajo pedida por el usuario: **si un libro trae un problema, se anota
 | Speelman, *Preparación de finales* | Número de diagrama y solución en texto corrido | Lector de soluciones en prosa («el diagrama 20… 1. f6!!») |
 | Crouch, *Modern Chess: Move by Move* | OCR con figuras ilegibles: ninguna partida llega completa al resultado | Mejorar `lib-ocr-jugadas.ts` o leer las figuras como imágenes (como Fischer) |
 | *Partidas de personajes históricos* | Alekhine-Prokófiev (Moscú 1914) es con ventaja: 9.Tb1 es ilegal desde la posición inicial | Averiguar qué pieza falta y arrancar desde esa posición |
-| Aagaard, *Maestría en el cálculo* (Chessy, 2008) | 426 diagramas detectados (`CIERRE_EXTRA=9 UMBRAL_EXTRA=200`) y etiquetados (`img/aagaard_etiquetas.json`), pero el clasificador confunde piezas blancas sobre casillas rayadas con casillas vacías, y los ejercicios no tienen solución numerada: sin la jugada del libro, un tablero mal leído podría pasar como problema | Mejor separación vacía/pieza blanca en casillas oscuras, y emparejar cada ejercicio con su solución |
 | Chernev, *Ajedrez lógico, jugada a jugada* | Notación descriptiva con OCR roto («A4A», «C5C») | Lector de notación descriptiva |
 | Larsen, *Todas las piezas atacan* | Figuras ilegibles en el OCR, como Crouch | Lo mismo que Crouch |
 | Bronstein, *Zúrich 1953* (CDA 19) | `scripts/preparar-partidas-zurich.ts` (lector con búsqueda hacia adelante para «&» = 5 o 6) todavía da 0 partidas: el OCR confunde c/e y l/1, hay figuras ilegibles («ʥ»), las columnas blancas/negras se separan y el final de cada partida va en prosa, donde el lector se mete en variantes | Corregir el OCR (otra pasada de OCR sobre las páginas, o leer los diagramas) y marcar mejor dónde termina la línea principal |
