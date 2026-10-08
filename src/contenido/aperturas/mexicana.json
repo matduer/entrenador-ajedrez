@@ -49,12 +49,46 @@
     },
     "d2d4 g8f6 c2c4 b8c6 b1c3": {
       "porQue": "Desarrolla y deja que el negro juegue ...e5."
+    },
+    "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5": {
+      "porQue": "El \"centro de casillas negras\" de Palliser: ...e5 pelea por d4 y abre el alfil de f8, que va a c5 o b4 fuera de la cadena de peones."
+    },
+    "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 d4d5 c6e7": {
+      "porQue": "Ante d5 el caballo se reubica por e7 rumbo a g6, desde donde apoya e5 y el juego en el flanco de rey.",
+      "porQueNo": [
+        {
+          "uci": "c6d4",
+          "texto": "El caballo en d4 parece activo, pero e3 lo echa y el negro pierde tiempo."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 b8c6 d4d5 c6e5": {
+      "porQue": "Contra \"la embestida\" 3.d5, el caballo va al centro y ataca c4: el negro sigue con ...e6 para minar d5.",
+      "porQueNo": [
+        {
+          "uci": "c6a5",
+          "texto": "En a5 el caballo queda en el borde y fuera de juego: e4 y las blancas dominan el centro."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 b8c6 d4d5 c6e5 e2e4": {
+      "porQue": "La mejor: refuerza el centro y deja que el caballo de e5 sea un blanco para f4.",
+      "porQueNo": [
+        {
+          "uci": "f2f4",
+          "texto": "Echar al caballo enseguida no funciona: ...Cxc4 y el negro gana un peón."
+        }
+      ]
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Other 1 d4 Nf6 Openings» (2...Cc6, el Tango)"
+    },
+    {
+      "titulo": "Richard Palliser — Tango! A Dynamic Answer to 1 d4 (Everyman, 2005)",
+      "capitulo": "Introducción y caps. 1 («The Dark-squared Centre») y 3 («The Lunge»)"
     },
     {
       "titulo": "Black Knights' Tango (Wikipedia en inglés)",
@@ -70,7 +104,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-08",
     "resultados": {
       "d2d4 g8f6 c2c4 b8c6": {
         "ok": true,
@@ -99,6 +133,34 @@
       "d2d4 g8f6 c2c4 b8c6 b1c3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,9 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 d4d5 c6e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,9 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 d4d5 c6d4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,7 → −1,3. Refutación: e3 Cf5 Cf3 Ab4 Cxe5 Axc3+"
+      },
+      "d2d4 g8f6 c2c4 b8c6 d4d5 c6e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 b8c6 d4d5 c6a5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,4 → −1,1. Refutación: e4 e5 Ad3 Ab4+ Cd2 b6"
+      },
+      "d2d4 g8f6 c2c4 b8c6 d4d5 c6e5 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 b8c6 d4d5 c6e5 f2f4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: +0,5 → −0,6. Refutación: Cxc4 e4 Cb6 Cc3 e6 dxe6"
       }
     }
   }
