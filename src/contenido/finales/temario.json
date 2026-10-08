@@ -419,7 +419,8 @@
       "explicacion": [
         "Contra un peón central o de caballo en séptima apoyado por su rey, la dama gana con un método fijo: jaques y clavadas para obligar al rey defensor a ponerse delante de su peón; cada vez que lo hace, el rey propio se acerca una casilla. Cuando el rey llega, se gana el peón o se da mate.",
         "Contra un peón de alfil o de torre en séptima, en cambio, el defensor suele tener tablas por ahogado si el rey atacante está lejos.",
-        "La clave contra el peón de alfil es el truco del ahogado: cuando la dama se pone delante del peón, el rey defensor se mete en la esquina y, si la dama toma el peón, queda ahogado. Por eso la regla práctica es mirar dónde está el rey atacante: si llega a tiempo cerca del peón, hay mate o se gana el peón; si está lejos, son tablas."
+        "La clave contra el peón de alfil es el truco del ahogado: cuando la dama se pone delante del peón, el rey defensor se mete en la esquina y, si la dama toma el peón, queda ahogado. Por eso la regla práctica es mirar dónde está el rey atacante: si llega a tiempo cerca del peón, hay mate o se gana el peón; si está lejos, son tablas.",
+        "Hay una excepción con el peón de torre: si el rey del bando fuerte ya está cerca, se puede dejar coronar al peón y armar una red de mate sobre la primera fila (Silman). La idea a veces sirve también contra el peón de alfil."
       ],
       "ideas": [
         "Obligar al rey rival a bloquear su propio peón para ganar un tiempo.",
@@ -470,6 +471,21 @@
             "dtm": 11,
             "fecha": "2026-10-08"
           }
+        },
+        {
+          "id": "peon-h-red-de-mate",
+          "fen": "6Q1/7K/8/8/8/8/7p/7k w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 20,
+          "consigna": "Peón de torre en séptima: normalmente es tablas, pero tu rey está cerca. Ganá (y cuidado con el ahogado).",
+          "pista": "Rg6, no Rh6 (ahogado): el rey tapa la columna g y deja salir al rey negro. Después Rf5+ (jaque descubierto), Db2+ y Rg4: se puede dejar coronar, porque después de Rg3 el mate es inevitable.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "h7g6",
+            "dtm": 23,
+            "fecha": "2026-10-08"
+          }
         }
       ],
       "fuentes": [
@@ -485,6 +501,10 @@
         {
           "titulo": "Jeremy Silman — El curso de finales completo (Siles Press, 2007)",
           "capitulo": "Parte Cuatro: «Dama contra Rey y peón»"
+        },
+        {
+          "titulo": "Jeremy Silman — El curso de finales completo (Siles Press, 2007)",
+          "capitulo": "Parte Seis (ELO 1800-1999): «Finales de Dama» (maniobra ganadora contra el peón de torre en séptima)"
         }
       ]
     },
