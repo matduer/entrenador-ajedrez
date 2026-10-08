@@ -2047,6 +2047,73 @@
           "capitulo": "cap. 9 «Further Positional Themes»: «Space Advantage», ejemplos 176 (Ivanov-Pereira Figueroa, Sevilla 2003) y 178 (Ekström-Jenni, Suiza 2003)"
         }
       ]
+    },
+    {
+      "id": "pasar-a-final-de-peones",
+      "titulo": "Cambiar o sacrificar para llegar a un final de peones ganado",
+      "nivel": 4,
+      "explicacion": [
+        "Muchas veces la forma más simple de ganar es pasar a un final de peones: con más material, o con un rey mejor ubicado, el final de peones se calcula hasta el final y no deja contrajuego.",
+        "A veces hay que devolver material para lograrlo: lo que importa no es lo que se entrega sino lo que queda en el tablero. Una torre que se cambia por la última pieza rival puede transformar una ventaja material difícil de concretar en una ventaja posicional (un rey más activo) que gana sola.",
+        "Antes de cambiar hay que calcular el final de peones con precisión: un detalle, como con qué se retoma, puede decidir entre ganar y empatar."
+      ],
+      "ideas": [
+        "Si el final de peones resultante se gana, cambiar es lo más simple.",
+        "Devolver material para quedarse con el rey más activo.",
+        "Al retomar, pensar en qué peones quedan: a veces conviene tomar con el rey y no con un peón."
+      ],
+      "posiciones": [
+        {
+          "id": "cambiar-torres",
+          "fen": "R7/P5k1/3K1p1p/5Pp1/6P1/7P/8/r7 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 50,
+          "consigna": "Con el rey a la intemperie, los jaques de la torre negra no terminan nunca. ¿Cómo se gana?",
+          "pista": "Tc8! (también sirve Td8): si Txa7, Tc7+ y el cambio de torres deja un final de peones donde tu rey, mucho más activo, rodea a los peones negros. Las demás jugadas no ganan.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "stockfish 8.13",
+            "mejor": "a8c8",
+            "fecha": "2026-10-08"
+          }
+        },
+        {
+          "id": "devolver-la-calidad",
+          "fen": "8/4b3/4k3/2p2R2/4K3/3P4/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 50,
+          "consigna": "Tenés la calidad de más, pero el final de torre contra alfil puede ser largo. Buscá el camino simple.",
+          "pista": "Te5+ Rd6 y Txe7!: devolvés la calidad para comerte después el peón de c con el rey. Tras Rxe7 Rd5 c4, ojo con cómo retomás.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "f5e5",
+            "dtm": 43,
+            "fecha": "2026-10-08"
+          }
+        },
+        {
+          "id": "retomar-con-el-rey",
+          "fen": "8/4k3/8/3K4/2p5/3P4/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 40,
+          "consigna": "¿Con qué tomás en c4?",
+          "pista": "Rxc4: el rey queda adelante de su peón y llega a la sexta fila. Con dxc4? el peón de c queda solo, el rey negro se pone delante (Rd7) y son tablas.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "d5c4",
+            "dtm": 39,
+            "fecha": "2026-10-08"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Glenn Flear — Starting Out: Pawn Endgames (Everyman, 2004)",
+          "capitulo": "cap. 11 «Exchanging into Pawn Endings»: ejemplos 213 y 215 (Karavade-Meenakshi, Bombay 2003)"
+        }
+      ]
     }
   ]
 }

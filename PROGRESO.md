@@ -38,11 +38,11 @@ Resumen para retomar el trabajo en cualquier sesión. El detalle de métodos y h
 - Polgár: 467 miniaturas. Fischer, *My 60 Memorable Games*: 50 de 60. *Partidas de personajes históricos*: 33 (`scripts/preparar-partidas-personajes.ts`). Capablanca, *Fundamentos del ajedrez*: las 14 partidas modelo (`scripts/preparar-partidas-capablanca.ts`). Lenyb, *Defensa de los Dos Caballos: 3750 partidas modelo* (2013): las 335 anteriores a 1950 que no estaban (3 excluidas porque el resultado no cuadra con la posición final) (`scripts/preparar-partidas-lenyb.ts`; las posteriores son casi todas de aficionados). Control: `scripts/verificar-partidas-libros.ts <prefijo>` (en la posición final, el ganador no puede estar peor para Stockfish).
 - Pendiente: Crouch *Modern Chess: Move by Move*, Rubinstein (Donaldson y Minev), Keres, Kasparov… El OCR tiene las figuras ilegibles; `scripts/lib-ocr-jugadas.ts` reconstruye jugadas, pero todavía no completa ninguna partida de Crouch.
 
-### Finales: 39 temas, 72 posiciones
+### Finales: 40 temas, 75 posiciones
 - Agregados el 2026-10-08: peones separados (cuadrado común), ruptura, carreras (Réti; mate con peones de Silman), torre en séptima, torre delante de su peón en séptima, torre y dos contra torre y uno; dama contra peón de torre con el rey cerca.
 - 2026-10-08 (tarde): alfil contra caballo con un peón (De la Villa, cap. 8): la diagonal larga, el recurso de Lloyd con peón de torre, el rey del color del caballo y el zugzwang con peón en séptima.
 - 2026-10-08 (tarde): más De la Villa: torre contra dos peones ligados (cap. 6), el rey cortado (cortes de una y dos columnas con la maniobra de Grigoriev; corte horizontal perfecto e imperfecto, finales 59 a 63) y peones doblados (final 77).
-- 2026-10-08 (tarde): Flear, cap. 9: espacio y tiempo de reserva (Ivanov-Pereira Figueroa: con 1.h3? se pasa de +4,4 a tablas) y la ruptura 1.g5! de Ekström-Jenni. Las posiciones de los diagramas se transcriben mirando la imagen y se verifican con Stockfish a profundidad 30.
+- 2026-10-08 (tarde): Flear, cap. 9: espacio y tiempo de reserva (Ivanov-Pereira Figueroa: con 1.h3? se pasa de +4,4 a tablas) y la ruptura 1.g5! de Ekström-Jenni; cap. 11: pasar a un final de peones ganado (1.Tc8!, devolver la calidad, y 4.Rxc4! en lugar de 4.dxc4?, que empata). Las posiciones de los diagramas se transcriben mirando la imagen y se verifican con Stockfish a profundidad 30.
 - Pendiente: más de Flear y Silman; De la Villa caps. 11 (T+2P contra T) y 13, y el final 56 (Kling y Horwitz). Hecho también el final 55 (defensa de la primera fila con peón de caballo).
 
 ### Aperturas: 74 archivos
