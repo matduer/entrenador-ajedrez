@@ -1768,6 +1768,59 @@
           "capitulo": "cap. 8 «Alfil contra caballo con un peón», finales 37 a 39"
         }
       ]
+    },
+    {
+      "id": "torre-contra-dos-peones",
+      "titulo": "Torre contra dos peones ligados",
+      "nivel": 3,
+      "explicacion": [
+        "Casi todos sobrevaloran a los peones, pero la torre tiene más recursos de los que parece. Cuando los reyes están lejos, la cuenta es simple: dos peones ligados que llegan juntos a sexta (o uno en séptima con el otro en quinta) le ganan a la torre; si están más atrás, la torre se pone detrás del más adelantado, lo frena y después come los dos.",
+        "Si la torre está delante de los peones, puede frenarlos pero no comerlos, y todo pasa a depender de qué rey llega antes.",
+        "Con el rey de los peones cerca y el de la torre lejos, el bando de la torre todavía tiene recursos: dar jaques para acercar su rey por el camino más corto hasta el peón atrasado, mientras la torre vigila la coronación del adelantado. Si lo logra, entrega la torre por el peón adelantado y se come el otro con el rey."
+      ],
+      "ideas": [
+        "Peones en sexta, o uno en séptima y otro en quinta: ganan solos contra la torre.",
+        "Más atrás: torre detrás del peón más adelantado, y después a buscar el otro.",
+        "El rey de la torre apunta al peón atrasado, no al adelantado."
+      ],
+      "posiciones": [
+        {
+          "id": "torre-por-detras",
+          "fen": "7k/8/P7/8/1P6/8/5K2/7r b - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 50,
+          "consigna": "Jugás con las negras. Los reyes están lejos; frená y capturá los peones blancos.",
+          "pista": "La torre detrás del peón más adelantado (Ta1 o Tb1): si el peón de a avanza, lo come; mientras tanto, el de b no llega solo. Después se ocupa del otro.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "h1h3",
+            "dtm": 43,
+            "fecha": "2026-10-08"
+          }
+        },
+        {
+          "id": "dos-en-sexta",
+          "fen": "7k/8/P7/1P6/8/8/5K2/7r w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 50,
+          "consigna": "Te toca a vos y los reyes no llegan. ¿Pueden tus peones solos contra la torre?",
+          "pista": "Sí, si no perdés el tiempo: b6 (o a7) ya. Dos peones juntos en sexta, o uno en séptima con el otro en quinta, ganan a la torre: cuando la torre come uno, el otro corona.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "b5b6",
+            "dtm": 57,
+            "fecha": "2026-10-08"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 6 «Torre contra dos peones», finales 30 a 32"
+        }
+      ]
     }
   ]
 }
