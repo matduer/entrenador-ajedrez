@@ -59,9 +59,32 @@
     },
     "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 b1d2 b7b6": {
       "porQue": "Si a3, el negro cambia en d2 y juega como en la Nimzoindia con ...Ab7."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 a7a5 g2g3 d7d6 f1g2 b8d7 e1g1 e6e5": {
+      "porQue": "El centro de casillas negras: con el alfil de b4 todavía en juego, el negro discute d4."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 a7a5 g2g3 d7d6 f1g2 b8d7 e1g1 e6e5 e2e3 b4d2": {
+      "porQue": "Contra 8.e3, el alfil se cambia ya: la amenaza blanca era retirar el alfil de d2 a c1 y dejar al de b4 sin salida.",
+      "porQueNo": [
+        {
+          "uci": "e8g8",
+          "texto": "8...O-O? 9.Ac1!: el alfil de b4 queda sin retirada y las blancas amenazan atraparlo con a3."
+        },
+        {
+          "uci": "e5e4",
+          "texto": "8...e4? 9.Cg5 y el peón de e4 cae."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 b1d2 e8g8": {
+      "porQue": "Para Sielecki, la mejor respuesta a 4.Cbd2: si a3, ...Ae7 y la ruptura ...d5 más adelante. (4...d6 es una alternativa sólida que pide menos teoría.)"
     }
   },
   "fuentes": [
+    {
+      "titulo": "Christof Sielecki — Opening Repertoire: Nimzo and Bogo Indian (Everyman, 2015)",
+      "capitulo": "caps. 12 «Bogo-Indian with 4.Ad2 a5» y 13 «Bogo-Indian with 4.Cbd2»"
+    },
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Bogo-Indian Defence»"
@@ -80,7 +103,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-08",
     "resultados": {
       "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4": {
         "ok": true,
@@ -129,6 +152,26 @@
       "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 b1d2 b7b6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 a7a5 g2g3 d7d6 f1g2 b8d7 e1g1 e6e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 a7a5 g2g3 d7d6 f1g2 b8d7 e1g1 e6e5 e2e3 b4d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 a7a5 g2g3 d7d6 f1g2 b8d7 e1g1 e6e5 e2e3 e8g8 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 14 puntos de chances: −0,3 → −1,9. Refutación: Ac1 a4 a3 Aa5 Dxa4 c5"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 a7a5 g2g3 d7d6 f1g2 b8d7 e1g1 e6e5 e2e3 e5e4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 14 puntos de chances: −0,3 → −1,9. Refutación: Cg5 c6 Cxe4 Cxe4 Axe4 h5"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 b1d2 e8g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
       }
     }
   }
