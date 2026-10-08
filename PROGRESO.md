@@ -45,6 +45,7 @@ Resumen para retomar el trabajo en cualquier sesión. El detalle de métodos y h
 - Pendiente: más de Flear y Silman; De la Villa caps. 11 (T+2P contra T) y 13, y el final 56 (Kling y Horwitz). Hecho también el final 55 (defensa de la primera fila con peón de caballo).
 
 ### Aperturas: 74 archivos
+- 2026-10-08 (tarde): Dembo, *Fighting the Anti-King's Indians*, en el Trompowsky.
 - 2026-10-08 (tarde): Sielecki, *Opening Repertoire: Nimzo and Bogo Indian*, en la Nimzoindia y la Bogoindia.
 - 2026-10-08 (tarde): Vigus, *The Pirc in Black and White*, en el Ataque Austriaco de la Pirc.
 - 2026-10-08 (tarde): trampas de Bologan, *Bologan's Ruy Lopez for Black*, en la Española (Löwenthal-Anderssen, Wormald, 5.d3, Anti-Marshall con 8.d4).

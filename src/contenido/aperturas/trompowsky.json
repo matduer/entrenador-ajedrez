@@ -81,9 +81,28 @@
     },
     "d2d4 g8f6 c1g5 c7c5 g5f6 g7f6 d4d5 d8b6": {
       "porQue": "Presiona b2: la idea típica contra el Trompowsky cuando el alfil ya no está en c1."
+    },
+    "d2d4 g8f6 c1g5 c7c5": {
+      "porQue": "La respuesta que recomienda Dembo: ataca d4 enseguida y acelera el juego, sin esperar a ver si el alfil cambia en f6."
+    },
+    "d2d4 g8f6 c1g5 c7c5 d4d5": {
+      "porQue": "Lo mejor según Stockfish: gana espacio. La reacción típica del negro es ...Ce4 y ...Db6, contra b2.",
+      "porQueNo": [
+        {
+          "uci": "c2c3",
+          "texto": "3.c3, defendiendo d4, es tímido: 3...Ce4 y el alfil tiene que retroceder sin haber logrado nada."
+        }
+      ]
+    },
+    "d2d4 g8f6 c1g5 c7c5 b1c3 d7d5": {
+      "porQue": "Contra 3.Cc3, la jugada más exigente según Dembo, el negro ocupa el centro: si 4.Axf6 gxf6, queda con la pareja de alfiles."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Yelena Dembo — Fighting the Anti-King's Indians (Everyman, 2008)",
+      "capitulo": "cap. 1 «The Trompowsky» y su conclusión"
+    },
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Other 1 d4 Nf6 Openings», sección «Trompowsky Attack»"
@@ -102,7 +121,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-08",
     "resultados": {
       "d2d4 g8f6 c1g5": {
         "ok": true,
@@ -167,6 +186,22 @@
       "d2d4 g8f6 c1g5 c7c5 g5f6 g7f6 d4d5 d8b6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 c7c5 d4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 c7c5 c2c3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,2 → −0,3. Refutación: Ce4 Ac1 d5 e3 Cc6 Cd2"
+      },
+      "d2d4 g8f6 c1g5 c7c5 b1c3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
       }
     }
   }
