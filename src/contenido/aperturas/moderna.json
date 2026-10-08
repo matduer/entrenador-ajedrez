@@ -73,6 +73,12 @@
           "texto": "Ignorar la amenaza pierde enseguida: Dxf7+ y la dama llega a g7."
         }
       ]
+    },
+    "e2e4 g7g6 d2d4 f8g7 b1c3 c7c6 f2f4 d7d5 e4e5 h7h5": {
+      "porQue": "La jugada del sistema Gurgenidze, que sorprende a cualquiera: con el centro cerrado hay tiempo para ella, y frena el avance g4 con el que las blancas quieren ganar espacio en el flanco de rey."
+    },
+    "e2e4 g7g6 d2d4 f8g7 b1c3 c7c6 f2f4 d7d5 e4e5 h7h5 g1f3 c8g4 h2h3 g4f3 d1f3 e7e6": {
+      "porQue": "La mejor según Stockfish. El negro cambió su alfil y, como explica Soltis, tiene que impedir f5, que liberaría a los alfiles blancos: ...e6 lo frena y completa la cadena de peones en casillas blancas."
     }
   },
   "fuentes": [
@@ -82,7 +88,7 @@
     },
     {
       "titulo": "Andrew Soltis — Black to Play and Win with 1...g6 (Chess Digest, 1988)",
-      "capitulo": "Sección I, variante A (3.Cc3 c6): 4.Cf3 d5 y 4.Ac4 d6"
+      "capitulo": "Sección I, variante A (3.Cc3 c6): 4.Cf3 d5, 4.Ac4 d6 y 4.f4 d5 5.e5 h5 (Gurgenidze)"
     },
     {
       "titulo": "Modern Defense (Wikipedia en inglés)",
@@ -159,6 +165,14 @@
       "e2e4 g7g6 d2d4 f8g7 b1c3 c7c6 f1c4 d7d6 d1f3 a7a6 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 44 puntos de chances: −0,4 → −9,8. Refutación: Dxf7+ Rd7 Dxg7 Cf6 e5 Ch5"
+      },
+      "e2e4 g7g6 d2d4 f8g7 b1c3 c7c6 f2f4 d7d5 e4e5 h7h5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "e2e4 g7g6 d2d4 f8g7 b1c3 c7c6 f2f4 d7d5 e4e5 h7h5 g1f3 c8g4 h2h3 g4f3 d1f3 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,9 para el bando que mueve"
       }
     }
   }
