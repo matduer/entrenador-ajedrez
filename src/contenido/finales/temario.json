@@ -1071,12 +1071,59 @@
             "dtm": 25,
             "fecha": "2026-10-08"
           }
+        },
+        {
+          "id": "dos-contra-uno-pasado",
+          "fen": "8/8/5p2/5P2/p5P1/1k6/8/K7 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 40,
+          "consigna": "El negro tiene un peón pasado en a4 y cree que su peón de f6 frena tus dos peones.",
+          "pista": "g5!: la mayoría de dos contra uno se convierte en un peón pasado que corona con jaque o a tiempo de frenar el peón de a (fxg5 f6 g4 f7 g3 f8=D).",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "g4g5",
+            "dtm": 33,
+            "fecha": "2026-10-08"
+          }
+        },
+        {
+          "id": "tres-contra-tres-ataca",
+          "fen": "6k1/8/6P1/6K1/ppp5/8/PPP5/8 b - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 40,
+          "consigna": "Jugás con las negras. Las blancas se fueron con el rey hacia tus peones. Castigalas.",
+          "pista": "b3!: si axb3, c3! y bxc3 a3, el peón de a corona; si cxb3, a3! y bxa3 c3. Tres peones contra tres, frente a frente, pueden fabricar un pasado con un sacrificio.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "stockfish 6.38",
+            "mejor": "b4b3",
+            "fecha": "2026-10-08"
+          }
+        },
+        {
+          "id": "tres-contra-tres-defiende",
+          "fen": "6k1/8/6PK/8/ppp5/8/PPP5/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 60,
+          "consigna": "Ganás con el peón de g6, pero tus peones del flanco de dama tienen un problema. Antes de mover el rey, resolvelo.",
+          "pista": "b3!: bloqueás la ruptura antes de que exista. Si axb3, axb3 y después cxb3; si cxb3, cxb3. Cualquier otra jugada permite b3! (o, tras a3, c3!) y el negro corona.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "stockfish 6.00",
+            "mejor": "b2b3",
+            "fecha": "2026-10-08"
+          }
         }
       ],
       "fuentes": [
         {
           "titulo": "Glenn Flear — Starting Out: Pawn Endgames (Everyman, 2004)",
           "capitulo": "Cap. 8, «Pawn Power»: «The Breakthrough»"
+        },
+        {
+          "titulo": "Jeremy Silman — El curso de finales completo (Siles Press, 2007)",
+          "capitulo": "Parte Cinco (ELO 1600-1799), «Bombas tácticas», diagramas 171 a 174"
         }
       ]
     },
