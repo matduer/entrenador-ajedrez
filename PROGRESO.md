@@ -10,7 +10,7 @@ Resumen para retomar el trabajo en cualquier sesión. El detalle de métodos y h
 
 ## Estado al 2026-10-08 (mediodía)
 
-### Problemas de libros (Táctica → "Problemas de libros"): 7.941
+### Problemas de libros (Táctica → "Problemas de libros"): 8.309
 
 | Libro | Problemas |
 |---|---|
@@ -18,16 +18,17 @@ Resumen para retomar el trabajo en cualquier sesión. El detalle de métodos y h
 | Palliser, *The Complete Chess Workout* (Everyman, 2007) | 846 |
 | Brennan y Carson, *Tactics Time!* (2012) | 795 |
 | Ivashchenko, *Chess School 2* (2002) | 485 |
+| Mazja, *Chess School 3* (2003) | 348 |
 | Ivashchenko, *Manual of Chess Combinations* vol. 1b (2007) | 255 |
 | Reinfeld, *1001 Brilliant Chess Sacrifices and Combinations* (Sterling, 1955) | 208 |
 | Yusupov, *Build Up Your Chess: The Fundamentals* (Quality Chess, 2008) | 109 |
 | Schloss, *Problemas avanzados: mates en 3, 4 y 5* | 50 |
 | Gude, *Problemas de cálculo* (Tutor, 2007) | 38 |
+| Franco, *El arte del ataque* (Esfera, 2008) | 20 |
 | Rafa C. M., *Curso de ajedrez, Lección 5* | 24 |
 | Bondarewsky, *Táctica del medio juego* (Martínez Roca, 1972) | 3 |
 
 **En curso** (verificaciones con Stockfish, guardan avance cada 25 posiciones; si se cortan, relanzar con `REANUDAR=1 TOPE_MS=60000 DEPURAR=1`):
-- Mazja, *Chess School 3* (`ivas3`, prefijo `mazja3`, 750 posiciones).
 - Polgár, *Middlegame* (Könemann, 1998) (`middle`, prefijo `polgar-middle`, 2166 posiciones con solución leída por OCR).
 - Al terminar: revisar `datos-privados/biblioteca/<base>-verif-log.txt`, commitear `public/datos/problemas-libros.json` y actualizar esta tabla.
 
@@ -51,8 +52,8 @@ Regla de trabajo pedida por el usuario: **si un libro trae un problema, se anota
 
 ### Etapa 1 — Libros
 1. ✅ *Partidas de personajes históricos* (ajedrezdeataque.com): 33 partidas.
-2. ⏳ Mazja *Chess School 3* y Polgár *Middlegame*: verificación en curso → commitear al terminar.
-3. Táctica con texto (soluciones legibles): Franco *El arte del ataque* (problemas con soluciones), Hansen *Mejore su ajedrez posicional* (caps. 11-12, solo los tácticos), Bronstein *El aprendiz de brujo* (40 combinaciones explicadas), Aagaard *Maestría en el cálculo*, Dvoretsky *El arte de maniobrar con las piezas* (solo los de solución forzada).
+2. ✅ Mazja *Chess School 3*: 348 (395 sin solución legible quedaron afuera por no tener una jugada única y decisiva). ⏳ Polgár *Middlegame*: verificación en curso → commitear al terminar.
+3. ✅ Franco *El arte del ataque*: 20 de 73 (`franco.py`: diagramas JBIG2 sin rayado por apertura morfológica; la mayoría de sus problemas son de plan, no de golpe táctico). Siguen, con texto:  Hansen *Mejore su ajedrez posicional* (caps. 11-12, solo los tácticos), Bronstein *El aprendiz de brujo* (40 combinaciones explicadas), Aagaard *Maestría en el cálculo*, Dvoretsky *El arte de maniobrar con las piezas* (solo los de solución forzada).
 4. Estudios: Troitzky *360 estudios* (OCR, notación descriptiva).
 5. Partidas comentadas: Chernev *Ajedrez lógico, jugada a jugada*, Capablanca *Fundamentos*, Larsen (*Todas las piezas atacan*, *Yo juego para ganar*), Keres (2 tomos), Rubinstein (Donaldson y Minev; *Masterpieces*), Kasparov *Mis geniales predecesores*, Bronstein *Zúrich 1953*, Tal (Hajtun).
 6. Libros del registro de problemas (al final de la etapa).
