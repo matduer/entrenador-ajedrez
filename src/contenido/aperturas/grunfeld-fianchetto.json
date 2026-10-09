@@ -1,0 +1,95 @@
+{
+  "id": "grunfeld-fianchetto",
+  "nombre": "Grünfeld con fianchetto (Neo-Grünfeld)",
+  "raiz": "d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d5",
+  "resumen": "La Grünfeld contra el fianchetto del rey blanco: 1.d4 Cf6 2.c4 g6 3.g3 Ag7 4.Ag2 d5. El blanco no se apura con Cc3 y refuerza su enroque; el alfil de g2 presiona d5, el punto clave del negro. Beliavsky y Mikhalchishin la consideran la forma más fiable de enfrentar la Grünfeld, y recuerdan que uno de los primeros en elegirla fue Rubinstein.",
+  "planesBlancas": [
+    "Cambiar en d5 y armar el centro con e4, llevando el caballo de g1 a e2 para no tapar al alfil de g2.",
+    "Jugar Cf3 y el enroque, y presionar d5 (Db3) o el flanco de dama."
+  ],
+  "planesNegras": [
+    "Contraatacar el centro con ...c5 (a veces con ...e5).",
+    "Sostener d5 con ...c6, la línea más sólida.",
+    "Ceder el centro con ...dxc4 y buscar actividad de piezas."
+  ],
+  "estructura": "Si el blanco cambia en d5 y juega e4, queda un centro móvil de peones (d4 y e4) que el negro ataca con piezas y con ...c5; con ...c6, la estructura se parece a una Eslava con el alfil negro en g7.",
+  "rupturas": [
+    "...c5 y ...e5 del negro contra d4.",
+    "e4 y d5 de las blancas."
+  ],
+  "piezas": [
+    "Alfil blanco de g2: presiona d5 y la gran diagonal.",
+    "Alfil negro de g7: apunta a d4 y b2.",
+    "Caballo blanco de g1: a e2 si el blanco jugó e4; a f3 si no."
+  ],
+  "trampas": [],
+  "notas": {
+    "d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d5": {
+      "porQue": "El golpe central típico de la Grünfeld: el negro desafía enseguida el centro, aunque el alfil de g2 apunte a d5."
+    },
+    "d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d5 c4d5": {
+      "porQue": "La variante del cambio con fianchetto: el blanco toma en d5 y prepara e4 para echar al caballo con tiempo."
+    },
+    "d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d5 c4d5 f6d5 e2e4": {
+      "porQue": "Echa al caballo y arma el centro de peones. El caballo de g1 irá a e2, donde no tapa al alfil de g2 (Beliavsky y Mikhalchishin, cap. 1)."
+    },
+    "d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d5 c4d5 f6d5 e2e4 d5b6": {
+      "porQue": "Lo habitual: desde b6 el caballo deja libre la diagonal del alfil de g7 y puede presionar c4 o d5."
+    },
+    "d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d5 c4d5 f6d5 e2e4 d5b6 g1e2": {
+      "porQue": "El caballo va a e2 sin tapar al alfil; el negro presionará d4 con ...c5 o ...Cc6, y el blanco responde con d5 o defendiendo con Ae3."
+    },
+    "d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d5 g1f3 e8g8 e1g1 c7c6": {
+      "porQue": "La variante sólida: ...c6 sostiene d5 al máximo, con una estructura parecida a la Eslava. Stockfish la considera la mejor del negro en esta posición."
+    },
+    "d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d5 g1f3 e8g8 e1g1 d5c4": {
+      "porQue": "Cede el centro para activar sus piezas: el blanco recupera el peón (con Ca3 o Da4), mientras el negro desarrolla el flanco de dama con tiempo."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Alexander Beliavsky y Adrian Mikhalchishin — Fianchetto Grünfeld (trad. Ken Neat, Cadogan, 1998)",
+      "capitulo": "introducción, cap. 1 «Exchange Variation with 6.e4» y caps. 5-6 «Solid Variation»"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-09",
+    "resultados": {
+      "d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d5 c4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d5 c4d5 f6d5 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d5 c4d5 f6d5 e2e4 d5b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d5 c4d5 f6d5 e2e4 d5b6 g1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d5 g1f3 e8g8 e1g1 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d5 g1f3 e8g8 e1g1 d5c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      }
+    }
+  }
+}
