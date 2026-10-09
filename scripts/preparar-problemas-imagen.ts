@@ -52,6 +52,22 @@ const materialPosible = (tab: string) =>
     const extra = Math.max(0, n('q') - 1) + Math.max(0, n('r') - 2) + Math.max(0, n('b') - 2) + Math.max(0, n('n') - 2)
     return n('p') + extra <= 8
   })
+/**
+ * Sin piezas de más: ni dos damas, ni tres torres, caballos o alfiles, ni dos alfiles del mismo color. En un libro
+ * de táctica de partidas casi nunca hay piezas coronadas, y un tablero mal leído suele duplicar una pieza (pasó con
+ * Polgár, Middlegame: las damas negras están impresas huecas como las blancas, y de las variantes de color el
+ * verificador elegía la que tenía dos damas del bando que gana). Para libros de composiciones o estudios:
+ * PIEZAS_DE_MAS=1.
+ */
+const sinPiezasDeMas = (tab: string) => {
+  if (process.env.PIEZAS_DE_MAS) return true
+  const filas = tab.split('/').map((f) => f.replace(/\d/g, (d) => '.'.repeat(Number(d))))
+  return ['QRBN', 'qrbn'].every(([q, r, b, n]) => {
+    const casillas = (p: string) => filas.flatMap((f, i) => [...f].flatMap((c, j) => (c === p ? [(i + j) % 2] : [])))
+    const alfiles = casillas(b)
+    return casillas(q).length <= 1 && casillas(r).length <= 2 && casillas(n).length <= 2 && alfiles.length <= 2 && !(alfiles.length === 2 && alfiles[0] === alfiles[1])
+  })
+}
 const fuerte = (e: Evaluacion) => (e.mate !== undefined ? e.mate > 0 : (e.cp ?? 0) >= 120)
 
 const motor = new MotorNativo(Number(prof), 4)
@@ -113,7 +129,7 @@ for (const e of entradas) {
   // solución, solo el primero, porque cualquier posición errónea podría tener una jugada decisiva.
   const legales: { fen: string; uci?: string }[] = []
   for (const tab of e.tableros) {
-    if (tab.includes('?') || !materialPosible(tab)) continue
+    if (tab.includes('?') || !materialPosible(tab) || !sinPiezasDeMas(tab)) continue
     try {
       const pos = posDesdeFen(`${tab} ${e.color} ${enroques(tab)} - 0 1`)
       let uci: string | undefined

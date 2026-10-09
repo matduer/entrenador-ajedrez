@@ -10,28 +10,28 @@ Resumen para retomar el trabajo en cualquier sesión. El detalle de métodos y h
 
 ## Estado al 2026-10-08 (mediodía)
 
-### Problemas de libros (Táctica → "Problemas de libros"): 8.423
+### Problemas de libros (Táctica → "Problemas de libros"): 8.911
 
 | Libro | Problemas |
 |---|---|
 | Polgár, *Chess: 5334 Problems…* (Könemann, 1994) | 5128 |
-| Palliser, *The Complete Chess Workout* (Everyman, 2007) | 846 |
+| Polgár, *Middlegame* (Könemann, 1998) | 505 |
+| Palliser, *The Complete Chess Workout* (Everyman, 2007) | 844 |
 | Brennan y Carson, *Tactics Time!* (2012) | 795 |
 | Ivashchenko, *Chess School 2* (2002) | 485 |
 | Mazja, *Chess School 3* (2003) | 348 |
 | Ivashchenko, *Manual of Chess Combinations* vol. 1b (2007) | 255 |
 | Reinfeld, *1001 Brilliant Chess Sacrifices and Combinations* (Sterling, 1955) | 208 |
 | Yusupov, *Build Up Your Chess: The Fundamentals* (Quality Chess, 2008) | 109 |
-| Schloss, *Problemas avanzados: mates en 3, 4 y 5* | 50 |
-| Gude, *Problemas de cálculo* (Tutor, 2007) | 38 |
+| Schloss, *Problemas avanzados: mates en 3, 4 y 5* | 49 |
+| Gude, *Problemas de cálculo* (Tutor, 2007) | 31 |
 | Franco, *El arte del ataque* (Esfera, 2008) | 20 |
-| Williams, *Improve Your Attacking Chess* (Gambit, 2004) | 99 |
+| Williams, *Improve Your Attacking Chess* (Gambit, 2004) | 93 |
 | Aagaard, *Maestría en el cálculo* (Chessy, 2008) | 15 |
 | Rafa C. M., *Curso de ajedrez, Lección 5* | 24 |
-| Bondarewsky, *Táctica del medio juego* (Martínez Roca, 1972) | 3 |
+| Bondarewsky, *Táctica del medio juego* (Martínez Roca, 1972) | 2 |
 
 **En curso** (verificaciones con Stockfish, guardan avance cada 25 posiciones; si se cortan, relanzar con `REANUDAR=1 TOPE_MS=60000 DEPURAR=1`):
-- Polgár, *Middlegame* (Könemann, 1998) (`middle`, prefijo `polgar-middle`, 2166 posiciones con solución leída por OCR).
 - Al terminar: revisar `datos-privados/biblioteca/<base>-verif-log.txt`, commitear `public/datos/problemas-libros.json` y actualizar esta tabla.
 
 **Descartados por ahora**: Seneca (PDF se renderiza en blanco), Speelman *Preparación de finales* (para el cuestionario completo falta un lector de soluciones en texto corrido; se usan diagramas sueltos transcriptos a mano), Khmelnitsky *Chess Exam* (opción múltiple), Crouch *Attacking Technique* (no son ejercicios), "chess problems (1).pdf" (es el mismo Polgár).
@@ -67,7 +67,7 @@ Regla de trabajo pedida por el usuario: **si un libro trae un problema, se anota
 
 ### Etapa 1 — Libros
 1. ✅ *Partidas de personajes históricos* (ajedrezdeataque.com): 33 partidas.
-2. ✅ Mazja *Chess School 3*: 348 (395 sin solución legible quedaron afuera por no tener una jugada única y decisiva). ⏳ Polgár *Middlegame*: verificación en curso → commitear al terminar.
+2. ✅ Mazja *Chess School 3*: 348 (395 sin solución legible quedaron afuera por no tener una jugada única y decisiva). ✅ Polgár *Middlegame*: 505 de 2166. En este escaneo las damas negras están impresas huecas, como las blancas: se descartaron las lecturas con dos damas del mismo bando (286 aceptados mal leídos, de los que 41 volvieron a confirmarse con una dama por bando) y los 6 con una sola dama (color indecidible). Control de material en todos los libros publicados: 17 mal leídos retirados (Gude 7, Williams 6, *Workout* 2, Schloss 1, Bondarewsky 1; `img/excluidos_material.json`).
 3. ✅ Franco *El arte del ataque*: 20 de 73 (`franco.py`: diagramas JBIG2 sin rayado por apertura morfológica; la mayoría de sus problemas son de plan, no de golpe táctico). Siguen, con texto:  Hansen *Mejore su ajedrez posicional* (caps. 11-12, solo los tácticos), Bronstein *El aprendiz de brujo* (40 combinaciones explicadas), Aagaard *Maestría en el cálculo*, Dvoretsky *El arte de maniobrar con las piezas* (solo los de solución forzada).
 4. Estudios: Troitzky *360 estudios* (OCR, notación descriptiva).
 5. Partidas comentadas: ✅ Capablanca *Fundamentos* (14). Siguen: Keres (2 tomos), Rubinstein (Donaldson y Minev; *Masterpieces*), Kasparov *Mis geniales predecesores*, Bronstein *Zúrich 1953*, Tal (Hajtun).
