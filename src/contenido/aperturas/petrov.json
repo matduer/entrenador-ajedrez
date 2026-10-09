@@ -25,6 +25,10 @@
     {
       "jugadas": "e2e4 e7e5 g1f3 g8f6 f3e5 f6e4 d1e2 e4f6 e5c6",
       "texto": "Si el negro toma en e4 sin echar antes al caballo, De2 lo pone en apuros: la natural 4...Cf6?? permite Cc6+, jaque descubierto que gana la dama."
+    },
+    {
+      "jugadas": "e2e4 e7e5 g1f3 g8f6 f3e5 f6e4 d1e2 e4f6 e5c6",
+      "texto": "3...Cxe4 4.De2 Cf6?? 5.Cc6+: jaque descubierto y el caballo ataca la dama. Por eso en la Petrov primero se juega 3...d6."
     }
   ],
   "notas": {
@@ -44,7 +48,13 @@
       ]
     },
     "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3": {
-      "porQue": "El caballo se retira a una buena casilla."
+      "porQue": "El caballo se retira a una buena casilla.",
+      "porQueNo": [
+        {
+          "uci": "e5f7",
+          "texto": "4.Cxf7, el Gambito Cochrane: el blanco entrega el caballo por dos peones y el enroque negro. Stockfish no lo considera correcto (el negro queda con ventaja)."
+        }
+      ]
     },
     "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4": {
       "porQue": "Ahora sí recupera el peón, sin peligro de descubiertos.",
@@ -76,12 +86,28 @@
     },
     "e2e4 e7e5 g1f3 g8f6 d2d4 f6e4 f1d3 d7d5 f3e5 b8d7": {
       "porQue": "Provocador pero sólido: tras Cxd7 Axd7 el negro se desarrolla rápido."
+    },
+    "e2e4 e7e5 g1f3 g8f6 f3e5 f6e4 d1e2 d8e7": {
+      "porQue": "La única defensa: la dama se pone delante del rey. El negro termina con una posición pasiva, por eso lo correcto es 3...d6 antes de tomar en e4.",
+      "porQueNo": [
+        {
+          "uci": "e4f6",
+          "texto": "4...Cf6?? 5.Cc6+: jaque a la descubierta con la dama de e2 sobre el rey, y el caballo ataca la dama de d8. El blanco gana la dama."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 b8c6 e1g1 f8e7 c2c4 c6b4": {
+      "porQue": "La línea principal de la Petrov, que Janjgava estudia en su último capítulo: el caballo ataca al alfil de d3, que es el que sostiene la presión sobre e4 y h7."
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Petroff Defence»"
+    },
+    {
+      "titulo": "Lasha Janjgava — The Petroff Defence (trad. Graham Burgess, Gambit, 2001)",
+      "capitulo": "cap. 6 «3.Cxe5: Sidelines» y cap. 11 «The Main Line: 7.0-0 Cc6 8.c4 Cb4»"
     },
     {
       "titulo": "Petrov's Defence (Wikipedia en inglés)",
@@ -97,7 +123,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-09",
     "resultados": {
       "e2e4 e7e5 g1f3 g8f6": {
         "ok": true,
@@ -118,6 +144,10 @@
       "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: +0,5 → −0,7. Refutación: Rxf7 Cc3 c6 d4 Ae7 Ad3"
       },
       "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4": {
         "ok": true,
@@ -154,6 +184,18 @@
       "e2e4 e7e5 g1f3 g8f6 d2d4 f6e4 f1d3 d7d5 f3e5 b8d7": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 f6e4 d1e2 d8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 f6e4 d1e2 e4f6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 41 puntos de chances: −0,6 → −8,6. Refutación: Cc6+ Ae7 Cxd8 d5 d4 Rxd8"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 b8c6 e1g1 f8e7 c2c4 c6b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
       }
     }
   }
