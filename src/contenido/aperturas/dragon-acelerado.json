@@ -24,6 +24,10 @@
     {
       "jugadas": "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 b1c3 f8g7 c1e3 g8f6 f1c4 d8a5 d1d2 f6e4 d4c6 a5c3 d2c3 g7c3 b2c3 b7c6",
       "texto": "7...Da5 8.Dd2? Cxe4! 9.Cxc6 Dxc3! 10.Dxc3 Axc3+ 11.bxc3 bxc6: el negro gana un peón. Lo correcto es 8.O-O."
+    },
+    {
+      "jugadas": "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 b1c3 f8g7 c1e3 g8f6 f1c4 d8a5 d1d2 f6e4 d4c6 a5c3 d2c3 g7c3 b2c3 b7c6",
+      "texto": "8.Dd2? Cxe4! 9.Cxc6 Dxc3!! 10.Dxc3 Axc3+ 11.bxc3 bxc6: el negro recupera la pieza y queda con un peón de más y la estructura blanca destrozada."
     }
   ],
   "notas": {
@@ -61,17 +65,31 @@
         {
           "uci": "d1d2",
           "texto": "...Cxe4! Cxc6 Dxc3: el negro gana material."
+        },
+        {
+          "uci": "d1d2",
+          "texto": "8.Dd2? cae en la trampa favorita de Panjwani: 8...Cxe4! 9.Cxc6 Dxc3!! 10.Dxc3 Axc3+ 11.bxc3 bxc6, y el negro gana un peón (si 9.Cxe4, Dxd2+ 10.Axd2 Axd4)."
         }
       ]
     },
     "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 c2c4 g8f6 b1c3 d7d6": {
       "porQue": "Más fino que cambiar en d4 enseguida: si Ag5, el negro responde ...Ag7 y el caballo de d4 queda sin el apoyo del alfil de e3."
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 b1c3 f8g7 c1e3 g8f6 f1c4 e8g8 c4b3 a7a6": {
+      "porQue": "El sistema propio de Panjwani contra la Antiyugoslava: prepara ...b5 y ...Ca5 para cambiar el alfil de b3, que apunta a f7."
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 c2c4 g8f6 b1c3 f8g7 c1e3 f6g4": {
+      "porQue": "La variante Breyer, que recomienda Panjwani contra el Maroczy: el caballo cambia al alfil de e3, la pieza blanca que mejor controla las casillas negras. Después de Dxg4 Cxd4 Dd1, ...Ce6 o ...e5 y el negro queda cómodo. Stockfish la considera la mejor."
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Sicilian Defence», sección «Accelerated Dragon» y «Maroczy Bind»"
+    },
+    {
+      "titulo": "Raja Panjwani — El Dragón Hiperacelerado (trad. Antonio Gude, La Casa del Ajedrez, 2019)",
+      "capitulo": "introducción (la trampa de 8.Dd2?), cap. 3 «7.Ac4: mi sistema» (8.Ab3 a6!?) y cap. 4 «Formación Maroczy: Variante Breyer» (7...Cg4)"
     },
     {
       "titulo": "Sicilian Defence, Accelerated Dragon (Wikipedia en inglés)",
@@ -87,7 +105,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-09",
     "resultados": {
       "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6": {
         "ok": true,
@@ -128,6 +146,14 @@
       "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 c2c4 g8f6 b1c3 d7d6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 b1c3 f8g7 c1e3 g8f6 f1c4 e8g8 c4b3 a7a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 c2c4 g8f6 b1c3 f8g7 c1e3 f6g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
       }
     }
   }
