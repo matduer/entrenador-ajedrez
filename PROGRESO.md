@@ -86,6 +86,8 @@ Regla de trabajo pedida por el usuario: **si un libro trae un problema, se anota
 1. ✅ Larsen *Teoría y práctica en los juegos abiertos* (Española Abierta). Aguilera *El error en la apertura*: al registro de problemas.
 2. Aguilera *El espíritu de la apertura*, Larsen *Teoría y práctica en los juegos abiertos*.
 3. Monografías que todavía no se usaron (Bologan Española, Anti-Sicilianas, Pirc, Catalana, Makogonov, Veresov, Londres de Lemos…).
+   - ✅ 2026-10-09: Catalana (Raetsky y Chetverik, Everyman 2004): 11 notas sobre las sextas jugadas del negro en la Catalana abierta; se descartó su preferencia por 7.0-0 contra 5...b5 6.a4 c6 (Stockfish: pierde 0,16; prefiere 7.Ce5).
+   - ⏳ Aguilera *El espíritu de la apertura*: OCR en curso (sin capa de texto).
 
 ## Registro de problemas (para retomar al final)
 

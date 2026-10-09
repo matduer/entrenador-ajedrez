@@ -84,12 +84,49 @@
     },
     "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 f8e7 g1f3 e8g8 e1g1 b8d7": {
       "porQue": "Catalana Cerrada: desarrolla y prepara ...c6 y ...b6, o la ruptura ...c5."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 b8c6": {
+      "porQue": "Presiona d4 y deja preparado ...Tb8 y ...b5 para sostener el peón de más. Raetsky y Chetverik estudian dos respuestas: 6.Da4, que recupera c4 enseguida, y el enroque seguido de Cc3, donde el blanco juega un tiempo con un peón menos a cambio de desarrollo."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 b8c6 d1a4": {
+      "porQue": "Ataca c4 y clava el caballo de c6: el blanco recupera el peón sin perder tiempo. Stockfish la prefiere al enroque."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 b8c6 e1g1 a8b8": {
+      "porQue": "Prepara ...b5 para quedarse con el peón de c4."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 b8c6 e1g1 a8b8 b1c3": {
+      "porQue": "La respuesta que los autores consideran más fuerte: desarrolla y prepara e4 o Ce5 contra el flanco de dama negro, que con ...b5 queda debilitado."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 b7b5": {
+      "porQue": "Sostiene el peón de c4 de inmediato, a costa de debilitar el flanco de dama. Lo normal es atacar la cadena con a4 antes de que el negro la consolide con ...c6 y ...Ab7."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 b7b5 a2a4": {
+      "porQue": "Ataca la cadena de peones antes de que se consolide: el negro tiene que gastar un tiempo en sostenerla (...c6), y la columna a puede abrirse a favor del blanco."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 c8d7": {
+      "porQue": "Lleva el alfil de dama, que en el Gambito de Dama suele quedar encerrado, a c6, donde se enfrenta al de g2. Contra 6.Ce5 Ac6 7.Cxc6 Cxc6, los autores no ven ventaja blanca con 8.Da4; Stockfish da apenas una pequeña ventaja blanca."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 c8d7 f3e5 d7c6": {
+      "porQue": "El alfil llega igual a c6: si Cxc6, el negro recaptura con el caballo y queda bien desarrollado."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 c7c6": {
+      "porQue": "Prepara ...b5 para sostener el peón, pero es poco común: según Raetsky y Chetverik, con 6.Ce5 Ab4+ 7.Ad2 el blanco recupera c4 con una ventaja duradera, y Stockfish coincide en que el blanco queda mejor (unos +0,4)."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 c7c6 f3e5 f8b4 c1d2": {
+      "porQue": "Ofrece el cambio de alfiles y deja al negro sin tiempo para defender c4: el caballo de e5 lo recupera."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 f8b4": {
+      "porQue": "Un jaque intermedio que molesta la coordinación blanca y el peón de d4. Lo habitual es 6.Ad2; también se juega 6.Cbd2."
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Queen's Gambit Declined», sección «The Catalan»"
+    },
+    {
+      "titulo": "Alexander Raetsky y Maxim Chetverik — The Catalan (Everyman Chess, 2004)",
+      "capitulo": "caps. 5 a 12 (4...dxc4 5.Ag2 y las sextas jugadas del negro: ...Cc6, ...b5, ...c6, ...Ab4+, ...Ad7), resúmenes de cada capítulo"
     },
     {
       "titulo": "Catalan Opening (Wikipedia en inglés)",
@@ -105,7 +142,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-09",
     "resultados": {
       "d2d4 g8f6 c2c4 e7e6 g2g3": {
         "ok": true,
@@ -166,6 +203,50 @@
       "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 f8e7 g1f3 e8g8 e1g1 b8d7": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 b8c6 d1a4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 b8c6 e1g1 a8b8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 b8c6 e1g1 a8b8 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 b7b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 b7b5 a2a4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 c8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 c8d7 f3e5 d7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 c7c6 f3e5 f8b4 c1d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g2g3 d7d5 f1g2 d5c4 g1f3 f8b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
       }
     }
   }
