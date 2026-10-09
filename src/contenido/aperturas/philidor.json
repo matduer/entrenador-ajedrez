@@ -107,12 +107,36 @@
           "texto": "dxe5 Cxe5 Cxe5 dxe5 Dh5: el negro pierde un peón."
         }
       ]
+    },
+    "e2e4 e7e5 g1f3 d7d6 d2d4 g8f6 d4e5 f6e4": {
+      "porQue": "Lo correcto si el blanco cambia en e5: el caballo toma el peón de e4. Según el cuaderno de Sistac, tras 5.Dd5 Cc5 6.Ag5 Ae7 el blanco conserva algo de iniciativa, pero sin nada concluyente.",
+      "porQueNo": [
+        {
+          "uci": "d6e5",
+          "texto": "4...dxe5? 5.Dxd8+ Rxd8 6.Cxe5: el blanco gana un peón y además amenaza Cxf7+."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 d7d6 d2d4 g8f6 b1c3 b8d7 f1c4 f8e7 e1g1": {
+      "porQue": "Lo más sólido: el blanco enroca y deja que el negro complete su esquema (...0-0, ...c6).",
+      "porQueNo": [
+        {
+          "uci": "f3g5",
+          "texto": "6.Cg5 apunta a f7, pero tras 6...0-0 7.Axf7+ Txf7 8.Ce6 De8 9.Cxc7 Dd8 10.Cxa8 b5! el negro recupera el juego con su desarrollo; Stockfish da la posición equilibrada."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 d7d6 d2d4 e5d4 f3d4 g8f6 b1c3 f8e7 f1e2 e8g8 e1g1 f8e8 f2f4 e7f8 e2f3 c7c5": {
+      "porQue": "La ruptura que el cuaderno marca con «!»: el negro deja de defenderse y activa sus piezas con ...Cc6, aunque le quede un peón atrasado en d6. Stockfish la considera la mejor."
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Other 1 e4 e5 Openings», sección «Philidor Defence»"
+    },
+    {
+      "titulo": "Horacio Sistac — «Defensa Philidor: Línea del Cambio y Variante Hanham», Cuadernos de Ajedrez n.º 64 (abril de 2013)"
     },
     {
       "titulo": "Philidor Defence (Wikipedia en inglés)",
@@ -128,7 +152,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-09",
     "resultados": {
       "e2e4 e7e5 g1f3 d7d6": {
         "ok": true,
@@ -209,6 +233,26 @@
       "e2e4 e7e5 g1f3 d7d6 d2d4 b8d7 f1c4 f8e7 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 18 puntos de chances: −0,6 → −2,8. Refutación: dxe5 Cb6 Ab3 a5 a4 Ae6"
+      },
+      "e2e4 e7e5 g1f3 d7d6 d2d4 g8f6 d4e5 f6e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 d7d6 d2d4 g8f6 d4e5 d6e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 17 puntos de chances: −0,5 → −2,5. Refutación: Dxd8+ Rxd8 Cxe5 Ae6 f3 Cfd7"
+      },
+      "e2e4 e7e5 g1f3 d7d6 d2d4 g8f6 b1c3 b8d7 f1c4 f8e7 e1g1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 d7d6 d2d4 g8f6 b1c3 b8d7 f1c4 f8e7 f3g5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: +0,6 → −0,3. Refutación: O-O Cf3 exd4 Dxd4 c6 a4"
+      },
+      "e2e4 e7e5 g1f3 d7d6 d2d4 e5d4 f3d4 g8f6 b1c3 f8e7 f1e2 e8g8 e1g1 f8e8 f2f4 e7f8 e2f3 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
       }
     }
   }
