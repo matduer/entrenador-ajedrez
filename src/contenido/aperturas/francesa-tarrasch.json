@@ -69,12 +69,25 @@
     },
     "e2e4 e7e6 d2d4 d7d5 b1d2 g8f6 e4e5 f6d7 f1d3 c7c5 c2c3 b8c6 g1e2 c5d4 c3d4 f7f6": {
       "porQue": "Ataca la cadena por la cabeza: tras exf6 Cxf6 el negro tiene juego de piezas, aunque e6 queda retrasado."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1d2 f8e7": {
+      "porQue": "Una jugada de espera: el negro desarrolla y deja que el blanco se comprometa antes de elegir entre ...c5 y ...Cf6. Si 4.e5, recién entonces ...c5."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1d2 f8e7 e4e5 c7c5": {
+      "porQue": "Contraataque inmediato contra la base de la cadena. Si 5.Dg4, Watson estudia 5...g6 y 5...Rf8."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1d2 f8e7 e4e5 c7c5 d1g4 e8f8": {
+      "porQue": "El rey se aparta antes que debilitar el flanco con ...g6; Stockfish la prefiere. Watson considera que 5...g6 también es jugable, porque sus debilidades no son fáciles de explotar."
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«French Defence», sección «Tarrasch Variation»"
+    },
+    {
+      "titulo": "John Watson — Play the French (3.ª ed., Everyman Chess, 2003)",
+      "capitulo": "cap. 7 «Tarrasch Variation: 3...Ae7»"
     },
     {
       "titulo": "French Defence (Wikipedia en inglés)",
@@ -90,7 +103,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-09",
     "resultados": {
       "e2e4 e7e6 d2d4 d7d5 b1d2 c7c5 e4d5": {
         "ok": true,
@@ -145,6 +158,18 @@
         "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
       },
       "e2e4 e7e6 d2d4 d7d5 b1d2 g8f6 e4e5 f6d7 f1d3 c7c5 c2c3 b8c6 g1e2 c5d4 c3d4 f7f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1d2 f8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1d2 f8e7 e4e5 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1d2 f8e7 e4e5 c7c5 d1g4 e8f8": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
       }
