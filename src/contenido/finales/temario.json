@@ -1765,7 +1765,8 @@
       "explicacion": [
         "Con dos peones conectados de más se gana casi siempre, pero hay que hacerlo con método: los peones avanzan juntos, defendiéndose entre sí, y el rey va pegado a ellos. Así los peones le sirven de escudo contra los jaques de la torre rival.",
         "El plan de Silman: empujar al rey defensor hacia atrás con jaques de torre, llevar los peones a la sexta, traer el rey a la séptima y ofrecer el cambio de torres en la octava. El final de peones resultante se gana solo.",
-        "Con peones de caballo y de torre hay trampas de ahogado: el peón de torre en séptima con el rey defensor en la esquina puede dejarlo sin jugadas, y entonces la torre defensora se entrega para ahogarse. Ese avance se hace solo cuando no queda ese recurso."
+        "Con peones de caballo y de torre hay trampas de ahogado: el peón de torre en séptima con el rey defensor en la esquina puede dejarlo sin jugadas, y entonces la torre defensora se entrega para ahogarse. Ese avance se hace solo cuando no queda ese recurso.",
+        "De la Villa muestra que dos peones de más no siempre alcanzan: con peones de alfil y de torre, si el rey defensor se queda delante y la torre da jaques por detrás, muchas posiciones son tablas (Gligoric-Smyslov, 1947)."
       ],
       "ideas": [
         "Peones juntos y rey pegado a ellos: ningún peón sale solo.",
@@ -1787,12 +1788,31 @@
             "dtm": 59,
             "fecha": "2026-10-09"
           }
+        },
+        {
+          "id": "peones-de-alfil-y-torre",
+          "fen": "8/5k2/8/1r4RP/5PK1/8/8/8 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 30,
+          "consigna": "Gligoric-Smyslov (Moscú, 1947): dos peones de más, pero en las columnas f y h. La torre blanca acaba de cortar a la tuya en la quinta fila. Hacé tablas.",
+          "pista": "Tb1! (o Tb2, Tb3): la torre se prepara para dar jaques por detrás. Según De la Villa, en cuanto los dos peones llegan a la quinta fila, ese es el sistema: el rey negro se queda delante y la torre los hostiga desde atrás.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "b5b1",
+            "dtm": 0,
+            "fecha": "2026-10-09"
+          }
         }
       ],
       "fuentes": [
         {
           "titulo": "Jeremy Silman — El curso de finales completo (Siles Press, 2007)",
           "capitulo": "Parte Cinco (ELO 1600-1799): «Torre y dos Peones contra Torre conectados»"
+        },
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 11 «Torre y dos peones contra torre», Final 73 «El sistema defensivo» (Gligoric-Smyslov, Moscú 1947)"
         }
       ]
     },
@@ -2787,6 +2807,74 @@
         {
           "titulo": "Paul Keres — Finales prácticos (edición electrónica en notación algebraica, «Club de Ajedrez»)",
           "capitulo": "cap. 5 «Finales de alfil», 5.1 «Alfil contra peones», diagramas 232, 234 y 234b"
+        }
+      ]
+    },
+    {
+      "id": "kling-horwitz",
+      "titulo": "Finales de torres: torre detrás del peón y lado largo",
+      "nivel": 4,
+      "explicacion": [
+        "Cuando el defensor no llega a la posición de Philidor (su rey en la casilla de coronación y la torre en la tercera fila), con un peón central o de alfil todavía tiene un recurso: poner la torre detrás del peón (defensa de Kling y Horwitz). Desde ahí la torre frena el avance y el rey atacante no puede esconderse delante de su peón sin dejarlo indefenso.",
+        "Con el peón ya en sexta y el rey defensor fuera del frente, el único sistema es el lado largo: la torre defensora se va a la columna más alejada del peón y da jaques laterales. De la Villa insiste en dos condiciones: que la torre tenga «efectividad lejana» (al menos tres columnas de distancia del peón, para que los jaques no se puedan cortar) y que impida que el rey atacante vaya a la octava fila.",
+        "Si la torre defensora pierde la efectividad lejana, el bando fuerte gana con una maniobra precisa del rey."
+      ],
+      "ideas": [
+        "Si no llegás a Philidor, poné la torre detrás del peón.",
+        "Con el peón en sexta: torre al lado largo y jaques laterales desde lejos.",
+        "El rey atacante quiere llegar a la octava; la torre defensora tiene que impedirlo."
+      ],
+      "posiciones": [
+        {
+          "id": "torre-detras",
+          "fen": "4k3/7R/3K4/4P3/8/8/8/5r2 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 30,
+          "consigna": "Defensa de Kling y Horwitz: el rey negro no puede ponerse delante del peón. Hay una sola jugada que salva.",
+          "pista": "Te1!: la torre se pone detrás del peón. Desde ahí lo frena y, si el rey blanco avanza, lo deja sin protección.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "f1e1",
+            "dtm": 0,
+            "fecha": "2026-10-09"
+          }
+        },
+        {
+          "id": "efectividad-lejana",
+          "fen": "r2R4/4K1k1/4P3/8/8/8/8/8 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 30,
+          "consigna": "Peón central en sexta. La torre blanca acaba de atacar a la tuya en a8. Hacé tablas.",
+          "pista": "Solo Ta7+ o Ta6 salvan: la torre se queda en la columna a, lejos del peón, para dar jaques laterales e impedir que el rey blanco llegue a la octava.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "a8a6",
+            "dtm": 0,
+            "fecha": "2026-10-09"
+          }
+        },
+        {
+          "id": "sin-efectividad-lejana",
+          "fen": "1r6/R3K1k1/4P3/8/8/8/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 45,
+          "consigna": "Ahora la torre negra está en la columna b, demasiado cerca: perdió la efectividad lejana. Ganá.",
+          "pista": "Rd6+!, la única: un jaque a la descubierta con el rey, que gana el tiempo que hace falta para que los jaques laterales de una torre tan cercana se terminen.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "e7d6",
+            "dtm": 57,
+            "fecha": "2026-10-09"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 10 «Torre y peón contra torre», Finales 56 a 58 (defensa de Kling y Horwitz; peón central en sexta con y sin efectividad lejana)"
         }
       ]
     }
