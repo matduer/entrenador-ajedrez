@@ -96,12 +96,28 @@
     },
     "e2e4 e7e5 g1f3 b8c6 b1c3 f8c5 f3e5": {
       "porQue": "El truco de la horquilla: si ...Cxe5, d4 recupera la pieza con un centro ideal."
+    },
+    "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 a2a3": {
+      "porQue": "El «truco avanzado» que Pinski recomienda a quien no quiere teoría: una jugada de espera que le quita al negro ...Ab4 y ...Cd4, las armas de la Española de cuatro caballos."
+    },
+    "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 a2a3 d7d5": {
+      "porQue": "Lo mejor: el negro aprovecha que el blanco gastó un tiempo para golpear en el centro.",
+      "porQueNo": [
+        {
+          "uci": "f8c5",
+          "texto": "4...Ac5? permite el truco de la horquilla: 5.Cxe5! Cxe5 6.d4, y el blanco recupera la pieza con un buen centro."
+        }
+      ]
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Four Knights Game»"
+    },
+    {
+      "titulo": "Jan Pinski — The Four Knights (Everyman Chess, 2003)",
+      "capitulo": "introducción (recomendaciones por sistema) y cap. 12 «Unusual Fourth Moves by White» (4.a3)"
     },
     {
       "titulo": "Paul Keiser — Critical Lines in the Halloween Gambit (UON 13, 2005)",
@@ -121,7 +137,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-08",
+    "fecha": "2026-10-09",
     "resultados": {
       "e2e4 e7e5 g1f3 b8c6 b1c3": {
         "ok": true,
@@ -202,6 +218,18 @@
       "e2e4 e7e5 g1f3 b8c6 b1c3 f8c5 f3e5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 a2a3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 a2a3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 a2a3 f8c5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,1 → −0,7. Refutación: Cxe5 Cxe5 d4 Ad6 f4 Cc6"
       }
     }
   }
