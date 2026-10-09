@@ -49,6 +49,10 @@
     {
       "jugadas": "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 e4g5 h7h6 g5e6 f7e6 d1h5 g7g6 h5g6",
       "texto": "5.Cg5 h6 6.Ce6! fxe6? 7.Dh5+ g6 8.Dxg6, mate: el ...h6 prematuro debilitó la diagonal e8-h5. Después de 6.Ce6 hay que jugar 6...Da5+ o 6...Db6 y no tomar el caballo."
+    },
+    {
+      "jugadas": "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 f1c4 g8f6 e4g5 e7e6 d1e2 h7h6 g5f7 e8f7 e2e6",
+      "texto": "5.Ac4 Cgf6 6.Cg5 e6 7.De2 h6?? 8.Cxf7! Rxf7 9.Dxe6+: el rey negro queda en el centro bajo un ataque decisivo. Hay que jugar 7...Cb6."
     }
   ],
   "notas": {
@@ -297,6 +301,22 @@
     },
     "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 d1e2 d7f6": {
       "porQue": "Contra 5.De2, la respuesta que recomienda McDonald: el otro caballo va a f6, ataca d4 y el blanco ya no puede evitar el cambio de caballos. Además, la dama de e2 le tapa la salida al alfil de f1."
+    },
+    "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 f1c4 g8f6 e4g5 e7e6 d1e2 d7b6": {
+      "porQue": "La única buena: el caballo ataca al alfil de c4. Con la dama en e2 apuntando a e6, cualquier jugada lenta permite el sacrificio en f7.",
+      "porQueNo": [
+        {
+          "uci": "h7h6",
+          "texto": "7...h6?? 8.Cxf7!: si Rxf7, Dxe6+ y el rey negro queda expuesto, con un ataque ganador."
+        },
+        {
+          "uci": "f8e7",
+          "texto": "7...Ae7?? 8.Cxf7! con la misma idea: la dama de e2 entra en e6."
+        }
+      ]
+    },
+    "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 f1c4 g8f6 e4g5 e7e6 d1e2 d7b6 c4b3 h7h6": {
+      "porQue": "Ahora sí: con el alfil blanco en b3, ...h6 echa al caballo de g5 sin dejar el sacrificio en f7."
     }
   },
   "fuentes": [
@@ -307,6 +327,10 @@
     {
       "titulo": "Neil McDonald — Main Line Caro-Kann (Everyman Chess)",
       "capitulo": "cap. 1 «Modern Main Line with 5.Cg5» y cap. 3 «Other Variations» (5.De2)"
+    },
+    {
+      "titulo": "Eduard Gufeld y Oleg Stetsko — Caro-Kann: Smyslov System 4...Cd7 (trad. Ken Neat, Cadogan, 1998)",
+      "capitulo": "la línea 5.Ac4 Cgf6 6.Cg5 e6 7.De2 Cb6"
     },
     {
       "titulo": "Caro–Kann Defence (Wikipedia en inglés)",
@@ -612,6 +636,22 @@
       "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 d1e2 d7f6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 f1c4 g8f6 e4g5 e7e6 d1e2 d7b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 f1c4 g8f6 e4g5 e7e6 d1e2 h7h6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 46 puntos de chances: −0,1 → −9,2. Refutación: Cxf7 Da5+ Ad2 Db6 Cxh8 Dxb2"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 f1c4 g8f6 e4g5 e7e6 d1e2 f8e7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 42 puntos de chances: −0,1 → −7,0. Refutación: Cxf7 Da5+ Ad2 Db6 Cxh8 Dxb2"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 f1c4 g8f6 e4g5 e7e6 d1e2 d7b6 c4b3 h7h6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
       }
     }
   }
