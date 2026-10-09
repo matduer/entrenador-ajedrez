@@ -80,12 +80,22 @@
     },
     "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 d2d4 d7d6 e5c4 f5e4 b1c3 f6g6 f2f3": {
       "porQue": "La recomendación de Aguilera: abre la columna f y ataca el peón de e4 antes de que el negro termine de desarrollarse. Con ...exf3 Dxf3 el blanco completa el desarrollo con ventaja clara (Stockfish: unos +1,7)."
+    },
+    "e2e4 e7e5 g1f3 f7f5 f1c4 f5e4 f3e5": {
+      "porQue": "Lo mejor contra 3...fxe4: el blanco recupera el peón y apunta a f7 y a Dh5+."
+    },
+    "e2e4 e7e5 g1f3 f7f5 f1c4 f5e4 f3e5 d7d5": {
+      "porQue": "La Variante Svedenborg, que Kosten estudia en el cap. 8: el peón corta la diagonal del alfil hacia g8 y lo ataca. Es la preferida de Stockfish; después de 5.Dh5+ g6 6.Cxg6 hay que defender con precisión, pero la posición queda equilibrada. La alternativa más tajante, 4...Dg5 (cap. 7), es mucho más arriesgada."
     }
   },
   "fuentes": [
     {
       "titulo": "Ricardo Aguilera — El espíritu de la apertura (3.ª ed., Madrid, 1973)",
       "capitulo": "lección 18.ª «Contragambito del Greco» (la línea principal con 7.f3)"
+    },
+    {
+      "titulo": "Tony Kosten — The Latvian Gambit Lives! (Batsford, 2001)",
+      "capitulo": "caps. 7 (3.Ac4 fxe4 4.Cxe5 Dg5) y 8 «Svedenborg's variation 4...d5»"
     },
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
@@ -162,6 +172,14 @@
       "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 d2d4 d7d6 e5c4 f5e4 b1c3 f6g6 f2f3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +1,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 f7f5 f1c4 f5e4 f3e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 f7f5 f1c4 f5e4 f3e5 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,2 para el bando que mueve"
       }
     }
   }
