@@ -96,6 +96,7 @@ Regla de trabajo pedida por el usuario: **si un libro trae un problema, se anota
    - ✅ Davies *Starting Out: The Modern* (Everyman, 2008): 2.f4 d5!, ...c5 contra los Tres Peones y el esquema ...e6/...Ce7 contra el Austríaco. Su temor a 4...Cc6 5.Ab5 no lo confirma Stockfish (5.Ab5 pierde 0,12), así que no se menciona.
    - ✅ McDonald *Main Line Caro-Kann*: dos celadas (5.De2 Cgf6?? 6.Cd6#; 5.Cg5 h6 6.Ce6! fxe6? 7.Dh5+) y la respuesta 5...Cdf6 a 5.De2. Kotronias *Beating the Caro-Kann*: texto ilegible, la línea ya está cubierta.
    - ✅ Moskalenko *La Defensa Francesa* (Esfera, 2008): 5 notas (5...Ch6 en el Avance, el tornillo de Kortchnoi 4...d4 contra el gambito 4.b4, el Anti-Winawer 4.Cge2, 6...Da5 en la Winawer); tres marcadas `inferior` (Stockfish las ve algo peores, 0,09-0,11).
+   - ✅ Cuadernos de Ajedrez (Sistac): Philidor n.º 64 (4...dxe5? de la Hanham, 6.Cg5 imprecisa, ...c5! en la Línea del Cambio) y Dos Caballos n.º 34 (4.Cc3 Cxe4! y la celada 6.Ab5? dxe4 7.Cxe5 Dg5!).
    - Inventario 2026-10-09: ~50 aperturas sin libro propio. Con texto: Moskalenko (Francesa), *Play the French*, *Symmetrical English*, Philidor y Italiana (en castellano). OCR en cola: Panjwani (Dragón Hiperacelerado), Petrov, Escandinava, Karpov (Inglesa), Francesa Tarrasch, Benoni, Grünfeld fianchetto, Reca (Caro-Kann).
 
 ## Registro de problemas (para retomar al final)

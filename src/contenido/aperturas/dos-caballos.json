@@ -24,6 +24,10 @@
     {
       "jugadas": "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 f6d5 g5f7 e8f7 d1f3 f7e6 b1c3",
       "texto": "Fried Liver: tras 5...Cxd5? 6.Cxf7! Rxf7 7.Df3+ Re6 8.Cc3, el rey negro queda en el centro y el caballo de d5 está clavado."
+    },
+    {
+      "jugadas": "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 b1c3 f6e4 c3e4 d7d5 c4b5 d5e4 f3e5 d8g5",
+      "texto": "4.Cc3 Cxe4! 5.Cxe4 d5 6.Ab5? dxe4 7.Cxe5 Dg5!: doble amenaza sobre e5 y g2, con el alfil de b5 sin defensa. El negro queda con clara ventaja."
     }
   ],
   "notas": {
@@ -201,12 +205,33 @@
           "texto": "6.dxc6 bxc4 y el negro recupera la pieza con un buen juego."
         }
       ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 b1c3 f6e4 c3e4": {
+      "porQue": "Lo mejor: recupera la pieza enseguida, aunque después de ...d5 el negro gana tiempo atacando el caballo y el alfil.",
+      "porQueNo": [
+        {
+          "uci": "c4f7",
+          "texto": "5.Axf7+ Rxf7 6.Cxe4 d5: el rey negro pierde el enroque, pero gana el centro y la columna f; Stockfish da ventaja negra."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 b1c3 f6e4 c3e4 d7d5 c4d3": {
+      "porQue": "Lo correcto: el alfil se aparta y defiende el caballo. Después de ...dxe4 Axe4 Ad6 el negro iguala sin problemas.",
+      "porQueNo": [
+        {
+          "uci": "c4b5",
+          "texto": "6.Ab5?, buscando doblarle los peones al negro, choca con 6...dxe4 7.Cxe5 Dg5!: la dama ataca el caballo de e5 y el peón de g2, y el alfil de b5 queda colgando."
+        }
+      ]
     }
   },
   "fuentes": [
     {
       "titulo": "Jacob B. Estrin — La Defensa de los Dos Caballos (trad. Victor Andresco y Yolanda Peralta; prólogo y partidas comentadas por Tigran Petrosian; Ricardo Aguilera, Madrid; © 1968, depósito legal 1973)",
       "capitulo": "«Primer sistema: 4.C5C»: variante principal con 8.A2R y 11.P4AR, variante de Bogoljubov (8.D3A), variantes de Fritz (5...C5D) y Ulvestad (5...P4C)"
+    },
+    {
+      "titulo": "Horacio Sistac — «Defensa de los Dos Caballos: Variante Clásica», Cuadernos de Ajedrez n.º 34 (octubre de 2010)"
     },
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
@@ -230,7 +255,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-08",
+    "fecha": "2026-10-09",
     "resultados": {
       "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 c6a5 c4b5": {
         "ok": true,
@@ -407,6 +432,22 @@
       "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 b7b5 d5c6 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 5 puntos de chances: +0,4 → −0,1. Refutación: bxc4 Cc3 Ab4 O-O O-O d3"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 b1c3 f6e4 c3e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 b1c3 f6e4 c4f7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 14 puntos de chances: −0,1 → −1,7. Refutación: Rxf7 Cxe4 d5 Cg3 e4 Cg1"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 b1c3 f6e4 c3e4 d7d5 c4d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 b1c3 f6e4 c3e4 d7d5 c4b5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 22 puntos de chances: −0,1 → −2,7. Refutación: dxe4 Cxe5 Dg5 d4 Dxg2 Tf1"
       }
     }
   }
