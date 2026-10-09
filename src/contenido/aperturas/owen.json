@@ -71,12 +71,31 @@
     },
     "e2e4 b7b6 d2d4 c8b7 f1d3 e7e6 g1f3 c7c5 c2c3": {
       "porQue": "Consolida el centro: c3 sostiene d4 y el alfil de b7 choca contra e4."
+    },
+    "e2e4 b7b6 d2d4 c8b7 f1d3 g8f6": {
+      "porQue": "La especialidad de Blatny que menciona Bauer como alternativa a 3...e6: ataca e4 enseguida."
+    },
+    "e2e4 b7b6 d2d4 c8b7 f1d3 g8f6 d1e2": {
+      "porQue": "La respuesta principal: defiende e4 sin cambiar la estructura. Según Bauer, cualquier otra cuarta jugada obliga al blanco a alguna concesión.",
+      "porQueNo": [
+        {
+          "uci": "e4e5",
+          "texto": "4.e5? Axg2: el alfil de b7 toma el peón de g2 y ataca la torre de h1; después de exf6 Axh1 el negro queda con ventaja."
+        }
+      ]
+    },
+    "e2e4 b7b6 d2d4 c8b7 b1c3 e7e6 g1f3 f8b4 f1d3 g8f6": {
+      "porQue": "La otra línea principal según Bauer: el negro clava el caballo de c3 y presiona e4. Bauer reconoce que es delicada para el negro y que no asegura la igualdad; Stockfish le da al blanco algo más de medio peón."
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Other 1 e4 Openings», 1...b6"
+    },
+    {
+      "titulo": "Christian Bauer — Play 1...b6 (Everyman Chess, 2005)",
+      "capitulo": "cap. 1 «1.e4 b6», introducción"
     },
     {
       "titulo": "Owen's Defence (Wikipedia en inglés)",
@@ -92,7 +111,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-09",
     "resultados": {
       "e2e4 b7b6": {
         "ok": true,
@@ -137,6 +156,22 @@
       "e2e4 b7b6 d2d4 c8b7 f1d3 e7e6 g1f3 c7c5 c2c3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +1,0 para el bando que mueve"
+      },
+      "e2e4 b7b6 d2d4 c8b7 f1d3 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,0 para el bando que mueve"
+      },
+      "e2e4 b7b6 d2d4 c8b7 f1d3 g8f6 d1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,0 para el bando que mueve"
+      },
+      "e2e4 b7b6 d2d4 c8b7 f1d3 g8f6 e4e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 27 puntos de chances: +1,0 → −2,1. Refutación: Axg2 exf6 Axh1 Cc3 Cc6 Dg4"
+      },
+      "e2e4 b7b6 d2d4 c8b7 b1c3 e7e6 g1f3 f8b4 f1d3 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
       }
     }
   }
