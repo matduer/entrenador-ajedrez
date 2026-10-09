@@ -95,12 +95,22 @@
           "texto": "...e5 y ...Ag4: el caballo en g5 no tiene futuro."
         }
       ]
+    },
+    "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3 c7c5 g2g3 b8c6 f1g2 f8e7 e1g1 e8g8 f1e1 a8b8 e4e5 f6d7 d2f1": {
+      "porQue": "El plan clásico de Botvinnik-Uhlmann (Moscú, 1956), que Shamkovich comenta en la introducción: e5 gana espacio y le quita f6 al caballo negro; el caballo de d2 va por f1 hacia h2, g4 o e3 para atacar el enroque."
+    },
+    "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3 c7c5 g2g3 b8c6 f1g2 f8e7 e1g1 e8g8 f1e1 a8b8 e4e5 f6d7 d2f1 b7b5": {
+      "porQue": "La respuesta típica: mientras el blanco ataca en el flanco de rey, el negro avanza en el de dama (...b4, ...a5) para abrir líneas. La partida se decide por quién llega antes."
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Réti Opening», sección sobre el Ataque Indio de Rey (2 g3 con d3 y e4)"
+    },
+    {
+      "titulo": "John Hall y Jan R. Cartier — Modern King's Indian Attack (Hays Publishing, 1996)",
+      "capitulo": "introducción de Leonid Shamkovich (Botvinnik-Uhlmann, Moscú 1956)"
     },
     {
       "titulo": "King's Indian Attack (Wikipedia en inglés)",
@@ -116,7 +126,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-09",
     "resultados": {
       "e2e4 e7e6 d2d3 d7d5": {
         "ok": true,
@@ -189,6 +199,14 @@
       "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3 c7c5 g2g3 b8c6 f1g2 f8e7 e1g1 e8g8 f3g5 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 4 puntos de chances: −0,0 → −0,5. Refutación: Dc7 Te1 Td8 exd5 exd5 Cgf3"
+      },
+      "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3 c7c5 g2g3 b8c6 f1g2 f8e7 e1g1 e8g8 f1e1 a8b8 e4e5 f6d7 d2f1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3 c7c5 g2g3 b8c6 f1g2 f8e7 e1g1 e8g8 f1e1 a8b8 e4e5 f6d7 d2f1 b7b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
       }
     }
   }
