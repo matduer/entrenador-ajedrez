@@ -114,12 +114,23 @@
     },
     "e2e4 d7d5 e4d5 g8f6 d2d4 c8g4": {
       "porQue": "Variante Portuguesa: desarrolla el alfil antes de recuperar el peón, con juego muy activo."
+    },
+    "e2e4 d7d5 e4d5 g8f6 d2d4 c8g4 f2f3": {
+      "porQue": "La respuesta más directa, y la que prefiere Stockfish: echa al alfil y busca quedarse con el peón de d5. A cambio, como señala Anderson, le quita f3 al caballo y debilita e3, que el negro puede presionar por la columna e."
+    },
+    "e2e4 d7d5 e4d5 g8f6 d2d4 c8g4 f2f3 g4f5": {
+      "inferior": true,
+      "porQue": "El negro sigue con su gambito: ...e6 para abrir líneas y aprovechar su ventaja de desarrollo. Contra 5.c4 e6, Anderson deja abierta la evaluación («quizás»). Stockfish la considera algo inferior a 4...Ad7 y contesta 5.g4."
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Other 1 e4 Openings», sección «Scandinavian Defence»"
+    },
+    {
+      "titulo": "Selby Anderson — Center Counter Defense: The Portuguese Variation (Pickard & Son, 1997)",
+      "capitulo": "cap. 2 «The Sharp 4.f3»"
     },
     {
       "titulo": "Scandinavian Defense (Wikipedia en inglés)",
@@ -135,7 +146,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-09",
     "resultados": {
       "e2e4 d7d5": {
         "ok": true,
@@ -232,6 +243,14 @@
       "e2e4 d7d5 e4d5 g8f6 d2d4 c8g4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4d5 g8f6 d2d4 c8g4 f2f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4d5 g8f6 d2d4 c8g4 f2f3 g4f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,1 para el bando que mueve"
       }
     }
   }
