@@ -111,6 +111,21 @@
     },
     "e2e4 c7c5 c2c3 g8f6 e4e5 f6d5 g2g3 d7d6 e5d6 e7e6": {
       "porQue": "El pequeño truco que muestra Rogozenko: en lugar de retomar con la dama, ...e6 para tomar en d6 con el alfil, que así se desarrolla con tiempo."
+    },
+    "e2e4 c7c5 c2c3 g8f6 e4e5 f6d5 d2d4 c5d4 g1f3 e7e6": {
+      "porQue": "Defiende el caballo de d5, así que ahora amenaza ...dxc3. A cambio, el alfil de c8 queda encerrado detrás de e6. Algunos especialistas la consideran inferior, pero Collins no ve motivo para eso, y Stockfish la da como jugable."
+    },
+    "e2e4 c7c5 c2c3 g8f6 e4e5 f6d5 d2d4 c5d4 g1f3 e7e6 c3d4": {
+      "porQue": "La recaptura natural: el blanco queda con los peones de d4 y e5."
+    },
+    "e2e4 c7c5 c2c3 g8f6 e4e5 f6d5 d2d4 c5d4 g1f3 e7e6 c3d4 d7d6": {
+      "porQue": "Ataca la punta de la cadena (e5) y libera d7 para el caballo o el alfil."
+    },
+    "e2e4 c7c5 c2c3 g8f6 e4e5 f6d5 d2d4 c5d4 g1f3 e7e6 c3d4 d7d6 f1c4": {
+      "porQue": "Alfil agresivo, que presiona al caballo de d5 y prepara el enroque. La gran alternativa es 7.a3, para llevar el alfil a d3 sin permitir la molesta ...Cb4."
+    },
+    "e2e4 c7c5 c2c3 g8f6 e4e5 f6d5 d2d4 c5d4 g1f3 b8c6": {
+      "porQue": "Mantiene las opciones abiertas: el alfil de c8 todavía puede ir a g4, o el negro puede pasar a las líneas con ...e6. Es la preferida de Stockfish."
     }
   },
   "fuentes": [
@@ -121,6 +136,10 @@
     {
       "titulo": "Dorian Rogozenko — Anti-Sicilians: A Guide for Black (Gambit, 2003)",
       "capitulo": "cap. 4 «The Alapin Variation (2 c3)»: introducción, terceras jugadas raras y línea B1 (4.g3)"
+    },
+    {
+      "titulo": "Sam Collins — Chess Explained: The c3 Sicilian (Gambit, 2007)",
+      "capitulo": "cap. 1 «2...Cf6: Lines with cxd4», introducción y partida 1 (Pavasovic-Halkias)"
     },
     {
       "titulo": "Sicilian Defence, Alapin Variation (Wikipedia en inglés)",
@@ -227,6 +246,26 @@
         "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
       },
       "e2e4 c7c5 c2c3 g8f6 e4e5 f6d5 g2g3 d7d6 e5d6 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 c2c3 g8f6 e4e5 f6d5 d2d4 c5d4 g1f3 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 c2c3 g8f6 e4e5 f6d5 d2d4 c5d4 g1f3 e7e6 c3d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 c2c3 g8f6 e4e5 f6d5 d2d4 c5d4 g1f3 e7e6 c3d4 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 c2c3 g8f6 e4e5 f6d5 d2d4 c5d4 g1f3 e7e6 c3d4 d7d6 f1c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 c2c3 g8f6 e4e5 f6d5 d2d4 c5d4 g1f3 b8c6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
       }
