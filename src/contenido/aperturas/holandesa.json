@@ -23,7 +23,12 @@
     "Caballo negro: f6 y después e4.",
     "Alfil negro de c8: el problema del Stonewall, como en la Francesa."
   ],
-  "trampas": [],
+  "trampas": [
+    {
+      "jugadas": "d2d4 f7f5 c2c4 g8f6 g2g3 e7e6 f1g2 f8b4 c1d2 b4d2 b1d2 b8c6 g1f3 e8g8 e1g1 d7d6 d1b3 g8h8 b3c3 e6e5 d4e5 d6e5 f3e5 c6e5 c3e5 d8d2",
+      "texto": "11.dxe5 dxe5 12.Cxe5?? Cxe5 13.Dxe5 Dxd2: el caballo de d2 quedó sin defensa cuando la dama salió a cazar el peón."
+    }
+  ],
   "notas": {
     "d2d4 f7f5": {
       "porQue": "Controla e4 desde el costado y prepara juego en el flanco de rey.",
@@ -153,6 +158,15 @@
           "texto": "Tomar con el peón de g deja al rey sin refugio: e4 abre el centro y el negro sufre."
         }
       ]
+    },
+    "d2d4 f7f5 c2c4 g8f6 g2g3 e7e6 f1g2 f8b4": {
+      "porQue": "Una forma de desarrollar el alfil en la Holandesa Clásica: jaque y cambio en d2, como en la «inmortal» de Alekhine contra Bogoljubow (Hastings, 1922), que Williams analiza en su introducción."
+    },
+    "d2d4 f7f5 c2c4 g8f6 g2g3 e7e6 f1g2 f8b4 c1d2 b4d2 b1d2 b8c6 g1f3 e8g8 e1g1 d7d6 d1b3 g8h8 b3c3 e6e5": {
+      "porQue": "Para Williams, una jugada clave: gana espacio en el centro y prepara el ataque en el flanco de rey. Stockfish la considera la mejor."
+    },
+    "d2d4 f7f5 c2c4 g8f6 g2g3 e7e6 f1g2 f8b4 c1d2 b4d2 b1d2 b8c6 g1f3 e8g8 e1g1 d7d6 d1b3 g8h8 b3c3 e6e5 e2e3 a7a5 b2b3 d8e8": {
+      "porQue": "Otro plan típico de la Holandesa Clásica: la dama va a h5, y el negro amenaza ...f4, ...Ah3 y ...Cg4 contra el enroque blanco."
     }
   },
   "fuentes": [
@@ -163,6 +177,10 @@
     {
       "titulo": "Neil McDonald — Play the Dutch (Everyman, 2010)",
       "capitulo": "Caps. 2, «White Plays 2 Nc3», y 3, «White Plays 2 Bg5» (2...h6 3.Ah4 g5)"
+    },
+    {
+      "titulo": "Simon Williams — Play the Classical Dutch (Gambit, 2003)",
+      "capitulo": "introducción (Bogoljubow-Alekhine, Hastings 1922)"
     },
     {
       "titulo": "Dutch Defence (Wikipedia en inglés)",
@@ -178,7 +196,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-08",
+    "fecha": "2026-10-09",
     "resultados": {
       "d2d4 f7f5": {
         "ok": true,
@@ -311,6 +329,18 @@
       "d2d4 f7f5 b1c3 g8f6 c1g5 d7d5 g5f6 g7f6 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 18 puntos de chances: −0,3 → −2,4. Refutación: e4 h5 exd5 c6 Ae2 cxd5"
+      },
+      "d2d4 f7f5 c2c4 g8f6 g2g3 e7e6 f1g2 f8b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 f7f5 c2c4 g8f6 g2g3 e7e6 f1g2 f8b4 c1d2 b4d2 b1d2 b8c6 g1f3 e8g8 e1g1 d7d6 d1b3 g8h8 b3c3 e6e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "d2d4 f7f5 c2c4 g8f6 g2g3 e7e6 f1g2 f8b4 c1d2 b4d2 b1d2 b8c6 g1f3 e8g8 e1g1 d7d6 d1b3 g8h8 b3c3 e6e5 e2e3 a7a5 b2b3 d8e8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
       }
     }
   }

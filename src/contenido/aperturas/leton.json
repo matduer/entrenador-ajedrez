@@ -85,7 +85,7 @@
       "porQue": "Lo mejor contra 3...fxe4: el blanco recupera el peón y apunta a f7 y a Dh5+."
     },
     "e2e4 e7e5 g1f3 f7f5 f1c4 f5e4 f3e5 d7d5": {
-      "porQue": "La Variante Svedenborg, que Kosten estudia en el cap. 8: el peón corta la diagonal del alfil hacia g8 y lo ataca. Es la preferida de Stockfish; después de 5.Dh5+ g6 6.Cxg6 hay que defender con precisión, pero la posición queda equilibrada. La alternativa más tajante, 4...Dg5 (cap. 7), es mucho más arriesgada."
+      "porQue": "La Variante Svedenborg, que Kosten estudia en el cap. 8: el peón corta la diagonal del alfil hacia g8 y lo ataca. Es la preferida de Stockfish; después de 5.Dh5+ g6 6.Cxg6 hay que defender con precisión, pero la posición queda equilibrada. La alternativa más tajante, 4...Dg5 (cap. 7), es más arriesgada."
     }
   },
   "fuentes": [
