@@ -2877,6 +2877,58 @@
           "capitulo": "cap. 10 «Torre y peón contra torre», Finales 56 a 58 (defensa de Kling y Horwitz; peón central en sexta con y sin efectividad lejana)"
         }
       ]
+    },
+    {
+      "id": "hombro-y-pendulo",
+      "titulo": "Finales de peones: el hombro y el péndulo",
+      "nivel": 3,
+      "explicacion": [
+        "«Apartar con el hombro»: a veces el rey no tiene que ir por el camino más corto, sino por uno que le cierre el paso al rey rival y le impida llegar a tiempo a una zona importante del tablero. En Schlage-Ahues (Berlín, 1921), el blanco tenía que ganar el peón de a7 sin dejar que el rey negro llegara a c7 y lo encerrara en la esquina.",
+        "El péndulo es una técnica defensiva elemental: el rey va y viene entre dos casillas, siempre en condiciones de atrapar al peón rival o de volver a la casilla clave, según lo que haga el otro rey."
+      ],
+      "ideas": [
+        "Elegí la ruta del rey que, de paso, empuja al rey rival lejos de su objetivo.",
+        "No siempre la línea recta es lo mejor: mirá a dónde quiere ir el rey contrario.",
+        "Defendiendo, un vaivén entre dos casillas puede alcanzar para vigilar un peón y la casilla clave a la vez."
+      ],
+      "posiciones": [
+        {
+          "id": "el-hombro",
+          "fen": "8/p4K2/P7/8/8/8/1k6/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 35,
+          "consigna": "Schlage-Ahues (Berlín, 1921): el peón de a7 cae seguro, pero si el rey negro llega a c7 te encierra en la esquina. Ganá.",
+          "pista": "Re6! y, después de Rc3, Rd5! (la idea de Maizelis): el rey blanco va hacia a7 por un camino que le corta el paso al rey negro hacia c7. En la partida, 2.Rd6? permitió Rd4 y fue tablas.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "f7e6",
+            "dtm": 33,
+            "fecha": "2026-10-09"
+          }
+        },
+        {
+          "id": "el-pendulo",
+          "fen": "8/8/8/5p2/8/P7/4k1K1/8 w - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 25,
+          "consigna": "El rey negro amenaza escoltar su peón. Hacé tablas.",
+          "pista": "Rg3!, la única: si Re3, Rg2!, y si el peón avanza a f4, Rf1. El rey blanco va y viene, siempre cerca del peón y de su casilla de coronación.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "g2g3",
+            "dtm": 0,
+            "fecha": "2026-10-09"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Mark Dvoretsky — Dvoretsky's Endgame Manual (Russell Enterprises, 2003)",
+          "capitulo": "cap. 1 «Pawn Endgames», «The King Routes»: «The Pendulum» (1-93) y «Shouldering» (1-95, Schlage-Ahues, Berlín 1921)"
+        }
+      ]
     }
   ]
 }
