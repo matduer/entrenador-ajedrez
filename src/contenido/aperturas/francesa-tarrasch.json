@@ -78,12 +78,28 @@
     },
     "e2e4 e7e6 d2d4 d7d5 b1d2 f8e7 e4e5 c7c5 d1g4 e8f8": {
       "porQue": "El rey se aparta antes que debilitar el flanco con ...g6; Stockfish la prefiere. Watson considera que 5...g6 también es jugable, porque sus debilidades no son fáciles de explotar."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1d2 c7c5 e4d5 d8d5 g1f3 c5d4 f1c4 d5d6": {
+      "porQue": "La retirada de la línea principal: la dama queda en d6, a salvo y vigilando el centro. El blanco recupera el peón de d4 con Cb3 y Cbxd4, y se llega a la posición que Pedersen llama la línea principal (10.Cxd4): más desarrollo para el blanco, estructura sana para el negro."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1d2 a7a6": {
+      "porQue": "Una jugada de espera que Pedersen estudia con los temas del peón aislado: si el blanco sigue con Cgf3, ...c5 lleva a estructuras de peón aislado en las que la casilla b5 ya está controlada.",
+      "porQueNo": [
+        {
+          "uci": "c7c6",
+          "texto": "3...c6 es demasiado lenta: muchas veces el negro termina jugando ...c5 igual, con un tiempo de menos."
+        }
+      ]
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«French Defence», sección «Tarrasch Variation»"
+    },
+    {
+      "titulo": "Steffen Pedersen — The French: Tarrasch Variation (Gambit, 2005)",
+      "capitulo": "introducción y caps. 1 (4...Dxd5: línea principal con 10.Cxd4) y 12 (3...a6)"
     },
     {
       "titulo": "John Watson — Play the French (3.ª ed., Everyman Chess, 2003)",
@@ -172,6 +188,18 @@
       "e2e4 e7e6 d2d4 d7d5 b1d2 f8e7 e4e5 c7c5 d1g4 e8f8": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1d2 c7c5 e4d5 d8d5 g1f3 c5d4 f1c4 d5d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1d2 a7a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1d2 c7c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,2 → −0,9. Refutación: Cgf3 Cf6 Ad3 c5 e5 Cfd7"
       }
     }
   }
