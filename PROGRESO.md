@@ -40,7 +40,7 @@ Resumen para retomar el trabajo en cualquier sesión. El detalle de métodos y h
 - Polgár: 467 miniaturas. Fischer, *My 60 Memorable Games*: 50 de 60. *Partidas de personajes históricos*: 33 (`scripts/preparar-partidas-personajes.ts`). Capablanca, *Fundamentos del ajedrez*: las 14 partidas modelo (`scripts/preparar-partidas-capablanca.ts`). Lenyb, *Defensa de los Dos Caballos: 3750 partidas modelo* (2013): las 335 anteriores a 1950 que no estaban (3 excluidas porque el resultado no cuadra con la posición final) (`scripts/preparar-partidas-lenyb.ts`; las posteriores son casi todas de aficionados). Control: `scripts/verificar-partidas-libros.ts <prefijo>` (en la posición final, el ganador no puede estar peor para Stockfish).
 - Pendiente: Crouch *Modern Chess: Move by Move*, Rubinstein (Donaldson y Minev), Keres, Kasparov… El OCR tiene las figuras ilegibles; `scripts/lib-ocr-jugadas.ts` reconstruye jugadas, pero todavía no completa ninguna partida de Crouch.
 
-### Finales: 47 temas, 101 posiciones
+### Finales: 48 temas, 107 posiciones
 - Agregados el 2026-10-08: peones separados (cuadrado común), ruptura, carreras (Réti; mate con peones de Silman), torre en séptima, torre delante de su peón en séptima, torre y dos contra torre y uno; dama contra peón de torre con el rey cerca.
 - 2026-10-08 (tarde): alfil contra caballo con un peón (De la Villa, cap. 8): la diagonal larga, el recurso de Lloyd con peón de torre, el rey del color del caballo y el zugzwang con peón en séptima.
 - 2026-10-08 (tarde): más De la Villa: torre contra dos peones ligados (cap. 6), el rey cortado (cortes de una y dos columnas con la maniobra de Grigoriev; corte horizontal perfecto e imperfecto, finales 59 a 63) y peones doblados (final 77).
@@ -49,7 +49,8 @@ Resumen para retomar el trabajo en cualquier sesión. El detalle de métodos y h
 - 2026-10-08 (tarde): Silman, carreras extrañas (diagramas 213 y 215) y bombas tácticas (171 a 174, la ruptura ...b3! y su prevención 1.b3!).
 - 2026-10-08 (noche): Keres, *Finales prácticos* (escaneo; texto por OCR, posiciones transcriptas mirando el diagrama): estudio de Grigoriev y el peón pasado protegido.
 - 2026-10-09: Keres, cap. 3: dama y peón en séptima contra dama (diagramas 91, 94 y 95: rey en la esquina, peón central, peón de alfil); cap. 6: caballo y peón contra caballo (Kling 1867, diag. 322 con 3.Cb8+!, Réti 1929 con 1.Cc5! única, y la defensa de Goldenov-Kan 1946 con 5.Rg3! única). Todo con tablebase. El PDF es una transcripción digital con diagramas limpios: no hace falta OCR, se lee mirando la página.
-- Pendiente: más de Keres (caps. 4 y 5: torre y alfil; revisar qué no está ya cubierto) y de Silman (torre y peón en 4.ª o 5.ª fila, Parte Ocho); De la Villa caps. 11 (T+2P contra T) y 13, y el final 56 (Kling y Horwitz). Hecho también el final 55 (defensa de la primera fila con peón de caballo).
+- 2026-10-09: Keres, cap. 5: alfil contra peones (Otten 1892; dos peones ligados, diag. 232, 234 y 234b) y tres posiciones de alfil y peón contra alfil del mismo color (diag. 241, 243, 244). Caps. 4 (torre) y 5.5-5.6 (alfil contra caballo) se saltean: el temario ya cubre esos temas con De la Villa y Silman.
+- Pendiente: De la Villa cap. 11 y 13, finales 55-56; Dvoretsky y Chernev, solo lo que falte. y de Silman (torre y peón en 4.ª o 5.ª fila, Parte Ocho); De la Villa caps. 11 (T+2P contra T) y 13, y el final 56 (Kling y Horwitz). Hecho también el final 55 (defensa de la primera fila con peón de caballo).
 
 ### Aperturas: 74 archivos
 - 2026-10-08 (tarde): Estrin, *La Defensa de los Dos Caballos*, en los Dos Caballos (Polerio, Bogoljubov, Fritz, Ulvestad).

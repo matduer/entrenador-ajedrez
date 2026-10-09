@@ -1401,7 +1401,8 @@
       "explicacion": [
         "Si el rey defensor se instala delante del peón en una casilla del color contrario al de los alfiles, es tablas sin discusión. El interés empieza cuando no puede.",
         "Si el rey defensor está lejos, el bando fuerte gana expulsando al alfil rival de las dos diagonales que controlan la casilla de avance del peón: ofrece el cambio de alfiles en una casilla que no tape a su propio peón, y el alfil rival tiene que irse o cambiarse.",
-        "La defensa ideal, cuando el rey no llega adelante, es la oposición por detrás: el rey defensor se pone detrás del rey atacante e impide que ofrezca el cambio sin tapar su peón. Esto alcanza si las dos diagonales tienen cuatro casillas o más; si una es más corta, el alfil y el rey atacante pueden dominarla y se gana."
+        "La defensa ideal, cuando el rey no llega adelante, es la oposición por detrás: el rey defensor se pone detrás del rey atacante e impide que ofrezca el cambio sin tapar su peón. Esto alcanza si las dos diagonales tienen cuatro casillas o más; si una es más corta, el alfil y el rey atacante pueden dominarla y se gana.",
+        "Keres lo resume así: el defensor necesita poder frenar el peón desde dos diagonales, y que cada una tenga al menos cuatro casillas; si el rey atacante llega a tiempo al lado de la diagonal corta, se gana."
       ],
       "ideas": [
         "Atacando: ofrecer el cambio de alfiles en una casilla que no bloquee el peón.",
@@ -1423,6 +1424,51 @@
             "dtm": 25,
             "fecha": "2026-10-09"
           }
+        },
+        {
+          "id": "expulsar-al-alfil",
+          "fen": "3k4/5K2/4P3/2b5/8/2B5/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 30,
+          "consigna": "El rey negro no llegó a ponerse delante del peón. Ganá.",
+          "pista": "La maniobra de Keres: Af6+ para alejar al rey negro, y después el alfil va a e7, d6 y e5 para echar al alfil negro de cada diagonal que vigila e7, hasta que el peón avanza.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "c3g7",
+            "dtm": 25,
+            "fecha": "2026-10-09"
+          }
+        },
+        {
+          "id": "la-casilla-critica",
+          "fen": "8/5K2/4P3/3k2B1/1b6/8/8/8 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 30,
+          "consigna": "Te toca con negras. Las blancas amenazan llevar el alfil a f6. Hay una sola jugada que salva.",
+          "pista": "Re4!: el rey tiene que llegar a f5 a tiempo, para que el alfil blanco no pueda instalarse en f6 y el negro conserve dos diagonales (c5-a3 y d8-h4) contra el peón.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "d5e4",
+            "dtm": 0,
+            "fecha": "2026-10-09"
+          }
+        },
+        {
+          "id": "diagonal-corta",
+          "fen": "5K2/5P2/4k2B/2b5/8/8/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 35,
+          "consigna": "Peón de alfil: una de las diagonales del negro es muy corta. Ganá.",
+          "pista": "El rey blanco va hacia el lado donde la diagonal defensiva del negro es más corta (Keres: Rg8!), para que el alfil, con ayuda del rey, la domine y fuerce el avance f8.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "f8g8",
+            "dtm": 33,
+            "fecha": "2026-10-09"
+          }
         }
       ],
       "fuentes": [
@@ -1433,6 +1479,10 @@
         {
           "titulo": "Jeremy Silman — El curso de finales completo (Siles Press, 2007)",
           "capitulo": "Parte Siete (ELO 2000-2199): «Finales de Alfil (Alfil y Peón[es] contra Alfil del mismo color)»"
+        },
+        {
+          "titulo": "Paul Keres — Finales prácticos (edición electrónica en notación algebraica, «Club de Ajedrez»)",
+          "capitulo": "cap. 5 «Finales de alfil», 5.2 «Alfil y peón contra alfil», diagramas 241, 243 y 244"
         }
       ]
     },
@@ -2669,6 +2719,74 @@
         {
           "titulo": "Paul Keres — Finales prácticos (edición electrónica en notación algebraica, «Club de Ajedrez»)",
           "capitulo": "cap. 6 «Finales de caballo», 6.3 «Caballo y peón(es) contra caballo», diagramas 321 a 324"
+        }
+      ]
+    },
+    {
+      "id": "alfil-contra-peones",
+      "titulo": "Alfil contra peones",
+      "nivel": 3,
+      "explicacion": [
+        "Como pieza de largo alcance, el alfil suele arreglárselas bien contra los peones: frena uno solo sin problemas, y muchas veces también dos ligados si no están muy avanzados (como regla general, sin los reyes cerca, que no hayan pasado de la quinta fila).",
+        "Contra dos peones ligados, el defensor tiene que actuar enseguida: los peones quieren avanzar por casillas del color que controla el alfil, porque si van a casillas del otro color quedan bloqueados. Si el alfil llega a tiempo a la diagonal que vigila la casilla de avance, las tablas son fáciles; si está una diagonal más lejos, un solo avance alcanza para que uno de los peones corone.",
+        "Hay excepciones: si el rey defensor está mal ubicado, un sacrificio de peón puede cortarle el camino al alfil."
+      ],
+      "ideas": [
+        "El alfil frena un peón desde lejos: lo importante es llegar a tiempo a la diagonal correcta.",
+        "Con dos peones ligados, el que ataca avanza por casillas del color del alfil.",
+        "Un sacrificio de peón puede desviar al rey o al alfil defensor de la diagonal clave."
+      ],
+      "posiciones": [
+        {
+          "id": "sacrificio-de-otten",
+          "fen": "8/6b1/5k2/8/P3K1P1/8/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 30,
+          "consigna": "Estudio de Otten (1892): parece tablas, pero el rey negro está mal ubicado. Ganá.",
+          "pista": "a5! (es la única): el alfil busca la diagonal a7-g1 por c5. Después de Af8, Rd5 impide Ac5, y g5+! desvía al rey o al alfil de esa diagonal.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "a4a5",
+            "dtm": 39,
+            "fecha": "2026-10-09"
+          }
+        },
+        {
+          "id": "peones-ligados-ganan",
+          "fen": "8/6b1/8/1PP5/8/5k2/8/7K w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 30,
+          "consigna": "Dos peones ligados contra alfil, con los reyes lejos. El alfil negro está en g7. Ganá.",
+          "pista": "c6! (la única), y después b6: el alfil no llega a tiempo a la diagonal a5-d8 para controlar la casilla de avance.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "c5c6",
+            "dtm": 37,
+            "fecha": "2026-10-09"
+          }
+        },
+        {
+          "id": "peones-ligados-tablas",
+          "fen": "8/8/1P3b2/2P5/8/5k2/8/7K b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 25,
+          "consigna": "Las blancas acaban de jugar b6. Te toca con el alfil: hacé tablas.",
+          "pista": "Solo Ad4 o Ad8 salvan: hay que defenderse en forma activa, porque se amenaza c6. Ad4 ataca el peón de c5; si b7, Ae5 vigila b8 y c7, y los peones quedan frenados.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "f6d4",
+            "dtm": 0,
+            "fecha": "2026-10-09"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Paul Keres — Finales prácticos (edición electrónica en notación algebraica, «Club de Ajedrez»)",
+          "capitulo": "cap. 5 «Finales de alfil», 5.1 «Alfil contra peones», diagramas 232, 234 y 234b"
         }
       ]
     }
