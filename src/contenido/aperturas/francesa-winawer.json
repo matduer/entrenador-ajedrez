@@ -74,12 +74,19 @@
     },
     "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 g1f3": {
       "porQue": "El enfoque posicional: desarrollo y a4 más adelante, sin la salida de la dama."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 d8a5": {
+      "porQue": "Los «caprichos de la dama negra» (Moskalenko): la dama ataca c3 y, después de Ad2, puede ir a a4 para frenar el juego blanco en el flanco de dama."
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«French Defence», sección «Winawer Variation»"
+    },
+    {
+      "titulo": "Viktor Moskalenko — La Defensa Francesa: estrategia y armas sorpresa para jugadores inquietos (Esfera, 2008)",
+      "capitulo": "cap. 4, parte 2 «Los caprichos de la Dama Negra» (6...Da5)"
     },
     {
       "titulo": "French Defence (Wikipedia en inglés)",
@@ -95,7 +102,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-09",
     "resultados": {
       "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3": {
         "ok": true,
@@ -152,6 +159,10 @@
       "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 g1f3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 d8a5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
       }
     }
   }

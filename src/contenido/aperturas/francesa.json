@@ -174,12 +174,31 @@
     },
     "e2e4 e7e6 d2d3": {
       "porQue": "Prepara el Ataque Indio de Rey (Cd2, Cf3, g3 y Ag2) y evita la lucha central inmediata."
+    },
+    "e2e4 e7e6 d2d4 d7d5 e4e5 c7c5 c2c3 b8c6 g1f3 g8h6": {
+      "porQue": "La alternativa dinámica que estudia Moskalenko: el caballo va a f5 para presionar d4 junto con la dama desde b6. El blanco puede cambiarlo con Axh6, a costa de dejarle al negro la pareja de alfiles y la columna g. Stockfish la considera algo inferior a 5...Db6 o 5...Ad7.",
+      "inferior": true
+    },
+    "e2e4 e7e6 g1f3 d7d5 e4e5 c7c5 b2b4": {
+      "porQue": "Gambito del flanco: el blanco entrega el peón de b para desviar al de c5 y quedarse con el centro. Stockfish lo considera algo inferior a 4.c3.",
+      "inferior": true
+    },
+    "e2e4 e7e6 g1f3 d7d5 e4e5 c7c5 b2b4 d5d4": {
+      "porQue": "El «tornillo de Kortchnoi» que adopta Moskalenko: en lugar de aceptar el gambito, el negro clava un peón en d4 y gana espacio en el centro. Stockfish prefiere tomar (...cxb4), pero ...d4 también es jugable."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 g1e2": {
+      "porQue": "Anti-Winawer (la variante de los dos caballos): si el negro cambia en c3, el caballo de e2 retoma sin que se doblen los peones. A cambio, el caballo tapa al alfil de f1. Stockfish prefiere el avance 4.e5.",
+      "inferior": true
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«French Defence» (introducción, Exchange, Advance y Rubinstein Variation)"
+    },
+    {
+      "titulo": "Viktor Moskalenko — La Defensa Francesa: estrategia y armas sorpresa para jugadores inquietos (Esfera, 2008)",
+      "capitulo": "cap. 1, parte 1 (5...Ch6), y cap. 5 «Siete espadas samurái»: el tornillo de Kortchnoi (2.Cf3 d5 3.e5 c5 4.b4 d4) y el Anti-Winawer (4.Cge2)"
     },
     {
       "titulo": "French Defence (Wikipedia en inglés)",
@@ -195,7 +214,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-09",
     "resultados": {
       "e2e4 e7e6": {
         "ok": true,
@@ -352,6 +371,22 @@
       "e2e4 e7e6 d2d3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 e4e5 c7c5 c2c3 b8c6 g1f3 g8h6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Ad7: −0,2 contra −0,7 (marcada como inferior pero jugable)"
+      },
+      "e2e4 e7e6 g1f3 d7d5 e4e5 c7c5 b2b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere c3: +0,4 contra −0,2 (marcada como inferior pero jugable)"
+      },
+      "e2e4 e7e6 g1f3 d7d5 e4e5 c7c5 b2b4 d5d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 g1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere e5: +0,7 contra +0,2 (marcada como inferior pero jugable)"
       }
     }
   }
