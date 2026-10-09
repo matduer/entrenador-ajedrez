@@ -23,7 +23,20 @@
     "Alfil negro de f8: c5 (atacando d4) o b4.",
     "Dama negra: f6 en algunas líneas, sobre d4 y f2."
   ],
-  "trampas": [],
+  "trampas": [
+    {
+      "jugadas": "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 g8f6 f1d3 c6d4",
+      "texto": "5.Ad3?? (un desarrollo natural) deja colgando el caballo de d4: 5...Cxd4 y el negro gana una pieza."
+    },
+    {
+      "jugadas": "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 g8f6 f2f3 f8c5 c1e3 f6e4 f3e4 c6d4 e3d4 d8h4",
+      "texto": "5.f3?! Ac5 6.Ae3? Cxe4! 7.fxe4 Cxd4 8.Axd4 Dh4+: el jaque gana el alfil de d4 o el peón de e4 con ventaja decisiva. Mover f3 tan temprano debilita las diagonales del rey."
+    },
+    {
+      "jugadas": "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 g8e7 b1c3 g7g6 c1g5 f8g7 c3d5 g7d4 d1d4 c6d4 d5f6 e8f8 g5h6",
+      "texto": "4...Cge7 5.Cc3 g6? 6.Ag5 Ag7? 7.Cd5!! Axd4 8.Dxd4!! Cxd4 9.Cf6+ Rf8 10.Ah6, mate."
+    }
+  ],
   "notas": {
     "e2e4 e7e5 g1f3 b8c6 d2d4": {
       "porQue": "Abre el centro enseguida: las blancas buscan juego libre y espacio en vez de la presión lenta de la Española."
@@ -117,12 +130,25 @@
     },
     "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 g8f6 d4c6 b7c6 e4e5 d8e7 d1e2 f6d5 c2c4": {
       "porQue": "Echa al caballo y gana espacio: la posición crítica de la Mieses."
+    },
+    "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 f8b4": {
+      "porQue": "El jaque de Tony Miles: obliga a c3, y después el alfil vuelve a c5. Parece una pérdida de tiempo, pero con el peón en c3 el blanco ya no puede desarrollar el caballo de b1 en su casilla natural."
+    },
+    "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 f8b4 c2c3": {
+      "porQue": "Lo más sencillo: el negro tiene que retirar el alfil y el blanco busca aprovechar el peón de c3 (por ejemplo, para sostener d4)."
+    },
+    "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 d8f6": {
+      "porQue": "Presiona d4 y f2; muchas veces transpone a las líneas con ...Ac5. Emms la sugiere para quien quiera evitar 4...Ac5 5.Cb3."
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Scotch Opening»"
+    },
+    {
+      "titulo": "John Emms — Starting Out: The Scotch Game (Everyman Chess)",
+      "capitulo": "cap. 1 (alternativas a 5.Cc3 tras 4...Cf6) y cap. 7 «Rare Lines» (4...Ab4+, 4...Df6, 4...Cge7)"
     },
     {
       "titulo": "Scotch Game (Wikipedia en inglés)",
@@ -138,7 +164,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-09",
     "resultados": {
       "e2e4 e7e5 g1f3 b8c6 d2d4": {
         "ok": true,
@@ -247,6 +273,18 @@
       "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 g8f6 d4c6 b7c6 e4e5 d8e7 d1e2 f6d5 c2c4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 f8b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 f8b4 c2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 d8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
       }
     }
   }

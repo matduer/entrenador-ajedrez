@@ -92,7 +92,8 @@ Regla de trabajo pedida por el usuario: **si un libro trae un problema, se anota
    - ✅ Bellin *Queen's Pawn: Veresov System* (Batsford, 1983; OCR → `textos/bellin_veresov.txt`): 7 notas (3...h6 4.Axf6 exf6 5.e3; 3...c6 con 4.Dd2 y 4.f3 Db6; 3...Cbd7 4.e3 e6). Rogozenko suma 3.Cge2 en la Cerrada (Stockfish prefiere 3...Cd4).
    - ✅ Bologan, más notas en la Española: Wormald 5.De2 Ac5 (con 6.Axc6 bxc6 7.Cxe5 0-0!) y el cambio retardado 6.Axc6 dxc6.
    - ✅ Collins *The c3 Sicilian* (Gambit, 2007): 5 notas en la Alapin (5.Cf3 e6 6.cxd4 d6 7.Ac4). Plaskett *Sicilian Grand Prix Attack* (Everyman, 2000): el gambito 6.f5 contra ...g6/...e6, que Stockfish no confirma (pierde 0,11), queda como «por qué no».
-   - ⏳ OCR en curso: Escocesa (Starting Out), Moderna (Davies).
+   - ✅ Emms *Starting Out: The Scotch Game*: 3 notas (4...Ab4+, 4...Df6) y 3 trampas (5.Ad3?? Cxd4; 5.f3 Ac5 6.Ae3? Cxe4!; el mate de 4...Cge7 5.Cc3 g6? con 10.Ah6#), confirmadas por Stockfish. El PDF no trae la página de créditos: se cita sin año.
+   - ⏳ OCR en curso: Moderna (Davies).
 
 ## Registro de problemas (para retomar al final)
 
