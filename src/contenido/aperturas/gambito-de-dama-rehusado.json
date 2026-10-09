@@ -130,12 +130,38 @@
     },
     "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 g1f3 f8e7 c1f4 e8g8 e2e3 c7c5": {
       "porQue": "Con el alfil en f4, el peón de d5 no está presionado y ...c5 es posible."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 b8d7 e2e3 c7c6 g1f3 d8a5 c4d5 f6d5": {
+      "porQue": "Según Panczyk e Ilczuk, la única que justifica 6...Da5: el negro cede el centro pero aumenta la presión sobre c3 y amenaza ...Ab4."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 b8d7 e2e3 c7c6 g1f3 d8a5 c4d5 f6d5 d1d2": {
+      "porQue": "La mejor según los autores (y según Stockfish): sostiene c3. Contra 8.Db3, el negro iguala de muchas maneras."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 b8d7 e2e3 c7c6 g1f3 d8a5 c4d5 f6d5 d1d2 d7b6": {
+      "porQue": "La recomendación de Panczyk e Ilczuk, más clásica que 8...Ab4: el caballo libera d7 para el alfil y refuerza el que está en d5."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 b8d7 e2e3 c7c6 g1f3 d8a5 f3d2 d5c4": {
+      "porQue": "El planteo simple: el negro se queda con la pareja de alfiles y una posición sólida; a cambio, el blanco gana espacio y una mayoría central."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 g1f3 f8e7 c1f4 a7a6": {
+      "porQue": "Una alternativa al enroque: prepara ...dxc4 y ...b5. Según el cuaderno de EDAMI, ese avance es la verdadera idea de la jugada: el negro gana espacio en el flanco de dama y lleva el alfil a b7."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 g1f3 f8e7 c1f4 a7a6 e2e3 d5c4 f1c4 b7b5": {
+      "porQue": "El avance que justifica 5...a6: gana tiempo sobre el alfil de c4 y abre la diagonal a8-h1 para ...Ab7."
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Queen's Gambit Declined»: Exchange Variation, 4 Bg5 (Capablanca, Lasker, Tartakower), 4 Nf3 (5 Bf4, Semi-Tarrasch, Ragozin)"
+    },
+    {
+      "titulo": "Krzysztof Panczyk y Jacek Ilczuk — The Cambridge Springs (Gambit, 2002)",
+      "capitulo": "caps. 4 (7.cxd5 Cxd5 8.Dd2 C7b6) y 7 (7.Cd2 dxc4)"
+    },
+    {
+      "titulo": "«Gambito de Dama Rehusado: Variante Blackburne 5.Af4», Pack de Aperturas EDAMI",
+      "capitulo": "clase 10, «La teoría de la Variante Blackburne 5.Af4» (línea 5...a6)"
     },
     {
       "titulo": "Queen's Gambit Declined (Wikipedia en inglés)",
@@ -151,7 +177,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-09",
     "resultados": {
       "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5": {
         "ok": true,
@@ -266,6 +292,30 @@
         "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
       },
       "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 g1f3 f8e7 c1f4 e8g8 e2e3 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 b8d7 e2e3 c7c6 g1f3 d8a5 c4d5 f6d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 b8d7 e2e3 c7c6 g1f3 d8a5 c4d5 f6d5 d1d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 b8d7 e2e3 c7c6 g1f3 d8a5 c4d5 f6d5 d1d2 d7b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 b8d7 e2e3 c7c6 g1f3 d8a5 f3d2 d5c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 g1f3 f8e7 c1f4 a7a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 g1f3 f8e7 c1f4 a7a6 e2e3 d5c4 f1c4 b7b5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
       }
