@@ -97,6 +97,21 @@
           "texto": "Axa6 y el negro, además de no recuperar el peón todavía, queda con los peones del flanco de dama doblados."
         }
       ]
+    },
+    "e2e4 g7g6 f2f4 d7d5": {
+      "porQue": "El golpe central que recomienda Davies contra 2.f4: si e5, el negro ataca la cadena con ...c5; si exd5, ...Cf6 recupera el peón o deja al negro con buen juego por la debilidad que dejó f4.",
+      "porQueNo": [
+        {
+          "uci": "f8g7",
+          "texto": "2...Ag7 deja al blanco armar d4 y e5 con un centro grande; Stockfish prefiere golpear enseguida con ...d5."
+        }
+      ]
+    },
+    "e2e4 g7g6 d2d4 f8g7 f2f4 c7c5": {
+      "porQue": "Contra el Ataque de los Tres Peones (sin Cc3, el blanco puede sostener d4 con c3), Davies prefiere atacar d4 enseguida, con ...c5 o ...d6, en lugar de bloquear las casillas blancas con ...d5."
+    },
+    "e2e4 g7g6 d2d4 f8g7 b1c3 d7d6 f2f4 e7e6": {
+      "porQue": "El esquema de Davies y Krasenkow contra el Ataque Austríaco: ...Ce7, ...Cd7, ...b6, ...Ab7 y recién después ...Cf6. Frena el avance f5 (que encierra al alfil de c1 detrás de f4) y presiona e4, preparando el contraataque con ...c5."
     }
   },
   "fuentes": [
@@ -113,6 +128,10 @@
       "capitulo": "Cap. 1, «Queenside Knight: 3 Nc3 c5!» (el sacrificio 4...Axc3+), y cap. 2, «Kingside Knight: 3 Nf3 c5!» (4.dxc5)"
     },
     {
+      "titulo": "Nigel Davies — Starting Out: The Modern (Everyman Chess, 2008)",
+      "capitulo": "cap. 1 «The Austrian Attack and Other f2-f4 Lines» (introducción y partida 2, Minev-Davies)"
+    },
+    {
       "titulo": "Modern Defense (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Modern_Defense",
       "licencia": "CC BY-SA 4.0"
@@ -126,7 +145,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-08",
+    "fecha": "2026-10-09",
     "resultados": {
       "e2e4 g7g6": {
         "ok": true,
@@ -215,6 +234,22 @@
       "e2e4 g7g6 d2d4 f8g7 g1f3 c7c5 d4c5 b8a6 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 10 puntos de chances: −0,8 → −2,0. Refutación: Axa6 Da5+ Ad2 Dxa6 Cc3 Dc4"
+      },
+      "e2e4 g7g6 f2f4 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 g7g6 f2f4 f8g7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,1 → −0,5. Refutación: d4 d5 e5 Ch6 Cf3 O-O"
+      },
+      "e2e4 g7g6 d2d4 f8g7 f2f4 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 g7g6 d2d4 f8g7 b1c3 d7d6 f2f4 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
       }
     }
   }
