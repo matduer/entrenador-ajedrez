@@ -416,6 +416,25 @@
     },
     "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 a4c6 d7c6": {
       "porQue": "Retoma hacia el centro y abre líneas para los alfiles; a cambio, el peón de e5 necesita defensa, que suele llegar con ...Cd7."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 b7b5 a4b3 c8b7": {
+      "porQue": "La Variante Arcángel: el negro pone sus dos alfiles activos (b7 contra e4 y la diagonal larga; después ...Ac5 o ...Ae7) y busca contrajuego, a cambio de cierta inseguridad de su rey. Panczyk destaca que su teoría es independiente: el negro no necesita conocer la Española cerrada."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 b7b5 a4b3 f8c5": {
+      "porQue": "La Neo-Arcángel (o «Arcángel moderna»): el alfil va a c5 antes que el de dama a b7. Emms le dedica un capítulo; Stockfish la considera la mejor jugada del negro en la posición."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 b7b5 a4b3 c8b7 d2d4": {
+      "inferior": true,
+      "porQue": "El intento más enérgico de refutar el sistema, y el negro no puede evitarlo; Panczyk muestra que alcanza el contrajuego. Stockfish la considera algo inferior a 7.d3."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 b7b5 a4b3 c8b7 d2d4 c6d4": {
+      "porQue": "La respuesta correcta: el caballo toma y deja que el blanco gane peones en f7 y e5 a cambio de la pareja de alfiles negra.",
+      "porQueNo": [
+        {
+          "uci": "e5d4",
+          "texto": "7...exd4? 8.e5: el caballo de f6 tiene que irse y el blanco gana mucho terreno, con clara ventaja (Euwe)."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -426,6 +445,10 @@
     {
       "titulo": "Boris Alterman — The Alterman Gambit Guide: Black Gambits 2 (Quality Chess, 2012)",
       "capitulo": "Cap. 2, «The Hector Gambit» (Española del Cambio)"
+    },
+    {
+      "titulo": "Krzysztof Panczyk y John Emms — Archangel and New Archangel (Everyman, 2000)",
+      "capitulo": "introducción y cap. 1 «Archangel with 7.d4»"
     },
     {
       "titulo": "Bent Larsen — Teoría y práctica en los juegos abiertos (trad. Franco L. Di Luca, Ediciones Hache-Efe, Buenos Aires)",
@@ -847,6 +870,26 @@
       "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 a4c6 d7c6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 b7b5 a4b3 c8b7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 b7b5 a4b3 f8c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 b7b5 a4b3 c8b7 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere d3: +0,3 contra −0,2 (marcada como inferior pero jugable)"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 b7b5 a4b3 c8b7 d2d4 c6d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 b7b5 a4b3 c8b7 d2d4 e5d4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: +0,2 → −0,9. Refutación: e5 Ce4 Ad5 Cc5 Cxd4 Ce6"
       }
     }
   }
