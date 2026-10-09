@@ -98,6 +98,7 @@ Regla de trabajo pedida por el usuario: **si un libro trae un problema, se anota
    - ✅ Moskalenko *La Defensa Francesa* (Esfera, 2008): 5 notas (5...Ch6 en el Avance, el tornillo de Kortchnoi 4...d4 contra el gambito 4.b4, el Anti-Winawer 4.Cge2, 6...Da5 en la Winawer); tres marcadas `inferior` (Stockfish las ve algo peores, 0,09-0,11).
    - ✅ Cuadernos de Ajedrez (Sistac): Philidor n.º 64 (4...dxe5? de la Hanham, 6.Cg5 imprecisa, ...c5! en la Línea del Cambio) y Dos Caballos n.º 34 (4.Cc3 Cxe4! y la celada 6.Ab5? dxe4 7.Cxe5 Dg5!).
    - ✅ Panjwani *El Dragón Hiperacelerado* (La Casa del Ajedrez, 2019): la trampa 8.Dd2? Cxe4! 9.Cxc6 Dxc3!! (el OCR leía «Cxc3»: se corrigió con Stockfish), su sistema 8.Ab3 a6 y la Breyer 7...Cg4 contra el Maroczy.
+   - ✅ Watson *Play the French* (3.ª ed., 2003): las cuartas jugadas alternativas contra la Winawer (4.a3 con el gambito Winckelmann-Riemer, 4.Ad2 con 7...Dxd4!, 4.Dg4, 4.Ad3) como «por qué no» de 4.e5. Watson *Symmetrical English* (1988): casi todo variantes sin prosa y texto sucio; pendiente.
    - Inventario 2026-10-09: ~50 aperturas sin libro propio. Con texto: Moskalenko (Francesa), *Play the French*, *Symmetrical English*, Philidor y Italiana (en castellano). OCR en cola: Panjwani (Dragón Hiperacelerado), Petrov, Escandinava, Karpov (Inglesa), Francesa Tarrasch, Benoni, Grünfeld fianchetto, Reca (Caro-Kann).
 
 ## Registro de problemas (para retomar al final)

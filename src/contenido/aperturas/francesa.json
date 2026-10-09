@@ -125,7 +125,25 @@
       ]
     },
     "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5": {
-      "porQue": "Cierra el centro y le quita f6 al caballo negro. Ahora el negro ataca d4 con ...c5."
+      "porQue": "Cierra el centro y le quita f6 al caballo negro. Ahora el negro ataca d4 con ...c5.",
+      "porQueNo": [
+        {
+          "uci": "a2a3",
+          "texto": "4.a3 Axc3+ 5.bxc3 dxe4 obliga al blanco a jugar un gambito: con 6.f3, el Gambito Winckelmann-Riemer que estudia Watson, el negro contesta ...c5 y queda mejor según Stockfish."
+        },
+        {
+          "uci": "c1d2",
+          "texto": "4.Ad2 dxe4 5.Dg4 Cf6 6.Dxg7 Tg8 7.Dh6 Dxd4!: Watson muestra que el negro toma el peón central y queda con buen juego."
+        },
+        {
+          "uci": "d1g4",
+          "texto": "4.Dg4 ataca g7 antes de tiempo: ...Cf6 y, si Dxg7, ...Tg8 con desarrollo rápido para el negro."
+        },
+        {
+          "uci": "f1d3",
+          "texto": "4.Ad3 dxe4 5.Axe4 Cf6: el negro gana tiempo sobre el alfil y libera su juego."
+        }
+      ]
     },
     "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5": {
       "porQue": "La ruptura de siempre: ataca d4 mientras el caballo de c3 sigue clavado.",
@@ -189,12 +207,19 @@
     "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 g1e2": {
       "porQue": "Anti-Winawer (la variante de los dos caballos): si el negro cambia en c3, el caballo de e2 retoma sin que se doblen los peones. A cambio, el caballo tapa al alfil de f1. Stockfish prefiere el avance 4.e5.",
       "inferior": true
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 c1d2 d5e4 d1g4 g8f6 g4g7 h8g8 g7h6 d8d4": {
+      "porQue": "La respuesta que recomienda Watson: la dama toma el peón central, que el blanco dejó sin defensa al salir a cazar el peón de g7. Stockfish la considera la mejor."
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«French Defence» (introducción, Exchange, Advance y Rubinstein Variation)"
+    },
+    {
+      "titulo": "John Watson — Play the French (3.ª ed., Everyman Chess, 2003)",
+      "capitulo": "cap. 8 «Winawer Variation: Fourth Move Alternatives»"
     },
     {
       "titulo": "Viktor Moskalenko — La Defensa Francesa: estrategia y armas sorpresa para jugadores inquietos (Esfera, 2008)",
@@ -312,6 +337,22 @@
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
       },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 a2a3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,7 → 0,0. Refutación: Axc3+ bxc3 dxe4 Dg4 Cf6 Dxg7"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 c1d2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,7 → 0,0. Refutación: dxe4 Dg4 Cf6 Dxg7 Tg8 Dh6"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 d1g4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,7 → −0,1. Refutación: Cf6 Dxg7 Tg8 Dh6 c5 a3"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 f1d3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,7 → +0,0. Refutación: dxe4 Axe4 Cf6 Af3 O-O Ce2"
+      },
       "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
@@ -387,6 +428,10 @@
       "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 g1e2": {
         "ok": true,
         "detalle": "Stockfish (prof. 18) prefiere e5: +0,7 contra +0,2 (marcada como inferior pero jugable)"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 c1d2 d5e4 d1g4 g8f6 g4g7 h8g8 g7h6 d8d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
       }
     }
   }
