@@ -92,6 +92,12 @@
     },
     "e2e4 c7c5 b1c3 b8c6 f2f4 g7g6 g1f3 f8g7 f1c4 e7e6 e1g1 g8e7 d2d3 d7d5": {
       "porQue": "El negro consigue ...d5 y el alfil de c4 queda sin juego: el plan con f5 llega tarde."
+    },
+    "e2e4 c7c5 b1c3 b8c6 g1e2": {
+      "porQue": "Un orden de jugadas tramposo: según lo que haga el negro, el blanco elige la Cerrada (g3) o pasa a una Siciliana abierta con d4. Rogozenko aconseja contestar con la jugada que encaje en la abierta que uno juega (...g6, ...e6 o ...d6 sirven también contra la Cerrada)."
+    },
+    "e2e4 c7c5 b1c3 b8c6 g1e2 c6d4": {
+      "porQue": "La respuesta más directa, que es la preferida de Stockfish: si Cxd4 cxd4, el peón ataca al caballo de c3 y el blanco no consigue la abierta que buscaba."
     }
   },
   "fuentes": [
@@ -101,7 +107,7 @@
     },
     {
       "titulo": "Dorian Rogozenko — Anti-Sicilians: A Guide for Black (Gambit, 2003)",
-      "capitulo": "cap. 2 «The Grand Prix Attack» (líneas A: 2.f4 y B1: 2.Cc3 Cc6 3.f4)"
+      "capitulo": "cap. 2 «The Grand Prix Attack» (líneas A: 2.f4 y B1: 2.Cc3 Cc6 3.f4) y cap. 3 «The Closed Sicilian» (línea A: 3.Cge2)"
     },
     {
       "titulo": "Sicilian Defence (Wikipedia en inglés)",
@@ -194,6 +200,14 @@
       "e2e4 c7c5 b1c3 b8c6 f2f4 g7g6 g1f3 f8g7 f1c4 e7e6 e1g1 g8e7 d2d3 d7d5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 b1c3 b8c6 g1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 b1c3 b8c6 g1e2 c6d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
       }
     }
   }

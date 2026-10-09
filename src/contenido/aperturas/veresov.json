@@ -39,12 +39,37 @@
     },
     "d2d4 g8f6 b1c3 d7d5 c1g5 c8f5": {
       "porQue": "Impide e4 directamente."
+    },
+    "d2d4 g8f6 b1c3 d7d5 c1g5 h7h6": {
+      "porQue": "Le pregunta enseguida al alfil. Bellin la considera decisiva para juzgar la Veresov, cuya idea recurrente es doblarle los peones al negro con Axf6; para Stockfish es la mejor respuesta."
+    },
+    "d2d4 g8f6 b1c3 d7d5 c1g5 h7h6 g5f6": {
+      "porQue": "Para Bellin, la mejor: a diferencia de la Española (de la que la Veresov es una imagen invertida), el blanco no está listo para enrocar y le cuesta jugar e4, así que la retirada a h4 no le sirve. Stockfish también la prefiere."
+    },
+    "d2d4 g8f6 b1c3 d7d5 c1g5 h7h6 g5f6 e7f6": {
+      "porQue": "Retoma hacia el centro: el negro conserva una estructura sana y la pareja de alfiles."
+    },
+    "d2d4 g8f6 b1c3 d7d5 c1g5 h7h6 g5f6 e7f6 e2e3": {
+      "porQue": "La estrategia que recomienda Bellin: mantener el centro cerrado y estable, enrocar largo y, más adelante, lanzar los peones del flanco de rey."
+    },
+    "d2d4 g8f6 b1c3 d7d5 c1g5 c7c6 d1d2": {
+      "porQue": "Prepara f3 y e4 sin permitir la molesta ...Db6: como el alfil de g5 dejó el flanco de dama sin protección, con 4.f3 Db6 el peón de b2 queda colgando."
+    },
+    "d2d4 g8f6 b1c3 d7d5 c1g5 c7c6 f2f3 d8b6": {
+      "porQue": "Aprovecha que el alfil salió del flanco de dama y ataca b2. Bellin la presenta como un fuerte argumento contra 4.f3, y Stockfish la considera la mejor."
+    },
+    "d2d4 g8f6 b1c3 d7d5 c1g5 b8d7 e2e3 e7e6": {
+      "porQue": "La mejor manera de aprovechar el orden de jugadas con 4.e3, según Bellin: el blanco ya no puede jugar e4 rápido, y sin e4 le cuesta conseguir algo contra esta formación sólida."
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Other 1 d4 d5 Openings», sección «Richter-Veresov Opening»"
+    },
+    {
+      "titulo": "Robert Bellin — Queen's Pawn: Veresov System (Batsford, 1983)",
+      "capitulo": "cap. 2 (línea A: 3...h6), cap. 3 (3...c6 y 4.f3 Db6) y cap. 4 (3...Cbd7 4.e3 e6)"
     },
     {
       "titulo": "Richter–Veresov Attack (Wikipedia en inglés)",
@@ -60,7 +85,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-09",
     "resultados": {
       "d2d4 g8f6 b1c3 d7d5 c1g5": {
         "ok": true,
@@ -81,6 +106,34 @@
       "d2d4 g8f6 b1c3 d7d5 c1g5 c8f5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 b1c3 d7d5 c1g5 h7h6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 b1c3 d7d5 c1g5 h7h6 g5f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 b1c3 d7d5 c1g5 h7h6 g5f6 e7f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 b1c3 d7d5 c1g5 h7h6 g5f6 e7f6 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 b1c3 d7d5 c1g5 c7c6 d1d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 b1c3 d7d5 c1g5 c7c6 f2f3 d8b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 b1c3 d7d5 c1g5 b8d7 e2e3 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
       }
     }
   }
