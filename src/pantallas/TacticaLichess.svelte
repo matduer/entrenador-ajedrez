@@ -78,7 +78,8 @@
   {#if origen === 'libros'}
     <p class="suave">
       Problemas tomados de los libros de tu biblioteca, cada uno con su libro y capítulo. Solo entran los que Stockfish
-      (o la tablebase, en los finales) confirma; si encontrás otra jugada que también gana, cuenta como bien.
+      (o la tablebase, en los finales) confirma. Se juega la línea entera: el rival responde solo, podés volver atrás y,
+      si te equivocás, volver a intentar. Si encontrás otra jugada que también gana, te avisa y seguís buscando la del libro.
     </p>
   {:else}
     <p class="suave">
