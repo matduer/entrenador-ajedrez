@@ -36,8 +36,8 @@ Resumen para retomar el trabajo en cualquier sesión. El detalle de métodos y h
 
 **Descartados por ahora**: Seneca (PDF se renderiza en blanco), Speelman *Preparación de finales* (para el cuestionario completo falta un lector de soluciones en texto corrido; se usan diagramas sueltos transcriptos a mano), Khmelnitsky *Chess Exam* (opción múltiple), Crouch *Attacking Technique* (no son ejercicios), "chess problems (1).pdf" (es el mismo Polgár).
 
-### Partidas de libros (Mis partidas → "Partidas de libros"): 899
-- Polgár: 467 miniaturas. Fischer, *My 60 Memorable Games*: 50 de 60. *Partidas de personajes históricos*: 33 (`scripts/preparar-partidas-personajes.ts`). Capablanca, *Fundamentos del ajedrez*: las 14 partidas modelo (`scripts/preparar-partidas-capablanca.ts`). Lenyb, *Defensa de los Dos Caballos: 3750 partidas modelo* (2013): las 335 anteriores a 1950 que no estaban (3 excluidas porque el resultado no cuadra con la posición final) (`scripts/preparar-partidas-lenyb.ts`; las posteriores son casi todas de aficionados). Control: `scripts/verificar-partidas-libros.ts <prefijo>` (en la posición final, el ganador no puede estar peor para Stockfish).
+### Partidas de libros (Mis partidas → "Partidas de libros"): 940
+- Polgár: 467 miniaturas. Fischer, *My 60 Memorable Games*: 50 de 60. *Partidas de personajes históricos*: 33 (`scripts/preparar-partidas-personajes.ts`). Capablanca, *Fundamentos del ajedrez*: las 14 partidas modelo (`scripts/preparar-partidas-capablanca.ts`). Lenyb, *Defensa de los Dos Caballos: 3750 partidas modelo* (2013): las 335 anteriores a 1950 que no estaban (3 excluidas porque el resultado no cuadra con la posición final) (`scripts/preparar-partidas-lenyb.ts`; las posteriores son casi todas de aficionados). Chernev, *Capablanca's Best Chess Endings*: 39 de 60 (2026-10-09, `scripts/preparar-partidas-chernev-capa.ts`; OCR propio con RapidOCR y lectura de la algebraica larga por distancia de edición; las 21 restantes tienen jugadas que el OCR no leyó y que el resto de la partida no permite deducir sin ambigüedad, o no llegan al final). Control: `scripts/verificar-partidas-libros.ts <prefijo>` (en la posición final, el ganador no puede estar peor para Stockfish).
 - Pendiente: Crouch *Modern Chess: Move by Move*, Rubinstein (Donaldson y Minev), Keres, Kasparov… El OCR tiene las figuras ilegibles; `scripts/lib-ocr-jugadas.ts` reconstruye jugadas, pero todavía no completa ninguna partida de Crouch.
 
 ### Finales: 50 temas, 113 posiciones
@@ -51,7 +51,7 @@ Resumen para retomar el trabajo en cualquier sesión. El detalle de métodos y h
 - 2026-10-09: Keres, cap. 3: dama y peón en séptima contra dama (diagramas 91, 94 y 95: rey en la esquina, peón central, peón de alfil); cap. 6: caballo y peón contra caballo (Kling 1867, diag. 322 con 3.Cb8+!, Réti 1929 con 1.Cc5! única, y la defensa de Goldenov-Kan 1946 con 5.Rg3! única). Todo con tablebase. El PDF es una transcripción digital con diagramas limpios: no hace falta OCR, se lee mirando la página.
 - 2026-10-09: Keres, cap. 5: alfil contra peones (Otten 1892; dos peones ligados, diag. 232, 234 y 234b) y tres posiciones de alfil y peón contra alfil del mismo color (diag. 241, 243, 244). Caps. 4 (torre) y 5.5-5.6 (alfil contra caballo) se saltean: el temario ya cubre esos temas con De la Villa y Silman.
 - 2026-10-09: De la Villa, Finales 56 a 58 (defensa de Kling y Horwitz, lado largo con y sin efectividad lejana) y Final 73 (Gligoric-Smyslov 1947, en torre y dos peones contra torre).
-- 2026-10-09: Dvoretsky, *Endgame Manual*, cap. 1: el hombro (Schlage-Ahues 1921) y el péndulo. Chernev, *Capablanca's Best Chess Endings*, va al registro: son 60 partidas completas en algebraica larga, mejor como «Partidas de libros».
+- 2026-10-09: Dvoretsky, *Endgame Manual*, cap. 1: el hombro (Schlage-Ahues 1921) y el péndulo. Chernev, *Capablanca's Best Chess Endings*: 39 de sus 60 partidas pasaron a «Partidas de libros» (retomado del registro).
 - Etapa 2 cerrada el 2026-10-09 (los temas que quedan de Dvoretsky, De la Villa y Keres ya están cubiertos en lo esencial; se retoman si hace falta). y de Silman (torre y peón en 4.ª o 5.ª fila, Parte Ocho); De la Villa caps. 11 (T+2P contra T) y 13, y el final 56 (Kling y Horwitz). Hecho también el final 55 (defensa de la primera fila con peón de caballo).
 
 ### Aperturas: 74 archivos
@@ -123,7 +123,6 @@ Regla de trabajo pedida por el usuario: **si un libro trae un problema, se anota
 | *London Pet Line 4...Qxb2* (2025) | No es un libro: es una exportación de partidas rápidas entre bots y jugadores online | — (descartado) |
 | Lemos, *The London System* (ICC) | No es un libro: es el folleto de 14 páginas de un curso en video, sin análisis | — (descartado) |
 | Bondarewsky, *Táctica del medio juego* | Escaneo pobre: solo 3 problemas confirmados | Mejor escaneo |
-| Chernev, *Capablanca's Best Chess Endings* (Dover, 1982) | Son 60 partidas completas, no posiciones de finales sueltas; el texto (OCR del PDF) usa algebraica larga («Nb8-a6») con ruido | Un lector de algebraica larga para pasarlas a «Partidas de libros», junto con las otras partidas comentadas |
 
 ## Para el usuario: qué probar
 
