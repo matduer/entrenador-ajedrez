@@ -90,7 +90,8 @@ Regla de trabajo pedida por el usuario: **si un libro trae un problema, se anota
    - ✅ Aguilera *El espíritu de la apertura*: una nota en el Letón (7.f3); dos de sus tres afirmaciones concretas no las confirma Stockfish. Las partidas comentadas de la parte III (6, notación descriptiva) quedan para «Partidas de libros».
    - ✅ Rogozenko *Anti-Sicilians: A Guide for Black* (Gambit, 2003; OCR → `textos/rogozenko_antisic.txt`): 2.f4 d5! (Siciliana), el fianchetto contra el Gran Prix con ...Cd4 y ...e6/...d5 (Cerrada), 3.Ac4? Cxe4 y el truco ...d6/...e6 contra 4.g3 (Alapin). Todo confirmado por Stockfish.
    - ✅ Bellin *Queen's Pawn: Veresov System* (Batsford, 1983; OCR → `textos/bellin_veresov.txt`): 7 notas (3...h6 4.Axf6 exf6 5.e3; 3...c6 con 4.Dd2 y 4.f3 Db6; 3...Cbd7 4.e3 e6). Rogozenko suma 3.Cge2 en la Cerrada (Stockfish prefiere 3...Cd4).
-   - ⏳ OCR del Gran Prix y la Siciliana c3 en curso.
+   - ✅ Bologan, más notas en la Española: Wormald 5.De2 Ac5 (con 6.Axc6 bxc6 7.Cxe5 0-0!) y el cambio retardado 6.Axc6 dxc6.
+   - ⏳ OCR en curso: Gran Prix (Lane), Siciliana c3, Escocesa (Starting Out), Moderna (Davies).
 
 ## Registro de problemas (para retomar al final)
 

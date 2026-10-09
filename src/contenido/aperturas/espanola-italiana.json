@@ -398,6 +398,24 @@
     },
     "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 d2d3 f8e7 a4c6 d7c6 f3e5": {
       "porQue": "Con el alfil negro en e7 (y no en c5), la captura sí gana un peón: ...Dd4 ya no viene con amenaza en f2."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 d1e2": {
+      "porQue": "El Ataque Wormald: la dama defiende e4 para que el blanco pueda armar c3 y d4 sin permitir la Española Abierta (5.0-0 Cxe4)."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 d1e2 f8c5": {
+      "porQue": "La elección de Bologan: el alfil activo en c5. Si el blanco cambia en c6 y toma e5, el negro no se apura en recuperar el peón: enroca y presiona por la columna e, donde está la dama blanca."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 d1e2 f8c5 a4c6 b7c6 f3e5 e8g8": {
+      "porQue": "Primero el rey a salvo y la torre a e8: la dama de e2 y el rey blanco sin enrocar quedan en la columna e, y el negro domina las casillas blancas. Bologan muestra que el peón se recupera o se compensa.",
+      "porQueNo": [
+        {
+          "uci": "d8e7",
+          "texto": "...De7 de inmediato es imprecisa: Cd3 y el blanco consolida el peón de más."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 a4c6 d7c6": {
+      "porQue": "Retoma hacia el centro y abre líneas para los alfiles; a cambio, el peón de e5 necesita defensa, que suele llegar con ...Cd7."
     }
   },
   "fuentes": [
@@ -415,7 +433,7 @@
     },
     {
       "titulo": "Victor Bologan — Bologan's Ruy Lopez for Black (New In Chess, 2015)",
-      "capitulo": "resúmenes «Traps» de los caps. 7 (Löwenthal-Anderssen), 10 (Wormald cerrada), 11 (Steinitz: 5.d3) y 14 (Anti-Marshall con 8.d4)"
+      "capitulo": "resúmenes «Traps» de los caps. 7 (Löwenthal-Anderssen), 10 (Wormald cerrada), 11 (Steinitz: 5.d3) y 14 (Anti-Marshall con 8.d4); cap. 3 (6.Axc6) y cap. 8 «The Open Wormald System» (5.De2 Ac5)"
     },
     {
       "titulo": "Ruy Lopez (Wikipedia en inglés)",
@@ -436,7 +454,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-08",
+    "fecha": "2026-10-09",
     "resultados": {
       "e2e4 e7e5": {
         "ok": true,
@@ -809,6 +827,26 @@
       "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 d2d3 f8e7 a4c6 d7c6 f3e5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +1,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 d1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 d1e2 f8c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 d1e2 f8c5 a4c6 b7c6 f3e5 e8g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 d1e2 f8c5 a4c6 b7c6 f3e5 d8e7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,0 → −0,6. Refutación: Cd3 Aa7 e5 Cd5 c4 Cb4"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 a4c6 d7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
       }
     }
   }
