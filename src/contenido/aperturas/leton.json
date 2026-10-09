@@ -77,9 +77,16 @@
     },
     "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 e5c4 f5e4 b1c3 f6g6 d2d3": {
       "porQue": "Abre líneas aprovechando la ventaja de desarrollo."
+    },
+    "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 d2d4 d7d6 e5c4 f5e4 b1c3 f6g6 f2f3": {
+      "porQue": "La recomendación de Aguilera: abre la columna f y ataca el peón de e4 antes de que el negro termine de desarrollarse. Con ...exf3 Dxf3 el blanco completa el desarrollo con ventaja clara (Stockfish: unos +1,7)."
     }
   },
   "fuentes": [
+    {
+      "titulo": "Ricardo Aguilera — El espíritu de la apertura (3.ª ed., Madrid, 1973)",
+      "capitulo": "lección 18.ª «Contragambito del Greco» (la línea principal con 7.f3)"
+    },
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Other 1 e4 e5 Openings», sección «Latvian Gambit»"
@@ -98,7 +105,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-09",
     "resultados": {
       "e2e4 e7e5 g1f3 f7f5 f3e5": {
         "ok": true,
@@ -151,6 +158,10 @@
       "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 e5c4 f5e4 b1c3 f6g6 d2d3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +1,9 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 d2d4 d7d6 e5c4 f5e4 b1c3 f6g6 f2f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,6 para el bando que mueve"
       }
     }
   }

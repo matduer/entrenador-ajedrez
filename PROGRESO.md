@@ -87,7 +87,8 @@ Regla de trabajo pedida por el usuario: **si un libro trae un problema, se anota
 2. Aguilera *El espíritu de la apertura*, Larsen *Teoría y práctica en los juegos abiertos*.
 3. Monografías que todavía no se usaron (Bologan Española, Anti-Sicilianas, Pirc, Catalana, Makogonov, Veresov, Londres de Lemos…).
    - ✅ 2026-10-09: Catalana (Raetsky y Chetverik, Everyman 2004): 11 notas sobre las sextas jugadas del negro en la Catalana abierta; se descartó su preferencia por 7.0-0 contra 5...b5 6.a4 c6 (Stockfish: pierde 0,16; prefiere 7.Ce5).
-   - ⏳ Aguilera *El espíritu de la apertura*: OCR en curso (sin capa de texto).
+   - ✅ Aguilera *El espíritu de la apertura*: una nota en el Letón (7.f3); dos de sus tres afirmaciones concretas no las confirma Stockfish. Las partidas comentadas de la parte III (6, notación descriptiva) quedan para «Partidas de libros».
+   - ⏳ Rogozenko *Anti-Sicilians: A Guide for Black*: OCR en curso. Después: Veresov, Gran Prix, Siciliana c3 (escaneos).
 
 ## Registro de problemas (para retomar al final)
 
@@ -104,6 +105,7 @@ Regla de trabajo pedida por el usuario: **si un libro trae un problema, se anota
 | Aguilera, *El error en la apertura* (5.ª ed., 1988) | Notación descriptiva con OCR muy ruidoso («NR» por P4R, «%.» por 2., jugadas sueltas como «⁵»), y en dos columnas | `lib-descriptiva.ts` ya lee la notación; falta un OCR mejor de las páginas |
 | Tiviakov y Gökbulut, *Rock Solid Chess* (2 tomos) | Es un libro de estrategia (estructuras de peones), no de aperturas: no hay un módulo donde encaje | Un módulo de estrategia o de estructuras |
 | *London Pet Line 4...Qxb2* (2025) | No es un libro: es una exportación de partidas rápidas entre bots y jugadores online | — (descartado) |
+| Lemos, *The London System* (ICC) | No es un libro: es el folleto de 14 páginas de un curso en video, sin análisis | — (descartado) |
 | Bondarewsky, *Táctica del medio juego* | Escaneo pobre: solo 3 problemas confirmados | Mejor escaneo |
 | Chernev, *Capablanca's Best Chess Endings* (Dover, 1982) | Son 60 partidas completas, no posiciones de finales sueltas; el texto (OCR del PDF) usa algebraica larga («Nb8-a6») con ruido | Un lector de algebraica larga para pasarlas a «Partidas de libros», junto con las otras partidas comentadas |
 
