@@ -104,12 +104,29 @@
           "texto": "El Gambito Frankenstein-Drácula: tras 6.Cb5 g6 7.Df3 f5 8.Dd5 De7 9.Cxc7+ Rd8 10.Cxa8 b6 el negro entrega una torre para encerrar al caballo de a8 y atacar. Alterman lo defiende, pero Stockfish lo considera bueno para las blancas."
         }
       ]
+    },
+    "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 f4e5 f6e4 g1f3": {
+      "porQue": "Para Lane, la continuación más segura: evita las complicaciones tácticas y busca una iniciativa posicional apoyada en el peón de e5."
+    },
+    "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 f4e5 f6e4 g1f3 f8e7": {
+      "porQue": "La respuesta más segura según Lane: el negro enroca corto y después ataca el peón de e5 con ...f6."
+    },
+    "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 f4e5 f6e4 d2d3": {
+      "inferior": true,
+      "porQue": "La Variante Oxford: el blanco echa al caballo de e4 enseguida e invita a complicaciones. Stockfish la considera algo inferior a 5.Cf3."
+    },
+    "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 f4e5 f6e4 d2d3 e4c3": {
+      "porQue": "Lo más sensato según Lane: cambiar caballos y llevar el juego a un medio juego posicional. La alternativa 5...Dh4+ 6.g3 entra en complicaciones enormes, en las que según Lane varios jugadores con negras sufrieron."
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Other 1 e4 e5 Openings», sección «Vienna Game»"
+    },
+    {
+      "titulo": "Gary Lane — Vienna Game (Everyman, 2000)",
+      "capitulo": "cap. 1 «2...Cf6 3.f4 d5» (introducción)"
     },
     {
       "titulo": "Boris Alterman — The Alterman Gambit Guide: Black Gambits 2 (Quality Chess, 2012)",
@@ -129,7 +146,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-08",
+    "fecha": "2026-10-09",
     "resultados": {
       "e2e4 e7e5 b1c3": {
         "ok": true,
@@ -214,6 +231,22 @@
       "e2e4 e7e5 b1c3 g8f6 f1c4 f6e4 d1h5 e4d6 c4b3 b8c6 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 21 puntos de chances: −0,0 → −2,5. Refutación: Cb5 g6 Df3 Cf5 Dd5 De7"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 f4e5 f6e4 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 f4e5 f6e4 g1f3 f8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 f4e5 f6e4 d2d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Cf3: −0,1 contra −0,7 (marcada como inferior pero jugable)"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 f4e5 f6e4 d2d3 e4c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
       }
     }
   }
