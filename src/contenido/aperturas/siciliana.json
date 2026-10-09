@@ -177,12 +177,25 @@
     },
     "e2e4 c7c5 a2a3 d7d5 e4d5": {
       "porQue": "La mejor: tras ...Dxd5, Cc3 gana tiempo atacando la dama."
+    },
+    "e2e4 c7c5 f2f4": {
+      "porQue": "El Ataque Gran Prix con f4 de entrada, sin Cc3. Rogozenko explica por qué casi no se juega así: permite el golpe central 2...d5, y por eso el blanco que busca el Gran Prix suele empezar con 2.Cc3."
+    },
+    "e2e4 c7c5 f2f4 d7d5": {
+      "porQue": "El golpe central que desactiva el plan del blanco: si e5, el negro jugó ...c5 y ...d5 sin perder tiempo y queda cómodo (Rogozenko da 3.e5 como dudosa); si exd5, sigue ...Cf6."
+    },
+    "e2e4 c7c5 f2f4 d7d5 e4d5 g8f6": {
+      "porQue": "Mejor que retomar con la dama: amenaza ...Cxd5, y con el caballo en d5 el peón de f4 solo debilitaría al blanco. El blanco tiene que defender d5 (Ab5+ o c4) y el negro gana desarrollo."
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Sicilian Defence»: introducción, «2 Nf3», «Classical Variation», «Taimanov Variation» y «Scheveningen Variation»"
+    },
+    {
+      "titulo": "Dorian Rogozenko — Anti-Sicilians: A Guide for Black (Gambit, 2003)",
+      "capitulo": "cap. 2 «The Grand Prix Attack» (líneas A: 2.f4 y B1: 2.Cc3 Cc6 3.f4)"
     },
     {
       "titulo": "Alexei Bezgodov — Challenging the Sicilian with 2.a3! (Chess Stars, 2004)",
@@ -202,7 +215,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-08",
+    "fecha": "2026-10-09",
     "resultados": {
       "e2e4 c7c5": {
         "ok": true,
@@ -371,6 +384,18 @@
       "e2e4 c7c5 a2a3 d7d5 e4d5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 f2f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "e2e4 c7c5 f2f4 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 f2f4 d7d5 e4d5 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
       }
     }
   }

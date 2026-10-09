@@ -32,6 +32,10 @@
         {
           "uci": "f2f3",
           "texto": "Debilita el rey: ...e5 y el negro ocupa el centro."
+        },
+        {
+          "uci": "f1c4",
+          "texto": "3.Ac4? Cxe4!: si 4.Axf7+ Rxf7 5.Dh5+, el blanco recupera la pieza pero el negro sigue con ...d5 y queda con el centro. Stockfish da al negro clara ventaja."
         }
       ]
     },
@@ -101,12 +105,22 @@
     },
     "e2e4 c7c5 c2c3 g8f6 e4e5 f6d5 d2d4 c5d4 g1f3": {
       "porQue": "Retrasa cxd4: si ...Cc6, Ac4 presiona el caballo de d5 y f7."
+    },
+    "e2e4 c7c5 c2c3 g8f6 e4e5 f6d5 g2g3 d7d6": {
+      "porQue": "Contra el fianchetto de Rozentalis (4.g3), Rogozenko recomienda atacar el peón de e5 enseguida."
+    },
+    "e2e4 c7c5 c2c3 g8f6 e4e5 f6d5 g2g3 d7d6 e5d6 e7e6": {
+      "porQue": "El pequeño truco que muestra Rogozenko: en lugar de retomar con la dama, ...e6 para tomar en d6 con el alfil, que así se desarrolla con tiempo."
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Sicilian Defence», sección «Alapin Variation»"
+    },
+    {
+      "titulo": "Dorian Rogozenko — Anti-Sicilians: A Guide for Black (Gambit, 2003)",
+      "capitulo": "cap. 4 «The Alapin Variation (2 c3)»: introducción, terceras jugadas raras y línea B1 (4.g3)"
     },
     {
       "titulo": "Sicilian Defence, Alapin Variation (Wikipedia en inglés)",
@@ -122,7 +136,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-09",
     "resultados": {
       "e2e4 c7c5 c2c3 g8f6 e4e5": {
         "ok": true,
@@ -135,6 +149,10 @@
       "e2e4 c7c5 c2c3 g8f6 f2f3 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 9 puntos de chances: +0,1 → −0,8. Refutación: e5 c4 Cxe4 fxe4 Dh4+ Re2"
+      },
+      "e2e4 c7c5 c2c3 g8f6 f1c4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 12 puntos de chances: +0,1 → −1,2. Refutación: Cxe4 Axf7+ Rxf7 Dh5+ Rg8 Dd5+"
       },
       "e2e4 c7c5 c2c3 g8f6 e4e5 f6d5": {
         "ok": true,
@@ -203,6 +221,14 @@
       "e2e4 c7c5 c2c3 g8f6 e4e5 f6d5 d2d4 c5d4 g1f3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 c2c3 g8f6 e4e5 f6d5 g2g3 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 c2c3 g8f6 e4e5 f6d5 g2g3 d7d6 e5d6 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
       }
     }
   }

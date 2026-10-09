@@ -80,12 +80,28 @@
     },
     "e2e4 c7c5 b1c3 b8c6 g2g3 g7g6 f1g2 f8g7 d2d3 d7d6 f2f4 e7e6": {
       "porQue": "Lo más sólido: si g4, ...f5 frena el avance blanco."
+    },
+    "e2e4 c7c5 b1c3 b8c6 f2f4 g7g6": {
+      "porQue": "La formación que Rogozenko considera más prometedora contra el Gran Prix: fianchetto, sin apurar ...d6, para tener ...d5 a mano. Contra Ac4, ...e6 y ...d5; contra Ab5, ...Cd4."
+    },
+    "e2e4 c7c5 b1c3 b8c6 f2f4 g7g6 g1f3 f8g7 f1b5 c6d4": {
+      "porQue": "El salto típico contra Ab5: si el blanco cambia en d4, el peón negro que retoma ataca al caballo de c3. Así el negro evita que le doblen los peones con Axc6."
+    },
+    "e2e4 c7c5 b1c3 b8c6 f2f4 g7g6 g1f3 f8g7 f1c4 e7e6": {
+      "porQue": "Tapa la diagonal del alfil hacia f7 y prepara ...Cge7 y ...d5, que le quita al alfil de c4 su objetivo."
+    },
+    "e2e4 c7c5 b1c3 b8c6 f2f4 g7g6 g1f3 f8g7 f1c4 e7e6 e1g1 g8e7 d2d3 d7d5": {
+      "porQue": "El negro consigue ...d5 y el alfil de c4 queda sin juego: el plan con f5 llega tarde."
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Sicilian Defence», sección «Closed Sicilian»"
+    },
+    {
+      "titulo": "Dorian Rogozenko — Anti-Sicilians: A Guide for Black (Gambit, 2003)",
+      "capitulo": "cap. 2 «The Grand Prix Attack» (líneas A: 2.f4 y B1: 2.Cc3 Cc6 3.f4)"
     },
     {
       "titulo": "Sicilian Defence (Wikipedia en inglés)",
@@ -101,7 +117,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-09",
     "resultados": {
       "e2e4 c7c5 b1c3": {
         "ok": true,
@@ -162,6 +178,22 @@
       "e2e4 c7c5 b1c3 b8c6 g2g3 g7g6 f1g2 f8g7 d2d3 d7d6 f2f4 e7e6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 b1c3 b8c6 f2f4 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 b1c3 b8c6 f2f4 g7g6 g1f3 f8g7 f1b5 c6d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 b1c3 b8c6 f2f4 g7g6 g1f3 f8g7 f1c4 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 b1c3 b8c6 f2f4 g7g6 g1f3 f8g7 f1c4 e7e6 e1g1 g8e7 d2d3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
       }
     }
   }
