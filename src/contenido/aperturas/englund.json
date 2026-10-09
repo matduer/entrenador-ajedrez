@@ -23,6 +23,10 @@
     {
       "jugadas": "d2d4 e7e5 d4e5 b8c6 g1f3 d8e7 c1f4 e7b4 f4d2 b4b2 d2c3 f8b4 d1d2 b4c3 d2c3 b2c1",
       "texto": "4.Af4 Db4+ 5.Ad2 Dxb2 6.Ac3?? Ab4! 7.Dd2 Axc3 8.Dxc3 Dc1#. Lo correcto es 6.Cc3."
+    },
+    {
+      "jugadas": "d2d4 e7e5 d4e5 b8c6 g1f3 d8e7 c1f4 e7b4 c2c3 b4f4",
+      "texto": "4.Af4 Db4+ 5.c3?? Dxf4: el blanco tapó el jaque pero dejó el alfil sin defensa. Lo correcto es 5.Ad2."
     }
   ],
   "notas": {
@@ -36,6 +40,10 @@
         {
           "uci": "g1f3",
           "texto": "...e4 echa al caballo con ganancia de tiempo."
+        },
+        {
+          "uci": "d4d5",
+          "texto": "2.d5?! Ac5!: el alfil queda fuera de la cadena de peones, en la diagonal g1-a7, y el negro arma un ataque en el flanco de rey (Sepúlveda)."
         }
       ]
     },
@@ -56,6 +64,18 @@
           "texto": "...Cxe5 y el negro recupera el peón."
         }
       ]
+    },
+    "d2d4 e7e5 d4e5 b8c6 c1f4 g7g5": {
+      "porQue": "Contra 3.Af4, Sepúlveda propone 3...g5!?: echa al alfil y después ...Ag7 y ...De7 recuperan el peón de e5. Stockfish la considera la mejor.",
+      "porQueNo": [
+        {
+          "uci": "d8e7",
+          "texto": "3...De7? en este orden permite 4.Cc3!: después de ...Cxe5 5.Cd5, el caballo ataca la dama y c7, y el negro queda muy mal."
+        }
+      ]
+    },
+    "d2d4 e7e5 d4e5 b8c6 g1f3 d8e7 c1f4 d7d6": {
+      "porQue": "La clave con la que Sepúlveda revitaliza el gambito: si exd6, ...Df6 ataca a la vez f4 y b2. Stockfish la prefiere a 4...Db4+."
     }
   },
   "fuentes": [
@@ -63,6 +83,9 @@
       "titulo": "Englund Gambit (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Englund_Gambit",
       "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Job Sepúlveda — «Resumen teoría Gambito 1.d4 e5!?» (proletario.cl)"
     },
     {
       "titulo": "Catálogo abierto de aperturas de Lichess",
@@ -73,7 +96,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-09",
     "resultados": {
       "d2d4 e7e5 d4e5": {
         "ok": true,
@@ -86,6 +109,10 @@
       "d2d4 e7e5 g1f3 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 15 puntos de chances: +1,4 → −0,3. Refutación: e4 Cfd2 d5 c4 c6 Cc3"
+      },
+      "d2d4 e7e5 d4d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 15 puntos de chances: +1,4 → −0,3. Refutación: Cf6 e4 Cxe4 De2 Cf6 Dxe5+"
       },
       "d2d4 e7e5 d4e5 b8c6": {
         "ok": true,
@@ -106,6 +133,18 @@
       "d2d4 e7e5 d4e5 b8c6 g1f3 d8e7 c2c4 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 10 puntos de chances: +1,9 → +0,8. Refutación: Cxe5 Cc3 Cf6 e4 d6 Cd4"
+      },
+      "d2d4 e7e5 d4e5 b8c6 c1f4 g7g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,0 para el bando que mueve"
+      },
+      "d2d4 e7e5 d4e5 b8c6 c1f4 d8e7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −1,0 → −1,7. Refutación: Cf3 d6 exd6 Df6 Dc1 Axd6"
+      },
+      "d2d4 e7e5 d4e5 b8c6 g1f3 d8e7 c1f4 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,8 para el bando que mueve"
       }
     }
   }
