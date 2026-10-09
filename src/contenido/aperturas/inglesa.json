@@ -150,6 +150,9 @@
     },
     "c2c4 e7e5 b1c3 b8c6 g2g3 f7f5": {
       "porQue": "Un Gran Prix con colores invertidos: el negro apoya e5 con el peón de f y prepara juego en el flanco de rey. Kosten le dedica un capítulo; Stockfish prefiere el fianchetto (...g6), pero ...f5 es perfectamente jugable."
+    },
+    "c2c4 c7c5 g1f3 g8f6 b1c3 e7e6 g2g3 b7b6 f1g2 c8b7 e1g1 f8e7 d2d4 c5d4 d1d4 d7d6": {
+      "porQue": "La estructura del Erizo: peones en a6, b6, d6 y e6, con las piezas detrás. Parece pasiva, pero Suba la describe como una defensa dinámica: el negro espera con paciencia y golpea con las rupturas ...b5 o ...d5 en el momento en que el blanco se sobreextiende."
     }
   },
   "fuentes": [
@@ -160,6 +163,9 @@
     {
       "titulo": "Tony Kosten — The Dynamic English (Gambit, 1999)",
       "capitulo": "cap. 2 «Grand Prix Attack Reversed» y cap. 6 «The Keres System»"
+    },
+    {
+      "titulo": "Mihai Suba — The Hedgehog (Batsford, 2000)"
     },
     {
       "titulo": "English Opening (Wikipedia en inglés)",
@@ -316,6 +322,10 @@
       "c2c4 e7e5 b1c3 b8c6 g2g3 f7f5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "c2c4 c7c5 g1f3 g8f6 b1c3 e7e6 g2g3 b7b6 f1g2 c8b7 e1g1 f8e7 d2d4 c5d4 d1d4 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
       }
     }
   }
