@@ -1,0 +1,94 @@
+{
+  "id": "apertura-del-alfil",
+  "nombre": "Apertura del Alfil",
+  "raiz": "e2e4 e7e5 f1c4",
+  "resumen": "1.e4 e5 2.Ac4: el blanco saca el alfil antes que el caballo, apuntando a f7, y deja abiertas varias transposiciones (a la Vienesa con Cc3, a la Italiana con Cf3, incluso al Gambito Evans). Muy antigua (ya aparece en el manuscrito de Lucena, 1497), la renovó Bent Larsen en los años sesenta. Hoy algunos jugadores fuertes la usan para evitar la Petrov: después de 2...Cf6 3.d3 el negro no tiene la simetría de 2.Cf3 Cf6.",
+  "planesBlancas": [
+    "Presionar f7 con el alfil y, según la respuesta, jugar d3 y Cf3 (estilo Italiana lenta) o Cc3 y f4 (estilo Vienesa).",
+    "Aprovechar las imitaciones del negro: con el alfil en c5, la dama puede saltar a g4 o h5 contra g7 y f7."
+  ],
+  "planesNegras": [
+    "Desarrollar con ...Cf6 y atacar e4 enseguida, la respuesta más natural.",
+    "Golpear el centro con ...c6 y ...d5 cuando el blanco jugó d3."
+  ],
+  "estructura": "Muy flexible: según las transposiciones, centro abierto (si el blanco juega d4), estructura de Italiana lenta (d3 contra d6) o de Vienesa (con f4).",
+  "rupturas": [
+    "d4 o f4 del blanco.",
+    "...d5 del negro, a menudo preparada con ...c6."
+  ],
+  "piezas": [
+    "Alfil blanco de c4: la pieza que define la apertura, contra f7.",
+    "Dama blanca: puede salir temprano a g4 o h5 si el negro descuida g7 o e5."
+  ],
+  "trampas": [
+    {
+      "jugadas": "e2e4 e7e5 f1c4 f8c5 b1c3 b8c6 d1g4 d8f6 c3d5 f6f2 e1d1 e8f8 g1h3 f2d4 d2d3 d7d6 g4f3 c8h3 h1f1",
+      "texto": "La «Vienesa espejo»: 2...Ac5 3.Cc3 Cc6 4.Dg4! Df6?! 5.Cd5! Dxf2+ 6.Rd1 Rf8 7.Ch3 Dd4 8.d3 d6 9.Df3 Axh3 10.Tf1!: amenaza mate en f7 y c3 encierra a la dama negra. Un clásico que Lane muestra en su introducción."
+    }
+  ],
+  "notas": {
+    "e2e4 e7e5 f1c4": {
+      "porQue": "El alfil sale antes que el caballo: apunta a f7 y deja al blanco elegir más tarde entre Cf3, Cc3 y f4."
+    },
+    "e2e4 e7e5 f1c4 g8f6": {
+      "porQue": "La respuesta más natural y la preferida de Stockfish: ataca e4 enseguida.",
+      "porQueNo": [
+        {
+          "uci": "f8e7",
+          "texto": "2...Ae7? pierde un peón: 3.Dh5 ataca e5 y f7 a la vez (si ...g6, Dxe5)."
+        }
+      ]
+    },
+    "e2e4 e7e5 f1c4 g8f6 d2d3": {
+      "porQue": "La forma moderna: defiende e4 y evita la Petrov que se daría con 2.Cf3 Cf6. Después vienen Cf3 o Cc3, con estructura de Italiana lenta."
+    },
+    "e2e4 e7e5 f1c4 c7c6 d2d4": {
+      "porQue": "Contra 2...c6, Lane recomienda abrir el centro: si ...exd4, Dxd4 y la dama queda bien, porque el negro ya no puede echarla con ...Cc6 (la casilla está ocupada por su peón)."
+    },
+    "e2e4 e7e5 f1c4 f8c5 b1c3 b8c6 d1g4": {
+      "porQue": "El castigo a la simetría: la dama ataca g7. Lo correcto para el negro es ...Rf8 o ...g6; si 4...Df6?!, sigue 5.Cd5! con ataque decisivo."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Gary Lane — The Bishop's Opening Explained (Batsford, 2004)",
+      "capitulo": "introducción y cap. 6 «Vienna Copycat»"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-09",
+    "resultados": {
+      "e2e4 e7e5 f1c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 f1c4 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 f1c4 f8e7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 13 puntos de chances: −0,0 → −1,4. Refutación: Dh5 g6 Dxe5 Cf6 Cc3 Cc6"
+      },
+      "e2e4 e7e5 f1c4 g8f6 d2d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 f1c4 c7c6 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 f1c4 f8c5 b1c3 b8c6 d1g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      }
+    }
+  }
+}
