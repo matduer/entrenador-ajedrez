@@ -41,6 +41,14 @@
     {
       "jugadas": "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 d1e2 g8f6 e4d6",
       "texto": "Contra la Variante Karpov: 5.De2 Cgf6?? 6.Cd6 es mate ahogado (el peón de e7 está clavado). Lo correcto es 5...Cdf6."
+    },
+    {
+      "jugadas": "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 d1e2 g8f6 e4d6",
+      "texto": "5.De2 Cgf6?? 6.Cd6, mate: el peón de e7 no puede tomar el caballo porque está clavado por la dama de e2, y el rey no tiene casillas. McDonald cuenta que esta celada cayó incontables veces, incluso en una partida de consulta de Keres."
+    },
+    {
+      "jugadas": "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 e4g5 h7h6 g5e6 f7e6 d1h5 g7g6 h5g6",
+      "texto": "5.Cg5 h6 6.Ce6! fxe6? 7.Dh5+ g6 8.Dxg6, mate: el ...h6 prematuro debilitó la diagonal e8-h5. Después de 6.Ce6 hay que jugar 6...Da5+ o 6...Db6 y no tomar el caballo."
     }
   ],
   "notas": {
@@ -286,12 +294,19 @@
     },
     "e2e4 c7c6 c2c4": {
       "porQue": "Prepara una versión acelerada del Panov."
+    },
+    "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 d1e2 d7f6": {
+      "porQue": "Contra 5.De2, la respuesta que recomienda McDonald: el otro caballo va a f6, ataca d4 y el blanco ya no puede evitar el cambio de caballos. Además, la dama de e2 le tapa la salida al alfil de f1."
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Caro-Kann Defence»"
+    },
+    {
+      "titulo": "Neil McDonald — Main Line Caro-Kann (Everyman Chess)",
+      "capitulo": "cap. 1 «Modern Main Line with 5.Cg5» y cap. 3 «Other Variations» (5.De2)"
     },
     {
       "titulo": "Caro–Kann Defence (Wikipedia en inglés)",
@@ -312,7 +327,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-09",
     "resultados": {
       "e2e4 c7c6": {
         "ok": true,
@@ -593,6 +608,10 @@
       "e2e4 c7c6 c2c4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 d1e2 d7f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
       }
     }
   }

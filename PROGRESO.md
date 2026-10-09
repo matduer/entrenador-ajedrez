@@ -94,7 +94,8 @@ Regla de trabajo pedida por el usuario: **si un libro trae un problema, se anota
    - ✅ Collins *The c3 Sicilian* (Gambit, 2007): 5 notas en la Alapin (5.Cf3 e6 6.cxd4 d6 7.Ac4). Plaskett *Sicilian Grand Prix Attack* (Everyman, 2000): el gambito 6.f5 contra ...g6/...e6, que Stockfish no confirma (pierde 0,11), queda como «por qué no».
    - ✅ Emms *Starting Out: The Scotch Game*: 3 notas (4...Ab4+, 4...Df6) y 3 trampas (5.Ad3?? Cxd4; 5.f3 Ac5 6.Ae3? Cxe4!; el mate de 4...Cge7 5.Cc3 g6? con 10.Ah6#), confirmadas por Stockfish. El PDF no trae la página de créditos: se cita sin año.
    - ✅ Davies *Starting Out: The Modern* (Everyman, 2008): 2.f4 d5!, ...c5 contra los Tres Peones y el esquema ...e6/...Ce7 contra el Austríaco. Su temor a 4...Cc6 5.Ab5 no lo confirma Stockfish (5.Ab5 pierde 0,12), así que no se menciona.
-   - Siguiente: revisar qué monografías con OCR pendiente quedan (Persson *Tiger's Modern*, *Winning with the Modern*, Aguilera *El error*: registro).
+   - ✅ McDonald *Main Line Caro-Kann*: dos celadas (5.De2 Cgf6?? 6.Cd6#; 5.Cg5 h6 6.Ce6! fxe6? 7.Dh5+) y la respuesta 5...Cdf6 a 5.De2. Kotronias *Beating the Caro-Kann*: texto ilegible, la línea ya está cubierta.
+   - Inventario 2026-10-09: ~50 aperturas sin libro propio. Con texto: Moskalenko (Francesa), *Play the French*, *Symmetrical English*, Philidor y Italiana (en castellano). OCR en cola: Panjwani (Dragón Hiperacelerado), Petrov, Escandinava, Karpov (Inglesa), Francesa Tarrasch, Benoni, Grünfeld fianchetto, Reca (Caro-Kann).
 
 ## Registro de problemas (para retomar al final)
 
