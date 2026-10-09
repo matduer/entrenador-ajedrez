@@ -111,12 +111,19 @@
     },
     "d2d4 g8f6 c2c4 c7c5 d4d5 g7g6": {
       "porQue": "La Benoni antigua, muy cercana a la India de Rey."
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 e7e5 b1c3 d7d6 e2e4 f8e7": {
+      "porQue": "La posición base de la Benoni checa: el negro cerró el centro y renunció a la actividad central, así que depende de rupturas de flanco (...f5, a veces ...b5). El blanco ataca el punto e5 con f4 o el peón de c5 con b4. Raetsky y Chetverik advierten que, por la falta de espacio, el negro muchas veces termina solo defendiéndose; Stockfish le da al blanco una ventaja clara."
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Benoni and Benko»"
+    },
+    {
+      "titulo": "Alexander Raetsky y Maxim Chetverik — Starting Out: Benoni Systems (Everyman Chess, 2005)",
+      "capitulo": "cap. 5 «Closed and Czech Benonis»"
     },
     {
       "titulo": "Benoni Defense (Wikipedia en inglés)",
@@ -132,7 +139,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-09",
     "resultados": {
       "d2d4 g8f6 c2c4 c7c5": {
         "ok": true,
@@ -233,6 +240,10 @@
       "d2d4 g8f6 c2c4 c7c5 d4d5 g7g6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 e7e5 b1c3 d7d6 e2e4 f8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,3 para el bando que mueve"
       }
     }
   }
