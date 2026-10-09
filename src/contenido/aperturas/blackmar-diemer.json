@@ -39,11 +39,15 @@
       "porQue": "Ofrece el peón de f: si ...exf3, Cxf3 con desarrollo rápido."
     },
     "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3": {
-      "porQue": "Acepta el segundo peón.",
+      "porQue": "Acepta el segundo peón. Cox lo resume así: el gambito es objetivamente débil y 4...exf3 es lo mejor, pero hay que defenderse con precisión.",
       "porQueNo": [
         {
           "uci": "b8d7",
           "texto": "fxe4 e5: las blancas se quedan con el centro."
+        },
+        {
+          "uci": "e7e5",
+          "texto": "4...e5?! 5.dxe5: el caballo de f6 tiene que retirarse y el blanco recupera el peón con buen juego."
         }
       ]
     },
@@ -72,6 +76,10 @@
   },
   "fuentes": [
     {
+      "titulo": "John Cox — Dealing with d4 Deviations (Everyman Chess, 2005)",
+      "capitulo": "cap. 8 «The Blackmar-Diemer Gambit»"
+    },
+    {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Other 1 d4 d5 Openings», introducción (Blackmar-Diemer Gambit)"
     },
@@ -89,7 +97,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-09",
     "resultados": {
       "d2d4 d7d5 e2e4 d5e4": {
         "ok": true,
@@ -114,6 +122,10 @@
       "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 b8d7 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 9 puntos de chances: +0,7 → −0,3. Refutación: fxe4 e5 dxe5 Cxe5 Dxd8+ Rxd8"
+      },
+      "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e7e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 17 puntos de chances: +0,7 → −1,2. Refutación: dxe5 Cfd7 Cxe4 Cxe5 Dxd8+ Rxd8"
       },
       "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 c8f5": {
         "ok": true,

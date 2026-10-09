@@ -120,12 +120,19 @@
     },
     "d2d4 d7d5 g1f3 g8f6 c1f4 c8f5": {
       "porQue": "Contra el Londres, sacar el alfil antes de ...e6 le da al negro un juego cómodo."
+    },
+    "d2d4 g8f6 g1f3 e7e6 c1f4 c7c5 c2c3 c5d4 c3d4 b7b5": {
+      "porQue": "La idea que Cox toma de la ECO y de Andrew Martin: el negro gana espacio en el flanco de dama y se asegura buenas casillas para todas sus piezas (...Ab7, ...Ae7, ...0-0)."
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Other 1 d4 d5 Openings», sección «Queen's Pawn Game» (London System)"
+    },
+    {
+      "titulo": "John Cox — Dealing with d4 Deviations (Everyman Chess, 2005)",
+      "capitulo": "cap. 5 «The London System», línea A (3...c5 4.c3 cxd4 5.cxd4 b5!?)"
     },
     {
       "titulo": "London System (Wikipedia en inglés)",
@@ -141,7 +148,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-09",
     "resultados": {
       "d2d4 d7d5 c1f4": {
         "ok": true,
@@ -246,6 +253,10 @@
       "d2d4 d7d5 g1f3 g8f6 c1f4 c8f5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 g1f3 e7e6 c1f4 c7c5 c2c3 c5d4 c3d4 b7b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
       }
     }
   }
