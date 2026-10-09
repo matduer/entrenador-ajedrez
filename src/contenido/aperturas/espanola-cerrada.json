@@ -149,12 +149,22 @@
           "texto": "15.Ac2? Axc2 16.Dxc2: sin su alfil de casillas blancas, el enroque blanco queda débil y las negras toman la iniciativa (Stockfish sigue con 16...Te8 y la torre entra en juego por la columna e)."
         }
       ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 c6a5 b3c2 c7c5 d2d4 d8c7 d4d5": {
+      "porQue": "El Sistema Petrosian: el blanco cierra el centro y le quita al caballo de a5 su retirada natural a c6. Marin dedica su primer capítulo a este problema: el caballo queda fuera de juego en a5 o b7, y si el blanco frena su regreso por c5 con b4 (o b3), el negro puede quedar con una desventaja duradera."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 c6a5 b3c2 c7c5 d2d4 d8c7 d4d5 a5c4": {
+      "porQue": "Lo más activo y la preferida de Stockfish: el caballo salta a c4 antes de que b3 le quite la casilla, en lugar de retirarse a b7, donde quedaría encerrado."
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Ruy Lopez», secciones «Closed Variation», «Chigorin», «Breyer», «Zaitsev» y «Marshall Attack»"
+    },
+    {
+      "titulo": "Mihail Marin — A Spanish Repertoire for Black (Quality Chess, 2007)",
+      "capitulo": "cap. 1 «The Chigorin Variation - General Aspects» y cap. 3 «The Petrosian System»"
     },
     {
       "titulo": "Victor Bologan — Bologan's Ruy Lopez for Black (New In Chess, 2015)",
@@ -174,7 +184,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-08",
+    "fecha": "2026-10-09",
     "resultados": {
       "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3": {
         "ok": true,
@@ -303,6 +313,14 @@
       "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 e8g8 c2c3 d7d5 e4d5 f6d5 f3e5 c6e5 e1e5 c7c6 d2d4 e7d6 e5e2 c8g4 f2f3 g4f5 b3c2 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 18 puntos de chances: −0,1 → −2,1. Refutación: Axc2 Txc2 Te8 g3 Ta7 Tg2"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 c6a5 b3c2 c7c5 d2d4 d8c7 d4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 c6a5 b3c2 c7c5 d2d4 d8c7 d4d5 a5c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
       }
     }
   }
