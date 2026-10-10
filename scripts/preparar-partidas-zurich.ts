@@ -177,7 +177,7 @@ for (const p of partidas) {
   vistas.add(p.n)
   const titulo = `partida ${p.n} (${p.blancas} - ${p.negras})`
   if (process.env.LEIDAS) console.log(p.leidas.map((l) => `${l.nro}${l.negras ? '...' : '.'}${l.texto}`).join(' '))
-  const finales = reconstruir(p.leidas, candidatasCortas)
+  const finales = reconstruir(p.leidas, candidatasCortas, true)
   const mejor = finales[0]
   if (!mejor) { fallas.push(`${titulo}: sin reconstrucción`); continue }
   const otra = finales.find((f) => f.ucis.join() !== mejor.ucis.join())

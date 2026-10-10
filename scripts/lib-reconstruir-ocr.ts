@@ -11,14 +11,18 @@ import { makeSquare } from 'chessops/util'
 import { aEspanol, FEN_INICIAL, posDesdeFen, uciEstandar } from '../src/lib/ajedrez/posicion.ts'
 
 // ---------- distancia de edición con confusiones de OCR ----------
-const PARES = ['9g', '1f', '8a', '5s', '5S', 'sS', '1l', '1I', '1i', 'lI', 'li', '1t', 'lt', 'ft', '0O', '0Q', 'OQ', '0o', 'Oo', '8B', '6b', '6G', 'ec', 'ac', 'ae', 'oa', '-+', '-%', '-&', '-~', '-.', 'x%', 'x*', 'x+', '2Z', '2z', 'Nh', 'NM', 'Mf', 'Rl', 'gq', 'g4', 'fH', 'f4', 'd4', 'QO', 'Q0', 'B6', '3B', 'hn', '-=', '7?']
+const PARES = ['9g', '5s', '5S', 'sS', '1l', '1I', '1i', 'lI', 'li', '1t', 'lt', 'ft', '0O', '0Q', 'OQ', '0o', 'Oo', '8B', '6b', '6G', 'ec', 'ac', 'ae', 'oa', '-+', '-%', '-&', '-~', '-.', 'x%', 'x*', 'x+', '2Z', '2z', 'Nh', 'NM', 'Mf', 'Rl', 'gq', 'g4', 'fH', 'f4', 'd4', 'QO', 'Q0', 'B6', '3B', 'hn', '-=', '7?']
 const BARATO = new Set(PARES.flatMap(([a, b]) => [a + b, b + a]))
-function costoSub(a: string, b: string): number {
+// Confusiones del OCR de Zúrich 1953 («15» por «f5», «85» por «a5»): solo con la algebraica corta, porque en la larga
+// generan empates entre jugadas legales.
+const BARATO_CORTA = new Set(['1f', '8a'].flatMap(([a, b]) => [a + b, b + a]))
+function costoSub(a: string, b: string, corta = false): number {
   if (a === b) return 0
   if (a.toLowerCase() === b.toLowerCase()) return 0.25
-  return BARATO.has(a + b) ? 0.35 : 1
+  return BARATO.has(a + b) || (corta && BARATO_CORTA.has(a + b)) ? 0.35 : 1
 }
-export function distancia(s: string, t: string): number {
+/** xOpcional (algebraica corta): la «x» de captura puede faltar casi sin costo («ed5» por «exd5») y valen las confusiones de BARATO_CORTA. */
+export function distancia(s: string, t: string, xOpcional = false): number {
   const n = s.length, m = t.length
   let prev = new Array<number>(m + 1)
   for (let j = 0; j <= m; j++) prev[j] = j
@@ -27,8 +31,8 @@ export function distancia(s: string, t: string): number {
     cur[0] = i
     for (let j = 1; j <= m; j++) {
       const del = s[i - 1] === '-' || s[i - 1] === '.' ? 0.5 : s[i - 1] === '+' || s[i - 1] === '#' ? 0.3 : 1 // sobra en el texto
-      const ins = t[j - 1] === '-' ? 0.5 : t[j - 1] === 'x' ? 0.3 : 1 // falta en el texto (las capturas de peón a veces van sin «x»: «ed5»)
-      cur[j] = Math.min(prev[j] + del, cur[j - 1] + ins, prev[j - 1] + costoSub(s[i - 1], t[j - 1]))
+      const ins = t[j - 1] === '-' ? 0.5 : xOpcional && t[j - 1] === 'x' ? 0.3 : 1 // falta en el texto
+      cur[j] = Math.min(prev[j] + del, cur[j - 1] + ins, prev[j - 1] + costoSub(s[i - 1], t[j - 1], xOpcional))
     }
     prev = cur
   }
@@ -42,13 +46,36 @@ const LETRA: Record<string, string> = { pawn: '', knight: 'N', bishop: 'B', rook
 const CORONAS = [['queen', 'Q', 'D'], ['rook', 'R', 'T'], ['bishop', 'B', 'A'], ['knight', 'N', 'C']] as const
 /** Jugadas legales en algebraica larga («Ng1-f3», «e5xd6», «0-0», «g7-g8(Q)»). */
 export function candidatasLargas(pos: Chess): Cand[] {
-  return generar(pos, true)
+  return generar(pos, 'larga')
 }
 /** Jugadas legales en algebraica corta española («Cf3», «exd6», «0-0», «g8D»). */
 export function candidatasCortas(pos: Chess): Cand[] {
-  return generar(pos, false)
+  return generar(pos, 'corta')
 }
-function generar(pos: Chess, larga: boolean): Cand[] {
+/**
+ * Jugadas legales en notación descriptiva española, con sus formas habituales: «C3AR» y «C3A», «P4R», «CxP» y
+ * «CxPR», «0-0». Varias formas de la misma jugada son varias candidatas con el mismo uci.
+ */
+export function candidatasDescriptivas(pos: Chess): Cand[] {
+  return generar(pos, 'descriptiva')
+}
+const COLUMNA_LARGA = ['TD', 'CD', 'AD', 'D', 'R', 'AR', 'CR', 'TR']
+const COLUMNA_CORTA = ['T', 'C', 'A', 'D', 'R', 'A', 'C', 'T']
+const LETRA_ES: Record<string, string> = { pawn: 'P', knight: 'C', bishop: 'A', rook: 'T', queen: 'D', king: 'R' }
+function descriptivas(pos: Chess, desde: number, hacia: number, corona?: string): string[] {
+  const pieza = pos.board.get(desde)!
+  const l = LETRA_ES[pieza.role]
+  const capturada = pos.board.get(hacia) ?? (pieza.role === 'pawn' && desde % 8 !== hacia % 8 ? { role: 'pawn' } : undefined)
+  const fila = pieza.color === 'white' ? (hacia >> 3) + 1 : 8 - (hacia >> 3)
+  const col = hacia % 8
+  const c = corona ? [`=${corona}`, `(${corona})`, corona] : ['']
+  if (capturada) {
+    const x = `${l}x${LETRA_ES[capturada.role]}`
+    return [x, x + COLUMNA_LARGA[col], x + COLUMNA_CORTA[col]].flatMap((t) => c.map((s) => t + s))
+  }
+  return [`${l}${fila}${COLUMNA_LARGA[col]}`, `${l}${fila}${COLUMNA_CORTA[col]}`].flatMap((t) => c.map((s) => t + s))
+}
+function generar(pos: Chess, notacion: 'larga' | 'corta' | 'descriptiva'): Cand[] {
   const out: Cand[] = []
   for (const [desde, dests] of pos.allDests()) {
     const pieza = pos.board.get(desde)!
@@ -62,10 +89,15 @@ function generar(pos: Chess, larga: boolean): Cand[] {
       const corona = pieza.role === 'pawn' && (hacia >> 3 === 7 || hacia >> 3 === 0)
       for (const [r, l] of corona ? CORONAS : ([[undefined, '', '']] as const)) {
         const m = r ? { from: desde, to: hacia, promotion: r } : move
-        const texto = larga
+        const u = uci + (l ? l.toLowerCase() : '')
+        if (notacion === 'descriptiva') {
+          for (const texto of new Set(descriptivas(pos, desde, hacia, l ? LETRA_ES[r!] : undefined))) out.push({ uci: u, texto, move: m })
+          continue
+        }
+        const texto = notacion === 'larga'
           ? `${LETRA[pieza.role]}${makeSquare(desde)}${captura ? 'x' : '-'}${makeSquare(hacia)}${l ? `(${l})` : ''}`
           : aEspanol(makeSan(pos, m)).replace(/[+#]$/, '').replace('=', '')
-        out.push({ uci: uci + (l ? l.toLowerCase() : ''), texto, move: m })
+        out.push({ uci: u, texto, move: m })
       }
     }
   }
@@ -95,7 +127,7 @@ const ETIQUETA = 3
 const ANCHO = Number(process.env.ANCHO ?? 600)
 const FORZAR = (process.env.FORZAR ?? '').split(' ').filter(Boolean)
 export const orden = (nro: number, negras: boolean) => (nro - 1) * 2 + (negras ? 1 : 0)
-export function reconstruir(leidas: Leida[], candidatas: Candidatas): Estado[] {
+export function reconstruir(leidas: Leida[], candidatas: Candidatas, xOpcional = false): Estado[] {
   let haz: Estado[] = [{ pos: posDesdeFen(FEN_INICIAL), ucis: [], k: 0, costo: 0, supuestas: 0, detalle: [] }]
   const finales: Estado[] = []
   for (let ply = 0; ply < 400 && haz.length; ply++) {
@@ -120,7 +152,7 @@ export function reconstruir(leidas: Leida[], candidatas: Candidatas): Estado[] {
         const etiqueta = orden(l.nro, l.negras) === ply ? 0 : ETIQUETA
         const textos = [l.texto, ...(l.alternativas ?? [])]
         const giros = textos.map(girada)
-        const ls = cands.map((c) => ({ c, d: Math.min(...textos.map((t, x) => Math.min(distancia(t, c.texto), distancia(giros[x], c.texto) + 0.3))) }))
+        const ls = cands.map((c) => ({ c, d: Math.min(...textos.map((t, x) => Math.min(distancia(t, c.texto, xOpcional), distancia(giros[x], c.texto, xOpcional) + 0.3))) }))
         const minimo = Math.min(...ls.map((x) => x.d))
         // Ilegible (p. ej. leída al revés, «SP-Lp»): ninguna jugada se le parece; vale como supuesta en su lugar.
         if (j === k && !etiqueta && e.supuestas < 4 && ls.every(({ c, d }) => d > Math.max(1.5, c.texto.length * 0.45))) {

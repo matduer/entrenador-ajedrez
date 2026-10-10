@@ -24,7 +24,7 @@ interface Fila { tipo: 'pagina' | 'jugada' | 'texto'; pagina: number; nro?: stri
 const filas: Fila[] = JSON.parse(readFileSync('datos-privados/biblioteca/textos/chernev_capa_filas.json', 'utf8'))
 
 // ---------- partidas ----------
-interface Partida { n: number; blancas: string; negras: string; lugar: string; anio?: number; apertura?: string; leidas: Leida[]; resultado?: PartidaLibro['resultado'] }
+interface Partida { n: number; incompleta?: boolean; blancas: string; negras: string; lugar: string; anio?: number; apertura?: string; leidas: Leida[]; resultado?: PartidaLibro['resultado'] }
 const partidas: Partida[] = []
 const ANIO = /1[89]\s?\d\s?\d/
 for (let i = 0; i < filas.length; i++) {
@@ -47,7 +47,14 @@ for (let i = 0; i < filas.length; i++) {
     continue
   }
   const p = partidas[partidas.length - 1]
-  if (!p || p.resultado) continue
+  if (!p) continue
+  // Después del resultado no tendría que haber más jugadas de la línea principal: si las hay, el resultado salió de un
+  // comentario y la partida quedó incompleta.
+  if (p.resultado) {
+    const ultima = p.leidas[p.leidas.length - 1]
+    if (f.tipo === 'jugada' && f.nro !== '?' && ultima && Number(f.nro!.replace(/[Il]/g, '1')) > ultima.nro) p.incompleta = true
+    continue
+  }
   // Solo «White/Black Resigns», «Drawn» o «Draw agreed» al principio del renglón: «draw thus: ...» es prosa.
   if (f.tipo === 'texto' && /^(White|Black)\s+Resigns|^Drawn\b|^Draw agreed/.test(f.texto!)) {
     p.resultado = /^White/.test(f.texto!) ? '0-1' : /^Black/.test(f.texto!) ? '1-0' : '1/2-1/2'
@@ -136,6 +143,7 @@ for (const p of partidas) {
   const ultima = p.leidas[p.leidas.length - 1]
   const total = ultima ? orden(ultima.nro, ultima.negras) + 1 : 0
   const motivo = !p.resultado ? 'sin resultado en el texto'
+    : p.incompleta ? 'hay jugadas después del resultado'
     : mejor.ucis.length < total ? `no llega al final (${mejor.ucis.length} medias jugadas de ${total})`
     : dudosa ? `jugada supuesta ambigua (media jugada ${dudosa})`
     : margen < 0.3 ? `ambigua (margen ${margen.toFixed(2)}; difiere en la media jugada ${otra!.ucis.findIndex((u, i) => u !== mejor.ucis[i]) + 1})`
