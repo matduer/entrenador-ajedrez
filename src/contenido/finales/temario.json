@@ -1026,6 +1026,89 @@
       ]
     },
     {
+      "id": "regla-de-bahr",
+      "titulo": "Peones de torre bloqueados y un peón pasado: la regla de Bähr",
+      "nivel": 4,
+      "explicacion": [
+        "Con peones de torre bloqueados y un peón pasado de más, el plan del bando fuerte casi siempre es el mismo: entregar el peón pasado para desviar al rey rival, comer el peón de torre y coronar el propio. El defensor se salva solo si, después de comer el peón pasado, su rey llega a tiempo a la casilla de coronación del peón de torre (con peones en h, a la columna f: f7 o f8).",
+        "Los dos reyes corren en diagonal hacia esa «línea de colisión». Si el peón de torre del bando fuerte ya está en la quinta fila, el rey defensor no llega nunca. Si está más atrás, decide la geometría (la regla de Bähr): por eso conviene dejar el peón pasado lo más atrás posible, para que el rey rival tarde más en comerlo.",
+        "Cuando el peón pasado está cerca de los peones de torre (en la columna central más próxima), el rey defensor puede contraatacar el peón de torre propio, y el plan cambia: hay que vigilar ese contraataque mientras se avanza."
+      ],
+      "ideas": [
+        "Entregá el peón pasado para desviar al rey y comé el peón de torre.",
+        "No avances el peón pasado sin necesidad: atrás tarda más en caer.",
+        "Después de comer, el rey va en diagonal para cerrarle el paso al rival."
+      ],
+      "posiciones": [
+        {
+          "id": "torre-en-quinta",
+          "fen": "8/8/3k3p/3P3P/2K5/8/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 30,
+          "consigna": "Tu peón de torre ya está en la quinta fila: el final está ganado, pero hay que separar bien al rey negro de tu peón. Ganá.",
+          "pista": "Rd4! y Re5, para que el rey negro no se acerque a tu peón de h; después Rf5 y Rg6. Cuando el rey negro come el de d5, tu rey toma h6 y el negro ya no llega. Con Rb3? o Rc3? son tablas.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "c4d4",
+            "dtm": 35,
+            "fecha": "2026-10-10"
+          }
+        },
+        {
+          "id": "peon-pasado-atras",
+          "fen": "8/8/8/1k5p/7P/1PK5/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 35,
+          "consigna": "Peones de torre bloqueados en la cuarta y quinta fila, y un peón pasado en b3. Ganá.",
+          "pista": "Rd4!: el peón se queda en b3 para que el rey negro tarde más en comerlo. Después Re5, Rf5, Rg5 y Rxh5, y tu rey se para en g6 frente al negro, que no llega a f7. Con b4? el rey negro come antes y llega a f8: tablas.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "c3d2",
+            "dtm": 37,
+            "fecha": "2026-10-10"
+          }
+        },
+        {
+          "id": "llegar-a-f8",
+          "fen": "8/8/8/1k5p/1P5P/2K5/8/8 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 25,
+          "consigna": "Jugás con negras. El blanco apuró su peón a b4 y eso te salva. Hacé tablas.",
+          "pista": "Comé el peón de b4 cuando puedas y andá en diagonal hacia f8 (la columna f es la «línea de colisión»). Cuando el blanco tome h5, tu rey ya está en f8 o f7 y el peón de h no corona.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "b5a6",
+            "dtm": 0,
+            "fecha": "2026-10-10"
+          }
+        },
+        {
+          "id": "contraataque",
+          "fen": "8/8/p7/P7/3k4/3P4/3K4/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 35,
+          "consigna": "El peón pasado está cerca de los de torre: el rey negro va a contraatacar tu peón de a5. Ganá.",
+          "pista": "Re2! (o Rc2) y Re3: si el rey negro va por a5 (Rc5-Rb5), Rd4! y Rc5!, y tu rey le cierra la salida de la banda mientras el peón de d corre. La defensa pasiva tampoco alcanza: tu rey llega a c6 y come el peón de a6.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "d2e2",
+            "dtm": 51,
+            "fecha": "2026-10-10"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 12 «Finales de peones», Final 83 «Peones de torre y un peón pasado alejado» (diagramas 12.15 a 12.18) y Final 84 «Peón pasado central próximo» (diagrama 12.20)"
+        }
+      ]
+    },
+    {
       "id": "peones-separados",
       "titulo": "Dos peones pasados separados: el cuadrado común",
       "nivel": 3,
@@ -1164,6 +1247,21 @@
             "mejor": "b2b3",
             "fecha": "2026-10-10"
           }
+        },
+        {
+          "id": "pareja-inocente",
+          "fen": "8/7p/8/4kpPP/8/8/4K3/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 25,
+          "consigna": "Tus peones de g5 y h5 parecen inofensivos contra el de h7. Encontrá la ruptura.",
+          "pista": "h6!: primero el peón que tiene enfrente un peón rival. Después de cualquier jugada negra, g6 y uno de los dos corona (si hxg6, h7). Con g6? hxg6 y no queda nada.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "h5h6",
+            "dtm": 29,
+            "fecha": "2026-10-10"
+          }
         }
       ],
       "fuentes": [
@@ -1174,6 +1272,10 @@
         {
           "titulo": "Jeremy Silman — El curso de finales completo (Siles Press, 2007)",
           "capitulo": "Parte Cinco (ELO 1600-1799), «Bombas tácticas», diagramas 171 a 174"
+        },
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 12 «Finales de peones», Final 92 «Rupturas lejos del rey» (diagramas 12.41 y 12.42)"
         }
       ]
     },
@@ -2196,6 +2298,59 @@
         {
           "titulo": "Paul Keres — Finales prácticos (edición electrónica en notación algebraica, «Club de Ajedrez»)",
           "capitulo": "cap. 2 «Finales de peones», diagrama 23 (estudio de N. Grigoriev, 1935)"
+        }
+      ]
+    },
+    {
+      "id": "peones-aislados",
+      "titulo": "Dos peones separados contra rey solo",
+      "nivel": 2,
+      "explicacion": [
+        "Dos peones separados casi siempre ganan contra el rey solo. El único peligro es que el rey rival los ataque antes de que llegue el propio, y para eso hay dos recursos.",
+        "Defenderse entre sí: con una columna de separación, el peón más atrasado no se puede tomar, porque el rey que lo toma queda fuera del cuadrado del otro. Basta con no dejar que el rey ataque al más avanzado.",
+        "Demorar la captura: si los peones están más lejos, se avanza el que el rey rival quiere atacar, para que tarde en comérselo; mientras tanto el rey propio llega a las casillas críticas del otro peón."
+      ],
+      "ideas": [
+        "Avanzá el peón que el rey rival quiere comer.",
+        "Contá: el rey que toma un peón no puede quedar fuera del cuadrado del otro.",
+        "Mientras los peones se defienden solos, acercá el rey."
+      ],
+      "posiciones": [
+        {
+          "id": "defenderse-entre-si",
+          "fen": "8/8/8/5k2/5P1P/8/8/6K1 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 30,
+          "consigna": "El rey negro ataca tu peón de f4 y tu rey está lejos. Ganá.",
+          "pista": "h5!: si Rxf4, el rey queda fuera del cuadrado del peón de h. Después acercá el rey, y cuando el rey negro vaya por el de h, f5-f6 repite la defensa mutua.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "h4h5",
+            "dtm": 31,
+            "fecha": "2026-10-10"
+          }
+        },
+        {
+          "id": "demorar-la-captura",
+          "fen": "8/8/8/3k4/P2P4/8/8/7K w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 35,
+          "consigna": "El rey negro amenaza el peón de d4 y tu rey está en la otra punta. Ganá.",
+          "pista": "a5!: el rey negro tiene que ir por el peón de a, y mientras lo persigue tu rey llega a las casillas críticas del peón de d (Rg2, Rf3, Re4, Rd5 y Re6). Con Rg2?, Rxd4 y son tablas.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "a4a5",
+            "dtm": 35,
+            "fecha": "2026-10-10"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 12 «Finales de peones», Final 78 «Peones aislados» (diagramas 12.2 y 12.3)"
         }
       ]
     },
