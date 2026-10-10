@@ -27,7 +27,7 @@
             "resultado": "win",
             "mejor": "d1d7",
             "dtm": 13,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -42,7 +42,7 @@
             "resultado": "win",
             "mejor": "a1a5",
             "dtm": 27,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -84,7 +84,7 @@
             "resultado": "win",
             "mejor": "a4a5",
             "dtm": 25,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -99,7 +99,7 @@
             "resultado": "draw",
             "mejor": "d1e1",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -147,7 +147,7 @@
             "resultado": "win",
             "mejor": "e2d3",
             "dtm": 41,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -162,7 +162,7 @@
             "resultado": "win",
             "mejor": "d1c2",
             "dtm": 43,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -177,7 +177,7 @@
             "resultado": "win",
             "mejor": "e6d6",
             "dtm": 21,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -192,7 +192,7 @@
             "resultado": "draw",
             "mejor": "e2e1",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -244,7 +244,7 @@
             "resultado": "draw",
             "mejor": "h8h7",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -259,7 +259,7 @@
             "resultado": "draw",
             "mejor": "d2c1",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -305,7 +305,7 @@
             "resultado": "win",
             "mejor": "c1d1",
             "dtm": 41,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -351,7 +351,7 @@
             "resultado": "draw",
             "mejor": "a6a1",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -396,7 +396,7 @@
             "resultado": "draw",
             "mejor": "b7a6",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -420,7 +420,8 @@
         "Contra un peón central o de caballo en séptima apoyado por su rey, la dama gana con un método fijo: jaques y clavadas para obligar al rey defensor a ponerse delante de su peón; cada vez que lo hace, el rey propio se acerca una casilla. Cuando el rey llega, se gana el peón o se da mate.",
         "Contra un peón de alfil o de torre en séptima, en cambio, el defensor suele tener tablas por ahogado si el rey atacante está lejos.",
         "La clave contra el peón de alfil es el truco del ahogado: cuando la dama se pone delante del peón, el rey defensor se mete en la esquina y, si la dama toma el peón, queda ahogado. Por eso la regla práctica es mirar dónde está el rey atacante: si llega a tiempo cerca del peón, hay mate o se gana el peón; si está lejos, son tablas.",
-        "Hay una excepción con el peón de torre: si el rey del bando fuerte ya está cerca, se puede dejar coronar al peón y armar una red de mate sobre la primera fila (Silman). La idea a veces sirve también contra el peón de alfil."
+        "Hay una excepción con el peón de torre: si el rey del bando fuerte ya está cerca, se puede dejar coronar al peón y armar una red de mate sobre la primera fila (Silman). La idea a veces sirve también contra el peón de alfil.",
+        "Dos trucos con el peón de alfil en séptima (De la Villa): aunque el rey atacante esté fuera de la zona ganadora, el bando fuerte puede tender una celada para que el rey defensor elija mal su casilla. Y si los dos coronan, no siempre son tablas: con el rey cerca, la dama recién coronada en el rincón puede quedar atrapada en una red de mate."
       ],
       "ideas": [
         "Obligar al rey rival a bloquear su propio peón para ganar un tiempo.",
@@ -439,7 +440,7 @@
             "resultado": "win",
             "mejor": "h1e4",
             "dtm": 15,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -454,7 +455,7 @@
             "resultado": "draw",
             "mejor": "g1a1",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -469,7 +470,7 @@
             "resultado": "win",
             "mejor": "g1f2",
             "dtm": 11,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -484,7 +485,52 @@
             "resultado": "win",
             "mejor": "h7g6",
             "dtm": 23,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
+          }
+        },
+        {
+          "id": "truco-rincon",
+          "fen": "8/8/8/3K4/8/8/1kp1Q3/8 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 15,
+          "consigna": "Jugás con negras. El blanco puso la dama en e2 y espera un error: elegí bien adónde va tu rey.",
+          "pista": "Ra1!: si la dama toma el peón, ahogado. Con Rb1??, el rey blanco se acerca con Rc4!! y, después de coronar con jaque, Rb3 deja una red de mate. Con Rc3??, De5+ te empuja al lado malo del peón.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "b2a1",
+            "dtm": 0,
+            "fecha": "2026-10-10"
+          }
+        },
+        {
+          "id": "truco-otro-lado",
+          "fen": "8/8/8/4K3/8/8/Q1pk4/8 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 15,
+          "consigna": "Jugás con negras. La dama blanca se fue a a2: parece que el rey puede ir a d1 tranquilo. ¿Es así?",
+          "pista": "Rc3!, la única, aunque parezca rara. Con Rd1??, Rd4! y el rey blanco llega a tiempo; con Rd3??, Db2 te obliga a clavar tu propio peón.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "d2c3",
+            "dtm": 0,
+            "fecha": "2026-10-10"
+          }
+        },
+        {
+          "id": "dama-contra-dama",
+          "fen": "8/8/8/8/8/k2K4/2Q5/q7 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 20,
+          "consigna": "Los dos coronaron, pero la dama negra quedó en el rincón y tu rey está cerca. Ganá.",
+          "pista": "Dc5+! y Dc4+: jaques que devuelven al rey negro a a2 o b2 sin soltar la dama de a1. Da7+? permite Rb1 y ya no se vuelve a la maniobra. Cuando tu rey llega a c2, la red de mate está armada.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "c2c5",
+            "dtm": 19,
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -505,6 +551,10 @@
         {
           "titulo": "Jeremy Silman — El curso de finales completo (Siles Press, 2007)",
           "capitulo": "Parte Seis (ELO 1800-1999): «Finales de Dama» (maniobra ganadora contra el peón de torre en séptima)"
+        },
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 4, Final 19 «Un truco demasiado frecuente» (diagramas 4.11 y 4.12) y Final 20 «Dama contra dama» (diagrama 4.13)"
         }
       ]
     },
@@ -536,7 +586,7 @@
             "resultado": "win",
             "mejor": "e4d5",
             "dtm": 29,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -551,7 +601,7 @@
             "resultado": "draw",
             "mejor": "c1b1",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -566,7 +616,7 @@
             "resultado": "win",
             "mejor": "g3g4",
             "dtm": 37,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -603,7 +653,7 @@
             "resultado": "draw",
             "mejor": "g1f1",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -618,7 +668,7 @@
             "resultado": "win",
             "mejor": "f7g6",
             "dtm": 29,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -655,7 +705,7 @@
             "resultado": "win",
             "mejor": "f6g6",
             "dtm": 7,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -670,7 +720,7 @@
             "resultado": "draw",
             "mejor": "f1g2",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -685,7 +735,7 @@
             "resultado": "draw",
             "mejor": "f1h2",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -721,7 +771,7 @@
             "resultado": "draw",
             "mejor": "f4e2",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -763,7 +813,7 @@
             "resultado": "win",
             "mejor": "h1h5",
             "dtm": 35,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -778,7 +828,7 @@
             "resultado": "win",
             "mejor": "c6c7",
             "dtm": 51,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -818,7 +868,7 @@
             "resultado": "draw",
             "mejor": "f6f3",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -855,7 +905,7 @@
             "ok": true,
             "resultado": "stockfish 7.73",
             "mejor": "c2c3",
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -894,7 +944,7 @@
             "resultado": "draw",
             "mejor": "a2a1",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -909,7 +959,7 @@
             "resultado": "draw",
             "mejor": "a2b2",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -924,7 +974,7 @@
             "resultado": "win",
             "mejor": "a8h8",
             "dtm": 37,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -960,7 +1010,7 @@
             "resultado": "win",
             "mejor": "a4a5",
             "dtm": 31,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -1002,7 +1052,7 @@
             "resultado": "win",
             "mejor": "d3e4",
             "dtm": 39,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -1017,7 +1067,7 @@
             "resultado": "win",
             "mejor": "f3f2",
             "dtm": 25,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -1054,7 +1104,7 @@
             "ok": true,
             "resultado": "stockfish 6.97",
             "mejor": "b5b6",
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -1069,7 +1119,7 @@
             "resultado": "win",
             "mejor": "g5g6",
             "dtm": 25,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -1084,7 +1134,7 @@
             "resultado": "win",
             "mejor": "g4g5",
             "dtm": 33,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -1098,7 +1148,7 @@
             "ok": true,
             "resultado": "stockfish 6.38",
             "mejor": "b4b3",
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -1112,7 +1162,7 @@
             "ok": true,
             "resultado": "stockfish 6.00",
             "mejor": "b2b3",
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -1154,7 +1204,7 @@
             "resultado": "win",
             "mejor": "b6b7",
             "dtm": 29,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -1169,7 +1219,7 @@
             "resultado": "draw",
             "mejor": "h8g7",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -1184,7 +1234,7 @@
             "resultado": "win",
             "mejor": "g6f6",
             "dtm": 23,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -1199,7 +1249,7 @@
             "resultado": "win",
             "mejor": "a3a2",
             "dtm": 51,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -1214,7 +1264,7 @@
             "resultado": "win",
             "mejor": "a5a6",
             "dtm": 27,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -1254,7 +1304,7 @@
             "resultado": "win",
             "mejor": "e1d3",
             "dtm": 43,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -1290,7 +1340,7 @@
             "resultado": "win",
             "mejor": "e1a5",
             "dtm": 15,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -1305,7 +1355,7 @@
             "resultado": "draw",
             "mejor": "g8h7",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -1346,7 +1396,7 @@
             "resultado": "win",
             "mejor": "c4b5",
             "dtm": 37,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -1383,7 +1433,7 @@
             "resultado": "draw",
             "mejor": "a1c1",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -1422,7 +1472,7 @@
             "resultado": "win",
             "mejor": "e2a6",
             "dtm": 25,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -1437,7 +1487,7 @@
             "resultado": "win",
             "mejor": "c3g7",
             "dtm": 25,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -1452,7 +1502,7 @@
             "resultado": "draw",
             "mejor": "d5e4",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -1467,7 +1517,7 @@
             "resultado": "win",
             "mejor": "f8g8",
             "dtm": 33,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -1511,7 +1561,7 @@
             "resultado": "draw",
             "mejor": "c7d6",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -1526,7 +1576,7 @@
             "resultado": "win",
             "mejor": "d4d5",
             "dtm": 39,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -1566,7 +1616,7 @@
             "ok": true,
             "resultado": "stockfish 6.27",
             "mejor": "e2f2",
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -1581,7 +1631,7 @@
             "resultado": "win",
             "mejor": "c5d5",
             "dtm": 33,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -1622,7 +1672,7 @@
             "resultado": "win",
             "mejor": "b4b5",
             "dtm": 59,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -1658,7 +1708,7 @@
             "resultado": "draw",
             "mejor": "h3h4",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -1694,7 +1744,7 @@
             "resultado": "win",
             "mejor": "c1b2",
             "dtm": 33,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -1732,7 +1782,7 @@
             "resultado": "win",
             "mejor": "h1h8",
             "dtm": 39,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -1747,7 +1797,7 @@
             "resultado": "draw",
             "mejor": "b2b3",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -1786,7 +1836,7 @@
             "resultado": "win",
             "mejor": "h3g4",
             "dtm": 59,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -1801,7 +1851,7 @@
             "resultado": "draw",
             "mejor": "b5b1",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -1841,7 +1891,7 @@
             "ok": true,
             "resultado": "draw",
             "mejor": "b1c1",
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -1879,7 +1929,7 @@
             "resultado": "draw",
             "mejor": "f6c3",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -1894,7 +1944,7 @@
             "resultado": "draw",
             "mejor": "e8d7",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -1909,7 +1959,7 @@
             "resultado": "draw",
             "mejor": "e1f2",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -1924,7 +1974,7 @@
             "resultado": "win",
             "mejor": "c8c7",
             "dtm": 27,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -1962,7 +2012,7 @@
             "resultado": "win",
             "mejor": "h1h3",
             "dtm": 43,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -1977,7 +2027,7 @@
             "resultado": "win",
             "mejor": "b5b6",
             "dtm": 57,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -1992,7 +2042,7 @@
             "resultado": "draw",
             "mejor": "d4d5",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -2036,7 +2086,7 @@
             "resultado": "draw",
             "mejor": "h8b8",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -2051,7 +2101,7 @@
             "resultado": "win",
             "mejor": "c4c5",
             "dtm": 55,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -2066,7 +2116,7 @@
             "resultado": "win",
             "mejor": "b4b5",
             "dtm": 55,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -2081,7 +2131,7 @@
             "resultado": "draw",
             "mejor": "c8b8",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -2119,7 +2169,7 @@
             "resultado": "win",
             "mejor": "d3d4",
             "dtm": 47,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -2134,7 +2184,7 @@
             "resultado": "win",
             "mejor": "f4f5",
             "dtm": 47,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -2175,7 +2225,7 @@
             "resultado": "draw",
             "mejor": "d1d6",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -2190,7 +2240,7 @@
             "resultado": "draw",
             "mejor": "b8a8",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -2227,7 +2277,7 @@
             "ok": true,
             "resultado": "stockfish 4.44",
             "mejor": "g2f1",
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -2241,7 +2291,7 @@
             "ok": true,
             "resultado": "stockfish 6.07",
             "mejor": "g4g5",
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -2278,7 +2328,7 @@
             "ok": true,
             "resultado": "stockfish 8.13",
             "mejor": "a8c8",
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -2293,7 +2343,7 @@
             "resultado": "win",
             "mejor": "f5e5",
             "dtm": 43,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -2308,7 +2358,7 @@
             "resultado": "win",
             "mejor": "d5c4",
             "dtm": 39,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -2345,7 +2395,7 @@
             "resultado": "win",
             "mejor": "f4f7",
             "dtm": 43,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -2360,7 +2410,7 @@
             "resultado": "draw",
             "mejor": "f7f6",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -2374,7 +2424,7 @@
             "ok": true,
             "resultado": "stockfish 0.00",
             "mejor": "g2g4",
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -2410,7 +2460,7 @@
             "ok": true,
             "resultado": "stockfish 8.56",
             "mejor": "f6e5",
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -2424,7 +2474,7 @@
             "ok": true,
             "resultado": "stockfish 5.85",
             "mejor": "e2f3",
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -2460,7 +2510,7 @@
             "ok": true,
             "resultado": "stockfish 6.48",
             "mejor": "a5b6",
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -2497,7 +2547,7 @@
             "resultado": "win",
             "mejor": "c3c4",
             "dtm": 37,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -2512,7 +2562,22 @@
             "resultado": "win",
             "mejor": "e1d1",
             "dtm": 45,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
+          }
+        },
+        {
+          "id": "defensa-dentro-del-cuadrado",
+          "fen": "8/8/8/1p2kPp1/6P1/4K3/8/8 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 20,
+          "consigna": "Jugás con negras. El peón de f5 está protegido, pero tu rey puede quedarse en su cuadrado y cuidar a la vez el peón de b5. Hacé tablas.",
+          "pista": "Rd5!, y en adelante no dejes que el rey blanco pase a la cuarta fila: si Rd3, Re5!; si Rb4, Rc6!. Al final el blanco tiene que jugar f6 y se cambian los peones.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "e5d5",
+            "dtm": 0,
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -2520,6 +2585,128 @@
         {
           "titulo": "Paul Keres — Finales prácticos (edición electrónica en notación algebraica, «Club de Ajedrez»)",
           "capitulo": "cap. 2 «Finales de peones», diagramas 24 y 26"
+        },
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 12 «Finales de peones», Final 89 «El peón pasado defendido» (diagrama 12.35)"
+        }
+      ]
+    },
+    {
+      "id": "cuadrado-errante",
+      "titulo": "El rey contra dos peones pasados: el cuadrado errante",
+      "nivel": 3,
+      "explicacion": [
+        "Cuando dos peones pasados separados están en la misma fila, se dibuja un cuadrado que tiene como lado la distancia entre ellos y que avanza con ellos. Si ese cuadrado ya toca la fila de coronación, los peones coronan solos aunque el rey esté al lado; si no, el rey puede frenarlos.",
+        "Lo que pasa después depende de la separación: con dos columnas en el medio, el rey los captura; con tres, solo los contiene (tiene tres casillas buenas en la columna del medio); con una, se defienden entre sí y ganan si el rey cae en zugzwang.",
+        "Por eso suele importar quién tiene tiempos de espera: un rey rival que puede ir y venir sin compromiso cambia el resultado."
+      ],
+      "ideas": [
+        "Mirá si el cuadrado de los dos peones llega a la fila de coronación.",
+        "No ataques de frente al peón más avanzado si con eso dejás avanzar al otro.",
+        "Con tres columnas de separación, el rey se queda en la columna del medio."
+      ],
+      "posiciones": [
+        {
+          "id": "dos-columnas",
+          "fen": "8/6k1/6P1/3p3P/p7/8/2K5/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 30,
+          "consigna": "El rey negro está atado a tus peones del flanco de rey. Frená los dos peones negros y comételos.",
+          "pista": "Rc3!: si d4+, Rxd4 y el de a no llega. Con Rb2?, d4 y el cuadrado de los dos peones ya toca la primera fila: coronan.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "c2c3",
+            "dtm": 37,
+            "fecha": "2026-10-10"
+          }
+        },
+        {
+          "id": "tres-columnas",
+          "fen": "8/7k/p3p1pP/6P1/8/2K5/8/8 w - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 15,
+          "consigna": "Tres columnas entre los peones: tu rey no puede comerlos, pero sí contenerlos. Hacé tablas.",
+          "pista": "Rc4!, en la columna del medio (c4, c5 y c6 son las casillas buenas). Con Rd4?, a5! y el cuadrado llega al final.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "c3c4",
+            "fecha": "2026-10-10"
+          }
+        },
+        {
+          "id": "una-columna",
+          "fen": "8/7k/6pP/6P1/8/p1p5/8/1K6 b - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 10,
+          "consigna": "Jugás con negras. Tus peones de a3 y c3 se defienden entre sí y el rey blanco tiene una sola casilla buena. Ganá.",
+          "pista": "Una jugada de espera con el rey (Rh8 o Rg8): el blanco tiene que mover y dejar pasar a uno de los peones. a2+? lo regala.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "h7g8",
+            "fecha": "2026-10-10"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 12 «Finales de peones», Final 88 «La lucha del rey con 2 peones pasados» (diagramas 12.32 a 12.34)"
+        }
+      ]
+    },
+    {
+      "id": "regla-de-steinitz",
+      "titulo": "Peones de caballo y torre contra peón de torre: la regla de Steinitz",
+      "nivel": 4,
+      "explicacion": [
+        "Con dos peones contra uno en el mismo flanco (caballo y torre contra torre), el bando fuerte gana si su rey llegó a la cuarta fila y conserva peones en la segunda. Un peón en la segunda fila es un tiempo de reserva doble: puede avanzar una o dos casillas, según convenga para quedarse con la oposición. Es la «regla de Steinitz».",
+        "Si los peones ya están en la tercera (g3 y h3), esos tiempos se pierden y el defensor, con la oposición, hace tablas."
+      ],
+      "ideas": [
+        "No adelantes los peones sin necesidad: en la segunda fila valen como tiempos de reserva.",
+        "Elegí entre avanzar una casilla o dos según quién quede con la oposición.",
+        "El rey propio en la cuarta fila es la base del plan."
+      ],
+      "posiciones": [
+        {
+          "id": "la-regla",
+          "fen": "8/8/6kp/8/5KP1/8/7P/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 40,
+          "consigna": "Te queda un peón en la segunda fila. ¿Una casilla o dos? Ganá.",
+          "pista": "h3!: después de Rf6, h4 y el rey negro pierde la oposición. Con h4? o g5? se gasta el tiempo de reserva y son tablas.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "h2h3",
+            "dtm": 53,
+            "fecha": "2026-10-10"
+          }
+        },
+        {
+          "id": "todos-en-segunda",
+          "fen": "8/7p/5k2/8/5K2/8/6PP/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 50,
+          "consigna": "Tu rey está en la cuarta fila y los dos peones siguen en la segunda: la posición está ganada. Ganala.",
+          "pista": "El plan: llevar el rey hacia h6 (o rodear por e6 si el rey negro lo impide) y mover los peones solo cuando haga falta un tiempo. Si el negro juega h6, g4! y después h3 y h4.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "h2h3",
+            "dtm": 57,
+            "fecha": "2026-10-10"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 12 «Finales de peones», Final 87 «Peones caballo y torre contra peón de torre» (diagramas 12.25 a 12.27)"
         }
       ]
     },
@@ -2549,7 +2736,7 @@
             "resultado": "win",
             "mejor": "d3d4",
             "dtm": 49,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -2564,7 +2751,7 @@
             "resultado": "draw",
             "mejor": "d6d7",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -2579,7 +2766,7 @@
             "resultado": "win",
             "mejor": "e1d1",
             "dtm": 61,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -2617,7 +2804,7 @@
             "resultado": "win",
             "mejor": "g3b8",
             "dtm": 17,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -2632,7 +2819,7 @@
             "resultado": "win",
             "mejor": "f5f4",
             "dtm": 25,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -2647,7 +2834,7 @@
             "resultado": "win",
             "mejor": "g8h7",
             "dtm": 45,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -2686,7 +2873,7 @@
             "resultado": "win",
             "mejor": "f4g6",
             "dtm": 47,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -2701,7 +2888,7 @@
             "resultado": "win",
             "mejor": "c6e5",
             "dtm": 33,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -2716,7 +2903,7 @@
             "resultado": "win",
             "mejor": "e4c5",
             "dtm": 53,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -2731,7 +2918,7 @@
             "resultado": "draw",
             "mejor": "f2g3",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -2769,7 +2956,7 @@
             "resultado": "win",
             "mejor": "a4a5",
             "dtm": 39,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -2784,7 +2971,7 @@
             "resultado": "win",
             "mejor": "c5c6",
             "dtm": 37,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -2799,7 +2986,7 @@
             "resultado": "draw",
             "mejor": "f6d4",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -2837,7 +3024,7 @@
             "resultado": "draw",
             "mejor": "f1e1",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -2852,7 +3039,7 @@
             "resultado": "draw",
             "mejor": "a8a6",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -2867,7 +3054,7 @@
             "resultado": "win",
             "mejor": "e7d6",
             "dtm": 57,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
@@ -2904,7 +3091,7 @@
             "resultado": "win",
             "mejor": "f7e6",
             "dtm": 33,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         },
         {
@@ -2919,7 +3106,7 @@
             "resultado": "draw",
             "mejor": "g2g3",
             "dtm": 0,
-            "fecha": "2026-10-09"
+            "fecha": "2026-10-10"
           }
         }
       ],
