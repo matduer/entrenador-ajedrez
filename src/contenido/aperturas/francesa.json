@@ -210,6 +210,24 @@
     },
     "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 c1d2 d5e4 d1g4 g8f6 g4g7 h8g8 g7h6 d8d4": {
       "porQue": "La respuesta que recomienda Watson: la dama toma el peón central, que el blanco dejó sin defensa al salir a cazar el peón de g7. Stockfish la considera la mejor."
+    },
+    "e2e4 e7e6 d2d4 d7d5 e4e5 c7c5 c2c3 c8d7": {
+      "porQue": "El plan de Bosch: ...a6 y ...Ab5 para cambiar el alfil «malo» de la Francesa. La dama se queda en d8, así el blanco no consigue el avance d5 con ganancia de tiempo."
+    },
+    "e2e4 e7e6 d2d4 d7d5 e4e5 c7c5 c2c3 c8d7 g1f3 a7a6": {
+      "porQue": "Prepara ...Ab5. Si el blanco cambia en b5, el negro retoma con el peón de a: queda con peones doblados, pero con la columna a abierta para la torre y un peón en b5 que controla casillas blancas."
+    },
+    "e2e4 e7e6 d2d4 d7d5 e4e5 c7c5 c2c3 c8d7 g1f3 a7a6 f1e2 c5d4": {
+      "porQue": "Primero se cambia en d4, y recién después ...Ab5.",
+      "porQueNo": [
+        {
+          "uci": "d7b5",
+          "texto": "6...Ab5?! enseguida: 7.Axb5+ axb5 8.dxc5! Axc5 9.b4 y el peón de b5 se pierde (Bosch)."
+        }
+      ]
+    },
+    "e2e4 e7e6 d2d4 d7d5 e4e5 c7c5 c2c3 c8d7 g1f3 a7a6 f1e2 c5d4 c3d4 d7b5": {
+      "porQue": "Ahora sí: el alfil malo se cambia y el negro se queda con un juego cómodo."
     }
   },
   "fuentes": [
@@ -229,6 +247,10 @@
       "titulo": "French Defence (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/French_Defence",
       "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Jeroen Bosch (ed.) — Secrets of Opening Surprises 6 (New In Chess, 2007)",
+      "capitulo": "cap. 14, Jeroen Bosch, «The French Advance with 5...a6»"
     },
     {
       "titulo": "Catálogo abierto de aperturas de Lichess",
@@ -432,6 +454,26 @@
       "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 c1d2 d5e4 d1g4 g8f6 g4g7 h8g8 g7h6 d8d4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 e4e5 c7c5 c2c3 c8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 e4e5 c7c5 c2c3 c8d7 g1f3 a7a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 e4e5 c7c5 c2c3 c8d7 g1f3 a7a6 f1e2 c5d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 e4e5 c7c5 c2c3 c8d7 g1f3 a7a6 f1e2 d7b5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,3 → −1,1. Refutación: Axb5+ axb5 dxc5 Axc5 b4 Aa7"
+      },
+      "e2e4 e7e6 d2d4 d7d5 e4e5 c7c5 c2c3 c8d7 g1f3 a7a6 f1e2 c5d4 c3d4 d7b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
       }
     }
   }

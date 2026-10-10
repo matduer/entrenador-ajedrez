@@ -53,12 +53,28 @@
     },
     "d2d4 d7d5 g1f3 b8c6 c1f4": {
       "porQue": "2...Cc6 tapa el peón c y ...c5 ya no es posible. Koltanowski desarrolla con Af4, e3 y Ad3 y prepara e4; Stockfish prefiere apenas 3.c4."
+    },
+    "d2d4 d7d5 g1f3 c8g4 f3e5": {
+      "porQue": "La respuesta más incisiva al «Ataque Chigorin»: el caballo ataca el alfil y el blanco puede seguir con c4 o con h3 y g4. Las jugadas tranquilas (e3, Cbd2) le dejan al negro resolver sin problemas el desarrollo de su alfil (Bosch)."
+    },
+    "d2d4 d7d5 g1f3 c8g4 f3e5 g4f5": {
+      "porQue": "La retirada más cómoda: el alfil queda activo y lejos de los peones blancos. Después de 3...Ah5, en cambio, 4.g4 Ag6 5.h4 acosa al alfil y el blanco gana espacio con tiempo."
+    },
+    "d2d4 d7d5 g1f3 c8g4 f3e5 g4e6": {
+      "porQue": "La idea sorprendente de Gurgenidze y Tseitlin: en e6 el alfil no ofrece blanco y ...Cd7 busca cambiar el caballo de e5."
+    },
+    "d2d4 d7d5 g1f3 c8g4 c2c4 g4f3 g2f3": {
+      "porQue": "Hay que tomar con el peón de g: abre la columna g y deja el centro intacto. Con 4.exf3 el negro no tiene ningún problema (Bosch)."
     }
   },
   "fuentes": [
     {
       "titulo": "George Koltanowski — Colle System (12.ª ed., Chess Enterprises, 1990)",
       "capitulo": "Parte I, lecciones 2 a 4"
+    },
+    {
+      "titulo": "Jeroen Bosch (ed.) — Secrets of Opening Surprises 6 (New In Chess, 2007)",
+      "capitulo": "cap. 10, Jeroen Bosch, «The Chigorin Attack»"
     }
   ],
   "verificacion": {
@@ -97,6 +113,22 @@
       "d2d4 d7d5 g1f3 b8c6 c1f4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 c8g4 f3e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 c8g4 f3e5 g4f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 c8g4 f3e5 g4e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,9 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 c8g4 c2c4 g4f3 g2f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
       }
     }
   }

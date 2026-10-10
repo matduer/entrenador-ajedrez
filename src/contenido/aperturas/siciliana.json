@@ -186,6 +186,20 @@
     },
     "e2e4 c7c5 f2f4 d7d5 e4d5 g8f6": {
       "porQue": "Mejor que retomar con la dama: amenaza ...Cxd5, y con el caballo en d5 el peón de f4 solo debilitaría al blanco. El blanco tiene que defender d5 (Ab5+ o c4) y el negro gana desarrollo."
+    },
+    "e2e4 c7c5 g1f3 g7g6": {
+      "porQue": "Dragón Hiperacelerado: el caballo de b8 todavía no sale, así se evita la Rossolimo (2...Cc6 3.Ab5). Si 3.d4, el negro puede demorar el cambio en d4 para no permitir el Maroczy (Donaldson y Silman)."
+    },
+    "e2e4 c7c5 g1f3 g7g6 d2d4 f8g7": {
+      "inferior": true,
+      "porQue": "No cambia en d4: si 4.c4, el negro no queda frente a un Maroczy sino que ataca d4 con ...Da5+, ...Db6 o ...d6 y ...Da5, posiciones mucho más desequilibradas. Stockfish prefiere el cambio 3...cxd4, apenas mejor."
+    },
+    "e2e4 c7c5 g1f3 g7g6 d2d4 f8g7 c2c4 d8a5": {
+      "porQue": "Jaque y presión sobre c5 y d4: la respuesta más directa a 4.c4 (también se juegan 4...Db6 y 4...d6)."
+    },
+    "e2e4 c7c5 g1f3 g7g6 h2h4": {
+      "inferior": true,
+      "porQue": "3.h4!?: un ataque directo con el peón de torre contra el enroque fianchettado que todavía no existe; lo jugaron Spassky y Velimirovic. Stockfish lo ve algo peor que 3.c3 o 3.d4."
     }
   },
   "fuentes": [
@@ -205,6 +219,10 @@
       "titulo": "Sicilian Defence (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Sicilian_Defence",
       "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Jeroen Bosch (ed.) — Secrets of Opening Surprises 6 (New In Chess, 2007)",
+      "capitulo": "cap. 5, John Donaldson y Jeremy Silman, «3.h4 in the Hyper-Accelerated Dragon»"
     },
     {
       "titulo": "Catálogo abierto de aperturas de Lichess",
@@ -396,6 +414,22 @@
       "e2e4 c7c5 f2f4 d7d5 e4d5 g8f6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 g7g6 d2d4 f8g7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere cxd4: −0,3 contra −0,8 (marcada como inferior pero jugable)"
+      },
+      "e2e4 c7c5 g1f3 g7g6 d2d4 f8g7 c2c4 d8a5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 g7g6 h2h4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
       }
     }
   }

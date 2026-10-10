@@ -121,6 +121,28 @@
     "e2e4 d7d5 e4d5 g8f6 d2d4 c8g4 f2f3 g4f5": {
       "inferior": true,
       "porQue": "El negro sigue con su gambito: ...e6 para abrir líneas y aprovechar su ventaja de desarrollo. Contra 5.c4 e6, Anderson deja abierta la evaluación («quizás»). Stockfish la considera algo inferior a 4...Ad7 y contesta 5.g4."
+    },
+    "e2e4 d7d5 e4d5 d8d5 b1c3 d5d6": {
+      "porQue": "La casilla de Tiviakov: la dama queda en el centro, lejos de las piezas blancas que la persiguen en a5. El principio del sistema es completar el desarrollo rápido: primero el alfil de c8, después el de f8."
+    },
+    "e2e4 d7d5 e4d5 d8d5 b1c3 d5d6 d2d4 g8f6 g1f3 c7c6": {
+      "porQue": "Prepara la salida del alfil de c8 a g4 o f5 con el apoyo de c6. Si el blanco no reacciona, el negro resuelve el problema de ese alfil y se iguala sin dificultad (Tiviakov)."
+    },
+    "e2e4 d7d5 e4d5 d8d5 b1c3 d5d6 d2d4 g8f6 g1f3 c7c6 f3e5": {
+      "porQue": "Controla g4 y deja al alfil de c8 sin su mejor casilla. Tiviakov la considera casi obligatoria; Stockfish acepta también 6.Ad3 o 6.h3."
+    },
+    "e2e4 d7d5 e4d5 d8d5 b1c3 d5d6 d2d4 g8f6 g1f3 a7a6": {
+      "inferior": true,
+      "porQue": "La otra respuesta de Tiviakov: quita la casilla b5 al caballo blanco y prepara ...Ag4, ...Cc6 y el enroque largo."
+    },
+    "e2e4 d7d5 e4d5 d8d5 b1c3 d5d6 d2d4 g8f6 g1f3 a7a6 g2g3 c8g4 h2h3 g4h5 f1g2 b8c6 e1g1 e8c8 c1f4 d6b4 a2a3": {
+      "porQue": "Defiende b2 y echa a la dama.",
+      "porQueNo": [
+        {
+          "uci": "d4d5",
+          "texto": "11.d5? pierde material: Tiviakov quedó perdido con blancas en 11 jugadas contra Almeida (Solsona, 2005) y se salvó porque el rival aceptó tablas."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -136,6 +158,10 @@
       "titulo": "Scandinavian Defense (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Scandinavian_Defense",
       "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Jeroen Bosch (ed.) — Secrets of Opening Surprises 6 (New In Chess, 2007)",
+      "capitulo": "cap. 16, Sergey Tiviakov, «Scandinavian with 3...Qd6»"
     },
     {
       "titulo": "Catálogo abierto de aperturas de Lichess",
@@ -251,6 +277,30 @@
       "e2e4 d7d5 e4d5 g8f6 d2d4 c8g4 f2f3 g4f5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −1,1 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4d5 d8d5 b1c3 d5d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4d5 d8d5 b1c3 d5d6 d2d4 g8f6 g1f3 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4d5 d8d5 b1c3 d5d6 d2d4 g8f6 g1f3 c7c6 f3e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4d5 d8d5 b1c3 d5d6 d2d4 g8f6 g1f3 a7a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,1 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4d5 d8d5 b1c3 d5d6 d2d4 g8f6 g1f3 a7a6 g2g3 c8g4 h2h3 g4h5 f1g2 b8c6 e1g1 e8c8 c1f4 d6b4 a2a3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4d5 d8d5 b1c3 d5d6 d2d4 g8f6 g1f3 a7a6 g2g3 c8g4 h2h3 g4h5 f1g2 b8c6 e1g1 e8c8 c1f4 d6b4 d4d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,9 → +0,4. Refutación: e5 Ad2 Axf3 Axf3 Cd4 Tb1"
       }
     }
   }
