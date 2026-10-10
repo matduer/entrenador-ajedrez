@@ -24,6 +24,10 @@
     {
       "jugadas": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 d7d6 d2d4 b7b5 a4b3 c6d4 f3d4 e5d4 d1d4 c7c5 d4d5 c8e6 d5c6 e6d7 c6d5 c5c4",
       "texto": "Arca de Noé: 8.Dxd4?? c5 9.Dd5 Ae6 10.Dc6+ Ad7 11.Dd5 c4 y el alfil de b3 queda atrapado."
+    },
+    {
+      "jugadas": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 d2d4 c6d4 f3d4 e5d4 d1d4 c7c5 d4e3 c5c4",
+      "texto": "El «Arca de Noé»: 8.d4?! Cxd4 9.Cxd4 exd4 10.Dxd4?? c5! 11.De3 c4 y el alfil de b3 no tiene salida (los peones de b5 y c4 le cierran a4, c2 y c4). El negro gana una pieza."
     }
   ],
   "notas": {
@@ -37,6 +41,10 @@
         {
           "uci": "d1e2",
           "texto": "...Ca5 y el alfil de b3 se cambia."
+        },
+        {
+          "uci": "d2d4",
+          "texto": "8.d4?! Cxd4 9.Cxd4 exd4 es prematuro, y si 10.Dxd4?? c5 11.De3 c4, el alfil de b3 queda encerrado por los peones de b5 y c4: la trampa del «Arca de Noé» (Johnsen y Johannessen)."
         }
       ]
     },
@@ -189,6 +197,10 @@
       "capitulo": "cap. 13, Adrian Mikhalchishin, «A Spanish SOS»"
     },
     {
+      "titulo": "Sverre Johnsen y Leif Erlend Johannessen — The Ruy Lopez: A Guide for Black (Gambit, 2007)",
+      "capitulo": "cap. 6, «Rare 8th and 9th Moves»"
+    },
+    {
       "titulo": "Catálogo abierto de aperturas de Lichess",
       "url": "https://github.com/lichess-org/chess-openings",
       "licencia": "CC0"
@@ -210,6 +222,10 @@
       "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 d1e2 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 5 puntos de chances: +0,4 → −0,2. Refutación: Ca5 a4 b4 Aa2 c5 d3"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 d2d4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: +0,4 → −0,5. Refutación: Cxd4 Cxd4 exd4 a4 Ad7 f4"
       },
       "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8": {
         "ok": true,

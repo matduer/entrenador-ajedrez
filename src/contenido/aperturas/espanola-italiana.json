@@ -435,6 +435,39 @@
           "texto": "7...exd4? 8.e5: el caballo de f6 tiene que irse y el blanco gana mucho terreno, con clara ventaja (Euwe)."
         }
       ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 b7b5 a4b3 f8c5 c2c3": {
+      "porQue": "Lo crítico contra el alfil en c5: prepara d4 con tiempo sobre el alfil."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 b7b5 a4b3 f8c5 c2c3 d7d6": {
+      "porQue": "El negro se conforma con un centro chico: después de 7.d4 exd4 8.cxd4 el alfil se retira a b6.",
+      "porQueNo": [
+        {
+          "uci": "g8f6",
+          "texto": "6...Cf6? 7.d4 exd4 8.e5 y el negro ya tiene problemas serios: el caballo de f6 no tiene buenas casillas (Johnsen y Johannessen)."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 b7b5 a4b3 g8f6 e1g1": {
+      "porQue": "El enroque natural, que permite transponer a la Española cerrada con ...Ae7.",
+      "porQueNo": [
+        {
+          "uci": "f3g5",
+          "texto": "6.Cg5?! d5 7.exd5 Cd4! y el negro está bien: el caballo desaloja al alfil y amenaza ...Cxd5 en buenas condiciones."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 b7b5 a4b3 g8f6 f3g5 d7d5 e4d5 c6d4": {
+      "porQue": "La respuesta correcta: el caballo amenaza ...Cxb3 y vuelve a apuntar a d5.",
+      "porQueNo": [
+        {
+          "uci": "f6d5",
+          "texto": "7...Cxd5? 8.Cxf7! Rxf7 9.Df3+: el ataque contra el rey negro, como en el Fegatello de la Italiana."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 b7b5 a4b3 f8e7 d2d4": {
+      "porQue": "Contra 5...Ae7 el golpe central es lo más fuerte: el negro todavía no jugó ...Cf6 y su centro queda flojo (Johnsen y Johannessen)."
     }
   },
   "fuentes": [
@@ -467,6 +500,10 @@
       "titulo": "Italian Game (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Italian_Game",
       "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Sverre Johnsen y Leif Erlend Johannessen — The Ruy Lopez: A Guide for Black (Gambit, 2007)",
+      "capitulo": "Parte 1, «Ruy Lopez Overview»"
     },
     {
       "titulo": "Catálogo abierto de aperturas de Lichess",
@@ -890,6 +927,38 @@
       "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 b7b5 a4b3 c8b7 d2d4 e5d4 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 10 puntos de chances: +0,2 → −0,9. Refutación: e5 Ce4 Ad5 Cc5 Cxd4 Ce6"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 b7b5 a4b3 f8c5 c2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 b7b5 a4b3 f8c5 c2c3 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 b7b5 a4b3 f8c5 c2c3 g8f6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: −0,8 → −1,9. Refutación: d4 Ad6 dxe5 Axe5 O-O O-O"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 b7b5 a4b3 g8f6 e1g1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 b7b5 a4b3 g8f6 f3g5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: +0,4 → −0,7. Refutación: d5 exd5 Cd4 d3 h6 Cf3"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 b7b5 a4b3 g8f6 f3g5 d7d5 e4d5 c6d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 b7b5 a4b3 g8f6 f3g5 d7d5 e4d5 f6d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 27 puntos de chances: +0,8 → −2,4. Refutación: Cxf7 Rxf7 Df3+ Re6 Cc3 Ce7"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 b7b5 a4b3 f8e7 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
       }
     }
   }
