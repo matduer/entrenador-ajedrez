@@ -73,8 +73,11 @@ function generar(pos: Chess, larga: boolean): Cand[] {
 }
 
 // ---------- medias jugadas de la línea principal ----------
-/** Una media jugada leída: número, color (por la columna en que está) y texto. */
-export interface Leida { nro: number; negras: boolean; texto: string }
+/**
+ * Una media jugada leída: número, color (por la columna en que está) y texto. «alternativas»: otras lecturas de la misma
+ * jugada (p. ej. un segundo OCR a más resolución); vale la que más se parezca a cada jugada legal.
+ */
+export interface Leida { nro: number; negras: boolean; texto: string; alternativas?: string[]; fila?: number }
 /**
  * RapidOCR a veces lee una jugada dada vuelta 180° («SP-Lp» es «d7-d5», «9P-SP» es «d5-d6»): se invierte el orden
  * y cada carácter pasa a la figura que se ve girada.
@@ -115,8 +118,9 @@ export function reconstruir(leidas: Leida[], candidatas: Candidatas): Estado[] {
       for (let j = k; j < Math.min(leidas.length, k + 3); j++) {
         const l = leidas[j]
         const etiqueta = orden(l.nro, l.negras) === ply ? 0 : ETIQUETA
-        const giro = girada(l.texto)
-        const ls = cands.map((c) => ({ c, d: Math.min(distancia(l.texto, c.texto), distancia(giro, c.texto) + 0.3) }))
+        const textos = [l.texto, ...(l.alternativas ?? [])]
+        const giros = textos.map(girada)
+        const ls = cands.map((c) => ({ c, d: Math.min(...textos.map((t, x) => Math.min(distancia(t, c.texto), distancia(giros[x], c.texto) + 0.3))) }))
         const minimo = Math.min(...ls.map((x) => x.d))
         // Ilegible (p. ej. leída al revés, «SP-Lp»): ninguna jugada se le parece; vale como supuesta en su lugar.
         if (j === k && !etiqueta && e.supuestas < 4 && ls.every(({ c, d }) => d > Math.max(1.5, c.texto.length * 0.45))) {
