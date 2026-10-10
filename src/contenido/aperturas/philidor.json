@@ -27,6 +27,10 @@
     {
       "jugadas": "e2e4 e7e5 g1f3 d7d6 d2d4 b8d7 f1c4 g8f6 d4e5 d7e5 f3e5 d6e5 c4f7 e8f7 d1d8",
       "texto": "En la Hanham, desarrollar el caballo de g8 a f6 con el alfil blanco en c4 pierde la dama: dxe5, el negro retoma, Cxe5 dxe5 y Axf7+ deja la dama de d8 sin defensa."
+    },
+    {
+      "jugadas": "e2e4 e7e5 g1f3 d7d6 f1c4 c8g4 b1c3 g7g6 f3e5 g4d1 c4f7 e8e7 c3d5",
+      "texto": "Mate de Légal: con el alfil en g4 y 4...g6?, 5.Cxe5! entrega la dama: si 5...Axd1??, 6.Axf7+ Re7 7.Cd5#. Y si 5...dxe5, 6.Dxg4 y el blanco ganó un peón. Es el mismo mate que se dio en Légal–Saint Brie (París, 1750), con otro orden de jugadas (2.Ac4 d6 3.Cf3)."
     }
   ],
   "notas": {

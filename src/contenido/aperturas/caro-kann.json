@@ -49,6 +49,10 @@
     {
       "jugadas": "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 g1f3 g8f6 e4f6 d7f6 f1c4 c8g4 c4f7 e8f7 f3e5 f7e8 e5g4",
       "texto": "Variante Karpov con 5.Cf3 Cgf6 6.Cxf6+ Cxf6 7.Ac4: si 7...Ag4?, 8.Axf7+! Rxf7 9.Ce5+ y Cxg4, y el blanco gana un peón. Stockfish prefiere 7...Af5."
+    },
+    {
+      "jugadas": "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 g8f6 d1d3 e7e5 d4e5 d8a5 c1d2 a5e5 e1c1 f6e4 d3d8 e8d8 d2g5 d8c7 g5d8",
+      "texto": "Réti–Tartakower (Viena, 1910): 5.Dd3 e5 6.dxe5 Da5+ 7.Ad2 Dxe5 8.O-O-O Cxe4?? 9.Dd8+!! Rxd8 10.Ag5+ (jaque doble) Rc7 11.Ad8#. Si 10...Re8, 11.Td8#."
     }
   ],
   "notas": {
