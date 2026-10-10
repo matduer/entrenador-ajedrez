@@ -1,0 +1,103 @@
+{
+  "id": "peon-dama-cf3",
+  "nombre": "Peón dama con 2.Cf3",
+  "raiz": "d2d4 d7d5 g1f3",
+  "resumen": "Después de 1.d4 d5, 2.Cf3 desarrolla una pieza, impide ...e5 y deja abiertas las dos ideas del blanco: c4 (Gambito de Dama) o e3 con Ad3 (Sistema Colle). Si el negro saca temprano el alfil de c8 a g4 o f5, el blanco suele jugar c4 enseguida y atacar b7, que quedó sin defensa.",
+  "planesBlancas": [
+    "Contra 2...Cf6: el Sistema Colle (e3, Ad3, Cbd2, 0-0 y el avance e4 en el momento justo), o c4 y un Gambito de Dama.",
+    "Contra 2...Ag4 o 2...Af5: 3.c4 y Db3, apuntando a b7."
+  ],
+  "planesNegras": [
+    "...Cf6 y ...e6 o ...c5, con un desarrollo sólido.",
+    "Sacar el alfil de c8 antes de cerrarlo con ...e6, sin descuidar b7."
+  ],
+  "estructura": "Centro de peones en d4 y d5; según la respuesta del blanco, se llega a estructuras del Gambito de Dama o del Colle.",
+  "rupturas": [
+    "c4 del blanco, contra d5.",
+    "...c5 del negro, contra d4."
+  ],
+  "piezas": [
+    "Dama blanca: b3, contra b7, cuando el alfil negro de c8 salió temprano.",
+    "Alfil negro de c8: g4 o f5 antes de ...e6; si sale, b7 queda débil."
+  ],
+  "trampas": [
+    {
+      "jugadas": "d2d4 d7d5 g1f3 c8g4 c2c4 e7e6 d1b3 b7b6 f3e5 g8f6 e2e3 f8e7 c4d5 e6d5 f1b5 g4d7 e5d7 b8d7 b5c6",
+      "texto": "2...Ag4 3.c4 e6 4.Db3 b6? 5.Ce5! Cf6 6.e3 Ae7 7.cxd5 exd5 8.Ab5+ Ad7? 9.Cxd7 Cbxd7 10.Ac6: la torre de a8 queda atacada y el negro pierde material. Es una partida de las simultáneas de Koltanowski; incluso con 8...Rf8 el negro queda bastante peor."
+    }
+  ],
+  "notas": {
+    "d2d4 d7d5 g1f3": {
+      "porQue": "Desarrolla, impide ...e5 y no se compromete todavía entre c4 y e3."
+    },
+    "d2d4 d7d5 g1f3 c8g4 c2c4": {
+      "porQue": "El alfil de c8 salió antes de ...e6 y b7 quedó sin defensa: 3.c4 abre la diagonal de la dama hacia b7. Si 3...Axf3, el negro entrega sin necesidad su alfil por un caballo (Koltanowski)."
+    },
+    "d2d4 d7d5 g1f3 c8g4 c2c4 e7e6 d1b3": {
+      "porQue": "Ataca b7 de inmediato."
+    },
+    "d2d4 d7d5 g1f3 c8g4 c2c4 e7e6 d1b3 b8c6": {
+      "porQue": "Defiende indirectamente: si 5.Dxb7, el caballo salta a b4 con la amenaza Cc2+.",
+      "porQueNo": [
+        {
+          "uci": "b7b6",
+          "texto": "4...b6? 5.Ce5!: el caballo ataca el alfil de g4 y la dama amenaza entrar con jaque por a4; el negro queda claramente peor (Koltanowski)."
+        }
+      ]
+    },
+    "d2d4 d7d5 g1f3 c8f5 c2c4": {
+      "porQue": "La misma idea que contra 2...Ag4: con el alfil afuera, c4 y Db3 contra b7. Koltanowski aconseja salirse del Colle cuando el rival da una oportunidad así."
+    },
+    "d2d4 d7d5 g1f3 c7c5 c2c4": {
+      "porQue": "Contra 2...c5 también conviene c4: si 3...e6, se llega a una Tarrasch en la que el blanco todavía no jugó Cc3, y el negro puede quedarse con el peón aislado de d5."
+    },
+    "d2d4 d7d5 g1f3 b8c6 c1f4": {
+      "porQue": "2...Cc6 tapa el peón c y ...c5 ya no es posible. Koltanowski desarrolla con Af4, e3 y Ad3 y prepara e4; Stockfish prefiere apenas 3.c4."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "George Koltanowski — Colle System (12.ª ed., Chess Enterprises, 1990)",
+      "capitulo": "Parte I, lecciones 2 a 4"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-10",
+    "resultados": {
+      "d2d4 d7d5 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 c8g4 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 c8g4 c2c4 e7e6 d1b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 c8g4 c2c4 e7e6 d1b3 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 c8g4 c2c4 e7e6 d1b3 b7b6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 12 puntos de chances: −0,7 → −2,1. Refutación: Ce5 Cf6 Cc3 dxc4 Dxc4 a6"
+      },
+      "d2d4 d7d5 g1f3 c8f5 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 c7c5 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 b8c6 c1f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      }
+    }
+  }
+}

@@ -20,7 +20,12 @@
     "Alfil blanco de f1: d3, sobre h7.",
     "Alfil blanco de c1: encerrado detrás de e3; a veces sale por b2 (Colle-Zukertort)."
   ],
-  "trampas": [],
+  "trampas": [
+    {
+      "jugadas": "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 f8d6 b1d2 b8d7 e1g1 e8g8 e3e4 d5e4 d2e4 f6e4 d3e4 e6e5 d4e5 d7e5 f3e5 d6e5 e4h7 g8h7 d1h5 h7g8 h5e5",
+      "texto": "Si el negro copia las jugadas del blanco (4...Ad6, ...Cbd7, ...0-0) y después de 7.e4 dxe4 8.Cxe4 Cxe4 9.Axe4 busca liberarse con 9...e5?, viene 10.dxe5 Cxe5 11.Cxe5 Axe5 12.Axh7+! Rxh7 13.Dh5+ Rg8 14.Dxe5: el blanco recupera el alfil y gana un peón (Koltanowski)."
+    }
+  ],
   "notas": {
     "d2d4 d7d5 g1f3 g8f6 e2e3": {
       "porQue": "Sistema Colle: cadena c3-d4-e3, Ad3, Cbd2 y la ruptura e4."
@@ -67,12 +72,34 @@
     },
     "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 c7c5 c2c3 b8c6 e1g1 f8d6 b1d2 e8g8 d4c5 d6c5 e3e4": {
       "porQue": "La posición básica del Colle: la ruptura e4 se cumplió y el negro debe vigilar e5 con ...Dc7."
+    },
+    "d2d4 d7d5 g1f3 g8f6 e2e3 c8f5 c2c4": {
+      "porQue": "Con el alfil de c8 afuera, b7 quedó débil: 4.c4, con la idea de Db3, es mejor que seguir con Ad3 (Koltanowski, lección 4)."
+    },
+    "d2d4 d7d5 g1f3 g8f6 e2e3 c8g4 c2c4": {
+      "porQue": "Igual que contra 3...Af5: 4.c4 y Db3 contra b7, mejor que el desarrollo automático con Ad3 (Koltanowski, lección 4)."
+    },
+    "d2d4 d7d5 g1f3 g8f6 e2e3 c7c5 c2c3": {
+      "porQue": "Sostiene d4 sin comprometerse: el alfil irá a d3 y después llegará e4."
+    },
+    "d2d4 d7d5 g1f3 g8f6 e2e3 c7c5 c2c3 b8d7": {
+      "porQue": "Para Koltanowski, la defensa más incómoda contra el Colle: ...Cbd7, ...g6, ...Ag7 y ...e5. El caballo en d7 apoya e5 sin estorbar al alfil, que vigila desde g7.",
+      "porQueNo": [
+        {
+          "uci": "c5c4",
+          "texto": "4...c4?! saca la presión sobre d4 y permite 5.b3!: si el negro cambia, el blanco abre la columna a; para sostener c4 tiene que jugar ...b5 y después a4 lo debilita (Koltanowski)."
+        }
+      ]
     }
   },
   "fuentes": [
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Other 1 d4 d5 Openings», sección «Queen's Pawn Game» (Colle y Zukertort)"
+    },
+    {
+      "titulo": "George Koltanowski — Colle System (12.ª ed., Chess Enterprises, 1990)",
+      "capitulo": "Parte I, lecciones 4 y 5"
     },
     {
       "titulo": "Colle System (Wikipedia en inglés)",
@@ -88,7 +115,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-10",
     "resultados": {
       "d2d4 d7d5 g1f3 g8f6 e2e3": {
         "ok": true,
@@ -141,6 +168,26 @@
       "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 c7c5 c2c3 b8c6 e1g1 f8d6 b1d2 e8g8 d4c5 d6c5 e3e4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 g8f6 e2e3 c8f5 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 g8f6 e2e3 c8g4 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 g8f6 e2e3 c7c5 c2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 g8f6 e2e3 c7c5 c2c3 b8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 g8f6 e2e3 c7c5 c2c3 c5c4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,1 → −0,6. Refutación: b3 cxb3 axb3 Af5 Aa3 a6"
       }
     }
   }

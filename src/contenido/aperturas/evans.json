@@ -92,7 +92,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-10",
     "resultados": {
       "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4": {
         "ok": true,

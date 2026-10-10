@@ -29,7 +29,11 @@ const evaluarJugada = (prefijo: string[], uci: string) => motor.evaluarJugada(pr
 
 let fallas = 0
 // Opcional: verificar solo algunos archivos (por nombre, con o sin .json) después de la profundidad.
-const SOLO = process.argv.slice(3).map((a) => (a.endsWith('.json') ? a : `${a}.json`))
+// Se acepta también la ruta («src/contenido/aperturas/colle.json»): cuenta el nombre. Un nombre que no coincide con
+// ningún archivo es un error (antes se ignoraba y el resultado decía «Todo verificado» sin haber verificado nada).
+const SOLO = process.argv.slice(3).map((a) => a.split(/[\/]/).pop()!).map((a) => (a.endsWith('.json') ? a : `${a}.json`))
+const faltan = SOLO.filter((a) => !readdirSync(CARPETA).includes(a))
+if (faltan.length) { console.log(`✗ No existen: ${faltan.join(', ')}`); process.exit(1) }
 for (const archivo of readdirSync(CARPETA).filter((f) => f.endsWith('.json') && (!SOLO.length || SOLO.includes(f)))) {
   const ruta = `${CARPETA}/${archivo}`
   const e: Explicacion = JSON.parse(readFileSync(ruta, 'utf8'))
