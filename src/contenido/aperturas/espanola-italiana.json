@@ -56,6 +56,10 @@
         {
           "uci": "f7f6",
           "texto": "Defiende e5 con un peón, pero debilita el rey: Cxe5 igual funciona porque ...fxe5 abre la diagonal h5-e8."
+        },
+        {
+          "uci": "d7d5",
+          "texto": "2...d5?!, el Gambito Elefante: después de 3.exd5 el negro no recupera el peón con comodidad (si 3...Dxd5 4.Cc3 con tiempo) y lo más jugado, 3...e4 4.De2, deja al blanco con un peón de más."
         }
       ]
     },
@@ -468,6 +472,24 @@
     },
     "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 b7b5 a4b3 f8e7 d2d4": {
       "porQue": "Contra 5...Ae7 el golpe central es lo más fuerte: el negro todavía no jugó ...Cf6 y su centro queda flojo (Johnsen y Johannessen)."
+    },
+    "e2e4 e7e5 g1f3 d7d5 e4d5": {
+      "porQue": "Tomar es lo mejor: el peón de e5 queda atacado y el negro tiene que decidir cómo seguir."
+    },
+    "e2e4 e7e5 g1f3 d7d5 e4d5 e5e4": {
+      "porQue": "La continuación principal del gambito: el peón echa al caballo."
+    },
+    "e2e4 e7e5 g1f3 d7d5 e4d5 e5e4 d1e2": {
+      "porQue": "Clava el peón de e4 contra el rey y prepara Cc3 para ganarlo.",
+      "porQueNo": [
+        {
+          "uci": "f3e5",
+          "texto": "4.Ce5?! Dxd5: el negro recupera el peón con la dama bien centralizada."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 d7d5 e4d5 e5e4 d1e2 g8f6": {
+      "porQue": "Defiende e4 desarrollando. Después de 5.Cc3 Ae7 6.Cxe4 el blanco queda con un peón de más (Purser, Jensen y Pape)."
     }
   },
   "fuentes": [
@@ -506,6 +528,9 @@
       "capitulo": "Parte 1, «Ruy Lopez Overview»"
     },
     {
+      "titulo": "Purser, Jensen y Pape — Elephant Gambit (Blackmar Press, 1997)"
+    },
+    {
       "titulo": "Catálogo abierto de aperturas de Lichess",
       "url": "https://github.com/lichess-org/chess-openings",
       "licencia": "CC0"
@@ -535,6 +560,10 @@
       "e2e4 e7e5 g1f3 f7f6 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 16 puntos de chances: −0,3 → −2,1. Refutación: Cxe5 De7 Cf3 d5 d3 Cc6"
+      },
+      "e2e4 e7e5 g1f3 d7d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,3 → −1,0. Refutación: exd5 Ad6 d4 e4 Ce5 Cf6"
       },
       "e2e4 e7e5 g1f3 b8c6 f1b5": {
         "ok": true,
@@ -959,6 +988,26 @@
       "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 b7b5 a4b3 f8e7 d2d4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 d7d5 e4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 d7d5 e4d5 e5e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 d7d5 e4d5 e5e4 d1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 d7d5 e4d5 e5e4 f3e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: +1,1 → +0,2. Refutación: Dxd5 d4 exd3 Cxd3 Cc6 Cc3"
+      },
+      "e2e4 e7e5 g1f3 d7d5 e4d5 e5e4 d1e2 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,1 para el bando que mueve"
       }
     }
   }
