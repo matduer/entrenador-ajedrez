@@ -34,6 +34,14 @@
     {
       "jugadas": "e2e4 e7e6 d2d4 d7d5 e4e5 g8f6 e5f6",
       "texto": "En el Avance el caballo no tiene la casilla f6: exf6."
+    },
+    {
+      "jugadas": "e2e4 e7e6 d2d4 d7d5 e4e5 b7b6 c2c3 c8a6 f1a6 b8a6 d1a4",
+      "texto": "3...b6 4.c3 Aa6?? 5.Axa6 Cxa6 6.Da4+: el jaque ataca también el caballo de a6. Lo correcto es 4...Dd7 antes de ...Aa6."
+    },
+    {
+      "jugadas": "e2e4 e7e6 d2d4 d7d5 e4d5 e6d5 g1f3 b8c6 f1b5 f8d6 c2c4 g8e7 c4c5",
+      "texto": "En el Cambio, 6.c4 Cge7?? 7.c5: el alfil de d6 no tiene retirada. Lo correcto es 6...dxc4."
     }
   ],
   "notas": {
@@ -228,6 +236,48 @@
     },
     "e2e4 e7e6 d2d4 d7d5 e4e5 c7c5 c2c3 c8d7 g1f3 a7a6 f1e2 c5d4 c3d4 d7b5": {
       "porQue": "Ahora sí: el alfil malo se cambia y el negro se queda con un juego cómodo."
+    },
+    "e2e4 e7e6 d2d4 d7d5 e4e5 b7b6": {
+      "porQue": "Una idea poco común pero lógica en el Avance: preparar ...Aa6 para cambiar el alfil «malo» de la Francesa (McDonald). Stockfish prefiere el habitual 3...c5.",
+      "inferior": true
+    },
+    "e2e4 e7e6 d2d4 d7d5 e4e5 b7b6 c2c3 d8d7": {
+      "porQue": "Impide Da4+ y deja todo listo para ...Aa6.",
+      "porQueNo": [
+        {
+          "uci": "c8a6",
+          "texto": "4...Aa6?? 5.Axa6 Cxa6 6.Da4+ y el caballo de a6 se pierde."
+        }
+      ]
+    },
+    "e2e4 e7e6 d2d4 d7d5 e4e5 c7c5 c2c3 d8b6 g1f3 c8d7 f1d3 c5d4": {
+      "porQue": "Primero se cambia en d4. Si 6...Ab5 enseguida, 7.dxc5! Axc5 8.b4 incomoda al alfil: después de 8...Axf2+? 9.Re2 el alfil queda encerrado y se pierde (McDonald)."
+    },
+    "e2e4 e7e6 d2d4 d7d5 e4d5 e6d5 g1f3 b8c6 f1b5 f8d6 c2c4 d5c4": {
+      "porQue": "Hay que reaccionar contra el ataque al peón de d5: después de ...dxc4 el negro conserva un juego activo con la pareja de alfiles.",
+      "porQueNo": [
+        {
+          "uci": "g8e7",
+          "texto": "6...Cge7?? 7.c5 y el alfil de d6 no tiene casilla: se pierde una pieza (McDonald)."
+        }
+      ]
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 d5e4 c3e4 c8d7 g1f3 d7c6 e4g5 f8d6": {
+      "porQue": "El antídoto contra 6.Cg5 en la Fort Knox: tapa la diagonal y prepara ...h6 sin permitir sacrificios en f7.",
+      "porQueNo": [
+        {
+          "uci": "g8f6",
+          "texto": "6...Cf6? 7.Ce5 y no hay defensa contra Cgxf7."
+        },
+        {
+          "uci": "c6f3",
+          "texto": "6...Axf3? 7.Dxf3 y f7 y b7 quedan atacados a la vez."
+        },
+        {
+          "uci": "h7h6",
+          "texto": "6...h6? 7.Cxf7! Rxf7 8.Ce5+ y el ataque es decisivo (McDonald)."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -251,6 +301,10 @@
     {
       "titulo": "Jeroen Bosch (ed.) — Secrets of Opening Surprises 6 (New In Chess, 2007)",
       "capitulo": "cap. 14, Jeroen Bosch, «The French Advance with 5...a6»"
+    },
+    {
+      "titulo": "Neil McDonald — How to Play Against 1 e4 (Everyman, 2008)",
+      "capitulo": "caps. 1 a 3 (Avance, Cambio y Fort Knox)"
     },
     {
       "titulo": "Catálogo abierto de aperturas de Lichess",
@@ -474,6 +528,46 @@
       "e2e4 e7e6 d2d4 d7d5 e4e5 c7c5 c2c3 c8d7 g1f3 a7a6 f1e2 c5d4 c3d4 d7b5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 e4e5 b7b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere c5: −0,2 contra −0,9 (marcada como inferior pero jugable)"
+      },
+      "e2e4 e7e6 d2d4 d7d5 e4e5 b7b6 c2c3 d8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,9 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 e4e5 b7b6 c2c3 c8a6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 36 puntos de chances: −0,9 → −7,6. Refutación: Axa6 Cxa6 Da4+ Dd7 Dxa6 b5"
+      },
+      "e2e4 e7e6 d2d4 d7d5 e4e5 c7c5 c2c3 d8b6 g1f3 c8d7 f1d3 c5d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 e4d5 e6d5 g1f3 b8c6 f1b5 f8d6 c2c4 d5c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 e4d5 e6d5 g1f3 b8c6 f1b5 f8d6 c2c4 g8e7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 34 puntos de chances: −0,3 → −5,2. Refutación: c5 Ag4 cxd6 Dxd6 Cc3 O-O-O"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 d5e4 c3e4 c8d7 g1f3 d7c6 e4g5 f8d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 d5e4 c3e4 c8d7 g1f3 d7c6 e4g5 g8f6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 25 puntos de chances: −0,1 → −3,2. Refutación: Ce5 Dd5 Cexf7 Tg8 Ce5 h6"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 d5e4 c3e4 c8d7 g1f3 d7c6 e4g5 c6f3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 21 puntos de chances: −0,1 → −2,6. Refutación: Dxf3 Cf6 Dxb7 Cbd7 g3 a5"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 d5e4 c3e4 c8d7 g1f3 d7c6 e4g5 h7h6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 32 puntos de chances: −0,1 → −4,3. Refutación: Cxf7 Rxf7 Ce5+ Rf6 Dg4 De8"
       }
     }
   }
