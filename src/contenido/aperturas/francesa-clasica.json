@@ -95,6 +95,9 @@
     },
     "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8e7 e4e5 f6d7 g5e7 d8e7 f2f4": {
       "porQue": "Sostiene e5. Con los alfiles de casillas negras cambiados, el negro tiene más libertad y rompe con ...c5 y ...f6."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 e4e5 f6d7 f2f4 c7c5 g1f3 b8c6 c1e3 f8e7": {
+      "porQue": "La idea paradójica de McDonald: en vez del habitual ...cxd4 y ...Ac5, el alfil va a e7 y el negro mantiene la tensión. Así el blanco no puede seguir con su plan normal (Cxd4, Dd2 y enroque largo), y si enroca largo de todos modos, ...Da5 y el avance de los peones del flanco de dama llegan rápido al rey."
     }
   },
   "fuentes": [
@@ -106,6 +109,10 @@
       "titulo": "French Defence (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/French_Defence",
       "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Neil McDonald — How to Play Against 1 e4 (Everyman, 2008)",
+      "capitulo": "cap. 4, «The Classical 4 e5 Variation»"
     },
     {
       "titulo": "Catálogo abierto de aperturas de Lichess",
@@ -201,6 +208,10 @@
       "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8e7 e4e5 f6d7 g5e7 d8e7 f2f4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 e4e5 f6d7 f2f4 c7c5 g1f3 b8c6 c1e3 f8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
       }
     }
   }
