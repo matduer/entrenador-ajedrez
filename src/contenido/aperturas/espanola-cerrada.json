@@ -172,6 +172,18 @@
     },
     "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 a8b8 d2d4 e5d4 c3d4 d6d5 e4e5 f6e4": {
       "porQue": "El caballo se instala en e4 y el negro queda con buen juego (Fedorchuk-Gajewski, Varsovia 2005)."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 c8b7 d2d4 f8e8 b1d2": {
+      "porQue": "La línea principal de la Zaitsev: el caballo va hacia f1 y g3 y el blanco mantiene la tensión en el centro."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 c8b7 d2d4 f8e8 b1d2 e7f8": {
+      "porQue": "El alfil vuelve a f8 para defender el enroque y dejar libre la columna e para la torre: el esquema típico de la Zaitsev, con ...h6, ...exd4 y ...Cb4 más adelante (Johnsen y Johannessen)."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 c8b7 d2d4 f8e8 f3g5": {
+      "porQue": "Ataca f7 aprovechando que la torre dejó f8."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 c8b7 d2d4 f8e8 f3g5 e8f8": {
+      "porQue": "La torre vuelve a defender f7. Si 12.Cf3 Te8, el blanco puede repetir jugadas: por eso muchos jugadores de blancas evitan la Zaitsev con 10.d3 o 10.a4 (Johnsen y Johannessen)."
     }
   },
   "fuentes": [
@@ -198,7 +210,7 @@
     },
     {
       "titulo": "Sverre Johnsen y Leif Erlend Johannessen — The Ruy Lopez: A Guide for Black (Gambit, 2007)",
-      "capitulo": "cap. 6, «Rare 8th and 9th Moves»"
+      "capitulo": "caps. 1 a 3 (Zaitsev) y 6, «Rare 8th and 9th Moves»"
     },
     {
       "titulo": "Catálogo abierto de aperturas de Lichess",
@@ -362,6 +374,22 @@
       "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 a8b8 d2d4 e5d4 c3d4 d6d5 e4e5 f6e4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 c8b7 d2d4 f8e8 b1d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 c8b7 d2d4 f8e8 b1d2 e7f8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 c8b7 d2d4 f8e8 f3g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 c8b7 d2d4 f8e8 f3g5 e8f8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
       }
     }
   }
