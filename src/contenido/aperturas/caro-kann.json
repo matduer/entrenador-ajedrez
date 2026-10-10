@@ -32,19 +32,11 @@
   "trampas": [
     {
       "jugadas": "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 d1e2 g8f6 e4d6",
-      "texto": "Mate de la coz en 6 jugadas: con la dama en e2, el peón negro de e7 está clavado y no puede capturar en d6. Si el negro desarrolla 5...Cgf6 sin mirar, 6.Cd6# es mate."
+      "texto": "Contra la Variante Karpov, 5.De2 Cgf6?? 6.Cd6 es mate de la coz: el peón de e7 no puede tomar porque está clavado por la dama de e2, y el rey no tiene casillas. Lo correcto es 5...Cdf6. McDonald cuenta que esta celada cayó incontables veces, incluso en una partida de consulta de Keres."
     },
     {
       "jugadas": "e2e4 c7c6 d2d4 d7d5 e4e5 c8g4 d1g4",
       "texto": "Tras 3.e5, el alfil a g4 no está defendido: la diagonal d1-g4 está abierta porque el peón de e2 ya salió. 3...Ag4?? 4.Dxg4 gana una pieza."
-    },
-    {
-      "jugadas": "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 d1e2 g8f6 e4d6",
-      "texto": "Contra la Variante Karpov: 5.De2 Cgf6?? 6.Cd6 es mate ahogado (el peón de e7 está clavado). Lo correcto es 5...Cdf6."
-    },
-    {
-      "jugadas": "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 d1e2 g8f6 e4d6",
-      "texto": "5.De2 Cgf6?? 6.Cd6, mate: el peón de e7 no puede tomar el caballo porque está clavado por la dama de e2, y el rey no tiene casillas. McDonald cuenta que esta celada cayó incontables veces, incluso en una partida de consulta de Keres."
     },
     {
       "jugadas": "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 e4g5 h7h6 g5e6 f7e6 d1h5 g7g6 h5g6",
@@ -53,6 +45,10 @@
     {
       "jugadas": "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 f1c4 g8f6 e4g5 e7e6 d1e2 h7h6 g5f7 e8f7 e2e6",
       "texto": "5.Ac4 Cgf6 6.Cg5 e6 7.De2 h6?? 8.Cxf7! Rxf7 9.Dxe6+: el rey negro queda en el centro bajo un ataque decisivo. Hay que jugar 7...Cb6."
+    },
+    {
+      "jugadas": "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 g1f3 g8f6 e4f6 d7f6 f1c4 c8g4 c4f7 e8f7 f3e5 f7e8 e5g4",
+      "texto": "Variante Karpov con 5.Cf3 Cgf6 6.Cxf6+ Cxf6 7.Ac4: si 7...Ag4?, 8.Axf7+! Rxf7 9.Ce5+ y Cxg4, y el blanco gana un peón. Stockfish prefiere 7...Af5."
     }
   ],
   "notas": {
@@ -362,6 +358,10 @@
       "titulo": "Catálogo abierto de aperturas de Lichess",
       "url": "https://github.com/lichess-org/chess-openings",
       "licencia": "CC0"
+    },
+    {
+      "titulo": "Alexander Khalifman — Opening for Black According to Karpov (trad. Natalia Alexeeva; Sofía, 2001)",
+      "capitulo": "Parte 1, «Caro-Kann Defence», cap. 1 (4...Cd7)"
     }
   ],
   "verificacion": {

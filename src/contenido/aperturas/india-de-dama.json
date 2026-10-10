@@ -1,5 +1,10 @@
 {
-  "trampas": [],
+  "trampas": [
+    {
+      "jugadas": "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 c1g5 c8b7 e2e3 h7h6 g5h4 f8b4 b1d2 g7g5 h4g3 g5g4",
+      "texto": "Tarrasch–Bogoljubow (1920): con 4.Ag5 Ab7 5.e3 h6 6.Ah4 Ab4+, tapar con 7.Cbd2? es un error: 7...g5 8.Ag3 g4 y el caballo de f3 no tiene buena retirada (si 9.Ce5, ...Ce4). El blanco tiene que devolver material con 9.a3 gxf3 10.axb4 y queda peor. Lo correcto es 7.Cc3."
+    }
+  ],
   "id": "india-de-dama",
   "nombre": "Defensa India de Dama",
   "raiz": "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6",
@@ -104,6 +109,10 @@
       "titulo": "Catálogo abierto de aperturas de Lichess",
       "url": "https://github.com/lichess-org/chess-openings",
       "licencia": "CC0"
+    },
+    {
+      "titulo": "Alexander Khalifman — Opening for Black According to Karpov (trad. Natalia Alexeeva; Sofía, 2001)",
+      "capitulo": "Parte 3, «Queen's Indian Defence», cap. 16 (4.Ag5 Ab7)"
     }
   ],
   "verificacion": {

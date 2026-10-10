@@ -185,6 +185,51 @@
     },
     "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 g1f3 c7c5 g2g3 b8c6 f1g2 f6e4 c1d2": {
       "porQue": "Lo más sólido contra la presión sobre c3. Con 7.Dd3, en cambio, el negro cambia en d4 y queda con mejor estructura de peones sin entregar la pareja de alfiles."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1b3": {
+      "porQue": "Variante Spielmann: la dama ataca al alfil de b4 y evita el doblaje de peones, pero sale temprano y queda expuesta a ganancias de tiempo."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1b3 c7c5": {
+      "porQue": "La respuesta más directa: ataca el centro y aprovecha que la dama ya no defiende d4."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1b3 c7c5 d4c5": {
+      "porQue": "Toma el peón; el negro lo recupera enseguida."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1b3 c7c5 d4c5 b4c5": {
+      "porQue": "La recaptura que prefiere Karpov, una de varias que igualan (también ...Cc6). El alfil apunta a f2."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1b3 c7c5 d4c5 b4c5 g1f3": {
+      "porQue": "Desarrolla y cubre f2.",
+      "porQueNo": [
+        {
+          "uci": "c1g5",
+          "texto": "...Axf2+! 7.Rxf2 Cg4+ y ...Dxg5: el negro recupera la pieza con un peón de más."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1b3 c7c5 d4c5 b4c5 g1f3 b7b6": {
+      "porQue": "El fianchetto de dama controla e4."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1b3 c7c5 d4c5 b4c5 g1f3 b7b6 c1g5": {
+      "porQue": "Clava el caballo de f6."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1b3 c7c5 d4c5 b4c5 g1f3 b7b6 c1g5 c8b7": {
+      "porQue": "Completa el fianchetto."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1b3 c7c5 d4c5 b4c5 g1f3 b7b6 c1g5 c8b7 a1d1": {
+      "porQue": "La única forma de crear problemas, según Khalifman: presión en la columna d."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1b3 c7c5 d4c5 b4c5 g1f3 b7b6 c1g5 c8b7 a1d1 e8g8": {
+      "porQue": "Enroca; el negro está bien desarrollado."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1b3 c7c5 d4c5 b4c5 g1f3 b7b6 c1g5 c8b7 a1d1 e8g8 e2e3": {
+      "porQue": "Desarrollo tranquilo, con chances parejas.",
+      "porQueNo": [
+        {
+          "uci": "e2e4",
+          "texto": "...h6!: si 10.Ah4 g5 11.Ag3, ...Cxe4 gana un peón; si 10.Axf6, el blanco entrega su alfil activo."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -209,6 +254,10 @@
       "titulo": "Catálogo abierto de aperturas de Lichess",
       "url": "https://github.com/lichess-org/chess-openings",
       "licencia": "CC0"
+    },
+    {
+      "titulo": "Alexander Khalifman — Opening for Black According to Karpov (trad. Natalia Alexeeva; Sofía, 2001)",
+      "capitulo": "Parte 2, «Nimzo-Indian Defence»: 4.Db3 c5 5.dxc5 Axc5"
     }
   ],
   "verificacion": {
@@ -399,6 +448,58 @@
       "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 g1f3 c7c5 g2g3 b8c6 f1g2 f6e4 c1d2": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1b3 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1b3 c7c5 d4c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1b3 c7c5 d4c5 b4c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1b3 c7c5 d4c5 b4c5 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1b3 c7c5 d4c5 b4c5 c1g5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: 0,0 → −1,2. Refutación: Axf2+ Rxf2 Cg4+ Rg3 Dxg5 Cf3"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1b3 c7c5 d4c5 b4c5 g1f3 b7b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1b3 c7c5 d4c5 b4c5 g1f3 b7b6 c1g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1b3 c7c5 d4c5 b4c5 g1f3 b7b6 c1g5 c8b7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1b3 c7c5 d4c5 b4c5 g1f3 b7b6 c1g5 c8b7 a1d1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1b3 c7c5 d4c5 b4c5 g1f3 b7b6 c1g5 c8b7 a1d1 e8g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1b3 c7c5 d4c5 b4c5 g1f3 b7b6 c1g5 c8b7 a1d1 e8g8 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1b3 c7c5 d4c5 b4c5 g1f3 b7b6 c1g5 c8b7 a1d1 e8g8 e2e4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,1 → −0,6. Refutación: h6 Axf6 Dxf6 Ae2 Cc6 O-O"
       }
     }
   }

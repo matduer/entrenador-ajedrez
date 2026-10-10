@@ -28,6 +28,10 @@
     {
       "jugadas": "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 b1c3 f6e4 c3e4 d7d5 c4b5 d5e4 f3e5 d8g5",
       "texto": "4.Cc3 Cxe4! 5.Cxe4 d5 6.Ab5? dxe4 7.Cxe5 Dg5!: doble amenaza sobre e5 y g2, con el alfil de b5 sin defensa. El negro queda con clara ventaja."
+    },
+    {
+      "jugadas": "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 f6d5 d2d4 e5d4 e1g1 c8e6 f1e1 d8d7 g5f7",
+      "texto": "Ataque Lolli: 6.d4 exd4? 7.0-0 Ae6 8.Te1 Dd7 9.Cxf7!!: si 9...Dxf7, 10.Axd5 aprovecha la clavada del alfil de e6; si 9...Rxf7, 10.Df3+ y Txe6, y el negro pierde mucho material."
     }
   ],
   "notas": {
@@ -223,6 +227,19 @@
           "texto": "6.Ab5?, buscando doblarle los peones al negro, choca con 6...dxe4 7.Cxe5 Dg5!: la dama ataca el caballo de e5 y el peón de g2, y el alfil de b5 queda colgando."
         }
       ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 f6d5 d2d4": {
+      "inferior": true,
+      "porQue": "Ataque Lolli: abre el centro antes de sacrificar en f7. Si el negro toma con el peón, 0-0, Te1 y el sacrificio en f7 llegan con mucha fuerza; pero según Stockfish es algo menos fuerte que 6.Cxf7, porque el negro tiene 6...Cxd4."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 f6d5 d2d4 c6d4": {
+      "porQue": "Lo mejor según Stockfish: el caballo se instala en d4 y, si c3, ...b5 echa al alfil de la diagonal hacia f7.",
+      "porQueNo": [
+        {
+          "uci": "e5d4",
+          "texto": "Abre la columna e para el ataque blanco: 7.0-0 y, después de Te1, el sacrificio en f7 es demoledor."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -231,7 +248,8 @@
       "capitulo": "«Primer sistema: 4.C5C»: variante principal con 8.A2R y 11.P4AR, variante de Bogoljubov (8.D3A), variantes de Fritz (5...C5D) y Ulvestad (5...P4C)"
     },
     {
-      "titulo": "Horacio Sistac — «Defensa de los Dos Caballos: Variante Clásica», Cuadernos de Ajedrez n.º 34 (octubre de 2010)"
+      "titulo": "Horacio Sistac — «Defensa de los Dos Caballos: Variante Clásica», Cuadernos de Ajedrez n.º 34 (octubre de 2010)",
+      "capitulo": "4...d5 5.exd5 Cxd5: ataques Fegatello y Lolli; 4.Cc3 Cxe4 5.Cxe4 d5 6.Ab5? dxe4 7.Cxe5 Dg5!"
     },
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
@@ -448,6 +466,18 @@
       "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 b1c3 f6e4 c3e4 d7d5 c4b5 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 22 puntos de chances: −0,1 → −2,7. Refutación: dxe4 Cxe5 Dg5 d4 Dxg2 Tf1"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 f6d5 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Cxf7: +1,0 contra +0,5 (marcada como inferior pero jugable)"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 f6d5 d2d4 c6d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 f3g5 d7d5 e4d5 f6d5 d2d4 e5d4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: −0,5 → −1,7. Refutación: O-O Ce5 Te1 Ce3 Cxf7 Cxf7"
       }
     }
   }
