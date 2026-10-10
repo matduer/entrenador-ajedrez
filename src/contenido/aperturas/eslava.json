@@ -37,6 +37,10 @@
     {
       "jugadas": "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 b7b5 a4b5 c6b5 c3b5",
       "texto": "Después de a4, querer sostener el peón de c4 con ...b5 no funciona: axb5 cxb5 Cxb5 y el peón de c4 queda débil igual."
+    },
+    {
+      "jugadas": "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 d8c7 d1d2 e7e5 d4e5 d7e5 d2f4",
+      "texto": "8.Dd2 e5? 9.dxe5 Cxe5 10.Df4: la dama ataca el alfil de f5 y el caballo de e5 a la vez, y el negro pierde material."
     }
   ],
   "notas": {
@@ -176,6 +180,19 @@
     },
     "d2d4 d7d5 c2c4 c7c6 c4d5 c6d5 b1c3 g8f6 c1f4 b8c6 e2e3 c8f5": {
       "porQue": "Mantiene la simetría y desafía a las blancas a sacar algo de la jugada de ventaja."
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 d8c7 d1d2": {
+      "inferior": true,
+      "porQue": "Una jugada rara que neutraliza la idea de 7...Dc7, la ruptura ...e5: la dama apunta a f4 y al alfil de f5. Muchas veces el blanco termina cambiando un caballo por ese alfil y queda con un final algo mejor (Rogozenko). Stockfish prefiere 8.g3."
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 d8c7 d1d2 g7g6": {
+      "porQue": "Protege el alfil de f5 y prepara ...e5 en buenas condiciones.",
+      "porQueNo": [
+        {
+          "uci": "e7e5",
+          "texto": "8...e5? 9.dxe5 Cxe5 10.Df4: el alfil de f5 y el caballo de e5 quedan atacados y el negro pierde material (Rogozenko)."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -192,6 +209,10 @@
       "titulo": "Chess Opening Theory/1. d4/1...d5/2. c4/2...c6 (Wikilibros)",
       "url": "https://en.wikibooks.org/wiki/Chess_Opening_Theory/1._d4/1...d5/2._c4/2...c6",
       "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Jeroen Bosch (ed.) — Secrets of Opening Surprises 6 (New In Chess, 2007)",
+      "capitulo": "cap. 15, Dorian Rogozenko, «A Slav Surprise»"
     },
     {
       "titulo": "Catálogo abierto de aperturas de Lichess",
@@ -351,6 +372,18 @@
       "d2d4 d7d5 c2c4 c7c6 c4d5 c6d5 b1c3 g8f6 c1f4 b8c6 e2e3 c8f5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 d8c7 d1d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 d8c7 d1d2 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 d8c7 d1d2 e7e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 12 puntos de chances: −0,1 → −1,3. Refutación: dxe5 Cd5 e4 Cxc3 Dxc3 Axe4"
       }
     }
   }

@@ -133,6 +133,9 @@
     },
     "d2d4 g8f6 c2c4 g7g6 g2g3 c7c6": {
       "porQue": "Contra el fianchetto, ...c6 y ...d5 retomando con el peón de c: una Grünfeld sólida."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c1g5 f6e4 h2h4": {
+      "porQue": "La idea del australiano Goldsmith: no retira el alfil. Si 5...Cxg5 6.hxg5, la columna h queda abierta para la torre y la posición se parece más a un Gambito de Dama que a una Grünfeld; si 5...Cxc3 6.bxc3, el blanco ahorró el tiempo de mover el alfil (Rogers)."
     }
   },
   "fuentes": [
@@ -144,6 +147,10 @@
       "titulo": "Grünfeld Defence (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Gr%C3%BCnfeld_Defence",
       "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Jeroen Bosch (ed.) — Secrets of Opening Surprises 6 (New In Chess, 2007)",
+      "capitulo": "cap. 2, Ian Rogers, «Triple Trouble for the Grünfeld»"
     },
     {
       "titulo": "Catálogo abierto de aperturas de Lichess",
@@ -279,6 +286,10 @@
       "d2d4 g8f6 c2c4 g7g6 g2g3 c7c6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 d7d5 c1g5 f6e4 h2h4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
       }
     }
   }
