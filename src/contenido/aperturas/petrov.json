@@ -24,11 +24,7 @@
   "trampas": [
     {
       "jugadas": "e2e4 e7e5 g1f3 g8f6 f3e5 f6e4 d1e2 e4f6 e5c6",
-      "texto": "Si el negro toma en e4 sin echar antes al caballo, De2 lo pone en apuros: la natural 4...Cf6?? permite Cc6+, jaque descubierto que gana la dama."
-    },
-    {
-      "jugadas": "e2e4 e7e5 g1f3 g8f6 f3e5 f6e4 d1e2 e4f6 e5c6",
-      "texto": "3...Cxe4 4.De2 Cf6?? 5.Cc6+: jaque descubierto y el caballo ataca la dama. Por eso en la Petrov primero se juega 3...d6."
+      "texto": "3...Cxe4? 4.De2 Cf6?? 5.Cc6+: jaque descubierto, y el caballo ataca a la dama. Si el negro toma en e4 sin echar antes al caballo, De2 lo pone en apuros; por eso en la Petrov primero se juega 3...d6."
     }
   ],
   "notas": {

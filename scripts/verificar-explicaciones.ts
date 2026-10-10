@@ -92,12 +92,19 @@ for (const archivo of readdirSync(CARPETA).filter((f) => f.endsWith('.json') && 
     }
   }
 
+  const vistas = new Set<string>()
   for (const t of e.trampas) {
     const ucis = t.jugadas.split(' ')
     if (fensDeLinea(ucis).length !== ucis.length + 1) {
       console.log(`✗ ${archivo} trampa ilegal: ${t.jugadas}`)
       fallas++
     }
+    // la misma línea dos veces es una trampa repetida (pasó en la Caro-Kann, el Dragón Acelerado y la Petrov)
+    if (vistas.has(t.jugadas)) {
+      console.log(`✗ ${archivo} trampa repetida: ${t.jugadas}`)
+      fallas++
+    }
+    vistas.add(t.jugadas)
   }
 
   e.verificacion = { motor: 'Stockfish', profundidad: PROFUNDIDAD, fecha: new Date().toISOString().slice(0, 10), resultados }

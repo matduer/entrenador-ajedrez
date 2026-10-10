@@ -23,11 +23,7 @@
   "trampas": [
     {
       "jugadas": "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 b1c3 f8g7 c1e3 g8f6 f1c4 d8a5 d1d2 f6e4 d4c6 a5c3 d2c3 g7c3 b2c3 b7c6",
-      "texto": "7...Da5 8.Dd2? Cxe4! 9.Cxc6 Dxc3! 10.Dxc3 Axc3+ 11.bxc3 bxc6: el negro gana un peón. Lo correcto es 8.O-O."
-    },
-    {
-      "jugadas": "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 b1c3 f8g7 c1e3 g8f6 f1c4 d8a5 d1d2 f6e4 d4c6 a5c3 d2c3 g7c3 b2c3 b7c6",
-      "texto": "8.Dd2? Cxe4! 9.Cxc6 Dxc3!! 10.Dxc3 Axc3+ 11.bxc3 bxc6: el negro recupera la pieza y queda con un peón de más y la estructura blanca destrozada."
+      "texto": "7...Da5 8.Dd2? Cxe4! 9.Cxc6 Dxc3!! 10.Dxc3 Axc3+ 11.bxc3 bxc6: el negro recupera la pieza y queda con un peón de más y la estructura blanca destrozada. Lo correcto es 8.O-O."
     }
   ],
   "notas": {
