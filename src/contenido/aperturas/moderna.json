@@ -112,6 +112,27 @@
     },
     "e2e4 g7g6 d2d4 f8g7 b1c3 d7d6 f2f4 e7e6": {
       "porQue": "El esquema de Davies y Krasenkow contra el Ataque Austríaco: ...Ce7, ...Cd7, ...b6, ...Ab7 y recién después ...Cf6. Frena el avance f5 (que encierra al alfil de c1 detrás de f4) y presiona e4, preparando el contraataque con ...c5."
+    },
+    "e2e4 g7g6 d2d4 f8g7 b1c3 d7d6 c1e3 a7a6": {
+      "porQue": "La Moderna con ...a6 de Persson, con la misma idea que 5...a6 en la Najdorf: ...b5, ...Ab7 contra e4, ...Cd7 y ...c5. El caballo de g8 sale recién cuando el peón de d4 se movió, así e5 no lo echa. Es una estructura desequilibrada, con pocas posibilidades de que el blanco simplifique hacia tablas."
+    },
+    "e2e4 g7g6 d2d4 f8g7 b1c3 d7d6 c1e3 a7a6 d1d2 b7b5": {
+      "porQue": "Gana espacio en el flanco de dama y prepara ...Ab7, que se suma a la presión sobre e4."
+    },
+    "e2e4 g7g6 d2d4 f8g7 b1c3 d7d6 g1f3 a7a6": {
+      "porQue": "El mismo esquema contra el sistema clásico (Cf3, Ae2 y 0-0): ...b5, ...Ab7, ...Cd7 y ...c5."
+    },
+    "e2e4 g7g6 d2d4 f8g7 b1c3 d7d6 g1f3 a7a6 f1e2 b7b5 e1g1 c8b7": {
+      "porQue": "El alfil va a b7 antes de ...c5: Persson insiste en que el orden de jugadas es lo más importante en esta línea.",
+      "porQueNo": [
+        {
+          "uci": "c7c5",
+          "texto": "6...c5? 7.dxc5! y el peón de d6 cae: si ...dxc5, el cambio de damas deja al negro sin el enroque y con el peón de c5 débil."
+        }
+      ]
+    },
+    "e2e4 g7g6 d2d4 f8g7 b1c3 d7d6 f2f4 a7a6": {
+      "porQue": "También contra el Ataque Austríaco Persson juega ...a6, con ...b5, ...Ab7 y ...Cd7: el negro deja que el blanco ocupe el centro y lo ataca desde los flancos."
     }
   },
   "fuentes": [
@@ -135,6 +156,10 @@
       "titulo": "Modern Defense (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Modern_Defense",
       "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Tiger Hillarp Persson — Tiger's Modern (Quality Chess, 2005)",
+      "capitulo": "Introducción y caps. 1, 2 y 5"
     },
     {
       "titulo": "Catálogo abierto de aperturas de Lichess",
@@ -248,6 +273,30 @@
         "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
       },
       "e2e4 g7g6 d2d4 f8g7 b1c3 d7d6 f2f4 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "e2e4 g7g6 d2d4 f8g7 b1c3 d7d6 c1e3 a7a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 g7g6 d2d4 f8g7 b1c3 d7d6 c1e3 a7a6 d1d2 b7b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 g7g6 d2d4 f8g7 b1c3 d7d6 g1f3 a7a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 g7g6 d2d4 f8g7 b1c3 d7d6 g1f3 a7a6 f1e2 b7b5 e1g1 c8b7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 g7g6 d2d4 f8g7 b1c3 d7d6 g1f3 a7a6 f1e2 b7b5 e1g1 c7c5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 19 puntos de chances: −0,6 → −3,0. Refutación: dxc5 Ab7 cxd6 Dxd6 Dxd6 exd6"
+      },
+      "e2e4 g7g6 d2d4 f8g7 b1c3 d7d6 f2f4 a7a6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
       }
