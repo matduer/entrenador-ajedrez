@@ -870,12 +870,31 @@
             "dtm": 0,
             "fecha": "2026-10-10"
           }
+        },
+        {
+          "id": "vancura-dos-peones",
+          "fen": "R7/6k1/8/8/P6P/6K1/8/4r3 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 30,
+          "consigna": "Jugás con negras. Dos peones de más (a y h), pero la torre blanca está delante del peón de a. Hacé tablas.",
+          "pista": "Te4! (la única): la torre se pone al costado para atacar el peón de a desde la cuarta y la quinta fila, como en la defensa Vancura, y la torre blanca no puede salir de a8. Con Ta1?, Rf4, Re5 y a5-a6, y el blanco gana. Si el blanco se va a comer con el rey, dale jaques laterales.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "e1e4",
+            "dtm": 0,
+            "fecha": "2026-10-10"
+          }
         }
       ],
       "fuentes": [
         {
           "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
           "capitulo": "cap. 10, Final 66 «Peón en sexta. La defensa de Vancura»"
+        },
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 11 «Torre y dos peones contra torre», Final 76 «Defensa de Vancura contra 2 peones» (diagrama 11.14)"
         }
       ]
     },
@@ -1953,7 +1972,8 @@
         "Con dos peones conectados de más se gana casi siempre, pero hay que hacerlo con método: los peones avanzan juntos, defendiéndose entre sí, y el rey va pegado a ellos. Así los peones le sirven de escudo contra los jaques de la torre rival.",
         "El plan de Silman: empujar al rey defensor hacia atrás con jaques de torre, llevar los peones a la sexta, traer el rey a la séptima y ofrecer el cambio de torres en la octava. El final de peones resultante se gana solo.",
         "Con peones de caballo y de torre hay trampas de ahogado: el peón de torre en séptima con el rey defensor en la esquina puede dejarlo sin jugadas, y entonces la torre defensora se entrega para ahogarse. Ese avance se hace solo cuando no queda ese recurso.",
-        "De la Villa muestra que dos peones de más no siempre alcanzan: con peones de alfil y de torre, si el rey defensor se queda delante y la torre da jaques por detrás, muchas posiciones son tablas (Gligoric-Smyslov, 1947)."
+        "De la Villa muestra que dos peones de más no siempre alcanzan: con peones de alfil y de torre, si el rey defensor se queda delante y la torre da jaques por detrás, muchas posiciones son tablas (Gligoric-Smyslov, 1947).",
+        "Dos peones doblados suelen ser tablas, pero hay que defenderse bien. Con peones de caballo, lo importante es que el rey no sea empujado a la última fila: rey y torre se quedan en la segunda hasta que el peón llegue a la sexta (la «defensa de la segunda fila», De la Villa). Con peones de alfil y torre, en cambio, si el rey defensor quedó cortado en la octava y el peón de alfil llegó a la quinta, casi siempre se pierde."
       ],
       "ideas": [
         "Peones juntos y rey pegado a ellos: ningún peón sale solo.",
@@ -1990,6 +2010,51 @@
             "dtm": 0,
             "fecha": "2026-10-10"
           }
+        },
+        {
+          "id": "doblados-de-caballo",
+          "fen": "8/6p1/8/8/1R4pk/r7/6K1/8 w - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 30,
+          "consigna": "Kolesnikov–Bocharov (Sochi, 2004): dos peones de g contra ninguno. Hacé tablas.",
+          "pista": "Tb2!: rey y torre en la segunda fila, para que tu rey no sea empujado a la primera. En la partida, Tb8? permitió ...Ta2+ y ...Rh3, y el segundo peón decidió. Cuando el peón negro llegue a la sexta, pasá a dar jaques desde atrás.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "b4b2",
+            "dtm": 0,
+            "fecha": "2026-10-10"
+          }
+        },
+        {
+          "id": "rey-cortado-en-octava",
+          "fen": "6k1/R7/7P/5PK1/8/8/8/6r1 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 50,
+          "consigna": "Peones de alfil y torre, y el rey negro cortado en la octava. Esquivá los jaques y ganá.",
+          "pista": "Rf6! (la única). La idea es llevar el peón de f a la sexta junto al de h, esconder el rey de los jaques (Tg7+, Rg6, Rh7) y después avanzar f7 o h7 con la torre en la séptima. Cuidado con el ahogado del rey negro en la esquina.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "g5f6",
+            "dtm": 75,
+            "fecha": "2026-10-10"
+          }
+        },
+        {
+          "id": "romper-el-bloqueo",
+          "fen": "8/8/r4kP1/5P2/1R3K2/8/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 30,
+          "consigna": "El rey negro se metió entre tus peones para bloquearlos. Con peones centrales y tu rey bien ubicado, el bloqueo se rompe. Ganá.",
+          "pista": "Te4 y Te6+!: si el negro cambia, después de fxe6 Rxe6, Rg5 gana el final de peones (con tu rey en g4 sería tablas). Las torres se cambian solo cuando el final de peones está ganado.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "b4e4",
+            "dtm": 37,
+            "fecha": "2026-10-10"
+          }
         }
       ],
       "fuentes": [
@@ -2000,6 +2065,14 @@
         {
           "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
           "capitulo": "cap. 11 «Torre y dos peones contra torre», Final 73 «El sistema defensivo» (Gligoric-Smyslov, Moscú 1947)"
+        },
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 11, Final 70 «Peones de caballo» (diagrama 11.3) y Final 72 «Peón de alfil en quinta» (diagrama 11.5)"
+        },
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 11, Final 74 «Peones ligados bloqueados» (diagrama 11.11)"
         }
       ]
     },
