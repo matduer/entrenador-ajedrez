@@ -329,6 +329,33 @@
     },
     "e2e4 c7c6 d2d4 d7d5 b1c3 a7a6 g1f3 c8g4 f1e2 e7e6 e1g1 g8f6 c1g5 f8e7 e4e5": {
       "porQue": "Lo más exigente: gana espacio y echa al caballo. Con 8.exd5 el blanco no consigue nada: el negro responde 8...Axf3 y 9...cxd5, y queda con una buena estructura para el ataque de minorías (van der Wiel)."
+    },
+    "e2e4 c7c6 d2d4 d7d5 f2f3": {
+      "porQue": "Variante Fantasía (la jugaba Tartakower): sostiene e4 con otro peón para quedarse con todo el centro."
+    },
+    "e2e4 c7c6 d2d4 d7d5 f2f3 d5e4": {
+      "porQue": "La respuesta que daba Reca: cambia enseguida para atacar el centro antes de que el blanco se desarrolle. (Hoy también se juega 3...e6.)"
+    },
+    "e2e4 c7c6 d2d4 d7d5 f2f3 d5e4 f3e4": {
+      "porQue": "Lo coherente: el blanco recupera el peón y se queda con el centro.",
+      "porQueNo": [
+        {
+          "uci": "b1c3",
+          "texto": "Entregar el peón en gambito no alcanza: ...exf3 y el negro queda con un peón de más."
+        }
+      ]
+    },
+    "e2e4 c7c6 d2d4 d7d5 f2f3 d5e4 f3e4 e7e5": {
+      "porQue": "El golpe al centro: el peón no se puede tomar, y el blanco tiene que defender d4."
+    },
+    "e2e4 c7c6 d2d4 d7d5 f2f3 d5e4 f3e4 e7e5 g1f3": {
+      "porQue": "Desarrolla y defiende d4.",
+      "porQueNo": [
+        {
+          "uci": "d4e5",
+          "texto": "...Dh4+: sin el peón de f, el rey blanco queda expuesto (si g3, Dxe4+)."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -366,6 +393,10 @@
     {
       "titulo": "Alexander Khalifman — Opening for Black According to Karpov (trad. Natalia Alexeeva; Sofía, 2001)",
       "capitulo": "Parte 1, «Caro-Kann Defence», cap. 1 (4...Cd7)"
+    },
+    {
+      "titulo": "Damián M. Reca — Defensa Caro-Kann (2.ª ed., Editorial Grabo, 1943)",
+      "capitulo": "la variante 3.P3AR de Tartakower"
     }
   ],
   "verificacion": {
@@ -688,6 +719,34 @@
       "e2e4 c7c6 d2d4 d7d5 b1c3 a7a6 g1f3 c8g4 f1e2 e7e6 e1g1 g8f6 c1g5 f8e7 e4e5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 f2f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 f2f3 d5e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 f2f3 d5e4 f3e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 f2f3 d5e4 b1c3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: +0,3 → −0,6. Refutación: exf3 Cxf3 Cf6 h3 Af5 Ad3"
+      },
+      "e2e4 c7c6 d2d4 d7d5 f2f3 d5e4 f3e4 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 f2f3 d5e4 f3e4 e7e5 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 f2f3 d5e4 f3e4 e7e5 d4e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: +0,3 → −1,0. Refutación: Dh4+ Rd2 Df4+ Re1 Dxe4+ De2"
       }
     }
   }
