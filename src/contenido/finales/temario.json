@@ -1387,6 +1387,51 @@
             "dtm": 27,
             "fecha": "2026-10-10"
           }
+        },
+        {
+          "id": "estudio-de-duras",
+          "fen": "8/6p1/7k/8/1K6/8/1P6/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 15,
+          "consigna": "Duras (1905): tu rey tiene que frenar el peón de g y, a la vez, impedir que el rey negro se ponga delante del tuyo. Ganá.",
+          "pista": "Rc5!: sigue dentro del cuadrado del peón de g y se prepara para cerrarle el paso al rey negro. Después de Rg6, b4 Rf7, b5 Re7, Rc6! y Rb7!: el rey tapa a su propio peón, pero coronás con jaque.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "b4c5",
+            "dtm": 37,
+            "fecha": "2026-10-10"
+          }
+        },
+        {
+          "id": "el-camino-justo",
+          "fen": "8/1p6/1P6/8/7K/8/8/1k6 w - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 15,
+          "consigna": "Tu peón de b6 está perdido. Para salvarte, tu rey tiene que llegar a b4 justo cuando el negro come. Hay muchos caminos: elegí el único que sirve.",
+          "pista": "Rg3!, el que más se aleja del camino del rey negro. Con Rg4?, Rc2! y el rey negro se cruza en tu camino (Rf3 Rd3!) y te hace perder un tiempo.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "h4g3",
+            "dtm": 0,
+            "fecha": "2026-10-10"
+          }
+        },
+        {
+          "id": "coronar-con-jaque",
+          "fen": "8/5p2/2k5/K7/8/1P6/8/8 b - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 15,
+          "consigna": "Jugás con negras. Ljubojević–Browne (Ámsterdam, 1972): el negro aceptó tablas, pero había una victoria. Encontrala.",
+          "pista": "Rd5!: sale del jaque del peón y deja al rey blanco fuera del cuadrado del peón de f. Después de b4 f5 b5 f4 b6, Rc6! atrae al rey blanco a a6, y la dama negra corona con jaque. En la partida, f5? permitió Rb4 y tablas.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "c6d5",
+            "dtm": 39,
+            "fecha": "2026-10-10"
+          }
         }
       ],
       "fuentes": [
@@ -1397,6 +1442,10 @@
         {
           "titulo": "Jeremy Silman — El curso de finales completo (Siles Press, 2007)",
           "capitulo": "Parte Seis (ELO 1800-1999): «Carreras extrañas», diagramas 212, 213 y 215"
+        },
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 12 «Finales de peones», Final 80 (diagrama 12.8, los caminos del rey) y Final 82 «Peones pasados. Maniobras del rey con doble objetivo» (Duras 1905 y Ljubojević–Browne 1972)"
         }
       ]
     },
@@ -1525,6 +1574,58 @@
         {
           "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
           "capitulo": "cap. 12 «Finales de peones», Final 79 «Peones bloqueados. Las casillas críticas»"
+        }
+      ]
+    },
+    {
+      "id": "entregar-el-peon",
+      "titulo": "Peón contra peón: entregar el peón para salvarse",
+      "nivel": 3,
+      "explicacion": [
+        "Con un peón por bando, el rey que llega primero a las casillas críticas del peón rival lo gana. Pero perder el peón no siempre es perder la partida: lo que importa es dónde queda el rey rival después de comerlo.",
+        "Si el peón propio está perdido, conviene entregarlo en una casilla que no sea crítica para el peón rival: así, después de comerlo, el rey contrario no queda bien ubicado para coronar y el final de rey y peón contra rey es tablas."
+      ],
+      "ideas": [
+        "Antes de defender un peón perdido, mirá dónde queda el rey rival si lo come.",
+        "Entregar el peón puede cambiar las casillas críticas del peón rival.",
+        "Después de la captura, tomá la oposición."
+      ],
+      "posiciones": [
+        {
+          "id": "avanzar-para-perderlo",
+          "fen": "8/8/8/5p2/3k4/5P2/8/6K1 w - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 20,
+          "consigna": "Tu peón de f3 está perdido. Hacé tablas.",
+          "pista": "f4!: el rey negro tiene que comerlo en f4, que no es una casilla crítica para su peón, y tu rey toma la oposición (Rg2 y Rf2). Con Rf2??, f4! y el rey negro come en f3, ya en las casillas críticas.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "f3f4",
+            "dtm": 0,
+            "fecha": "2026-10-10"
+          }
+        },
+        {
+          "id": "columnas-contiguas",
+          "fen": "8/8/5p2/8/4P1k1/8/7K/8 w - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 20,
+          "consigna": "El rey negro va a comer tu peón de e4 y quedar en una casilla crítica de su peón. ¿Hay salvación?",
+          "pista": "e5!: después de fxe5, las casillas críticas del peón negro pasan a ser d3, e3 y f3, y tu rey llega primero (Rg2 y Rf2). Con Rg2?, Rf4 y Rxe4, y el negro gana.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "e4e5",
+            "dtm": 0,
+            "fecha": "2026-10-10"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 12 «Finales de peones», Final 80 «Peones bloqueados más atrás» (diagrama 12.7) y Final 81 «Peones en columnas contiguas» (diagrama 12.10)"
         }
       ]
     },
