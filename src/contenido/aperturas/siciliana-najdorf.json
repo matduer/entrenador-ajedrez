@@ -142,6 +142,9 @@
     },
     "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1e3 f6g4 e3g5 h7h6 g5h4 g7g5": {
       "porQue": "Echa al alfil y gana espacio: una especie de Dragón ampliado, más agresivo pero más vulnerable (f5 queda débil)."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 a2a3": {
+      "porQue": "Un eco de 5...a6, con una idea: cubre b4 contra ...b5-b4 y, si el negro juega la típica ...e5, el blanco pelea por d5 con Ac4 y Ag5 sin haber gastado un tiempo en Ae2 o Ae3. La jugaron Short y Dvoiris (Bosch)."
     }
   },
   "fuentes": [
@@ -153,6 +156,10 @@
       "titulo": "Sicilian Defence, Najdorf Variation (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Sicilian_Defence,_Najdorf_Variation",
       "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Jeroen Bosch (ed.) — Secrets of Opening Surprises 6 (New In Chess, 2007)",
+      "capitulo": "cap. 7, Jeroen Bosch, «Making Short Work of the Najdorf»"
     },
     {
       "titulo": "Catálogo abierto de aperturas de Lichess",
@@ -288,6 +295,10 @@
       "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1e3 f6g4 e3g5 h7h6 g5h4 g7g5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 a2a3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
       }
     }
   }

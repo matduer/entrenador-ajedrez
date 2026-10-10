@@ -317,6 +317,18 @@
     },
     "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 f1c4 g8f6 e4g5 e7e6 d1e2 d7b6 c4b3 h7h6": {
       "porQue": "Ahora sí: con el alfil blanco en b3, ...h6 echa al caballo de g5 sin dejar el sacrificio en f7."
+    },
+    "e2e4 c7c6 d2d4 d7d5 b1c3 a7a6": {
+      "porQue": "Una jugada de espera, como en la Eslava: el negro busca un juego cerrado (casi nunca cambia en e4) y quiere sacar el alfil de c8 fuera de la cadena de peones, si puede a g4. Contra rivales que conocen bien las líneas principales es una buena sorpresa (van der Wiel)."
+    },
+    "e2e4 c7c6 d2d4 d7d5 b1c3 a7a6 g1f3 c8g4": {
+      "porQue": "Primer objetivo cumplido: el alfil queda fuera de la cadena de peones antes de ...e6."
+    },
+    "e2e4 c7c6 d2d4 d7d5 b1c3 a7a6 g1f3 c8g4 f1e2 e7e6 h2h3 g4f3": {
+      "porQue": "El enfoque de Speelman: con casi todos sus peones en casillas blancas, al negro no le molesta dar el alfil por el caballo. Stockfish acepta también 6...Ah5."
+    },
+    "e2e4 c7c6 d2d4 d7d5 b1c3 a7a6 g1f3 c8g4 f1e2 e7e6 e1g1 g8f6 c1g5 f8e7 e4e5": {
+      "porQue": "Lo más exigente: gana espacio y echa al caballo. Con 8.exd5 el blanco no consigue nada: el negro responde 8...Axf3 y 9...cxd5, y queda con una buena estructura para el ataque de minorías (van der Wiel)."
     }
   },
   "fuentes": [
@@ -341,6 +353,10 @@
       "titulo": "Chess Opening Theory/1. e4/1...c6/2. d4/2...d5/3. e5 (Wikilibros)",
       "url": "https://en.wikibooks.org/wiki/Chess_Opening_Theory/1._e4/1...c6/2._d4/2...d5/3._e5",
       "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Jeroen Bosch (ed.) — Secrets of Opening Surprises 6 (New In Chess, 2007)",
+      "capitulo": "cap. 17, John van der Wiel, «Caro-Kann with a Slav Touch»"
     },
     {
       "titulo": "Catálogo abierto de aperturas de Lichess",
@@ -652,6 +668,22 @@
       "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 b8d7 f1c4 g8f6 e4g5 e7e6 d1e2 d7b6 c4b3 h7h6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 a7a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 a7a6 g1f3 c8g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 a7a6 g1f3 c8g4 f1e2 e7e6 h2h3 g4f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 c7c6 d2d4 d7d5 b1c3 a7a6 g1f3 c8g4 f1e2 e7e6 e1g1 g8f6 c1g5 f8e7 e4e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
       }
     }
   }

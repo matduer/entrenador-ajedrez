@@ -155,6 +155,15 @@
     },
     "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 c6a5 b3c2 c7c5 d2d4 d8c7 d4d5 a5c4": {
       "porQue": "Lo más activo y la preferida de Stockfish: el caballo salta a c4 antes de que b3 le quite la casilla, en lugar de retirarse a b7, donde quedaría encerrado."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 a8b8": {
+      "porQue": "La idea de Gajewski: saca la torre de la diagonal del alfil de b3 y refuerza el centro. Así el negro puede jugar ...exd4 y ...d5 sin que e5 y Axd5 le cuesten la torre de a8."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 a8b8 d2d4 e5d4 c3d4 d6d5": {
+      "porQue": "El golpe central que la torre en b8 hace posible."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 a8b8 d2d4 e5d4 c3d4 d6d5 e4e5 f6e4": {
+      "porQue": "El caballo se instala en e4 y el negro queda con buen juego (Fedorchuk-Gajewski, Varsovia 2005)."
     }
   },
   "fuentes": [
@@ -174,6 +183,10 @@
       "titulo": "Ruy Lopez (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Ruy_Lopez",
       "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Jeroen Bosch (ed.) — Secrets of Opening Surprises 6 (New In Chess, 2007)",
+      "capitulo": "cap. 13, Adrian Mikhalchishin, «A Spanish SOS»"
     },
     {
       "titulo": "Catálogo abierto de aperturas de Lichess",
@@ -321,6 +334,18 @@
       "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 c6a5 b3c2 c7c5 d2d4 d8c7 d4d5 a5c4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 a8b8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 a8b8 d2d4 e5d4 c3d4 d6d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,9 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f8e7 f1e1 b7b5 a4b3 d7d6 c2c3 e8g8 h2h3 a8b8 d2d4 e5d4 c3d4 d6d5 e4e5 f6e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
       }
     }
   }

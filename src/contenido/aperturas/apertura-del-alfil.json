@@ -24,6 +24,10 @@
     {
       "jugadas": "e2e4 e7e5 f1c4 f8c5 b1c3 b8c6 d1g4 d8f6 c3d5 f6f2 e1d1 e8f8 g1h3 f2d4 d2d3 d7d6 g4f3 c8h3 h1f1",
       "texto": "La «Vienesa espejo»: 2...Ac5 3.Cc3 Cc6 4.Dg4! Df6?! 5.Cd5! Dxf2+ 6.Rd1 Rf8 7.Ch3 Dd4 8.d3 d6 9.Df3 Axh3 10.Tf1!: amenaza mate en f7 y c3 encierra a la dama negra. Un clásico que Lane muestra en su introducción."
+    },
+    {
+      "jugadas": "e2e4 e7e5 f1c4 f8c5 d1h5 g8f6 h5f7",
+      "texto": "2...Ac5 3.Dh5 Cf6?? 4.Dxf7#: el mate del pastor. Lo correcto es 3...De7 o 3...Df6."
     }
   ],
   "notas": {
@@ -47,12 +51,41 @@
     },
     "e2e4 e7e5 f1c4 f8c5 b1c3 b8c6 d1g4": {
       "porQue": "El castigo a la simetría: la dama ataca g7. Lo correcto para el negro es ...Rf8 o ...g6; si 4...Df6?!, sigue 5.Cd5! con ataque decisivo."
+    },
+    "e2e4 e7e5 f1c4 f8c5 d1h5": {
+      "porQue": "Ataca e5 y f7 a la vez y obliga al negro a defender con la dama, que después le estorba el desarrollo. Flear la propone como sorpresa: el blanco saca el alfil y la dama antes que el caballo de g1. Stockfish prefiere el desarrollo normal con 3.Cf3.",
+      "inferior": true
+    },
+    "e2e4 e7e5 f1c4 f8c5 d1h5 d8e7": {
+      "porQue": "Defiende e5 y f7 a la vez.",
+      "porQueNo": [
+        {
+          "uci": "g8f6",
+          "texto": "3...Cf6?? 4.Dxf7#: el mate del pastor."
+        }
+      ]
+    },
+    "e2e4 e7e5 f1c4 f8c5 d1h5 d8e7 b1c3 g8f6": {
+      "porQue": "Desarrolla y ataca la dama.",
+      "porQueNo": [
+        {
+          "uci": "c5f2",
+          "texto": "4...Axf2+?! 5.Rxf2 Dc5+ 6.d4 Dxc4 7.Dxe5+ Rf8 8.Da3: el negro perdió tiempo con la dama y el blanco queda claramente mejor (Flohr-Nieuwenhuis, Zwolle 1998)."
+        }
+      ]
+    },
+    "e2e4 e7e5 f1c4 g8f6 d2d3 c7c6 g1f3 d7d5 c4b3 f8d6 e4d5": {
+      "porQue": "Para Flear, la forma más exigente de enfrentar el centro negro: después de ...cxd5 el peón de d5 queda como blanco del alfil de b3 y de las piezas blancas."
     }
   },
   "fuentes": [
     {
       "titulo": "Gary Lane — The Bishop's Opening Explained (Batsford, 2004)",
       "capitulo": "introducción y cap. 6 «Vienna Copycat»"
+    },
+    {
+      "titulo": "Jeroen Bosch (ed.) — Secrets of Opening Surprises 6 (New In Chess, 2007)",
+      "capitulo": "cap. 9, Glenn Flear, «Bishops First Please!»"
     },
     {
       "titulo": "Catálogo abierto de aperturas de Lichess",
@@ -88,6 +121,30 @@
       "e2e4 e7e5 f1c4 f8c5 b1c3 b8c6 d1g4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 f1c4 f8c5 d1h5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Cf3: +0,3 contra −0,2 (marcada como inferior pero jugable)"
+      },
+      "e2e4 e7e5 f1c4 f8c5 d1h5 d8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 f1c4 f8c5 d1h5 g8f6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 52 puntos de chances: +0,2 → recibe mate en 1. Refutación: Dxf7#"
+      },
+      "e2e4 e7e5 f1c4 f8c5 d1h5 d8e7 b1c3 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 f1c4 f8c5 d1h5 d8e7 b1c3 c5f2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 21 puntos de chances: +0,2 → −2,2. Refutación: Rxf2 Dc5+ Re1 Dxc4 Dxe5+ Rf8"
+      },
+      "e2e4 e7e5 f1c4 g8f6 d2d3 c7c6 g1f3 d7d5 c4b3 f8d6 e4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
       }
     }
   }

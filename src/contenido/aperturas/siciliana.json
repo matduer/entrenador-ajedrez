@@ -200,6 +200,10 @@
     "e2e4 c7c5 g1f3 g7g6 h2h4": {
       "inferior": true,
       "porQue": "3.h4!?: un ataque directo con el peón de torre contra el enroque fianchettado que todavía no existe; lo jugaron Spassky y Velimirovic. Stockfish lo ve algo peor que 3.c3 o 3.d4."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 c1g5": {
+      "inferior": true,
+      "porQue": "El «Ataque Aussie», inventado por jugadores australianos: en vez de retomar en d4, el alfil ataca la dama. Es pura sorpresa; con juego correcto no da ventaja y Stockfish prefiere el normal 4.Cxd4 (Bosch)."
     }
   },
   "fuentes": [
@@ -223,6 +227,10 @@
     {
       "titulo": "Jeroen Bosch (ed.) — Secrets of Opening Surprises 6 (New In Chess, 2007)",
       "capitulo": "cap. 5, John Donaldson y Jeremy Silman, «3.h4 in the Hyper-Accelerated Dragon»"
+    },
+    {
+      "titulo": "Jeroen Bosch (ed.) — Secrets of Opening Surprises 6 (New In Chess, 2007)",
+      "capitulo": "cap. 3, Jeroen Bosch, «Sicilian: the Aussie Attack»"
     },
     {
       "titulo": "Catálogo abierto de aperturas de Lichess",
@@ -430,6 +438,10 @@
       "e2e4 c7c5 g1f3 g7g6 h2h4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 c1g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Cxd4: +0,4 contra −0,3 (marcada como inferior pero jugable)"
       }
     }
   }
