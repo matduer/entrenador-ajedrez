@@ -85,6 +85,9 @@
     },
     "d2d4 d7d5 c2c4 e7e5 d4e5 d5d4 g1f3 b8c6 b1d2": {
       "porQue": "El caballo va a b3 para atacar el peón de d4."
+    },
+    "d2d4 d7d5 c2c4 e7e5 d4e5 d5d4 g1f3 b8c6 a2a3": {
+      "porQue": "Un arma directa contra el Albin (Schandorff): prepara b4 y Ab2 para atacar el peón de d4 y quitarle al negro la casilla b4."
     }
   },
   "fuentes": [
@@ -96,6 +99,10 @@
       "titulo": "Albin Countergambit (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Albin_Countergambit",
       "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Lars Schandorff — Playing the Queen's Gambit: A Grandmaster Guide (Quality Chess, 2009)",
+      "capitulo": "cap. 8, «Minor Lines»"
     },
     {
       "titulo": "Catálogo abierto de aperturas de Lichess",
@@ -165,6 +172,10 @@
         "detalle": "Stockfish (prof. 18) prefiere Cge7: −0,7 contra −1,2 (marcada como inferior pero jugable)"
       },
       "d2d4 d7d5 c2c4 e7e5 d4e5 d5d4 g1f3 b8c6 b1d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e5 d4e5 d5d4 g1f3 b8c6 a2a3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
       }

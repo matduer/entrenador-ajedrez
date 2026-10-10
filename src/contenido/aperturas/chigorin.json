@@ -56,6 +56,18 @@
     },
     "d2d4 d7d5 c2c4 b8c6 e2e3 e7e5": {
       "porQue": "Contra e3, ...e5 da un Contragambito Albin en mejores condiciones para el negro."
+    },
+    "d2d4 d7d5 c2c4 b8c6 b1c3 g8f6 g1f3 e7e6": {
+      "porQue": "Lo más sólido: el negro abre la diagonal del alfil de f8 y no se compromete con el de c8.",
+      "porQueNo": [
+        {
+          "uci": "c8g4",
+          "texto": "4...Ag4 busca problemas: 5.cxd5 Cxd5 6.e4 Axf3 7.gxf3 Cxc3 8.bxc3 e5 9.Tb1! y la presión sobre b7 y el centro deja al blanco claramente mejor (Ribli, citado por Schandorff)."
+        }
+      ]
+    },
+    "d2d4 d7d5 c2c4 b8c6 b1c3 g8f6 g1f3 c8g4 c4d5 f6d5 e2e4 g4f3 g2f3 d5c3 b2c3 e7e5 a1b1": {
+      "porQue": "La idea de Ribli: la torre ataca b7 por la columna abierta y el negro no puede enrocar cómodo."
     }
   },
   "fuentes": [
@@ -67,6 +79,10 @@
       "titulo": "Chigorin Defense (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Chigorin_Defense",
       "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Lars Schandorff — Playing the Queen's Gambit: A Grandmaster Guide (Quality Chess, 2009)",
+      "capitulo": "cap. 7, «Chigorin»"
     },
     {
       "titulo": "Catálogo abierto de aperturas de Lichess",
@@ -118,6 +134,18 @@
       "d2d4 d7d5 c2c4 b8c6 e2e3 e7e5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 b8c6 b1c3 g8f6 g1f3 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 b8c6 b1c3 g8f6 g1f3 c8g4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,6 → −1,3. Refutación: Ce5 Cxe5 dxe5 d4 Ca4 Cg8"
+      },
+      "d2d4 d7d5 c2c4 b8c6 b1c3 g8f6 g1f3 c8g4 c4d5 f6d5 e2e4 g4f3 g2f3 d5c3 b2c3 e7e5 a1b1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,2 para el bando que mueve"
       }
     }
   }

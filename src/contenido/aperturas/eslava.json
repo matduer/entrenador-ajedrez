@@ -102,6 +102,10 @@
         {
           "uci": "c8e6",
           "texto": "El alfil en e6 no controla e4: e4 y las blancas toman el centro."
+        },
+        {
+          "uci": "c8g4",
+          "texto": "5...Ag4 está en crisis: 6.Ce5 Ah5 7.f3 Cfd7 8.Cxc4 e5 9.Ce4 y el blanco queda con un centro fuerte e iniciativa (Schandorff)."
         }
       ]
     },
@@ -215,6 +219,10 @@
       "capitulo": "cap. 15, Dorian Rogozenko, «A Slav Surprise»"
     },
     {
+      "titulo": "Lars Schandorff — Playing the Queen's Gambit: A Grandmaster Guide (Quality Chess, 2009)",
+      "capitulo": "cap. 3, «The Slav»"
+    },
+    {
       "titulo": "Catálogo abierto de aperturas de Lichess",
       "url": "https://github.com/lichess-org/chess-openings",
       "licencia": "CC0"
@@ -284,6 +292,10 @@
       "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8e6 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 9 puntos de chances: −0,3 → −1,3. Refutación: e4 Ag4 Axc4 e6 O-O Axf3"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8g4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,3 → −0,8. Refutación: Ce5 Cbd7 Cxc4 a5 f3 Ae6"
       },
       "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 e2e3": {
         "ok": true,
