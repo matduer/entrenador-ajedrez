@@ -126,6 +126,18 @@
           "texto": "8...Ae6? 9.f5! y el alfil, sin buenas casillas, queda como blanco del avance de los peones del flanco de rey."
         }
       ]
+    },
+    "e2e4 c7c5 b1c3 b8c6 f1b5": {
+      "porQue": "Una idea moderna del Gran Prix: el alfil sale a b5 antes de f4, para cambiarlo por el caballo de c6 si hace falta y dañar la estructura negra."
+    },
+    "e2e4 c7c5 b1c3 b8c6 f1b5 c6d4": {
+      "porQue": "La respuesta más común: el caballo se instala en d4 y amenaza cambiar el alfil."
+    },
+    "e2e4 c7c5 b1c3 b8c6 f1b5 c6d4 b5c4": {
+      "porQue": "Jones prefiere volver a c4, donde el alfil apunta a f7: parece que se pierde un tiempo, pero el caballo de d4 también se movió dos veces y el blanco puede usarlo para acelerar el desarrollo (Cf3, 0-0, Cxd4)."
+    },
+    "e2e4 c7c5 b1c3 b8c6 f1b5 c6d4 b5c4 e7e6": {
+      "porQue": "Cierra la diagonal del alfil de c4. La alternativa 4...g6 casi desapareció de la elite después de partidas como Svidler-Leko (Dortmund 2004)."
     }
   },
   "fuentes": [
@@ -149,6 +161,10 @@
     {
       "titulo": "EDAMI — La Variante Cerrada de la Siciliana (pack n.º 28, 2006)",
       "capitulo": "clase 10, «La teoría del Sistema Cerrado»"
+    },
+    {
+      "titulo": "Gawain Jones — Starting Out: Sicilian Grand Prix Attack (Everyman, 2008)",
+      "capitulo": "cap. 7, «2...Cc6 3.Ab5»"
     },
     {
       "titulo": "Catálogo abierto de aperturas de Lichess",
@@ -268,6 +284,22 @@
       "e2e4 c7c5 b1c3 b8c6 g2g3 g7g6 f1g2 f8g7 d2d3 d7d6 f2f4 e7e5 g1f3 g8e7 e1g1 c8e6 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 10 puntos de chances: −0,1 → −1,2. Refutación: f5 gxf5 Cg5 h5 exf5 Cxf5"
+      },
+      "e2e4 c7c5 b1c3 b8c6 f1b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 c7c5 b1c3 b8c6 f1b5 c6d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "e2e4 c7c5 b1c3 b8c6 f1b5 c6d4 b5c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "e2e4 c7c5 b1c3 b8c6 f1b5 c6d4 b5c4 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
       }
     }
   }
