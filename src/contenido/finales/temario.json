@@ -1031,6 +1031,21 @@
             "dtm": 31,
             "fecha": "2026-10-10"
           }
+        },
+        {
+          "id": "alejar-al-rey",
+          "fen": "8/8/3k4/1p2p3/1P2K3/8/7P/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 30,
+          "consigna": "Tenés un peón pasado alejado en h2. Usalo para alejar al rey negro y ganá.",
+          "pista": "h4, h5 y h6: el rey negro tiene que ir a buscarlo, y mientras tanto tu rey come e5, va a d5 y c5, y se lleva el peón de b5.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "h2h4",
+            "dtm": 41,
+            "fecha": "2026-10-10"
+          }
         }
       ],
       "fuentes": [
@@ -1041,6 +1056,10 @@
         {
           "titulo": "Jeremy Silman — El curso de finales completo (Siles Press, 2007)",
           "capitulo": "Parte Cuatro: «Peones pasados alejados»"
+        },
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 12 «Finales de peones», Final 90 «El peón pasado alejado» (diagrama 12.38)"
         }
       ]
     },
@@ -2943,6 +2962,21 @@
             "dtm": 0,
             "fecha": "2026-10-10"
           }
+        },
+        {
+          "id": "pasado-en-sexta",
+          "fen": "8/8/2p1kPp1/6P1/4K3/8/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 30,
+          "consigna": "Tu peón pasado y protegido ya llegó a la sexta. El rey negro lo bloquea, pero también tiene que cuidar el peón de c6. Ganá.",
+          "pista": "Rd4, Rc4 y Rc5: cuando el rey negro deja f7 para defender su peón, f7! entrega el peón pasado a cambio de los dos negros del flanco de rey (Rxf7 y Rxc6), con un final ganado. Con el peón pasado en la sexta se gana siempre, salvo que el bloqueado sea de torre.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "e4d4",
+            "dtm": 51,
+            "fecha": "2026-10-10"
+          }
         }
       ],
       "fuentes": [
@@ -2953,6 +2987,10 @@
         {
           "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
           "capitulo": "cap. 12 «Finales de peones», Final 89 «El peón pasado defendido» (diagrama 12.35)"
+        },
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 12 «Finales de peones», Final 89 «El peón pasado defendido» (diagrama 12.37)"
         }
       ]
     },
@@ -3065,12 +3103,31 @@
             "dtm": 57,
             "fecha": "2026-10-10"
           }
+        },
+        {
+          "id": "peon-de-alfil",
+          "fen": "5k2/5P1p/4K3/8/8/8/7P/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 20,
+          "consigna": "Peones de alfil y torre contra peón de torre. Tu peón de h sigue en la segunda fila: ganá.",
+          "pista": "Rf6!: el rey negro queda encerrado y el negro tiene que mover su peón. Si h5, h3! (no h4), y después de h4, Rg6 y mate. Si h6, h4! y Rg6. El peón en la segunda fila elige avanzar una o dos casillas según convenga. Con h3? o h4? de entrada son tablas.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "e6f6",
+            "dtm": 17,
+            "fecha": "2026-10-10"
+          }
         }
       ],
       "fuentes": [
         {
           "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
           "capitulo": "cap. 12 «Finales de peones», Final 87 «Peones caballo y torre contra peón de torre» (diagramas 12.25 a 12.27)"
+        },
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 12 «Finales de peones», Final 85 «Peón pasado de alfil del mismo flanco» (diagrama 12.23)"
         }
       ]
     },
