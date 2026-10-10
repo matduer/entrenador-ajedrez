@@ -107,6 +107,25 @@
           "texto": "6.f5, el gambito típico de este esquema que estudia Plaskett, no alcanza según Stockfish: después de 6...gxf5 el negro queda mejor."
         }
       ]
+    },
+    "e2e4 c7c5 b1c3 b8c6 g2g3 g7g6 f1g2 f8g7 d2d3 d7d6 f2f4 e7e5 g1f3 g8e7": {
+      "porQue": "El caballo va a e7: desde ahí apoya ...f5 o ...d5 y no queda expuesto al avance f5 del blanco.",
+      "porQueNo": [
+        {
+          "uci": "g8f6",
+          "texto": "7...Cf6?! permite 8.0-0 y 9.f5, con un ataque peligroso: el caballo de f6 queda en la línea de los peones blancos (EDAMI)."
+        }
+      ]
+    },
+    "e2e4 c7c5 b1c3 b8c6 g2g3 g7g6 f1g2 f8g7 d2d3 d7d6 f2f4 e7e5 g1f3 g8e7 e1g1 e8g8": {
+      "inferior": true,
+      "porQue": "El enroque natural; Stockfish prefiere aliviar la tensión con 8...exf4.",
+      "porQueNo": [
+        {
+          "uci": "c8e6",
+          "texto": "8...Ae6? 9.f5! y el alfil, sin buenas casillas, queda como blanco del avance de los peones del flanco de rey."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -126,6 +145,10 @@
       "titulo": "Sicilian Defence (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Sicilian_Defence",
       "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "EDAMI — La Variante Cerrada de la Siciliana (pack n.º 28, 2006)",
+      "capitulo": "clase 10, «La teoría del Sistema Cerrado»"
     },
     {
       "titulo": "Catálogo abierto de aperturas de Lichess",
@@ -229,6 +252,22 @@
       "e2e4 c7c5 b1c3 b8c6 f2f4 g7g6 g1f3 f8g7 f1c4 e7e6 f4f5 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 5 puntos de chances: −0,3 → −0,8. Refutación: gxf5 d3 Cge7 O-O O-O Ag5"
+      },
+      "e2e4 c7c5 b1c3 b8c6 g2g3 g7g6 f1g2 f8g7 d2d3 d7d6 f2f4 e7e5 g1f3 g8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 b1c3 b8c6 g2g3 g7g6 f1g2 f8g7 d2d3 d7d6 f2f4 e7e5 g1f3 g8f6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 4 puntos de chances: −0,2 → −0,7. Refutación: f5 gxf5 O-O h6 Ch4 f4"
+      },
+      "e2e4 c7c5 b1c3 b8c6 g2g3 g7g6 f1g2 f8g7 d2d3 d7d6 f2f4 e7e5 g1f3 g8e7 e1g1 e8g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 b1c3 b8c6 g2g3 g7g6 f1g2 f8g7 d2d3 d7d6 f2f4 e7e5 g1f3 g8e7 e1g1 c8e6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: −0,1 → −1,2. Refutación: f5 gxf5 Cg5 h5 exf5 Cxf5"
       }
     }
   }

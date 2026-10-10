@@ -108,6 +108,15 @@
           "texto": "4...Ac5? permite el truco de la horquilla: 5.Cxe5! Cxe5 6.d4, y el blanco recupera la pieza con un buen centro."
         }
       ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f3e5 c6e5 d2d4 e5g6": {
+      "porQue": "La retirada correcta contra el Gambito Halloween: desde g6 el caballo no queda expuesto a d5 ni a f4. Después de 6.e5 Cg8 el negro devuelve tiempo, pero sigue con una pieza de más.",
+      "porQueNo": [
+        {
+          "uci": "e5c6",
+          "texto": "5...Cc6? 6.d5! y el caballo vuelve a ser atacado: el blanco gana espacio con tiempo y recupera buena parte de la compensación (Keiser)."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -127,6 +136,9 @@
       "titulo": "Four Knights Game (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Four_Knights_Game",
       "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "Paul Keiser — Critical Lines in the Halloween Gambit (Unorthodox Openings Newsletter n.º 13, 2005)"
     },
     {
       "titulo": "Catálogo abierto de aperturas de Lichess",
@@ -230,6 +242,14 @@
       "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 a2a3 f8c5 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 7 puntos de chances: +0,1 → −0,7. Refutación: Cxe5 Cxe5 d4 Ad6 f4 Cc6"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f3e5 c6e5 d2d4 e5g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,8 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f3e5 c6e5 d2d4 e5c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: +1,8 → +0,5. Refutación: d5 Ce5 f4 Cg6 e5 Cg8"
       }
     }
   }
