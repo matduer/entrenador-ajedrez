@@ -42,6 +42,10 @@
         {
           "uci": "d7d6",
           "texto": "Pasivo: d3 o Cf3 y el negro queda sin ningún contrajuego."
+        },
+        {
+          "uci": "f7f5",
+          "texto": "2...f5?! tiene solo interés histórico: 3.exf5 y el blanco queda claramente mejor (Shaw)."
         }
       ]
     },
@@ -120,6 +124,77 @@
           "texto": "Retomar con la dama es lo que se jugaba antes de Falkbeer, y es débil: 4.Cc3 la ataca con ganancia de tiempo."
         }
       ]
+    },
+    "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 h2h4 g5g4 f3e5 g8f6 f1c4": {
+      "porQue": "La continuación que recomienda Shaw: desarrolla apuntando a f7 y, si ...d5, el blanco toma y sigue con d4."
+    },
+    "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 h2h4 g5g4 f3e5 g8f6 f1c4 d7d5 e4d5 f8d6 d2d4": {
+      "porQue": "Lo correcto: apoya el caballo de e5 y mantiene el centro.",
+      "porQueNo": [
+        {
+          "uci": "e1g1",
+          "texto": "8.0-0?! es el Gambito Rice: el blanco entrega el caballo de e5 por iniciativa. Shaw dice que hay que dejarlo en el siglo XIX, y Stockfish confirma que el negro queda mejor."
+        }
+      ]
+    },
+    "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 h2h4 g5g4 f3e5 d7d6 e5g4 g8f6 g4f6": {
+      "porQue": "Cambia el caballo atacado y abre la posición del rey negro.",
+      "porQueNo": [
+        {
+          "uci": "g4f2",
+          "texto": "7.Cf2?! es demasiado pasiva: el caballo queda mal en f2 y el negro completa el desarrollo con comodidad (Shaw)."
+        }
+      ]
+    },
+    "e2e4 e7e5 f2f4 e5f4 g1f3 d7d6 d2d4 g7g5 g2g3": {
+      "porQue": "La recomendación de Shaw contra la Defensa Fischer: en vez de h4, abrir el flanco de rey con g3, al estilo de la Variante Quaade, con la idea de enrocar largo."
+    },
+    "e2e4 e7e5 f2f4 e5f4 g1f3 d7d6 f1c4 h7h6 b2b3": {
+      "porQue": "Un camino con poca teoría (Johansson): no intenta recuperar f4 y prepara Ab2, Cc3, una jugada de dama y el enroque largo, para abrir después el flanco de rey.",
+      "porQueNo": [
+        {
+          "uci": "d2d3",
+          "texto": "5.d3 g5 6.g3 Cc6!: el blanco queda peor en todas las líneas (Shaw)."
+        }
+      ]
+    },
+    "e2e4 e7e5 f2f4 e5f4 g1f3 f8e7 f1c4 g8f6": {
+      "porQue": "Contra la Defensa Cunningham con 4.Ac4, Shaw considera que esta es la respuesta correcta: ataca e4 y desarrolla."
+    },
+    "e2e4 e7e5 f2f4 e5f4 g1f3 g8f6 e4e5 f6h5": {
+      "porQue": "La principal en la Defensa Schallop: desde h5 el caballo defiende el peón de f4.",
+      "porQueNo": [
+        {
+          "uci": "d8e7",
+          "texto": "4...De7?! deja a la dama estorbando y al caballo sin buenas casillas: el blanco sigue con De2 y d4 (Shaw)."
+        },
+        {
+          "uci": "f6g4",
+          "texto": "4...Cg4?! es rara por algo: 5.h3 echa al caballo, que queda mal ubicado (Shaw)."
+        },
+        {
+          "uci": "f6d5",
+          "texto": "4...Cd5, al estilo Alekhine, es jugable pero permite 5.Cc3!, con desarrollo rápido y buen ataque para el blanco (Shaw)."
+        }
+      ]
+    },
+    "e2e4 e7e5 f2f4 e5f4 g1f3 g8f6 e4e5 f6d5 b1c3": {
+      "porQue": "Desarrollo con tiempo contra el caballo de d5.",
+      "porQueNo": [
+        {
+          "uci": "f1c4",
+          "texto": "5.Ac4 Cb6 deja al blanco sin nada: el caballo vuelve con tiempo sobre el alfil (Stockfish)."
+        }
+      ]
+    },
+    "e2e4 e7e5 f2f4 e5f4 f1c4 b8c6": {
+      "porQue": "Para Shaw, la clave contra el Gambito de Alfil: una jugada flexible. Si 4.d4, el negro contraataca en el centro con ...Cf6 y ...d5, y tras 5.Cc3 Ab4 juega cómodo; ahí se ve el problema de haber sacado tan pronto el alfil a c4."
+    },
+    "e2e4 e7e5 f2f4 d7d5 e4d5 e5e4 d2d3 g8f6 d3e4 f6e4 g1f3": {
+      "porQue": "Shaw la prefiere a 6.Ae3: desarrolla y prepara De2 contra el caballo de e4."
+    },
+    "e2e4 e7e5 f2f4 d7d5 e4d5 e5e4 d2d3 g8f6 d3e4 f6e4 g1f3 f8c5 d1e2": {
+      "porQue": "Clava el caballo de e4 contra el rey: según Shaw, la teoría y la práctica muestran que el blanco queda mejor en todas las variantes."
     }
   },
   "fuentes": [
@@ -135,6 +210,10 @@
       "titulo": "King's Gambit (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/King%27s_Gambit",
       "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "John Shaw — The King's Gambit (Quality Chess, 2013)",
+      "capitulo": "caps. 1 a 3, 7, 11, 13, 15, 18 y 21"
     },
     {
       "titulo": "Catálogo abierto de aperturas de Lichess",
@@ -162,6 +241,10 @@
       "e2e4 e7e5 f2f4 d7d6 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 6 puntos de chances: +0,4 → −0,2. Refutación: d3 f5 Cf3 Cf6 Cc3 Cc6"
+      },
+      "e2e4 e7e5 f2f4 f7f5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 14 puntos de chances: +0,4 → −1,1. Refutación: exf5 De7 Cf3 d6 fxe5 dxe5"
       },
       "e2e4 e7e5 f2f4 e5f4 g1f3": {
         "ok": true,
@@ -242,6 +325,78 @@
       "e2e4 e7e5 f2f4 d7d5 e4d5 d8d5 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 7 puntos de chances: +0,2 → −0,6. Refutación: Cc3 De6 fxe5 Dxe5+ Ae2 Cc6"
+      },
+      "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 h2h4 g5g4 f3e5 g8f6 f1c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 h2h4 g5g4 f3e5 g8f6 f1c4 d7d5 e4d5 f8d6 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 h2h4 g5g4 f3e5 g8f6 f1c4 d7d5 e4d5 f8d6 e1g1 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: −0,8 → −2,1. Refutación: Axe5 d4 Ad6 Axf4 Axf4 De2+"
+      },
+      "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 h2h4 g5g4 f3e5 d7d6 e5g4 g8f6 g4f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 h2h4 g5g4 f3e5 d7d6 e5g4 g8f6 g4f2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: +0,1 → −1,0. Refutación: Tg8 d4 Ah6 Cc3 De7 Ac4"
+      },
+      "e2e4 e7e5 f2f4 e5f4 g1f3 d7d6 d2d4 g7g5 g2g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 f2f4 e5f4 g1f3 d7d6 f1c4 h7h6 b2b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 f2f4 e5f4 g1f3 d7d6 f1c4 h7h6 d2d3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,7 → −1,3. Refutación: g5 g3 Cc6 gxf4 g4 Cg1"
+      },
+      "e2e4 e7e5 f2f4 e5f4 g1f3 f8e7 f1c4 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 f2f4 e5f4 g1f3 g8f6 e4e5 f6h5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 f2f4 e5f4 g1f3 g8f6 e4e5 d8e7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 16 puntos de chances: +0,4 → −1,3. Refutación: De2 Cd5 c4 Cb4 d4 d6"
+      },
+      "e2e4 e7e5 f2f4 e5f4 g1f3 g8f6 e4e5 f6g4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: +0,4 → −0,7. Refutación: h3 Ch6 d4 d6 Axf4 dxe5"
+      },
+      "e2e4 e7e5 f2f4 e5f4 g1f3 g8f6 e4e5 f6d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,4 → −0,3. Refutación: Cc3 Cxc3 dxc3 d5 Axf4 Ae7"
+      },
+      "e2e4 e7e5 f2f4 e5f4 g1f3 g8f6 e4e5 f6d5 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 f2f4 e5f4 g1f3 g8f6 e4e5 f6d5 f1c4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: +0,3 → −0,5. Refutación: Cb6 Ab3 d5 d4 g5 h4"
+      },
+      "e2e4 e7e5 f2f4 e5f4 f1c4 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 f2f4 d7d5 e4d5 e5e4 d2d3 g8f6 d3e4 f6e4 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 f2f4 d7d5 e4d5 e5e4 d2d3 g8f6 d3e4 f6e4 g1f3 f8c5 d1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
       }
     }
   }
