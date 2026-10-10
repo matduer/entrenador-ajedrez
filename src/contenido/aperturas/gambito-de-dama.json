@@ -147,6 +147,15 @@
     },
     "d2d4 d7d5 c2c4 c7c5 c4d5": {
       "porQue": "Contra 2...c5, que Schandorff considera «ingenua», el cambio en d5 aprovecha la ventaja de desarrollo del blanco."
+    },
+    "d2d4 d7d5 c2c4 d5c4 e2e4 e7e5 g1f3": {
+      "porQue": "Desarrolla y defiende d4 indirectamente: después de 4...exd4 5.Axc4 el juego queda parejo.",
+      "porQueNo": [
+        {
+          "uci": "d4e5",
+          "texto": "4.dxe5? Dxd1+ 5.Rxd1 Cc6: el blanco perdió el enroque y el negro recupera e5 con buena posición (Seirawan)."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -166,6 +175,10 @@
     {
       "titulo": "Lars Schandorff — Playing the Queen's Gambit: A Grandmaster Guide (Quality Chess, 2009)",
       "capitulo": "cap. 8, «Minor Lines»"
+    },
+    {
+      "titulo": "Yasser Seirawan — Winning Chess Openings (Everyman)",
+      "capitulo": "cap. 4, «Classical Queen Pawn Openings»"
     },
     {
       "titulo": "Catálogo abierto de aperturas de Lichess",
@@ -297,6 +310,14 @@
       "d2d4 d7d5 c2c4 c7c5 c4d5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 d5c4 e2e4 e7e5 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 d5c4 e2e4 e7e5 d4e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,3 → −0,4. Refutación: Dxd1+ Rxd1 Cc6 Cf3 Ag4 Ae3"
       }
     }
   }

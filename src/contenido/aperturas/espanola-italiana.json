@@ -260,10 +260,22 @@
       "porQue": "Lo más incisivo: abre el centro para aprovechar la posición avanzada del caballo de e4."
     },
     "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5": {
-      "porQue": "Primero echa al alfil de la diagonal a4-e8; recién después ...d5."
+      "porQue": "Primero echa al alfil de la diagonal a4-e8; recién después ...d5.",
+      "porQueNo": [
+        {
+          "uci": "e5d4",
+          "texto": "6...exd4? 7.Te1 d5 8.Ag5 y el rey negro, todavía en el centro, queda en una situación precaria (Seirawan)."
+        }
+      ]
     },
     "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5": {
-      "porQue": "Sostiene el caballo de e4 con un peón central."
+      "porQue": "Sostiene el caballo de e4 con un peón central.",
+      "porQueNo": [
+        {
+          "uci": "e5d4",
+          "texto": "7...exd4? 8.Te1 d5 9.Cc3! y el blanco ataca el centro mientras el rey negro sigue sin enrocar (Seirawan)."
+        }
+      ]
     },
     "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6": {
       "porQue": "La posición básica de la Abierta: el peón de d5 es firme y los dos alfiles negros tienen diagonales libres."
@@ -531,6 +543,10 @@
       "titulo": "Purser, Jensen y Pape — Elephant Gambit (Blackmar Press, 1997)"
     },
     {
+      "titulo": "Yasser Seirawan — Winning Chess Openings (Everyman)",
+      "capitulo": "cap. 3, «Classical King Pawn Openings»"
+    },
+    {
       "titulo": "Catálogo abierto de aperturas de Lichess",
       "url": "https://github.com/lichess-org/chess-openings",
       "licencia": "CC0"
@@ -769,9 +785,17 @@
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
       },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 e5d4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: −0,3 → −1,5. Refutación: Te1 f5 Cxd4 Dh4 g3 Df6"
+      },
       "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 e5d4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,4 → −1,3. Refutación: Cxd4 Df6 Cxc6 dxc6 De2 De7"
       },
       "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6 e1g1 f6e4 d2d4 b7b5 a4b3 d7d5 d4e5 c8e6": {
         "ok": true,
