@@ -133,6 +133,18 @@
     },
     "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f2f4 f8g7 g1f3 e8g8 f1d3 b8c6 e1g1 e7e5": {
       "porQue": "La ruptura central: si 8.fxe5 dxe5 9.d5, la idea de Petrosian 9...Cd4 alcanza para igualar, según Vigus."
+    },
+    "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f2f4 f8g7 g1f3 c7c5 d4c5": {
+      "porQue": "Acepta el peón: la línea más directa."
+    },
+    "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f2f4 f8g7 g1f3 c7c5 d4c5 d8a5": {
+      "porQue": "El punto táctico de 5...c5 (Nunn): la dama clava el caballo de c3, ataca e4 y recupera el peón de c5. Como el negro todavía no enrocó, la posición tiene sus riesgos.",
+      "porQueNo": [
+        {
+          "uci": "d6c5",
+          "texto": "6...dxc5? 7.Dxd8+ Rxd8 8.Cg5!: el negro pierde el enroque y queda con f7 atacado, en un final malo."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -148,6 +160,10 @@
       "titulo": "Pirc Defence (Wikipedia en inglés)",
       "url": "https://en.wikipedia.org/wiki/Pirc_Defence",
       "licencia": "CC BY-SA 4.0"
+    },
+    {
+      "titulo": "John Nunn — The Complete Pirc (Batsford, 1989)",
+      "capitulo": "cap. 1, «Austrian Attack: Introduction»"
     },
     {
       "titulo": "Catálogo abierto de aperturas de Lichess",
@@ -279,6 +295,18 @@
       "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f2f4 f8g7 g1f3 e8g8 f1d3 b8c6 e1g1 e7e5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f2f4 f8g7 g1f3 c7c5 d4c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f2f4 f8g7 g1f3 c7c5 d4c5 d8a5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f2f4 f8g7 g1f3 c7c5 d4c5 d6c5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 23 puntos de chances: −0,6 → −3,6. Refutación: Dxd8+ Rxd8 Cg5 Re8 Ac4 Cc6"
       }
     }
   }
