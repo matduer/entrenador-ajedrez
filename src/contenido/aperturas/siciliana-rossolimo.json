@@ -94,6 +94,21 @@
     },
     "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 b5c6 b7c6 e1g1 f8g7 f1e1 e7e5 b2b4": {
       "porQue": "El sacrificio posicional de Fischer: si ...cxb4, a3 abre la columna a y el alfil de c1 gana la gran diagonal, con las casillas oscuras del centro (d6) a su alcance. Stockfish lo considera tan bueno como el normal c3."
+    },
+    "e2e4 c7c5 g1f3 b8c6 f1b5 e7e6 e1g1 g8e7 f1e1 a7a6 b5f1": {
+      "porQue": "Conserva el alfil y prepara c3 y d4. La otra opción es cambiar en c6 y abrir el centro con d4, apostando a la ventaja de desarrollo."
+    },
+    "e2e4 c7c5 g1f3 b8c6 f1b5 e7e6 b5c6 b7c6 d2d3 g8e7": {
+      "porQue": "El caballo va a g6 para controlar e5 y f4, la casilla del avance blanco."
+    },
+    "e2e4 c7c5 g1f3 b8c6 f1b5 d7d6 e1g1 c8d7 f1e1 g8f6 c2c3 a7a6 b5f1": {
+      "porQue": "La retirada restringida: conserva el alfil. El negro suele responder ...Ag4 para frenar d4."
+    },
+    "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 b5c6 d7c6 d2d3 f8g7 h2h3 g8f6 b1c3": {
+      "porQue": "Un plan simple pero peligroso: Ae3 (o Af4), Dd2, Ah6 para cambiar el alfil de g7, y quizás el enroque largo."
+    },
+    "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 e1g1 f8g7 c2c3": {
+      "porQue": "La forma clásica: prepara d4. 5.Te1 es más flexible."
     }
   },
   "fuentes": [
@@ -119,7 +134,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "e2e4 c7c5 g1f3 b8c6 f1b5": {
         "ok": true,
@@ -198,6 +213,26 @@
         "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
       },
       "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 b5c6 b7c6 e1g1 f8g7 f1e1 e7e5 b2b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 f1b5 e7e6 e1g1 g8e7 f1e1 a7a6 b5f1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 f1b5 e7e6 b5c6 b7c6 d2d3 g8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 f1b5 d7d6 e1g1 c8d7 f1e1 g8f6 c2c3 a7a6 b5f1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 b5c6 d7c6 d2d3 f8g7 h2h3 g8f6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 f1b5 g7g6 e1g1 f8g7 c2c3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
       }

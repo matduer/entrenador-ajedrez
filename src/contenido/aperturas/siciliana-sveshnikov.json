@@ -126,6 +126,15 @@
     },
     "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6 b5a3 b7b5 c3d5 f8e7": {
       "porQue": "Prepara cambiar el alfil de g5; tras Axf6 Axf6, el alfil negro llega a la diagonal c1-h6."
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c3d5 f6d5 e4d5 c6b8": {
+      "porQue": "El caballo vuelve para ir a d7. El blanco confía en su mayoría del flanco de dama (c4, Ad3, Cc3) y el negro, en la central con ...f5."
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 a2a4": {
+      "porQue": "Un intento de desactivar el Sveshnikov: tras ...a6 Ca3, el avance ...b5 ya no es posible y el caballo irá por c4 a e3 para dominar d5."
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 a2a4 a7a6 b5a3 c8e6": {
+      "porQue": "El negro se desarrolla con comodidad: sigue ...Tc8 y quizás ...Cd4. El plan blanco no crea peligros inmediatos."
     }
   },
   "fuentes": [
@@ -147,7 +156,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3": {
         "ok": true,
@@ -256,6 +265,18 @@
       "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c1g5 a7a6 b5a3 b7b5 c3d5 f8e7": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 c3d5 f6d5 e4d5 c6b8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 a2a4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e5 d4b5 d7d6 a2a4 a7a6 b5a3 c8e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
       }
     }
   }
