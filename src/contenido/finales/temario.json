@@ -413,6 +413,89 @@
       ]
     },
     {
+      "id": "fortalezas-alfil",
+      "titulo": "Fortalezas contra el alfil de más",
+      "nivel": 4,
+      "explicacion": [
+        "Un alfil de ventaja no siempre gana. El alfil ve solo las casillas de un color, y si el peón que tiene que coronar es de caballo o de torre y ya llegó a la sexta o la séptima fila, el rey que defiende puede quedarse en un rincón del que nadie lo saca.",
+        "La defensa se apoya en el ahogado: el rey va y viene entre dos casillas pegadas al peón bloqueado, y cada intento de sacarlo lo deja sin jugadas. Un alfil mal ubicado, por ejemplo encerrado delante de su propio peón, puede valer incluso menos que un peón.",
+        "Silman da la regla al revés para el que ataca: con peones de alfil, de dama o de rey no hay fortaleza posible. Ahí el rey defensor no tiene rincón y el alfil lo echa en pocas jugadas."
+      ],
+      "ideas": [
+        "Peón de caballo o de torre en sexta o séptima: buscá el rincón y quedate.",
+        "Elegí entre las dos casillas la que no queda en la diagonal del alfil.",
+        "Con peón de alfil, dama o rey no hay fortaleza: ahí el alfil gana."
+      ],
+      "posiciones": [
+        {
+          "id": "peon-de-torre-bloqueado",
+          "fen": "1k6/p7/P7/3BK3/8/8/8/8 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 20,
+          "consigna": "Alfil de más, pero los peones de torre están trabados. Hacé tablas.",
+          "pista": "Tu rey no tiene que salir de b8, c8 y alrededores: desde ahí cuida a7 y, si el blanco se acerca demasiado, se queda sin jugadas y es ahogado.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "b8c7",
+            "dtm": 0,
+            "fecha": "2026-10-11"
+          }
+        },
+        {
+          "id": "alfil-encerrado",
+          "fen": "8/4K1kB/6P1/8/8/8/8/8 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 20,
+          "consigna": "El alfil de h7 está encerrado delante de su peón. Hacé tablas.",
+          "pista": "Rh8 y Rg7, una y otra vez. Si te alejás (1...Rh6?), el alfil sale de h7 y el blanco gana. Si en h7 hubiera un peón, el blanco ganaría con h8=D+ y Rf6: acá el alfil vale menos que un peón.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "g7h8",
+            "dtm": 0,
+            "fecha": "2026-10-11"
+          }
+        },
+        {
+          "id": "peon-de-caballo-en-sexta",
+          "fen": "5k2/6p1/3K2P1/3B4/8/8/8/8 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 20,
+          "consigna": "Peón de caballo en sexta y alfil de casillas claras. Hacé tablas.",
+          "pista": "Con el alfil en la diagonal a2-g8, el rincón g8-h8 es una trampa: el alfil controla g8. Quedate entre e8 y f8, fuera de esa diagonal, y el blanco no te puede echar.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "f8e8",
+            "dtm": 0,
+            "fecha": "2026-10-11"
+          }
+        },
+        {
+          "id": "peon-de-alfil-gana",
+          "fen": "4k3/5p2/2K2P2/2B5/8/8/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 20,
+          "consigna": "La misma idea, pero con peón de alfil. Ganá.",
+          "pista": "Con peón de alfil no hay rincón para el rey negro. 1.Ab6 le quita d8 y el rey blanco entra por d7 y e7 hasta ganar el peón de f7.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "c5b6",
+            "dtm": 21,
+            "fecha": "2026-10-11"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Jeremy Silman — El curso de finales completo (Siles Press, 2007)",
+          "capitulo": "Parte Seis (ELO 1800-1999): «Fortalezas en finales con un alfil de ventaja», diagramas 253, 255, 257 y 258"
+        }
+      ]
+    },
+    {
       "id": "dama-contra-peon",
       "titulo": "Dama contra peón en séptima",
       "nivel": 4,
@@ -943,6 +1026,20 @@
             "ok": true,
             "resultado": "stockfish 7.73",
             "mejor": "c2c3",
+            "fecha": "2026-10-11"
+          }
+        },
+        {
+          "id": "sexta-como-septima",
+          "fen": "1r6/5k2/1p4p1/pP4P1/P7/1K6/8/3R4 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 60,
+          "consigna": "Un peón de ventaja y la torre libre. ¿Adónde va la torre? Ganá.",
+          "pista": "1.Td6! ataca b6 y g6 y no deja pasar al rey negro de la séptima. El jaque 1.Td7+? no ataca nada: después de 1...Re6 el rey negro sale y son tablas.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "stockfish 5.12",
+            "mejor": "d1d6",
             "fecha": "2026-10-11"
           }
         }
