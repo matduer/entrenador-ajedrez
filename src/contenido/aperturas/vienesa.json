@@ -117,6 +117,41 @@
     },
     "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 f4e5 f6e4 d2d3 e4c3": {
       "porQue": "Lo más sensato según Lane: cambiar caballos y llevar el juego a un medio juego posicional. La alternativa 5...Dh4+ 6.g3 entra en complicaciones enormes, en las que según Lane varios jugadores con negras sufrieron."
+    },
+    "e2e4 e7e5 b1c3 g8f6 f2f4 e5f4 e4e5": {
+      "porQue": "Lo mejor contra la aceptación: echa al caballo antes de que el negro golpee con ...d5.",
+      "porQueNo": [
+        {
+          "uci": "f1c4",
+          "texto": "4.Ac4? c6 y ...d5: el negro ocupa el centro con tiempo."
+        },
+        {
+          "uci": "g1f3",
+          "texto": "4.Cf3? d5: el negro libera su juego y se queda con el peón de f4."
+        }
+      ]
+    },
+    "e2e4 e7e5 b1c3 g8f6 f2f4 e5f4 e4e5 f6g8": {
+      "porQue": "La única retirada buena: el caballo vuelve a casa, pero el negro conserva el peón de más.",
+      "porQueNo": [
+        {
+          "uci": "d8e7",
+          "texto": "4...De7? 5.De2 Cg8 6.d4: la dama negra tapa al alfil y el blanco recupera el peón con ventaja."
+        },
+        {
+          "uci": "b8c6",
+          "texto": "4...Cc6? 5.exf6 Dxf6 6.Cf3: el negro entregó una pieza por dos peones."
+        }
+      ]
+    },
+    "e2e4 e7e5 b1c3 g8f6 g2g3 d7d5 e4d5 f6d5 f1g2 d5c3": {
+      "porQue": "Cambiar el caballo antes de que el alfil de g2 lo presione: las blancas retoman con el peón de b y quedan con el centro algo más sólido."
+    },
+    "e2e4 e7e5 b1c3 b8c6 f1c4 g8f6": {
+      "porQue": "El desarrollo natural: ataca e4 y deja abierta la elección entre ...Ab4 y ...Ac5."
+    },
+    "e2e4 e7e5 b1c3 f8c5 g1f3": {
+      "porQue": "Desarrolla y ataca e5: la respuesta más precisa a 2...Ac5."
     }
   },
   "fuentes": [
@@ -146,7 +181,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "e2e4 e7e5 b1c3": {
         "ok": true,
@@ -247,6 +282,42 @@
       "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 f4e5 f6e4 d2d3 e4c3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f2f4 e5f4 e4e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f2f4 e5f4 f1c4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,5 → −0,2. Refutación: c6 d4 d5 exd5 cxd5 Ab5+"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f2f4 e5f4 g1f3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: +0,5 → −0,4. Refutación: d5 exd5 Cxd5 Ab5+ c6 De2+"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f2f4 e5f4 e4e5 f6g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f2f4 e5f4 e4e5 d8e7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 18 puntos de chances: −0,6 → −2,7. Refutación: De2 Cg8 d4 d5 Cxd5 Dd8"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f2f4 e5f4 e4e5 b8c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 23 puntos de chances: −0,6 → −3,4. Refutación: exf6 Dxf6 De2+ Rd8 Rd1 h6"
+      },
+      "e2e4 e7e5 b1c3 g8f6 g2g3 d7d5 e4d5 f6d5 f1g2 d5c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 b8c6 f1c4 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 f8c5 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
       }
     }
   }

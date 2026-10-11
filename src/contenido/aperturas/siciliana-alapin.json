@@ -126,6 +126,18 @@
     },
     "e2e4 c7c5 c2c3 g8f6 e4e5 f6d5 d2d4 c5d4 g1f3 b8c6": {
       "porQue": "Mantiene las opciones abiertas: el alfil de c8 todavía puede ir a g4, o el negro puede pasar a las líneas con ...e6. Es la preferida de Stockfish."
+    },
+    "e2e4 c7c5 c2c3 e7e6 d2d4 d7d5 e4e5": {
+      "porQue": "Se llega a una Francesa del Avance con c3 ya jugado: para Stockfish, lo más fuerte."
+    },
+    "e2e4 c7c5 c2c3 d7d6 d2d4 g8f6": {
+      "porQue": "Ataca e4 de inmediato: las blancas tienen que defenderlo con Ad3 o f3 antes de seguir."
+    },
+    "e2e4 c7c5 c2c3 g7g6 d2d4 c5d4 c3d4 d7d5 e4e5": {
+      "porQue": "Cierra el centro: el alfil de g7 queda mordiendo el peón de d4 y el blanco tiene espacio."
+    },
+    "e2e4 c7c5 c2c3 b8c6 d2d4 d7d5 d4c5": {
+      "porQue": "Lo más preciso para Stockfish: el blanco gana un peón de forma momentánea y el negro tiene que recuperarlo."
     }
   },
   "fuentes": [
@@ -155,7 +167,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "e2e4 c7c5 c2c3 g8f6 e4e5": {
         "ok": true,
@@ -268,6 +280,22 @@
       "e2e4 c7c5 c2c3 g8f6 e4e5 f6d5 d2d4 c5d4 g1f3 b8c6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 c2c3 e7e6 d2d4 d7d5 e4e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 c2c3 d7d6 d2d4 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 c2c3 g7g6 d2d4 c5d4 c3d4 d7d5 e4e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 c2c3 b8c6 d2d4 d7d5 d4c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
       }
     }
   }

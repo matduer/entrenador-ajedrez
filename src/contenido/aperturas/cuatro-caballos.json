@@ -82,7 +82,13 @@
     },
     "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1b5 c6d4 b5a4": {
       "porQue": "La retirada habitual en la práctica: mantiene el alfil en la diagonal. Stockfish prefiere simplificar con Cxd4.",
-      "inferior": true
+      "inferior": true,
+      "porQueNo": [
+        {
+          "uci": "c3d5",
+          "texto": "5.Cd5? Cxb5: el caballo de d4 atacaba el alfil, y el negro gana una pieza."
+        }
+      ]
     },
     "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1b5 c6d4 b5a4 f8c5": {
       "porQue": "Variante Rubinstein: desarrolla sin preocuparse por e5. Stockfish prefiere ...c6, más sólido.",
@@ -117,6 +123,24 @@
           "texto": "5...Cc6? 6.d5! y el caballo vuelve a ser atacado: el blanco gana espacio con tiempo y recupera buena parte de la compensación (Keiser)."
         }
       ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1c4 f6e4": {
+      "porQue": "El truco de la horquilla, ya conocido de la Italiana: si 5.Cxe4, ...d5 recupera la pieza con buen juego."
+    },
+    "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 d2d4 e5d4 c3d5 f8e7": {
+      "porQue": "El desarrollo simple: el negro no tiene por qué meterse en las complicaciones de 5...Cxe4. Stockfish prefiere algo más 5...Cb4."
+    },
+    "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 d2d4 e5d4 c3d5 f6e4 d1e2 f7f5 f3g5 d4d3": {
+      "porQue": "La línea principal del Gambito Belgrado, terreno muy traicionero: sigue 8.cxd3 Cd4 9.Dh5+ g6 10.Dh4, y la teoría todavía no sabe qué pensar.",
+      "porQueNo": [
+        {
+          "uci": "d7d6",
+          "texto": "7...d6? 8.Cxe4 fxe4 9.Dxe4+: el blanco recupera material con el rey negro expuesto."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 g2g3 f8c5": {
+      "porQue": "Mantiene el centro cerrado: abrirlo con ...d5 le daría a las blancas una posición de la Vienesa con un tiempo de más."
     }
   },
   "fuentes": [
@@ -149,7 +173,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "e2e4 e7e5 g1f3 b8c6 b1c3": {
         "ok": true,
@@ -215,6 +239,10 @@
         "ok": true,
         "detalle": "Stockfish (prof. 18) prefiere Cxd4: +0,3 contra −0,5 (marcada como inferior pero jugable)"
       },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1b5 c6d4 c3d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 44 puntos de chances: +0,3 → −6,5. Refutación: Cxb5 Cxe5 c6 Cxf6+ Dxf6 d4"
+      },
       "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1b5 c6d4 b5a4 f8c5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18) prefiere c6: +0,5 contra −0,0 (marcada como inferior pero jugable)"
@@ -250,6 +278,26 @@
       "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f3e5 c6e5 d2d4 e5c6 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 11 puntos de chances: +1,8 → +0,5. Refutación: d5 Ce5 f4 Cg6 e5 Cg8"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1c4 f6e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 d2d4 e5d4 c3d5 f8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 d2d4 e5d4 c3d5 f6e4 d1e2 f7f5 f3g5 d4d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 d2d4 e5d4 c3d5 f6e4 d1e2 f7f5 f3g5 d7d6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,4 → −0,2. Refutación: Cxe4 fxe4 Dxe4+ Ce7 Ad2 c6"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 g2g3 f8c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
       }
     }
   }
