@@ -2374,6 +2374,51 @@
             "dtm": 0,
             "fecha": "2026-10-11"
           }
+        },
+        {
+          "id": "defensa-de-mandeleil",
+          "fen": "5n2/4K3/3P4/3k4/8/8/2B5/8 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 20,
+          "consigna": "Jugás con negras. Mandeleil (1938): el peón de d6 está a dos pasos de coronar, pero tu caballo y tu rey todavía lo pueden contener. Elegí bien la casilla del rey.",
+          "pista": "Rc6! (la única): si Aa4+, Rc5, y el rey sigue cerca del peón y del caballo. Con Rc5? o Re5?, Ae4! y el blanco gana.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "d5c6",
+            "dtm": 0,
+            "fecha": "2026-10-11"
+          }
+        },
+        {
+          "id": "estudio-de-bron",
+          "fen": "8/4K3/3P1n2/3k4/8/8/2B5/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 30,
+          "consigna": "Bron (1955): el caballo negro está en f6. Con jugadas precisas del alfil, poné al negro en zugzwang. Ganá.",
+          "pista": "Ab3+! (la única) Rc5, Ae6 Rc6, Ac4 Rc5 y Ab3!: el alfil le quita casillas al rey negro mientras tu rey avanza (Re6, Re7) y el caballo se queda sin buenas jugadas. Tomar el caballo con Rxf6? da tablas.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "c2b3",
+            "dtm": 51,
+            "fecha": "2026-10-11"
+          }
+        },
+        {
+          "id": "subpromocion-de-blandford",
+          "fen": "8/k2K4/8/8/8/2B5/2P5/5n2 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 20,
+          "consigna": "Blandford (1949): tu peón todavía está en c2, pero el rey y el caballo negros no se coordinan. Ganá (atento a la coronación).",
+          "pista": "Ad4+! Ra8, c4 Cd2, c5 Cb3, c6 Ca5, c7 Cc6 y c8=T+!: si coronás dama, Cb8+ (tapa con jaque) y después del cambio quedan tablas.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "c3d4",
+            "dtm": 35,
+            "fecha": "2026-10-11"
+          }
         }
       ],
       "fuentes": [
@@ -2384,6 +2429,10 @@
         {
           "titulo": "Yuri Averbakh — Bishop v. Knight Endings (trad. K. P. Neat; Batsford, 1976)",
           "capitulo": "cap. 1 «Bishop and pawn v. knight», posiciones 11 (Brenev, 1934) y 17 (Prokeš, 1946)"
+        },
+        {
+          "titulo": "Yuri Averbakh — Bishop v. Knight Endings (trad. K. P. Neat; Batsford, 1976)",
+          "capitulo": "cap. 1, posiciones 22 (Mandeleil, 1938), 23 (Bron, 1955) y 47 (Blandford, 1949)"
         }
       ]
     },
