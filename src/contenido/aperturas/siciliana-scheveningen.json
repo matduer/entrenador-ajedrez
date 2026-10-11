@@ -53,6 +53,55 @@
     },
     "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 f2f3": {
       "porQue": "Prepara g4 y Ae3: el mismo plan que el Ataque Inglés."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 f1e2": {
+      "porQue": "La Scheveningen Clásica: desarrollo sin pretensiones (Ae2, enroque corto, f4, Rh1) y ataque recién cuando todo está en su lugar. Es el terreno de las finezas de orden de jugadas."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 f1e2 b8c6 e1h1 f8e7 g1h1 e8h8 f2f4 d8c7 d4b3 a7a6 a2a4": {
+      "porQue": "El plan con el que Maróczy le ganó a Euwe en Scheveningen, 1923: a4 frena ...b5, el contrajuego natural del negro en el flanco de dama, y el alfil de c1 se queda en casa para no ofrecer un blanco a ...Ca5 o ...Ce5-c4."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 g2g4 h7h6 h2h4": {
+      "porQue": "La línea principal moderna contra 6...h6: las blancas preparan Tg1 y recién después g5, para abrir la columna h sin romper su cadena de peones. Si llegan a g5 y g6, el enroque corto deja de ser una opción para el negro."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 g2g4 h7h6 h2h4 b8c6 h1g1": {
+      "porQue": "Prepara g5 con la torre ya en la columna g."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 g2g4 h7h6 h2h4 b8c6 h1g1 h6h5": {
+      "porQue": "La más jugada en la práctica: si 9.g5, el caballo no se repliega a d7 sino que salta a g4. Stockfish la ve algo inferior a 8...d5.",
+      "inferior": true
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 g2g4 h7h6 g4g5 h6g5 c1g5": {
+      "porQue": "La vieja línea principal: el alfil queda clavado en g5, como en el Richter-Rauzer, pero la cadena de peones blancos del flanco de rey quedó rota. Por eso el negro puede hasta enrocar largo y buscar luego la ruptura ...d5."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 g2g4 a7a6 g4g5 f6d7 c1e3 b7b5": {
+      "porQue": "Hacer de la necesidad virtud: el negro cede espacio en el flanco de rey y contraataca de inmediato en el otro, donde el caballo de d7 encuentra trabajo (b6 o c5)."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 g2g4 b8c6 g4g5 f6d7 c1e3 f8e7 h2h4 e8h8": {
+      "porQue": "Enrocar «hacia el ataque» parece temerario, pero el rey tampoco estaba seguro en e8, y así el negro completa el desarrollo con armonía y busca su juego con ...a6, ...Cxd4 y ...b5."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 f2f4": {
+      "porQue": "Hasta la llegada del Keres era la forma más directa de atacar la Scheveningen: Df3, Ae3, enroque largo y luego e5, f5 o g4-g5 como ariete."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 f2f4 b8c6 c1e3 e6e5": {
+      "porQue": "La versión más reciente del contragolpe central ...e5: el negro lo juega cuanto antes, antes de que las blancas completen Df3 y el enroque largo."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 f2f4 a7a6 d1f3 d8c7": {
+      "porQue": "Prepara ...b5: con la dama en c7, el avance e5 no llega con tanta fuerza.",
+      "porQueNo": [
+        {
+          "uci": "b7b5",
+          "texto": "Antes de tiempo: 8.e5! ataca la torre de a8 a través de la gran diagonal y el caballo de f6 no tiene buena casilla."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 g2g3 b8c6 f1g2 c8d7": {
+      "porQue": "Contra el fianchetto, un esquema tranquilo: ...Ad7 evita la idea Cxc6 seguida de bxc6 y e5, que dejaría al negro con el caballo de f6 sin casilla."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 c1g5 f8e7 d1d2": {
+      "porQue": "La jugada del Richter-Rauzer, pero acá sin el caballo en c6 las blancas no tienen los recursos típicos contra d6 (Cdb5 o Cxc6 con Axf6), y el negro juega ...a6 y ...b5 en mejores condiciones."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 g2g4 h7h6 h2h4 b8c6 h1g1 d6d5": {
+      "porQue": "La reacción central que FCO considera crítica y la primera de Stockfish: contra un ataque de flanco, abrir el centro."
     }
   },
   "fuentes": [
@@ -69,12 +118,16 @@
       "titulo": "Catálogo abierto de aperturas de Lichess",
       "url": "https://github.com/lichess-org/chess-openings",
       "licencia": "CC0"
+    },
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Sicilian Defence», «Scheveningen Variation»: Clásica, Ataque Keres y 6 f4"
     }
   ],
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 g2g4": {
         "ok": true,
@@ -107,6 +160,66 @@
       "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 f2f3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 f1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 f1e2 b8c6 e1h1 f8e7 g1h1 e8h8 f2f4 d8c7 d4b3 a7a6 a2a4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 g2g4 h7h6 h2h4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 g2g4 h7h6 h2h4 b8c6 h1g1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 g2g4 h7h6 h2h4 b8c6 h1g1 h6h5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere d5: −0,7 contra −1,3 (marcada como inferior pero jugable)"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 g2g4 h7h6 g4g5 h6g5 c1g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 g2g4 a7a6 g4g5 f6d7 c1e3 b7b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 g2g4 b8c6 g4g5 f6d7 c1e3 f8e7 h2h4 e8h8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 f2f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 f2f4 b8c6 c1e3 e6e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 f2f4 a7a6 d1f3 d8c7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 f2f4 a7a6 d1f3 b7b5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 4 puntos de chances: −0,4 → −0,9. Refutación: e5 dxe5 Cdxb5 e4 Cxe4 Cd5"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 g2g3 b8c6 f1g2 c8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 c1g5 f8e7 d1d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 e7e6 g2g4 h7h6 h2h4 b8c6 h1g1 d6d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
       }
     }
   }

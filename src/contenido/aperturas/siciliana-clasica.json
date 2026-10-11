@@ -20,7 +20,12 @@
     "Alfil blanco de c1: g5 (Rauzer) o e3 (Sozin).",
     "Alfil blanco de f1: c4-b3 en el Sozin, apuntando a e6 y f7."
   ],
-  "trampas": [],
+  "trampas": [
+    {
+      "jugadas": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1c4 g7g6 d4c6 b7c6 e4e5 d6e5 c4f7 e8f7 d1d8",
+      "texto": "Contra la Sozin, 6...g6?! permite 7.Cxc6 bxc6 8.e5!, y si 8...dxe5?? 9.Axf7+ Rxf7 10.Dxd8: el alfil de c4 y la dama en la columna d hacen el resto. (Después de 8.e5, lo mejor es 8...Cg4, con una posición algo peor pero jugable.)"
+    }
+  ],
   "notas": {
     "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1e2": {
       "porQue": "La línea antigua: sana pero poco exigente. El negro elige su sistema: ...e6, ...g6 o ...e5.",
@@ -58,6 +63,39 @@
     },
     "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1c4 e7e6 c1e3 f8e7 d1e2": {
       "porQue": "El Ataque Velimirovic: De2 evita ...Cg4 y prepara el enroque largo y el avance g4-g5."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1e2 e7e5 d4b3 f8e7 e1h1 e8h8 c1e3 c8e6": {
+      "porQue": "El plan de Boleslavsky en acción: con el alfil en e6 y las piezas listas, el negro amenaza ...d5 y deja de tener un hueco en d5."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1e2 e7e5 d4b3 f8e7 e1h1 e8h8 f2f4 a7a5": {
+      "porQue": "Si las blancas impiden ...d5 con f4, el negro cambia de frente: ...a5-a4 y ...Cb4 en el flanco de dama."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 a7a6 e1a1 h7h6": {
+      "porQue": "Ahora sí tiene sentido: si Axf6, el negro recaptura con la dama y no se rompen sus peones; y 9.Ah4 Cxe4! no les conviene a las blancas. Las principales son 9.Ae3 y 9.Af4."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 a7a6 e1a1 h7h6 g5f4 c8d7": {
+      "porQue": "Ataca d6 con el alfil y obliga a una defensa ingeniosa: tras 10.Cxc6 Axc6 el peón de e4 queda atacado, y 11.f3 se contesta con ...d5.",
+      "porQueNo": [
+        {
+          "uci": "e6e5",
+          "texto": "9...e5? 10.Cxc6 bxc6 11.Axe5: el peón cae porque d6 está clavado."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 f8e7 e1a1 e8h8 d4b5 d8a5": {
+      "porQue": "La refutación del ataque directo contra d6: después de 10.Axf6 Axf6 11.Cxd6 Td8, el alfil de f6 y la clavada en la columna d valen más que el peón."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 f8e7 e1a1 e8h8 d4b3 d8b6": {
+      "porQue": "Una versión más sutil de Cdb5 prepara Axf6, f3 y g4. La dama en b6 cubre d6 a la distancia; si 10.Axf6 Axf6 11.Dxd6, el negro recupera con ...Dxf2."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 f8e7 e1a1 e8h8 f2f4 h7h6": {
+      "porQue": "La versión más fina del contragolpe ...e5: después de 10.Ah4 e5 11.Cf5 Axf5 12.exf5 exf4 el alfil de h4 ya no puede retomar en f4."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1c4 e7e6": {
+      "porQue": "La respuesta sana contra la Sozin: cierra la diagonal a7-g1 y deja el alfil de c4 apuntando a un peón protegido."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1c4 e7e6 c4b3": {
+      "porQue": "La Sozin propiamente dicha: el alfil se retira antes de que lo ataquen ...Ca5 o ...b5, y sigue mirando a e6 y f7, el punto de rotura de f4-f5."
     }
   },
   "fuentes": [
@@ -74,12 +112,16 @@
       "titulo": "Catálogo abierto de aperturas de Lichess",
       "url": "https://github.com/lichess-org/chess-openings",
       "licencia": "CC0"
+    },
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Sicilian Defence», «Classical Variation»: Boleslavsky, Richter-Rauzer y Sozin"
     }
   ],
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1e2": {
         "ok": true,
@@ -120,6 +162,46 @@
       "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1c4 e7e6 c1e3 f8e7 d1e2": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1e2 e7e5 d4b3 f8e7 e1h1 e8h8 c1e3 c8e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1e2 e7e5 d4b3 f8e7 e1h1 e8h8 f2f4 a7a5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 a7a6 e1a1 h7h6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 a7a6 e1a1 h7h6 g5f4 c8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 a7a6 e1a1 h7h6 g5f4 e6e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 17 puntos de chances: −0,3 → −2,2. Refutación: Cxc6 bxc6 Axe5 Ag4 Axf6 Dxf6"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 f8e7 e1a1 e8h8 d4b5 d8a5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 f8e7 e1a1 e8h8 d4b3 d8b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 f8e7 e1a1 e8h8 f2f4 h7h6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1c4 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1c4 e7e6 c4b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
       }
     }
   }
