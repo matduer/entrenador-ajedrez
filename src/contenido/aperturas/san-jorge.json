@@ -49,6 +49,18 @@
           "texto": "Tomar en c4 le deja a las blancas desarrollar el alfil con tiempo (Axc4) y con un centro muy fuerte."
         }
       ]
+    },
+    "e2e4 a7a6 d2d4 b7b5 a2a4 b5b4": {
+      "porQue": "Avanza en vez de cambiar: el peón de b4 le quita c3 al caballo blanco, aunque queda algo adelantado."
+    },
+    "e2e4 a7a6 d2d4 b7b5 a2a4 c8b7 b1d2": {
+      "porQue": "La mejor para Stockfish: defiende e4 sin tapar el peón de c."
+    },
+    "e2e4 a7a6 d2d4 b7b5 g1f3 c8b7 f1d3 e7e6 e1g1": {
+      "porQue": "Lo más sencillo: el rey a salvo antes de decidir en el centro; De2 y c3 también son buenos."
+    },
+    "e2e4 a7a6 d2d4 b7b5 c2c4 c8b7 d1c2": {
+      "porQue": "Sostiene e4 con la dama y mantiene los tres peones centrales: para Stockfish, la más precisa."
     }
   },
   "fuentes": [
@@ -65,7 +77,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "e2e4 a7a6": {
         "ok": true,
@@ -98,6 +110,22 @@
       "e2e4 a7a6 d2d4 b7b5 c2c4 b5c4 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 5 puntos de chances: −0,6 → −1,2. Refutación: Axc4 e6 Cc3 Ab4 Ch3 Ce7"
+      },
+      "e2e4 a7a6 d2d4 b7b5 a2a4 b5b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,1 para el bando que mueve"
+      },
+      "e2e4 a7a6 d2d4 b7b5 a2a4 c8b7 b1d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,1 para el bando que mueve"
+      },
+      "e2e4 a7a6 d2d4 b7b5 g1f3 c8b7 f1d3 e7e6 e1g1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,1 para el bando que mueve"
+      },
+      "e2e4 a7a6 d2d4 b7b5 c2c4 c8b7 d1c2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
       }
     }
   }

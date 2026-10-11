@@ -72,6 +72,61 @@
     },
     "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3 g1f3 c7c6": {
       "porQue": "También bueno: refuerza d5 y prepara ...Af5 o ...Ag4."
+    },
+    "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3 g1f3 e7e6": {
+      "porQue": "La Defensa Euwe: sólida; encierra el alfil de c8 pero no le da al blanco blancos claros para atacar."
+    },
+    "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3 g1f3 e7e6 f1d3": {
+      "porQue": "Desarrollo natural: después del enroque, las blancas buscan el ataque con De1-h4 o Ag5."
+    },
+    "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3 g1f3 c8g4": {
+      "porQue": "La Defensa Teichmann: presiona el caballo que defiende d4. Stockfish prefiere el fianchetto 5...g6.",
+      "inferior": true
+    },
+    "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3 g1f3 c8g4 h2h3": {
+      "porQue": "La única buena: pregunta al alfil enseguida.",
+      "porQueNo": [
+        {
+          "uci": "f1c4",
+          "texto": "6.Ac4? e6 y si 7.h3 Ah5: la clavada sigue y el blanco no tiene compensación por el peón."
+        },
+        {
+          "uci": "c1e3",
+          "texto": "6.Ae3? e6: el alfil de e3 no hace nada y la presión sobre d4 continúa."
+        }
+      ]
+    },
+    "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3 g1f3 c8f5": {
+      "porQue": "El alfil sale antes de cerrar con ...e6. Stockfish prefiere el fianchetto 5...g6.",
+      "inferior": true
+    },
+    "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3 g1f3 c8f5 f1d3": {
+      "porQue": "Ofrece cambiar el alfil más activo del negro; 6.Ag5 es igual de bueno."
+    },
+    "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e7e5 d4e5": {
+      "porQue": "Lo correcto contra la contraofensiva central: las blancas no pierden un peón y el negro tiene que recuperar e5.",
+      "porQueNo": [
+        {
+          "uci": "c1e3",
+          "texto": "5.Ae3? Cd5: el caballo cambia al de c3 y el negro se queda con el peón de más."
+        },
+        {
+          "uci": "f1b5",
+          "texto": "5.Ab5+? c6 6.dxe5 Dxd1+: el negro cambia damas con el peón de e4 de ventaja."
+        }
+      ]
+    },
+    "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 c7c6 f3e4": {
+      "porQue": "Si el negro no acepta, el blanco recupera el peón y se queda con un buen centro."
+    },
+    "d2d4 d7d5 e2e4 d5e4 b1c3 c8f5 f2f3": {
+      "porQue": "Sigue con el espíritu del gambito, ofreciendo el peón de f.",
+      "porQueNo": [
+        {
+          "uci": "g1e2",
+          "texto": "4.Cge2? e6 5.Cg3 Cf6: el blanco no recupera el peón ni tiene compensación."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -97,7 +152,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "d2d4 d7d5 e2e4 d5e4": {
         "ok": true,
@@ -150,6 +205,62 @@
       "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3 g1f3 c7c6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3 g1f3 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3 g1f3 e7e6 f1d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3 g1f3 c8g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere g6: +0,7 contra +0,2 (marcada como inferior pero jugable)"
+      },
+      "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3 g1f3 c8g4 h2h3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3 g1f3 c8g4 f1c4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,2 → −0,7. Refutación: e6 h3 Ah5 g4 Ag6 De2"
+      },
+      "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3 g1f3 c8g4 c1e3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,2 → −0,8. Refutación: e6 Ad3 Cc6 h3 Ah5 De2"
+      },
+      "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3 g1f3 c8f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere g6: +0,7 contra +0,3 (marcada como inferior pero jugable)"
+      },
+      "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3 g1f3 c8f5 f1d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e7e5 d4e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e7e5 c1e3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 15 puntos de chances: +1,2 → −0,5. Refutación: Cd5 Ab5+ c6 Cxd5 Dxd5 Aa4"
+      },
+      "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e7e5 f1b5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 13 puntos de chances: +1,2 → −0,3. Refutación: c6 dxe5 Dxd1+ Cxd1 Cfd7 Ae2"
+      },
+      "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 c7c6 f3e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 e2e4 d5e4 b1c3 c8f5 f2f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 d7d5 e2e4 d5e4 b1c3 c8f5 g1e2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,2 → −0,8. Refutación: e6 Cg3 Cf6 Ag5 Ab4 Ch5"
       }
     }
   }

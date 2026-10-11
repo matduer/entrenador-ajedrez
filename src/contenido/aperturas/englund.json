@@ -76,6 +76,40 @@
     },
     "d2d4 e7e5 d4e5 b8c6 g1f3 d8e7 c1f4 d7d6": {
       "porQue": "La clave con la que Sepúlveda revitaliza el gambito: si exd6, ...Df6 ataca a la vez f4 y b2. Stockfish la prefiere a 4...Db4+."
+    },
+    "d2d4 e7e5 d4e5 b8c6 g1f3 d8e7 c1f4 e7b4 f4d2": {
+      "porQue": "La única buena: si 5...Dxb2, 6.Cc3 lo defiende todo y las blancas quedan con una ventaja decisiva.",
+      "porQueNo": [
+        {
+          "uci": "b1c3",
+          "texto": "5.Cc3? Dxf4: el alfil se pierde, y la aventura 6.Cd5 no alcanza para compensarlo."
+        },
+        {
+          "uci": "c2c3",
+          "texto": "5.c3? Dxf4: el alfil cae sin ninguna compensación."
+        }
+      ]
+    },
+    "d2d4 e7e5 d4e5 b8c6 g1f3 d8e7 c1f4 e7b4 f4d2 b4b2 b1c3": {
+      "porQue": "Defiende la torre de a1 y el caballo de c3 cubre todo: la dama negra queda fuera de juego y las blancas, muy adelante en desarrollo.",
+      "porQueNo": [
+        {
+          "uci": "d2c3",
+          "texto": "6.Ac3?? Ab4! 7.Dd2 Axc3 8.Dxc3 Dc1#: la trampa que hace famoso al gambito."
+        }
+      ]
+    },
+    "d2d4 e7e5 d4e5 b8c6 g1f3 d8e7 b1c3": {
+      "porQue": "La forma más sencilla de no caer en trampas: desarrollar y dejar que el negro recupere el peón con atraso."
+    },
+    "d2d4 e7e5 d4e5 b8c6 g1f3 d8e7 b1c3 c6e5": {
+      "porQue": "Recupera el peón, pero las blancas tienen mucha ventaja de desarrollo y un salto a d5 que molesta a la dama.",
+      "porQueNo": [
+        {
+          "uci": "d7d6",
+          "texto": "4...d6? 5.exd6 Dxd6 6.Dxd6 Axd6 7.Cb5: el caballo ataca el alfil y amenaza Cxc7+."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -96,7 +130,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "d2d4 e7e5 d4e5": {
         "ok": true,
@@ -145,6 +179,38 @@
       "d2d4 e7e5 d4e5 b8c6 g1f3 d8e7 c1f4 d7d6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −1,8 para el bando que mueve"
+      },
+      "d2d4 e7e5 d4e5 b8c6 g1f3 d8e7 c1f4 e7b4 f4d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,8 para el bando que mueve"
+      },
+      "d2d4 e7e5 d4e5 b8c6 g1f3 d8e7 c1f4 e7b4 b1c3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 14 puntos de chances: +1,8 → +0,2. Refutación: Dxf4 Cd5 De4 Cxc7+ Rd8 Cxa8"
+      },
+      "d2d4 e7e5 d4e5 b8c6 g1f3 d8e7 c1f4 e7b4 c2c3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 56 puntos de chances: +1,8 → −6,0. Refutación: Dxf4 e3 Df5 Cbd2 Cxe5 Cd4"
+      },
+      "d2d4 e7e5 d4e5 b8c6 g1f3 d8e7 c1f4 e7b4 f4d2 b4b2 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +2,4 para el bando que mueve"
+      },
+      "d2d4 e7e5 d4e5 b8c6 g1f3 d8e7 c1f4 e7b4 f4d2 b4b2 d2c3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 63 puntos de chances: +2,4 → −6,9. Refutación: Ab4 Ad2 Dxa1 c3 Ac5 Db3"
+      },
+      "d2d4 e7e5 d4e5 b8c6 g1f3 d8e7 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,5 para el bando que mueve"
+      },
+      "d2d4 e7e5 d4e5 b8c6 g1f3 d8e7 b1c3 c6e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,5 para el bando que mueve"
+      },
+      "d2d4 e7e5 d4e5 b8c6 g1f3 d8e7 b1c3 d7d6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: −1,5 → −2,7. Refutación: Ag5 Dd7 Af4 Cxe5 Cxe5 dxe5"
       }
     }
   }

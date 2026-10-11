@@ -37,6 +37,33 @@
           "texto": "...Cc6, ...Ab4 y ...d5: el negro se libera y el blanco no sacó nada."
         }
       ]
+    },
+    "d2d4 g8f6 c2c4 c7c5 g1f3 c5d4 f3d4 e7e5 d4b5 d7d5": {
+      "porQue": "El gambito: el peón blanco que llegue a d5 ya no deja el hueco como puesto avanzado, y las piezas negras se liberan. Sin esta jugada, el negro tendría problemas."
+    },
+    "d2d4 g8f6 c2c4 c7c5 g1f3 c5d4 f3d4 e7e5 d4b5 d7d5 c4d5 f8c5": {
+      "porQue": "La jugada de Vaganian (1977): el alfil apunta a f2 y el rey blanco está a tres jugadas del enroque. Aparecen enseguida temas como ...Axf2+ y ...Ce4.",
+      "porQueNo": [
+        {
+          "uci": "f6d5",
+          "texto": "6...Cxd5?? 7.Dxd5! Dxd5 8.Cc7+ y el caballo gana la dama."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 c7c5 g1f3 c5d4 f3d4 e7e5 d4b5 d7d5 c4d5 f8c5 b5c3": {
+      "porQue": "La forma correcta: el caballo vuelve a defender d5 y e4, y deja de ser un blanco para ...Db6."
+    },
+    "d2d4 g8f6 c2c4 c7c5 g1f3 c5d4 f3d4 e7e5 d4b5 d7d5 c4d5 f8c5 b5c3 e8g8": {
+      "porQue": "Primero el rey; después ...e4, ...Af5 o ...Te8, con mucha actividad por el peón."
+    },
+    "d2d4 g8f6 c2c4 c7c5 g1f3 c5d4 f3d4 e7e5 d4b5 a7a6 b5d6": {
+      "porQue": "Lo más fuerte: el caballo da jaque y se cambia por el alfil de f8, y el blanco queda con la pareja de alfiles.",
+      "porQueNo": [
+        {
+          "uci": "b5a3",
+          "texto": "6.C5a3? d5: el negro se libera y el caballo de a3 queda fuera de juego."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -53,7 +80,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "d2d4 g8f6 c2c4 c7c5 g1f3 c5d4 f3d4 e7e5": {
         "ok": true,
@@ -70,6 +97,34 @@
       "d2d4 g8f6 c2c4 c7c5 g1f3 c5d4 f3d4 e7e5 d4f3 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 6 puntos de chances: +0,4 → −0,3. Refutación: Cc6 Cc3 Ab4 Ad2 O-O e3"
+      },
+      "d2d4 g8f6 c2c4 c7c5 g1f3 c5d4 f3d4 e7e5 d4b5 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 g1f3 c5d4 f3d4 e7e5 d4b5 d7d5 c4d5 f8c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 g1f3 c5d4 f3d4 e7e5 d4b5 d7d5 c4d5 f6d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 38 puntos de chances: −0,3 → −6,1. Refutación: Dxd5 De7 e4 Cc6 Dd2 a6"
+      },
+      "d2d4 g8f6 c2c4 c7c5 g1f3 c5d4 f3d4 e7e5 d4b5 d7d5 c4d5 f8c5 b5c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 g1f3 c5d4 f3d4 e7e5 d4b5 d7d5 c4d5 f8c5 b5c3 e8g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 g1f3 c5d4 f3d4 e7e5 d4b5 a7a6 b5d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 g1f3 c5d4 f3d4 e7e5 d4b5 a7a6 b5a3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: +0,5 → −0,6. Refutación: d5 cxd5 Dxd5 Dxd5 Cxd5 g3"
       }
     }
   }
