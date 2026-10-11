@@ -90,6 +90,24 @@
           "texto": "3...c6 es demasiado lenta: muchas veces el negro termina jugando ...c5 igual, con un tiempo de menos."
         }
       ]
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1d2 b8c6": {
+      "porQue": "La Variante Guimard: bloquea el peón de c, pero presiona d4 y prepara ...Cf6 sin temer la clavada."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1d2 b8c6 g1f3": {
+      "porQue": "Desarrollo natural: si 4...Cf6, 5.e5 Cd7 y el blanco tiene una buena ventaja de espacio.",
+      "porQueNo": [
+        {
+          "uci": "f1b5",
+          "texto": "4.Ab5? a6 5.Axc6+ bxc6: el negro tiene la pareja de alfiles y el blanco no consiguió nada."
+        }
+      ]
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1d2 b8c6 g1f3 g8f6 e4e5 f6d7 d2b3": {
+      "porQue": "Refuerza d4 contra ...f6 y ...c5; 6.Ab5 y 6.c3 son igual de buenas."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1d2 c7c5 e4d5 e6d5 g1f3 b8c6 f1b5 f8d6 d4c5 d6c5 e1g1 g8e7 d2b3": {
+      "porQue": "El plan clásico contra el peón aislado: el caballo va a d4, la casilla de bloqueo, con tiempo sobre el alfil de c5."
     }
   },
   "fuentes": [
@@ -119,7 +137,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "e2e4 e7e6 d2d4 d7d5 b1d2 c7c5 e4d5": {
         "ok": true,
@@ -200,6 +218,26 @@
       "e2e4 e7e6 d2d4 d7d5 b1d2 c7c6 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 6 puntos de chances: −0,2 → −0,9. Refutación: Cgf3 Cf6 Ad3 c5 e5 Cfd7"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1d2 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1d2 b8c6 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1d2 b8c6 f1b5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 4 puntos de chances: +0,6 → +0,1. Refutación: a6 Axc6+ bxc6 Cgf3 Cf6 e5"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1d2 b8c6 g1f3 g8f6 e4e5 f6d7 d2b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1d2 c7c5 e4d5 e6d5 g1f3 b8c6 f1b5 f8d6 d4c5 d6c5 e1g1 g8e7 d2b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
       }
     }
   }
