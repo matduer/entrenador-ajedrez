@@ -95,6 +95,50 @@
     "d2d4 g8f6 c2c4 e7e5 d4e5 f6e4": {
       "porQue": "Gambito Fajarowicz: no busca recuperar el peón sino crear amenazas sobre la diagonal e1-a5.",
       "inferior": true
+    },
+    "d2d4 g8f6 c2c4 e7e5 d4e5 f6e4 a2a3": {
+      "porQue": "Lo más fuerte contra el Fajarowicz: le quita b4 al alfil negro, así que el caballo de e4 se queda sin apoyo y sin amenazas."
+    },
+    "d2d4 g8f6 c2c4 e7e5 d4e5 f6e4 g1f3 b8c6 a2a3": {
+      "porQue": "La misma idea: impedir ...Ab4 antes de seguir el desarrollo.",
+      "porQueNo": [
+        {
+          "uci": "b1d2",
+          "texto": "5.Cbd2? Cc5: el caballo negro queda activo y el peón de e5 se recupera pronto."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 g1f3 f8c5 e2e3": {
+      "porQue": "La única buena: tapa la diagonal hacia f2.",
+      "porQueNo": [
+        {
+          "uci": "c1g5",
+          "texto": "5.Ag5? Axf2+ 6.Rd2: el rey blanco queda expuesto en el centro."
+        },
+        {
+          "uci": "c1e3",
+          "texto": "5.Ae3? Cxe3 6.fxe3: peones doblados y el negro recupera e5 con comodidad."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 g1f3 f8c5 e2e3 b8c6": {
+      "porQue": "Ataca e5 por segunda vez: el negro recuperará el peón con ...Cgxe5."
+    },
+    "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 e2e4 g4e5 f2f4 e5c6": {
+      "porQue": "El caballo vuelve a c6, donde los peones no lo pueden echar, y presiona d4.",
+      "porQueNo": [
+        {
+          "uci": "e5g6",
+          "texto": "5...Cg6? 6.Cc3: el caballo de g6 queda expuesto al avance h4-h5."
+        },
+        {
+          "uci": "d7d5",
+          "texto": "5...d5? 6.fxe5 Ab4+ 7.Cc3 Dh4+: el ataque no compensa la pieza entregada."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 c1f4 b8c6 g1f3 f8b4 b1d2 d8e7 a2a3 g4e5": {
+      "porQue": "El negro recupera el peón con buena actividad: el Budapest cumplió su objetivo, aunque las blancas conservan la pareja de alfiles."
     }
   },
   "fuentes": [
@@ -116,7 +160,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "d2d4 g8f6 c2c4 e7e5": {
         "ok": true,
@@ -189,6 +233,50 @@
       "d2d4 g8f6 c2c4 e7e5 d4e5 f6e4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18) prefiere Cg4: −0,6 contra −1,1 (marcada como inferior pero jugable)"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6e4 a2a3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6e4 g1f3 b8c6 a2a3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6e4 g1f3 b8c6 b1d2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: +1,6 → +0,6. Refutación: Cc5 Cb3 Cxb3 axb3 Ab4+ Ad2"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 g1f3 f8c5 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 g1f3 f8c5 c1g5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 19 puntos de chances: +0,6 → −1,5. Refutación: Axf2+ Rd2 f6 exf6 gxf6 Af4"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 g1f3 f8c5 c1e3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 20 puntos de chances: +0,6 → −1,6. Refutación: Cxe3 fxe3 Cc6 Cc3 O-O e4"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 g1f3 f8c5 e2e3 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 e2e4 g4e5 f2f4 e5c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 e2e4 g4e5 f2f4 e5g6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,6 → −1,4. Refutación: Cc3 Ab4 Ce2 d6 a3 Aa5"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 e2e4 g4e5 f2f4 d7d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,6 → −1,3. Refutación: cxd5 Cg4 Dd4 Ae7 Cf3 O-O"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 c1f4 b8c6 g1f3 f8b4 b1d2 d8e7 a2a3 g4e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
       }
     }
   }

@@ -76,6 +76,43 @@
     },
     "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 g1f3": {
       "porQue": "Sin tomar el peón: si ...bxc4, Cc3 y e4 llevan a una Benoni normal; ...b4 o ...Ab7 son buenas respuestas."
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 g1f3 g7g6 g2g3": {
+      "porQue": "El sistema del fianchetto: las blancas enrocan sin perder el derecho, y el alfil de g2 protege el rey y la diagonal hacia a8."
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 g7g6 e2e4": {
+      "porQue": "Lo más fuerte: sin ...d6 todavía, el avance e4-e5 se vuelve una amenaza real."
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5b6 d8b6 b1c3": {
+      "porQue": "Desarrolla y controla las casillas centrales; el negro tiene juego activo, pero ya no hay gambito.",
+      "porQueNo": [
+        {
+          "uci": "e2e3",
+          "texto": "6.e3? e6!: el centro blanco se deshace después de 7.Cc3 exd5 8.Cxd5 Cxd5."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 e2e3 g7g6 b1c3": {
+      "porQue": "Desarrollo natural: el blanco conserva el peón y deja que el negro decida cómo recuperarlo."
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 f2f3 e7e6 e2e4": {
+      "porQue": "Sigue con el plan: el peón de e4 sostiene d5 y arma el centro.",
+      "porQueNo": [
+        {
+          "uci": "b1c3",
+          "texto": "6.Cc3? axb5 y ...c4: el negro recupera el peón con buen juego."
+        },
+        {
+          "uci": "d5e6",
+          "texto": "6.dxe6? fxe6: el negro gana el centro con ...d5."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 a2a4 d8a5": {
+      "porQue": "El jaque molesta: el blanco tiene que tapar con Ad2 o Cc3, y el negro gana tiempo para presionar."
+    },
+    "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 g1f3 c8b7": {
+      "porQue": "Presiona d5: el negro puede tomar en c4 cuando le convenga."
     }
   },
   "fuentes": [
@@ -97,7 +134,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5": {
         "ok": true,
@@ -158,6 +195,46 @@
       "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 g1f3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 d7d6 g1f3 g7g6 g2g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5a6 c8a6 b1c3 g7g6 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5b6 d8b6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 b5b6 d8b6 e2e3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,6 → 0,0. Refutación: e6 Cc3 exd5 Cxd5 Cxd5 Dxd5"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 e2e3 g7g6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 f2f3 e7e6 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 f2f3 e7e6 b1c3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: +0,5 → −0,5. Refutación: axb5 e4 c4 Ae3 Ab4 g4"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 c4b5 a7a6 f2f3 e7e6 d5e6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 12 puntos de chances: +0,5 → −0,8. Refutación: fxe6 e3 d5 b3 Ad6 a4"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 a2a4 d8a5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 d4d5 b7b5 g1f3 c8b7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
       }
     }
   }

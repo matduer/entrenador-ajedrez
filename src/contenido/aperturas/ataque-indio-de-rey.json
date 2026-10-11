@@ -101,6 +101,27 @@
     },
     "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3 c7c5 g2g3 b8c6 f1g2 f8e7 e1g1 e8g8 f1e1 a8b8 e4e5 f6d7 d2f1 b7b5": {
       "porQue": "La respuesta típica: mientras el blanco ataca en el flanco de rey, el negro avanza en el de dama (...b4, ...a5) para abrir líneas. La partida se decide por quién llega antes."
+    },
+    "e2e4 e7e6 d2d3 d7d5 b1d2 c7c5 g1f3 b8c6 g2g3 g7g6": {
+      "porQue": "Un esquema simétrico: el negro hace su propio fianchetto y la partida se vuelve más lenta y posicional."
+    },
+    "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3 b8c6 e4e5": {
+      "porQue": "Echa al caballo y gana espacio: la cadena d3-e4-e5 es la base del ataque blanco en el flanco de rey."
+    },
+    "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3 b7b6 e4e5": {
+      "porQue": "Aprovecha la lentitud de ...b6: echa al caballo antes de que el negro organice la presión sobre e5."
+    },
+    "e2e4 e7e6 d2d3 d7d5 b1d2 d5e4 d3e4": {
+      "porQue": "Retoma con el peón: abre la columna d y conserva el peón de e4 en el centro.",
+      "porQueNo": [
+        {
+          "uci": "d2e4",
+          "texto": "4.Cxe4? Cc6 y ...e5: el negro ocupa el centro con comodidad."
+        }
+      ]
+    },
+    "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3 c7c5 g2g3 b8c6 f1g2 f8e7 e1g1 e8g8 f1e1 b7b5": {
+      "porQue": "La otra forma: ...b5 directo, sin preparar con ...Tb8. El blanco sigue con e5 y el caballo de d2 a f1 rumbo al flanco de rey."
     }
   },
   "fuentes": [
@@ -126,7 +147,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "e2e4 e7e6 d2d3 d7d5": {
         "ok": true,
@@ -207,6 +228,30 @@
       "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3 c7c5 g2g3 b8c6 f1g2 f8e7 e1g1 e8g8 f1e1 a8b8 e4e5 f6d7 d2f1 b7b5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d3 d7d5 b1d2 c7c5 g1f3 b8c6 g2g3 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3 b8c6 e4e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3 b7b6 e4e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d3 d7d5 b1d2 d5e4 d3e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d3 d7d5 b1d2 d5e4 d2e4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 4 puntos de chances: +0,5 → 0,0. Refutación: Cc6 Cf3 e5 d4 exd4 Ab5"
+      },
+      "e2e4 e7e6 d2d3 d7d5 b1d2 g8f6 g1f3 c7c5 g2g3 b8c6 f1g2 f8e7 e1g1 e8g8 f1e1 b7b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
       }
     }
   }
