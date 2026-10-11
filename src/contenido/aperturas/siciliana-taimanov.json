@@ -84,7 +84,7 @@
     "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 a7a6 d4c6 b7c6 f1d3": {
       "porQue": "La forma directa de mostrar la contra de 5...a6: después del cambio en c6, la jugada ...a6 resulta casi inútil, y las blancas siguen con O-O, f4 o c4."
     },
-    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 f1e2 a7a6 e1h1 g8f6 c1e3": {
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 f1e2 a7a6 e1g1 g8f6 c1e3": {
       "porQue": "La preparación lógica de f4. Después de 8...Ae7 9.f4 d6 se llega a la Scheveningen; 8...Ab4 es mucho más agudo.",
       "porQueNo": [
         {
@@ -93,13 +93,13 @@
         }
       ]
     },
-    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 f1e2 a7a6 e1h1 g8f6 c1e3 f8b4": {
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 f1e2 a7a6 e1g1 g8f6 c1e3 f8b4": {
       "porQue": "Mucho más agudo que pasar a la Scheveningen: ataca e4 a través de la clavada. Las blancas suelen responder Ca4, con la idea de Cxc6 y Cb6."
     },
-    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 g2g3 a7a6 f1g2 g8f6 e1h1 c6d4 d1d4 f8c5": {
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 g2g3 a7a6 f1g2 g8f6 e1g1 c6d4 d1d4 f8c5": {
       "porQue": "La respuesta típica de la Taimanov contra el fianchetto: cambio en d4 y el alfil sale a c5 con tiempo sobre la dama. Después vienen ...d6 y quizás ...e5."
     },
-    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 d4b5 d7d6 c2c4 g8f6 b1c3 a7a6 b5a3 f8e7 f1e2 e8h8 e1h1 b7b6": {
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 d4b5 d7d6 c2c4 g8f6 b1c3 a7a6 b5a3 f8e7 f1e2 e8g8 e1g1 b7b6": {
       "porQue": "La estructura de erizo: peones negros en a6, b6, d6 y e6 detrás de los cuales las piezas esperan su momento (...Ab7, ...Cd7, ...Tc8). El blanco tiene más espacio, pero gastó tiempo con Cb5-a3."
     }
   },
@@ -196,23 +196,23 @@
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
       },
-      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 f1e2 a7a6 e1h1 g8f6 c1e3": {
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 f1e2 a7a6 e1g1 g8f6 c1e3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
       },
-      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 f1e2 a7a6 e1h1 g8f6 f2f4 (por qué no)": {
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 f1e2 a7a6 e1g1 g8f6 f2f4 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 44 puntos de chances: +0,4 → −5,8. Refutación: Cxd4 e5 Cg8 Ce4 Cf5 g4"
       },
-      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 f1e2 a7a6 e1h1 g8f6 c1e3 f8b4": {
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 f1e2 a7a6 e1g1 g8f6 c1e3 f8b4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
       },
-      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 g2g3 a7a6 f1g2 g8f6 e1h1 c6d4 d1d4 f8c5": {
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 g2g3 a7a6 f1g2 g8f6 e1g1 c6d4 d1d4 f8c5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
       },
-      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 d4b5 d7d6 c2c4 g8f6 b1c3 a7a6 b5a3 f8e7 f1e2 e8h8 e1h1 b7b6": {
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 d4b5 d7d6 c2c4 g8f6 b1c3 a7a6 b5a3 f8e7 f1e2 e8g8 e1g1 b7b6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
       }

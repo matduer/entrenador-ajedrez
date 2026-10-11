@@ -82,6 +82,27 @@
     },
     "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 c5d4": {
       "porQue": "Gambito Schara-Hennig: entrega un peón a cambio de desarrollo rápido."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 e2e3": {
+      "porQue": "Lo que el propio Tarrasch consideraba correcto: no darle al negro «la ventaja del peón aislado» con cxd5. Hoy casi no se juega, pero sus posiciones aparecen muy seguido desde la Inglesa Simétrica."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 d4c5": {
+      "porQue": "Una de las dos líneas principales: el alfil negro va a c5 y las blancas siguen con Ag5, para atacar al caballo que defiende d5."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 d4c5 e7c5 c1g5": {
+      "porQue": "Clava el caballo de f6, el defensor de d5. Todo el juego blanco gira alrededor de ese peón."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5 c5d4 f3d4 h7h6": {
+      "porQue": "El negro resuelve primero la tensión en d4 y le pregunta al alfil: el peón de d5 queda aislado, pero las piezas negras juegan con libertad."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5 c5c4": {
+      "porQue": "Otra forma de tratar la posición: el negro avanza a c4 y gana espacio en el flanco de dama. Ya no hay peón aislado, pero d5 puede ser atacado con e4 o b3."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5 c8e6": {
+      "porQue": "El desarrollo más tranquilo: protege d5 y mantiene la tensión en el centro."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 c5d4 d1d4 b8c6 d4d1 e6d5 d1d5 c8d7": {
+      "porQue": "El precio del gambito: el negro ya no tiene el peón, pero sí varias jugadas de desarrollo de ventaja. Sigue ...Cf6, ...Ac5 y el enroque."
     }
   },
   "fuentes": [
@@ -98,12 +119,16 @@
       "titulo": "Catálogo abierto de aperturas de Lichess",
       "url": "https://github.com/lichess-org/chess-openings",
       "licencia": "CC0"
+    },
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Queen's Gambit Declined», «Tarrasch Defence»"
     }
   ],
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5": {
         "ok": true,
@@ -168,6 +193,34 @@
       "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 c5d4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 d4c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 d4c5 e7c5 c1g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5 c5d4 f3d4 h7h6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5 c5c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5 c8e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 c5d4 d1d4 b8c6 d4d1 e6d5 d1d5 c8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
       }
     }
   }

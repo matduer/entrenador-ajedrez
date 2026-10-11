@@ -53,6 +53,24 @@
     },
     "d2d4 g8f6 g1f3 e7e6 c1g5 h7h6": {
       "porQue": "Le pregunta al alfil: si Axf6, el negro tiene la pareja de alfiles."
+    },
+    "d2d4 g8f6 g1f3 e7e6 c1g5 c7c5 e2e3 d8b6": {
+      "porQue": "El intento más agudo de molestar el esquema blanco: ataca b2 enseguida."
+    },
+    "d2d4 g8f6 g1f3 e7e6 c1g5 c7c5 e2e3 d8b6 b1d2 b6b2 f1d3": {
+      "porQue": "Las blancas entregan el peón de b2 por desarrollo y ataque. Es muy poco claro si la compensación alcanza, pero tantos jugadores cayeron en esta posición que quedó como terreno de especialistas."
+    },
+    "d2d4 g8f6 g1f3 e7e6 c1g5 c7c5 e2e3 f8e7": {
+      "porQue": "Lo que prefieren casi todos los que no estudiaron 4...Db6: posterga la elección entre ...d6 y ...d5.",
+      "porQueNo": [
+        {
+          "uci": "b7b6",
+          "texto": "El fianchetto inmediato no conviene: 5.d5! sorprende: el peón le cierra la gran diagonal al alfil que iba a b7."
+        }
+      ]
+    },
+    "d2d4 g8f6 g1f3 e7e6 c1g5 c7c5 e2e3 c5d4 e3d4 f8e7 b1d2 d7d6 c2c3 b8d7 f1d3": {
+      "porQue": "El esquema con el que Carlos Torre aniquiló el enroque de Lasker en Moscú, 1925: c3 y Ad3, el caballo a c4 y las torres a e1 y d1. Desarrollo simple y potencial de ataque."
     }
   },
   "fuentes": [
@@ -69,12 +87,16 @@
       "titulo": "Catálogo abierto de aperturas de Lichess",
       "url": "https://github.com/lichess-org/chess-openings",
       "licencia": "CC0"
+    },
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Other 1 d4 Nf6 Openings», «Torre Attack»"
     }
   ],
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "d2d4 g8f6 g1f3 e7e6 c1g5": {
         "ok": true,
@@ -107,6 +129,26 @@
       "d2d4 g8f6 g1f3 e7e6 c1g5 h7h6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 g1f3 e7e6 c1g5 c7c5 e2e3 d8b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 g1f3 e7e6 c1g5 c7c5 e2e3 d8b6 b1d2 b6b2 f1d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 g1f3 e7e6 c1g5 c7c5 e2e3 f8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 g1f3 e7e6 c1g5 c7c5 e2e3 b7b6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,1 → −0,6. Refutación: d5 a6 c4 d6 Cc3 Ae7"
+      },
+      "d2d4 g8f6 g1f3 e7e6 c1g5 c7c5 e2e3 c5d4 e3d4 f8e7 b1d2 d7d6 c2c3 b8d7 f1d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
       }
     }
   }

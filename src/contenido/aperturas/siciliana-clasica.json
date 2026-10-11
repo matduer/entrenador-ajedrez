@@ -64,16 +64,16 @@
     "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1c4 e7e6 c1e3 f8e7 d1e2": {
       "porQue": "El Ataque Velimirovic: De2 evita ...Cg4 y prepara el enroque largo y el avance g4-g5."
     },
-    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1e2 e7e5 d4b3 f8e7 e1h1 e8h8 c1e3 c8e6": {
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1e2 e7e5 d4b3 f8e7 e1g1 e8g8 c1e3 c8e6": {
       "porQue": "El plan de Boleslavsky en acción: con el alfil en e6 y las piezas listas, el negro amenaza ...d5 y deja de tener un hueco en d5."
     },
-    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1e2 e7e5 d4b3 f8e7 e1h1 e8h8 f2f4 a7a5": {
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1e2 e7e5 d4b3 f8e7 e1g1 e8g8 f2f4 a7a5": {
       "porQue": "Si las blancas impiden ...d5 con f4, el negro cambia de frente: ...a5-a4 y ...Cb4 en el flanco de dama."
     },
-    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 a7a6 e1a1 h7h6": {
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 a7a6 e1c1 h7h6": {
       "porQue": "Ahora sí tiene sentido: si Axf6, el negro recaptura con la dama y no se rompen sus peones; y 9.Ah4 Cxe4! no les conviene a las blancas. Las principales son 9.Ae3 y 9.Af4."
     },
-    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 a7a6 e1a1 h7h6 g5f4 c8d7": {
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 a7a6 e1c1 h7h6 g5f4 c8d7": {
       "porQue": "Ataca d6 con el alfil y obliga a una defensa ingeniosa: tras 10.Cxc6 Axc6 el peón de e4 queda atacado, y 11.f3 se contesta con ...d5.",
       "porQueNo": [
         {
@@ -82,13 +82,13 @@
         }
       ]
     },
-    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 f8e7 e1a1 e8h8 d4b5 d8a5": {
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 f8e7 e1c1 e8g8 d4b5 d8a5": {
       "porQue": "La refutación del ataque directo contra d6: después de 10.Axf6 Axf6 11.Cxd6 Td8, el alfil de f6 y la clavada en la columna d valen más que el peón."
     },
-    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 f8e7 e1a1 e8h8 d4b3 d8b6": {
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 f8e7 e1c1 e8g8 d4b3 d8b6": {
       "porQue": "Una versión más sutil de Cdb5 prepara Axf6, f3 y g4. La dama en b6 cubre d6 a la distancia; si 10.Axf6 Axf6 11.Dxd6, el negro recupera con ...Dxf2."
     },
-    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 f8e7 e1a1 e8h8 f2f4 h7h6": {
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 f8e7 e1c1 e8g8 f2f4 h7h6": {
       "porQue": "La versión más fina del contragolpe ...e5: después de 10.Ah4 e5 11.Cf5 Axf5 12.exf5 exf4 el alfil de h4 ya no puede retomar en f4."
     },
     "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1c4 e7e6": {
@@ -163,35 +163,35 @@
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
       },
-      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1e2 e7e5 d4b3 f8e7 e1h1 e8h8 c1e3 c8e6": {
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1e2 e7e5 d4b3 f8e7 e1g1 e8g8 c1e3 c8e6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
       },
-      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1e2 e7e5 d4b3 f8e7 e1h1 e8h8 f2f4 a7a5": {
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1e2 e7e5 d4b3 f8e7 e1g1 e8g8 f2f4 a7a5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
       },
-      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 a7a6 e1a1 h7h6": {
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 a7a6 e1c1 h7h6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
       },
-      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 a7a6 e1a1 h7h6 g5f4 c8d7": {
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 a7a6 e1c1 h7h6 g5f4 c8d7": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
       },
-      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 a7a6 e1a1 h7h6 g5f4 e6e5 (por qué no)": {
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 a7a6 e1c1 h7h6 g5f4 e6e5 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 17 puntos de chances: −0,3 → −2,2. Refutación: Cxc6 bxc6 Axe5 Ag4 Axf6 Dxf6"
       },
-      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 f8e7 e1a1 e8h8 d4b5 d8a5": {
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 f8e7 e1c1 e8g8 d4b5 d8a5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
       },
-      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 f8e7 e1a1 e8h8 d4b3 d8b6": {
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 f8e7 e1c1 e8g8 d4b3 d8b6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
       },
-      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 f8e7 e1a1 e8h8 f2f4 h7h6": {
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 c1g5 e7e6 d1d2 f8e7 e1c1 e8g8 f2f4 h7h6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
       },

@@ -71,6 +71,28 @@
     },
     "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3 b4e7 d2d4 c6a5 c4e2": {
       "porQue": "Conserva el alfil y sigue jugando por la iniciativa, sin recuperar el peón."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b6": {
+      "porQue": "Rehusar el gambito: el negro conserva una posición más simple, pero eso no refuta 4.b4, que ganó espacio en el flanco de dama."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3 b4c5 d2d4 e5d4 e1g1": {
+      "porQue": "El tratamiento dinámico típico del Evans: las blancas no se apuran a recuperar el peón, primero ponen el rey a salvo y desarrollan."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3 b4c5 d2d4 e5d4 e1g1 d7d6 c3d4 c5b6": {
+      "porQue": "La «Posición Normal» del Evans durante todo el siglo XIX: las blancas tienen un centro de peones imponente y el negro, un peón de más."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3 b4a5 d2d4 e5d4 e1g1": {
+      "porQue": "Una de las líneas principales del siglo XIX: con el alfil en a5 el negro no necesita tomar en d4, pero si lo hace, las blancas siguen jugando por el desarrollo. Stockfish prefiere 7.Db3.",
+      "inferior": true
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3 b4e7 d2d4 c6a5 f3e5 a5c4 e5c4 d7d5": {
+      "porQue": "La idea de 6...Ca5: cambiar el alfil de c4 y devolver el peón para simplificar a una posición más o menos igual."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3 b4e7 d2d4 c6a5 c4e2 e5d4 d1d4": {
+      "porQue": "Kasparov, 1995, en el verdadero espíritu del Evans: en vez de recuperar el peón a cambio de simplificar, las blancas centralizan la dama y siguen jugando por la iniciativa."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3 b4a5 d2d4 e5d4 d1b3": {
+      "porQue": "El curso más agresivo y la primera de Stockfish: la dama apunta a f7 junto con el alfil de c4, antes de recuperar nada en el centro."
     }
   },
   "fuentes": [
@@ -87,12 +109,16 @@
       "titulo": "Catálogo abierto de aperturas de Lichess",
       "url": "https://github.com/lichess-org/chess-openings",
       "licencia": "CC0"
+    },
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Italian Game», «Evans Gambit»"
     }
   ],
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4": {
         "ok": true,
@@ -149,6 +175,34 @@
       "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3 b4e7 d2d4 c6a5 c4e2": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3 b4c5 d2d4 e5d4 e1g1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3 b4c5 d2d4 e5d4 e1g1 d7d6 c3d4 c5b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3 b4a5 d2d4 e5d4 e1g1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Db3: +0,2 contra −0,3 (marcada como inferior pero jugable)"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3 b4e7 d2d4 c6a5 f3e5 a5c4 e5c4 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3 b4e7 d2d4 c6a5 c4e2 e5d4 d1d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3 b4a5 d2d4 e5d4 d1b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
       }
     }
   }
