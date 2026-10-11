@@ -86,6 +86,67 @@
     },
     "e2e4 e7e5 g1f3 f7f5 f1c4 f5e4 f3e5 d7d5": {
       "porQue": "La Variante Svedenborg, que Kosten estudia en el cap. 8: el peón corta la diagonal del alfil hacia g8 y lo ataca. Es la preferida de Stockfish; después de 5.Dh5+ g6 6.Cxg6 hay que defender con precisión, pero la posición queda equilibrada. La alternativa más tajante, 4...Dg5 (cap. 7), es más arriesgada."
+    },
+    "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 e5c4 f5e4 b1c3 f6g6 d2d3 g8f6": {
+      "porQue": "Defiende e4 desarrollando: la mejor defensa del peón.",
+      "porQueNo": [
+        {
+          "uci": "b8c6",
+          "texto": "6...Cc6? 7.dxe4: el blanco recupera el peón y el negro queda atrasado en desarrollo."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 f7f5 f3e5 b8c6 d1h5": {
+      "porQue": "Lo más fuerte: el jaque obliga a ...g6, y entonces el caballo toma en g6.",
+      "porQueNo": [
+        {
+          "uci": "d2d4",
+          "texto": "4.d4? fxe4 5.Cxc6 bxc6 6.Dh5+ Re7: complicado, y el blanco desperdicia buena parte de su ventaja."
+        },
+        {
+          "uci": "e5c6",
+          "texto": "4.Cxc6? dxc6: el negro abre líneas para sus alfiles y se desarrolla con facilidad."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 f7f5 f3e5 b8c6 d1h5 g7g6 e5g6 g8f6": {
+      "porQue": "La mejor defensa: ataca la dama antes de recuperar nada.",
+      "porQueNo": [
+        {
+          "uci": "h7g6",
+          "texto": "5...hxg6? 6.Dxh8 y el blanco gana la torre."
+        },
+        {
+          "uci": "d8f6",
+          "texto": "5...Df6? 6.Cxh8+: jaque a la descubierta de la dama de h5, y el caballo se lleva la torre."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 f7f5 e4f5 e5e4 f3e5 g8f6 f1e2 f8e7": {
+      "porQue": "Desarrollo sencillo antes del enroque.",
+      "porQueNo": [
+        {
+          "uci": "d7d6",
+          "texto": "5...d6? 6.Ah5+ Re7 7.Cf7: el rey negro queda en el centro y el caballo ataca la dama y la torre de h8."
+        },
+        {
+          "uci": "f8b4",
+          "texto": "5...Ab4? 6.c3: el alfil tiene que volver y el negro pierde tiempo."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 f7f5 d2d4 f5e4": {
+      "porQue": "Lo mejor contra 3.d4: el negro toma el peón central.",
+      "porQueNo": [
+        {
+          "uci": "e5d4",
+          "texto": "3...exd4? 4.e5 o 4.Cxd4: el peón de f5 queda débil y el blanco tiene ventaja de desarrollo."
+        },
+        {
+          "uci": "b8c6",
+          "texto": "3...Cc6? 4.Cxe5 fxe4 5.Cxc6 bxc6 6.Dh5+: el rey negro queda expuesto."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -115,7 +176,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "e2e4 e7e5 g1f3 f7f5 f3e5": {
         "ok": true,
@@ -180,6 +241,62 @@
       "e2e4 e7e5 g1f3 f7f5 f1c4 f5e4 f3e5 d7d5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −1,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 e5c4 f5e4 b1c3 f6g6 d2d3 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,8 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 e5c4 f5e4 b1c3 f6g6 d2d3 b8c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −1,8 → −2,6. Refutación: dxe4 Ab4 Ce3 d6 Ad3 Ae6"
+      },
+      "e2e4 e7e5 g1f3 f7f5 f3e5 b8c6 d1h5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +3,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 f7f5 f3e5 b8c6 d2d4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: +3,0 → +1,7. Refutación: fxe4 Cxc6 dxc6 Dh5+ Rd7 Df5+"
+      },
+      "e2e4 e7e5 g1f3 f7f5 f3e5 b8c6 e5c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: +3,0 → +1,6. Refutación: dxc6 d3 Ae6 Cd2 Dd7 Ae2"
+      },
+      "e2e4 e7e5 g1f3 f7f5 f3e5 b8c6 d1h5 g7g6 e5g6 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −3,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 f7f5 f3e5 b8c6 d1h5 g7g6 e5g6 h7g6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: −3,6 → −5,6. Refutación: Dxh8 Cf6 Cc3 Cxe4 Cd5 Rf7"
+      },
+      "e2e4 e7e5 g1f3 f7f5 f3e5 b8c6 d1h5 g7g6 e5g6 d8f6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 18 puntos de chances: −3,6 → −9,6. Refutación: Cxh8+ Rd8 Cf7+ Re7 Ac4 De6"
+      },
+      "e2e4 e7e5 g1f3 f7f5 e4f5 e5e4 f3e5 g8f6 f1e2 f8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,9 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 f7f5 e4f5 e5e4 f3e5 g8f6 f1e2 d7d6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 12 puntos de chances: −0,9 → −2,3. Refutación: Ah5+ Re7 Cf7 De8 O-O Cxh5"
+      },
+      "e2e4 e7e5 g1f3 f7f5 e4f5 e5e4 f3e5 g8f6 f1e2 f8b4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,9 → −1,5. Refutación: c3 Ae7 d4 O-O g4 Rh8"
+      },
+      "e2e4 e7e5 g1f3 f7f5 d2d4 f5e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 f7f5 d2d4 e5d4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: −0,5 → −1,6. Refutación: Cxd4 Cf6 e5 Ce4 Cxf5 d5"
+      },
+      "e2e4 e7e5 g1f3 f7f5 d2d4 b8c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 15 puntos de chances: −0,5 → −2,3. Refutación: Cxe5 fxe4 Dh5+ g6 Cxg6 Cf6"
       }
     }
   }

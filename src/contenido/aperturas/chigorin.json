@@ -68,6 +68,56 @@
     },
     "d2d4 d7d5 c2c4 b8c6 b1c3 g8f6 g1f3 c8g4 c4d5 f6d5 e2e4 g4f3 g2f3 d5c3 b2c3 e7e5 a1b1": {
       "porQue": "La idea de Ribli: la torre ataca b7 por la columna abierta y el negro no puede enrocar cómodo."
+    },
+    "d2d4 d7d5 c2c4 b8c6 g1f3 c8g4 c4d5 g4f3 g2f3 d8d5 e2e3": {
+      "porQue": "Lo único bueno: sostiene d4 con un peón.",
+      "porQueNo": [
+        {
+          "uci": "b1d2",
+          "texto": "6.Cd2? e5!: el centro blanco se deshace y el negro sigue con ...O-O-O."
+        },
+        {
+          "uci": "c1d2",
+          "texto": "6.Ad2? Dxd4: el peón cae sin compensación."
+        }
+      ]
+    },
+    "d2d4 d7d5 c2c4 b8c6 g1f3 c8g4 c4d5 g4f3 g2f3 d8d5 e2e3 e7e5 b1c3 f8b4 c1d2": {
+      "porQue": "Rompe la clavada y el centro blanco aguanta: los alfiles compensan la estructura."
+    },
+    "d2d4 d7d5 c2c4 b8c6 g1f3 c8g4 b1c3 e7e6": {
+      "porQue": "Lo más sólido: sostiene d5 y deja el cambio en f3 para después.",
+      "porQueNo": [
+        {
+          "uci": "g8f6",
+          "texto": "4...Cf6? 5.Ce5! Cxe5 6.dxe5 d4 7.Ca4: el caballo de f6 es echado y las blancas ganan espacio."
+        },
+        {
+          "uci": "g4f3",
+          "texto": "Cambiar ahora es prematuro: 5.gxf3 e6 6.cxd5 exd5 7.e4 y los alfiles y el centro blanco se imponen."
+        }
+      ]
+    },
+    "d2d4 d7d5 c2c4 b8c6 c4d5 d8d5 e2e3 e7e5 b1c3 f8b4 c1d2 b4c3 b2c3": {
+      "porQue": "Peones doblados, pero el centro blanco se refuerza. Retomar con el alfil también es posible."
+    },
+    "d2d4 d7d5 c2c4 b8c6 b1c3 d5c4": {
+      "porQue": "Toma el peón como en el Gambito de Dama Aceptado: el caballo de c6 presiona d4."
+    },
+    "d2d4 d7d5 c2c4 b8c6 b1c3 d5c4 g1f3": {
+      "porQue": "Desarrolla y controla e5; 4.d5 es igual de fuerte."
+    },
+    "d2d4 d7d5 c2c4 b8c6 b1c3 d5c4 g1f3 g8f6 e2e4 c8g4": {
+      "porQue": "Presiona d4 atacando el caballo que lo defiende.",
+      "porQueNo": [
+        {
+          "uci": "e7e6",
+          "texto": "5...e6? 6.Axc4: el blanco recupera el peón con un centro enorme."
+        }
+      ]
+    },
+    "d2d4 d7d5 c2c4 b8c6 b1c3 g8f6 c1g5 f6e4": {
+      "porQue": "Contra la clavada, el salto a e4 obliga a cambiar el alfil o el caballo de c3."
     }
   },
   "fuentes": [
@@ -93,7 +143,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "d2d4 d7d5 c2c4 b8c6": {
         "ok": true,
@@ -146,6 +196,58 @@
       "d2d4 d7d5 c2c4 b8c6 b1c3 g8f6 g1f3 c8g4 c4d5 f6d5 e2e4 g4f3 g2f3 d5c3 b2c3 e7e5 a1b1": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +1,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 b8c6 g1f3 c8g4 c4d5 g4f3 g2f3 d8d5 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 b8c6 g1f3 c8g4 c4d5 g4f3 g2f3 d8d5 b1d2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 12 puntos de chances: +0,8 → −0,5. Refutación: O-O-O e3 e5 Ac4 Dd7 d5"
+      },
+      "d2d4 d7d5 c2c4 b8c6 g1f3 c8g4 c4d5 g4f3 g2f3 d8d5 c1d2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 12 puntos de chances: +0,8 → −0,5. Refutación: Dxd4 e3 Dd7 Da4 Cf6 Ab5"
+      },
+      "d2d4 d7d5 c2c4 b8c6 g1f3 c8g4 c4d5 g4f3 g2f3 d8d5 e2e3 e7e5 b1c3 f8b4 c1d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 b8c6 g1f3 c8g4 b1c3 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 b8c6 g1f3 c8g4 b1c3 g8f6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,4 → −1,3. Refutación: Ce5 Cxe5 dxe5 d4 Ca4 Cg8"
+      },
+      "d2d4 d7d5 c2c4 b8c6 g1f3 c8g4 b1c3 g4f3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,4 → −1,0. Refutación: gxf3 e6 cxd5 exd5 e4 Ab4"
+      },
+      "d2d4 d7d5 c2c4 b8c6 c4d5 d8d5 e2e3 e7e5 b1c3 f8b4 c1d2 b4c3 b2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 b8c6 b1c3 d5c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 b8c6 b1c3 d5c4 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 b8c6 b1c3 d5c4 g1f3 g8f6 e2e4 c8g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 b8c6 b1c3 d5c4 g1f3 g8f6 e2e4 e7e6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,8 → −1,6. Refutación: Axc4 a6 O-O Ae7 a3 b5"
+      },
+      "d2d4 d7d5 c2c4 b8c6 b1c3 g8f6 c1g5 f6e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
       }
     }
   }
