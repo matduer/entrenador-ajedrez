@@ -3409,6 +3409,36 @@
             "dtm": 47,
             "fecha": "2026-10-11"
           }
+        },
+        {
+          "id": "sacrificar-un-peon",
+          "fen": "8/8/8/6N1/5pKp/8/5kn1/8 b - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 20,
+          "consigna": "Jugás con negras. Paoli–Kovács (Hungría, 1971): el rey y el caballo blancos defienden bien. Sacrificando un peón podés sacarlos de sus casillas. Ganá.",
+          "pista": "Re3! (la única) y, después de Cf3, h3!!: si Cxh3 o Rxh3, el caballo blanco queda mal ubicado. En la partida, Ch2 Rf2! Rxh3 Ce3! y el caballo blanco no se puede mover; Rh4 Rg2 Rg5 Rg3! y el zugzwang lo gana.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "f2e3",
+            "dtm": 51,
+            "fecha": "2026-10-11"
+          }
+        },
+        {
+          "id": "centralizar-el-caballo",
+          "fen": "8/1k6/5K2/8/5n1P/1N6/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 35,
+          "consigna": "Podgaets–Tal (campeonato soviético, 1968-69): el peón de torre está en la cuarta y el rey negro lejos. En la partida, Cc5+? dejó escapar la victoria. Ganá.",
+          "pista": "Cd4! (Averbakh): el caballo se centraliza y vigila al caballo negro; con Rf5 y Ce2 lo echa a una casilla pasiva y el peón avanza hasta la sexta. También ganan Rf5 y Rg5. Con Cc5+?, Rc6 y Cd3 Cb5+!, el caballo negro se activa y son tablas.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "f6f5",
+            "dtm": 41,
+            "fecha": "2026-10-11"
+          }
         }
       ],
       "fuentes": [
@@ -3419,6 +3449,10 @@
         {
           "titulo": "Edmar Mednis — Practical Knight Endings (Chess Enterprises, 1993)",
           "capitulo": "cap. 2 «Knight and Pawn vs. Knight», diagramas 9 (Weinberger–Ostojić, 1975) y 10 (Mugnos, Jaque 1972)"
+        },
+        {
+          "titulo": "Edmar Mednis — Practical Knight Endings (Chess Enterprises, 1993)",
+          "capitulo": "cap. 2, diagramas 13 (Podgaets–Tal, 1968-69) y 16 (Paoli–Kovács, 1971)"
         }
       ]
     },
