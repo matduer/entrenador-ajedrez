@@ -2509,12 +2509,42 @@
             "dtm": 49,
             "fecha": "2026-10-11"
           }
+        },
+        {
+          "id": "defensa-de-chekhover",
+          "fen": "2b5/2P5/8/2KN4/8/3k4/8/8 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 25,
+          "consigna": "Jugás con negras. Chekhover (1960): el blanco quiere echar a tu alfil de la diagonal. Elegí la casilla justa para el rey y hacé tablas.",
+          "pista": "Rc2! (la única): el rey se acerca a b3 y c4 para impedir que el caballo blanco se apoye en esas casillas. Con Rd2?, Cb6 y Cc4+; con Re2? o Re4?, el rey queda lejos.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "d3c2",
+            "dtm": 0,
+            "fecha": "2026-10-11"
+          }
+        },
+        {
+          "id": "estudio-de-horwitz",
+          "fen": "bN6/P1K5/8/8/1k6/8/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 30,
+          "consigna": "Horwitz (1885): tu rey quiere llegar a b8 para liberar el caballo, pero antes hay que frenar al rey negro. Ganá.",
+          "pista": "Rb6! (la única): le cierra el paso al rey negro. Después Ca6, Cc7, Ce6 y Cd8 llevan el caballo a cortar la diagonal del alfil. Con Ca6+? o Cc6+?, el rey negro se acerca y el alfil queda libre: tablas.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "c7b6",
+            "dtm": 47,
+            "fecha": "2026-10-11"
+          }
         }
       ],
       "fuentes": [
         {
           "titulo": "Yuri Averbakh — Bishop v. Knight Endings (trad. K. P. Neat; Batsford, 1976)",
-          "capitulo": "cap. 2 «Knight and pawn v. bishop», posiciones 69 (Halberstadt, 1936), 73 (Chekhover, 1960) 76 (Mugnos, 1941) y 86 (Kosek, 1910)"
+          "capitulo": "cap. 2 «Knight and pawn v. bishop», posiciones 69 (Halberstadt, 1936), 73 y 75 (Chekhover, 1960), 76 (Mugnos, 1941), 86 (Kosek, 1910) y 101 (Horwitz, 1885)"
         }
       ]
     },
