@@ -77,6 +77,18 @@
     },
     "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 d8a5": {
       "porQue": "Los «caprichos de la dama negra» (Moskalenko): la dama ataca c3 y, después de Ad2, puede ir a a4 para frenar el juego blanco en el flanco de dama."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4a5 b2b4 c5d4": {
+      "porQue": "Lo consecuente desde lo posicional: el negro no toma el peón de b4 sino que abre el centro, y el alfil de a5 se salva porque el caballo de c3 queda atacado."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4a5 b2b4 c5d4 d1g4 g8e7 b4a5 d4c3 g4g7 h8g8 g7h7 b8c6": {
+      "porQue": "Un paraíso para tácticos de los dos colores: ninguno de los dos bandos tiene estructura sana. Las blancas buscarán cazar el peón de c3 y avanzar el peón de h; el negro, atacar al rey blanco con ...d4, ...Cf5 y ...Ad7-c6."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4a5 b2b4 c5d4 c3b5 d8c7 f2f4": {
+      "porQue": "La versión más tranquila: las blancas recuperarán el peón con facilidad, pero su flanco de dama queda flojo y el negro puede apuntarle con ...a5."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 c5d4 a3b4 d4c3 d1g4": {
+      "porQue": "Por esto 5...cxd4 perdió el favor: las blancas pueden permitirse entregar el peón de c3 y jugar por la iniciativa. FCO nombra 7.Cf3 y 7.Dg4; Stockfish prefiere 7.Dg4, que ataca g7 enseguida."
     }
   },
   "fuentes": [
@@ -97,12 +109,16 @@
       "titulo": "Catálogo abierto de aperturas de Lichess",
       "url": "https://github.com/lichess-org/chess-openings",
       "licencia": "CC0"
+    },
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«French Defence», «Winawer Variation»: 5 a3"
     }
   ],
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3": {
         "ok": true,
@@ -163,6 +179,22 @@
       "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 d8a5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4a5 b2b4 c5d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4a5 b2b4 c5d4 d1g4 g8e7 b4a5 d4c3 g4g7 h8g8 g7h7 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,9 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4a5 b2b4 c5d4 c3b5 d8c7 f2f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +8,1 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 c5d4 a3b4 d4c3 d1g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,3 para el bando que mueve"
       }
     }
   }

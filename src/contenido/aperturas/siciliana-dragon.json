@@ -105,6 +105,55 @@
     },
     "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 f1e2": {
       "porQue": "Dragón Clásico: un plan más tranquilo, con enroque corto. Menos peligroso para el negro que el Yugoslavo."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 f1e2 f8g7 e1g1 b8c6": {
+      "porQue": "El Dragón Clásico: la misma posición a la que se llegaba por la Variante Clásica. Juego tranquilo, sin la carrera de ataques del Yugoslavo."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 f2f4 b8c6": {
+      "porQue": "Una de las armas más viejas contra el Dragón castiga el descuido del centro: 6...Ag7 7.e5. Con 6...Cc6 el negro le enfría el entusiasmo a las blancas."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 g2g3 b8c6 f1g2 c6d4 d1d4 f8g7 e1g1 e8g8": {
+      "porQue": "Contra el fianchetto, la idea es cambiar en d4 y seguir con ...Ae6, que amenaza ...Cd5 y obliga a la dama a retirarse."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 g2g3 b8c6 d4e2": {
+      "porQue": "Si las blancas no quieren el cambio en d4, retiran el caballo. El negro sigue con ...Ag7, enroque, ...Tb8 y ...b5-b4.",
+      "porQueNo": [
+        {
+          "uci": "c1e3",
+          "texto": "7.Ae3 Cg4: el caballo cae sobre el alfil, que no tiene buena casilla."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 f1c4 f8g7 e1g1 b8c6 c1e3 e8g8 c4b3": {
+      "porQue": "La retirada habitual, antes de jugar f4.",
+      "porQueNo": [
+        {
+          "uci": "f2f4",
+          "texto": "9.f4 Db6: tres amenazas a la vez (...Dxb2, ...Cxe4 y ...Cg4), y las blancas no pueden cubrir todo."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6 e1c1 d6d5 e4d5 f6d5 d4c6 b7c6 e3d4": {
+      "porQue": "Lo más prudente: en vez de tomar el peón, las blancas buscan cambiar el alfil del Dragón."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6 e1c1 d6d5 e4d5 f6d5 d4c6 b7c6 e3d4 e7e5 d4c5 c8e6": {
+      "porQue": "El negro no teme perder la calidad en f8: lo que cuenta es el desarrollo y la iniciativa contra el enroque largo."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6 e1c1 c6d4 e3d4 c8e6": {
+      "porQue": "La alternativa a 9...d5: cambio en d4 y ...Ae6, el comienzo de otra familia de variantes muy agudas."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6 f1c4 c8d7 e1c1 a8c8 c4b3 c6e5 h2h4": {
+      "porQue": "La línea principal del Yugoslavo con 9.Ac4: las blancas abren la columna h y el negro tiene que elegir entre ...h5 y ...Cc4 con el sacrificio de calidad en c3 en el horizonte. Stockfish prefiere primero 12.Rb1, que saca al rey de la diagonal antes de atacar.",
+      "inferior": true
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6 f1c4 c8d7 e1c1 a8c8 c4b3 c6e5 h2h4 h7h5": {
+      "porQue": "Frena el avance h5 y cierra el flanco de rey, a costa de dejar g5 como blanco para las piezas blancas."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6 f1c4 c8d7 e1c1 a8c8 c4b3 c6d4 e3d4 b7b5": {
+      "porQue": "El plan simple que se puso de moda: cambio en d4 y ...b5 para abrir líneas contra el rey blanco cuanto antes."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6 f1c4 c8d7 e1c1 d8a5": {
+      "porQue": "La dama a a5 para sumar fuego con ...Tfc8 en el flanco de dama. Es una línea analizada hasta el último detalle, con sacrificios en c3 y en h5 por ambos lados."
     }
   },
   "fuentes": [
@@ -121,12 +170,16 @@
       "titulo": "Catálogo abierto de aperturas de Lichess",
       "url": "https://github.com/lichess-org/chess-openings",
       "licencia": "CC0"
+    },
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Sicilian Defence», «Dragon Variation»: Clásica, 6 f4, 6 g3, 6 Ac4 y Ataque Yugoslavo"
     }
   ],
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6": {
         "ok": true,
@@ -207,6 +260,62 @@
       "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 f1e2": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 f1e2 f8g7 e1g1 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 f2f4 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 g2g3 b8c6 f1g2 c6d4 d1d4 f8g7 e1g1 e8g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 g2g3 b8c6 d4e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 g2g3 b8c6 c1e3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,0 → −0,7. Refutación: Cg4 Cxc6 bxc6 Ad2 Db6 De2"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 f1c4 f8g7 e1g1 b8c6 c1e3 e8g8 c4b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 f1c4 f8g7 e1g1 b8c6 c1e3 e8g8 f2f4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 20 puntos de chances: +0,2 → −2,0. Refutación: Cg4 Cxc6 bxc6 Dd3 Cxe3 Dxe3"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6 e1c1 d6d5 e4d5 f6d5 d4c6 b7c6 e3d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6 e1c1 d6d5 e4d5 f6d5 d4c6 b7c6 e3d4 e7e5 d4c5 c8e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6 e1c1 c6d4 e3d4 c8e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6 f1c4 c8d7 e1c1 a8c8 c4b3 c6e5 h2h4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Rb1: +1,0 contra +0,4 (marcada como inferior pero jugable)"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6 f1c4 c8d7 e1c1 a8c8 c4b3 c6e5 h2h4 h7h5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6 f1c4 c8d7 e1c1 a8c8 c4b3 c6d4 e3d4 b7b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 g7g6 c1e3 f8g7 f2f3 e8g8 d1d2 b8c6 f1c4 c8d7 e1c1 d8a5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
       }
     }
   }
