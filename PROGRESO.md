@@ -10,7 +10,7 @@ Resumen para retomar el trabajo en cualquier sesión. El detalle de métodos y h
 
 ## Estado al 2026-10-08 (mediodía)
 
-### Problemas de libros (Táctica → "Problemas de libros"): 8.940
+### Problemas de libros (Táctica → "Problemas de libros"): 9.020
 
 | Libro | Problemas |
 |---|---|
@@ -29,6 +29,7 @@ Resumen para retomar el trabajo en cualquier sesión. El detalle de métodos y h
 | Williams, *Improve Your Attacking Chess* (Gambit, 2004) | 93 |
 | Aagaard, *Maestría en el cálculo* (Chessy, 2008) | 15 |
 | Bronstein y Fürstenberg, *El aprendiz de brujo* (Paidotribo, 2.ª ed., 1998) | 29 |
+| Dvoretsky, *El arte de maniobrar con las piezas* (Russell Enterprises, 2016) | 80 |
 | Rafa C. M., *Curso de ajedrez, Lección 5* | 24 |
 | Bondarewsky, *Táctica del medio juego* (Martínez Roca, 1972) | 2 |
 
@@ -87,12 +88,14 @@ Regla de trabajo pedida por el usuario: **si un libro trae un problema, se anota
 ### Etapa 1 — Libros
 1. ✅ *Partidas de personajes históricos* (ajedrezdeataque.com): 33 partidas.
 2. ✅ Mazja *Chess School 3*: 348 (395 sin solución legible quedaron afuera por no tener una jugada única y decisiva). ✅ Polgár *Middlegame*: 505 de 2166. En este escaneo las damas negras están impresas huecas, como las blancas: se descartaron las lecturas con dos damas del mismo bando (286 aceptados mal leídos, de los que 41 volvieron a confirmarse con una dama por bando) y los 6 con una sola dama (color indecidible). Control de material en todos los libros publicados: 17 mal leídos retirados (Gude 7, Williams 6, *Workout* 2, Schloss 1, Bondarewsky 1; `img/excluidos_material.json`).
-3. ✅ Franco *El arte del ataque*: 20 de 73 (`franco.py`: diagramas JBIG2 sin rayado por apertura morfológica; la mayoría de sus problemas son de plan, no de golpe táctico). Siguen, con texto:  Hansen *Mejore su ajedrez posicional* (caps. 11-12, solo los tácticos), Aagaard *Maestría en el cálculo*, Dvoretsky *El arte de maniobrar con las piezas* (solo los de solución forzada).
+3. ✅ Franco *El arte del ataque*: 20 de 73 (`franco.py`: diagramas JBIG2 sin rayado por apertura morfológica; la mayoría de sus problemas son de plan, no de golpe táctico). Siguen, con texto:  Hansen *Mejore su ajedrez posicional* (caps. 11-12, solo los tácticos), Aagaard *Maestría en el cálculo*.
 4. Estudios: Troitzky *360 estudios* (OCR, notación descriptiva).
 5. Partidas comentadas: ✅ Capablanca *Fundamentos* (14). Siguen: Keres (2 tomos), Rubinstein (Donaldson y Minev; *Masterpieces*), Kasparov *Mis geniales predecesores*, Bronstein *Zúrich 1953*, Tal (Hajtun).
 6. Libros del registro de problemas (al final de la etapa). ✅ Williams *Improve Your Attacking Chess*: 99 de 250, cada uno controlado a ojo con `control_visual.py` (la letra leída sobre cada casilla del escaneo); 21 aceptados por el verificador se descartaron por una pieza mal leída (`img/williams_excluir.json`).
 
 - ✅ 2026-10-11: Bronstein y Fürstenberg, *El aprendiz de brujo*, «40 combinaciones explicadas»: 29 de 40. Los 40 diagramas se leyeron a mano sobre recortes (`bronstein_recortes.py`, una por página, p. del libro = combinación + 42; encabezados con `bronstein_encabezados.py`; entrada en `bronstein_entrada.py`). Quedaron afuera 5 «combinaciones» posicionales que Stockfish ve casi iguales (n.º 14, 19, 22, 28, 39), 4 cuya jugada no está entre las 4 mejores (16, 27, 32, 38), 33 (pierde 0,08 frente a la mejor) y 34 (entra o no según la corrida). Lección: en este libro el rey blanco y el negro se imprimen casi iguales y una torre blanca parecía negra; un tablero con tres torres de un bando es una mala lectura. Las 40 partidas completas del capítulo quedan para «Partidas de libros» (hay que leer las figuras).
+
+- ✅ 2026-10-11: Dvoretsky, *El arte de maniobrar con las piezas* (ebook de ChessBase pasado a PDF, traducción al castellano): 80 de 198. `dvoretsky.py extraer` saca los 480 diagramas renderizando la zona de cada imagen (muchas tienen la transparencia en una máscara aparte: extraerlas por xref las deja negras) con el interior del tablero medido una vez por formato (324×331 y 360×360); `diagramas.py agrupar` (34 grupos por color, todos puros salvo uno por color, que va por vecinos) y `clasificar.py`. `dvoretsky.py seguidos` junta el texto que sigue a cada diagrama, y `scripts/preparar-entrada-dvoretsky.ts` toma la primera jugada con «!» del bando que mueve («W?» blancas, «¿SI?» negras) y la resuelve contra la posición, tolerando la notación mezclada español-inglés («R» puede ser rey o torre). Los 118 que no entran son maniobras posicionales sin ventaja decisiva o jugadas del libro fuera de las 4 mejores. Control visual (`dvoretsky_control.py`): 12 de 12 bien.
 
 ### Etapa 2 — Finales ✅ (2026-10-08 a 2026-10-09)
 1. ✅ Alfil contra caballo (De la Villa, cap. 8).
