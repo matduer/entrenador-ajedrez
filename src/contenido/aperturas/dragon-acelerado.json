@@ -76,6 +76,34 @@
     },
     "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 c2c4 g8f6 b1c3 f8g7 c1e3 f6g4": {
       "porQue": "La variante Breyer, que recomienda Panjwani contra el Maroczy: el caballo cambia al alfil de e3, la pieza blanca que mejor controla las casillas negras. Después de Dxg4 Cxd4 Dd1, ...Ce6 o ...e5 y el negro queda cómodo. Stockfish la considera la mejor."
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 b1c3 f8g7 c1e3 g8f6 d4c6 b7c6 e4e5 f6d5": {
+      "porQue": "El negro no le teme a 7.Cxc6 y 8.e5: entrega un peón (9.Cxd5 cxd5 10.Dxd5 Tb8) a cambio de la iniciativa y de las columnas abiertas. Stockfish prefiere 8...Cg8.",
+      "inferior": true
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 b1c3 f8g7 c1e3 g8f6 d4c6 b7c6 e4e5 f6g8": {
+      "porQue": "La otra forma: el caballo vuelve y el negro ataca e5 con ...f6 (después de 9.f4 f6)."
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 b1c3 f8g7 c1e3 g8f6 f1c4 d7d6 f2f3 d8b6": {
+      "porQue": "Una alternativa de doble filo a enrocar y pasar al Yugoslavo: amenaza ...Dxb2, ...Cxe4 y ...Cg4 a la vez. Muy discutida en los años 60."
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 b1c3 f8g7 c1e3 g8f6 f1c4 e8g8 c4b3": {
+      "porQue": "Si las blancas quieren mantener la opción del Dragón con enroque largo, esta es la jugada: retira el alfil antes de que lo ataquen.",
+      "porQueNo": [
+        {
+          "uci": "d1d2",
+          "texto": "8.Dd2? Cg4: el caballo cae sobre el alfil de e3 y las blancas pierden el par de alfiles o algo peor."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 b1c3 f8g7 c1e3 g8f6 f1c4 e8g8 c4b3 a7a5": {
+      "porQue": "La versión más popular: si 9.O-O, ...a4 con ...Cxe4; si 9.a4, ...Cg4 es más fuerte que antes; y si 9.f3, aparece el golpe central ...d5."
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 b1c3 f8g7 c1e3 g8f6 f1c4 e8g8 c4b3 a7a5 f2f3 d7d5": {
+      "porQue": "El punto más sorprendente de 8...a5: el negro abre la posición de golpe y, a cambio del peón, consigue la iniciativa."
+    },
+    "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 c2c4 g8f6 b1c3 c6d4 d1d4 d7d6": {
+      "porQue": "Con el caballo blanco ya en c3, el cambio en d4 sí tiene sentido: todas las puertas quedan cerradas y el negro sigue con ...Ag7, enroque y un salto de caballo que ataque a la dama de d4."
     }
   },
   "fuentes": [
@@ -96,12 +124,16 @@
       "titulo": "Catálogo abierto de aperturas de Lichess",
       "url": "https://github.com/lichess-org/chess-openings",
       "licencia": "CC0"
+    },
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Sicilian Defence», «Accelerated Dragon» y «Maroczy Bind»"
     }
   ],
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6": {
         "ok": true,
@@ -150,6 +182,38 @@
       "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 c2c4 g8f6 b1c3 f8g7 c1e3 f6g4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 b1c3 f8g7 c1e3 g8f6 d4c6 b7c6 e4e5 f6d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Cg8: −0,2 contra −0,9 (marcada como inferior pero jugable)"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 b1c3 f8g7 c1e3 g8f6 d4c6 b7c6 e4e5 f6g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 b1c3 f8g7 c1e3 g8f6 f1c4 d7d6 f2f3 d8b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 b1c3 f8g7 c1e3 g8f6 f1c4 e8g8 c4b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 b1c3 f8g7 c1e3 g8f6 f1c4 e8g8 d1d2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: +0,4 → −0,5. Refutación: Cg4 Cxc6 dxc6 Af4 b5 Dxd8"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 b1c3 f8g7 c1e3 g8f6 f1c4 e8g8 c4b3 a7a5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 b1c3 f8g7 c1e3 g8f6 f1c4 e8g8 c4b3 a7a5 f2f3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4 g7g6 c2c4 g8f6 b1c3 c6d4 d1d4 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
       }
     }
   }

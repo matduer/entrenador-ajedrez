@@ -65,6 +65,37 @@
     },
     "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 c2c4": {
       "porQue": "Estructura Maroczy: más espacio, aunque contra la Kan no se considera tan peligrosa como parece."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 c2c4 g8f6 b1c3 d8c7": {
+      "porQue": "Impide e5 y deja al rival adivinando: el alfil irá a b4 contra Ae2, a c5 contra Ad3, o se queda esperando mientras el negro juega ...b6 y ...Ab7."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 b1c3 d8c7 f1e2 b7b5": {
+      "porQue": "Con el alfil en e2, el peón de e4 está más flojo que con Ad3: ...b5, ...Ab7 y ...b4 lo atacan con más fuerza."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 b1c3 d8c7 g2g3 f8b4": {
+      "porQue": "Contra el fianchetto, la clavada: c3 queda clavado y e4 sin un defensor."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 b1c3 b7b5 f1d3 d8b6 c1e3 f8c5 d1g4": {
+      "porQue": "El hallazgo increíble de alrededor de 2000: 8...Axd4 9.e5! y si 9...Axe3 10.Dxg7 Axf2+ 11.Rf1, el negro tiene dos piezas de más pero su posición está a punto de derrumbarse.",
+      "inferior": true
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 f1d3 b8c6 d4c6 d7c6": {
+      "porQue": "A diferencia de la Taimanov con 5.Cc3 a6 6.Cxc6, acá no hay cambio de damas en d8 que incomode al rey negro. Sigue ...e5, con una estructura simétrica que pide comprensión posicional a los dos."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 f1d3 b8c6 d4c6 b7c6 e1g1 d7d5 c2c4": {
+      "porQue": "Con el alfil en d3, las blancas están bien preparadas contra la recaptura con el peón de b: atacan enseguida el centro negro con c4."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 f1d3 f8c5 d4b3 c5e7": {
+      "porQue": "Lo más jugado hoy: el negro se conforma con haber echado al caballo y deja que las blancas elijan entre un erizo con c4 o una especie de Scheveningen con Cc3."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 f1d3 f8c5 d4b3 c5a7": {
+      "porQue": "La versión antigua: el plan blanco típico es cambiar el alfil de a7 con De2, Ae3 y Axa7."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 f1d3 g8e7": {
+      "porQue": "Más flexible de lo que parece: según lo que haga el blanco, el negro juega ...Cbc6 (y retoma en c6 con el otro caballo) o ...Cec6 y el otro caballo a d7."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 f1d3 g7g6": {
+      "porQue": "Todos los peones en casillas claras: la favorita de los estetas, pero también fuerte. El alfil va a g7 contra el caballo de d4 y el negro prepara ...Cge7 y ...d5."
     }
   },
   "fuentes": [
@@ -81,12 +112,16 @@
       "titulo": "Catálogo abierto de aperturas de Lichess",
       "url": "https://github.com/lichess-org/chess-openings",
       "licencia": "CC0"
+    },
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Sicilian Defence», «Paulsen Variation»"
     }
   ],
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 f1d3": {
         "ok": true,
@@ -135,6 +170,46 @@
       "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 c2c4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 c2c4 g8f6 b1c3 d8c7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 b1c3 d8c7 f1e2 b7b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 b1c3 d8c7 g2g3 f8b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 b1c3 b7b5 f1d3 d8b6 c1e3 f8c5 d1g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Ae2: +0,4 contra −0,2 (marcada como inferior pero jugable)"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 f1d3 b8c6 d4c6 d7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 f1d3 b8c6 d4c6 b7c6 e1g1 d7d5 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 f1d3 f8c5 d4b3 c5e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 f1d3 f8c5 d4b3 c5a7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 f1d3 g8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 a7a6 f1d3 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
       }
     }
   }
