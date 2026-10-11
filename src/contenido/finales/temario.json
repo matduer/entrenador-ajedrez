@@ -353,6 +353,21 @@
             "dtm": 0,
             "fecha": "2026-10-11"
           }
+        },
+        {
+          "id": "philidor-va-mal",
+          "fen": "4k3/R7/3K4/4P3/8/8/8/7r b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 30,
+          "consigna": "Llegaste tarde a la sexta fila y el rey blanco ya está en d6. Hacé tablas.",
+          "pista": "Solo 1...Te1! salva: frena el peón desde atrás y, si el rey blanco avanza a e6, el rey negro va al lado corto (f8, g7) para dejar sitio a los jaques laterales desde la columna a. Los jaques de enseguida (1...Td1+? o 1...Th6+?) pierden.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "h1e1",
+            "dtm": 0,
+            "fecha": "2026-10-11"
+          }
         }
       ],
       "fuentes": [
@@ -368,6 +383,10 @@
         {
           "titulo": "Jeremy Silman — El curso de finales completo (Siles Press, 2007)",
           "capitulo": "Parte Cuatro: «La posición Philidor»"
+        },
+        {
+          "titulo": "Jeremy Silman — El curso de finales completo (Siles Press, 2007)",
+          "capitulo": "Parte Siete (ELO 2000-2199): «Cuando un Philidor va mal», diagramas 289 y 290"
         }
       ]
     },
