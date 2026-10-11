@@ -90,6 +90,12 @@
           "texto": "4...c4?! saca la presión sobre d4 y permite 5.b3!: si el negro cambia, el blanco abre la columna a; para sostener c4 tiene que jugar ...b5 y después a4 lo debilita (Koltanowski)."
         }
       ]
+    },
+    "d2d4 d7d5 g1f3 g8f6 e2e3 g7g6 c2c4": {
+      "porQue": "Para Stockfish, lo más preciso contra el esquema de India de Rey: pasar a un Gambito de Dama con c4. Con el alfil en g7, la ruptura e4 del Colle pierde algo de fuerza."
+    },
+    "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 b7b6 e1g1": {
+      "porQue": "Contra el fianchetto de dama, el blanco enroca primero y elige después entre Cbd2 con e4 y el esquema Zukertort con b3."
     }
   },
   "fuentes": [
@@ -115,7 +121,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "d2d4 d7d5 g1f3 g8f6 e2e3": {
         "ok": true,
@@ -188,6 +194,14 @@
       "d2d4 d7d5 g1f3 g8f6 e2e3 c7c5 c2c3 c5c4 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 5 puntos de chances: −0,1 → −0,6. Refutación: b3 cxb3 axb3 Af5 Aa3 a6"
+      },
+      "d2d4 d7d5 g1f3 g8f6 e2e3 g7g6 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 b7b6 e1g1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
       }
     }
   }
