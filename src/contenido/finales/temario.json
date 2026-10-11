@@ -2494,12 +2494,27 @@
             "dtm": 43,
             "fecha": "2026-10-11"
           }
+        },
+        {
+          "id": "estudio-de-kosek",
+          "fen": "8/8/8/2PK4/4N3/8/7b/7k w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 25,
+          "consigna": "Kosek (1910): el rey negro está lejos, en h1. Llevá el peón a la séptima y echá al alfil de su diagonal antes de que el rey llegue.",
+          "pista": "Cd6! (la única) y c6: el alfil va a b6 y c7, tu rey avanza a e6 y d7, y Cb5 corta la diagonal. El rey negro queda fuera de la zona de tablas. Con c6? enseguida, el alfil llega a tiempo.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "e4d6",
+            "dtm": 49,
+            "fecha": "2026-10-11"
+          }
         }
       ],
       "fuentes": [
         {
           "titulo": "Yuri Averbakh — Bishop v. Knight Endings (trad. K. P. Neat; Batsford, 1976)",
-          "capitulo": "cap. 2 «Knight and pawn v. bishop», posiciones 69 (Halberstadt, 1936), 73 (Chekhover, 1960) y 76 (Mugnos, 1941)"
+          "capitulo": "cap. 2 «Knight and pawn v. bishop», posiciones 69 (Halberstadt, 1936), 73 (Chekhover, 1960) 76 (Mugnos, 1941) y 86 (Kosek, 1910)"
         }
       ]
     },
