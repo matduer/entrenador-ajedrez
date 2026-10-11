@@ -1874,6 +1874,21 @@
             "dtm": 33,
             "fecha": "2026-10-10"
           }
+        },
+        {
+          "id": "alfil-y-torre-contra-torre",
+          "fen": "2k5/8/p1P5/P2K4/8/8/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 25,
+          "consigna": "Tu peón de c6 no corona solo: hay que llegar a b6 y comer el peón de a6. El rey negro tiene una respuesta para cada casilla. Ganá.",
+          "pista": "Si Rc5, el negro contesta Rc7; si Rd6, Rd8; si Rd5, Rc8. Triangulá por d4 y c4 (las dos amenazan c5 y d5): Rd4 Rd8, Rc4 Rc8, Rd5! y el negro, que no tiene a dónde ir, pierde la conjugación. Después Rc5 y Rb6.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "d5c4",
+            "dtm": 31,
+            "fecha": "2026-10-10"
+          }
         }
       ],
       "fuentes": [
@@ -1884,6 +1899,10 @@
         {
           "titulo": "Jon Speelman — Preparación de finales (Paidotribo, col. Caissa, D. L. 1995; orig. Endgame Preparation, Batsford)",
           "capitulo": "cap. 4 «La teoría de las casillas conjugadas», «Triangulación», diagrama 97"
+        },
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 12 «Finales de peones», Final 86 «El peón defensor ha movido. La triangulación» (diagrama 12.24)"
         }
       ]
     },
