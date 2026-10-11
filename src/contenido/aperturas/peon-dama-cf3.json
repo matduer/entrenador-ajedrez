@@ -65,6 +65,42 @@
     },
     "d2d4 d7d5 g1f3 c8g4 c2c4 g4f3 g2f3": {
       "porQue": "Hay que tomar con el peón de g: abre la columna g y deja el centro intacto. Con 4.exf3 el negro no tiene ningún problema (Bosch)."
+    },
+    "d2d4 d7d5 g1f3 c8f5 c2c4 e7e6 d1b3 b8c6": {
+      "porQue": "Defiende b7 de forma indirecta: si 5.Dxb7, ...Cb4 con amenazas sobre c2.",
+      "porQueNo": [
+        {
+          "uci": "a7a5",
+          "texto": "4...a5? 5.Dxb7: el peón cae y el negro no tiene compensación."
+        }
+      ]
+    },
+    "d2d4 d7d5 g1f3 c8f5 c2c4 e7e6 d1b3 b8c6 a2a3": {
+      "porQue": "Le quita b4 al caballo: ahora sí amenaza Dxb7."
+    },
+    "d2d4 d7d5 g1f3 c8f5 c2c4 c7c6 c4d5": {
+      "porQue": "Lo mejor: tras ...cxd5, Db3 ataca b7 y d5 a la vez.",
+      "porQueNo": [
+        {
+          "uci": "c1f4",
+          "texto": "4.Af4? dxc4: el negro gana el peón de c4 y lo sostiene por un tiempo."
+        }
+      ]
+    },
+    "d2d4 d7d5 g1f3 c7c5 c2c4 c5d4 c4d5": {
+      "porQue": "Lo más preciso: el blanco recupera el peón con Dxd4 o Cxd4 y queda mejor desarrollado."
+    },
+    "d2d4 d7d5 g1f3 c7c5 c2c4 d5c4 d4d5": {
+      "porQue": "Gana espacio: el peón de c4 queda adelantado y el blanco lo recuperará con e4 y Axc4."
+    },
+    "d2d4 d7d5 g1f3 c8g4 f3e5 g4h5 g2g4": {
+      "porQue": "La más incisiva: echa al alfil y gana espacio en el flanco de rey.",
+      "porQueNo": [
+        {
+          "uci": "c2c4",
+          "texto": "4.c4? f6: el caballo tiene que retirarse y el blanco pierde la iniciativa."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -80,7 +116,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "d2d4 d7d5 g1f3": {
         "ok": true,
@@ -129,6 +165,42 @@
       "d2d4 d7d5 g1f3 c8g4 c2c4 g4f3 g2f3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 c8f5 c2c4 e7e6 d1b3 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 c8f5 c2c4 e7e6 d1b3 a7a5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,2 → −0,9. Refutación: Dxb7 Cd7 c5 Tb8 Da6 Ce7"
+      },
+      "d2d4 d7d5 g1f3 c8f5 c2c4 e7e6 d1b3 b8c6 a2a3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 c8f5 c2c4 c7c6 c4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,9 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 c8f5 c2c4 c7c6 c1f4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,9 → +0,4. Refutación: dxc4 Cbd2 Cf6 Cxc4 e6 a3"
+      },
+      "d2d4 d7d5 g1f3 c7c5 c2c4 c5d4 c4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 c7c5 c2c4 d5c4 d4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 c8g4 f3e5 g4h5 g2g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 c8g4 f3e5 g4h5 c2c4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +1,2 → +0,6. Refutación: f6 Cf3 e6 Db3 Cc6 Dxb7"
       }
     }
   }

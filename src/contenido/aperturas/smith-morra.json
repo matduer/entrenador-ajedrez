@@ -97,6 +97,45 @@
           "texto": "...Cd4!: ataca la dama y amenaza ...Dh2#. Es la trampa siberiana."
         }
       ]
+    },
+    "e2e4 c7c5 d2d4 c5d4 c2c3 d4c3 b1c3 b8c6 g1f3 d7d6 f1c4": {
+      "porQue": "El alfil apunta a f7: si el negro se descuida, Cg5 o e5 aparecen enseguida."
+    },
+    "e2e4 c7c5 d2d4 c5d4 c2c3 d4c3 b1c3 b8c6 g1f3 d7d6 f1c4 e7e6 e1g1 g8f6 d1e2": {
+      "porQue": "El esquema típico del gambito: dama a e2, torres a d1 y c1, y la ruptura e5 en el momento justo."
+    },
+    "e2e4 c7c5 d2d4 c5d4 c2c3 g8f6 e4e5 f6d5": {
+      "porQue": "El caballo va al centro: se llega a una Siciliana Alapin.",
+      "porQueNo": [
+        {
+          "uci": "f6g8",
+          "texto": "4...Cg8? 5.cxd4: el blanco arma un centro grande y el negro perdió dos tiempos."
+        },
+        {
+          "uci": "d4c3",
+          "texto": "4...dxc3? 5.exf6: el blanco gana el caballo."
+        }
+      ]
+    },
+    "e2e4 c7c5 d2d4 c5d4 c2c3 d7d5": {
+      "porQue": "Otra forma de rehusar: devuelve el peón para abrir el centro. Stockfish prefiere aceptar con 3...dxc3.",
+      "inferior": true
+    },
+    "e2e4 c7c5 d2d4 c5d4 c2c3 d7d5 e4d5": {
+      "porQue": "Lo mejor: tras ...Dxd5 y cxd4 se llega a una posición de la Alapin.",
+      "porQueNo": [
+        {
+          "uci": "f1b5",
+          "texto": "4.Ab5+? Ad7: el cambio de alfiles le quita fuerza al juego blanco."
+        }
+      ]
+    },
+    "e2e4 c7c5 d2d4 c5d4 c2c3 d4d3": {
+      "porQue": "Devuelve el peón para que el caballo blanco no llegue a c3 con tiempo. Stockfish prefiere aceptar con 3...dxc3.",
+      "inferior": true
+    },
+    "e2e4 c7c5 d2d4 c5d4 c2c3 d4d3 f1d3": {
+      "porQue": "Recupera el peón desarrollando una pieza: el blanco queda con buen centro y más espacio."
     }
   },
   "fuentes": [
@@ -114,7 +153,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "e2e4 c7c5 d2d4 c5d4": {
         "ok": true,
@@ -187,6 +226,46 @@
       "e2e4 c7c5 d2d4 c5d4 c2c3 d4c3 b1c3 b8c6 g1f3 e7e6 f1c4 d8c7 e1g1 g8f6 d1e2 f6g4 h2h3 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 36 puntos de chances: −0,1 → −5,0. Refutación: Cd4 hxg4 Cxe2+ Axe2 Ac5 Cb5"
+      },
+      "e2e4 c7c5 d2d4 c5d4 c2c3 d4c3 b1c3 b8c6 g1f3 d7d6 f1c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 d2d4 c5d4 c2c3 d4c3 b1c3 b8c6 g1f3 d7d6 f1c4 e7e6 e1g1 g8f6 d1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "e2e4 c7c5 d2d4 c5d4 c2c3 g8f6 e4e5 f6d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 d2d4 c5d4 c2c3 g8f6 e4e5 f6g8 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: −0,1 → −1,1. Refutación: cxd4 d6 Cf3 dxe5 Cxe5 Cf6"
+      },
+      "e2e4 c7c5 d2d4 c5d4 c2c3 g8f6 e4e5 d4c3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 30 puntos de chances: −0,1 → −4,0. Refutación: exf6 cxb2 Axb2 gxf6 Cf3 Ag7"
+      },
+      "e2e4 c7c5 d2d4 c5d4 c2c3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere dxc3: +0,1 contra −0,3 (marcada como inferior pero jugable)"
+      },
+      "e2e4 c7c5 d2d4 c5d4 c2c3 d7d5 e4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 d2d4 c5d4 c2c3 d7d5 f1b5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,3 → −0,2. Refutación: Ad7 Axd7+ Dxd7 exd5 Cf6 Cf3"
+      },
+      "e2e4 c7c5 d2d4 c5d4 c2c3 d4d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere dxc3: +0,1 contra −0,6 (marcada como inferior pero jugable)"
+      },
+      "e2e4 c7c5 d2d4 c5d4 c2c3 d4d3 f1d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
       }
     }
   }

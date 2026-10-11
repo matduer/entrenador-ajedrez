@@ -60,6 +60,21 @@
     },
     "d2d4 g8f6 b1c3 d7d5 c1g5 b8d7 e2e3 e7e6": {
       "porQue": "La mejor manera de aprovechar el orden de jugadas con 4.e3, según Bellin: el blanco ya no puede jugar e4 rápido, y sin e4 le cuesta conseguir algo contra esta formación sólida."
+    },
+    "d2d4 g8f6 b1c3 d7d5 c1g5 c8f5 e2e3": {
+      "porQue": "Lo más simple: refuerza d4 y prepara Ad3 para discutir la diagonal del alfil negro."
+    },
+    "d2d4 g8f6 b1c3 d7d5 c1g5 c8f5 f2f3": {
+      "porQue": "Insiste con el plan de e4, aunque el negro puede frenarlo con ...c6 y ...Cbd7."
+    },
+    "d2d4 g8f6 b1c3 d7d5 c1g5 c8f5 g5f6 e7f6 e2e3": {
+      "porQue": "El negro tiene la pareja de alfiles y una estructura con peones doblados: una lucha parecida a la de 3...h6 4.Axf6 exf6."
+    },
+    "d2d4 g8f6 b1c3 d7d5 c1g5 e7e6 e2e4": {
+      "porQue": "Se llega a la Francesa Clásica (1.e4 e6 2.d4 d5 3.Cc3 Cf6 4.Ag5): la transposición más natural."
+    },
+    "d2d4 g8f6 b1c3 d7d5 c1g5 b8d7 g1f3 h7h6 g5h4": {
+      "porQue": "Mantiene la clavada; cambiar en f6 le daría al negro la pareja de alfiles sin necesidad."
     }
   },
   "fuentes": [
@@ -85,7 +100,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "d2d4 g8f6 b1c3 d7d5 c1g5": {
         "ok": true,
@@ -134,6 +149,26 @@
       "d2d4 g8f6 b1c3 d7d5 c1g5 b8d7 e2e3 e7e6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 b1c3 d7d5 c1g5 c8f5 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 b1c3 d7d5 c1g5 c8f5 f2f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 b1c3 d7d5 c1g5 c8f5 g5f6 e7f6 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 b1c3 d7d5 c1g5 e7e6 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 b1c3 d7d5 c1g5 b8d7 g1f3 h7h6 g5h4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
       }
     }
   }
