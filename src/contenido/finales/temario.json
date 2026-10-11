@@ -3634,6 +3634,21 @@
             "dtm": 41,
             "fecha": "2026-10-11"
           }
+        },
+        {
+          "id": "dos-peones-no-alcanzan",
+          "fen": "8/5K2/4pp2/5k2/5n2/8/8/6N1 w - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 25,
+          "consigna": "El negro tiene dos peones de más, pero tu rey está pegado a ellos. Hacé tablas.",
+          "pista": "Cf3! (la única): el caballo vuelve al juego con amenazas de jaque. Si e5, Ch4+ y Cf3+, y tu rey come f6; si el rey negro va a e4, Cd2+ y Cf1-Cg3 para atacar el peón de f5. El peón de e no llega ni a la sexta.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "g1f3",
+            "dtm": 0,
+            "fecha": "2026-10-11"
+          }
         }
       ],
       "fuentes": [
@@ -3648,6 +3663,10 @@
         {
           "titulo": "Edmar Mednis — Practical Knight Endings (Chess Enterprises, 1993)",
           "capitulo": "cap. 2, diagramas 13 (Podgaets–Tal, 1968-69) y 16 (Paoli–Kovács, 1971)"
+        },
+        {
+          "titulo": "Edmar Mednis — Practical Knight Endings (Chess Enterprises, 1993)",
+          "capitulo": "cap. 3 «Material Advantage - All Pawns on the Same Side», diagrama 19 (análisis de Averbakh)"
         }
       ]
     },
