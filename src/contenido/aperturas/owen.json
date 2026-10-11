@@ -86,6 +86,28 @@
     },
     "e2e4 b7b6 d2d4 c8b7 b1c3 e7e6 g1f3 f8b4 f1d3 g8f6": {
       "porQue": "La otra línea principal según Bauer: el negro clava el caballo de c3 y presiona e4. Bauer reconoce que es delicada para el negro y que no asegura la igualdad; Stockfish le da al blanco algo más de medio peón."
+    },
+    "e2e4 b7b6 d2d4 c8b7 f1d3 e7e6 g1f3 c7c5 c2c3 g8f6": {
+      "porQue": "Vuelve a presionar e4: las blancas tienen que decidir cómo sostenerlo."
+    },
+    "e2e4 b7b6 d2d4 c8b7 f1d3 e7e6 g1f3 c7c5 c2c3 g8f6 d1e2": {
+      "porQue": "La forma correcta de defender e4: mantiene la tensión en el centro y deja el desarrollo intacto.",
+      "porQueNo": [
+        {
+          "uci": "d4c5",
+          "texto": "Abandona el centro: ...Axe4 y el alfil de b7 recupera con creces."
+        },
+        {
+          "uci": "c1g5",
+          "texto": "...h6 y ...cxd4: la clavada no defiende e4 y las blancas pierden el centro."
+        }
+      ]
+    },
+    "e2e4 b7b6 d2d4 c8b7 b1c3 e7e6": {
+      "porQue": "Lo más flexible: prepara ...Ab4 para clavar el caballo que defiende e4."
+    },
+    "e2e4 b7b6 d2d4 c8b7 f1d3 g8f6 d1e2 e7e6 g1f3": {
+      "porQue": "Desarrollo natural: el negro sigue con ...c5 o ...Ae7 y las blancas enrocan con un buen centro."
     }
   },
   "fuentes": [
@@ -111,7 +133,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "e2e4 b7b6": {
         "ok": true,
@@ -172,6 +194,30 @@
       "e2e4 b7b6 d2d4 c8b7 b1c3 e7e6 g1f3 f8b4 f1d3 g8f6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 b7b6 d2d4 c8b7 f1d3 e7e6 g1f3 c7c5 c2c3 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,0 para el bando que mueve"
+      },
+      "e2e4 b7b6 d2d4 c8b7 f1d3 e7e6 g1f3 c7c5 c2c3 g8f6 d1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,1 para el bando que mueve"
+      },
+      "e2e4 b7b6 d2d4 c8b7 f1d3 e7e6 g1f3 c7c5 c2c3 g8f6 d4c5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: +1,1 → −0,1. Refutación: Axe4 cxb6 Dxb6 Axe4 Cxe4 O-O"
+      },
+      "e2e4 b7b6 d2d4 c8b7 f1d3 e7e6 g1f3 c7c5 c2c3 g8f6 c1g5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +1,1 → +0,3. Refutación: h6 Axf6 Dxf6 Cbd2 cxd4 cxd4"
+      },
+      "e2e4 b7b6 d2d4 c8b7 b1c3 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "e2e4 b7b6 d2d4 c8b7 f1d3 g8f6 d1e2 e7e6 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,0 para el bando que mueve"
       }
     }
   }

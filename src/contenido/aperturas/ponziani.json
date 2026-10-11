@@ -63,6 +63,44 @@
     },
     "e2e4 e7e5 g1f3 b8c6 c2c3 g8f6 d2d4 f6e4 d4d5": {
       "porQue": "Gana espacio con tiempo: el caballo de c6 tiene que moverse."
+    },
+    "e2e4 e7e5 g1f3 b8c6 c2c3 d7d5 d1a4": {
+      "porQue": "La respuesta crítica, la que preocupa a los que juegan 1...e5: la dama clava el caballo de c6 y amenaza Cxe5."
+    },
+    "e2e4 e7e5 g1f3 b8c6 c2c3 d7d5 d1a4 c8d7": {
+      "porQue": "Rompe la clavada: el caballo de c6 vuelve a defender e5 de verdad.",
+      "porQueNo": [
+        {
+          "uci": "d5e4",
+          "texto": "4...dxe4? 5.Cxe5: con el caballo de c6 todavía clavado, el peón de e5 cae."
+        },
+        {
+          "uci": "a7a6",
+          "texto": "Pierde el tiempo: 5.Cxe5 y el negro queda con un peón menos."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 c2c3 g8f6 d2d4 e5d4 e4e5": {
+      "porQue": "La Variante Pratt: gana espacio atacando el caballo, en vez de recuperar el peón enseguida."
+    },
+    "e2e4 e7e5 g1f3 b8c6 c2c3 g8f6 d2d4 e5d4 e4e5 f6d5": {
+      "porQue": "El caballo va al centro, como en líneas parecidas de la Escocesa.",
+      "porQueNo": [
+        {
+          "uci": "f6g8",
+          "texto": "5...Cg8? 6.cxd4: el blanco arma un centro enorme y el negro perdió dos tiempos."
+        },
+        {
+          "uci": "c6e5",
+          "texto": "5...Cxe5? 6.Cxe5: el negro entrega una pieza por dos peones."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 c2c3 g8f6 d2d4 f6e4 d4d5 c6e7 f3e5 e7g6": {
+      "porQue": "Echa al caballo central: la ventaja de espacio que da d5 no pesa demasiado."
+    },
+    "e2e4 e7e5 g1f3 b8c6 c2c3 g8f6 d2d4 f6e4 d4d5 c6e7 f3e5 e7g6 d1e2": {
+      "porQue": "Clava el caballo de e4 contra el rey y obliga al negro a resolver la situación en el centro."
     }
   },
   "fuentes": [
@@ -84,7 +122,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "e2e4 e7e5 g1f3 b8c6 c2c3": {
         "ok": true,
@@ -129,6 +167,46 @@
       "e2e4 e7e5 g1f3 b8c6 c2c3 g8f6 d2d4 f6e4 d4d5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 c2c3 d7d5 d1a4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 c2c3 d7d5 d1a4 c8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 c2c3 d7d5 d1a4 d5e4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: +0,2 → −0,7. Refutación: Cxe5 Dd6 Cxc6 bxc6 d3 exd3"
+      },
+      "e2e4 e7e5 g1f3 b8c6 c2c3 d7d5 d1a4 a7a6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 13 puntos de chances: +0,2 → −1,3. Refutación: Cxe5 Dh4 Cxc6 Ad7 g3 Dh5"
+      },
+      "e2e4 e7e5 g1f3 b8c6 c2c3 g8f6 d2d4 e5d4 e4e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 c2c3 g8f6 d2d4 e5d4 e4e5 f6d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 c2c3 g8f6 d2d4 e5d4 e4e5 f6g8 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: −0,0 → −1,0. Refutación: cxd4 Ab4+ Cc3 d6 Ac4 Cge7"
+      },
+      "e2e4 e7e5 g1f3 b8c6 c2c3 g8f6 d2d4 e5d4 e4e5 c6e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 28 puntos de chances: −0,0 → −3,5. Refutación: Cxe5 De7 De2 dxc3 Cxc3 d5"
+      },
+      "e2e4 e7e5 g1f3 b8c6 c2c3 g8f6 d2d4 f6e4 d4d5 c6e7 f3e5 e7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 c2c3 g8f6 d2d4 f6e4 d4d5 c6e7 f3e5 e7g6 d1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
       }
     }
   }

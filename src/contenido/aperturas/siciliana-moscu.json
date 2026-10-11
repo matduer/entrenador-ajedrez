@@ -76,6 +76,28 @@
           "texto": "Tomar e4 es muy arriesgado: Te1 echa al caballo y las blancas ganan tiempo para atacar en el centro con el rey negro todavía allí."
         }
       ]
+    },
+    "e2e4 c7c5 g1f3 d7d6 f1b5 c8d7 b5d7 d8d7 e1g1 b8c6 c2c3 g8f6 d2d4": {
+      "porQue": "La forma aguda: si 7...Cxe4, 8.d5 y Te1, y las blancas tienen una ventaja de desarrollo considerable por el peón. La forma prudente es 7.De2 o 7.Te1, preparando d4."
+    },
+    "e2e4 c7c5 g1f3 d7d6 f1b5 c8d7 b5d7 d8d7 e1g1 g8f6 d1e2 b8c6 f1d1": {
+      "porQue": "La idea sutil que recomienda Jones: esperar a que el negro se defina. Si juega ...e6, las blancas arman el Maroczy con c4 y presionan d6; si juega ...g6, rompen con c3 y d4."
+    },
+    "e2e4 c7c5 g1f3 d7d6 f1b5 c8d7 b5d7 b8d7": {
+      "porQue": "El «primo pobre» de 4...Dxd7: el caballo de d7 desarrolla, pero no presiona d4. Las blancas consiguen una ventaja de espacio sin riesgo y el negro queda sólido pero pasivo, como en un erizo."
+    },
+    "e2e4 c7c5 g1f3 d7d6 f1b5 c8d7 b5d7 b8d7 e1g1": {
+      "porQue": "Jones juega igual que contra 4...Dxd7: primero el enroque, sin dar al negro la casilla e5 para su caballo."
+    },
+    "e2e4 c7c5 g1f3 d7d6 f1b5 b8d7 d2d4 g8f6 b1c3": {
+      "porQue": "El desarrollo simple que propone FCO: si 5...cxd4 6.Dxd4, las blancas siguen desarrollándose. El negro esperaba ganar la pareja de alfiles con ...a6, pero eso no es una ventaja por sí solo."
+    },
+    "e2e4 c7c5 g1f3 d7d6 f1b5 b8c6 b5c6": {
+      "porQue": "La Variante Híbrida: el cambio en c6 (lo jugó Rublevsky y lo recomienda Jones) deja al negro con la pareja de alfiles y desarrollo rápido, pero con los peones doblados. Stockfish prefiere algo más 4.O-O, la jugada principal.",
+      "inferior": true
+    },
+    "e2e4 c7c5 g1f3 d7d6 f1b5 b8c6 b5c6 b7c6 e1g1": {
+      "porQue": "Primero el rey a salvo; después c3 y d4, o Te1 y e5 según lo que haga el negro."
     }
   },
   "fuentes": [
@@ -85,7 +107,7 @@
     },
     {
       "titulo": "Gawain Jones — How to Beat the Sicilian Defence (Everyman, 2011)",
-      "capitulo": "Cap. 1, «Moscow Variation: 3...Nd7»"
+      "capitulo": "Caps. 1 a 4 (3...Cd7; 3...Ad7 con 4...Dxd7 y 4...Cxd7; 3...Cc6)"
     },
     {
       "titulo": "Sicilian Defence (Wikipedia en inglés)",
@@ -101,7 +123,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "e2e4 c7c5 g1f3 d7d6 f1b5": {
         "ok": true,
@@ -158,6 +180,34 @@
       "e2e4 c7c5 g1f3 d7d6 f1b5 b8d7 d2d4 g8f6 e1g1 f6e4 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 6 puntos de chances: −0,2 → −0,8. Refutación: Te1 Cf6 dxc5 dxc5 Cg5 e6"
+      },
+      "e2e4 c7c5 g1f3 d7d6 f1b5 c8d7 b5d7 d8d7 e1g1 b8c6 c2c3 g8f6 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 f1b5 c8d7 b5d7 d8d7 e1g1 g8f6 d1e2 b8c6 f1d1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 f1b5 c8d7 b5d7 b8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 f1b5 c8d7 b5d7 b8d7 e1g1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 f1b5 b8d7 d2d4 g8f6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 f1b5 b8c6 b5c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere O-O: +0,5 contra +0,1 (marcada como inferior pero jugable)"
+      },
+      "e2e4 c7c5 g1f3 d7d6 f1b5 b8c6 b5c6 b7c6 e1g1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
       }
     }
   }
