@@ -79,6 +79,21 @@
     },
     "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4 e4d6 b5c6 d7c6 d4e5 d6f5 d1d8 e8d8 b1c3 h7h6": {
       "porQue": "Una jugada útil: le quita g5 a las piezas blancas."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 d7d6": {
+      "porQue": "Lleva la partida a una Defensa Steinitz (por ejemplo 5.d4 Ad7 6.Cc3 exd4 7.Cxd4 Ae7). Es un orden más preciso que 3...d6 directo, porque las blancas ya enrocaron corto y no pueden elegir el enroque largo."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f8c5 c2c3 e8g8 d2d4 c5b6": {
+      "porQue": "La posición crítica de 4...Ac5: el alfil se retira a b6 y sigue presionando d4 desde atrás."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4 e4d6 b5c6 d7c6 d4e5 d6f5 d1e2 f5d4": {
+      "porQue": "Por esto conservar las damas con 8.De2 no funciona: 9.Cxd4 Dxd4 10.Td1 Ag4! y el negro resuelve todos sus problemas con limpieza."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4 e4d6 b5c6 d7c6 d4e5 d6f5 d1d8 e8d8 b1c3 d8e8": {
+      "porQue": "Una preparación útil: el rey vuelve a e8 y deja la columna d para las torres. Otra es 9...Ad7 con ...Rc8."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4 e4d6 b5c6 d7c6 d4e5 d6f5 d1d8 e8d8 b1c3 f5e7": {
+      "porQue": "Increíblemente artificial pero importante: el caballo va a g6 y le abre al alfil de c8 el camino a f5 o g4. Las blancas tendrán que avanzar f4 y g4 en el flanco de rey, y el negro esperar el momento de ...h5."
     }
   },
   "fuentes": [
@@ -95,12 +110,16 @@
       "titulo": "Catálogo abierto de aperturas de Lichess",
       "url": "https://github.com/lichess-org/chess-openings",
       "licencia": "CC0"
+    },
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Ruy Lopez», «Berlin Defence»"
     }
   ],
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4": {
         "ok": true,
@@ -165,6 +184,26 @@
       "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4 e4d6 b5c6 d7c6 d4e5 d6f5 d1d8 e8d8 b1c3 h7h6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f8c5 c2c3 e8g8 d2d4 c5b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4 e4d6 b5c6 d7c6 d4e5 d6f5 d1e2 f5d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4 e4d6 b5c6 d7c6 d4e5 d6f5 d1d8 e8d8 b1c3 d8e8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 g8f6 e1g1 f6e4 d2d4 e4d6 b5c6 d7c6 d4e5 d6f5 d1d8 e8d8 b1c3 f5e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
       }
     }
   }

@@ -145,6 +145,46 @@
     },
     "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 a2a3": {
       "porQue": "Un eco de 5...a6, con una idea: cubre b4 contra ...b5-b4 y, si el negro juega la típica ...e5, el blanco pelea por d5 con Ac4 y Ag5 sin haber gastado un tiempo en Ae2 o Ae3. La jugaron Short y Dvoiris (Bosch)."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1g5 e7e6 f2f4 f8e7 d1f3 d8c7 e1c1 b8d7 g2g4": {
+      "porQue": "La línea principal contra la defensa clásica: si 10...b5, las blancas atacan el puesto central de e6 con Axf6, g5 y f5, y no les importa entregar el peón de g5 si así abren la columna g."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1g5 e7e6 f2f4 f8e7 d1f3 h7h6 g5h4 g7g5": {
+      "porQue": "La Variante de Gotemburgo: el negro abre él mismo el flanco de rey, rompe la clavada y, después de 10.fxg5 Cfd7, busca la casilla e5. Arriesgadísima, pero hasta hoy no refutada."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1g5 e7e6 f2f4 b8d7 d1f3 d8c7": {
+      "porQue": "Ahorra ...Ae7 para llegar antes con ...b5 y desactivar los planes más peligrosos de las blancas.",
+      "porQueNo": [
+        {
+          "uci": "b7b5",
+          "texto": "Antes de tiempo: 9.e5! abre el centro con el rey negro todavía en e8."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1g5 e7e6 f2f4 b7b5": {
+      "porQue": "La Variante Polugaevsky: ...b5 de inmediato, sin ninguna preparación. Tan complicada que hay muchísimo análisis y muy pocas partidas; el propio Polugaevsky la estudió medio año antes de jugarla."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1g5 e7e6 f2f4 b7b5 e4e5 d6e5 f4e5 d8c7": {
+      "porQue": "El punto de la Polugaevsky: si 10.exf6, la dama recupera la pieza con jaque en e5. El milagro es que el negro aguanta pese a su enorme atraso en el desarrollo."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1g5 e7e6 f2f4 b7b5 e4e5 d6e5 f4e5 d8c7 d1e2 f6d7 e1c1 c8b7": {
+      "porQue": "La jugada crítica. El peón de e5 es tabú, y las blancas tienen varias formas de sacrificar un caballo en e6.",
+      "porQueNo": [
+        {
+          "uci": "c7e5",
+          "texto": "11...Dxe5? 12.Dxe5 Cxe5 13.Cdxb5! y gana."
+        },
+        {
+          "uci": "d7e5",
+          "texto": "11...Cxe5? 12.Cdxb5! axb5 13.Dxe5! Dxe5 14.Td8#."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1g5 e7e6 f2f4 d8b6 d4b3": {
+      "porQue": "Proteger b2 siempre es una pequeña concesión: con el caballo lejos de d4, las blancas tienen muchas menos chances de ataque que en la línea 7...Ae7."
+    },
+    "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1g5 e7e6 f2f4 d8b6 d1d2 b6b2": {
+      "porQue": "El Peón Envenenado aceptado: el negro come y las blancas tienen una gran ventaja en desarrollo (siguen 9.Tb1 o 9.Cb3, con la amenaza a3 y Ta2 para encerrar a la dama)."
     }
   },
   "fuentes": [
@@ -165,12 +205,16 @@
       "titulo": "Catálogo abierto de aperturas de Lichess",
       "url": "https://github.com/lichess-org/chess-openings",
       "licencia": "CC0"
+    },
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Sicilian Defence», «Najdorf Variation»: 6 Ag5"
     }
   ],
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1e3": {
         "ok": true,
@@ -299,6 +343,50 @@
       "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 a2a3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1g5 e7e6 f2f4 f8e7 d1f3 d8c7 e1c1 b8d7 g2g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1g5 e7e6 f2f4 f8e7 d1f3 h7h6 g5h4 g7g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1g5 e7e6 f2f4 b8d7 d1f3 d8c7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1g5 e7e6 f2f4 b8d7 d1f3 b7b5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 35 puntos de chances: −0,3 → −5,3. Refutación: e5 dxe5 fxe5 Tb8 exf6 gxf6"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1g5 e7e6 f2f4 b7b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1g5 e7e6 f2f4 b7b5 e4e5 d6e5 f4e5 d8c7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1g5 e7e6 f2f4 b7b5 e4e5 d6e5 f4e5 d8c7 d1e2 f6d7 e1c1 c8b7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1g5 e7e6 f2f4 b7b5 e4e5 d6e5 f4e5 d8c7 d1e2 f6d7 e1c1 c7e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 36 puntos de chances: −0,4 → −5,9. Refutación: Dxe5 Cxe5 Cdxb5 f6 Cc7+ Re7"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1g5 e7e6 f2f4 b7b5 e4e5 d6e5 f4e5 d8c7 d1e2 f6d7 e1c1 d7e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 41 puntos de chances: −0,4 → −8,1. Refutación: Cdxb5 Da5 Dxe5 axb5 Td8+ Dxd8"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1g5 e7e6 f2f4 d8b6 d4b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6 b1c3 a7a6 c1g5 e7e6 f2f4 d8b6 d1d2 b6b2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
       }
     }
   }
