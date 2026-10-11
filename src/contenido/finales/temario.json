@@ -1130,12 +1130,46 @@
             "dtm": 37,
             "fecha": "2026-10-11"
           }
+        },
+        {
+          "id": "torre-fuerte-delante",
+          "fen": "R7/P4k2/8/8/8/8/6K1/r7 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 30,
+          "consigna": "La torre blanca está delante de su peón en séptima. Hacé tablas.",
+          "pista": "Llevá el rey a g7 o h7 y dejá la torre en la columna a: desde ahí la torre blanca no puede moverse sin perder el peón. Cualquier otra jugada pierde, por ejemplo 1...Ta3?? o 1...Re7?? por 2.Th8!: si 2...Txa7, 3.Th7+ gana la torre con un jaque en rayos X. Si el rey blanco se acerca al peón, jaques desde atrás.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "a1a2",
+            "dtm": 0,
+            "fecha": "2026-10-11"
+          }
+        },
+        {
+          "id": "atascada-con-dos-peones",
+          "fen": "R7/P4k2/8/8/8/6P1/6K1/r7 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 30,
+          "consigna": "Dos peones de menos, pero la torre blanca está atascada delante del peón de a. Hacé tablas.",
+          "pista": "La misma defensa: 1...Rg7! (o 1...Ta2+) y el rey se queda en g7-h7. El peón g no alcanza para sacarlo de ahí, y si el rey blanco va hacia el peón de a, la torre negra lo persigue con jaques.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "a1a2",
+            "dtm": 0,
+            "fecha": "2026-10-11"
+          }
         }
       ],
       "fuentes": [
         {
           "titulo": "Jeremy Silman — El curso de finales completo (Siles Press, 2007)",
           "capitulo": "Parte Seis (ELO 1800-1999): «Torre frente a su peón de 7.ª fila»"
+        },
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 10, Final 65 «Peón en séptima. Torre fuerte delante» (diagrama 10.22); cap. 11, Final 75 «Torre atascada delante de su peón en séptima» (diagrama 11.13, aquí con negras a mover)"
         }
       ]
     },
@@ -1811,12 +1845,31 @@
             "dtm": 0,
             "fecha": "2026-10-11"
           }
+        },
+        {
+          "id": "corte-horizontal-aparente",
+          "fen": "4r3/8/8/5R2/4P1k1/4K3/8/8 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 30,
+          "consigna": "La torre blanca le corta el paso a tu rey por la quinta fila, pero no es un corte de verdad. Hacé tablas.",
+          "pista": "Tu torre tiene el lado largo: llevala lejos (1...Ta8) y, si el rey blanco avanza, jaques desde lejos. Mientras tanto tu rey se acerca al peón. Un corte horizontal no sirve contra una torre que tiene sitio para dar jaques.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "e8e6",
+            "dtm": 0,
+            "fecha": "2026-10-11"
+          }
         }
       ],
       "fuentes": [
         {
           "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
           "capitulo": "cap. 10 «Torre y peón contra torre», Final 54 «El lado largo»"
+        },
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 10, Final 64 «Corte horizontal aparente» (diagrama 10.21)"
         }
       ]
     },
@@ -3913,12 +3966,31 @@
             "dtm": 57,
             "fecha": "2026-10-11"
           }
+        },
+        {
+          "id": "peones-doblados",
+          "fen": "3k4/8/1R4r1/2KP4/3P4/8/8/8 b - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 30,
+          "consigna": "Dos peones doblados de menos. Las blancas ofrecen cambiar torres para romper el Philidor. Hacé tablas.",
+          "pista": "No cambies ni te quedes en la sexta: la torre pasa por detrás de los peones, por la columna g (lo más claro es 2...Tg4, que ataca el peón de d4), y defendés al estilo de Kling y Horwitz. Con peones doblados casi siempre es tablas, pero la mayoría de las jugadas acá pierden.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "g6g1",
+            "dtm": 0,
+            "fecha": "2026-10-11"
+          }
         }
       ],
       "fuentes": [
         {
           "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
           "capitulo": "cap. 10 «Torre y peón contra torre», Finales 56 a 58 (defensa de Kling y Horwitz; peón central en sexta con y sin efectividad lejana)"
+        },
+        {
+          "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
+          "capitulo": "cap. 11, Final 69 «Peones centrales» (diagrama 11.1, después de 1.Tb7 Tg6 2.Tb6)"
         }
       ]
     },
