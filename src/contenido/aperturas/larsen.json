@@ -63,6 +63,33 @@
     },
     "b2b3 e7e5 c1b2 d7d6": {
       "porQue": "Esquema de India de Rey: el negro renuncia a ...d5."
+    },
+    "b2b3 e7e5 c1b2 b8c6 e2e3 d7d5 f1b5": {
+      "porQue": "La mejor según Stockfish: presiona el caballo que defiende e5."
+    },
+    "b2b3 e7e5 c1b2 b8c6 e2e3 d7d5 f1b5 f8d6": {
+      "porQue": "La posición crucial de la apertura: el negro ocupó el centro y le toca al blanco mostrar sus intenciones. Hay muy poca teoría «aceptada»."
+    },
+    "b2b3 e7e5 c1b2 b8c6 e2e3 d7d5 f1b5 f8d6 f2f4": {
+      "porQue": "Lo más agudo e intransigente: ataca el centro negro de frente. Los libros no se ponen de acuerdo en si el negro debe contestar con ...De7 o intercalar antes ...Dh4+."
+    },
+    "b2b3 e7e5 c1b2 b8c6 e2e3 d7d5 f1b5 f8d6 g1f3": {
+      "porQue": "Con más moderación e igual de lógica: Cf3 y c4, atacando el centro desde los costados."
+    },
+    "b2b3 e7e5 c1b2 b8c6 e2e3 g8f6 f1b5 d7d6": {
+      "porQue": "El negro sigue el mismo plan que con 2...d6. Las blancas atacan e5 con Ce2 y después d4 o f4."
+    },
+    "b2b3 e7e5 c1b2 b8c6 c2c4": {
+      "porQue": "Parece más agresiva que 3.e3 pero es más cauta: una Siciliana invertida, terreno conocido."
+    },
+    "b2b3 e7e5 c1b2 b8c6 c2c4 g8f6 e2e3 d7d5 c4d5 f6d5": {
+      "porQue": "La línea crítica de 3.c4: el negro tiene el centro y las blancas buscan presionarlo con a3, Cf3 y Dc2."
+    },
+    "b2b3 g8f6 c1b2 g7g6 c2c4": {
+      "porQue": "Contra el esquema de India de Rey, el blanco toma espacio con c4 y lleva la partida a terreno de la Inglesa."
+    },
+    "b2b3 d7d5 c1b2 g8f6 e2e3": {
+      "porQue": "Si sigue f4, es una Bird; con Cf3, una Réti con b3."
     }
   },
   "fuentes": [
@@ -84,7 +111,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "b2b3": {
         "ok": true,
@@ -127,6 +154,42 @@
         "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
       },
       "b2b3 e7e5 c1b2 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "b2b3 e7e5 c1b2 b8c6 e2e3 d7d5 f1b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "b2b3 e7e5 c1b2 b8c6 e2e3 d7d5 f1b5 f8d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "b2b3 e7e5 c1b2 b8c6 e2e3 d7d5 f1b5 f8d6 f2f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "b2b3 e7e5 c1b2 b8c6 e2e3 d7d5 f1b5 f8d6 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "b2b3 e7e5 c1b2 b8c6 e2e3 g8f6 f1b5 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "b2b3 e7e5 c1b2 b8c6 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "b2b3 e7e5 c1b2 b8c6 c2c4 g8f6 e2e3 d7d5 c4d5 f6d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "b2b3 g8f6 c1b2 g7g6 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "b2b3 d7d5 c1b2 g8f6 e2e3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
       }

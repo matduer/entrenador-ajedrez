@@ -79,6 +79,46 @@
           "texto": "Echar al caballo enseguida no funciona: ...Cxc4 y el negro gana un peón."
         }
       ]
+    },
+    "d2d4 g8f6 c2c4 b8c6 g1f3 e7e6 b1c3 f8b4": {
+      "porQue": "Una Nimzoindia con el caballo ya en c6: clava el caballo de c3 y prepara ...d5 o ...d6.",
+      "porQueNo": [
+        {
+          "uci": "f8e7",
+          "texto": "Demasiado pasivo: 5.d5! Cb8 6.e4 y las blancas ganan espacio con tiempo."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 b8c6 g1f3 e7e6 a2a3": {
+      "porQue": "La preferida de Stockfish: evita la clavada con ...Ab4 antes de desarrollar el caballo de b1."
+    },
+    "d2d4 g8f6 c2c4 b8c6 g1f3 e7e6 a2a3 d7d5": {
+      "porQue": "El negro ocupa el centro: una estructura de Gambito de Dama en la que el caballo de c6 ya no puede apoyar la ruptura ...c5, pero sí ...e5 más adelante."
+    },
+    "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 d4d5 c6e7 e2e4 e7g6": {
+      "porQue": "El caballo llega a su casilla: desde g6 controla f4 y defiende e5, y el alfil de f8 queda libre para ir a c5 o b4."
+    },
+    "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 g1f3 e5e4": {
+      "porQue": "Contra 4.Cf3 (bastante menos fuerte que 4.d5), lo mejor según Stockfish: gana espacio echando al caballo.",
+      "porQueNo": [
+        {
+          "uci": "d7d6",
+          "texto": "4...d6? 5.d5: el caballo es echado y tiene que volver a b8."
+        },
+        {
+          "uci": "f8d6",
+          "texto": "4...Ad6? 5.d5 Ce7: el alfil tapa el peón de d y el negro queda muy pasivo."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 d4e5 c6e5": {
+      "porQue": "Recupera el peón y el caballo queda centralizado.",
+      "porQueNo": [
+        {
+          "uci": "f6g4",
+          "texto": "4...Cg4 5.e4 y f4: el negro recupera el peón, pero las blancas ganan tiempo y espacio echando a los caballos."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -104,7 +144,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "d2d4 g8f6 c2c4 b8c6": {
         "ok": true,
@@ -161,6 +201,46 @@
       "d2d4 g8f6 c2c4 b8c6 d4d5 c6e5 f2f4 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 10 puntos de chances: +0,5 → −0,6. Refutación: Cxc4 e4 Cb6 Cc3 e6 dxe6"
+      },
+      "d2d4 g8f6 c2c4 b8c6 g1f3 e7e6 b1c3 f8b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 b8c6 g1f3 e7e6 b1c3 f8e7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,4 → −1,0. Refutación: d5 Cb8 e4 d6 h3 O-O"
+      },
+      "d2d4 g8f6 c2c4 b8c6 g1f3 e7e6 a2a3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 b8c6 g1f3 e7e6 a2a3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 d4d5 c6e7 e2e4 e7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,9 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 g1f3 e5e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 g1f3 d7d6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: +0,1 → −0,9. Refutación: d5 Ce7 h3 Cg6 e4 Ae7"
+      },
+      "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 g1f3 f8d6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: +0,1 → −1,0. Refutación: d5 Ce7 a3 O-O e4 c6"
+      },
+      "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 d4e5 c6e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 d4e5 f6g4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,3 → −1,0. Refutación: e4 h5 Ae2 Cgxe5 Ad2 a5"
       }
     }
   }

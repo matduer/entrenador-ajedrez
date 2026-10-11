@@ -59,6 +59,36 @@
     },
     "b2b4 e7e5 c1b2 f7f6": {
       "porQue": "Otra forma sólida de sostener e5, a costa de debilitar un poco el flanco de rey."
+    },
+    "b2b4 e7e5 c1b2 f8b4 b2e5 g8f6 c2c3": {
+      "porQue": "Para Stockfish, lo más preciso: echa al alfil de b4 con tiempo y prepara d4 o Cf3."
+    },
+    "b2b4 e7e5 c1b2 d7d6 e2e3": {
+      "porQue": "Desarrollo flexible: siguen c4, Cf3 y Ae2, presionando e5 desde lejos."
+    },
+    "b2b4 e7e5 c1b2 f7f6 b4b5": {
+      "porQue": "Gana espacio en el flanco de dama, le quita c6 al caballo y pone el peón de b fuera del alcance del alfil de f8.",
+      "porQueNo": [
+        {
+          "uci": "e2e4",
+          "texto": "3.e4? Axb4: el blanco entrega el peón de b y el gambito no da compensación suficiente."
+        }
+      ]
+    },
+    "b2b4 c7c6": {
+      "porQue": "Prepara ...Db6 o ...a5 para atacar el peón de b4, que no tiene apoyo."
+    },
+    "b2b4 c7c6 c1b2 d8b6 a2a3": {
+      "porQue": "Defiende b4 sin perder el tiempo: la dama de b6 quedará algo expuesta.",
+      "porQueNo": [
+        {
+          "uci": "b2c3",
+          "texto": "El alfil abandona la gran diagonal y queda expuesto: ...Cf6, ...Cd5 y el negro lo cambia."
+        }
+      ]
+    },
+    "b2b4 d7d5 c1b2": {
+      "porQue": "El mismo plan contra cualquier respuesta: el alfil en la gran diagonal, y después e3, Cf3 y a veces b5."
     }
   },
   "fuentes": [
@@ -80,7 +110,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "b2b4": {
         "ok": true,
@@ -121,6 +151,38 @@
       "b2b4 e7e5 c1b2 f7f6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "b2b4 e7e5 c1b2 f8b4 b2e5 g8f6 c2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "b2b4 e7e5 c1b2 d7d6 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "b2b4 e7e5 c1b2 f7f6 b4b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "b2b4 e7e5 c1b2 f7f6 e2e4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 4 puntos de chances: −0,1 → −0,6. Refutación: Axb4 Ac4 Cc6 Cf3 Cge7 c3"
+      },
+      "b2b4 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "b2b4 c7c6 c1b2 d8b6 a2a3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "b2b4 c7c6 c1b2 d8b6 b2c3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,2 → −0,4. Refutación: Cf6 a3 Ce4 e3 Cxc3 Cxc3"
+      },
+      "b2b4 d7d5 c1b2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
       }
     }
   }

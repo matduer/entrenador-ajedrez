@@ -65,6 +65,43 @@
     },
     "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 g7g6": {
       "porQue": "Pasa a la India de Rey Clásica con ...Cbd7."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 e5e4": {
+      "porQue": "Crítica para evaluar 4.Cf3, aunque poco jugada: lleva a posiciones mucho más caóticas que 4...Cbd7."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 e5e4 f3g5 c8f5 g2g4": {
+      "porQue": "La respuesta más dura: las blancas entregan el peón de g para eliminar el puesto avanzado de e4."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 d4e5 d6e5 d1d8 e8d8": {
+      "porQue": "La alternativa principal a 4.Cf3: un final temprano en el que las blancas esperan aprovechar el rey negro algo inseguro en d8. Para Stockfish, la posición es pareja."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 d4d5 g7g6": {
+      "porQue": "Contra el cierre temprano, quien conoce la India de Rey se siente en casa: las blancas se comprometieron con d5 muy pronto y limitaron sus opciones."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6": {
+      "porQue": "El plan tradicional: ...a6 y ...b5 en el flanco de dama. La posición negra es muy sólida, y la principal arma blanca es avanzar d5 en algún momento."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 c1g5": {
+      "porQue": "Cambia la situación: impide que el negro pase a la India de Rey con ...g6. Stockfish prefiere el natural 5.e4.",
+      "inferior": true
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 c1g5 f8e7": {
+      "porQue": "El desarrollo normal. Las blancas pueden seguir agresivamente con e3, Dc2, el enroque largo y g4.",
+      "porQueNo": [
+        {
+          "uci": "g7g6",
+          "texto": "5...g6? 6.dxe5 dxe5 7.Cxe5!: el caballo de d7 está clavado contra la dama y e5 cae."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 c8f5": {
+      "porQue": "Una variante más aguda, de moda desde 1985: parece no tener sentido impedir e4 si las blancas pueden jugar f3, pero tiene su punto."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 c8f5 f2f3 e7e5 e2e4 e5d4 d1d4 b8c6": {
+      "porQue": "El punto de 3...Af5: el alfil irá a e6 con un tiempo perdido, pero el ataque a la dama lo compensa y el juego queda abierto y vivo, muy distinto de la India Antigua clásica."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 c8f5 g2g3": {
+      "porQue": "La otra forma crítica de enfrentar 3...Af5: preparar e4 con Ag2. Es la preferida de Stockfish."
     }
   },
   "fuentes": [
@@ -86,7 +123,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "d2d4 g8f6 c2c4 d7d6": {
         "ok": true,
@@ -135,6 +172,50 @@
       "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 g7g6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 e5e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 e5e4 f3g5 c8f5 g2g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 d4e5 d6e5 d1d8 e8d8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 d4d5 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 c1g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere e4: +0,8 contra +0,2 (marcada como inferior pero jugable)"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 c1g5 f8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 c1g5 g7g6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: −0,2 → −1,3. Refutación: Cxe5 h6 Cxd7 hxg5 Cxf8 Rxf8"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 c8f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 c8f5 f2f3 e7e5 e2e4 e5d4 d1d4 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 c8f5 g2g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
       }
     }
   }
