@@ -3,18 +3,29 @@
   import { cargarCatalogo } from '../lib/aperturas/catalogo.ts'
   import { EXPLICACIONES } from '../lib/aperturas/explicaciones.ts'
   import type { Color } from '../lib/datos/tipos.ts'
+  import ElegirApertura from './aperturas/ElegirApertura.svelte'
   import Explorador from './aperturas/Explorador.svelte'
   import Practica from './aperturas/Practica.svelte'
   import Repertorio from './aperturas/Repertorio.svelte'
 
-  let modo = $state<'explorar' | 'repertorio' | 'practica'>('explorar')
+  let modo = $state<'practica' | 'explorar' | 'repertorio'>('practica')
   let inicial = $state<string[]>([])
   let practica = $state<{ color: Color; lineas: string[][]; titulo: string }>()
   let claveExplorador = $state(0)
 
+  /**
+   * Líneas para practicar desde una posición: las del catálogo de aperturas y, además, las de las notas
+   * escritas (verificadas con Stockfish) que salen de ahí, que suelen ir más lejos en la teoría.
+   */
   async function practicarDesde(color: Color, prefijo: string[], titulo: string) {
     const arbol = armarArbol(await cargarCatalogo())
     const lineas = lineasDesde(arbol, prefijo, 40)
+    const raiz = prefijo.join(' ')
+    for (const e of EXPLICACIONES) {
+      for (const clave of Object.keys(e.notas)) {
+        if (clave.startsWith(raiz + ' ')) lineas.push(clave.split(' '))
+      }
+    }
     practica = { color, lineas: lineas.length ? lineas : [prefijo], titulo }
     modo = 'practica'
   }
@@ -34,9 +45,9 @@
 <h1>Aperturas</h1>
 
 <div class="pestanas" role="tablist">
+  <button role="tab" aria-selected={modo === 'practica'} onclick={() => (modo = 'practica')}>Práctica</button>
   <button role="tab" aria-selected={modo === 'explorar'} onclick={() => (modo = 'explorar')}>Explorar</button>
   <button role="tab" aria-selected={modo === 'repertorio'} onclick={() => (modo = 'repertorio')}>Mi repertorio</button>
-  <button role="tab" aria-selected={modo === 'practica'} onclick={() => (modo = 'practica')} disabled={!practica}>Práctica</button>
 </div>
 
 <style>
@@ -76,6 +87,8 @@
   <Repertorio alPracticar={practicarLineas} alExplorar={explorar} />
 {:else if practica}
   {#key practica}
-    <Practica {...practica} alSalir={() => (modo = 'explorar')} />
+    <Practica {...practica} autoEmpezar alSalir={() => (practica = undefined)} />
   {/key}
+{:else}
+  <ElegirApertura alElegir={practicarDesde} />
 {/if}

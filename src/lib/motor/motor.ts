@@ -127,3 +127,10 @@ let tablero: Motor | undefined
 export function motorTablero(): Motor {
   return (tablero ??= new Motor())
 }
+
+let analisis: Motor | undefined
+
+/** Motor del panel de análisis (el que se prende y apaga a mano): aparte, para no frenar las verificaciones. */
+export function motorAnalisis(): Motor {
+  return (analisis ??= new Motor())
+}

@@ -6,8 +6,27 @@
   import { armarSesion, estadoRepaso, FILTROS_INICIALES, type EstadoRepaso, type Filtros, type ResultadoIntento } from '../lib/repaso/repaso.ts'
   import Ejercicio from '../lib/ui/Ejercicio.svelte'
   import TacticaLichess from './TacticaLichess.svelte'
+  import TacticaMezclada from './TacticaMezclada.svelte'
 
-  let fuente = $state<'propios' | 'lichess' | 'libros'>('propios')
+  let fuente = $state<'propios' | 'lichess' | 'libros' | 'mezcla'>(cargarFuente())
+
+  function cargarFuente(): 'propios' | 'lichess' | 'libros' | 'mezcla' {
+    try {
+      const f = localStorage.getItem('tactica-pestana')
+      if (f === 'propios' || f === 'lichess' || f === 'libros' || f === 'mezcla') return f
+    } catch {
+      /* sin almacenamiento */
+    }
+    return 'propios'
+  }
+
+  $effect(() => {
+    try {
+      localStorage.setItem('tactica-pestana', fuente)
+    } catch {
+      /* sin almacenamiento: la pestaña no se recuerda */
+    }
+  })
 
   const MOTIVOS = [
     'pieza colgada',
@@ -102,6 +121,7 @@
     <button role="tab" aria-selected={fuente === 'propios'} onclick={() => (fuente = 'propios')}>Mis errores</button>
     <button role="tab" aria-selected={fuente === 'lichess'} onclick={() => (fuente = 'lichess')}>Problemas de Lichess</button>
     <button role="tab" aria-selected={fuente === 'libros'} onclick={() => (fuente = 'libros')}>Problemas de libros</button>
+    <button role="tab" aria-selected={fuente === 'mezcla'} onclick={() => (fuente = 'mezcla')}>Todo mezclado</button>
   </div>
 {/if}
 
@@ -109,6 +129,8 @@
   <!-- sesión en curso: ya se mostró arriba -->
 {:else if fuente === 'lichess'}
   <TacticaLichess />
+{:else if fuente === 'mezcla'}
+  <TacticaMezclada />
 {:else if fuente === 'libros'}
   {#key fuente}<TacticaLichess origen="libros" />{/key}
 {:else}

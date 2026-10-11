@@ -16,8 +16,10 @@
     lineas: string[][]
     titulo: string
     alSalir: () => void
+    /** Empezar enseguida con una línea del nivel alcanzado, sin pasar por la pantalla de niveles. */
+    autoEmpezar?: boolean
   }
-  let { color, lineas, titulo, alSalir }: Props = $props()
+  let { color, lineas, titulo, alSalir, autoEmpezar = false }: Props = $props()
 
   let catalogo = $state.raw<Catalogo>()
   cargarCatalogo().then((c) => (catalogo = c))
@@ -43,7 +45,10 @@
 
   $effect(() => {
     void lineas
-    nivelActual(color, lineas).then((n) => (nivel = n))
+    nivelActual(color, lineas).then((n) => {
+      nivel = n
+      if (autoEmpezar && !objetivo) empezar()
+    })
     actualizarEstados()
   })
 
@@ -165,7 +170,7 @@
     <h2>{titulo}</h2>
     <span class="suave">Practicás con {color === 'white' ? 'blancas' : 'negras'} · {lineas.length} líneas en total</span>
   </div>
-  <button class="boton enlace" onclick={alSalir}>Volver</button>
+  <button class="boton enlace" onclick={alSalir}>{autoEmpezar ? 'Otra apertura' : 'Volver'}</button>
 </div>
 
 {#if !objetivo}
@@ -202,6 +207,12 @@
       {alJugar}
     />
     <div class="panel">
+      <label class="nivel">
+        <span class="suave">Nivel</span>
+        <select bind:value={nivel} onchange={empezar}>
+          {#each NIVELES as n, i (n.nivel)}<option value={n.nivel}>{n.nivel}. {n.nombre}{estados[i] ? ` (${Math.round(100 * estados[i].dominio)} %)` : ''}</option>{/each}
+        </select>
+      </label>
       <p class="suave">{lineaSan(fens[0], objetivo.slice(0, ply)).join(' ') || 'Posición inicial'}</p>
       {#if terminado}
         <p class={errores ? 'mal' : 'bien'}><b>{errores ? `Línea terminada con ${errores} error${errores === 1 ? '' : 'es'}: vuelve pronto.` : 'Línea completa sin errores.'}</b></p>
@@ -258,9 +269,17 @@
     display: grid;
     gap: 16px;
   }
-  @media (min-width: 1100px) {
+  .nivel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .nivel select {
+    flex: 1;
+  }
+  @media (min-width: 1000px) {
     .practica {
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1.5fr) minmax(280px, 1fr);
       align-items: start;
     }
   }

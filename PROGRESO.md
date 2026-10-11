@@ -69,6 +69,14 @@ Resumen para retomar el trabajo en cualquier sesión. El detalle de métodos y h
 - 2026-10-08: nuevos Blumenfeld, Vaganian y San Jorge; notas de libros en Moderna (Soltis, Storey), Dos Caballos (Traxler), Gambito de Rey (Falkbeer), Vienesa (Frankenstein-Drácula), Española del Cambio (Héctor), Cuatro Caballos (Halloween), Siciliana (2.a3), Moscú y Rossolimo (Jones), Mexicana (Palliser), Holandesa (McDonald).
 - Los libros de aperturas con texto que quedan repiten líneas ya cubiertas con FCO.
 
+## Interfaz: pedido del usuario del 2026-10-11 ✅
+- Táctica: pestaña nueva «Todo mezclado» (`TacticaMezclada.svelte`): elige fuentes (mis errores, Lichess, libros), arma una sesión al azar y cada ejercicio se registra en su propio repaso; la pestaña elegida se recuerda.
+- Tablero y panel lado a lado (desde 1000 px; el contenido pasó de 760 a 1180 px de ancho): «Siguiente →» arriba del panel, sin scroll.
+- Panel de Stockfish (`PanelMotor.svelte`, motor aparte `motorAnalisis()`): apagado por defecto; evaluación desde el lado de las blancas, profundidad creciente hasta 22, 3 líneas y flecha azul con la mejor. Prenderlo antes de resolver cuenta como pista.
+- Después de resolver o de pedir la solución, el tablero queda libre (`exploracion.svelte.ts` + `Navegacion.svelte`): se mueven los dos colores, una jugada nueva abre otra rama, botones ⏮ ◀ ▶ ⏭ y flechas del teclado. Igual en «Mis errores» (`Ejercicio.svelte`).
+- Problemas de libros: una jugada que no es la del libro pero gana igual (pierde menos de 0,03 de chances y sigue ganando, o es la primera del motor) se acepta, y la línea sigue contra Stockfish hasta el mismo largo que la del libro. Después se puede ver la línea del libro y volver a la propia.
+- Aperturas: la pestaña principal es «Práctica» (`ElegirApertura.svelte`): lista de las 77 aperturas con buscador y botones Blancas/Negras; al elegir, va directo al tablero y empieza una línea (jugada y respuesta, estilo LotusChess), con el nivel elegible en el panel. Las líneas suman las del catálogo y las de las notas verificadas.
+
 ## Hoja de ruta (2026-10-08)
 
 Regla de trabajo pedida por el usuario: **si un libro trae un problema, se anota en el registro de abajo, se saltea y se sigue con el siguiente; lo problemático se retoma recién cuando esté hecho todo lo demás.**
