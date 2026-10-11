@@ -2344,12 +2344,46 @@
             "dtm": 27,
             "fecha": "2026-10-11"
           }
+        },
+        {
+          "id": "jaque-perpetuo-de-brenev",
+          "fen": "8/8/4N3/3b4/8/6K1/5p2/6k1 w - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 15,
+          "consigna": "Brenev (1934): el peón de f2 corona, pero el rey negro está encerrado en la esquina. Hacé tablas.",
+          "pista": "Cf4!: si f1=D, Ch3+ Rh1 y Cf2+, con jaque perpetuo (el caballo va y viene entre h3 y f2, y si la dama toma en f2, Rxf2). Si el alfil intenta cortar al caballo, Ce2+ y vuelta a f4.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "e6f4",
+            "dtm": 0,
+            "fecha": "2026-10-11"
+          }
+        },
+        {
+          "id": "ahogado-de-prokes",
+          "fen": "8/8/2N5/2k5/K1b5/1p6/8/8 w - - 0 1",
+          "objetivo": "tablas",
+          "maxJugadas": 10,
+          "consigna": "Prokeš (1946): parece imposible frenar el peón de b3. Hacé tablas.",
+          "pista": "Ca5! b2 Cb3+! Axb3+ y Ra3!!: si el peón corona, es ahogado.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "draw",
+            "mejor": "c6a5",
+            "dtm": 0,
+            "fecha": "2026-10-11"
+          }
         }
       ],
       "fuentes": [
         {
           "titulo": "Jesús de la Villa — Los 100 finales que hay que saber (Esfera, 2008)",
           "capitulo": "cap. 8 «Alfil contra caballo con un peón», finales 37 a 39"
+        },
+        {
+          "titulo": "Yuri Averbakh — Bishop v. Knight Endings (trad. K. P. Neat; Batsford, 1976)",
+          "capitulo": "cap. 1 «Bishop and pawn v. knight», posiciones 11 (Brenev, 1934) y 17 (Prokeš, 1946)"
         }
       ]
     },
