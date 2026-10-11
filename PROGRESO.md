@@ -89,7 +89,7 @@ Regla de trabajo pedida por el usuario: **si un libro trae un problema, se anota
 1. ✅ *Partidas de personajes históricos* (ajedrezdeataque.com): 33 partidas.
 2. ✅ Mazja *Chess School 3*: 348 (395 sin solución legible quedaron afuera por no tener una jugada única y decisiva). ✅ Polgár *Middlegame*: 505 de 2166. En este escaneo las damas negras están impresas huecas, como las blancas: se descartaron las lecturas con dos damas del mismo bando (286 aceptados mal leídos, de los que 41 volvieron a confirmarse con una dama por bando) y los 6 con una sola dama (color indecidible). Control de material en todos los libros publicados: 17 mal leídos retirados (Gude 7, Williams 6, *Workout* 2, Schloss 1, Bondarewsky 1; `img/excluidos_material.json`).
 3. ✅ Franco *El arte del ataque*: 20 de 73 (`franco.py`: diagramas JBIG2 sin rayado por apertura morfológica; la mayoría de sus problemas son de plan, no de golpe táctico). Siguen, con texto:  Hansen *Mejore su ajedrez posicional* (caps. 11-12, solo los tácticos), Aagaard *Maestría en el cálculo*.
-4. Estudios: Troitzky *360 estudios* (OCR, notación descriptiva).
+4. Estudios: Troitzky *360 estudios*: probado el 2026-10-11, al registro de problemas (figuras mal separadas).
 5. Partidas comentadas: ✅ Capablanca *Fundamentos* (14). Siguen: Keres (2 tomos), Rubinstein (Donaldson y Minev; *Masterpieces*), Kasparov *Mis geniales predecesores*, Bronstein *Zúrich 1953*, Tal (Hajtun).
 6. Libros del registro de problemas (al final de la etapa). ✅ Williams *Improve Your Attacking Chess*: 99 de 250, cada uno controlado a ojo con `control_visual.py` (la letra leída sobre cada casilla del escaneo); 21 aceptados por el verificador se descartaron por una pieza mal leída (`img/williams_excluir.json`).
 
@@ -158,6 +158,7 @@ Regla de trabajo pedida por el usuario: **si un libro trae un problema, se anota
 | Tiviakov y Gökbulut, *Rock Solid Chess* (2 tomos) | Es un libro de estrategia (estructuras de peones), no de aperturas: no hay un módulo donde encaje | Un módulo de estrategia o de estructuras |
 | *London Pet Line 4...Qxb2* (2025) | No es un libro: es una exportación de partidas rápidas entre bots y jugadores online | — (descartado) |
 | Lemos, *The London System* (ICC) | No es un libro: es el folleto de 14 páginas de un curso en video, sin análisis | — (descartado) |
+| Troitzky, *360 Brilliant and Instructive End Games* (Dover, 1968) | Escaneo sin texto; `diagramas.py detectar` encuentra los 363 tableros (`img/troitzky.json`), pero el k-means no separa las figuras ni con 70 grupos por color (peones blancos con negros, damas con caballos negros, reyes con damas). Soluciones en descriptiva inglesa, y muchos estudios son de tablas (el verificador de táctica solo acepta ventaja decisiva) | Un clasificador supervisado (como `clasif_tinta.py` con `VERDAD=` de unos 10 tableros etiquetados a mano), OCR de las soluciones y un lector de descriptiva inglesa; o pasar los estudios ganadores al módulo de finales |
 | Bondarewsky, *Táctica del medio juego* | Escaneo pobre: solo 3 problemas confirmados | Mejor escaneo |
 
 ## Para el usuario: qué probar
