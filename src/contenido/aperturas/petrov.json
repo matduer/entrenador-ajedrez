@@ -94,6 +94,63 @@
     },
     "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 b8c6 e1g1 f8e7 c2c4 c6b4": {
       "porQue": "La línea principal de la Petrov, que Janjgava estudia en su último capítulo: el caballo ataca al alfil de d3, que es el que sostiene la presión sobre e4 y h7."
+    },
+    "e2e4 e7e5 g1f3 g8f6 b1c3 f8b4": {
+      "porQue": "Más en el espíritu de la Petrov que 3...Cc6 (que lleva a los Cuatro Caballos): si 4.Cxe5, el negro enroca y recupera el peón más tarde."
+    },
+    "e2e4 e7e5 g1f3 g8f6 b1c3 f8b4 f3e5 e8g8 f1e2": {
+      "porQue": "La forma correcta de sostener e4: sigue 5...Te8 6.Cd3 Axc3 7.dxc3 Cxe4 8.O-O, con igualdad.",
+      "porQueNo": [
+        {
+          "uci": "d2d3",
+          "texto": "5.d3? permite 5...d5!, y el negro abre el centro con el rey blanco todavía en e1."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 b1c3 e4c3 d2c3": {
+      "porQue": "Peones doblados, pero a cambio la columna d abierta para las torres y un desarrollo muy rápido: las blancas suelen seguir con Ae3, Dd2 y el enroque largo."
+    },
+    "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 f8e7 f1d3 e4f6": {
+      "porQue": "La forma tranquila: el caballo vuelve, la posición es sólida, pero la iniciativa queda por ahora en manos blancas."
+    },
+    "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 f8e7 e1g1 b8c6": {
+      "porQue": "Más activo que 7...O-O: el caballo presiona d4 y prepara la respuesta ...Ag4 contra el natural Te1."
+    },
+    "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 f8e7 e1g1 b8c6 f1e1 c8g4": {
+      "porQue": "La clavada sostiene el caballo de e4 de forma indirecta: si 9.Axe4 dxe4 10.Txe4 Axf3 11.Dxf3 Cxd4, el negro recupera el peón y no hay ventaja blanca."
+    },
+    "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 f8e7 e1g1 b8c6 f1e1 c8g4 c2c3 f7f5": {
+      "porQue": "Con c3 ya jugado, el avance ...f5 es sólido: c4 y Ce5 pierden fuerza con las piezas negras tan activas."
+    },
+    "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 f8e7 e1g1 b8c6 c2c4 c6b4 d3e2 e8g8": {
+      "porQue": "La posición tipo de la línea principal: las blancas suelen quedarse con un peón aislado en d4 y el juego pide paciencia y sentido posicional, no táctica."
+    },
+    "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 f8d6": {
+      "porQue": "La otra gran opción: si las blancas juegan c4 para socavar e4, el negro sostiene d5 con ...c6."
+    },
+    "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 f8d6 e1g1 e8g8 c2c4 c7c6": {
+      "porQue": "El punto de 6...Ad6: la cadena c6-d5 sostiene el caballo de e4. La partida puede volverse muy aguda."
+    },
+    "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 f8d6 e1g1 e8g8 c2c4 c7c6 c4d5 c6d5 b1c3 e4c3 b2c3 c8g4": {
+      "porQue": "Clavar el caballo es lo más prudente: sin el caballo de e4, el flanco de rey negro queda expuesto, y 11...Cc6 12.Cg5 ya es peligroso."
+    },
+    "e2e4 e7e5 g1f3 g8f6 d2d4 e5d4": {
+      "porQue": "Hasta 1970 se la consideraba tan buena como 3...Cxe4; hoy la eligen quienes quieren evitar las líneas más analizadas."
+    },
+    "e2e4 e7e5 g1f3 g8f6 d2d4 e5d4 e4e5 f6e4 d1d4 d7d5 e5d6 e4d6": {
+      "porQue": "Cuidado con el negro: las blancas tienen una pequeña ventaja de desarrollo (por ejemplo 7.Cc3 Cc6 8.Df4) que no hay que dejar crecer."
+    },
+    "e2e4 e7e5 g1f3 g8f6 d2d4 f6e4 f1d3 b8c6": {
+      "porQue": "El hallazgo de Murei (1993): devuelve el peón de e5 para desarrollar rápido. Si 5.Axe4, 5...d5 recupera la pieza."
+    },
+    "e2e4 e7e5 g1f3 g8f6 d2d4 f6e4 f1d3 b8c6 d3e4 d7d5 e4d3 e5e4": {
+      "porQue": "La horquilla de peón: el alfil de d3 y el caballo de f3 están atacados a la vez y el negro recupera la pieza."
+    },
+    "e2e4 e7e5 g1f3 g8f6 d2d4 f6e4 f1d3 d7d5 f3e5 f8d6": {
+      "porQue": "Una de las dos principales: si 6.O-O O-O 7.c4, la más crítica es 7...Axe5 8.dxe5 Cc6, con complicaciones que llegan hasta un final muy analizado."
+    },
+    "e2e4 e7e5 g1f3 g8f6 d2d4 f6e4 f1d3 d7d5 f3e5 b8d7 e5d7 c8d7 e1g1 f8d6": {
+      "porQue": "Lo más popular hoy. Implica entregar un peón (8.c4 c6 9.cxd5 cxd5 10.Dh5 O-O 11.Dxd5 Ac6) a cambio de un desarrollo armonioso; y si 8.Te1, jaque perpetuo con 8...Axh2+ 9.Rxh2 Dh4+ 10.Rg1 Dxf2+."
     }
   },
   "fuentes": [
@@ -119,7 +176,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "e2e4 e7e5 g1f3 g8f6": {
         "ok": true,
@@ -192,6 +249,78 @@
       "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 b8c6 e1g1 f8e7 c2c4 c6b4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 b1c3 f8b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 b1c3 f8b4 f3e5 e8g8 f1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 b1c3 f8b4 f3e5 e8g8 d2d3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,3 → −0,4. Refutación: d5 a3 Axc3+ bxc3 Dd6 f4"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 b1c3 e4c3 d2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 f8e7 f1d3 e4f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 f8e7 e1g1 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 f8e7 e1g1 b8c6 f1e1 c8g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 f8e7 e1g1 b8c6 f1e1 c8g4 c2c3 f7f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 f8e7 e1g1 b8c6 c2c4 c6b4 d3e2 e8g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 f8d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 f8d6 e1g1 e8g8 c2c4 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 f8d6 e1g1 e8g8 c2c4 c7c6 c4d5 c6d5 b1c3 e4c3 b2c3 c8g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 d2d4 e5d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 d2d4 e5d4 e4e5 f6e4 d1d4 d7d5 e5d6 e4d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 d2d4 f6e4 f1d3 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 d2d4 f6e4 f1d3 b8c6 d3e4 d7d5 e4d3 e5e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 d2d4 f6e4 f1d3 d7d5 f3e5 f8d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 d2d4 f6e4 f1d3 d7d5 f3e5 b8d7 e5d7 c8d7 e1g1 f8d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
       }
     }
   }

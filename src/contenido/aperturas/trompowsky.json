@@ -96,6 +96,57 @@
     },
     "d2d4 g8f6 c1g5 c7c5 b1c3 d7d5": {
       "porQue": "Contra 3.Cc3, la jugada más exigente según Dembo, el negro ocupa el centro: si 4.Axf6 gxf6, queda con la pareja de alfiles."
+    },
+    "d2d4 g8f6 c1g5 d7d5 g5f6 e7f6 e2e3 f8d6": {
+      "porQue": "Lo habitual: el alfil a su mejor diagonal y el enroque enseguida."
+    },
+    "d2d4 g8f6 c1g5 d7d5 g5f6 e7f6 e2e3 f8d6 c2c4 d5c4 f1c4 e8g8": {
+      "porQue": "La pregunta de siempre en el Trompowsky: ¿pesa más la pareja de alfiles negra o la mayoría central blanca? La posición abierta favorece a los alfiles, pero el peón de d4 da a las blancas un buen dominio del centro."
+    },
+    "d2d4 g8f6 c1g5 d7d5 g5f6 e7f6 e2e3 f8d6 g2g3": {
+      "porQue": "Un enfoque más modesto: Ag2, Cd2 y Ce2, guardando la ruptura c4 para el momento oportuno."
+    },
+    "d2d4 g8f6 c1g5 f6e4 g5f4 d7d5 f2f3 e4f6 e2e4": {
+      "porQue": "Un Gambito Blackmar-Diemer con el alfil ya en f4 de regalo: incluso contra la respuesta más sólida, el juego se vuelve agudo."
+    },
+    "d2d4 g8f6 c1g5 f6e4 g5f4 d7d5 e2e3 c8f5": {
+      "porQue": "Si las blancas no juegan f3, la partida va por carriles tranquilos: Ad3, e6, Cd2 y el cambio de caballos."
+    },
+    "d2d4 g8f6 c1g5 f6e4 g5f4 c7c5 d4d5 d8b6": {
+      "porQue": "La respuesta aguda a 4.d5: las blancas tienen que elegir entre defender b2 de forma pasiva y entregar el peón con 5.Cd2."
+    },
+    "d2d4 g8f6 c1g5 f6e4 g5f4 c7c5 f2f3 d8a5 c2c3 e4f6 d4d5 a5b6": {
+      "porQue": "El jaque intermedio desordenó a las blancas y ahora la dama vuelve sobre b2, con una trampa escondida."
+    },
+    "d2d4 g8f6 c1g5 f6e4 g5h4 c7c5 f2f3 g7g5": {
+      "porQue": "El inconveniente de 3.Ah4: el negro ataca el alfil con un peón y las blancas tienen que aceptar una estructura tan rota como la negra."
+    },
+    "d2d4 g8f6 c1g5 f6e4 g5h4 c7c5 f2f3 g7g5 f3e4": {
+      "porQue": "Casi obligado: después de 5...gxh4 los dos bandos tienen los peones dañados.",
+      "porQueNo": [
+        {
+          "uci": "h4g3",
+          "texto": "5.Ag3? Cxg3 6.hxg3 Db6 y las blancas quedan con una posición triste: pierden el alfil y b2 queda atacado."
+        }
+      ]
+    },
+    "d2d4 g8f6 c1g5 e7e6 e2e4 h7h6 g5f6 d8f6 b1c3": {
+      "porQue": "Más agresiva que 5.Cf3 (que lleva a una posición del Ataque Torre): deja libre el peón de f para avanzar."
+    },
+    "d2d4 g8f6 c1g5 c7c5 g5f6 g7f6 d4d5 d8b6 d1c1": {
+      "porQue": "Una retirada fea pero sólida, típica del Trompowsky: la lucha es entre los alfiles del negro y su estructura dañada, que le complica actuar en el centro."
+    },
+    "d2d4 g8f6 c1g5 g7g6 g5f6 e7f6 e2e3": {
+      "porQue": "Lo mismo que contra 2...d5: los alfiles negros contra la estructura sana y el centro blanco (por ejemplo 4...f5 5.c4 Ag7 6.Cc3)."
+    },
+    "d2d4 g8f6 c1g5 f6e4 g5f4 c7c5 f2f3 d8a5 c2c3 e4f6 d4d5 a5b6 b2b3": {
+      "porQue": "Cubrir b2 con calma (o incluso con la extraña 7.Ac1) es la forma de mantener la ventaja: el negro movió mucho la dama y el caballo.",
+      "porQueNo": [
+        {
+          "uci": "d1d2",
+          "texto": "7.Dd2? Cxd5! 8.Dxd5 Dxb2: la dama ataca la torre de a1 y el negro recupera la pieza con ventaja."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -116,12 +167,16 @@
       "titulo": "Catálogo abierto de aperturas de Lichess",
       "url": "https://github.com/lichess-org/chess-openings",
       "licencia": "CC0"
+    },
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Other 1 d4 Nf6 Openings», «Trompowsky Attack»"
     }
   ],
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "d2d4 g8f6 c1g5": {
         "ok": true,
@@ -202,6 +257,66 @@
       "d2d4 g8f6 c1g5 c7c5 b1c3 d7d5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 d7d5 g5f6 e7f6 e2e3 f8d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 d7d5 g5f6 e7f6 e2e3 f8d6 c2c4 d5c4 f1c4 e8g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 d7d5 g5f6 e7f6 e2e3 f8d6 g2g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 f6e4 g5f4 d7d5 f2f3 e4f6 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 f6e4 g5f4 d7d5 e2e3 c8f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 f6e4 g5f4 c7c5 d4d5 d8b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 f6e4 g5f4 c7c5 f2f3 d8a5 c2c3 e4f6 d4d5 a5b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 f6e4 g5h4 c7c5 f2f3 g7g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 f6e4 g5h4 c7c5 f2f3 g7g5 f3e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 f6e4 g5h4 c7c5 f2f3 g7g5 h4g3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: −0,3 → −1,6. Refutación: Cxg3 hxg3 Db6 dxc5 Dxb2 Cd2"
+      },
+      "d2d4 g8f6 c1g5 e7e6 e2e4 h7h6 g5f6 d8f6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 c7c5 g5f6 g7f6 d4d5 d8b6 d1c1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 g7g6 g5f6 e7f6 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 f6e4 g5f4 c7c5 f2f3 d8a5 c2c3 e4f6 d4d5 a5b6 b2b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 f6e4 g5f4 c7c5 f2f3 d8a5 c2c3 e4f6 d4d5 a5b6 d1d2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 20 puntos de chances: +0,5 → −1,7. Refutación: Cxd5 Ag5 h6 e4 Cxc3 Cxc3"
       }
     }
   }

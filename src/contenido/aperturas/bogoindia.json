@@ -78,6 +78,40 @@
     },
     "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 b1d2 e8g8": {
       "porQue": "Para Sielecki, la mejor respuesta a 4.Cbd2: si a3, ...Ae7 y la ruptura ...d5 más adelante. (4...d6 es una alternativa sólida que pide menos teoría.)"
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 b4d2 d1d2": {
+      "porQue": "Se retoma con la dama para que el caballo de b1 vaya a su mejor casilla, c3."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 b4d2 d1d2 d7d5 b1c3": {
+      "porQue": "Una estructura muy parecida a la de las líneas principales del Gambito de Dama Rehusado; con 6.g3, en cambio, se llega a una especie de Catalana."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 b4d2 b1d2": {
+      "porQue": "Con el caballo en d2, el plan negro más adecuado es ...d6 con ...e5 o ...c5: el caballo no presiona d5."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 d8e7 g2g3 b8c6 f1g2 b4d2 b1d2": {
+      "porQue": "La recaptura que recomienda FCO, que teme 7.Dxd2 Ce4 8.Dc2 Db4+ (aunque para Stockfish 7.Dxd2 también es jugable). Deja al caballo en d2 en vez de c3, y el negro sigue con ...d6 y ...e5, justo el plan en el que ese caballo está peor ubicado."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 d8e7 g2g3 b8c6 f1g2 b4d2 b1d2 d7d6 e1g1 e8g8 e2e4 e6e5 d4d5 c6b8": {
+      "porQue": "Un choque posicional típico: el espacio blanco contra el alfil «bueno» del negro (no está en el color de los peones centrales). El negro abre el juego con ...c6 en el flanco de dama o con ...f5 en el de rey."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 d8e7 g2g3 b8c6 b1c3": {
+      "porQue": "Evita el cambio en d2. Pero tras 6...Axc3 7.Axc3 Ce4 8.Tc1 O-O 9.Ag2 d6, con ...e5 en mente, la posición no es muy distinta."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 a7a5 g2g3 b7b6 f1g2 c8b7": {
+      "porQue": "Una transposición directa a la India de Dama, con la casilla b4 asegurada para el alfil."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 a7a5 g2g3 d7d5": {
+      "porQue": "Tan válido y popular como ...d6 o ...b6: la Bogoindia se adapta al estilo de cada uno."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 c7c5 d2b4 c5b4 g2g3 e8g8 f1g2 d7d6 e1g1 b8c6": {
+      "porQue": "Mejor que transponer a la India de Dama con ...b6: el negro prepara ...e5, y el alfil de c8 está más útil en la diagonal h3-c8 que en b7."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 b1d2 c7c5": {
+      "porQue": "Una respuesta importante: con el caballo en d2, las blancas no pueden contestar d5. Si a3, el negro cambia en d2 y juega ...cxd4 y ...Cc6."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 b1d2 c7c5 a2a3 b4d2 d1d2 c5d4 f3d4 b8c6": {
+      "porQue": "Las blancas tienen la pareja de alfiles, pero el desarrollo rápido del negro equilibra. Stockfish prefiere 7...d5, para disputar el centro de inmediato.",
+      "inferior": true
     }
   },
   "fuentes": [
@@ -103,7 +137,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "resultados": {
       "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4": {
         "ok": true,
@@ -172,6 +206,50 @@
       "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 b1d2 e8g8": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 b4d2 d1d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 b4d2 d1d2 d7d5 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 b4d2 b1d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 d8e7 g2g3 b8c6 f1g2 b4d2 b1d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 d8e7 g2g3 b8c6 f1g2 b4d2 b1d2 d7d6 e1g1 e8g8 e2e4 e6e5 d4d5 c6b8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 d8e7 g2g3 b8c6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 a7a5 g2g3 b7b6 f1g2 c8b7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 a7a5 g2g3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 c7c5 d2b4 c5b4 g2g3 e8g8 f1g2 d7d6 e1g1 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 b1d2 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 b1d2 c7c5 a2a3 b4d2 d1d2 c5d4 f3d4 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere d5: −0,2 contra −0,7 (marcada como inferior pero jugable)"
       }
     }
   }
