@@ -2437,6 +2437,73 @@
       ]
     },
     {
+      "id": "caballo-y-peon-contra-alfil",
+      "titulo": "Caballo y peón contra alfil",
+      "nivel": 4,
+      "explicacion": [
+        "Con un peón en séptima apoyado por el rey, el bando del caballo gana si logra echar al alfil de la diagonal que vigila la casilla de coronación. El caballo tiene que interponerse en esa diagonal o cubrir la casilla, y el rey ayuda a quitarle casillas al alfil.",
+        "El defensor se salva si su rey llega a tiempo a molestar: por eso el bando fuerte tiene que hacer la maniobra sin dejarle entrar al rey rival. Muchas veces la clave es una casilla precisa del caballo, que corta la diagonal y a la vez frena al rey contrario."
+      ],
+      "ideas": [
+        "El caballo corta la diagonal del alfil hacia la casilla de coronación.",
+        "El rey propio le quita al alfil las casillas desde donde vigila esa casilla.",
+        "No dejes que el rey rival se acerque mientras maniobrás."
+      ],
+      "posiciones": [
+        {
+          "id": "estudio-de-halberstadt",
+          "fen": "3b4/N2P4/8/4K3/8/k7/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 20,
+          "consigna": "Halberstadt (1936): el alfil de d8 vigila c7 y e7. Echalo de la diagonal y coroná.",
+          "pista": "Rd5! (la única): si Aa5, Cb5+, Cd4 y Cc6 cortan la diagonal; si el alfil va a b6, Rc4 o Rc5 le quitan las casillas.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "e5d5",
+            "dtm": 37,
+            "fecha": "2026-10-11"
+          }
+        },
+        {
+          "id": "estudio-de-chekhover",
+          "fen": "2b5/2P5/8/8/3KN3/8/8/3k4 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 30,
+          "consigna": "Chekhover (1960): con el alfil en c8, hay que echarlo de la diagonal sin que el rey negro se acerque. Ganá.",
+          "pista": "Cd6! (la única): Cc5? deja Rc2 y el rey negro llega. Después de Ad7, Cc4, Cb6 y Cd5-Ce7 empujan al alfil, mientras tu rey va a d5 y d6. Si el alfil se pone en b7, Cd5 y Ce7.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "e4d6",
+            "dtm": 51,
+            "fecha": "2026-10-11"
+          }
+        },
+        {
+          "id": "estudio-de-mugnos-1941",
+          "fen": "8/1bP5/1N6/2K5/5k2/8/8/8 w - - 0 1",
+          "objetivo": "ganar",
+          "maxJugadas": 30,
+          "consigna": "Mugnos (1941, con los flancos invertidos): coronar enseguida no sirve. Echá al alfil sin dejar que el rey negro entre a la zona de tablas.",
+          "pista": "Cc4! (la única) Ac8 y Rd5!: el rey negro no puede llegar a c5 ni a d4, y el caballo va a b6 y d7 para cubrir c8. Coronar ya, c8=D?, Axc8, son tablas.",
+          "verificacion": {
+            "ok": true,
+            "resultado": "win",
+            "mejor": "b6c4",
+            "dtm": 43,
+            "fecha": "2026-10-11"
+          }
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "Yuri Averbakh — Bishop v. Knight Endings (trad. K. P. Neat; Batsford, 1976)",
+          "capitulo": "cap. 2 «Knight and pawn v. bishop», posiciones 69 (Halberstadt, 1936), 73 (Chekhover, 1960) y 76 (Mugnos, 1941)"
+        }
+      ]
+    },
+    {
       "id": "torre-contra-dos-peones",
       "titulo": "Torre contra dos peones ligados",
       "nivel": 3,
