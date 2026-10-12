@@ -228,6 +228,12 @@
     "d2d4 g8f6 c1g5 f6e4 h2h4 e4g5 h4g5 e7e5": {
       "porQue": "Ocupa el centro.",
       "inferior": true
+    },
+    "d2d4 g8f6 c1g5 d7d5 g5f6 e7f6 e2e3 f8d6 c2c4 d5c4": {
+      "porQue": "Toma el peón."
+    },
+    "d2d4 g8f6 c1g5 d7d5 g5f6 e7f6 e2e3 f8d6 c2c4 d5c4 f1c4": {
+      "porQue": "Recupera el peón."
     }
   },
   "fuentes": [
@@ -502,6 +508,14 @@
       "d2d4 g8f6 c1g5 f6e4 h2h4 e4g5 h4g5 e7e5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18) prefiere c5: −0,4 contra −1,0 (marcada como inferior pero jugable)"
+      },
+      "d2d4 g8f6 c1g5 d7d5 g5f6 e7f6 e2e3 f8d6 c2c4 d5c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 d7d5 g5f6 e7f6 e2e3 f8d6 c2c4 d5c4 f1c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
       }
     }
   }
