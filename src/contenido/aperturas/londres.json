@@ -123,6 +123,64 @@
     },
     "d2d4 g8f6 g1f3 e7e6 c1f4 c7c5 c2c3 c5d4 c3d4 b7b5": {
       "porQue": "La idea que Cox toma de la ECO y de Andrew Martin: el negro gana espacio en el flanco de dama y se asegura buenas casillas para todas sus piezas (...Ab7, ...Ae7, ...0-0)."
+    },
+    "d2d4 g8f6 c1f4 g7g6": {
+      "porQue": "Esquema de India de Rey contra el Londres: el alfil irá a g7, a la misma diagonal que b2, y el negro prepara ...d6 con ...e5 o ...c5.",
+      "porQueNo": [
+        {
+          "uci": "g7g5",
+          "texto": "...g5? regala un peón: Axg5 y no hay compensación."
+        }
+      ]
+    },
+    "d2d4 g8f6 c1f4 g7g6 g1f3": {
+      "porQue": "El orden más flexible según Stockfish: el caballo controla e5 antes de que el negro pueda jugar ...d6 y ...e5."
+    },
+    "d2d4 g8f6 c1f4 g7g6 g1f3 f8g7 e2e3": {
+      "porQue": "La pirámide de siempre. El alfil de f4 ya está afuera, así que e3 no lo encierra.",
+      "porQueNo": [
+        {
+          "uci": "d4d5",
+          "texto": "Ganar espacio con d5 no funciona acá: ...c6 y el peón queda flojo, sin el apoyo de c4."
+        }
+      ]
+    },
+    "d2d4 g8f6 c1f4 g7g6 g1f3 f8g7 e2e3 e8g8 f1e2": {
+      "porQue": "Contra el fianchetto, el alfil rinde poco en d3, porque choca contra el peón de g6. En e2 cuida el flanco de rey y deja el camino libre para enrocar."
+    },
+    "d2d4 g8f6 c1f4 g7g6 g1f3 f8g7 e2e3 e8g8 f1e2 d7d6 h2h3": {
+      "porQue": "La jugada clave contra este esquema: le da al alfil la casilla h2, a salvo de ...Ch5, y evita ...Ag4. Cuando el negro rompa con ...e5, el alfil sigue vivo."
+    },
+    "d2d4 g8f6 c1f4 c7c5": {
+      "porQue": "La respuesta más directa: ataca d4 y amenaza ...Db6 contra b2, que quedó sin el alfil."
+    },
+    "d2d4 g8f6 c1f4 c7c5 d4d5": {
+      "porQue": "Lo más fuerte según Stockfish: gana espacio y lleva a una estructura de Benoni donde el alfil de f4 ya está activo.",
+      "porQueNo": [
+        {
+          "uci": "b1c3",
+          "texto": "Cc3? cxd4 Dxd4 Cc6: la dama queda en el centro y el negro la ataca ganando tiempo."
+        },
+        {
+          "uci": "g1f3",
+          "texto": "Cf3? cxd4 y el blanco tiene que retomar con la dama, que queda expuesta."
+        }
+      ]
+    },
+    "d2d4 g8f6 c1f4 c7c5 d4d5 d7d6": {
+      "porQue": "Lo más sólido: el negro arma la estructura de Benoni con ...g6, ...Ag7 y la ruptura ...e6 o ...b5."
+    },
+    "d2d4 g8f6 c1f4 e7e6 e2e3": {
+      "porQue": "El esquema de siempre: e3, Cf3, c3, Cbd2 y Ad3. Contra ...e6, el alfil ya salió de c1 antes de que e3 lo encierre."
+    },
+    "d2d4 g8f6 c1f4 e7e6 e2e3 c7c5 c2c3": {
+      "porQue": "Sostiene d4 con un peón. Si llega ...Db6, la dama blanca puede cubrir b2 desde b3 o c2."
+    },
+    "d2d4 g8f6 g1f3 g7g6 b1c3 d7d5 c1f4": {
+      "porQue": "Ataque Barry: con el caballo en c3 (en el Londres ahí va un peón), el blanco busca un juego agresivo con e3, Ce5, Dd2 y a veces Ah6 y h4."
+    },
+    "d2d4 g8f6 g1f3 g7g6 b1c3 d7d5 c1f4 f8g7 e2e3 e8g8": {
+      "porQue": "Enroca primero: el negro espera a ver el plan del blanco antes de decidir entre ...c5 y ...Ch5."
     }
   },
   "fuentes": [
@@ -148,7 +206,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-12",
     "resultados": {
       "d2d4 d7d5 c1f4": {
         "ok": true,
@@ -257,6 +315,70 @@
       "d2d4 g8f6 g1f3 e7e6 c1f4 c7c5 c2c3 c5d4 c3d4 b7b5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1f4 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1f4 g7g5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 16 puntos de chances: −0,1 → −2,0. Refutación: Axg5 Ag7 Cc3 d5 e3 c5"
+      },
+      "d2d4 g8f6 c1f4 g7g6 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1f4 g7g6 g1f3 f8g7 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1f4 g7g6 g1f3 f8g7 d4d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: +0,1 → −1,1. Refutación: c6 c4 cxd5 cxd5 d6 Cc3"
+      },
+      "d2d4 g8f6 c1f4 g7g6 g1f3 f8g7 e2e3 e8g8 f1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1f4 g7g6 g1f3 f8g7 e2e3 e8g8 f1e2 d7d6 h2h3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1f4 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1f4 c7c5 d4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1f4 c7c5 b1c3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,3 → −0,4. Refutación: cxd4 Dxd4 Cc6 Dd3 e5 Ag5"
+      },
+      "d2d4 g8f6 c1f4 c7c5 g1f3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: +0,3 → −0,5. Refutación: cxd4 Dxd4 d6 Dd3 Cbd7 Cc3"
+      },
+      "d2d4 g8f6 c1f4 c7c5 d4d5 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1f4 e7e6 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1f4 e7e6 e2e3 c7c5 c2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 g1f3 g7g6 b1c3 d7d5 c1f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 g1f3 g7g6 b1c3 d7d5 c1f4 f8g7 e2e3 e8g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
       }
     }
   }

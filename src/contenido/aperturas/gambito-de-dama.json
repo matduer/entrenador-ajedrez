@@ -196,6 +196,65 @@
           "texto": "7.Ae2? Ab7 y ...Cf6: el negro conserva el peón de más."
         }
       ]
+    },
+    "d2d4 d7d5 c2c4 e7e6 g1f3 g8f6 c1g5": {
+      "porQue": "Clava el caballo de f6 como en la línea principal, pero con el caballo en f3 en vez de c3."
+    },
+    "d2d4 d7d5 c2c4 e7e6 g1f3 g8f6 c1g5 h7h6": {
+      "porQue": "Le pregunta al alfil enseguida. Con el caballo en f3, retirarse a h4 permite ...dxc4 con juego cómodo, así que Stockfish prefiere el cambio en f6."
+    },
+    "d2d4 d7d5 c2c4 e7e6 g1f3 g8f6 c1g5 h7h6 g5f6": {
+      "porQue": "El negro se queda con la pareja de alfiles, pero el blanco gana tiempo para desarrollarse y presionar d5.",
+      "porQueNo": [
+        {
+          "uci": "g5h4",
+          "texto": "Ah4 dxc4: el blanco tiene que recuperar el peón y el negro se desarrolla sin problemas, por ejemplo Cc3 Ab4."
+        },
+        {
+          "uci": "c4d5",
+          "texto": "cxd5?? hxg5: el alfil estaba atacado."
+        }
+      ]
+    },
+    "d2d4 d7d5 c2c4 e7e6 g1f3 g8f6 c1g5 h7h6 g5f6 d8f6 b1c3": {
+      "porQue": "Desarrolla y presiona d5. El negro tiene los dos alfiles; el blanco, más desarrollo y control del centro."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 c7c5": {
+      "porQue": "Seudo-Tarrasch: contraataca d4 enseguida. El alfil de g5 dejó de cuidar b2, así que ...Db6 puede llegar con fuerza."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 c7c5 c4d5": {
+      "porQue": "Abre el juego antes de que el negro termine de desarrollarse.",
+      "porQueNo": [
+        {
+          "uci": "a2a3",
+          "texto": "a3? cxd4 Dxd4 Cc6: la dama blanca queda expuesta y el negro gana tiempos atacándola."
+        },
+        {
+          "uci": "a1c1",
+          "texto": "Tc1? cxd4 Dxd4 Cc6 y, como con a3, la dama tiene que moverse otra vez."
+        }
+      ]
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 c7c5 c4d5 c5d4": {
+      "porQue": "Lo más preciso: cambia en d4 antes de retomar en d5.",
+      "porQueNo": [
+        {
+          "uci": "d8b6",
+          "texto": "...Db6? Axf6 Dxb2 Tc1: el negro ganó un peón, pero el blanco tiene ventaja de desarrollo y la estructura negra quedó rota."
+        }
+      ]
+    },
+    "d2d4 d7d5 c2c4 d5c4 g1f3 g8f6 d1a4": {
+      "porQue": "Variante Mannheim: la dama recupera c4 enseguida, a costa de salir temprano."
+    },
+    "d2d4 d7d5 c2c4 d5c4 g1f3 g8f6 d1a4 b8c6": {
+      "porQue": "Tapa el jaque desarrollando una pieza. La dama blanca que recupere en c4 va a quedar expuesta a los ataques de las piezas menores negras.",
+      "porQueNo": [
+        {
+          "uci": "b7b5",
+          "texto": "...b5? Dxb5+ y el peón de c4 cae igual."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -402,6 +461,66 @@
       "d2d4 d7d5 c2c4 e7e6 b1c3 c7c6 g1f3 d5c4 a2a4 f8b4 e2e3 b7b5 f1e2 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 6 puntos de chances: +0,4 → −0,3. Refutación: Ab7 Ad2 Cf6 O-O Axc3 bxc3"
+      },
+      "d2d4 d7d5 c2c4 e7e6 g1f3 g8f6 c1g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 g1f3 g8f6 c1g5 h7h6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 g1f3 g8f6 c1g5 h7h6 g5f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 g1f3 g8f6 c1g5 h7h6 g5h4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 4 puntos de chances: +0,3 → −0,2. Refutación: g5 Ag3 Ce4 Cc3 Cc6 e3"
+      },
+      "d2d4 d7d5 c2c4 e7e6 g1f3 g8f6 c1g5 h7h6 c4d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 39 puntos de chances: +0,3 → −5,2. Refutación: hxg5 dxe6 Axe6 Cxg5 c5 Cxe6"
+      },
+      "d2d4 d7d5 c2c4 e7e6 g1f3 g8f6 c1g5 h7h6 g5f6 d8f6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 c7c5 c4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 c7c5 a2a3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 14 puntos de chances: +0,2 → −1,4. Refutación: cxd4 Dxd4 Cc6 Dd3 d4 Ce4"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 c7c5 a1c1 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 24 puntos de chances: +0,2 → −2,5. Refutación: cxd4 Dxd4 Cc6 Dh4 d4 Ce4"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 c7c5 c4d5 c5d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 c7c5 c4d5 d8b6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: −0,2 → −1,1. Refutación: Axf6 gxf6 e3 cxd4 Ab5+ Ad7"
+      },
+      "d2d4 d7d5 c2c4 d5c4 g1f3 g8f6 d1a4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 d5c4 g1f3 g8f6 d1a4 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 d5c4 g1f3 g8f6 d1a4 b7b5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: −0,1 → −1,3. Refutación: Dxb5+ Cbd7 g3 Tb8 Dxc4 e6"
       }
     }
   }

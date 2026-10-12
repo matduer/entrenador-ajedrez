@@ -110,6 +110,61 @@
     },
     "g1f3 d7d5 c2c4 d5d4 e2e3 b8c6 e3d4": {
       "porQue": "Abre la columna e y obliga al negro a decidir cómo retomar; 4.Cxd4 también es igual de bueno para Stockfish."
+    },
+    "g1f3 d7d5 g2g3 g8f6 f1g2 c7c6 e1g1": {
+      "porQue": "Enroca antes de decidir el plan central: c4, d3 con e4, o d4."
+    },
+    "g1f3 d7d5 g2g3 g8f6 f1g2 c7c6 e1g1 c8f5": {
+      "porQue": "El alfil sale antes de ...e6, como en la Eslava, así no queda encerrado."
+    },
+    "g1f3 d7d5 g2g3 g8f6 f1g2 c7c6 e1g1 c8f5 d2d3": {
+      "porQue": "Prepara Cbd2 y e4: el avance va a llegar ganando tiempo sobre el alfil de f5."
+    },
+    "g1f3 d7d5 g2g3 g8f6 f1g2 c7c6 e1g1 c8f5 d2d3 e7e6": {
+      "porQue": "El triángulo c6-d5-e6, sólido. Cuando llegue e4, el alfil puede retirarse a g6 o, con ...h6 jugado, a h7."
+    },
+    "g1f3 d7d5 g2g3 g8f6 f1g2 c7c6 e1g1 c8g4": {
+      "porQue": "Clava el caballo de f3 y hace más difícil el avance e4."
+    },
+    "g1f3 d7d5 g2g3 g8f6 f1g2 c7c6 e1g1 c8g4 h2h3": {
+      "porQue": "Le pregunta al alfil: si toma en f3, el blanco se queda con la pareja de alfiles."
+    },
+    "g1f3 d7d5 g2g3 g8f6 f1g2 c7c6 e1g1 c8g4 h2h3 g4h5": {
+      "porQue": "Mantiene la clavada. ...Axf3 también es jugable.",
+      "porQueNo": [
+        {
+          "uci": "h7h5",
+          "texto": "...h5?? hxg4 hxg4 Cg5: el negro abrió la columna h, pero no tiene ataque y quedó con una pieza de menos."
+        }
+      ]
+    },
+    "g1f3 d7d5 g2g3 c7c5": {
+      "porQue": "Ocupa espacio en el centro: el negro arma el centro clásico con ...Cc6 y ...e5.",
+      "porQueNo": [
+        {
+          "uci": "e7e5",
+          "texto": "...e5? regala el peón: Cxe5."
+        }
+      ]
+    },
+    "g1f3 d7d5 g2g3 c7c5 f1g2": {
+      "porQue": "Completa el fianchetto antes de decidir el plan central."
+    },
+    "g1f3 d7d5 g2g3 c7c5 f1g2 b8c6": {
+      "porQue": "Desarrolla y prepara ...e5."
+    },
+    "g1f3 d7d5 g2g3 c7c5 f1g2 b8c6 d2d4": {
+      "porQue": "Grünfeld invertida: el blanco ataca el centro con un tiempo de más. Si ...cxd4, Cxd4 y el alfil de g2 presiona d5 y c6.",
+      "porQueNo": [
+        {
+          "uci": "e1g1",
+          "texto": "Enrocar ya permite ...e5: el negro arma un centro ideal y el blanco queda sin juego."
+        },
+        {
+          "uci": "d2d3",
+          "texto": "d3? e5: el negro ocupa el centro con los dos peones y el blanco queda pasivo."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -131,7 +186,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-11",
+    "fecha": "2026-10-12",
     "resultados": {
       "g1f3": {
         "ok": true,
@@ -236,6 +291,66 @@
       "g1f3 d7d5 c2c4 d5d4 e2e3 b8c6 e3d4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "g1f3 d7d5 g2g3 g8f6 f1g2 c7c6 e1g1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "g1f3 d7d5 g2g3 g8f6 f1g2 c7c6 e1g1 c8f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "g1f3 d7d5 g2g3 g8f6 f1g2 c7c6 e1g1 c8f5 d2d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "g1f3 d7d5 g2g3 g8f6 f1g2 c7c6 e1g1 c8f5 d2d3 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "g1f3 d7d5 g2g3 g8f6 f1g2 c7c6 e1g1 c8g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "g1f3 d7d5 g2g3 g8f6 f1g2 c7c6 e1g1 c8g4 h2h3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "g1f3 d7d5 g2g3 g8f6 f1g2 c7c6 e1g1 c8g4 h2h3 g4h5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "g1f3 d7d5 g2g3 g8f6 f1g2 c7c6 e1g1 c8g4 h2h3 h7h5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 35 puntos de chances: −0,2 → −5,2. Refutación: hxg4 hxg4 Cg5 e5 d4 e4"
+      },
+      "g1f3 d7d5 g2g3 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "g1f3 d7d5 g2g3 e7e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: −0,2 → −1,4. Refutación: Cxe5 Ad6 d4 Cd7 Cxd7 Axd7"
+      },
+      "g1f3 d7d5 g2g3 c7c5 f1g2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "g1f3 d7d5 g2g3 c7c5 f1g2 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "g1f3 d7d5 g2g3 c7c5 f1g2 b8c6 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "g1f3 d7d5 g2g3 c7c5 f1g2 b8c6 e1g1 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,3 → −0,4. Refutación: e5 d3 Ae7 a4 Cf6 e4"
+      },
+      "g1f3 d7d5 g2g3 c7c5 f1g2 b8c6 d2d3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,3 → −0,4. Refutación: e5 c4 dxc4 Da4 Ad7 Dxc4"
       }
     }
   }

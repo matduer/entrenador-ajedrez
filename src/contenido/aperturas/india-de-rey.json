@@ -227,6 +227,21 @@
     },
     "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 f2f3 e8g8 c1g5 c7c5": {
       "porQue": "La respuesta más fuerte: ataca d4 enseguida, como en otras líneas del Sämisch."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 g1f3 e8g8 e2e3 d7d6": {
+      "porQue": "La estructura habitual de la India de Rey: después vienen ...e5 o ...c5."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 g1f3 e8g8 e2e3 d7d6 f1e2": {
+      "porQue": "Variante Semiclásica: desarrollo modesto. El blanco no ocupa el centro con e4 y apuesta a una posición sólida.",
+      "porQueNo": [
+        {
+          "uci": "c4c5",
+          "texto": "c5? dxc5 y el blanco cerró el centro sin ganar nada: su peón de d4 queda flojo."
+        }
+      ]
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 g1f3 e8g8 e2e3 d7d6 f1e2 e7e5": {
+      "porQue": "La ruptura natural: ataca d4 y abre la diagonal del alfil de c8."
     }
   },
   "fuentes": [
@@ -481,6 +496,22 @@
       "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 f2f3 e8g8 c1g5 c7c5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 g1f3 e8g8 e2e3 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 g1f3 e8g8 e2e3 d7d6 f1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 g1f3 e8g8 e2e3 d7d6 c4c5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 16 puntos de chances: +0,3 → −1,4. Refutación: dxc5 Ac4 cxd4 exd4 Cc6 O-O"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 g1f3 e8g8 e2e3 d7d6 f1e2 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
       }
     }
   }

@@ -139,6 +139,22 @@
     },
     "e2e4 g7g6 d2d4 f8g7 f1c4 d7d6": {
       "porQue": "Lo más sólido: tapa la diagonal del alfil de g7 sobre d4 pero prepara ...Cf6 y ...e6 para neutralizar al alfil de c4."
+    },
+    "e2e4 g7g6 d2d4 f8g7 b1c3 c7c5 d4d5": {
+      "porQue": "Lo más fuerte según Stockfish: gana espacio y bloquea la diagonal del alfil de g7. El negro termina en una Benoni con un tiempo de menos."
+    },
+    "e2e4 g7g6 d2d4 f8g7 b1c3 c7c5 g1f3": {
+      "porQue": "Desarrolla, pero le deja al negro elegir entre ...cxd4, que lleva a un Dragón Acelerado, y el Pterodáctilo ...Da5. Stockfish prefiere 4.d5.",
+      "inferior": true
+    },
+    "e2e4 g7g6 d2d4 f8g7 b1c3 c7c5 g1f3 c5d4": {
+      "porQue": "Lo mejor: cambia en d4 y transpone a una Siciliana Dragón Acelerado.",
+      "porQueNo": [
+        {
+          "uci": "d8a5",
+          "texto": "El Pterodáctilo, 4...Da5?!: el blanco juega 5.d5 y gana espacio con ventaja clara (para Stockfish, más de un peón)."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -313,6 +329,22 @@
       "e2e4 g7g6 d2d4 f8g7 f1c4 d7d6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 g7g6 d2d4 f8g7 b1c3 c7c5 d4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 g7g6 d2d4 f8g7 b1c3 c7c5 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere d5: +0,7 contra +0,3 (marcada como inferior pero jugable)"
+      },
+      "e2e4 g7g6 d2d4 f8g7 b1c3 c7c5 g1f3 c5d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 g7g6 d2d4 f8g7 b1c3 c7c5 g1f3 d8a5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,3 → −1,2. Refutación: d5 d6 Cd2 Cd7 Ae2 a6"
       }
     }
   }

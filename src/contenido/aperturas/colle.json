@@ -96,6 +96,15 @@
     },
     "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 b7b6 e1g1": {
       "porQue": "Contra el fianchetto de dama, el blanco enroca primero y elige después entre Cbd2 con e4 y el esquema Zukertort con b3."
+    },
+    "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 f8d6": {
+      "porQue": "Desarrollo simétrico: el alfil de d6 frena un futuro e4 y apunta al flanco de rey blanco."
+    },
+    "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 f8d6 e1g1": {
+      "porQue": "Enroca antes de decidir entre el Colle clásico (c3 y e4) y el Zukertort (b3 y Ab2)."
+    },
+    "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 f8d6 e1g1 e8g8 b2b3": {
+      "porQue": "Esquema Zukertort: el alfil de c1 irá a b2, desde donde apunta al enroque negro por la diagonal larga, y el caballo suele saltar a e5."
     }
   },
   "fuentes": [
@@ -121,7 +130,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-11",
+    "fecha": "2026-10-12",
     "resultados": {
       "d2d4 d7d5 g1f3 g8f6 e2e3": {
         "ok": true,
@@ -200,6 +209,18 @@
         "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
       },
       "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 b7b6 e1g1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 f8d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 f8d6 e1g1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 f8d6 e1g1 e8g8 b2b3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
       }

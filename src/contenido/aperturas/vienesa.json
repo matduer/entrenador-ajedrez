@@ -158,6 +158,19 @@
     },
     "e2e4 e7e5 b1c3 b8c6 g2g3 f8c5": {
       "porQue": "El alfil a la diagonal a7-g1 dificulta la futura ruptura f4."
+    },
+    "e2e4 e7e5 b1c3 b8c6 f2f4": {
+      "porQue": "El Gambito Vienés con ...Cc6 ya jugado. Es más dudoso que contra 2...Cf6: después de ...exf4 d4 Dh4+, el rey blanco tiene que caminar.",
+      "inferior": true
+    },
+    "e2e4 e7e5 b1c3 b8c6 f2f4 e5f4": {
+      "porQue": "Lo mejor: acepta el peón."
+    },
+    "e2e4 e7e5 b1c3 b8c6 f2f4 e5f4 d2d4": {
+      "porQue": "El Gambito Steinitz: el blanco toma el centro y acepta que el rey quede en e2 tras ...Dh4+."
+    },
+    "e2e4 e7e5 b1c3 b8c6 f2f4 e5f4 d2d4 d8h4": {
+      "porQue": "Lo más fuerte: el jaque saca al rey blanco de su casilla y le quita el enroque."
     }
   },
   "fuentes": [
@@ -332,6 +345,22 @@
       "e2e4 e7e5 b1c3 b8c6 g2g3 f8c5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 b8c6 f2f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 b8c6 f2f4 e5f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 b8c6 f2f4 e5f4 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 b8c6 f2f4 e5f4 d2d4 d8h4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
       }
     }
   }

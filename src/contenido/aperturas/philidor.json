@@ -71,7 +71,13 @@
       ]
     },
     "e2e4 e7e5 g1f3 d7d6 d2d4 e5d4": {
-      "porQue": "La forma más simple: cambia en el centro y busca un desarrollo cómodo."
+      "porQue": "La forma más simple: cambia en el centro y busca un desarrollo cómodo.",
+      "porQueNo": [
+        {
+          "uci": "f7f5",
+          "texto": "El Contragambito Philidor, 3...f5?!: 4.Ac4 o 4.exf5 y el blanco queda claramente mejor, porque el flanco de rey negro se abre antes de que el negro se desarrolle."
+        }
+      ]
     },
     "e2e4 e7e5 g1f3 d7d6 d2d4 e5d4 f3d4": {
       "porQue": "El caballo retoma centralizado."
@@ -178,7 +184,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-11",
+    "fecha": "2026-10-12",
     "resultados": {
       "e2e4 e7e5 g1f3 d7d6": {
         "ok": true,
@@ -219,6 +225,10 @@
       "e2e4 e7e5 g1f3 d7d6 d2d4 e5d4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 d7d6 d2d4 f7f5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 12 puntos de chances: −0,5 → −1,8. Refutación: Ac4 Cc6 Cc3 Ae7 dxe5 dxe5"
       },
       "e2e4 e7e5 g1f3 d7d6 d2d4 e5d4 f3d4": {
         "ok": true,

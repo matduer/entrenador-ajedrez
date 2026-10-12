@@ -554,6 +554,30 @@
     },
     "e2e4 e7e5 d1h5 b8c6 f1c4 g7g6 h5f3 g8f6": {
       "porQue": "Tapa f7 desarrollando otra pieza: el negro ya tiene más desarrollo y la dama blanca volverá a moverse."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 g8e7": {
+      "porQue": "Defensa Cozio: el caballo irá a g6 por e7, sin tapar el peón de f. Es pasiva: el blanco suele jugar c3 y d4 con ventaja de espacio."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 g8e7 e1g1": {
+      "porQue": "Enroca primero y prepara c3 y d4.",
+      "porQueNo": [
+        {
+          "uci": "c2c4",
+          "texto": "c4 no ayuda al centro y debilita d4: ...Cg6 y ...Ab4+ con juego cómodo para el negro."
+        }
+      ]
+    },
+    "e2e4 e7e5 d2d4": {
+      "porQue": "Partida del Centro: abre el juego enseguida, aunque el peón de d4 se va a cambiar muy temprano."
+    },
+    "e2e4 e7e5 d2d4 e5d4": {
+      "porQue": "Toma: si el blanco recupera con la dama, ...Cc6 la ataca ganando tiempo."
+    },
+    "e2e4 e7e5 d2d4 e5d4 g1f3": {
+      "porQue": "En vez de exponer la dama, desarrolla y deja la recuperación de d4 para después. Muchas veces transpone a la Escocesa."
+    },
+    "e2e4 e7e5 d2d4 e5d4 g1f3 b8c6": {
+      "porQue": "Lo más natural: defiende d4 y, tras Cxd4, se llega a la Escocesa."
     }
   },
   "fuentes": [
@@ -1148,6 +1172,34 @@
       "e2e4 e7e5 d1h5 b8c6 f1c4 g7g6 h5f3 g8f6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 g8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 g8e7 e1g1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 g8e7 c2c4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,5 → −0,1. Refutación: Cg6 d4 exd4 Cxd4 Ab4+ Cc3"
+      },
+      "e2e4 e7e5 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 d2d4 e5d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 d2d4 e5d4 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 d2d4 e5d4 g1f3 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
       }
     }
   }

@@ -252,6 +252,39 @@
           "texto": "5.Cc3? Cc6 6.Ce5 Dh4+: el rey blanco queda expuesto."
         }
       ]
+    },
+    "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 f1c4 g5g4 f3e5": {
+      "porQue": "Gambito Salvio: el caballo amenaza f7 en lugar de entregarse con O-O. Stockfish prefiere el Muzio (5.O-O): tras el Salvio, ...Dh4+ deja al rey blanco sin enroque.",
+      "inferior": true
+    },
+    "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 f1c4 g5g4 f3e5 d8h4": {
+      "porQue": "El jaque obliga al rey blanco a ir a f1 y lo deja sin enroque; por eso el Salvio se considera dudoso.",
+      "porQueNo": [
+        {
+          "uci": "f8g7",
+          "texto": "...Ag7? Axf7+ Rf8 y el blanco recupera material con el rey negro expuesto."
+        },
+        {
+          "uci": "d7d6",
+          "texto": "...d6? Cxf7: el caballo entra igual y ataca la dama y la torre."
+        }
+      ]
+    },
+    "e2e4 e7e5 f2f4 f8c5 g1f3 d7d6 f4e5": {
+      "porQue": "Lo más directo según Stockfish: abre la columna f para la torre."
+    },
+    "e2e4 e7e5 f2f4 f8c5 g1f3 d7d6 f4e5 d6e5 f1c4": {
+      "porQue": "Desarrolla apuntando a f7, el punto débil del negro con la columna f abierta.",
+      "porQueNo": [
+        {
+          "uci": "f3e5",
+          "texto": "Cxe5?? Dh4+: si g3, Dxe4+ ataca el rey y la torre de h1 a la vez. Es la trampa clásica de esta línea."
+        },
+        {
+          "uci": "d2d4",
+          "texto": "d4? exd4: el centro blanco desaparece y el alfil de c5 queda mejor que nunca."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -510,6 +543,38 @@
       "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 d2d4 g5g4 b1c3 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 7 puntos de chances: −0,5 → −1,3. Refutación: Cc6 Ce5 Dh4+ Re2 Cxe5 dxe5"
+      },
+      "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 f1c4 g5g4 f3e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere O-O: −1,2 contra −1,7 (marcada como inferior pero jugable)"
+      },
+      "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 f1c4 g5g4 f3e5 d8h4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,7 para el bando que mueve"
+      },
+      "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 f1c4 g5g4 f3e5 f8g7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 12 puntos de chances: +1,7 → +0,3. Refutación: Axf7+ Rf8 O-O d6 Axg8 dxe5"
+      },
+      "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 f1c4 g5g4 f3e5 d7d6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 28 puntos de chances: +1,7 → −1,4. Refutación: Cxf7 Dh4+ Rf1 Ag7 c3 b5"
+      },
+      "e2e4 e7e5 f2f4 f8c5 g1f3 d7d6 f4e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 f2f4 f8c5 g1f3 d7d6 f4e5 d6e5 f1c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 f2f4 f8c5 g1f3 d7d6 f4e5 d6e5 f3e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 41 puntos de chances: +0,0 → −6,1. Refutación: Dh4+ g3 Dxe4+ De2 Dxh1 d4"
+      },
+      "e2e4 e7e5 f2f4 f8c5 g1f3 d7d6 f4e5 d6e5 d2d4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: +0,0 → −1,1. Refutación: exd4 c3 Ag4 Ab5+ c6 Ac4"
       }
     }
   }

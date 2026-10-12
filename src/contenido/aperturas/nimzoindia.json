@@ -230,6 +230,15 @@
           "texto": "...h6!: si 10.Ah4 g5 11.Ag3, ...Cxe4 gana un peón; si 10.Axf6, el blanco entrega su alfil activo."
         }
       ]
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 g2g3": {
+      "porQue": "Variante Romanishin: el blanco se desarrolla como en la Catalana. Si el negro toma en c3, la pareja de alfiles y la diagonal larga compensan los peones doblados."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 g2g3 e8g8": {
+      "porQue": "Lo más simple: enroca y espera a ver el plan del blanco antes de elegir entre ...d5 y ...c5."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 g2g3 e8g8 f1g2": {
+      "porQue": "Completa el fianchetto. El caballo de g1 todavía puede ir a f3 o a h3."
     }
   },
   "fuentes": [
@@ -263,7 +272,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-12",
     "resultados": {
       "d2d4 g8f6 c2c4 e7e6": {
         "ok": true,
@@ -500,6 +509,18 @@
       "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1b3 c7c5 d4c5 b4c5 g1f3 b7b6 c1g5 c8b7 a1d1 e8g8 e2e4 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 7 puntos de chances: +0,1 → −0,6. Refutación: h6 Axf6 Dxf6 Ae2 Cc6 O-O"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 g2g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 g2g3 e8g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 g2g3 e8g8 f1g2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
       }
     }
   }

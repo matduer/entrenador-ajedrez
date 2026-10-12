@@ -171,6 +171,56 @@
     },
     "c2c4 e7e6 b1c3 g8f6 e2e4 d7d5": {
       "porQue": "Lo mejor: contraataca el centro enseguida; tras 4.e5 el negro juega ...d4 o ...Cfd7."
+    },
+    "c2c4 g8f6 b1c3 d7d5": {
+      "porQue": "Anglo-Grünfeld: el negro juega ...d5 y, tras el cambio en d5, sigue con un esquema de Grünfeld. A diferencia de la Grünfeld, el blanco todavía no se comprometió con d4."
+    },
+    "c2c4 g8f6 b1c3 d7d5 c4d5": {
+      "porQue": "Hay que cambiar ya: si no, ...d4 echa al caballo de c3 y el negro gana espacio con tiempo.",
+      "porQueNo": [
+        {
+          "uci": "g1f3",
+          "texto": "Cf3? d4: el caballo de c3 tiene que irse (Ca4 o Cb1) y el negro se queda con el centro."
+        },
+        {
+          "uci": "g2g3",
+          "texto": "g3? d4 Ca4: el caballo queda en el borde y el negro sigue con ...e5."
+        }
+      ]
+    },
+    "c2c4 g8f6 b1c3 d7d5 c4d5 f6d5 g2g3": {
+      "porQue": "Fianchetto: el alfil de g2 va a presionar el caballo de d5 y toda la diagonal larga."
+    },
+    "c2c4 g8f6 b1c3 d7d5 c4d5 f6d5 g2g3 g7g6 f1g2": {
+      "porQue": "Ataca el caballo de d5, que solo defiende la dama."
+    },
+    "c2c4 g8f6 b1c3 d7d5 c4d5 f6d5 g2g3 g7g6 f1g2 d5c3": {
+      "porQue": "Cambia antes de tener que retirarse. El blanco queda con peones doblados en c, pero gana la columna b semiabierta.",
+      "porQueNo": [
+        {
+          "uci": "f8g7",
+          "texto": "...Ag7?? Axd5: el caballo de d5 se pierde, porque si ...Dxd5, Cxd5."
+        },
+        {
+          "uci": "c7c5",
+          "texto": "...c5?? deja el caballo sin apoyo: Cxd5 y el blanco gana una pieza."
+        }
+      ]
+    },
+    "c2c4 g8f6 b1c3 d7d5 c4d5 f6d5 g2g3 g7g6 f1g2 d5c3 b2c3 f8g7 a1b1": {
+      "porQue": "La torre a la columna b semiabierta presiona b7 y le complica el desarrollo al alfil de c8."
+    },
+    "c2c4 f7f5": {
+      "porQue": "Anglo-Holandesa: el negro juega la Holandesa contra la Inglesa y controla e4 desde el principio."
+    },
+    "c2c4 f7f5 g1f3": {
+      "porQue": "Desarrolla y controla e5. Más adelante el blanco puede elegir entre d4, que transpone a la Holandesa, o seguir sin d4."
+    },
+    "c2c4 f7f5 g1f3 g8f6 g2g3": {
+      "porQue": "El fianchetto es lo más natural: la diagonal larga apunta al flanco de rey, que ...f5 dejó debilitado."
+    },
+    "c2c4 f7f5 g1f3 g8f6 g2g3 g7g6": {
+      "porQue": "El esquema Leningrado: ...Ag7, ...O-O y ...d6, con la ruptura ...e5 más adelante."
     }
   },
   "fuentes": [
@@ -364,6 +414,62 @@
       "c2c4 e7e6 b1c3 g8f6 e2e4 d7d5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "c2c4 g8f6 b1c3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "c2c4 g8f6 b1c3 d7d5 c4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "c2c4 g8f6 b1c3 d7d5 g1f3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: +0,4 → −0,8. Refutación: d4 Ca4 Cc6 d3 e5 a3"
+      },
+      "c2c4 g8f6 b1c3 d7d5 g2g3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 12 puntos de chances: +0,4 → −0,9. Refutación: d4 Ca4 e5 a3 h6 b4"
+      },
+      "c2c4 g8f6 b1c3 d7d5 c4d5 f6d5 g2g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "c2c4 g8f6 b1c3 d7d5 c4d5 f6d5 g2g3 g7g6 f1g2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "c2c4 g8f6 b1c3 d7d5 c4d5 f6d5 g2g3 g7g6 f1g2 d5c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "c2c4 g8f6 b1c3 d7d5 c4d5 f6d5 g2g3 g7g6 f1g2 f8g7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 39 puntos de chances: −0,5 → −7,2. Refutación: Cxd5 a5 Cc3 O-O d3 a4"
+      },
+      "c2c4 g8f6 b1c3 d7d5 c4d5 f6d5 g2g3 g7g6 f1g2 c7c5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 39 puntos de chances: −0,5 → −7,2. Refutación: Cxd5 Ag7 Ce3 O-O h4 a5"
+      },
+      "c2c4 g8f6 b1c3 d7d5 c4d5 f6d5 g2g3 g7g6 f1g2 d5c3 b2c3 f8g7 a1b1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "c2c4 f7f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "c2c4 f7f5 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "c2c4 f7f5 g1f3 g8f6 g2g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "c2c4 f7f5 g1f3 g8f6 g2g3 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
       }
     }
   }
