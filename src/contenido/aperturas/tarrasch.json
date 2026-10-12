@@ -103,6 +103,48 @@
     },
     "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 c5d4 d1d4 b8c6 d4d1 e6d5 d1d5 c8d7": {
       "porQue": "El precio del gambito: el negro ya no tiene el peón, pero sí varias jugadas de desarrollo de ventaja. Sigue ...Cf6, ...Ac5 y el enroque."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5 c5d4 f3d4 h7h6 g5e3": {
+      "porQue": "El alfil se retira sobreprotegiendo d4, la casilla clave delante del peón aislado.",
+      "porQueNo": [
+        {
+          "uci": "g5h4",
+          "texto": "Ah4? g5: el alfil queda sin casillas y el negro gana material."
+        }
+      ]
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5 c5d4 f3d4 h7h6 g5e3 f8e8": {
+      "porQue": "Una jugada sana y profunda, según Schandorff: prepara el contrajuego por la columna e, por ejemplo con ...Af8."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5 c5d4 f3d4 h7h6 g5e3 f8e8 d1a4": {
+      "porQue": "La propuesta de Schandorff, más agresiva que la Db3 de Karpov: la dama ataca al caballo de c6."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5 c5d4 f3d4 h7h6 g5e3 f8e8 d1b3": {
+      "porQue": "La preparación de Karpov para el Mundial de 1984: presiona d5 y obliga al caballo negro a ir a a5, una casilla mala, para echar a la dama."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5 c5d4 f3d4 h7h6 g5e3 c8g4": {
+      "porQue": "Desarrolla atacando e2. Para Schandorff, el blanco consigue presión con 12.Da4 Dd7 13.Tfd1."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5 c5c4 f3e5": {
+      "porQue": "Muy molesto: si ...Cxe5, dxe5 y el negro pierde el peón de d5 (Schandorff). El blanco ataca el centro negro, que ...c4 dejó sin tensión."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5 c5c4 f3e5 c8e6": {
+      "porQue": "Hay que reforzar d5."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5 c5c4 f3e5 c8e6 b2b3": {
+      "porQue": "Sigue con la estrategia agresiva y no le da tiempo al negro para consolidar la cadena."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5 c8e6 d4c5": {
+      "porQue": "Según Schandorff, así el blanco fuerza un final superior, con buenas chances de ganar y casi sin riesgo."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5 c8e6 d4c5 e7c5 g5f6 d8f6 c3d5 f6b2": {
+      "porQue": "Restablece el material: se viene una transición instructiva a un final.",
+      "porQueNo": [
+        {
+          "uci": "f6f5",
+          "texto": "...Df5? Cf4: el negro quedó con un peón de menos y sin compensación."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -123,12 +165,16 @@
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«Queen's Gambit Declined», «Tarrasch Defence»"
+    },
+    {
+      "titulo": "Lars Schandorff — Playing the Queen's Gambit: A Grandmaster Guide (Quality Chess, 2009)",
+      "capitulo": "cap. 6, «The Tarrasch» (partidas 52 a 55)"
     }
   ],
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-11",
+    "fecha": "2026-10-12",
     "resultados": {
       "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5": {
         "ok": true,
@@ -221,6 +267,54 @@
       "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 c5d4 d1d4 b8c6 d4d1 e6d5 d1d5 c8d7": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5 c5d4 f3d4 h7h6 g5e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5 c5d4 f3d4 h7h6 g5h4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 36 puntos de chances: +0,5 → −4,1. Refutación: g5 Dc1 gxh4 Dxh6 Cg4 Cxc6"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5 c5d4 f3d4 h7h6 g5e3 f8e8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5 c5d4 f3d4 h7h6 g5e3 f8e8 d1a4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5 c5d4 f3d4 h7h6 g5e3 f8e8 d1b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5 c5d4 f3d4 h7h6 g5e3 c8g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5 c5c4 f3e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5 c5c4 f3e5 c8e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5 c5c4 f3e5 c8e6 b2b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5 c8e6 d4c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5 c8e6 d4c5 e7c5 g5f6 d8f6 c3d5 f6b2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c5 c4d5 e6d5 g1f3 b8c6 g2g3 g8f6 f1g2 f8e7 e1g1 e8g8 c1g5 c8e6 d4c5 e7c5 g5f6 d8f6 c3d5 f6f5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,5 → −1,3. Refutación: Cf4 Tad8 Dc1 Ad6 Cxe6 Dxe6"
       }
     }
   }
