@@ -171,6 +171,45 @@
     },
     "e2e4 e7e5 b1c3 b8c6 f2f4 e5f4 d2d4 d8h4": {
       "porQue": "Lo más fuerte: el jaque saca al rey blanco de su casilla y le quita el enroque."
+    },
+    "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 f4e5": {
+      "porQue": "Toma en e5 y gana espacio; el negro recupera el peón ocupando e4 con el caballo."
+    },
+    "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 f4e5 f6e4 d2d3 d8h4": {
+      "porQue": "Jaque que obliga al blanco a debilitarse con g3."
+    },
+    "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 f4e5 f6e4 d1f3": {
+      "porQue": "Ataca el caballo de e4 y apunta a f7."
+    },
+    "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 f4e5 f6e4 d1f3 f7f5": {
+      "porQue": "Defiende el caballo con el peón f."
+    },
+    "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 e4d5": {
+      "porQue": "Cambia en el centro."
+    },
+    "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 e4d5 e5e4": {
+      "porQue": "Avanza el peón para ganar espacio y quitarle f3 al caballo de g1."
+    },
+    "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 e4d5 e5e4 d2d3": {
+      "porQue": "Ataca el peón de e4 para deshacer la punta del negro."
+    },
+    "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 e4d5 e5e4 d2d3 f8b4": {
+      "porQue": "Clava el caballo de c3, que defendía e4."
+    },
+    "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 e4d5 e5e4 d2d3 f8b4 c1d2": {
+      "porQue": "Rompe la clavada."
+    },
+    "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 e4d5 e5e4 d2d3 f8b4 c1d2 e4e3": {
+      "porQue": "Entrega el peón para abrir líneas y estorbar el desarrollo blanco."
+    },
+    "e2e4 e7e5 b1c3 g8f6 g2g3 d7d5": {
+      "porQue": "Golpea en el centro aprovechando que el blanco gastó un tiempo en g3."
+    },
+    "e2e4 e7e5 b1c3 g8f6 g2g3 d7d5 e4d5": {
+      "porQue": "Cambia en d5."
+    },
+    "e2e4 e7e5 b1c3 g8f6 g2g3 d7d5 e4d5 c7c6": {
+      "porQue": "En vez de retomar enseguida, ataca el peón de d5 con otro peón para desarrollarse rápido."
     }
   },
   "fuentes": [
@@ -361,6 +400,58 @@
       "e2e4 e7e5 b1c3 b8c6 f2f4 e5f4 d2d4 d8h4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 f4e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 f4e5 f6e4 d2d3 d8h4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 f4e5 f6e4 d1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 f4e5 f6e4 d1f3 f7f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 e4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 e4d5 e5e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 e4d5 e5e4 d2d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 e4d5 e5e4 d2d3 f8b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 e4d5 e5e4 d2d3 f8b4 c1d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6 f2f4 d7d5 e4d5 e5e4 d2d3 f8b4 c1d2 e4e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6 g2g3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6 g2g3 d7d5 e4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 b1c3 g8f6 g2g3 d7d5 e4d5 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
       }
     }
   }

@@ -142,19 +142,45 @@ export type SaleDeLaFamilia = (ucis: string[]) => boolean
 /** Grupo de una apertura según su primera jugada: las de flanco transponen mucho entre sí sin cambiar de carácter. */
 const grupo = (primera: string | undefined) => (primera === 'e2e4' ? 'e4' : primera === 'd2d4' ? 'd4' : 'flanco')
 
+/** Mínimo de notas propias de una explicación en una familia para que esa familia cuente como suya. */
+const NOTAS_FAMILIA_PROPIA = 3
+
 /**
- * Una línea sale de la apertura del curso cuando su posición con nombre más profunda está registrada
- * en el catálogo bajo otra familia y con una primera jugada de otro grupo (1.e4, 1.d4 o de flanco):
- * 1.c4 Cf6 2.d4 g6 3.Cc3 Ag7 4.e4 es la India de Rey (1.d4 Cf6 2.c4 g6…). No cuenta pasar de la Réti a
- * la Inglesa ni de una Najdorf a una posición con nombre de Scheveningen: las familias del catálogo no
- * son una jerarquía limpia y esas transposiciones no cambian el carácter de la apertura.
+ * Una línea sale de la apertura del curso cuando su posición con nombre más profunda es de otra familia
+ * del catálogo que la raíz y además:
+ * - es de otro grupo de primera jugada (1.e4, 1.d4 o flanco): 1.c4 Cf6 2.d4 g6 3.Cc3 Ag7 4.e4 es la
+ *   India de Rey; o
+ * - fuera de las de flanco, es la familia de la raíz de otra explicación y no es «propia» de esta (una
+ *   donde la explicación tiene notas, como la Española y la Italiana en 1.e4 e5): en la India de Rey,
+ *   3...d5 es la Grünfeld.
+ * Entre las de flanco no cuenta: la Réti que pasa a la Inglesa no cambia de carácter. Tampoco cuentan
+ * los nombres de otra familia sin explicación propia: las familias del catálogo no son una jerarquía
+ * limpia (una Najdorf puede tener nombre de Scheveningen sin dejar de ser Siciliana).
  */
 export function criterioFamilia(catalogo: Catalogo, raiz: string[]): SaleDeLaFamilia {
-  const familia = clasificar(catalogo, raiz, 200)?.familia
+  const r = raiz.join(' ')
+  const propias = new Set<string>()
+  const raizFamilia = clasificar(catalogo, raiz, 200)?.familia
+  if (raizFamilia) propias.add(raizFamilia)
+  const cuenta = new Map<string, number>()
+  for (const e of EXPLICACIONES.filter((x) => x.raiz === r))
+    for (const clave of Object.keys(e.notas)) {
+      const f = clasificar(catalogo, clave.split(' '), 200)?.familia
+      if (f) cuenta.set(f, (cuenta.get(f) ?? 0) + 1)
+    }
+  for (const [f, n] of cuenta) if (n >= NOTAS_FAMILIA_PROPIA) propias.add(f)
+  const deOtras = new Set(
+    EXPLICACIONES.filter((e) => e.raiz !== r)
+      .map((e) => clasificar(catalogo, e.raiz.split(' '), 200)?.familia)
+      .filter((f): f is string => f !== undefined && !propias.has(f)),
+  )
   const g = grupo(raiz[0])
   return (ucis) => {
     const a = clasificar(catalogo, ucis, 200)
-    return a !== undefined && a.familia !== familia && grupo(a.ucis[0]) !== g
+    if (!a || a.familia === raizFamilia) return false
+    if (grupo(a.ucis[0]) !== g) return true
+    // «Neo-Grünfeld Defense» cuenta como la Grünfeld.
+    return g !== 'flanco' && !propias.has(a.familia) && [...deOtras].some((f) => a.familia.includes(f))
   }
 }
 
