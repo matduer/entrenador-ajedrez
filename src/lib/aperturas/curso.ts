@@ -406,3 +406,23 @@ export function transposiciones(todas: string[][], prefijo: string[], jugada: st
   }
   return r
 }
+
+/**
+ * Borra el repaso de las líneas de esta apertura con este color (las que empiezan por la raíz,
+ * incluidas las que quedaron fuera del curso cuando cambió). No toca las de otra apertura de «Mis
+ * aperturas» con una raíz más larga dentro de esta (la Najdorf dentro de la Siciliana) ni las
+ * jugadas guardadas como propias. Devuelve cuántas líneas se reiniciaron.
+ */
+export async function reiniciarProgreso(explicacion: Explicacion, color: Color): Promise<number> {
+  const raiz = explicacion.raiz
+  const otras = (await leerMisAperturas())[color]
+    .map((id) => EXPLICACIONES.find((e) => e.id === id)?.raiz)
+    .filter((r): r is string => r !== undefined && r !== raiz && r.startsWith(raiz + ' '))
+  const empieza = (linea: string, r: string) => linea === r || linea.startsWith(r + ' ')
+  const ids = (await db.repasosLineas.where('color').equals(color).primaryKeys()).filter((id) => {
+    const linea = id.slice(color.length + 1)
+    return empieza(linea, raiz) && !otras.some((r) => empieza(linea, r))
+  })
+  await db.repasosLineas.bulkDelete(ids)
+  return ids.length
+}

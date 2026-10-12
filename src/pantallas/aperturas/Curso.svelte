@@ -1,6 +1,6 @@
 <script lang="ts">
   import { lineaConNumeros } from '../../lib/ajedrez/posicion.ts'
-  import { armarCurso, claveLeccion, estadoCurso, guardarEleccion, posicionesDelRival, type Curso, type EstadoCurso, type Leccion } from '../../lib/aperturas/curso.ts'
+  import { armarCurso, claveLeccion, estadoCurso, guardarEleccion, posicionesDelRival, reiniciarProgreso, type Curso, type EstadoCurso, type Leccion } from '../../lib/aperturas/curso.ts'
   import { descargarFrecuencias } from '../../lib/aperturas/popularidad.ts'
   import type { Explicacion } from '../../lib/aperturas/explicaciones.ts'
   import { idLinea } from '../../lib/aperturas/repertorio.ts'
@@ -64,6 +64,14 @@
   async function salirDeSesion() {
     sesion = undefined
     if (curso) estado = await estadoCurso(curso)
+  }
+
+  /** Reinicio del progreso: primero se pide confirmación; después se informa cuántas líneas se reiniciaron. */
+  let reinicio = $state<'confirmar' | number>()
+
+  async function reiniciar() {
+    reinicio = await reiniciarProgreso(explicacion, color)
+    await cargar()
   }
 
   const textoEstado = { completa: 'Aprendida', disponible: 'Disponible', bloqueada: 'Se habilita al terminar la anterior' }
@@ -148,7 +156,24 @@
       </ol>
     {/if}
 
-    <button class="boton enlace quitar" onclick={alQuitar}>Quitar de mis aperturas</button>
+    <div class="pie">
+      {#if reinicio === 'confirmar'}
+        <p>
+          Se borra el progreso de todas las líneas de {explicacion.nombre} con {color === 'white' ? 'blancas' : 'negras'}: vuelven a estar
+          sin aprender y salen del repaso. Las jugadas que guardaste como propias se mantienen. No se puede deshacer.
+        </p>
+        <div class="fila">
+          <button class="boton" onclick={reiniciar}>Sí, reiniciar el progreso</button>
+          <button class="boton enlace" onclick={() => (reinicio = undefined)}>Cancelar</button>
+        </div>
+      {:else}
+        {#if typeof reinicio === 'number'}<p class="suave">Progreso reiniciado: {reinicio} línea{reinicio === 1 ? '' : 's'}.</p>{/if}
+        <div class="fila">
+          <button class="boton enlace" onclick={() => (reinicio = 'confirmar')}>Reiniciar el progreso</button>
+          <button class="boton enlace" onclick={alQuitar}>Quitar de mis aperturas</button>
+        </div>
+      {/if}
+    </div>
   {/if}
 {/if}
 
@@ -229,7 +254,10 @@
     color: var(--texto-suave);
     font-size: 0.82rem;
   }
-  .quitar {
+  .pie {
     margin-top: 18px;
+  }
+  .pie p {
+    margin: 0 0 8px;
   }
 </style>
