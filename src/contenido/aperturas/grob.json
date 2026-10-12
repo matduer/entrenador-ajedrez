@@ -198,6 +198,9 @@
     },
     "g2g4 d7d5 e2e4 d5e4 b1c3 h7h5": {
       "porQue": "Ataca el peón de g4."
+    },
+    "g2g4 d7d5 f1g2 c7c6 g4g5": {
+      "porQue": "Gana espacio en el flanco de rey."
     }
   },
   "fuentes": [
@@ -403,6 +406,10 @@
       "g2g4 d7d5 e2e4 d5e4 b1c3 h7h5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +1,3 para el bando que mueve"
+      },
+      "g2g4 d7d5 f1g2 c7c6 g4g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,1 para el bando que mueve"
       }
     }
   }

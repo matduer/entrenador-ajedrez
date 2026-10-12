@@ -98,6 +98,21 @@
     "e2e4 e7e5 d2d4 e5d4 c2c3 d4c3 f1c4 c3b2 c1b2 d7d5": {
       "porQue": "Devuelve material para frenar el ataque: abre el alfil de c8 y corta la diagonal del alfil de c4.",
       "inferior": true
+    },
+    "e2e4 e7e5 d2d4 e5d4 c2c3 d4c3 f1c4 c3b2 c1b2 d7d5 c4d5": {
+      "porQue": "Recupera el peón y apunta a f7."
+    },
+    "e2e4 e7e5 d2d4 e5d4 c2c3 d7d5 e4d5": {
+      "porQue": "Toma el peón."
+    },
+    "e2e4 e7e5 d2d4 e5d4 c2c3 d7d5 e4d5 d8d5": {
+      "porQue": "Retoma con la dama."
+    },
+    "e2e4 e7e5 d2d4 e5d4 c2c3 d7d5 e4d5 d8d5 c3d4": {
+      "porQue": "Retoma y se queda con el peón central."
+    },
+    "e2e4 e7e5 d2d4 e5d4 c2c3 d7d5 e4d5 d8d5 c3d4 b8c6": {
+      "porQue": "Desarrolla y presiona d4."
     }
   },
   "fuentes": [
@@ -200,6 +215,26 @@
       "e2e4 e7e5 d2d4 e5d4 c2c3 d4c3 f1c4 c3b2 c1b2 d7d5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18) prefiere Cf6: +0,6 contra −0,0 (marcada como inferior pero jugable)"
+      },
+      "e2e4 e7e5 d2d4 e5d4 c2c3 d4c3 f1c4 c3b2 c1b2 d7d5 c4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 d2d4 e5d4 c2c3 d7d5 e4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 d2d4 e5d4 c2c3 d7d5 e4d5 d8d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 d2d4 e5d4 c2c3 d7d5 e4d5 d8d5 c3d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 d2d4 e5d4 c2c3 d7d5 e4d5 d8d5 c3d4 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
       }
     }
   }

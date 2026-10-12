@@ -200,6 +200,23 @@
     "b1c3 g8f6 g2g4": {
       "porQue": "Ataca el caballo con un peón de flanco a costa de debilitarse.",
       "inferior": true
+    },
+    "b1c3 d7d5 f2f4 d5d4 c3e4 c7c5": {
+      "porQue": "Sostiene d4 y gana espacio.",
+      "inferior": true
+    },
+    "b1c3 d7d5 e2e3": {
+      "porQue": "Abre el alfil de f1 y prepara d4 o f4."
+    },
+    "b1c3 d7d5 e2e3 e7e5": {
+      "porQue": "Ocupa el centro con los dos peones."
+    },
+    "b1c3 d7d5 d2d3": {
+      "porQue": "Prepara e4 con apoyo.",
+      "inferior": true
+    },
+    "b1c3 d7d5 d2d3 g8f6": {
+      "porQue": "Desarrolla y controla e4."
     }
   },
   "fuentes": [
@@ -417,6 +434,26 @@
       "b1c3 g8f6 g2g4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18) prefiere e4: +0,1 contra −0,7 (marcada como inferior pero jugable)"
+      },
+      "b1c3 d7d5 f2f4 d5d4 c3e4 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Cf6: +0,4 contra −0,0 (marcada como inferior pero jugable)"
+      },
+      "b1c3 d7d5 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "b1c3 d7d5 e2e3 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "b1c3 d7d5 d2d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere d4: +0,0 contra −0,4 (marcada como inferior pero jugable)"
+      },
+      "b1c3 d7d5 d2d3 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
       }
     }
   }

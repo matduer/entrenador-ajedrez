@@ -216,6 +216,12 @@
     "e2e4 e7e5 g1f3 f7f5 d2d4": {
       "porQue": "Según Stockfish es un error: era mejor 3. Cxe5 (+1,5 contra +0,5, para el bando que juega).",
       "error": true
+    },
+    "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 d2d4 d7d6 e5c4 f5e4 b1c3": {
+      "porQue": "Desarrolla y ataca e4."
+    },
+    "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 d2d4 d7d6 e5c4 f5e4 b1c3 f6g6": {
+      "porQue": "Defiende e4 y presiona g2."
     }
   },
   "fuentes": [
@@ -454,6 +460,14 @@
       "e2e4 e7e5 g1f3 f7f5 d2d4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18) confirma el error: pierde 0.190"
+      },
+      "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 d2d4 d7d6 e5c4 f5e4 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 d2d4 d7d6 e5c4 f5e4 b1c3 f6g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,6 para el bando que mueve"
       }
     }
   }

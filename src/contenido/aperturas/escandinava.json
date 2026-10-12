@@ -218,6 +218,52 @@
     },
     "e2e4 d7d5 e4d5 g8f6 d2d4 c7c6 d5c6": {
       "porQue": "Toma el peón."
+    },
+    "e2e4 d7d5 g1f3": {
+      "porQue": "Según Stockfish es un error: era mejor 2. exd5 (+0,6 contra −0,9, para el bando que juega).",
+      "error": true
+    },
+    "e2e4 d7d5 g1f3 d5e4": {
+      "porQue": "Acepta el peón."
+    },
+    "e2e4 d7d5 g1f3 d5e4 f3g5": {
+      "porQue": "Ataca el peón de e4 y apunta a f7."
+    },
+    "e2e4 d7d5 g1f3 d5e4 f3g5 g8f6": {
+      "porQue": "Desarrolla y defiende e4.",
+      "inferior": true
+    },
+    "e2e4 d7d5 g1f3 d5e4 f3g5 g8f6 b1c3": {
+      "porQue": "Según Stockfish es un error: era mejor 4. Ac4 (−0,3 contra −1,1, para el bando que juega).",
+      "error": true
+    },
+    "e2e4 d7d5 g1f3 d5e4 f3g5 g8f6 b1c3 c8f5": {
+      "porQue": "Defiende e4 con el alfil."
+    },
+    "e2e4 d7d5 g1f3 d5e4 f3g5 g8f6 b1c3 c8f5 d1e2": {
+      "porQue": "Según Stockfish es un error: era mejor 5. d3 (−1,0 contra −1,9, para el bando que juega).",
+      "error": true
+    },
+    "e2e4 d7d5 g1f3 d5e4 f3g5 g8f6 b1c3 c8f5 d1e2 d8d4": {
+      "porQue": "Según Stockfish es un error: era mejor 5... Cc6 (+1,9 contra −5,9, para el bando que juega).",
+      "error": true
+    },
+    "e2e4 d7d5 b1c3": {
+      "porQue": "Según Stockfish es un error: era mejor 2. exd5 (+0,6 contra −0,5, para el bando que juega).",
+      "error": true
+    },
+    "e2e4 d7d5 b1c3 d5e4": {
+      "porQue": "Toma el peón.",
+      "inferior": true
+    },
+    "e2e4 d7d5 b1c3 d5e4 c3e4 e7e5": {
+      "porQue": "Ocupa el centro con el peón."
+    },
+    "e2e4 d7d5 e4d5 d8d5 b1c3 d5a5 d2d4 g8f6 g1f3 c8f5 f3e5": {
+      "porQue": "Centraliza el caballo y prepara g4 o Ac4."
+    },
+    "e2e4 d7d5 e4d5 d8d5 b1c3 d5a5 d2d4 g8f6 g1f3 c8f5 f3e5 c7c6": {
+      "porQue": "Da una casilla de retirada a la dama y controla d5 y b5."
     }
   },
   "fuentes": [
@@ -468,6 +514,58 @@
       "e2e4 d7d5 e4d5 g8f6 d2d4 c7c6 d5c6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,9 para el bando que mueve"
+      },
+      "e2e4 d7d5 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) confirma el error: pierde 0.283"
+      },
+      "e2e4 d7d5 g1f3 d5e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,9 para el bando que mueve"
+      },
+      "e2e4 d7d5 g1f3 d5e4 f3g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "e2e4 d7d5 g1f3 d5e4 f3g5 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere e5: +1,1 contra +0,3 (marcada como inferior pero jugable)"
+      },
+      "e2e4 d7d5 g1f3 d5e4 f3g5 g8f6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) confirma el error: pierde 0.150"
+      },
+      "e2e4 d7d5 g1f3 d5e4 f3g5 g8f6 b1c3 c8f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,0 para el bando que mueve"
+      },
+      "e2e4 d7d5 g1f3 d5e4 f3g5 g8f6 b1c3 c8f5 d1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) confirma el error: pierde 0.159"
+      },
+      "e2e4 d7d5 g1f3 d5e4 f3g5 g8f6 b1c3 c8f5 d1e2 d8d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) confirma el error: pierde 1.134"
+      },
+      "e2e4 d7d5 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) confirma el error: pierde 0.205"
+      },
+      "e2e4 d7d5 b1c3 d5e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere d4: +0,5 contra −0,1 (marcada como inferior pero jugable)"
+      },
+      "e2e4 d7d5 b1c3 d5e4 c3e4 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4d5 d8d5 b1c3 d5a5 d2d4 g8f6 g1f3 c8f5 f3e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4d5 d8d5 b1c3 d5a5 d2d4 g8f6 g1f3 c8f5 f3e5 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
       }
     }
   }

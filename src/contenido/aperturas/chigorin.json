@@ -211,6 +211,9 @@
     },
     "d2d4 d7d5 c2c4 b8c6 g1f3 c8g4 c4d5 g4f3 g2f3 d8d5 e2e3 e7e5 b1c3 f8b4": {
       "porQue": "Clava el caballo de c3."
+    },
+    "d2d4 d7d5 c2c4 b8c6 b1c3 g8f6 g1f3 c8g4 c4d5 f6d5 e2e4 g4f3 g2f3 d5c3 b2c3 e7e5": {
+      "porQue": "Ocupa el centro."
     }
   },
   "fuentes": [
@@ -453,6 +456,10 @@
       "d2d4 d7d5 c2c4 b8c6 g1f3 c8g4 c4d5 g4f3 g2f3 d8d5 e2e3 e7e5 b1c3 f8b4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 b8c6 b1c3 g8f6 g1f3 c8g4 c4d5 f6d5 e2e4 g4f3 g2f3 d5c3 b2c3 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,5 para el bando que mueve"
       }
     }
   }

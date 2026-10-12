@@ -139,6 +139,27 @@
     },
     "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 c1f4 b8c6 g1f3 f8b4 b1d2 d8e7 a2a3 g4e5": {
       "porQue": "El negro recupera el peón con buena actividad: el Budapest cumplió su objetivo, aunque las blancas conservan la pareja de alfiles."
+    },
+    "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 c1f4 b8c6": {
+      "porQue": "Desarrolla y ataca e5."
+    },
+    "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 c1f4 b8c6 g1f3": {
+      "porQue": "Defiende e5."
+    },
+    "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 c1f4 b8c6 g1f3 f8b4": {
+      "porQue": "Desarrolla con jaque."
+    },
+    "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 c1f4 b8c6 g1f3 f8b4 b1d2": {
+      "porQue": "Tapa el jaque."
+    },
+    "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 c1f4 b8c6 g1f3 f8b4 b1d2 d8e7 a2a3": {
+      "porQue": "Pregunta al alfil."
+    },
+    "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 e2e4 g4e5": {
+      "porQue": "Recupera el peón."
+    },
+    "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 g1f3 f8c5": {
+      "porQue": "Desarrolla apuntando a f2."
     }
   },
   "fuentes": [
@@ -160,7 +181,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-11",
+    "fecha": "2026-10-12",
     "resultados": {
       "d2d4 g8f6 c2c4 e7e5": {
         "ok": true,
@@ -277,6 +298,34 @@
       "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 c1f4 b8c6 g1f3 f8b4 b1d2 d8e7 a2a3 g4e5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 c1f4 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 c1f4 b8c6 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 c1f4 b8c6 g1f3 f8b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 c1f4 b8c6 g1f3 f8b4 b1d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 c1f4 b8c6 g1f3 f8b4 b1d2 d8e7 a2a3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 e2e4 g4e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e5 d4e5 f6g4 g1f3 f8c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
       }
     }
   }

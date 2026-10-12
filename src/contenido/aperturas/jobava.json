@@ -119,6 +119,21 @@
     },
     "d2d4 d7d5 b1c3 g8f6 c1f4 g7g6 e2e3 f8g7 h2h4": {
       "porQue": "Lo más agresivo, típico del Jobava: el peón de h avanza contra el enroque fianchettado."
+    },
+    "d2d4 d7d5 b1c3 g8f6 c1f4 e7e6 c3b5 f8b4": {
+      "porQue": "Da jaque para ganar tiempo frente a la amenaza Cxc7+."
+    },
+    "d2d4 d7d5 b1c3 g8f6 c1f4 e7e6 c3b5 f8b4 c2c3": {
+      "porQue": "Tapa el jaque y echa al alfil."
+    },
+    "d2d4 d7d5 b1c3 g8f6 c1f4 g7g6": {
+      "porQue": "Prepara el fianchetto."
+    },
+    "d2d4 d7d5 b1c3 g8f6 c1f4 c8f5": {
+      "porQue": "Desarrolla."
+    },
+    "d2d4 d7d5 b1c3 g8f6 c1f4 a7a6": {
+      "porQue": "Impide Cb5."
     }
   },
   "fuentes": [
@@ -240,6 +255,26 @@
       "d2d4 d7d5 b1c3 g8f6 c1f4 g7g6 e2e3 f8g7 h2h4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "d2d4 d7d5 b1c3 g8f6 c1f4 e7e6 c3b5 f8b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 b1c3 g8f6 c1f4 e7e6 c3b5 f8b4 c2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 b1c3 g8f6 c1f4 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "d2d4 d7d5 b1c3 g8f6 c1f4 c8f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "d2d4 d7d5 b1c3 g8f6 c1f4 a7a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
       }
     }
   }
