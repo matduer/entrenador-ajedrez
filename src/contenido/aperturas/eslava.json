@@ -375,6 +375,56 @@
     },
     "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 f6d5 f2f3": {
       "porQue": "Prepara e4 para echar al caballo de d5 y ocupar el centro. Stockfish la prefiere a 8.g3, que es la recomendación de Schandorff (él menciona 8.f3 como interesante)."
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 a7a6 c4c5": {
+      "porQue": "Una jugada de principios: cierra la posición, le quita al negro muchas de sus posibilidades dinámicas y deja en evidencia el defecto de ...a6, la casilla b6 debilitada (Schandorff). El negro buscará romper con ...b6 o ...e5."
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 a7a6 c4c5 c8f5": {
+      "porQue": "La forma más sólida: resuelve el problema del alfil de c8, que en esta estructura corre el riesgo de quedar encerrado."
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 a7a6 c4c5 c8f5 c1f4": {
+      "porQue": "Desarrollo natural: el alfil controla e5, la casilla de la ruptura negra. El espacio de más le da al blanco una leve ventaja (Schandorff)."
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 a7a6 c4c5 b8d7": {
+      "porQue": "La línea principal: el caballo pelea por e5. Si el negro consigue jugar ...e5, está contento."
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 a7a6 c4c5 b8d7 c1f4": {
+      "porQue": "Controla e5 y frena la ruptura."
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 a7a6 c4c5 g7g6": {
+      "porQue": "El negro quiere fianchettar y enrocar, pero le deja al blanco sacar el alfil a f4 para reforzar e5."
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 a7a6 c4c5 g7g6 h2h3": {
+      "porQue": "Una jugada útil: así el alfil, una vez en f4, tiene la casilla h2 si el negro juega ...Ch5 o ...h5 (Schandorff)."
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 a7a6 c4c5 b7b6": {
+      "porQue": "Intenta deshacerse de la debilidad de b6 cambiando el peón."
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 a7a6 c4c5 b7b6 c5b6": {
+      "porQue": "Toma: el negro queda con el peón de c6 retrasado.",
+      "porQueNo": [
+        {
+          "uci": "c3a4",
+          "texto": "Ca4? bxc5 Cxc5 e6: el negro liberó su juego y el caballo blanco quedó lejos."
+        },
+        {
+          "uci": "e2e3",
+          "texto": "e3? bxc5 dxc5 e6: el negro recupera el control del centro."
+        }
+      ]
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 a7a6 c4c5 c8g4": {
+      "porQue": "Se ve dudosa, y Stockfish lo confirma: provoca que el caballo salte a una gran casilla ganando tiempo.",
+      "inferior": true
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 a7a6 c4c5 c8g4 f3e5": {
+      "porQue": "Gracias: el caballo va a e5 atacando al alfil (Schandorff).",
+      "porQueNo": [
+        {
+          "uci": "h2h3",
+          "texto": "h3? Axf3 exf3: el negro cambia el alfil en buenas condiciones y el blanco queda con peones doblados."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -412,6 +462,10 @@
     {
       "titulo": "Lars Schandorff — Playing the Queen's Gambit: A Grandmaster Guide (Quality Chess, 2009)",
       "capitulo": "cap. 3, «The Slav»: «The Mainline – Part Two» (6...Cbd7), partidas 29 a 31"
+    },
+    {
+      "titulo": "Lars Schandorff — Playing the Queen's Gambit: A Grandmaster Guide (Quality Chess, 2009)",
+      "capitulo": "cap. 5, «The a6-Slav» (partidas 46 a 50)"
     }
   ],
   "verificacion": {
@@ -762,6 +816,62 @@
       "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 f6d5 f2f3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 a7a6 c4c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 a7a6 c4c5 c8f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 a7a6 c4c5 c8f5 c1f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 a7a6 c4c5 b8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 a7a6 c4c5 b8d7 c1f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 a7a6 c4c5 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 a7a6 c4c5 g7g6 h2h3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 a7a6 c4c5 b7b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 a7a6 c4c5 b7b6 c5b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 a7a6 c4c5 b7b6 c3a4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 4 puntos de chances: +0,4 → −0,0. Refutación: bxc5 Cxc5 e6 Ca4 Ad6 e3"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 a7a6 c4c5 b7b6 e2e3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,4 → −0,3. Refutación: bxc5 dxc5 e6 Ca4 Axc5 Cxc5"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 a7a6 c4c5 c8g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere g6: −0,3 contra −1,0 (marcada como inferior pero jugable)"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 a7a6 c4c5 c8g4 f3e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,0 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 a7a6 c4c5 c8g4 h2h3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +1,0 → +0,4. Refutación: Axf3 exf3 Cbd7 f4 a5 Ad3"
       }
     }
   }
