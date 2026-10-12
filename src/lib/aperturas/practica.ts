@@ -77,7 +77,8 @@ export async function elegirLinea(color: Color, lineas: string[][]): Promise<str
 
 const planificador = fsrs({ enable_fuzz: true })
 
-export async function registrarLinea(color: Color, ucis: string[], bien: boolean): Promise<RepasoLinea> {
+export async function registrarLinea(color: Color, lineaOriginal: string[], bien: boolean): Promise<RepasoLinea> {
+  const ucis = [...lineaOriginal] // copia plana: puede venir de un estado de Svelte (proxy), que IndexedDB no clona
   const id = idLinea(color, ucis)
   const ahora = new Date()
   const actual = await db.repasosLineas.get(id)

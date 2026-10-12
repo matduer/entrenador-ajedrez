@@ -25,9 +25,11 @@
     ultimaJugada?: string
     flechas?: Flecha[]
     alJugar?: (uci: string) => void
+    /** Al cambiar, el tablero se vuelve a dibujar desde `fen`: sirve para deshacer una jugada que no se aceptó. */
+    refrescar?: number
   }
 
-  let { fen, orientacion, puedeMover, ultimaJugada, flechas = [], alJugar }: Props = $props()
+  let { fen, orientacion, puedeMover, ultimaJugada, flechas = [], alJugar, refrescar = 0 }: Props = $props()
 
   let elemento: HTMLDivElement
   let cg: Api | undefined
@@ -74,7 +76,7 @@
 
   $effect(() => {
     // Dependencias: cualquier cambio de estas props redibuja el tablero.
-    void [fen, orientacion, puedeMover, ultimaJugada, flechas]
+    void [fen, orientacion, puedeMover, ultimaJugada, flechas, refrescar]
     configurar()
   })
 

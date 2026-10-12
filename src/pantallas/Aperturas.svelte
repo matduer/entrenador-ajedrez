@@ -3,7 +3,7 @@
   import { cargarCatalogo } from '../lib/aperturas/catalogo.ts'
   import { EXPLICACIONES } from '../lib/aperturas/explicaciones.ts'
   import type { Color } from '../lib/datos/tipos.ts'
-  import ElegirApertura from './aperturas/ElegirApertura.svelte'
+  import MisAperturas from './aperturas/MisAperturas.svelte'
   import Explorador from './aperturas/Explorador.svelte'
   import Practica from './aperturas/Practica.svelte'
   import Repertorio from './aperturas/Repertorio.svelte'
@@ -90,5 +90,5 @@
     <Practica {...practica} autoEmpezar alSalir={() => (practica = undefined)} />
   {/key}
 {:else}
-  <ElegirApertura alElegir={practicarDesde} />
+  <MisAperturas />
 {/if}
