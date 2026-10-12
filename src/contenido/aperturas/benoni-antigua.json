@@ -133,6 +133,23 @@
     },
     "d2d4 c7c5 c2c4 c5d4": {
       "porQue": "Toma el peón."
+    },
+    "d2d4 c7c5 d4d5 d7d6": {
+      "porQue": "Controla e5 y sostiene c5."
+    },
+    "d2d4 c7c5 d4d5 f7f5": {
+      "porQue": "Controla e4.",
+      "inferior": true
+    },
+    "d2d4 c7c5 d4d5 f7f5 e2e4": {
+      "porQue": "Ataca f5."
+    },
+    "d2d4 c7c5 d4d5 g8f6 g1f3 b7b5": {
+      "porQue": "Gana espacio en el flanco de dama."
+    },
+    "d2d4 c7c5 d4c5 b7b6": {
+      "porQue": "Según Stockfish es un error: era mejor 2... e6 (−0,2 contra −1,3, para el bando que juega).",
+      "error": true
     }
   },
   "fuentes": [
@@ -274,6 +291,26 @@
       "d2d4 c7c5 c2c4 c5d4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 c7c5 d4d5 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,9 para el bando que mueve"
+      },
+      "d2d4 c7c5 d4d5 f7f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere e6: −0,7 contra −1,4 (marcada como inferior pero jugable)"
+      },
+      "d2d4 c7c5 d4d5 f7f5 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,4 para el bando que mueve"
+      },
+      "d2d4 c7c5 d4d5 g8f6 g1f3 b7b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "d2d4 c7c5 d4c5 b7b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) confirma el error: pierde 0.207"
       }
     }
   }

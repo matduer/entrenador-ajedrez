@@ -135,6 +135,10 @@
     },
     "e2e4 a7a6 d2d4 b7b5 g1f3 c8b7 f1d3 g8f6 d1e2 e7e6 a2a4": {
       "porQue": "Ataca el peón de b5."
+    },
+    "e2e4 a7a6 d2d4 e7e5": {
+      "porQue": "Golpea el centro.",
+      "inferior": true
     }
   },
   "fuentes": [
@@ -288,6 +292,10 @@
       "e2e4 a7a6 d2d4 b7b5 g1f3 c8b7 f1d3 g8f6 d1e2 e7e6 a2a4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 a7a6 d2d4 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere e6: −0,5 contra −1,2 (marcada como inferior pero jugable)"
       }
     }
   }
