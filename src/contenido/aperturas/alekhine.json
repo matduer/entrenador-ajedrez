@@ -117,6 +117,43 @@
     },
     "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 g1f3 g7g6 f1c4": {
       "porQue": "La jugada crítica contra 4...g6: presiona d5 y f7."
+    },
+    "e2e4 g8f6 b1c3 d7d5 e4d5 f6d5 f1c4": {
+      "porQue": "Analizada a fondo en tiempos de Alekhine; hoy es una variante para evitar la teoría. Tras 4...Cb6 5.Ab3 Cc6 o 4...e6, los dos bandos se desarrollan sin problemas."
+    },
+    "e2e4 g8f6 b1c3 d7d5 e4e5 f6d7": {
+      "porQue": "Contra 3.e5 el negro elige entre ...Cfd7, ...Ce4 e incluso ...d4. Desde d7, el caballo apoya ...c5."
+    },
+    "e2e4 g8f6 e4e5 f6d5 c2c4 d5b6 c4c5": {
+      "porQue": "Aceptar el desafío y volver a echar al caballo: una verdadera prueba del planteo negro."
+    },
+    "e2e4 g8f6 e4e5 f6d5 c2c4 d5b6 c4c5 b6d5 f1c4 e7e6 b1c3": {
+      "porQue": "Lo más agudo: si 6...Cxc3 7.dxc3 Axc5, las blancas esperan compensación por el peón. 7...Cc6 es la forma más prudente."
+    },
+    "e2e4 g8f6 e4e5 f6d5 b1c3 d5c3 d2c3": {
+      "porQue": "Un desarrollo rápido por las columnas y diagonales abiertas, sin el riesgo del peón de c5 suelto."
+    },
+    "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 c2c4 d5b6 f2f4 d6e5 f4e5 b8c6": {
+      "porQue": "Lo más usual en los Cuatro Peones: presiona d4 y prepara ...Af5."
+    },
+    "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 c2c4 d5b6 f2f4 d6e5 f4e5 b8c6 c1e3 c8f5 b1c3 e7e6 g1f3": {
+      "porQue": "Desarrollo sin complicaciones: el negro tiene muchas formas de presionar el centro (...Ab4, ...Cb4, ...Ag4, ...Dd7)."
+    },
+    "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 c2c4 d5b6 f2f4 d6e5 f4e5 b8c6 c1e3 c8f5 b1c3 e7e6 g1f3 f8e7 d4d5": {
+      "porQue": "La más crítica según FCO: tras 10...exd5 11.cxd5 Cb4 se llega a posiciones verdaderamente caóticas. Stockfish prefiere el desarrollo tranquilo 10.Ae2.",
+      "inferior": true
+    },
+    "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 c2c4 d5b6 f2f4 d6e5 f4e5 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 c5c4": {
+      "porQue": "La idea de 6...c5: el negro prepara ...Ab4 y ataca el centro blanco de frente. Es estratégicamente correcto, pero muy arriesgado."
+    },
+    "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 c2c4 d5b6 e5d6 e7d6 b1c3 f8e7 g1f3 e8g8 f1e2 c8g4 b2b3": {
+      "porQue": "Permite retomar en f3 con el alfil sin dejar caer el peón de c4."
+    },
+    "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 c2c4 d5b6 e5d6 c7d6 b1c3 g7g6 c1e3 f8g7 a1c1": {
+      "porQue": "El plan más popular hoy: la torre refuerza el caballo de c3 y el peón de c4, y así el blanco puede jugar d5 o b3 cuando lo necesite."
+    },
+    "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 g1f3 d6e5 f3e5": {
+      "porQue": "El caballo llega a una gran casilla central; por eso el cambio en e5 se criticaba antes, aunque hoy es una línea principal."
     }
   },
   "fuentes": [
@@ -138,7 +175,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-12",
     "resultados": {
       "e2e4 g8f6": {
         "ok": true,
@@ -243,6 +280,54 @@
       "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 g1f3 g7g6 f1c4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 g8f6 b1c3 d7d5 e4d5 f6d5 f1c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 g8f6 b1c3 d7d5 e4e5 f6d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 g8f6 e4e5 f6d5 c2c4 d5b6 c4c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 g8f6 e4e5 f6d5 c2c4 d5b6 c4c5 b6d5 f1c4 e7e6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 g8f6 e4e5 f6d5 b1c3 d5c3 d2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 c2c4 d5b6 f2f4 d6e5 f4e5 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 c2c4 d5b6 f2f4 d6e5 f4e5 b8c6 c1e3 c8f5 b1c3 e7e6 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 c2c4 d5b6 f2f4 d6e5 f4e5 b8c6 c1e3 c8f5 b1c3 e7e6 g1f3 f8e7 d4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Ae2: +0,8 contra +0,2 (marcada como inferior pero jugable)"
+      },
+      "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 c2c4 d5b6 f2f4 d6e5 f4e5 c7c5 d4d5 e7e6 b1c3 e6d5 c4d5 c5c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,8 para el bando que mueve"
+      },
+      "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 c2c4 d5b6 e5d6 e7d6 b1c3 f8e7 g1f3 e8g8 f1e2 c8g4 b2b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 c2c4 d5b6 e5d6 c7d6 b1c3 g7g6 c1e3 f8g7 a1c1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 g1f3 d6e5 f3e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
       }
     }
   }

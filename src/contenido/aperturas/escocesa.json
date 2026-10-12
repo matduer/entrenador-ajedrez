@@ -139,6 +139,21 @@
     },
     "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 d8f6": {
       "porQue": "Presiona d4 y f2; muchas veces transpone a las líneas con ...Ac5. Emms la sugiere para quien quiera evitar 4...Ac5 5.Cb3."
+    },
+    "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 c2c3": {
+      "porQue": "El Gambito Göring: entrega uno o dos peones a cambio de desarrollo, con la misma idea que el Danés."
+    },
+    "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 c2c3 d7d5": {
+      "porQue": "La receta simple, la misma que contra el Danés: devuelve el peón y abre el juego antes de que el blanco se desarrolle."
+    },
+    "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 c2c3 d7d5 e4d5 d8d5 c3d4 c8g4": {
+      "porQue": "Presiona d4 clavando al caballo que lo defiende: el negro está cómodo y el blanco tiene un peón aislado."
+    },
+    "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 c2c3 d4c3 b1c3": {
+      "porQue": "El gambito aceptado: Ac4, O-O y Db3 contra f7, con desarrollo rápido por el peón."
+    },
+    "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 c2c3 d4c3 b1c3 f8c5": {
+      "porQue": "Lo más preciso para Stockfish: el alfil se desarrolla apuntando a f2 y el negro se prepara para devolver el peón con ...d6 o ...d5 en el momento justo."
     }
   },
   "fuentes": [
@@ -159,12 +174,16 @@
       "titulo": "Catálogo abierto de aperturas de Lichess",
       "url": "https://github.com/lichess-org/chess-openings",
       "licencia": "CC0"
+    },
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Scotch Opening» (Göring Gambit) y «Centre Game» (Danish Gambit)"
     }
   ],
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-12",
     "resultados": {
       "e2e4 e7e5 g1f3 b8c6 d2d4": {
         "ok": true,
@@ -285,6 +304,26 @@
       "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 d8f6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 c2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 c2c3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 c2c3 d7d5 e4d5 d8d5 c3d4 c8g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 c2c3 d4c3 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 c2c3 d4c3 b1c3 f8c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
       }
     }
   }

@@ -1,0 +1,191 @@
+{
+  "id": "schliemann",
+  "nombre": "Defensa Schliemann (Gambito Jaenisch)",
+  "raiz": "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5",
+  "resumen": "Un Gambito de Rey con colores invertidos contra la Española: en lugar de defender e5, el negro ataca e4 con 3...f5. Siempre se la miró con desconfianza en el nivel más alto, pero tiene muchos seguidores en el club, porque pide variantes concretas y la preparación pesa mucho. Para Stockfish es perfectamente jugable (pierde muy poco frente a 3...a6). La prueba más seria es 4.Cc3; contra 4.d4, el negro responde 4...fxe4 5.Cxe5 Cxe5 6.dxe5 c6, y 4.d3 es sólido pero no preocupa al negro.",
+  "planesBlancas": [
+    "4.Cc3 y, tras 4...fxe4 5.Cxe4 d5, devolver la pieza con 6.Cxe5 para atacar al rey negro.",
+    "4.d3: jugar sólido, enrocar y aprovechar las casillas que debilitó ...f5."
+  ],
+  "planesNegras": [
+    "Abrir la columna f y desarrollarse rápido contra el rey blanco.",
+    "Contra 4.d3, ...Cf6 y ...Ac5 apuntando a f2, aunque cueste el peón de e5."
+  ],
+  "estructura": "La columna f se abre temprano. Si el negro cambia en e4, queda con un peón central de más pero con la diagonal a2-g8 y la casilla e6 debilitadas.",
+  "rupturas": [
+    "...fxe4 y ...d5 del negro.",
+    "d4 de las blancas, para abrir el centro mientras el rey negro sigue en e8."
+  ],
+  "piezas": [
+    "Dama negra: sale temprano a g5 o d5 en la línea principal.",
+    "Alfil blanco de b5: blanco de ...c6 en varias trampas, conviene vigilar que no quede suelto."
+  ],
+  "trampas": [],
+  "notas": {
+    "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 b1c3": {
+      "porQue": "Acepta el desafío: la respuesta más seria al gambito."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 b1c3 f5e4 c3e4 d7d5": {
+      "porQue": "La línea principal: el peón ataca el caballo y el negro arma el centro."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 b1c3 f5e4 c3e4 d7d5 f3e5": {
+      "porQue": "El único intento de refutar el Schliemann: el blanco devuelve la pieza enseguida y busca al rey negro."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 b1c3 f5e4 c3e4 d7d5 f3e5 d5e4 e5c6": {
+      "porQue": "Lo único bueno: el caballo se lleva el de c6 y amenaza la dama por la descubierta.",
+      "porQueNo": [
+        {
+          "uci": "d1h5",
+          "texto": "7.Dh5+? g6 8.Cxg6 hxg6 9.Dxh8 Dd5: el negro gana más de lo que pierde y ataca."
+        },
+        {
+          "uci": "b5c6",
+          "texto": "7.Axc6+? bxc6 8.Dh5+ g6 9.Cxg6 hxg6: el sacrificio no funciona."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 b1c3 f5e4 c3e4 d7d5 f3e5 d5e4 e5c6 d8g5": {
+      "porQue": "La más activa: ataca g2 y, por la quinta fila, el alfil de b5.",
+      "porQueNo": [
+        {
+          "uci": "b7c6",
+          "texto": "7...bxc6? 8.Axc6+ Ad7 9.Dh5+ Re7 10.De5+: el rey negro queda al descubierto."
+        },
+        {
+          "uci": "d8h4",
+          "texto": "7...Dh4? 8.De2 Cf6 9.Cxa7+: el blanco gana un peón más y el ataque negro no alcanza."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 b1c3 f5e4 c3e4 d7d5 f3e5 d5e4 e5c6 d8g5 d1e2": {
+      "porQue": "La más fuerte: protege el alfil de b5 por la diagonal y presiona e4.",
+      "porQueNo": [
+        {
+          "uci": "c6d4",
+          "texto": "8.Cd4+? c6: el negro gana tiempo sobre el alfil y recupera la iniciativa."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 b1c3 f5e4 c3e4 d7d5 f3e5 d5e4 e5c6 d8g5 d1e2 g8f6 c6a7": {
+      "porQue": "El caballo escapa tomando un peón con jaque: lo más fuerte para Stockfish."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 b1c3 f5e4 c3e4 g8f6": {
+      "porQue": "Más prudente que 5...d5: tras 6.De2 d5 7.Cxf6+ gxf6 8.d4, la lucha es menos complicada."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 b1c3 f5e4 c3e4 g8f6 d1e2": {
+      "porQue": "Clava el peón de e5 por la columna y prepara el cambio en f6.",
+      "porQueNo": [
+        {
+          "uci": "d2d3",
+          "texto": "6.d3? d5: el negro arma el centro con tiempo."
+        }
+      ]
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 d2d4 f5e4 f3e5 c6e5 d4e5 c7c6": {
+      "porQue": "El punto de la defensa contra 4.d4: el alfil de b5 está atacado y, si se retira, ...Da5+ suele recuperar el peón de e5 con un juego cómodo."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 d2d4 f5e4 f3e5 c6e5 d4e5 c7c6 b1c3": {
+      "porQue": "Lo más preciso para Stockfish: desarrolla en lugar de retirar el alfil, y el negro tiene que decidir si lo toma."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 d2d3 f5e4 d3e4 g8f6 e1g1 f8c5": {
+      "porQue": "La principal hoy, más agresiva que 6...d6: si 7.Axc6 bxc6 8.Cxe5 O-O, el desarrollo negro compensa el peón."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 e4f5 e5e4": {
+      "porQue": "El primer punto de 3...f5: el caballo blanco ya no tiene una buena casilla."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Ruy Lopez», «Schliemann Defence (or Jaenisch Gambit)»"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-12",
+    "resultados": {
+      "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 b1c3 f5e4 c3e4 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 b1c3 f5e4 c3e4 d7d5 f3e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 b1c3 f5e4 c3e4 d7d5 f3e5 d5e4 e5c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 b1c3 f5e4 c3e4 d7d5 f3e5 d5e4 d1h5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 13 puntos de chances: +0,6 → −0,8. Refutación: g6 Cxg6 hxg6 Dxh8 Ae6 d3"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 b1c3 f5e4 c3e4 d7d5 f3e5 d5e4 b5c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 21 puntos de chances: +0,6 → −1,6. Refutación: bxc6 Dh5+ g6 Cxg6 hxg6 Dxh8"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 b1c3 f5e4 c3e4 d7d5 f3e5 d5e4 e5c6 d8g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 b1c3 f5e4 c3e4 d7d5 f3e5 d5e4 e5c6 b7c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: −0,6 → −1,6. Refutación: Axc6+ Ad7 Dh5+ Re7 De5+ Ae6"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 b1c3 f5e4 c3e4 d7d5 f3e5 d5e4 e5c6 d8h4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 14 puntos de chances: −0,6 → −2,3. Refutación: De2 Cf6 Cxa7+ Ad7 Axd7+ Cxd7"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 b1c3 f5e4 c3e4 d7d5 f3e5 d5e4 e5c6 d8g5 d1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 b1c3 f5e4 c3e4 d7d5 f3e5 d5e4 e5c6 d8g5 c6d4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 4 puntos de chances: +0,8 → +0,3. Refutación: c6 Af1 Ag4 d3 Dg6 Dd2"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 b1c3 f5e4 c3e4 d7d5 f3e5 d5e4 e5c6 d8g5 d1e2 g8f6 c6a7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 b1c3 f5e4 c3e4 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 b1c3 f5e4 c3e4 g8f6 d1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 b1c3 f5e4 c3e4 g8f6 d2d3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 4 puntos de chances: +0,6 → +0,1. Refutación: d5 Cxf6+ Dxf6 d4 e4 Ce5"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 d2d4 f5e4 f3e5 c6e5 d4e5 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 d2d4 f5e4 f3e5 c6e5 d4e5 c7c6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 d2d3 f5e4 d3e4 g8f6 e1g1 f8c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 f7f5 e4f5 e5e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      }
+    }
+  }
+}
