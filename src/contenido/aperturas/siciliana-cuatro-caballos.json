@@ -80,6 +80,53 @@
     },
     "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 a2a3": {
       "porQue": "Prudente: quita b4 al alfil, pero 6...Dc7 o 6...d6 llevan a líneas inofensivas de la Taimanov o la Scheveningen."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4c6 b7c6 e4e5 f6d5 c3e4 d8c7 f2f4": {
+      "porQue": "Sostiene e5 con otro peón: el blanco gana espacio y le deja al negro el caballo de d5 como única pieza activa."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4c6 b7c6 e4e5 f6d5 c3e4 d8c7 f2f4 c7b6": {
+      "porQue": "La dama ataca b2 y vigila g1: impide que el blanco desarrolle tranquilo."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4c6 b7c6 e4e5 f6d5 c3e4 d8c7 f2f4 c7b6 c2c4": {
+      "porQue": "Echa al caballo de d5 ganando tiempo."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4c6 b7c6 e4e5 f6d5 c3e4 d8c7 f2f4 c7b6 c2c4 f8b4": {
+      "porQue": "Un jaque intermedio que le saca al rey blanco el enroque.",
+      "porQueNo": [
+        {
+          "uci": "d5c7",
+          "texto": "...Cc7? a3: el caballo quedó pasivo y el blanco tiene un centro dominante."
+        },
+        {
+          "uci": "d7d6",
+          "texto": "...d6? cxd5 exd5 Cxd6+: el blanco gana material."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4c6 b7c6 e4e5 f6d5 c3e4 d8c7 f2f4 c7b6 c2c4 f8b4 e1e2": {
+      "porQue": "La única: cualquier pieza que tape pierde material. El rey en e2 parece expuesto, pero el blanco tiene el centro.",
+      "porQueNo": [
+        {
+          "uci": "c1d2",
+          "texto": "Ad2? De3+ De2 Axd2+: el negro gana una pieza."
+        },
+        {
+          "uci": "e4c3",
+          "texto": "Cc3? Cxc3 bxc3 Axc3+: el negro gana la torre de a1."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4b5 f8b4 a2a3 b4c3 b5c3 d7d5 e4d5 e6d5 f1d3": {
+      "porQue": "El desarrollo correcto contra el peón aislado: el alfil apunta a h7 y el blanco enroca enseguida.",
+      "porQueNo": [
+        {
+          "uci": "f1e2",
+          "texto": "Ae2? O-O O-O d4: el peón aislado avanza y el negro se libera."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4b5 f8b4 a2a3 b4c3 b5c3 d7d5 e4d5 e6d5 f1d3 e8g8 e1g1": {
+      "porQue": "Ambos enrocan: el blanco tiene la pareja de alfiles; el negro, juego activo a cambio del peón aislado."
     }
   },
   "fuentes": [
@@ -161,6 +208,54 @@
       "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 a2a3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4c6 b7c6 e4e5 f6d5 c3e4 d8c7 f2f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4c6 b7c6 e4e5 f6d5 c3e4 d8c7 f2f4 c7b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4c6 b7c6 e4e5 f6d5 c3e4 d8c7 f2f4 c7b6 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4c6 b7c6 e4e5 f6d5 c3e4 d8c7 f2f4 c7b6 c2c4 f8b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4c6 b7c6 e4e5 f6d5 c3e4 d8c7 f2f4 c7b6 c2c4 d5c7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 14 puntos de chances: −0,5 → −2,1. Refutación: a3 a5 h4 Ae7 Cd6+ Rf8"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4c6 b7c6 e4e5 f6d5 c3e4 d8c7 f2f4 c7b6 c2c4 d7d6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 19 puntos de chances: −0,5 → −2,8. Refutación: cxd5 exd5 Cf2 dxe5 fxe5 Ac5"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4c6 b7c6 e4e5 f6d5 c3e4 d8c7 f2f4 c7b6 c2c4 f8b4 e1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4c6 b7c6 e4e5 f6d5 c3e4 d8c7 f2f4 c7b6 c2c4 f8b4 c1d2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 22 puntos de chances: +0,7 → −1,8. Refutación: De3+ De2 Axd2+ Cxd2 Dxe2+ Rxe2"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4c6 b7c6 e4e5 f6d5 c3e4 d8c7 f2f4 c7b6 c2c4 f8b4 e4c3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 42 puntos de chances: +0,7 → −5,0. Refutación: Cxc3 bxc3 Axc3+ Ad2 Axa1 Dxa1"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4b5 f8b4 a2a3 b4c3 b5c3 d7d5 e4d5 e6d5 f1d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4b5 f8b4 a2a3 b4c3 b5c3 d7d5 e4d5 e6d5 f1e2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,4 → −0,1. Refutación: d4 Ca2 a5 Ag5 O-O O-O"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4b5 f8b4 a2a3 b4c3 b5c3 d7d5 e4d5 e6d5 f1d3 e8g8 e1g1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
       }
     }
   }
