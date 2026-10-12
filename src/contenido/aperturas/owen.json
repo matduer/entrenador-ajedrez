@@ -177,6 +177,13 @@
     },
     "e2e4 b7b6 d2d4 c8b7 b1c3 e7e6 g1f3 f8b4 f1d3": {
       "porQue": "Defiende e4."
+    },
+    "e2e4 b7b6 d2d4 c7c5": {
+      "porQue": "Ataca d4.",
+      "inferior": true
+    },
+    "e2e4 b7b6 d2d4 c7c5 d4c5": {
+      "porQue": "Toma el peón."
     }
   },
   "fuentes": [
@@ -375,6 +382,14 @@
       "e2e4 b7b6 d2d4 c8b7 b1c3 e7e6 g1f3 f8b4 f1d3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 b7b6 d2d4 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere e6: −0,9 contra −1,4 (marcada como inferior pero jugable)"
+      },
+      "e2e4 b7b6 d2d4 c7c5 d4c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,1 para el bando que mueve"
       }
     }
   }

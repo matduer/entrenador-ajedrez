@@ -1659,6 +1659,10 @@
     },
     "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 f1c4 g5g4 f3e5 d8h4 e1f1 f4f3": {
       "porQue": "Abre el flanco de rey blanco."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1b5 d7d5 f3e5 d8g5 e5c6": {
+      "porQue": "Según Stockfish es un error: era mejor 5. Cf3 (+2,1 contra −0,6, para el bando que juega).",
+      "error": true
     }
   },
   "fuentes": [
@@ -3645,6 +3649,10 @@
       "e2e4 e7e5 f2f4 e5f4 g1f3 g7g5 f1c4 g5g4 f3e5 d8h4 e1f1 f4f3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +1,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1b5 d7d5 f3e5 d8g5 e5c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) confirma el error: pierde 0.477"
       }
     }
   }

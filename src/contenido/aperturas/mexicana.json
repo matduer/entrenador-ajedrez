@@ -119,6 +119,26 @@
           "texto": "4...Cg4 5.e4 y f4: el negro recupera el peón, pero las blancas ganan tiempo y espacio echando a los caballos."
         }
       ]
+    },
+    "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 d4d5": {
+      "porQue": "Gana espacio echando al caballo."
+    },
+    "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 d4d5 c6e7 e2e4": {
+      "porQue": "Ocupa el centro."
+    },
+    "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 g1f3": {
+      "porQue": "Según Stockfish es un error: era mejor 4. d5 (+0,9 contra −0,1, para el bando que juega).",
+      "error": true
+    },
+    "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 d4e5": {
+      "porQue": "Toma el peón.",
+      "inferior": true
+    },
+    "d2d4 g8f6 c2c4 b8c6 g1f3 e7e6 b1c3": {
+      "porQue": "Desarrolla."
+    },
+    "d2d4 g8f6 c2c4 b8c6 d4d5": {
+      "porQue": "Gana espacio echando al caballo."
     }
   },
   "fuentes": [
@@ -144,7 +164,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-11",
+    "fecha": "2026-10-12",
     "resultados": {
       "d2d4 g8f6 c2c4 b8c6": {
         "ok": true,
@@ -241,6 +261,30 @@
       "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 d4e5 f6g4 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 6 puntos de chances: −0,3 → −1,0. Refutación: e4 h5 Ae2 Cgxe5 Ad2 a5"
+      },
+      "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 d4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,9 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 d4d5 c6e7 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,9 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) confirma el error: pierde 0.166"
+      },
+      "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 d4e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere d5: +0,9 contra +0,3 (marcada como inferior pero jugable)"
+      },
+      "d2d4 g8f6 c2c4 b8c6 g1f3 e7e6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 b8c6 d4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
       }
     }
   }

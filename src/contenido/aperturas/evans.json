@@ -248,6 +248,10 @@
     },
     "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3 b4e7 d2d4 c6a5 c4e2 e5d4": {
       "porQue": "Toma en d4."
+    },
+    "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3 b4a5 d2d4 e5d4 e1g1 d4d3": {
+      "porQue": "Avanza el peón para no abrirle líneas a las blancas.",
+      "inferior": true
     }
   },
   "fuentes": [
@@ -554,6 +558,10 @@
       "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3 b4e7 d2d4 c6a5 c4e2 e5d4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 f1c4 f8c5 b2b4 c5b4 c2c3 b4a5 d2d4 e5d4 e1g1 d4d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Cf6: +0,3 contra −0,3 (marcada como inferior pero jugable)"
       }
     }
   }
