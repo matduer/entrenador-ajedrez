@@ -134,6 +134,70 @@
           "texto": "5...f6? 6.e4: el negro debilitó su propio rey y el blanco se queda con el peón de más."
         }
       ]
+    },
+    "f2f4 e7e5 f4e5 d7d6 e5d6 f8d6 g1f3 g8h6": {
+      "porQue": "Prepara ...Cg4 para atacar h2 y e3 en el Gambito From.",
+      "inferior": true
+    },
+    "f2f4 e7e5 f4e5 d7d6 e5d6 f8d6 g1f3 g8h6 d2d4": {
+      "porQue": "Ocupa el centro y le quita e3 y e5 al caballo negro.",
+      "inferior": true
+    },
+    "f2f4 d7d5 g1f3 g8f6": {
+      "porQue": "Desarrolla y controla e4."
+    },
+    "f2f4 d7d5 g1f3 g7g6 g2g3": {
+      "porQue": "Prepara el fianchetto: es la Bird con estructura de Leningrado invertida."
+    },
+    "f2f4 d7d5 g1f3 g7g6 g2g3 f8g7": {
+      "porQue": "Completa el fianchetto."
+    },
+    "f2f4 d7d5 g1f3 g7g6 g2g3 f8g7 f1g2": {
+      "porQue": "Completa el fianchetto."
+    },
+    "f2f4 g8f6": {
+      "porQue": "Desarrolla y controla e4."
+    },
+    "f2f4 g8f6 g1f3": {
+      "porQue": "Desarrolla y controla e5."
+    },
+    "f2f4 g8f6 g1f3 g7g6": {
+      "porQue": "Prepara el fianchetto."
+    },
+    "f2f4 g8f6 g1f3 g7g6 b2b4": {
+      "porQue": "Gana espacio y prepara Ab2 para oponerse al alfil de g7."
+    },
+    "f2f4 f7f5": {
+      "porQue": "Copia la jugada del blanco."
+    },
+    "f2f4 f7f5 e2e4": {
+      "porQue": "Ofrece un peón para abrir el centro mientras el negro tiene el rey debilitado.",
+      "inferior": true
+    },
+    "f2f4 f7f5 e2e4 f5e4": {
+      "porQue": "Toma el peón."
+    },
+    "f2f4 f7f5 e2e4 f5e4 b1c3": {
+      "porQue": "Desarrolla y ataca el peón de e4."
+    },
+    "f2f4 f7f5 e2e4 f5e4 b1c3 g8f6": {
+      "porQue": "Defiende e4."
+    },
+    "f2f4 f7f5 e2e4 f5e4 b1c3 g8f6 g2g4": {
+      "porQue": "Ataca el caballo que defiende e4."
+    },
+    "f2f4 h7h6": {
+      "porQue": "Prepara ...g5 para atacar el peón de f4.",
+      "inferior": true
+    },
+    "f2f4 h7h6 g1f3": {
+      "porQue": "Desarrolla y controla g5."
+    },
+    "f2f4 c7c5": {
+      "porQue": "Controla d4 al estilo siciliano."
+    },
+    "f2f4 g7g6": {
+      "porQue": "Prepara el fianchetto para presionar la diagonal que debilitó f4."
     }
   },
   "fuentes": [
@@ -159,7 +223,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-11",
+    "fecha": "2026-10-12",
     "resultados": {
       "f2f4": {
         "ok": true,
@@ -276,6 +340,86 @@
       "f2f4 e7e5 f4e5 d7d6 e5d6 f8d6 g1f3 g7g5 d2d4 f7f6 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 24 puntos de chances: −0,4 → −3,4. Refutación: e4 Cc6 Ae3 De7 Cc3 Ch6"
+      },
+      "f2f4 e7e5 f4e5 d7d6 e5d6 f8d6 g1f3 g8h6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Cf6: −0,5 contra −1,0 (marcada como inferior pero jugable)"
+      },
+      "f2f4 e7e5 f4e5 d7d6 e5d6 f8d6 g1f3 g8h6 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere g3: +1,0 contra +0,2 (marcada como inferior pero jugable)"
+      },
+      "f2f4 d7d5 g1f3 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "f2f4 d7d5 g1f3 g7g6 g2g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "f2f4 d7d5 g1f3 g7g6 g2g3 f8g7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "f2f4 d7d5 g1f3 g7g6 g2g3 f8g7 f1g2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "f2f4 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "f2f4 g8f6 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "f2f4 g8f6 g1f3 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "f2f4 g8f6 g1f3 g7g6 b2b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "f2f4 f7f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "f2f4 f7f5 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere e3: +0,1 contra −0,3 (marcada como inferior pero jugable)"
+      },
+      "f2f4 f7f5 e2e4 f5e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "f2f4 f7f5 e2e4 f5e4 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "f2f4 f7f5 e2e4 f5e4 b1c3 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "f2f4 f7f5 e2e4 f5e4 b1c3 g8f6 g2g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "f2f4 h7h6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Cf6: +0,3 contra −0,3 (marcada como inferior pero jugable)"
+      },
+      "f2f4 h7h6 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "f2f4 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "f2f4 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
       }
     }
   }

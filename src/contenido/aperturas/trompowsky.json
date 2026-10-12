@@ -147,6 +147,55 @@
           "texto": "7.Dd2? Cxd5! 8.Dxd5 Dxb2: la dama ataca la torre de a1 y el negro recupera la pieza con ventaja."
         }
       ]
+    },
+    "d2d4 g8f6 c1g5 f6e4 g5f4 d7d5 f2f3": {
+      "porQue": "Echa al caballo de e4 y prepara e4."
+    },
+    "d2d4 g8f6 c1g5 f6e4 g5f4 d7d5 f2f3 e4f6": {
+      "porQue": "El caballo vuelve a f6."
+    },
+    "d2d4 g8f6 c1g5 f6e4 g5f4 c7c5": {
+      "porQue": "Golpea en d4."
+    },
+    "d2d4 g8f6 c1g5 f6e4 g5f4 c7c5 f2f3": {
+      "porQue": "Echa al caballo de e4."
+    },
+    "d2d4 g8f6 c1g5 f6e4 g5f4 c7c5 f2f3 d8a5": {
+      "porQue": "Jaque que mantiene el caballo en e4 por un momento."
+    },
+    "d2d4 g8f6 c1g5 f6e4 g5f4 c7c5 f2f3 d8a5 c2c3": {
+      "porQue": "Tapa el jaque con un peón."
+    },
+    "d2d4 g8f6 c1g5 c7c5 d4d5 d8b6": {
+      "porQue": "Ataca el peón de b2.",
+      "inferior": true
+    },
+    "d2d4 g8f6 c1g5 c7c5 d4d5 d8b6 b1c3": {
+      "porQue": "Desarrolla y entrega el peón de b2 a cambio de tiempo."
+    },
+    "d2d4 g8f6 c1g5 e7e6 e2e4 h7h6 g5f6": {
+      "porQue": "Cambia el alfil por el caballo y gana el centro."
+    },
+    "d2d4 g8f6 c1g5 e7e6 e2e4 h7h6 g5f6 d8f6": {
+      "porQue": "Retoma con la dama: el negro queda con la pareja de alfiles."
+    },
+    "d2d4 g8f6 c1g5 d7d5 g5f6": {
+      "porQue": "Cambia el alfil por el caballo y deja al negro con peones doblados."
+    },
+    "d2d4 g8f6 c1g5 d7d5 g5f6 e7f6 e2e3": {
+      "porQue": "Sostiene d4 y abre el alfil de f1."
+    },
+    "d2d4 g8f6 c1g5 d7d5 g5f6 e7f6 e2e3 f8d6 c2c4": {
+      "porQue": "Ataca d5 desde el flanco."
+    },
+    "d2d4 g8f6 c1g5 g7g6": {
+      "porQue": "Prepara el fianchetto."
+    },
+    "d2d4 g8f6 c1g5 g7g6 g5f6": {
+      "porQue": "Cambia el alfil por el caballo."
+    },
+    "d2d4 g8f6 c1g5 g7g6 g5f6 e7f6": {
+      "porQue": "Retoma hacia el centro y abre el alfil de f8."
     }
   },
   "fuentes": [
@@ -176,7 +225,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-11",
+    "fecha": "2026-10-12",
     "resultados": {
       "d2d4 g8f6 c1g5": {
         "ok": true,
@@ -317,6 +366,70 @@
       "d2d4 g8f6 c1g5 f6e4 g5f4 c7c5 f2f3 d8a5 c2c3 e4f6 d4d5 a5b6 d1d2 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 20 puntos de chances: +0,5 → −1,7. Refutación: Cxd5 Ag5 h6 e4 Cxc3 Cxc3"
+      },
+      "d2d4 g8f6 c1g5 f6e4 g5f4 d7d5 f2f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 f6e4 g5f4 d7d5 f2f3 e4f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 f6e4 g5f4 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 f6e4 g5f4 c7c5 f2f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 f6e4 g5f4 c7c5 f2f3 d8a5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 f6e4 g5f4 c7c5 f2f3 d8a5 c2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 c7c5 d4d5 d8b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere d6: −0,1 contra −0,5 (marcada como inferior pero jugable)"
+      },
+      "d2d4 g8f6 c1g5 c7c5 d4d5 d8b6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 e7e6 e2e4 h7h6 g5f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 e7e6 e2e4 h7h6 g5f6 d8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 d7d5 g5f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 d7d5 g5f6 e7f6 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 d7d5 g5f6 e7f6 e2e3 f8d6 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 g7g6 g5f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c1g5 g7g6 g5f6 e7f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
       }
     }
   }
