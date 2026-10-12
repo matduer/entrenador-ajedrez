@@ -76,6 +76,49 @@
     },
     "d2d4 d7d5 b1c3 e7e6 c1f4 g8f6": {
       "porQue": "Lo más natural: transpone a la línea principal del Jobava con ...e6."
+    },
+    "d2d4 d7d5 b1c3 g8f6 c1f4 c7c5 e2e3 c5d4": {
+      "porQue": "Lo más simple: cambia en d4 y deja al blanco con un peón en d4 que hay que vigilar."
+    },
+    "d2d4 d7d5 b1c3 g8f6 c1f4 c7c5 e2e3 c5d4 e3d4": {
+      "porQue": "Retoma con el peón: el alfil de f1 queda con la diagonal libre y la columna e se abre."
+    },
+    "d2d4 d7d5 b1c3 g8f6 c1f4 c7c5 e2e3 c5d4 e3d4 c8g4": {
+      "porQue": "Clava al caballo que viene a f3 y presiona d4.",
+      "porQueNo": [
+        {
+          "uci": "g7g6",
+          "texto": "...g6? Cb5: la amenaza sobre c7 vuelve a aparecer y el negro tiene que cubrirla con ...Ca6."
+        },
+        {
+          "uci": "b8a6",
+          "texto": "...Ca6? Cf3: el caballo de a6 no hace nada y el blanco se desarrolla con comodidad."
+        }
+      ]
+    },
+    "d2d4 d7d5 b1c3 g8f6 c1f4 e7e6 c3b5 b8a6 e2e3": {
+      "porQue": "Sostiene d4 y deja que el caballo de b5 se quede: el negro tiene que desalojarlo con ...c6."
+    },
+    "d2d4 d7d5 b1c3 g8f6 c1f4 e7e6 c3b5 b8a6 e2e3 f8e7": {
+      "porQue": "Desarrollo normal. Después, ...c6 echa al caballo de b5.",
+      "porQueNo": [
+        {
+          "uci": "h7h6",
+          "texto": "...h6? Cf3 c6 Cc3: una jugada de espera que no ayuda al desarrollo."
+        }
+      ]
+    },
+    "d2d4 d7d5 b1c3 g8f6 c1f4 c8f5 e2e3 e7e6": {
+      "porQue": "El esquema del Londres con colores parejos: ...Ad6 cambiaría el alfil de f4."
+    },
+    "d2d4 d7d5 b1c3 g8f6 c1f4 c8f5 e2e3 e7e6 f1d3": {
+      "porQue": "Ofrece el cambio de alfiles de casillas blancas, el mejor del negro en esta estructura."
+    },
+    "d2d4 d7d5 b1c3 g8f6 c1f4 g7g6 e2e3 f8g7": {
+      "porQue": "El fianchetto: el negro se enroca y busca ...c5."
+    },
+    "d2d4 d7d5 b1c3 g8f6 c1f4 g7g6 e2e3 f8g7 h2h4": {
+      "porQue": "Lo más agresivo, típico del Jobava: el peón de h avanza contra el enroque fianchettado."
     }
   },
   "fuentes": [
@@ -149,6 +192,54 @@
       "d2d4 d7d5 b1c3 e7e6 c1f4 g8f6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "d2d4 d7d5 b1c3 g8f6 c1f4 c7c5 e2e3 c5d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "d2d4 d7d5 b1c3 g8f6 c1f4 c7c5 e2e3 c5d4 e3d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 b1c3 g8f6 c1f4 c7c5 e2e3 c5d4 e3d4 c8g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "d2d4 d7d5 b1c3 g8f6 c1f4 c7c5 e2e3 c5d4 e3d4 g7g6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,0 → −0,6. Refutación: Cb5 Ca6 Ae2 Ag7 a4 O-O"
+      },
+      "d2d4 d7d5 b1c3 g8f6 c1f4 c7c5 e2e3 c5d4 e3d4 b8a6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,0 → −0,8. Refutación: Cf3 Ad7 Axa6 bxa6 O-O e6"
+      },
+      "d2d4 d7d5 b1c3 g8f6 c1f4 e7e6 c3b5 b8a6 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "d2d4 d7d5 b1c3 g8f6 c1f4 e7e6 c3b5 b8a6 e2e3 f8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 b1c3 g8f6 c1f4 e7e6 c3b5 b8a6 e2e3 h7h6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,1 → −0,5. Refutación: Cf3 Ab4+ c3 Ae7 Ad3 c6"
+      },
+      "d2d4 d7d5 b1c3 g8f6 c1f4 c8f5 e2e3 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "d2d4 d7d5 b1c3 g8f6 c1f4 c8f5 e2e3 e7e6 f1d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "d2d4 d7d5 b1c3 g8f6 c1f4 g7g6 e2e3 f8g7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "d2d4 d7d5 b1c3 g8f6 c1f4 g7g6 e2e3 f8g7 h2h4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
       }
     }
   }
