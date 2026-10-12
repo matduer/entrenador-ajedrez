@@ -173,6 +173,67 @@
     },
     "d2d4 f7f5 c2c4 g8f6 g2g3 e7e6 f1g2 d7d5 g1f3 c7c6 e1g1 f8d6 f3e5": {
       "porQue": "El caballo ocupa el agujero de e5, la casilla débil del Stonewall; después el blanco puede apoyarlo con f3 o Cd3-f4."
+    },
+    "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 d8e8 d4d5": {
+      "porQue": "Una de las dos líneas principales, junto con 8.b3: gana espacio, prepara b4 y evita la molesta ruptura ...e5 (Beim)."
+    },
+    "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 d8e8 d4d5 b8a6": {
+      "porQue": "La jugada característica de la Leningrado: el caballo va a c5, o a c7 cuando el negro juega ...c6 o ...c5."
+    },
+    "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 d8e8 d4d5 b8a6 a1b1": {
+      "porQue": "Prepara b4 para ganar espacio en el flanco de dama: con el centro cerrado, el blanco juega allí y el negro en el flanco de rey."
+    },
+    "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 d8e8 b2b3": {
+      "porQue": "La otra línea principal: prepara Ab2 o Aa3 sin cerrar el centro."
+    },
+    "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 d8e8 b2b3 e7e5": {
+      "porQue": "La ruptura central enseguida: es para lo que vino la dama a e8 (Beim)."
+    },
+    "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 d8e8 b2b3 b8a6": {
+      "porQue": "...c6 y ...Ca6 casi siempre van juntas, según Beim: el caballo apunta a c7 o b4 y apoya una futura ...e5."
+    },
+    "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 d8e8 f1e1": {
+      "porQue": "Prepara e4: la torre apoya la ruptura central."
+    },
+    "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 d8e8 f1e1 e8f7": {
+      "porQue": "La jugada principal según Beim: la dama ataca c4 y vigila la columna f.",
+      "porQueNo": [
+        {
+          "uci": "c7c6",
+          "texto": "...c6? e4 Cxe4 Cxe4 fxe4 Txe4: el blanco consiguió la ruptura y el peón de e4 negro desaparece."
+        }
+      ]
+    },
+    "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 d8e8 f1e1 e8f7 e2e4": {
+      "porQue": "Lo más directo: el blanco hace la ruptura que preparó con Te1. Beim da como principal 9.b3, que para Stockfish es igual de buena."
+    },
+    "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 d8e8 c3d5": {
+      "porQue": "Busca cambiar el caballo de f6. Stockfish prefiere 8.d5 o 8.Te1.",
+      "inferior": true
+    },
+    "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 d8e8 c3d5 f6d5": {
+      "porQue": "Lo mejor: el cambio deja al blanco sin la casilla d5 para su caballo.",
+      "porQueNo": [
+        {
+          "uci": "b8a6",
+          "texto": "...Ca6? Cxf6+: el negro tiene que retomar con la torre o cambiar su alfil de g7, y el blanco se queda con e4 (Beim)."
+        }
+      ]
+    },
+    "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 c7c6 d4d5": {
+      "porQue": "Gana espacio y le quita al caballo la casilla c6."
+    },
+    "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 c7c6 d4d5 e7e5": {
+      "porQue": "Ataca el centro de inmediato."
+    },
+    "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 c7c6 d4d5 e7e5 d5e6 c8e6": {
+      "porQue": "Retoma desarrollando: el alfil apunta a c4. A cambio, el peón de d6 queda retrasado.",
+      "porQueNo": [
+        {
+          "uci": "b8a6",
+          "texto": "...Ca6? Af4: el blanco ataca d6 antes de que el negro recupere e6."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -197,6 +258,10 @@
       "titulo": "Catálogo abierto de aperturas de Lichess",
       "url": "https://github.com/lichess-org/chess-openings",
       "licencia": "CC0"
+    },
+    {
+      "titulo": "Valeri Beim — Understanding the Leningrad Dutch (trad. Laurence Webb, Gambit, 2002)",
+      "capitulo": "caps. 7 y 8, «Main Line with 7...c6» y «Main Line with 7...De8»"
     }
   ],
   "verificacion": {
@@ -355,6 +420,74 @@
       "d2d4 f7f5 c2c4 g8f6 g2g3 e7e6 f1g2 d7d5 g1f3 c7c6 e1g1 f8d6 f3e5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 d8e8 d4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 d8e8 d4d5 b8a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 d8e8 d4d5 b8a6 a1b1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 d8e8 b2b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 d8e8 b2b3 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 d8e8 b2b3 b8a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 d8e8 f1e1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 d8e8 f1e1 e8f7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 d8e8 f1e1 c7c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,7 → −1,2. Refutación: e4 fxe4 Cxe4 Cxe4 Txe4 Af5"
+      },
+      "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 d8e8 f1e1 e8f7 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 d8e8 c3d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 d8e8 c3d5 f6d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 d8e8 c3d5 b8a6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,4 → −1,1. Refutación: Cxf6+ Txf6 Te1 c6 Af4 Tf7"
+      },
+      "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 c7c6 d4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 c7c6 d4d5 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 c7c6 d4d5 e7e5 d5e6 c8e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 f7f5 g2g3 g8f6 f1g2 g7g6 g1f3 f8g7 e1g1 e8g8 c2c4 d7d6 b1c3 c7c6 d4d5 e7e5 d5e6 b8a6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,5 → −1,2. Refutación: Cg5 Cc5 Cf7 De7 Dxd6 Te8"
       }
     }
   }
