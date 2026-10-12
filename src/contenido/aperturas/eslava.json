@@ -197,6 +197,12 @@
           "texto": "8...e5? 9.dxe5 Cxe5 10.Df4: el alfil de f5 y el caballo de e5 quedan atacados y el negro pierde material (Rogozenko)."
         }
       ]
+    },
+    "d2d4 g8f6 c2c4 c7c6": {
+      "porQue": "Eslava India: el negro prepara ...d5 con apoyo y deja abierta la opción de ...g6."
+    },
+    "d2d4 g8f6 c2c4 c7c6 b1c3": {
+      "porQue": "Desarrolla. Si ahora ...d5, se llega a la Eslava."
     }
   },
   "fuentes": [
@@ -231,7 +237,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-12",
     "resultados": {
       "d2d4 d7d5 c2c4 c7c6": {
         "ok": true,
@@ -396,6 +402,14 @@
       "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 d8c7 d1d2 e7e5 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 12 puntos de chances: −0,1 → −1,3. Refutación: dxe5 Cd5 e4 Cxc3 Dxc3 Axe4"
+      },
+      "d2d4 g8f6 c2c4 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
       }
     }
   }

@@ -151,6 +151,22 @@
     },
     "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 b1c3 f8b4 c1g5 c8b7 e2e3 h7h6 g5h4 b4c3 b2c3 d7d6": {
       "porQue": "Más lenta pero mucho más sólida que 7...g5: el blanco arma su centro con Cd2, f3 y e4, y el negro responde con ...e5."
+    },
+    "d2d4 g8f6 g1f3 b7b6": {
+      "porQue": "Pseudo India de Dama: el negro fianchetta el alfil de dama antes de que el blanco juegue c4. Si el blanco no lo juega, el alfil de b7 domina e4."
+    },
+    "d2d4 g8f6 g1f3 b7b6 g2g3": {
+      "porQue": "Fianchetto propio: el alfil de g2 se va a oponer al de b7 en la diagonal larga."
+    },
+    "d2d4 g8f6 g1f3 b7b6 g2g3 c8b7 f1g2 c7c5": {
+      "porQue": "Sistema Marienbad: ataca d4 enseguida, aprovechando que el blanco no jugó c4."
+    },
+    "d2d4 g8f6 c2c4 b7b6": {
+      "porQue": "India de Dama Acelerada: sin ...e6, el blanco puede ocupar el centro con Cc3 y e4.",
+      "inferior": true
+    },
+    "d2d4 g8f6 c2c4 b7b6 b1c3": {
+      "porQue": "Prepara e4, que el alfil de b7 todavía no alcanza a impedir."
     }
   },
   "fuentes": [
@@ -176,7 +192,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-11",
+    "fecha": "2026-10-12",
     "resultados": {
       "d2d4 g8f6 c2c4 e7e6 g1f3": {
         "ok": true,
@@ -325,6 +341,26 @@
       "d2d4 g8f6 c2c4 e7e6 g1f3 b7b6 b1c3 f8b4 c1g5 c8b7 e2e3 h7h6 g5h4 b4c3 b2c3 d7d6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 g1f3 b7b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 g1f3 b7b6 g2g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 g1f3 b7b6 g2g3 c8b7 f1g2 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 b7b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 b7b6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
       }
     }
   }

@@ -1,0 +1,160 @@
+{
+  "id": "van-geet",
+  "nombre": "Apertura Van Geet (1.Cc3)",
+  "raiz": "b1c3",
+  "resumen": "También llamada Apertura Dunst. El caballo sale antes que los peones: controla d5 y e4 y deja abierta la elección entre e4 y d4. Su defecto es que tapa el peón de c, así que el blanco no puede jugar c4 como en el Gambito de Dama. Stockfish la considera algo inferior a 1.e4 o 1.d4, pero sana. Contra 1...d5 lo más sólido es 2.d4, que lleva a esquemas del Veresov o del Jobava; 2.e4 es más dudosa, porque 2...d4 echa al caballo.",
+  "planesBlancas": [
+    "d4 y Ag5 o Af4: transponer a sistemas conocidos con el caballo ya en c3.",
+    "e4, Cf3 y d4 para llegar a aperturas abiertas."
+  ],
+  "planesNegras": [
+    "...d5 y, si el blanco juega e4, ...d4 para echar al caballo.",
+    "...e5 con ...Cc6: una Nimzowitsch con colores invertidos."
+  ],
+  "estructura": "Depende de la transposición: con d4 y ...d5, centro cerrado de peón dama; con e4 y ...e5, una partida abierta.",
+  "rupturas": [
+    "e4 o d4 del blanco, según la respuesta negra.",
+    "...d4 del negro para ganar espacio a costa del caballo de c3."
+  ],
+  "piezas": [
+    "Caballo blanco de c3: controla el centro, pero bloquea el peón de c."
+  ],
+  "trampas": [],
+  "notas": {
+    "b1c3": {
+      "porQue": "El caballo sale antes que los peones: controla d5 y e4 y deja abierta la elección entre e4 y d4. Tapa el peón de c, así que no habrá c4 como en el Gambito de Dama.",
+      "inferior": true
+    },
+    "b1c3 d7d5": {
+      "porQue": "Ocupa el centro: ahora e4 ya no se juega tan fácil."
+    },
+    "b1c3 d7d5 d2d4": {
+      "porQue": "Lo más sólido: el blanco ocupa el centro y se llega a esquemas del Veresov (Ag5) o del Jobava (Af4).",
+      "porQueNo": [
+        {
+          "uci": "g2g3",
+          "texto": "g3?! d4: el caballo pierde tiempo, por ejemplo Cb1 c5 y el negro tiene el centro."
+        }
+      ]
+    },
+    "b1c3 d7d5 e2e4": {
+      "porQue": "Transpone a la Escandinava con 2.Cc3. Stockfish la considera algo floja por la respuesta 2...d4.",
+      "inferior": true
+    },
+    "b1c3 d7d5 e2e4 d5d4": {
+      "porQue": "Lo más fuerte: el peón echa al caballo de c3 y el negro gana espacio.",
+      "porQueNo": [
+        {
+          "uci": "g8f6",
+          "texto": "...Cf6? exd5 Cxd5 Ac4: el blanco desarrolla ganando tiempo sobre el caballo."
+        },
+        {
+          "uci": "e7e5",
+          "texto": "...e5? Cxd5: el peón de d5 cae."
+        }
+      ]
+    },
+    "b1c3 d7d5 e2e4 d5e4 c3e4": {
+      "porQue": "Recupera el peón y queda con un desarrollo cómodo.",
+      "porQueNo": [
+        {
+          "uci": "f2f3",
+          "texto": "3.f3?! exf3 Cxf3: un Blackmar-Diemer sin el peón de d4, dudoso."
+        }
+      ]
+    },
+    "b1c3 e7e5": {
+      "porQue": "Ocupa el centro: es una Nimzowitsch (1.e4 Cc6) con colores invertidos."
+    },
+    "b1c3 e7e5 g1f3": {
+      "porQue": "Desarrolla atacando e5. Si ...Cc6, d4 o e4 llevan a posiciones conocidas.",
+      "porQueNo": [
+        {
+          "uci": "e2e3",
+          "texto": "e3 es pasiva: ...d5, d4 e4 y el negro gana espacio."
+        },
+        {
+          "uci": "d2d3",
+          "texto": "d3 es pasiva: ...d5 y el negro tiene el centro."
+        }
+      ]
+    },
+    "b1c3 c7c5 e2e4": {
+      "porQue": "Transpone a la Siciliana Cerrada (1.e4 c5 2.Cc3)."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-12",
+    "resultados": {
+      "b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "b1c3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "b1c3 d7d5 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "b1c3 d7d5 g2g3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 4 puntos de chances: +0,0 → −0,4. Refutación: d4 Cb1 c5 Ag2 Cf6 d3"
+      },
+      "b1c3 d7d5 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "b1c3 d7d5 e2e4 d5d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "b1c3 d7d5 e2e4 g8f6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,4 → −0,2. Refutación: exd5 Cxd5 Cf3 g6 Ac4 Cxc3"
+      },
+      "b1c3 d7d5 e2e4 e7e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 15 puntos de chances: +0,4 → −1,2. Refutación: Cxd5 Cf6 Cxf6+ Dxf6 c3 Dg6"
+      },
+      "b1c3 d7d5 e2e4 d5e4 c3e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "b1c3 d7d5 e2e4 d5e4 f2f3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,1 → −0,6. Refutación: exf3 Cxf3 Cf6 d4 g6 Ac4"
+      },
+      "b1c3 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "b1c3 e7e5 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "b1c3 e7e5 e2e3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,3 → −0,2. Refutación: d5 d4 e4 f3 Cf6 fxe4"
+      },
+      "b1c3 e7e5 d2d3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,3 → −0,4. Refutación: d5 Cf3 f6 e3 c6 Ae2"
+      },
+      "b1c3 c7c5 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      }
+    }
+  }
+}

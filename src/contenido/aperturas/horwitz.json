@@ -1,0 +1,180 @@
+{
+  "id": "horwitz",
+  "nombre": "Defensa Horwitz (1.d4 e6): Inglesa y Canguro",
+  "raiz": "d2d4 e7e6",
+  "resumen": "Una primera jugada flexible: el negro espera para elegir entre ...d5 (Gambito de Dama), ...f5 (Holandesa), ...Ab4+ (Canguro) o ...b6 (Defensa Inglesa). Contra 2.e4 se llega a la Francesa. La Defensa Inglesa (2.c4 b6) deja que el blanco ocupe el centro con e4 y lo ataca con ...Ab7 y a veces ...Ab4+ y ...f5; es provocativa, y el blanco queda algo mejor. Este archivo también reúne la Defensa Inglesa con 1...b6 y la Defensa Polaca (1...b5).",
+  "planesBlancas": [
+    "c4 y e4: ocupar el centro con tres peones si el negro no juega ...d5.",
+    "Defender e4 con piezas (Ad3, Cc3, f3) frente a la presión del alfil de b7."
+  ],
+  "planesNegras": [
+    "...b6 y ...Ab7 contra e4, con ...Ab4+ y ...f5 para minar el centro.",
+    "...Ab4+ para cambiar el alfil malo o transponer a la Bogoindia."
+  ],
+  "estructura": "Si el blanco consigue c4, d4 y e4, tiene un centro amplio que el negro ataca desde lejos con los alfiles y la ruptura ...f5.",
+  "rupturas": [
+    "e4 y, a veces, d5 del blanco.",
+    "...f5 y ...c5 del negro."
+  ],
+  "piezas": [
+    "Alfil negro de b7: la pieza clave, contra e4 y g2.",
+    "Alfil negro de f8: ...Ab4+ lo cambia o desarrolla con jaque."
+  ],
+  "trampas": [],
+  "notas": {
+    "d2d4 e7e6": {
+      "porQue": "Una jugada flexible: el negro espera para elegir entre ...d5, ...f5, ...Ab4+ o ...b6. Contra 2.e4 se llega a la Francesa."
+    },
+    "d2d4 e7e6 e2e4": {
+      "porQue": "Transpone a la Defensa Francesa (1.e4 e6 2.d4)."
+    },
+    "d2d4 e7e6 c2c4": {
+      "porQue": "Lo más ambicioso: si el negro no juega ...d5, el blanco se queda con el centro."
+    },
+    "d2d4 e7e6 c2c4 b7b6": {
+      "porQue": "Defensa Inglesa: el alfil irá a b7 para presionar e4 antes de que el blanco lo ocupe."
+    },
+    "d2d4 e7e6 c2c4 b7b6 e2e4": {
+      "porQue": "Ocupa el centro igual: el blanco acepta que e4 quede bajo presión."
+    },
+    "d2d4 e7e6 c2c4 b7b6 e2e4 c8b7": {
+      "porQue": "Ataca e4 de inmediato. ...Ab4+, para cambiar el alfil antes, también es buena.",
+      "porQueNo": [
+        {
+          "uci": "d7d5",
+          "texto": "...d5? cxd5 exd5 exd5 Dxd5 Cf3: el negro recupera el peón, pero su dama queda expuesta y el blanco se desarrolla con tiempo."
+        }
+      ]
+    },
+    "d2d4 e7e6 c2c4 b7b6 e2e4 c8b7 f1d3": {
+      "porQue": "Defiende e4 con una pieza.",
+      "porQueNo": [
+        {
+          "uci": "d4d5",
+          "texto": "d5? Ab4+ Cc3 Axc3+ bxc3: el blanco queda con peones doblados y el centro bloqueado."
+        }
+      ]
+    },
+    "d2d4 e7e6 c2c4 f8b4": {
+      "porQue": "Defensa Canguro: un jaque que puede transponer a la Bogoindia o a la Nimzoindia."
+    },
+    "d2d4 e7e6 c2c4 f8b4 c1d2": {
+      "porQue": "Ofrece el cambio de alfiles.",
+      "porQueNo": [
+        {
+          "uci": "d1d2",
+          "texto": "Dd2?? Axd2+ y el negro gana la dama por el alfil."
+        }
+      ]
+    },
+    "d2d4 b7b6": {
+      "porQue": "Defensa Inglesa con 1...b6: el alfil irá a b7 contra e4. Stockfish la considera algo floja, porque el blanco ocupa el centro sin oposición.",
+      "inferior": true
+    },
+    "d2d4 b7b6 e2e4": {
+      "porQue": "Ocupa el centro: e4 va a quedar presionado por el alfil de b7, pero el blanco tiene tiempo para cuidarlo."
+    },
+    "d2d4 b7b5 e2e4": {
+      "porQue": "Contra la Defensa Polaca, ocupar el centro y amenazar Axb5 es lo más simple."
+    },
+    "d2d4 b7b5 e2e4 a7a6": {
+      "porQue": "Sostiene b5. ...Ab7, que ataca e4, también es jugable.",
+      "porQueNo": [
+        {
+          "uci": "e7e6",
+          "texto": "...e6? Axb5: el peón cae sin compensación."
+        },
+        {
+          "uci": "c7c5",
+          "texto": "...c5? Axb5: el negro pierde el peón y abre su propio flanco de dama."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-12",
+    "resultados": {
+      "d2d4 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 e7e6 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 e7e6 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 e7e6 c2c4 b7b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 e7e6 c2c4 b7b6 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 e7e6 c2c4 b7b6 e2e4 c8b7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "d2d4 e7e6 c2c4 b7b6 e2e4 d7d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,5 → −1,0. Refutación: cxd5 exd5 exd5 Dxd5 Cc3 Ab4"
+      },
+      "d2d4 e7e6 c2c4 b7b6 e2e4 c8b7 f1d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "d2d4 e7e6 c2c4 b7b6 e2e4 c8b7 d4d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,6 → +0,0. Refutación: Ab4+ Ad2 De7 Ae2 Cf6 Axb4"
+      },
+      "d2d4 e7e6 c2c4 f8b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 e7e6 c2c4 f8b4 c1d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 e7e6 c2c4 f8b4 d1d2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 49 puntos de chances: +0,3 → −8,8. Refutación: Axd2+ Axd2 e5 Cc3 exd4 Cd5"
+      },
+      "d2d4 b7b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Cf6: −0,2 contra −0,9 (marcada como inferior pero jugable)"
+      },
+      "d2d4 b7b6 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,9 para el bando que mueve"
+      },
+      "d2d4 b7b5 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,1 para el bando que mueve"
+      },
+      "d2d4 b7b5 e2e4 a7a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,3 para el bando que mueve"
+      },
+      "d2d4 b7b5 e2e4 e7e6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −1,1 → −1,9. Refutación: Axb5 Ab7 Cd2 c5 Cgf3 cxd4"
+      },
+      "d2d4 b7b5 e2e4 c7c5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −1,1 → −2,0. Refutación: Axb5 cxd4 Dxd4 e6 Cf3 Cf6"
+      }
+    }
+  }
+}

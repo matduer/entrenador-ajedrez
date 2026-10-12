@@ -1,0 +1,158 @@
+{
+  "id": "apertura-e3",
+  "nombre": "Apertura Van't Kruijs (1.e3) y otras primeras jugadas raras",
+  "raiz": "e2e3",
+  "resumen": "1.e3 abre la diagonal del alfil de f1 y de la dama sin comprometer el centro. Es modesta pero sana: el blanco suele seguir con d4, c4 o b3 y transpone a otras aperturas con un tiempo de menos en el centro. Este archivo también reúne las notas de las otras primeras jugadas poco comunes. Según Stockfish, 1.c3 (Saragossa) es tan sana como 1.e3; 1.a3 (Anderssen), 1.d3 (Mieses), 1.h3 (Clemenz), 1.a4 (Ware) y 1.h4 (Kádas) son algo inferiores; y 1.Ch3 (Amar), 1.Ca3 (Sodium), 1.f3 (Barnes) y 1.g4 (Grob, con archivo propio) ya pierden bastante. Contra todas ellas, la receta del negro es la misma: ocupar el centro con ...e5 o ...d5.",
+  "planesBlancas": [
+    "d4, c4 o b3 para transponer a esquemas conocidos (Colle, Inglesa, Larsen) con el peón ya en e3."
+  ],
+  "planesNegras": [
+    "Ocupar el centro con ...e5 y ...d5: contra las jugadas que no lo disputan, el negro se queda con él."
+  ],
+  "estructura": "No hay una estructura propia: estas jugadas casi siempre transponen o dejan que el negro arme el centro clásico.",
+  "rupturas": [
+    "d4 del blanco para disputar el centro.",
+    "...e5 y ...d5 del negro."
+  ],
+  "piezas": [
+    "Alfil blanco de f1: e3 le abre la diagonal, igual que a la dama."
+  ],
+  "trampas": [
+    {
+      "jugadas": "f2f3 e7e5 g2g4 d8h4",
+      "texto": "El Mate del Loco: 1.f3 e5 2.g4?? Dh4#. Es el mate más rápido posible."
+    }
+  ],
+  "notas": {
+    "e2e3": {
+      "porQue": "Abre la diagonal del alfil de f1 y de la dama sin comprometer el centro. Es modesta: el blanco suele seguir con d4, c4 o b3 y transpone a otras aperturas."
+    },
+    "e2e3 e7e5 d2d4": {
+      "porQue": "Ataca e5 enseguida: si ...exd4, exd4 y el blanco queda con un centro cómodo.",
+      "porQueNo": [
+        {
+          "uci": "e3e4",
+          "texto": "e4 pierde un tiempo: es una partida abierta en la que el blanco movió dos veces el peón de rey."
+        }
+      ]
+    },
+    "c2c3": {
+      "porQue": "Apertura Saragossa: prepara d4 apoyado y le da a la dama las casillas b3 y a4. Es sana, aunque modesta."
+    },
+    "a2a3": {
+      "porQue": "Apertura Anderssen: una jugada de espera que prepara b4. No hace nada por el centro, y el negro lo ocupa con ...e5 o ...d5.",
+      "inferior": true
+    },
+    "d2d3": {
+      "porQue": "Apertura Mieses: abre la diagonal del alfil de c1, pero ocupa poco centro. Suele llevar a un Ataque Indio de Rey.",
+      "inferior": true
+    },
+    "h2h3": {
+      "porQue": "Apertura Clemenz: prepara g4 o simplemente espera. No ayuda en nada al centro.",
+      "inferior": true
+    },
+    "a2a4": {
+      "porQue": "Apertura Ware: piensa en sacar la torre por a3, una idea que casi nunca funciona. Es un tiempo perdido para el centro.",
+      "inferior": true
+    },
+    "h2h4": {
+      "porQue": "Apertura Kádas: el peón de torre avanza sin un objetivo claro. El negro ocupa el centro con ...e5 o ...d5.",
+      "inferior": true
+    },
+    "h2h4 e7e5": {
+      "porQue": "Lo mejor: ocupa el centro, que el blanco descuidó."
+    },
+    "f2f3 e7e5": {
+      "porQue": "La respuesta más fuerte: ocupa el centro. El blanco le quitó al caballo su casilla f3 y abrió la diagonal e1-h4."
+    },
+    "f2f3 e7e5 b1c3": {
+      "porQue": "Lo más sólido: desarrolla y cubre e4.",
+      "porQueNo": [
+        {
+          "uci": "g2g4",
+          "texto": "g4?? Dh4#: el Mate del Loco, el mate más rápido posible."
+        }
+      ]
+    },
+    "b1a3 e7e5": {
+      "porQue": "Ocupa el centro: el caballo de a3 no controla ninguna casilla central."
+    },
+    "g1h3 d7d5": {
+      "porQue": "Ocupa el centro: el caballo de h3 apunta a f4 y g5, lejos de la pelea central."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-12",
+    "resultados": {
+      "e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e3 e7e5 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e3 e7e5 e3e4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,2 → −0,4. Refutación: Cf6 Cc3 Ab4 a3 Aa5 Cf3"
+      },
+      "c2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "a2a3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "d2d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere e4: +0,4 contra −0,1 (marcada como inferior pero jugable)"
+      },
+      "h2h3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere e4: +0,4 contra −0,1 (marcada como inferior pero jugable)"
+      },
+      "a2a4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere e4: +0,4 contra −0,1 (marcada como inferior pero jugable)"
+      },
+      "h2h4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere e4: +0,4 contra −0,3 (marcada como inferior pero jugable)"
+      },
+      "h2h4 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "f2f3 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "f2f3 e7e5 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "f2f3 e7e5 g2g4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 43 puntos de chances: −0,8 → recibe mate en 1. Refutación: Dh4#"
+      },
+      "b1a3 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "g1h3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      }
+    }
+  }
+}

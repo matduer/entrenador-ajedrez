@@ -165,6 +165,15 @@
           "texto": "d3? e5: el negro ocupa el centro con los dos peones y el blanco queda pasivo."
         }
       ]
+    },
+    "g1f3 d7d5 g2g3 g8f6 f1g2 e7e6": {
+      "porQue": "Esquema sólido de Gambito de Dama: ...Ae7 y ...O-O, sin comprometer todavía el alfil de c8."
+    },
+    "g1f3 d7d5 g2g3 g8f6 f1g2 e7e6 e1g1": {
+      "porQue": "Enroca y espera: más adelante elige entre c4, d3 con e4, o d4."
+    },
+    "g1f3 d7d5 g2g3 g8f6 f1g2 e7e6 e1g1 f8e7 c2c4": {
+      "porQue": "Ataca d5 desde el flanco, al estilo de la Réti y la Catalana."
     }
   },
   "fuentes": [
@@ -351,6 +360,18 @@
       "g1f3 d7d5 g2g3 c7c5 f1g2 b8c6 d2d3 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 6 puntos de chances: +0,3 → −0,4. Refutación: e5 c4 dxc4 Da4 Ad7 Dxc4"
+      },
+      "g1f3 d7d5 g2g3 g8f6 f1g2 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "g1f3 d7d5 g2g3 g8f6 f1g2 e7e6 e1g1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "g1f3 d7d5 g2g3 g8f6 f1g2 e7e6 e1g1 f8e7 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
       }
     }
   }

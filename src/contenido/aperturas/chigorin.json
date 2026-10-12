@@ -118,6 +118,39 @@
     },
     "d2d4 d7d5 c2c4 b8c6 b1c3 g8f6 c1g5 f6e4": {
       "porQue": "Contra la clavada, el salto a e4 obliga a cambiar el alfil o el caballo de c3."
+    },
+    "d2d4 b8c6": {
+      "porQue": "Defensa Mikenas: el caballo presiona d4 como en la Chigorin, pero sin ...d5 queda expuesto a d5, que lo echa ganando espacio.",
+      "inferior": true
+    },
+    "d2d4 b8c6 d4d5": {
+      "porQue": "Lo más fuerte: echa al caballo y gana espacio."
+    },
+    "d2d4 b8c6 d4d5 c6e5": {
+      "porQue": "La mejor casilla: centralizado. El blanco va a seguir hostigándolo con f4 o e4.",
+      "porQueNo": [
+        {
+          "uci": "e7e5",
+          "texto": "...e5?? dxc6: el caballo estaba atacado y se pierde."
+        },
+        {
+          "uci": "g8f6",
+          "texto": "...Cf6?? dxc6: el caballo de c6 sigue atacado y se pierde."
+        }
+      ]
+    },
+    "d2d4 b8c6 c2c4 e7e5 d4d5": {
+      "porQue": "Gana espacio con tiempo: el caballo tiene que moverse otra vez.",
+      "porQueNo": [
+        {
+          "uci": "g1f3",
+          "texto": "Cf3? exd4 Cxd4 Cf6 y el centro blanco desaparece sin que el negro haya perdido tiempo."
+        },
+        {
+          "uci": "b1c3",
+          "texto": "Cc3? Cxd4: el peón de d4 cae."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -143,7 +176,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-11",
+    "fecha": "2026-10-12",
     "resultados": {
       "d2d4 d7d5 c2c4 b8c6": {
         "ok": true,
@@ -248,6 +281,38 @@
       "d2d4 d7d5 c2c4 b8c6 b1c3 g8f6 c1g5 f6e4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Cf6: −0,2 contra −0,8 (marcada como inferior pero jugable)"
+      },
+      "d2d4 b8c6 d4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "d2d4 b8c6 d4d5 c6e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "d2d4 b8c6 d4d5 e7e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 30 puntos de chances: −0,7 → −5,0. Refutación: dxc6 bxc6 c4 d5 Cf3 Ad6"
+      },
+      "d2d4 b8c6 d4d5 g8f6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 30 puntos de chances: −0,7 → −4,9. Refutación: dxc6 e5 cxd7+ Axd7 a3 Ac5"
+      },
+      "d2d4 b8c6 c2c4 e7e5 d4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 b8c6 c2c4 e7e5 g1f3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,5 → −0,0. Refutación: exd4 Cxd4 Cf6 g3 Ab4+ Ad2"
+      },
+      "d2d4 b8c6 c2c4 e7e5 b1c3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 13 puntos de chances: +0,5 → −0,9. Refutación: Cxd4 f4 Ab4 Cf3 Cxf3+ exf3"
       }
     }
   }

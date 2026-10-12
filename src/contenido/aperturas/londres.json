@@ -181,6 +181,13 @@
     },
     "d2d4 g8f6 g1f3 g7g6 b1c3 d7d5 c1f4 f8g7 e2e3 e8g8": {
       "porQue": "Enroca primero: el negro espera a ver el plan del blanco antes de decidir entre ...c5 y ...Ch5."
+    },
+    "d2d4 d7d5 d1d3": {
+      "porQue": "Ataque Amazonas: la dama sale temprano para preparar e4.",
+      "inferior": true
+    },
+    "d2d4 d7d5 d1d3 c7c5": {
+      "porQue": "Lo más directo: ataca d4, y la dama de d3 va a ser blanco de las piezas menores negras."
     }
   },
   "fuentes": [
@@ -379,6 +386,14 @@
       "d2d4 g8f6 g1f3 g7g6 b1c3 d7d5 c1f4 f8g7 e2e3 e8g8": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 d1d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere c4: +0,2 contra −0,3 (marcada como inferior pero jugable)"
+      },
+      "d2d4 d7d5 d1d3 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
       }
     }
   }

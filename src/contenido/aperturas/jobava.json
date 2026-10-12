@@ -70,6 +70,12 @@
     },
     "d2d4 d7d5 b1c3 g8f6 c1f4 a7a6 e2e3": {
       "porQue": "Con ...a6 el negro le quita b5 al caballo; el blanco sigue con su esquema."
+    },
+    "d2d4 d7d5 b1c3 e7e6 c1f4": {
+      "porQue": "El Jobava contra ...e6: Cb5 contra c7 sigue siendo una amenaza."
+    },
+    "d2d4 d7d5 b1c3 e7e6 c1f4 g8f6": {
+      "porQue": "Lo más natural: transpone a la línea principal del Jobava con ...e6."
     }
   },
   "fuentes": [
@@ -135,6 +141,14 @@
       "d2d4 d7d5 b1c3 g8f6 c1f4 a7a6 e2e3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 b1c3 e7e6 c1f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "d2d4 d7d5 b1c3 e7e6 c1f4 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
       }
     }
   }

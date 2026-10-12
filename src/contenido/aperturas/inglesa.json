@@ -221,6 +221,13 @@
     },
     "c2c4 f7f5 g1f3 g8f6 g2g3 g7g6": {
       "porQue": "El esquema Leningrado: ...Ag7, ...O-O y ...d6, con la ruptura ...e5 más adelante."
+    },
+    "c2c4 g8f6 b2b4": {
+      "porQue": "El Orangután inglés: el peón de b gana espacio y prepara Ab2, una mezcla de Inglesa y Polaca.",
+      "inferior": true
+    },
+    "c2c4 g8f6 b2b4 e7e5": {
+      "porQue": "Lo mejor: ocupa el centro y abre el alfil de f8, que ya amenaza ...Axb4."
     }
   },
   "fuentes": [
@@ -470,6 +477,14 @@
       "c2c4 f7f5 g1f3 g8f6 g2g3 g7g6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "c2c4 g8f6 b2b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere d4: +0,2 contra −0,4 (marcada como inferior pero jugable)"
+      },
+      "c2c4 g8f6 b2b4 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
       }
     }
   }

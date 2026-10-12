@@ -110,6 +110,12 @@
           "texto": "4...d6? 5.exd6 Dxd6 6.Dxd6 Axd6 7.Cb5: el caballo ataca el alfil y amenaza Cxc7+."
         }
       ]
+    },
+    "d2d4 e7e5 g1f3 e5e4": {
+      "porQue": "Gana espacio con tiempo: el caballo tiene que moverse."
+    },
+    "d2d4 e7e5 d4d5 f8c5": {
+      "porQue": "Desarrolla apuntando a f2: si el blanco juega e4 sin cuidado, ...Dh4 amenaza mate en f2."
     }
   },
   "fuentes": [
@@ -130,7 +136,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-11",
+    "fecha": "2026-10-12",
     "resultados": {
       "d2d4 e7e5 d4e5": {
         "ok": true,
@@ -211,6 +217,14 @@
       "d2d4 e7e5 d4e5 b8c6 g1f3 d8e7 b1c3 d7d6 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 10 puntos de chances: −1,5 → −2,7. Refutación: Ag5 Dd7 Af4 Cxe5 Cxe5 dxe5"
+      },
+      "d2d4 e7e5 g1f3 e5e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 e7e5 d4d5 f8c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
       }
     }
   }

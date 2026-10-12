@@ -61,6 +61,45 @@
     },
     "e2e4 a7a6 d2d4 b7b5 c2c4 c8b7 d1c2": {
       "porQue": "Sostiene e4 con la dama y mantiene los tres peones centrales: para Stockfish, la más precisa."
+    },
+    "e2e4 g7g5 d2d4": {
+      "porQue": "Contra la Defensa Borg (1...g5): ocupa el centro con los dos peones, y el alfil de c1 ya ataca g5."
+    },
+    "e2e4 g7g5 d2d4 h7h6": {
+      "porQue": "Sostiene g5. Para Stockfish el negro ya está unos dos peones abajo: el fianchetto con ...Ag7 no compensa el flanco de rey debilitado."
+    },
+    "d2d4 g7g5 c1g5": {
+      "porQue": "Contra el Gambito Borg (1.d4 g5): se toma el peón, y el negro no tiene compensación."
+    },
+    "e2e4 h7h6": {
+      "porQue": "Defensa Carr: una jugada de espera que no hace nada por el centro.",
+      "inferior": true
+    },
+    "e2e4 h7h6 d2d4": {
+      "porQue": "Ocupa el centro: el blanco tiene dos peones centrales y el negro ninguno."
+    },
+    "e2e4 a7a5": {
+      "porQue": "Defensa Ware: piensa en sacar la torre por a6, pero es un tiempo perdido para el centro.",
+      "inferior": true
+    },
+    "e2e4 a7a5 d2d4": {
+      "porQue": "Ocupa el centro con los dos peones."
+    },
+    "e2e4 h7h5 d2d4": {
+      "porQue": "Contra la Defensa Goldsmith (1...h5): ocupa el centro. El avance del peón de torre no lo molesta."
+    },
+    "e2e4 f7f5 e4f5": {
+      "porQue": "Contra el Gambito Duras (1...f5): se toma. El negro abrió su propio flanco de rey y regaló un peón.",
+      "porQueNo": [
+        {
+          "uci": "e4e5",
+          "texto": "e5 es peor: ...d6 y el negro desarma el peón adelantado."
+        },
+        {
+          "uci": "d2d4",
+          "texto": "d4? fxe4: el negro ganó un peón central."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -77,7 +116,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-11",
+    "fecha": "2026-10-12",
     "resultados": {
       "e2e4 a7a6": {
         "ok": true,
@@ -126,6 +165,50 @@
       "e2e4 a7a6 d2d4 b7b5 c2c4 c8b7 d1c2": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 g7g5 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +2,3 para el bando que mueve"
+      },
+      "e2e4 g7g5 d2d4 h7h6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −2,1 para el bando que mueve"
+      },
+      "d2d4 g7g5 c1g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +2,8 para el bando que mueve"
+      },
+      "e2e4 h7h6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere e5: −0,3 contra −0,9 (marcada como inferior pero jugable)"
+      },
+      "e2e4 h7h6 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,9 para el bando que mueve"
+      },
+      "e2e4 a7a5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere e5: −0,3 contra −0,9 (marcada como inferior pero jugable)"
+      },
+      "e2e4 a7a5 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,9 para el bando que mueve"
+      },
+      "e2e4 h7h5 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,4 para el bando que mueve"
+      },
+      "e2e4 f7f5 e4f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,9 para el bando que mueve"
+      },
+      "e2e4 f7f5 e4e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 11 puntos de chances: +1,9 → +0,7. Refutación: d6 Cf3 Cc6 Ab5 Ad7 exd6"
+      },
+      "e2e4 f7f5 d2d4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 17 puntos de chances: +1,9 → +0,0. Refutación: fxe4 f3 e5 dxe5 Cc6 Af4"
       }
     }
   }

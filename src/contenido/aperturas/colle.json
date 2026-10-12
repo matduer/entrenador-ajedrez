@@ -105,6 +105,9 @@
     },
     "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 f8d6 e1g1 e8g8 b2b3": {
       "porQue": "Esquema Zukertort: el alfil de c1 irá a b2, desde donde apunta al enroque negro por la diagonal larga, y el caballo suele saltar a e5."
+    },
+    "d2d4 g8f6 g1f3 e7e6 e2e3": {
+      "porQue": "Sistema Yusupov-Rubinstein: esquema de Colle contra ...e6, a menudo con b3 y Ab2 como en el Colle-Zukertort."
     }
   },
   "fuentes": [
@@ -221,6 +224,10 @@
         "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
       },
       "d2d4 d7d5 g1f3 g8f6 e2e3 e7e6 f1d3 f8d6 e1g1 e8g8 b2b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 g1f3 e7e6 e2e3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
       }

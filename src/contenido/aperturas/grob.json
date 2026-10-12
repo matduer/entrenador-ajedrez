@@ -1,0 +1,199 @@
+{
+  "id": "grob",
+  "nombre": "Apertura Grob (1.g4)",
+  "raiz": "g2g4",
+  "resumen": "El peón de g avanza dos casillas para fianchettar el alfil y presionar la diagonal larga, sobre todo b7 y d5. El precio es alto: el flanco de rey queda debilitado (la diagonal e1-h4 se abre y f3 y h3 quedan flojos) y el peón de g4 es un blanco fácil. Para Stockfish es la peor de las primeras jugadas que se ven en la práctica: tras 1...d5 el negro queda más de un peón mejor. Se usa sobre todo en partidas rápidas, por el efecto sorpresa.",
+  "planesBlancas": [
+    "Ag2 contra d5 y b7; si el negro toma en g4, c4 y Db3 para abrir la diagonal larga.",
+    "h3 para sostener el peón de g4 cuando no se quiere entregar."
+  ],
+  "planesNegras": [
+    "...d5 y, después de Ag2, ...Axg4: tomar el peón con el alfil.",
+    "...e5 y ...h5 para atacar el peón de g4 y aprovechar la diagonal d8-h4."
+  ],
+  "estructura": "Peón blanco en g4 y alfil en g2; el negro ocupa el centro con ...d5 y a menudo ...e5.",
+  "rupturas": [
+    "c4 del blanco contra d5, para abrir la diagonal del alfil de g2.",
+    "...h5 del negro contra el peón de g4."
+  ],
+  "piezas": [
+    "Alfil blanco de g2: la pieza que justifica la apertura.",
+    "Dama negra: la diagonal d8-h4 quedó abierta hacia el rey blanco."
+  ],
+  "trampas": [
+    {
+      "jugadas": "g2g4 e7e5 f2f4 d8h4",
+      "texto": "1.g4 e5 2.f4?? Dh4#: con los peones de f y g adelantados, nada puede taparse en la diagonal e1-h4."
+    }
+  ],
+  "notas": {
+    "g2g4 d7d5": {
+      "porQue": "La respuesta más fuerte: ocupa el centro y el alfil de c8 ya apunta a g4. Para Stockfish, el negro queda más de un peón mejor.",
+      "porQueNo": [
+        {
+          "uci": "f7f5",
+          "texto": "...f5? gxf5: el negro abre su propio flanco de rey y pierde un peón."
+        },
+        {
+          "uci": "g8f6",
+          "texto": "...Cf6? g5: el caballo tiene que retirarse y el peón de g se convirtió en un arma."
+        }
+      ]
+    },
+    "g2g4 d7d5 f1g2": {
+      "porQue": "El Gambito Grob: si ...Axg4, c4 ataca d5 y el alfil de g2 apunta a b7 por la diagonal larga.",
+      "porQueNo": [
+        {
+          "uci": "d2d4",
+          "texto": "d4? Axg4: el peón cae y el blanco no tiene la presión de la diagonal larga."
+        },
+        {
+          "uci": "g1f3",
+          "texto": "Cf3? Axg4: un peón de menos sin ninguna compensación."
+        }
+      ]
+    },
+    "g2g4 d7d5 f1g2 c8g4": {
+      "porQue": "Acepta: el negro gana un peón y el blanco tiene que demostrar la presión sobre d5 y b7."
+    },
+    "g2g4 d7d5 f1g2 c8g4 c2c4": {
+      "porQue": "La idea del gambito: ataca d5 y, detrás, b7 queda bajo la mira del alfil de g2.",
+      "porQueNo": [
+        {
+          "uci": "g1f3",
+          "texto": "Cf3? e6: sin c4 no hay presión, y el blanco quedó simplemente con un peón de menos."
+        },
+        {
+          "uci": "d2d3",
+          "texto": "d3? c6: el negro cierra la diagonal larga y conserva el peón de más."
+        }
+      ]
+    },
+    "g2g4 d7d5 f1g2 c8g4 c2c4 c7c6": {
+      "porQue": "Lo más sólido: sostiene d5 y cierra la diagonal larga.",
+      "porQueNo": [
+        {
+          "uci": "d5c4",
+          "texto": "...dxc4? Axb7 Cd7 Axa8: el blanco gana la calidad."
+        }
+      ]
+    },
+    "g2g4 d7d5 f1g2 c7c6": {
+      "porQue": "Sostiene d5 antes de tomar: el negro rechaza el gambito y se queda con un centro sólido. Stockfish prefiere ...Axg4 o ...Cc6, que sacan más provecho de g4.",
+      "inferior": true
+    },
+    "g2g4 d7d5 h2h3": {
+      "porQue": "Sostiene el peón de g4 en lugar de entregarlo, a costa de otro avance en el flanco de rey."
+    },
+    "g2g4 d7d5 h2h3 e7e5": {
+      "porQue": "Ocupa el centro con los dos peones. ...h5, atacando g4 de inmediato, es igual de fuerte."
+    },
+    "g2g4 e7e5": {
+      "porQue": "Ocupa el centro y abre la diagonal de la dama hacia h4. Stockfish prefiere 1...d5, que ataca g4 con el alfil.",
+      "inferior": true
+    },
+    "g2g4 e7e5 f1g2": {
+      "porQue": "El alfil a la diagonal larga, apuntando a b7.",
+      "porQueNo": [
+        {
+          "uci": "f2f4",
+          "texto": "f4?? Dh4#: nada puede taparse en la diagonal e1-h4."
+        },
+        {
+          "uci": "f2f3",
+          "texto": "f3?? Dh4#: el Mate del Loco."
+        }
+      ]
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-12",
+    "resultados": {
+      "g2g4 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,3 para el bando que mueve"
+      },
+      "g2g4 f7f5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 18 puntos de chances: +1,3 → −0,7. Refutación: gxf5 d5 e4 g6 fxg6 hxg6"
+      },
+      "g2g4 g8f6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 13 puntos de chances: +1,3 → −0,2. Refutación: g5 Ch5 e4 g6 Cc3 c6"
+      },
+      "g2g4 d7d5 f1g2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,2 para el bando que mueve"
+      },
+      "g2g4 d7d5 d2d4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −1,2 → −1,9. Refutación: Axg4 Ag2 e6 c4 Ce7 Cc3"
+      },
+      "g2g4 d7d5 g1f3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −1,2 → −1,9. Refutación: Axg4 Ag2 Cc6 d4 e6 c4"
+      },
+      "g2g4 d7d5 f1g2 c8g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,4 para el bando que mueve"
+      },
+      "g2g4 d7d5 f1g2 c8g4 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,4 para el bando que mueve"
+      },
+      "g2g4 d7d5 f1g2 c8g4 g1f3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −1,4 → −2,1. Refutación: e6 c4 c6 d4 Ad6 Ce5"
+      },
+      "g2g4 d7d5 f1g2 c8g4 d2d3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −1,4 → −2,5. Refutación: e6 c4 c6 Af3 Af5 cxd5"
+      },
+      "g2g4 d7d5 f1g2 c8g4 c2c4 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,5 para el bando que mueve"
+      },
+      "g2g4 d7d5 f1g2 c8g4 c2c4 d5c4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +1,5 → +0,7. Refutación: Axb7 Cd7 Axa8 Dxa8 f3 e5"
+      },
+      "g2g4 d7d5 f1g2 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Cc6: +1,2 contra +0,7 (marcada como inferior pero jugable)"
+      },
+      "g2g4 d7d5 h2h3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,4 para el bando que mueve"
+      },
+      "g2g4 d7d5 h2h3 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,3 para el bando que mueve"
+      },
+      "g2g4 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,0 para el bando que mueve"
+      },
+      "g2g4 e7e5 f1g2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,0 para el bando que mueve"
+      },
+      "g2g4 e7e5 f2f4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 41 puntos de chances: −1,0 → recibe mate en 1. Refutación: Dh4#"
+      },
+      "g2g4 e7e5 f2f3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 41 puntos de chances: −1,0 → recibe mate en 1. Refutación: Dh4#"
+      }
+    }
+  }
+}
