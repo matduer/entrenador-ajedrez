@@ -148,6 +148,63 @@
     },
     "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 g1f3 f8e7 c1f4 a7a6 e2e3 d5c4 f1c4 b7b5": {
       "porQue": "El avance que justifica 5...a6: gana tiempo sobre el alfil de c4 y abre la diagonal a8-h1 para ...Ab7."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 c7c6": {
+      "porQue": "Sostiene d5 y prepara ...Af5, para sacar al alfil de c8, el gran problema del Gambito de Dama Rehusado."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 c7c6 d1c2": {
+      "porQue": "Impide ...Af5: el alfil de c8 se queda sin su mejor casilla (Schandorff). Con 6.e3, el negro puede jugar ...Af5 y llegar a finales que Nigel Short defendió muchas veces."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 c7c6 d1c2 b8a6": {
+      "porQue": "La única forma de aprovechar Dc2, según Schandorff: el caballo va a b4 para echar a la dama y habilitar ...Af5."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 c7c6 d1c2 b8a6 e2e3 a6b4 c2b1": {
+      "porQue": "La recomendación de Schandorff: la dama se aparta y sigue vigilando f5. Para Stockfish, Db3 es todavía un poco más precisa.",
+      "porQueNo": [
+        {
+          "uci": "c2e2",
+          "texto": "De2? Af5 Axf6 Dxf6 y la amenaza ...Cc2+ le complica la vida al blanco."
+        }
+      ]
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 c7c6 d1c2 f8e7": {
+      "porQue": "El desarrollo normal: ...Cbd7, ...O-O y la maniobra ...Te8 con ...Cf8."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 c7c6 d1c2 f8e7 e2e3 b8d7 f1d3": {
+      "porQue": "El alfil apunta a h7 y cuida f5."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 c7c6 d1c2 f8e7 e2e3 b8d7 f1d3 f6h5": {
+      "porQue": "La alternativa más importante, según Schandorff: cambia los alfiles de casillas negras y alivia la presión. El precio es que el alfil que le queda al blanco es mejor que el del negro."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 c7c6 d1c2 f8e7 e2e3 b8d7 f1d3 f6h5 g5e7 d8e7 g1e2": {
+      "porQue": "El esquema de siempre. Con ...Ch5 jugada, el enroque largo y el ataque en el flanco de rey son especialmente fuertes (Kasparov-Andersson, 1988)."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 c7c6 d1c2 f8e7 e2e3 b8d7 f1d3 e8g8": {
+      "porQue": "Pone el rey a salvo. El negro va a reagrupar con ...Te8 y ...Cf8."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 c7c6 d1c2 f8e7 e2e3 b8d7 f1d3 e8g8 g1e2": {
+      "porQue": "La elección de repertorio de Schandorff, siguiendo a Botvinnik: el caballo en e2 deja libre el peón de f para jugar f3 y e4."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 c7c6 d1c2 f8e7 e2e3 b8d7 f1d3 e8g8 g1e2 f8e8 e1g1": {
+      "porQue": "Enroque corto: con el enroque largo, el negro tiene su parte de chances; así, el blanco mantiene el control (Schandorff)."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 c7c6 d1c2 f8e7 e2e3 b8d7 f1d3 e8g8 g1e2 f8e8 e1g1 d7f8 f2f3": {
+      "porQue": "La idea de Botvinnik: preparar e4. El peón de f3 cubre e4 y le quita al negro la liberadora ...Ce4. A cambio, debilita e3, y eso a veces habilita ...c5."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 c7c6 d1c2 f8e7 e2e3 b8d7 f1d3 e8g8 g1e2 f8e8 e1g1 d7f8 f2f3 g7g6": {
+      "porQue": "Mejora las piezas: el caballo puede ir a e6 y el alfil de c8 a f5 o e6, para frenar e4."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 b8d7": {
+      "porQue": "Parece que deja colgar el peón de d5, pero hay una trampa."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 b8d7 e2e3": {
+      "porQue": "Lo correcto, según Schandorff: el juego suele transponer a la línea principal.",
+      "porQueNo": [
+        {
+          "uci": "c3d5",
+          "texto": "Cxd5?? Cxd5! Axd8 Ab4+ Dd2 Axd2+ Rxd2 Rxd8: el que pierde una pieza es el blanco."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -172,12 +229,16 @@
       "titulo": "Catálogo abierto de aperturas de Lichess",
       "url": "https://github.com/lichess-org/chess-openings",
       "licencia": "CC0"
+    },
+    {
+      "titulo": "Lars Schandorff — Playing the Queen's Gambit: A Grandmaster Guide (Quality Chess, 2009)",
+      "capitulo": "cap. 1, «Queen's Gambit Declined»: «Follow the Patriarch», teoría y línea principal (partidas 1 a 6)"
     }
   ],
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-12",
     "resultados": {
       "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5": {
         "ok": true,
@@ -318,6 +379,74 @@
       "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 g1f3 f8e7 c1f4 a7a6 e2e3 d5c4 f1c4 b7b5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 c7c6 d1c2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 c7c6 d1c2 b8a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 c7c6 d1c2 b8a6 e2e3 a6b4 c2b1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 c7c6 d1c2 b8a6 e2e3 a6b4 c2e2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: +0,4 → −0,7. Refutación: Af5 Axf6 Dxf6 Td1 Ad6 Td2"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 c7c6 d1c2 f8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 c7c6 d1c2 f8e7 e2e3 b8d7 f1d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 c7c6 d1c2 f8e7 e2e3 b8d7 f1d3 f6h5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 c7c6 d1c2 f8e7 e2e3 b8d7 f1d3 f6h5 g5e7 d8e7 g1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 c7c6 d1c2 f8e7 e2e3 b8d7 f1d3 e8g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 c7c6 d1c2 f8e7 e2e3 b8d7 f1d3 e8g8 g1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 c7c6 d1c2 f8e7 e2e3 b8d7 f1d3 e8g8 g1e2 f8e8 e1g1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 c7c6 d1c2 f8e7 e2e3 b8d7 f1d3 e8g8 g1e2 f8e8 e1g1 d7f8 f2f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 c7c6 d1c2 f8e7 e2e3 b8d7 f1d3 e8g8 g1e2 f8e8 e1g1 d7f8 f2f3 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 b8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 b8d7 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c4d5 e6d5 c1g5 b8d7 c3d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 41 puntos de chances: +0,3 → −5,5. Refutación: Cxd5 Axd8 Ab4+ Dd2 Axd2+ Rxd2"
       }
     }
   }
