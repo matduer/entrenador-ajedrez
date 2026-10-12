@@ -1,0 +1,101 @@
+{
+  "id": "hipopotamo",
+  "nombre": "Defensa Hipopótamo",
+  "raiz": "e2e4 b7b6 d2d4 c8b7 b1c3 e7e6",
+  "resumen": "Más que una apertura, un esquema universal para el negro: los dos fianchettos (...b6 y ...g6), los peones en la sexta fila (...d6, ...e6, ...h6, ...a6) y los caballos en d7 y e7. El negro le cede el centro al blanco y espera, bien replegado, el momento de golpear con ...c5, ...e5, ...f5 o ...b5/...g5. Requiere poca teoría, pero sí mucho criterio: casi siempre hay que desviarse del esquema completo (el «semi-Hipopótamo») contra ciertas ideas del blanco, sobre todo el Ataque Austriaco con f4-f5. Acá se sigue el orden con 1...b6 que recomienda De Santis; con 1...g6 se llega por la Moderna.",
+  "planesBlancas": [
+    "Desarrollo natural (Cf3, Ad3, O-O, Ae3, Dd2) con el centro de dos peones.",
+    "El Ataque Austriaco: f4 y f5 para abrir el flanco de rey antes de que el negro se acomode."
+  ],
+  "planesNegras": [
+    "Completar el esquema: ...d6, ...Cd7, ...g6, ...Ag7, ...Ce7, ...h6 y ...a6.",
+    "Atacar el centro en el momento justo con ...c5 o ...e5, o ganar espacio con ...b5 o ...g5."
+  ],
+  "estructura": "Peones negros en a6, b6, d6, e6, g6 y h6 contra el centro blanco en d4 y e4: muy compacto, sin contacto entre los peones.",
+  "rupturas": [
+    "...c5, ...e5 o ...f5 del negro.",
+    "f4-f5 y e5 del blanco."
+  ],
+  "piezas": [
+    "Alfiles negros en b7 y g7: apuntan al centro blanco desde lejos.",
+    "Caballos negros en d7 y e7: no estorban a los alfiles y apoyan las rupturas."
+  ],
+  "trampas": [],
+  "notas": {
+    "e2e4 b7b6 d2d4 c8b7 b1c3 e7e6 a2a3": {
+      "porQue": "Impide la clavada ...Ab4, que con el caballo en c3 sería molesta."
+    },
+    "e2e4 b7b6 d2d4 c8b7 b1c3 e7e6 f2f4 f8b4": {
+      "porQue": "Contra un Austriaco temprano, lo más fuerte: clava el caballo y presiona e4."
+    },
+    "e2e4 b7b6 d2d4 c8b7 b1c3 e7e6 a2a3 d7d6": {
+      "porQue": "Controla e5 y prepara el desarrollo de los caballos por d7 y e7."
+    },
+    "e2e4 b7b6 d2d4 c8b7 b1c3 e7e6 a2a3 d7d6 f2f4 g8f6 f1d3 c7c5": {
+      "porQue": "El contraataque típico de la versión con ...b6: mientras el peón de g2 esté en la diagonal del alfil de b7 (y detrás, la torre de h1), e5 no es una amenaza seria."
+    },
+    "e2e4 b7b6 d2d4 c8b7 b1c3 e7e6 a2a3 d7d6 f1d3 b8d7": {
+      "porQue": "Desarrollo del Hipopótamo: el caballo en d7 deja libre la diagonal del alfil de b7 y apoya ...c5 o ...e5."
+    },
+    "e2e4 b7b6 d2d4 c8b7 b1c3 e7e6 a2a3 d7d6 f1d3 b8d7 f2f4 d8h4": {
+      "porQue": "Contra el último intento de Ataque Austriaco, la idea de De Santis: el jaque obliga a g3 y la posición se complica. Stockfish prefiere el golpe central 6...c5.",
+      "inferior": true
+    },
+    "e2e4 b7b6 d2d4 c8b7 b1c3 e7e6 a2a3 d7d6 f1d3 b8d7 g1f3 g7g6 e1g1 f8g7 c1e3 g8e7 d1d2 h7h6": {
+      "porQue": "El esquema casi completo: ...h6 le quita g5 a las piezas blancas y prepara ...g5 si hace falta."
+    },
+    "e2e4 b7b6 d2d4 c8b7 b1c3 e7e6 a2a3 d7d6 f1d3 b8d7 g1f3 g7g6 e1g1 f8g7 c1e3 g8e7 d1d2 h7h6 a1e1 a7a6": {
+      "porQue": "El Hipopótamo terminado. El blanco está muy compacto, pero no hay presión real sobre el negro, que ya puede atacar el centro con ...c5."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Alessio De Santis — The Hippopotamus Defence (New In Chess, 2019)",
+      "capitulo": "Caps. 7 y 8 (las jugadas del Hipopótamo y del semi-Hipopótamo)"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-12",
+    "resultados": {
+      "e2e4 b7b6 d2d4 c8b7 b1c3 e7e6 a2a3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 b7b6 d2d4 c8b7 b1c3 e7e6 f2f4 f8b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "e2e4 b7b6 d2d4 c8b7 b1c3 e7e6 a2a3 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "e2e4 b7b6 d2d4 c8b7 b1c3 e7e6 a2a3 d7d6 f2f4 g8f6 f1d3 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 b7b6 d2d4 c8b7 b1c3 e7e6 a2a3 d7d6 f1d3 b8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 b7b6 d2d4 c8b7 b1c3 e7e6 a2a3 d7d6 f1d3 b8d7 f2f4 d8h4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere c5: −0,5 contra −1,1 (marcada como inferior pero jugable)"
+      },
+      "e2e4 b7b6 d2d4 c8b7 b1c3 e7e6 a2a3 d7d6 f1d3 b8d7 g1f3 g7g6 e1g1 f8g7 c1e3 g8e7 d1d2 h7h6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,0 para el bando que mueve"
+      },
+      "e2e4 b7b6 d2d4 c8b7 b1c3 e7e6 a2a3 d7d6 f1d3 b8d7 g1f3 g7g6 e1g1 f8g7 c1e3 g8e7 d1d2 h7h6 a1e1 a7a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      }
+    }
+  }
+}

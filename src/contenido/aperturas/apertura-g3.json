@@ -1,0 +1,141 @@
+{
+  "id": "apertura-g3",
+  "nombre": "Apertura 1.g3 (Húngara o Benko)",
+  "raiz": "g2g3",
+  "resumen": "La jugada más flexible de todas: el blanco hace el fianchetto del alfil de rey y deja abiertos todos los planes. Puede llevar a la Réti, la Inglesa, el Ataque Indio de Rey o una Pirc con colores invertidos, o buscar posiciones originales para sacar al rival de la teoría, como hacía Larsen alrededor de 1960. La contracara: el negro tiene la misma libertad, y puede ocupar el centro como si fuera el blanco con ...e5 y ...d5, esperando el momento de devolver el golpe.",
+  "planesBlancas": [
+    "Ag2, Cf3, O-O y elegir después el esquema: c4 (Inglesa), d3 y e4 (Ataque Indio de Rey), o d4.",
+    "Contra el centro ...e5 y ...d5, atacarlo desde el flanco con c4 o con d3 y la expansión b4."
+  ],
+  "planesNegras": [
+    "Ocupar el centro con ...e5 y ...d5 y desarrollarse con naturalidad.",
+    "Copiar el esquema con ...g6 o un fianchetto propio, sin comprometerse."
+  ],
+  "estructura": "Muy variable: con ...e5 y ...d5, el negro tiene el centro clásico y el blanco juega una apertura de 1.e4 invertida con un tiempo de más.",
+  "rupturas": [
+    "c4 y d3-e4 del blanco.",
+    "...e4 del negro, para echar al caballo de f3."
+  ],
+  "piezas": [
+    "Alfil blanco de g2: la pieza clave, apunta a la gran diagonal y al centro negro.",
+    "Caballo blanco de g1: f3, aunque a veces conviene esperar para no darle tiempo a ...e4."
+  ],
+  "trampas": [],
+  "notas": {
+    "g2g3": {
+      "porQue": "Fianchetto inmediato: el blanco no se compromete con ningún peón central."
+    },
+    "g2g3 e7e5": {
+      "porQue": "Acepta el desafío: el negro ocupa el centro como si fuera el blanco."
+    },
+    "g2g3 e7e5 f1g2 d7d5": {
+      "porQue": "El centro clásico con dos peones: ahora el blanco tiene que mostrar cómo lo ataca."
+    },
+    "g2g3 e7e5 f1g2 d7d5 c2c4": {
+      "porQue": "Invita a ...d4: una Benoni con colores invertidos, muy parecida a 1.Cf3 d5 2.c4."
+    },
+    "g2g3 e7e5 f1g2 d7d5 d2d3": {
+      "porQue": "La forma más popular: impide ...e4 y prepara Cf3. Se llega a una Pirc con colores invertidos y un tiempo de más."
+    },
+    "g2g3 e7e5 f1g2 d7d5 d2d3 g8f6 g1f3 b8c6 e1g1 f8e7 c2c4": {
+      "porQue": "Para Stockfish lo más preciso: ataca el centro desde el flanco, como en una Pirc donde el negro tuviera la jugada."
+    },
+    "g2g3 e7e5 f1g2 d7d5 g1f3": {
+      "porQue": "La idea de Larsen: provoca ...e4 para atacar después el peón avanzado."
+    },
+    "g2g3 e7e5 f1g2 d7d5 g1f3 e5e4 f3d4": {
+      "porQue": "Una Alekhine con colores invertidos y un tiempo de más.",
+      "porQueNo": [
+        {
+          "uci": "f3e5",
+          "texto": "4.Ce5? f6: el caballo queda sin casillas y se pierde."
+        }
+      ]
+    },
+    "g2g3 e7e5 f1g2 d7d5 g1f3 b8c6 d2d3": {
+      "porQue": "Una Pirc invertida; Larsen llegaba a jugar 4.O-O, provocando ...e4 para obligar a 5.Ce1.",
+      "porQueNo": [
+        {
+          "uci": "c2c3",
+          "texto": "4.c3? f5 y ...Ad6: el negro arma un centro enorme."
+        }
+      ]
+    },
+    "g2g3 g8f6 f1g2 g7g6 e2e4": {
+      "porQue": "Impide que el negro llegue a la India de Rey: la posición se parece a una Pirc."
+    },
+    "g2g3 d7d5 g1f3": {
+      "porQue": "Lo más preciso según Stockfish: se llega a una Réti (1.Cf3 d5 2.g3), con el caballo controlando e5 antes de que el negro arme ...e5."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Other Flank Openings», 1 g3"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-12",
+    "resultados": {
+      "g2g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "g2g3 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "g2g3 e7e5 f1g2 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "g2g3 e7e5 f1g2 d7d5 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "g2g3 e7e5 f1g2 d7d5 d2d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "g2g3 e7e5 f1g2 d7d5 d2d3 g8f6 g1f3 b8c6 e1g1 f8e7 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "g2g3 e7e5 f1g2 d7d5 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "g2g3 e7e5 f1g2 d7d5 g1f3 e5e4 f3d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "g2g3 e7e5 f1g2 d7d5 g1f3 e5e4 f3e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 32 puntos de chances: −0,5 → −4,9. Refutación: f6 d4 fxe5 dxe5 Cc6 c4"
+      },
+      "g2g3 e7e5 f1g2 d7d5 g1f3 b8c6 d2d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "g2g3 e7e5 f1g2 d7d5 g1f3 b8c6 c2c3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: −0,0 → −0,7. Refutación: f5 O-O Ad6 d3 Cf6 Ca3"
+      },
+      "g2g3 g8f6 f1g2 g7g6 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "g2g3 d7d5 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      }
+    }
+  }
+}

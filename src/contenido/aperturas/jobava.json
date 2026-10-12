@@ -1,0 +1,141 @@
+{
+  "id": "jobava",
+  "nombre": "Sistema Rapport-Jobava",
+  "raiz": "d2d4 d7d5 b1c3 g8f6 c1f4",
+  "resumen": "Una versión agresiva del Sistema Londres que popularizaron Baadur Jobava y Richard Rapport: con el caballo en c3 en lugar del peón, el blanco amenaza Cb5 contra c7 (que el alfil de f4 también apunta) y puede enrocar largo para atacar con h4-h5 o g4. Exige menos teoría que las aperturas principales y le plantea al negro problemas concretos desde la tercera jugada. Para Stockfish la posición es pareja: el negro tiene varias respuestas sanas (...c5, ...e6, ...Af5, ...g6, ...a6), pero tiene que vigilar la casilla c7.",
+  "planesBlancas": [
+    "Cb5 contra c7, apoyado por el alfil de f4.",
+    "e3, Cf3 o f3, y según el caso enroque largo con h4 y g4."
+  ],
+  "planesNegras": [
+    "...c5 para atacar d4 enseguida.",
+    "...e6 y cubrir c7 a tiempo (...Ca6 o ...Ab4+ con ...Aa5) antes de desarrollarse."
+  ],
+  "estructura": "Centro de peones d4 y d5; el caballo blanco en c3 tapa el peón de c, así que el blanco no juega c4 como en el Gambito de Dama.",
+  "rupturas": [
+    "...c5 y ...e5 del negro.",
+    "e4 del blanco (a veces preparado con f3), y h4-h5 en el flanco de rey."
+  ],
+  "piezas": [
+    "Alfil blanco de f4: presiona c7 y e5.",
+    "Caballo blanco de c3: a b5 para atacar c7, o a e4 tras un cambio en el centro."
+  ],
+  "trampas": [
+    {
+      "jugadas": "d2d4 d7d5 b1c3 g8f6 c1f4 e7e6 c3b5 f8e7 b5c7",
+      "texto": "3...e6 4.Cb5 Ae7?? 5.Cxc7+: el caballo, protegido por el alfil de f4, da jaque y gana la torre de a8."
+    }
+  ],
+  "notas": {
+    "d2d4 d7d5 b1c3 g8f6 c1f4": {
+      "porQue": "El alfil sale antes de e3, como en el Londres, pero con el caballo en c3: ahora Cb5 contra c7 es una amenaza."
+    },
+    "d2d4 d7d5 b1c3 g8f6 c1f4 c7c5": {
+      "porQue": "La respuesta más activa: ataca d4 de inmediato."
+    },
+    "d2d4 d7d5 b1c3 g8f6 c1f4 c7c5 e2e3": {
+      "porQue": "Sostiene d4: si ...cxd4 exd4, el blanco queda con una estructura sólida y la columna e semiabierta."
+    },
+    "d2d4 d7d5 b1c3 g8f6 c1f4 e7e6": {
+      "porQue": "Sólido, pero hay que vigilar c7: ahora Cb5 viene con amenaza."
+    },
+    "d2d4 d7d5 b1c3 g8f6 c1f4 e7e6 c3b5": {
+      "porQue": "La idea típica del Jobava: el caballo, apoyado por el alfil de f4, amenaza Cxc7+."
+    },
+    "d2d4 d7d5 b1c3 g8f6 c1f4 e7e6 c3b5 b8a6": {
+      "porQue": "Cubre c7 con una pieza: el caballo de a6 es feo pero cumple su función, y vuelve al juego por c7 o b8.",
+      "porQueNo": [
+        {
+          "uci": "f8e7",
+          "texto": "4...Ae7?? 5.Cxc7+: el caballo da jaque y gana la torre de a8."
+        },
+        {
+          "uci": "b8c6",
+          "texto": "4...Cc6?? 5.Cxc7+ y el negro pierde la torre."
+        },
+        {
+          "uci": "c7c6",
+          "texto": "4...c6?? 5.Cc7+: la casilla quedó libre y el caballo, protegido por el alfil, se lleva la torre."
+        }
+      ]
+    },
+    "d2d4 d7d5 b1c3 g8f6 c1f4 e7e6 c3b5 f8b4 c2c3 b4a5": {
+      "porQue": "El alfil se desarrolla con jaque y vuelve a a5 para cubrir c7."
+    },
+    "d2d4 d7d5 b1c3 g8f6 c1f4 c8f5 e2e3": {
+      "porQue": "Desarrollo normal: si ...e6, Cb5 vuelve a ser la idea."
+    },
+    "d2d4 d7d5 b1c3 g8f6 c1f4 g7g6 e2e3": {
+      "porQue": "Contra el fianchetto, el esquema sigue igual: e3, Cf3 y, a veces, h4 o Dd2 con Ah6 para cambiar el alfil de g7."
+    },
+    "d2d4 d7d5 b1c3 g8f6 c1f4 a7a6 e2e3": {
+      "porQue": "Con ...a6 el negro le quita b5 al caballo; el blanco sigue con su esquema."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-12",
+    "resultados": {
+      "d2d4 d7d5 b1c3 g8f6 c1f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "d2d4 d7d5 b1c3 g8f6 c1f4 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 b1c3 g8f6 c1f4 c7c5 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 b1c3 g8f6 c1f4 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "d2d4 d7d5 b1c3 g8f6 c1f4 e7e6 c3b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 b1c3 g8f6 c1f4 e7e6 c3b5 b8a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "d2d4 d7d5 b1c3 g8f6 c1f4 e7e6 c3b5 f8e7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 41 puntos de chances: −0,1 → −6,4. Refutación: Cxc7+ Rf8 e3 Ad7 Cxa8 Cc6"
+      },
+      "d2d4 d7d5 b1c3 g8f6 c1f4 e7e6 c3b5 b8c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 41 puntos de chances: −0,1 → −6,5. Refutación: Cxc7+ Rd7 Cxa8 Ad6 Axd6 Rxd6"
+      },
+      "d2d4 d7d5 b1c3 g8f6 c1f4 e7e6 c3b5 c7c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 42 puntos de chances: −0,1 → −6,7. Refutación: Cc7+ Rd7 Cxa8 Ce4 e3 Ad6"
+      },
+      "d2d4 d7d5 b1c3 g8f6 c1f4 e7e6 c3b5 f8b4 c2c3 b4a5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "d2d4 d7d5 b1c3 g8f6 c1f4 c8f5 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "d2d4 d7d5 b1c3 g8f6 c1f4 g7g6 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "d2d4 d7d5 b1c3 g8f6 c1f4 a7a6 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      }
+    }
+  }
+}
