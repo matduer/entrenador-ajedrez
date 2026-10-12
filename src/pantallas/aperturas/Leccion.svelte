@@ -3,7 +3,8 @@
   import { lineaSan, posDesdeFen, sanDeUci } from '../../lib/ajedrez/posicion.ts'
   import { detectarMotivoError } from '../../lib/ajedrez/temas.ts'
   import { fensDeLinea } from '../../lib/aperturas/arbol.ts'
-  import { AVISO, notaPara, porQueNoPara } from '../../lib/aperturas/explicaciones.ts'
+  import { cargarCatalogo, clasificar, nombreEnEspanol, type Catalogo } from '../../lib/aperturas/catalogo.ts'
+  import { notaPara, porQueNoPara } from '../../lib/aperturas/explicaciones.ts'
   import { registrarLinea } from '../../lib/aperturas/practica.ts'
   import type { Color } from '../../lib/datos/tipos.ts'
   import { motorInteractivo } from '../../lib/motor/motor.ts'
@@ -36,7 +37,10 @@
   let errores = $state(0)
   let marcas = $state<('bien' | 'mal')[]>([])
   let mensaje = $state<{ tipo: 'bien' | 'mal' | 'info'; texto: string }>()
-  let porQue = $state<string>()
+  /** Ideas que el usuario abrió en esta línea (por ply): están ocultas por defecto para no delatar el plan. */
+  let abiertas = $state<Set<number>>(new Set())
+  let catalogo = $state.raw<Catalogo>()
+  cargarCatalogo().then((c) => (catalogo = c))
   let refutacion = $state<Linea>()
   let vista = $state<{ fen: string; ultima?: string; proxima?: string }>()
   let alternativa = $state<{ prefijo: string[]; uci: string; san: string }>()
@@ -61,7 +65,7 @@
     errores = 0
     marcas = []
     mensaje = undefined
-    porQue = undefined
+    abiertas = new Set()
     refutacion = undefined
     vista = undefined
     alternativa = undefined
@@ -118,8 +122,6 @@
     const indiceMarca = misPlies.indexOf(ply)
 
     if (uci === esperada) {
-      const nota = notaPara(linea.slice(0, ply + 1))
-      porQue = nota ? nota.nota.porQue + (nota.nota.inferior ? ' (Stockfish la considera algo inferior, pero es teoría jugable.)' : '') : undefined
       if (marcas[indiceMarca] === undefined) marcas[indiceMarca] = 'bien'
       mensaje = { tipo: 'bien', texto: `✓ ${san}` }
       fallaAca = false
@@ -178,6 +180,37 @@
   })
 
   let bien = $derived(resultados.filter((r) => r.bien).length)
+
+  /** Nombre de la variante a la que llega la línea completa (la más profunda con nombre). */
+  let variante = $derived.by(() => {
+    if (!catalogo || !paso) return undefined
+    const a = clasificar(catalogo, paso.linea)
+    return a ? nombreEnEspanol(a) : undefined
+  })
+
+  /** Las jugadas ya hechas en la línea que tienen explicación, de los dos bandos. */
+  let ideas = $derived.by(() => {
+    if (!paso) return []
+    const sans = lineaSan(fens[0], paso.linea.slice(0, ply))
+    const r: { ply: number; jugada: string; texto: string }[] = []
+    for (let i = 0; i < ply; i++) {
+      const nota = notaPara(paso.linea.slice(0, i + 1))
+      if (!nota) continue
+      r.push({
+        ply: i,
+        jugada: `${Math.floor(i / 2) + 1}.${i % 2 ? '..' : ''} ${sans[i]}`,
+        texto: nota.nota.porQue + (nota.nota.inferior ? ' (Stockfish la considera algo inferior, pero es teoría jugable.)' : ''),
+      })
+    }
+    return r
+  })
+
+  function alternarIdea(i: number) {
+    const n = new Set(abiertas)
+    if (n.has(i)) n.delete(i)
+    else n.add(i)
+    abiertas = n
+  }
 </script>
 
 <div class="cabecera">
@@ -206,7 +239,7 @@
       {refrescar}
     />
     <div class="panel">
-      <p class="suave">Línea {Math.floor(indice / (modo === 'aprender' ? 2 : 1)) + 1} de {lineas.length}</p>
+      <p class="suave">Línea {Math.floor(indice / (modo === 'aprender' ? 2 : 1)) + 1} de {lineas.length}{#if variante} · <span class="variante">{variante}</span>{/if}</p>
       <div class="progreso" aria-label="Tus jugadas en esta línea">
         {#each misPlies as p, i (p)}<span class="cuadro {marcas[i] ?? ''}" class:actual={p === ply && !lineaTerminada}></span>{/each}
       </div>
@@ -220,7 +253,6 @@
         {@const a = alternativa}
         <button class="boton" onclick={() => alCambiarEleccion(a.prefijo, a.uci)}>Guardar {a.san} como mi jugada en esta posición</button>
       {/if}
-      {#if porQue}<p class="idea">{porQue}</p>{/if}
       {#if lineaTerminada && !paso.guiada && errores > 0}
         <button class="boton principal" onclick={siguiente}>Seguir</button>
       {/if}
@@ -228,7 +260,17 @@
         <VisorLinea linea={refutacion} alMover={(f, u, p) => (vista = { fen: f, ultima: u, proxima: p })} />
         <button class="boton enlace" onclick={() => { refutacion = undefined; vista = undefined }}>Volver a la posición</button>
       {/if}
-      <p class="aviso-contenido">{AVISO}</p>
+      {#if ideas.length}
+        <div class="ideas">
+          <p class="suave">Ideas de las jugadas hechas (tocá para verlas):</p>
+          {#each ideas as idea (idea.ply)}
+            <button class="idea-boton" aria-expanded={abiertas.has(idea.ply)} onclick={() => alternarIdea(idea.ply)}>
+              <b>{idea.jugada}</b>
+              {#if abiertas.has(idea.ply)}<span>{idea.texto}</span>{:else}<span class="suave">Ver la idea</span>{/if}
+            </button>
+          {/each}
+        </div>
+      {/if}
     </div>
   </div>
 {/if}
@@ -290,13 +332,27 @@
   .mal {
     color: #c9483c;
   }
-  .idea {
-    border-left: 3px solid var(--acento);
-    padding-left: 10px;
+  .variante {
+    color: var(--texto);
   }
-  .aviso-contenido {
-    font-size: 0.78rem;
-    color: var(--texto-suave);
-    font-style: italic;
+  .ideas {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .idea-boton {
+    display: flex;
+    gap: 8px;
+    text-align: left;
+    font: inherit;
+    color: var(--texto);
+    background: none;
+    border: none;
+    border-left: 3px solid var(--acento);
+    padding: 2px 0 2px 10px;
+    cursor: pointer;
+  }
+  .idea-boton b {
+    flex: none;
   }
 </style>

@@ -4,7 +4,7 @@
   import { detectarMotivoError } from '../../lib/ajedrez/temas.ts'
   import { armarArbol, continuaciones, fensDeLinea, nombreDeLinea, type Arbol } from '../../lib/aperturas/arbol.ts'
   import { cargarCatalogo, familiaEnEspanol, nombreEnEspanol, type Catalogo } from '../../lib/aperturas/catalogo.ts'
-  import { AVISO, explicacionPara, notaPara, porQueNoPara } from '../../lib/aperturas/explicaciones.ts'
+  import { explicacionPara, notaPara, porQueNoPara } from '../../lib/aperturas/explicaciones.ts'
   import { consultarMasters, type RespuestaMasters } from '../../lib/aperturas/masters.ts'
   import { agregarLinea } from '../../lib/aperturas/repertorio.ts'
   import type { Apertura } from '../../lib/aperturas/tipos.ts'
@@ -234,7 +234,6 @@
           <summary><h2>¿Por qué {sanDeUci(posDesdeFen(fens[idx - 1]), linea[idx - 1])}?</h2></summary>
           <p>{nota.nota.porQue}</p>
           {#if nota.nota.inferior}<p class="suave">Stockfish la considera algo inferior a la mejor jugada: es teoría reconocida y jugable, no la más precisa.</p>{/if}
-          <p class="aviso-contenido">{AVISO}</p>
         </details>
       {/key}
     {/if}
@@ -337,7 +336,6 @@
             {/each}
           </ul>
         </details>
-        <p class="aviso-contenido">{AVISO}</p>
       </details>
     {/if}
 
@@ -455,11 +453,6 @@
   .alerta-etiqueta {
     border-color: #c9483c;
     color: #c9483c;
-  }
-  .aviso-contenido {
-    font-size: 0.78rem;
-    color: var(--texto-suave);
-    font-style: italic;
   }
   h3 {
     font-size: 0.95rem;

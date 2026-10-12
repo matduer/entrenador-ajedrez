@@ -4,7 +4,7 @@
   import { detectarMotivoError } from '../../lib/ajedrez/temas.ts'
   import { fensDeLinea, nombreDeLinea } from '../../lib/aperturas/arbol.ts'
   import { cargarCatalogo, nombreEnEspanol, type Catalogo } from '../../lib/aperturas/catalogo.ts'
-  import { AVISO, notaPara, porQueNoPara } from '../../lib/aperturas/explicaciones.ts'
+  import { notaPara, porQueNoPara } from '../../lib/aperturas/explicaciones.ts'
   import { elegirLinea, estadoLineas, lineasDelNivel, NIVELES, nivelActual, registrarLinea, UMBRAL_DOMINIO, type EstadoNivel } from '../../lib/aperturas/practica.ts'
   import type { Color } from '../../lib/datos/tipos.ts'
   import { motorInteractivo } from '../../lib/motor/motor.ts'
@@ -237,7 +237,6 @@
         <VisorLinea linea={refutacion} alMover={(f, u, p) => (vista = { fen: f, ultima: u, proxima: p })} />
         <button class="boton enlace" onclick={() => { refutacion = undefined; vista = undefined }}>Volver y probar de nuevo</button>
       {/if}
-      <p class="aviso-contenido">{AVISO}</p>
     </div>
   </div>
 {/if}
@@ -300,10 +299,5 @@
   .idea {
     border-left: 3px solid var(--acento);
     padding-left: 10px;
-  }
-  .aviso-contenido {
-    font-size: 0.78rem;
-    color: var(--texto-suave);
-    font-style: italic;
   }
 </style>

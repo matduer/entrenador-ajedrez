@@ -66,14 +66,61 @@ const FAMILIAS_ES: Record<string, string> = {
   'Rat Defense': 'Defensa Rata',
   'Nimzowitsch Defense': 'Defensa Nimzowitsch',
   'Hippopotamus Defense': 'Defensa Hipopótamo',
+  'English Defense': 'Defensa Inglesa',
+  'Kangaroo Defense': 'Defensa Canguro',
+  'Mexican Defense': 'Defensa Mexicana',
+  'Benko Gambit Accepted': 'Gambito Benko aceptado',
+  'Benko Gambit Declined': 'Gambito Benko rehusado',
 }
 
 export function familiaEnEspanol(familia: string): string {
   return FAMILIAS_ES[familia] ?? familia
 }
 
+const ADJETIVOS_ES: Record<string, string> = {
+  Classical: 'Clásica',
+  Exchange: 'del Cambio',
+  Normal: 'Normal',
+  Modern: 'Moderna',
+  Closed: 'Cerrada',
+  Open: 'Abierta',
+  Advance: 'del Avance',
+  Symmetrical: 'Simétrica',
+  Accelerated: 'Acelerada',
+  Main: 'principal',
+  'Two Knights': 'de los Dos Caballos',
+  'Three Knights': 'de los Tres Caballos',
+  'Four Knights': 'de los Cuatro Caballos',
+  Russian: 'Rusa',
+  Knight: 'del Caballo',
+  Transpositional: 'de transposición',
+  Fianchetto: 'del Fianchetto',
+  Central: 'Central',
+  Rare: 'rara',
+}
+
+/** Traducción mecánica de las partes más comunes («X Variation» → «Variante X»); los nombres propios quedan igual. */
+function varianteEnEspanol(variante: string): string {
+  const adj = (x: string) => ADJETIVOS_ES[x] ?? x
+  return variante
+    .split(', ')
+    .map((p) =>
+      p
+        .replace(/^Main Line$/, 'Línea principal')
+        .replace(/^(.+) Gambit Accepted$/, (_, x) => `Gambito ${adj(x)} aceptado`)
+        .replace(/^(.+) Gambit Declined$/, (_, x) => `Gambito ${adj(x)} rehusado`)
+        .replace(/^(.+) Variation$/, (_, x) => `Variante ${adj(x)}`)
+        .replace(/^(.+) Attack$/, (_, x) => `Ataque ${adj(x)}`)
+        .replace(/^(.+) Gambit$/, (_, x) => `Gambito ${adj(x)}`)
+        .replace(/^(.+) Defense$/, (_, x) => `Defensa ${adj(x)}`)
+        .replace(/^(.+) System$/, (_, x) => `Sistema ${adj(x)}`)
+        .replace(/^(.+) Line$/, (_, x) => `Línea ${adj(x)}`),
+    )
+    .join(', ')
+}
+
 export function nombreEnEspanol(a: Pick<Apertura, 'familia' | 'variante'>): string {
-  return a.variante ? `${familiaEnEspanol(a.familia)}: ${a.variante}` : familiaEnEspanol(a.familia)
+  return a.variante ? `${familiaEnEspanol(a.familia)}: ${varianteEnEspanol(a.variante)}` : familiaEnEspanol(a.familia)
 }
 
 export interface Catalogo {
