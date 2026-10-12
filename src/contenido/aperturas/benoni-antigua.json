@@ -47,6 +47,52 @@
     },
     "d2d4 c7c5 d4d5 e7e6": {
       "porQue": "Ataca la cabeza del peón enseguida, para cambiar en d5 y abrir el juego."
+    },
+    "d2d4 c7c5 d4d5 e7e5 e2e4": {
+      "porQue": "Ocupa más espacio. Con el centro cerrado, el blanco puede elegir entre jugar en el flanco de rey (h3 y g4, o f4) o en el de dama (a4 y Cd2-c4)."
+    },
+    "d2d4 c7c5 d4d5 e7e5 e2e4 d7d6": {
+      "porQue": "Completa la cadena c5-d6-e5. El negro sigue con ...Ae7 y ...Cf6, y prepara la ruptura ...f5."
+    },
+    "d2d4 c7c5 d4d5 e7e5 e2e4 d7d6 b1c3 f8e7": {
+      "porQue": "Prepara ...Ag5 para cambiar su alfil malo, encerrado por sus propios peones, por el alfil bueno del blanco."
+    },
+    "d2d4 c7c5 d4d5 e7e5 e2e4 d7d6 b1c3 f8e7 g1f3": {
+      "porQue": "Desarrollo normal: el blanco tiene mucho espacio y puede ir armando su plan con calma."
+    },
+    "d2d4 c7c5 d4d5 e7e5 e2e4 d7d6 b1c3 f8e7 f1b5": {
+      "porQue": "Un jaque incómodo: si ...Ad7, Axd7+ cambia el alfil bueno del negro; si ...Cd7, el caballo tapa a su propio alfil."
+    },
+    "d2d4 c7c5 d4d5 e7e5 e2e4 d7d6 b1c3 f8e7 f1b5 b8d7": {
+      "porQue": "Lo más preciso: el negro conserva su alfil de casillas blancas.",
+      "porQueNo": [
+        {
+          "uci": "b8c6",
+          "texto": "...Cc6?? dxc6: el caballo se pierde."
+        },
+        {
+          "uci": "d8d7",
+          "texto": "...Dd7?? Axd7+: la dama se pierde a cambio del alfil."
+        }
+      ]
+    },
+    "d2d4 c7c5 d4d5 e7e6 c2c4": {
+      "porQue": "Con c4 se llega a estructuras de Benoni Moderna: el blanco sostiene d5 con otro peón."
+    },
+    "d2d4 c7c5 d4d5 e7e6 c2c4 e6d5 c4d5": {
+      "porQue": "Retoma con el peón: queda la estructura de la Benoni Moderna, con mayoría blanca en el centro y negra en el flanco de dama."
+    },
+    "d2d4 c7c5 d4d5 e7e6 c2c4 e6d5 c4d5 d7d6": {
+      "porQue": "Frena el avance d6 y prepara ...g6, ...Ag7 y ...Cf6: el esquema de la Benoni Moderna."
+    },
+    "d2d4 c7c5 d4d5 g8f6 b1c3": {
+      "porQue": "Sin c4, el blanco prepara e4 enseguida y deja al caballo de f6 sin buen destino."
+    },
+    "d2d4 c7c5 d4d5 d7d6 e2e4": {
+      "porQue": "Ocupa el centro: es justamente lo que la Benoni le concede al blanco a cambio de la mayoría negra en el flanco de dama."
+    },
+    "d2d4 c7c5 d4d5 d7d6 e2e4 g8f6": {
+      "porQue": "Ataca e4 y prepara ...g6 y ...Ag7, con una Benoni en la que el blanco todavía no jugó c4."
     }
   },
   "fuentes": [
@@ -86,6 +132,62 @@
         "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
       },
       "d2d4 c7c5 d4d5 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "d2d4 c7c5 d4d5 e7e5 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,2 para el bando que mueve"
+      },
+      "d2d4 c7c5 d4d5 e7e5 e2e4 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,4 para el bando que mueve"
+      },
+      "d2d4 c7c5 d4d5 e7e5 e2e4 d7d6 b1c3 f8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,3 para el bando que mueve"
+      },
+      "d2d4 c7c5 d4d5 e7e5 e2e4 d7d6 b1c3 f8e7 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,3 para el bando que mueve"
+      },
+      "d2d4 c7c5 d4d5 e7e5 e2e4 d7d6 b1c3 f8e7 f1b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,2 para el bando que mueve"
+      },
+      "d2d4 c7c5 d4d5 e7e5 e2e4 d7d6 b1c3 f8e7 f1b5 b8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,2 para el bando que mueve"
+      },
+      "d2d4 c7c5 d4d5 e7e5 e2e4 d7d6 b1c3 f8e7 f1b5 b8c6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 35 puntos de chances: −1,2 → −8,3. Refutación: dxc6 Rf8 cxb7 Axb7 Ac4 Dd7"
+      },
+      "d2d4 c7c5 d4d5 e7e5 e2e4 d7d6 b1c3 f8e7 f1b5 d8d7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 36 puntos de chances: −1,2 → −9,0. Refutación: Axd7+ Cxd7 Cb5 Tb8 Cc7+ Rd8"
+      },
+      "d2d4 c7c5 d4d5 e7e6 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "d2d4 c7c5 d4d5 e7e6 c2c4 e6d5 c4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,1 para el bando que mueve"
+      },
+      "d2d4 c7c5 d4d5 e7e6 c2c4 e6d5 c4d5 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "d2d4 c7c5 d4d5 g8f6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "d2d4 c7c5 d4d5 d7d6 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "d2d4 c7c5 d4d5 d7d6 e2e4 g8f6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
       }
