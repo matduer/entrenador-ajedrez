@@ -3,7 +3,7 @@ import { clavePosicion, fenDe, jugadaLegal } from '../ajedrez/posicion.ts'
 import { db, guardarAjuste, leerAjuste } from '../datos/db.ts'
 import type { Color, RepasoLinea } from '../datos/tipos.ts'
 import { armarArbol, fensDeLinea, lineasDesde } from './arbol.ts'
-import { cargarCatalogo } from './catalogo.ts'
+import { cargarCatalogo, type Catalogo } from './catalogo.ts'
 import { EXPLICACIONES, notaPara, type Explicacion } from './explicaciones.ts'
 import { frecuenciasGuardadas, type Frecuencias } from './popularidad.ts'
 import { lineasDelNivel } from './practica.ts'
@@ -17,18 +17,52 @@ import { idLinea } from './repertorio.ts'
  * en las del rival se practican todas las respuestas teóricas.
  */
 
-export const LINEAS_POR_LECCION = 5
+export const LINEAS_POR_LECCION = 4
 
 /**
- * Secciones por profundidad, contada desde la posición de la apertura (no desde el inicio): así una
- * apertura de raíz larga, como la Najdorf, no tiene una primera sección vacía.
+ * Secciones por profundidad. La primera corta cada línea en la primera posición con nombre del
+ * catálogo que aparece después de un mínimo de tres jugadas de cada bando desde la posición de la
+ * apertura (o en ese mínimo si no hay ninguna antes del máximo de ocho): así una línea de la Inglesa
+ * llega a la India de Rey o a la Simétrica, y no se queda en 1.c4 Cf6 2.d4. Las siguientes agregan
+ * jugadas a ese corte.
  */
 export const SECCIONES = [
-  { nivel: 1, nombre: 'Esqueleto', extra: 4, descripcion: 'Las dos primeras jugadas de cada bando después de la posición de la apertura.' },
-  { nivel: 2, nombre: 'Líneas principales', extra: 8, descripcion: 'Hasta cuatro jugadas de cada bando.' },
-  { nivel: 3, nombre: 'Ampliado', extra: 14, descripcion: 'Hasta siete jugadas de cada bando, con más ramas.' },
-  { nivel: 4, nombre: 'Completo', extra: 60, descripcion: 'Todas las líneas, hasta el final de la teoría cargada.' },
+  { nivel: 1, nombre: 'Líneas principales', extra: 0, descripcion: 'Cada línea, hasta llegar a la variante que le da nombre.' },
+  { nivel: 2, nombre: 'Profundización', extra: 6, descripcion: 'Tres jugadas más de cada bando.' },
+  { nivel: 3, nombre: 'Ampliado', extra: 14, descripcion: 'Siete jugadas más de cada bando, con más ramas.' },
+  { nivel: 4, nombre: 'Completo', extra: 200, descripcion: 'Todas las líneas, hasta el final de la teoría cargada.' },
 ] as const
+
+/** Plies mínimos y máximos después de la raíz para el corte en una variante con nombre. */
+const CORTE_MINIMO = 6
+const CORTE_MAXIMO = 16
+
+/** Largo hasta la primera posición con nombre a partir del mínimo; si no hay antes del máximo, el mínimo. */
+function corteEnVariante(catalogo: Catalogo, l: string[], raiz: number): number {
+  const pos = Chess.default()
+  for (const [i, u] of l.slice(0, raiz + CORTE_MAXIMO).entries()) {
+    const m = jugadaLegal(pos, u)
+    if (!m) break
+    pos.play(m)
+    if (i + 1 >= raiz + CORTE_MINIMO && catalogo.porPosicion.has(clavePosicion(fenDe(pos)))) return i + 1
+  }
+  return raiz + CORTE_MINIMO
+}
+
+/**
+ * Recorta cada línea a su largo (terminando siempre en una jugada propia: si el corte cae en una del
+ * rival, se agrega la respuesta) y descarta las que quedan como comienzo de otra más larga.
+ */
+function recortar(lineas: string[][], largos: number[], color: Color): string[][] {
+  const miParidad = color === 'white' ? 1 : 0
+  const recortadas = lineas.map((l, i) => {
+    let n = Math.min(largos[i], l.length)
+    if (n % 2 !== miParidad) n = n < l.length ? n + 1 : n - 1
+    return l.slice(0, n)
+  })
+  const unicas = [...new Map(recortadas.filter((l) => l.length > 0).map((l) => [l.join(' '), l])).values()]
+  return unicas.filter((l) => !unicas.some((o) => o.length > l.length && o.join(' ').startsWith(l.join(' ') + ' ')))
+}
 
 export interface Leccion {
   seccion: number
@@ -207,6 +241,8 @@ export async function armarCurso(explicacion: Explicacion, color: Color): Promis
   const previo = podarYOrdenar(todas, raiz, color, elecciones)
   const frecuencias = await frecuenciasGuardadas(previo.posicionesRival)
   const { lineas: ordenadas, raras } = frecuencias.size ? podarYOrdenar(todas, raiz, color, elecciones, frecuencias) : previo
+  const catalogo = await cargarCatalogo()
+  const cortes = ordenadas.map((l) => corteEnVariante(catalogo, l, raiz.length))
   const vistas = new Set<string>()
   const secciones: Seccion[] = []
   const agregar = (nivel: number, nombre: string, descripcion: string, lineas: string[][]) => {
@@ -217,7 +253,8 @@ export async function armarCurso(explicacion: Explicacion, color: Color): Promis
     secciones.push({ nivel, nombre, descripcion, lecciones })
   }
   for (const n of SECCIONES) {
-    const lineas = lineasDelNivel(ordenadas, raiz.length + n.extra, color).filter((l) => !vistas.has(l.join(' ')) && !esRara(l, raras))
+    const comunes = ordenadas.map((l, i) => ({ l, c: cortes[i] })).filter((x) => !esRara(x.l, raras))
+    const lineas = recortar(comunes.map((x) => x.l), comunes.map((x) => x.c + n.extra), color).filter((l) => !vistas.has(l.join(' ')))
     lineas.forEach((l) => vistas.add(l.join(' ')))
     agregar(n.nivel, n.nombre, n.descripcion, lineas)
   }

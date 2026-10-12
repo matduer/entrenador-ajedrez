@@ -298,6 +298,89 @@
     },
     "c2c4 c7c5 g1f3 g8f6 d2d4 c5d4 f3d4 b8c6 b1c3": {
       "porQue": "Desarrolla y controla d5 y e4. Ahora el negro elige entre ...e6, ...d5, ...Db6 o ...g6."
+    },
+    "c2c4 g8f6 d2d4": {
+      "porQue": "Ocupa el centro con el peón de dama: es 1.d4 Cf6 2.c4 por otro orden, y el negro pasa a elegir entre las defensas indias."
+    },
+    "c2c4 e7e6": {
+      "porQue": "Prepara ...d5 sin encerrar el alfil de casillas negras. Es flexible: puede llevar a un Gambito de Dama rehusado, a una Nimzoindia o a una Holandesa."
+    },
+    "c2c4 e7e6 d2d4": {
+      "porQue": "Toma el centro: el blanco acepta las estructuras del peón de dama, con el peón de c4 ya presionando d5."
+    },
+    "c2c4 e7e6 d2d4 g8f6": {
+      "porQue": "Desarrolla y controla e4: se llega a 1.d4 Cf6 2.c4 e6 por otro orden."
+    },
+    "c2c4 e7e6 d2d4 g8f6 b1c3 d7d5": {
+      "porQue": "Planta el peón en d5: es el Gambito de Dama rehusado por otro orden de jugadas."
+    },
+    "c2c4 g8f6 d2d4 e7e6 b1c3 d7d5": {
+      "porQue": "Planta el peón en d5: es el Gambito de Dama rehusado por otro orden de jugadas."
+    },
+    "c2c4 g8f6 d2d4 e7e6 b1c3 c7c5": {
+      "porQue": "Ataca el centro blanco desde el flanco en lugar de ocuparlo: lleva a la Semi-Tarrasch o, si el blanco avanza d5, a estructuras de Benoni.",
+      "inferior": true
+    },
+    "c2c4 g8f6 d2d4 e7e6 b1c3 c7c5 g1f3 d7d5": {
+      "porQue": "Golpea en el centro con los dos peones: es la Semi-Tarrasch."
+    },
+    "c2c4 g8f6 d2d4 e7e6 b1c3 c7c5 g1f3 d7d5 c4d5": {
+      "porQue": "Cambia en d5 para que el negro decida cómo retomar: con el caballo es la Semi-Tarrasch; con el peón, la estructura de la Tarrasch."
+    },
+    "c2c4 g8f6 d2d4 g7g6 b1c3 d7d5 g1f3": {
+      "porQue": "Contra la Grünfeld, desarrolla y protege d4: es la variante de los tres caballos, más tranquila que cambiar en d5 y armar el centro con e4."
+    },
+    "c2c4 c7c5 g1f3": {
+      "porQue": "Desarrolla y prepara d4 para abrir el centro: contra la Simétrica es la jugada más flexible."
+    },
+    "c2c4 c7c5 g1f3 g8f6": {
+      "porQue": "Desarrolla y controla d5 y e4: el negro mantiene la simetría."
+    },
+    "c2c4 c7c5 g1f3 g8f6 b1c3": {
+      "porQue": "Refuerza el control de d5. Si el negro sigue con ...Cc6 y ...g6, se llega a la Simétrica con los dos fianchettos."
+    },
+    "c2c4 c7c5 g1f3 g8f6 b1c3 b8c6": {
+      "porQue": "Mantiene la simetría y suma control sobre d4."
+    },
+    "c2c4 c7c5 g1f3 g8f6 b1c3 b8c6 g2g3": {
+      "porQue": "Prepara el fianchetto: el alfil en g2 apunta a d5 y a la gran diagonal."
+    },
+    "c2c4 c7c5 g1f3 g8f6 b1c3 b8c6 g2g3 g7g6": {
+      "porQue": "El negro copia el plan con su propio fianchetto."
+    },
+    "c2c4 c7c5 g1f3 b8c6": {
+      "porQue": "Desarrolla y controla d4, para que al blanco le cueste abrir el centro."
+    },
+    "c2c4 c7c6": {
+      "porQue": "Prepara ...d5 apoyado por otro peón: el negro busca una estructura de Eslava o de Caro-Kann según cómo siga el blanco."
+    },
+    "c2c4 e7e5 b1c3 g8f6 g1f3": {
+      "porQue": "Desarrolla y ataca el peón de e5."
+    },
+    "c2c4 e7e5 b1c3 g8f6 g1f3 b8c6": {
+      "porQue": "Defiende e5: es la Inglesa de los cuatro caballos."
+    },
+    "c2c4 e7e5 b1c3 b8c6": {
+      "porQue": "Desarrolla y defiende e5: el negro se guarda ...g6 y ...Ag7 (Inglesa cerrada) o ...Cf6."
+    },
+    "c2c4 e7e5 b1c3 b8c6 g2g3": {
+      "porQue": "Fianchetto: el alfil en g2 presiona d5 y toda la gran diagonal."
+    },
+    "c2c4 e7e5 b1c3 b8c6 g2g3 g7g6": {
+      "porQue": "El negro también hace el fianchetto: es la Inglesa cerrada, una Siciliana cerrada con los colores invertidos."
+    },
+    "c2c4 d7d5": {
+      "porQue": "Desafía de inmediato al peón de c4: tras cxd5 el negro recupera el peón, pero tiene que decidir con qué pieza.",
+      "inferior": true
+    },
+    "c2c4 g7g6": {
+      "porQue": "Prepara el fianchetto del alfil de casillas negras y deja la estructura central para después."
+    },
+    "c2c4 g7g6 e2e4": {
+      "porQue": "Ocupa el centro con dos peones: puede llevar a una Moderna o a una India de Rey con c4 ya jugada."
+    },
+    "c2c4 g7g5 d2d4": {
+      "porQue": "Ocupa el centro y abre la diagonal del alfil de c1, que ya ataca el peón de g5."
     }
   },
   "fuentes": [
@@ -647,6 +730,114 @@
       "c2c4 c7c5 g1f3 g8f6 d2d4 c5d4 f3d4 b8c6 b1c3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "c2c4 g8f6 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "c2c4 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "c2c4 e7e6 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "c2c4 e7e6 d2d4 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "c2c4 e7e6 d2d4 g8f6 b1c3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "c2c4 g8f6 d2d4 e7e6 b1c3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "c2c4 g8f6 d2d4 e7e6 b1c3 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Ab4: −0,2 contra −0,7 (marcada como inferior pero jugable)"
+      },
+      "c2c4 g8f6 d2d4 e7e6 b1c3 c7c5 g1f3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "c2c4 g8f6 d2d4 e7e6 b1c3 c7c5 g1f3 d7d5 c4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "c2c4 g8f6 d2d4 g7g6 b1c3 d7d5 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "c2c4 c7c5 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "c2c4 c7c5 g1f3 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "c2c4 c7c5 g1f3 g8f6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "c2c4 c7c5 g1f3 g8f6 b1c3 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "c2c4 c7c5 g1f3 g8f6 b1c3 b8c6 g2g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "c2c4 c7c5 g1f3 g8f6 b1c3 b8c6 g2g3 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "c2c4 c7c5 g1f3 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "c2c4 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "c2c4 e7e5 b1c3 g8f6 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "c2c4 e7e5 b1c3 g8f6 g1f3 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "c2c4 e7e5 b1c3 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "c2c4 e7e5 b1c3 b8c6 g2g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "c2c4 e7e5 b1c3 b8c6 g2g3 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "c2c4 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere e5: −0,2 contra −0,7 (marcada como inferior pero jugable)"
+      },
+      "c2c4 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "c2c4 g7g6 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "c2c4 g7g5 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,5 para el bando que mueve"
       }
     }
   }

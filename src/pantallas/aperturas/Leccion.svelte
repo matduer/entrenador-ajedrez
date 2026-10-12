@@ -12,9 +12,10 @@
   import VisorLinea, { type Linea } from '../../lib/ui/VisorLinea.svelte'
 
   /**
-   * Una sesión de práctica sobre un grupo de líneas. Al aprender, cada línea se juega dos veces: primero
-   * siguiendo la flecha y enseguida de memoria (esa segunda vuelta es la que cuenta para el repaso
-   * espaciado). Al repasar, solo de memoria.
+   * Una sesión de práctica sobre un grupo de líneas. Al aprender, cada línea se presenta siguiendo la
+   * flecha y enseguida se juega de memoria; cuando se vieron todas, vuelven mezcladas, con el nombre de
+   * la variante como pista, y esa vuelta es la que cuenta para el repaso espaciado. Una línea con
+   * errores en la mezcla vuelve al final hasta salir bien. Al repasar, solo la mezcla.
    */
   interface Props {
     color: Color
@@ -29,8 +30,18 @@
   }
   let { color, lineas, modo, todas, titulo, alSalir, alCambiarEleccion }: Props = $props()
 
-  type Paso = { linea: string[]; guiada: boolean }
-  const pasos: Paso[] = $derived(lineas.flatMap((l) => (modo === 'aprender' ? [{ linea: l, guiada: true }, { linea: l, guiada: false }] : [{ linea: l, guiada: false }])))
+  type Paso = { linea: string[]; fase: 'presentar' | 'memoria' | 'mezcla'; registrar: boolean }
+  const mezclar = <T,>(xs: T[]) => xs.map((x) => ({ x, r: Math.random() })).sort((a, b) => a.r - b.r).map((y) => y.x)
+  const mezcla = (): Paso[] => mezclar(lineas).map((l) => ({ linea: l, fase: 'mezcla', registrar: true }))
+  // Las líneas se fijan al abrir la sesión: la cola crece cuando una línea de la mezcla sale con errores.
+  // svelte-ignore state_referenced_locally
+  let pasos = $state.raw<Paso[]>(
+    modo === 'aprender'
+      ? [...lineas.flatMap((l): Paso[] => [{ linea: l, fase: 'presentar', registrar: false }, { linea: l, fase: 'memoria', registrar: false }]), ...mezcla()]
+      : mezcla(),
+  )
+  /** Pausa antes de empezar la mezcla, para avisar que cambia la consigna. */
+  let antesDeMezcla = $state(false)
 
   let indice = $state(0)
   let ply = $state(0)
@@ -91,24 +102,46 @@
   async function finDeLinea() {
     if (!paso || lineaTerminada) return
     lineaTerminada = true
-    if (paso.guiada) {
+    if (paso.fase === 'presentar') {
       mensaje = { tipo: 'info', texto: 'Ahora la misma línea, sin flecha.' }
       setTimeout(siguiente, 900)
       return
     }
     const bien = errores === 0
-    await registrarLinea(color, paso.linea, bien)
-    resultados = [...resultados, { linea: paso.linea, bien }]
+    if (paso.registrar) {
+      await registrarLinea(color, paso.linea, bien)
+      resultados = [...resultados, { linea: paso.linea, bien }]
+    }
+    if (paso.fase === 'mezcla' && !bien) pasos = [...pasos, { linea: paso.linea, fase: 'mezcla', registrar: false }]
     if (bien) {
       mensaje = { tipo: 'bien', texto: 'Línea sin errores.' }
       setTimeout(siguiente, 900)
-    } else mensaje = { tipo: 'mal', texto: `Línea con ${errores} error${errores === 1 ? '' : 'es'}: vuelve antes al repaso.` }
+    } else
+      mensaje = {
+        tipo: 'mal',
+        texto: `Línea con ${errores} error${errores === 1 ? '' : 'es'}${paso.fase === 'mezcla' ? ': vuelve al final de la mezcla y antes al repaso' : ''}.`,
+      }
   }
 
   function siguiente() {
     indice++
-    if (indice < pasos.length) iniciarPaso()
+    if (indice >= pasos.length) return
+    if (pasos[indice].fase === 'mezcla' && pasos[indice - 1].fase !== 'mezcla') antesDeMezcla = true
+    else iniciarPaso()
   }
+
+  function empezarMezcla() {
+    antesDeMezcla = false
+    iniciarPaso()
+  }
+
+  /** Posición en la etapa actual, para el encabezado del panel. */
+  let etapa = $derived.by(() => {
+    if (!paso) return ''
+    if (paso.fase !== 'mezcla') return `Línea ${Math.floor(indice / 2) + 1} de ${lineas.length}`
+    const primera = pasos.findIndex((p) => p.fase === 'mezcla')
+    return `${modo === 'aprender' ? 'Mezcla · ' : ''}${indice - primera + 1} de ${pasos.length - primera}`
+  })
 
   async function alJugar(uci: string) {
     if (!paso || !turnoMio || verificando || lineaTerminada) return
@@ -130,7 +163,7 @@
       return
     }
 
-    if (paso.guiada) {
+    if (paso.fase === 'presentar') {
       mensaje = { tipo: 'info', texto: 'Seguí la flecha: en esta vuelta se aprende la jugada.' }
       refrescar++
       return
@@ -174,7 +207,7 @@
 
   let flechas = $derived.by((): Flecha[] => {
     if (refutacion && vista?.proxima) return [{ de: vista.proxima.slice(0, 2), a: vista.proxima.slice(2, 4), color: 'blue' }]
-    if (paso && turnoMio && !lineaTerminada && (paso.guiada || fallaAca) && ply < paso.linea.length)
+    if (paso && turnoMio && !lineaTerminada && (paso.fase === 'presentar' || fallaAca) && ply < paso.linea.length)
       return [{ de: paso.linea[ply].slice(0, 2), a: paso.linea[ply].slice(2, 4), color: 'green' }]
     return []
   })
@@ -227,6 +260,15 @@
     <p>{resultados.length} línea{resultados.length === 1 ? '' : 's'}: {bien} sin errores{resultados.length - bien ? `, ${resultados.length - bien} con errores (vuelven antes al repaso)` : ''}.</p>
     <button class="boton principal" onclick={alSalir}>Volver a la apertura</button>
   </section>
+{:else if antesDeMezcla}
+  <section class="tarjeta">
+    <h2>Ahora, mezcladas</h2>
+    <p>
+      Ya viste las {lineas.length} líneas de la lección. Ahora vuelven en otro orden: el rival elige la variante y vos tenés que
+      recordar tu jugada en cada caso. El nombre de la variante queda como pista. Esta vuelta es la que cuenta para el repaso.
+    </p>
+    <button class="boton principal" onclick={empezarMezcla}>Empezar</button>
+  </section>
 {:else if paso}
   <div class="practica">
     <Tablero
@@ -239,12 +281,12 @@
       {refrescar}
     />
     <div class="panel">
-      <p class="suave">Línea {Math.floor(indice / (modo === 'aprender' ? 2 : 1)) + 1} de {lineas.length}{#if variante} · <span class="variante">{variante}</span>{/if}</p>
+      <p class="suave">{etapa}{#if variante} · <span class="variante">{variante}</span>{/if}</p>
       <div class="progreso" aria-label="Tus jugadas en esta línea">
         {#each misPlies as p, i (p)}<span class="cuadro {marcas[i] ?? ''}" class:actual={p === ply && !lineaTerminada}></span>{/each}
       </div>
       <p class="consigna">
-        {#if lineaTerminada}&nbsp;{:else if !turnoMio}Juega el rival…{:else if paso.guiada}Jugá la jugada que marca la flecha.{:else if fallaAca}Jugá la jugada que marca la flecha.{:else}Jugá la jugada que aprendiste.{/if}
+        {#if lineaTerminada}&nbsp;{:else if !turnoMio}Juega el rival…{:else if paso.fase === 'presentar'}Jugá la jugada que marca la flecha.{:else if fallaAca}Jugá la jugada que marca la flecha.{:else}Jugá la jugada que aprendiste.{/if}
       </p>
       <p class="suave">{lineaSan(fens[0], paso.linea.slice(0, ply)).join(' ') || 'Posición inicial'}</p>
 
@@ -253,7 +295,7 @@
         {@const a = alternativa}
         <button class="boton" onclick={() => alCambiarEleccion(a.prefijo, a.uci)}>Guardar {a.san} como mi jugada en esta posición</button>
       {/if}
-      {#if lineaTerminada && !paso.guiada && errores > 0}
+      {#if lineaTerminada && paso.fase !== 'presentar' && errores > 0}
         <button class="boton principal" onclick={siguiente}>Seguir</button>
       {/if}
       {#if refutacion}
