@@ -214,6 +214,19 @@
     },
     "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 h2h3 e8g8 c1e3 e7e5 d4d5 a7a5 g2g4": {
       "porQue": "El avance típico del Makogonov: controla f5 y h5 (frena ...Ch5 y ...f5) y prepara g5 para echar al caballo de f6. En una partida modelo del esquema, Anand-Ponomariov (Bilbao, 2014, con el caballo blanco en f3), las blancas siguieron con g5 y h4 y enrocaron largo."
+    },
+    "d2d4 g8f6 c2c4 g7g6 d4d5": {
+      "porQue": "La Anti-Grünfeld: impide ...d5 y gana espacio. El negro no tiene problemas: ...Ag7, ...b5 o ...Ca6 dan una posición pareja."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 g1f3 e8g8 e2e3": {
+      "porQue": "Modesto: renuncia a e4 por ahora. El negro iguala con ...d5 o con ...d6 y ...e5. Stockfish prefiere el ambicioso 5.e4.",
+      "inferior": true
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 f2f3 e8g8 c1g5": {
+      "porQue": "La Variante Steiner del Sämisch: el alfil en g5 frena ...e5 y prepara Dd2, con la idea del enroque largo y el ataque."
+    },
+    "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 f2f3 e8g8 c1g5 c7c5": {
+      "porQue": "La respuesta más fuerte: ataca d4 enseguida, como en otras líneas del Sämisch."
     }
   },
   "fuentes": [
@@ -239,7 +252,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-12",
     "resultados": {
       "d2d4 g8f6": {
         "ok": true,
@@ -452,6 +465,22 @@
       "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 h2h3 e8g8 c1e3 e7e5 d4d5 a7a5 g2g4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 d4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 g1f3 e8g8 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere e4: +0,5 contra +0,1 (marcada como inferior pero jugable)"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 f2f3 e8g8 c1g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6 f2f3 e8g8 c1g5 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
       }
     }
   }

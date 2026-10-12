@@ -101,6 +101,15 @@
           "texto": "4.c4? f6: el caballo tiene que retirarse y el blanco pierde la iniciativa."
         }
       ]
+    },
+    "d2d4 d7d5 g1f3 g8f6 c1g5": {
+      "porQue": "El Ataque Torre contra ...d5: clava el caballo y prepara e3, Cbd2 y c3, un esquema parecido al Colle pero con el alfil afuera de la cadena."
+    },
+    "d2d4 d7d5 g1f3 g8f6 c1g5 f6e4": {
+      "porQue": "La respuesta más directa: ataca el alfil y obliga al blanco a decidir dónde ponerlo."
+    },
+    "d2d4 d7d5 g1f3 g8f6 c1g5 e7e6 e2e3 c7c5": {
+      "porQue": "El plan más activo: presiona d4 enseguida, antes de que el blanco complete c3 y Cbd2."
     }
   },
   "fuentes": [
@@ -116,7 +125,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-11",
+    "fecha": "2026-10-12",
     "resultados": {
       "d2d4 d7d5 g1f3": {
         "ok": true,
@@ -201,6 +210,18 @@
       "d2d4 d7d5 g1f3 c8g4 f3e5 g4h5 c2c4 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 5 puntos de chances: +1,2 → +0,6. Refutación: f6 Cf3 e6 Db3 Cc6 Dxb7"
+      },
+      "d2d4 d7d5 g1f3 g8f6 c1g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 g8f6 c1g5 f6e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 d7d5 g1f3 g8f6 c1g5 e7e6 e2e3 c7c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
       }
     }
   }

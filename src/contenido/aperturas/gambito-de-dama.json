@@ -156,6 +156,46 @@
           "texto": "4.dxe5? Dxd1+ 5.Rxd1 Cc6: el blanco perdió el enroque y el negro recupera e5 con buena posición (Seirawan)."
         }
       ]
+    },
+    "d2d4 d7d5 c2c4 d5c4 g1f3 a7a6": {
+      "porQue": "La Variante Alekhine del Gambito de Dama Aceptado: prepara ...b5 y ...Ab7 si el blanco se demora en recuperar el peón."
+    },
+    "d2d4 d7d5 c2c4 d5c4 g1f3 a7a6 e2e3": {
+      "porQue": "Lo más simple: Axc4 recupera el peón, y si 4...b5, a4 ataca la cadena."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c6": {
+      "porQue": "La Defensa Triangular: el negro se reserva ...dxc4 (la Noteboom) o ...f5 (un Stonewall), pero permite el Gambito Marshall."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c6 e2e4": {
+      "porQue": "El Gambito Marshall: para Stockfish lo más fuerte, abre el juego antes de que el negro complete el desarrollo."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c6 e2e4 d5e4 c3e4 f8b4 c1d2": {
+      "porQue": "La línea principal: tras 6...Dxd4 7.Axb4 Dxe4+, el blanco entrega el peón de d4 a cambio de la pareja de alfiles y el dominio de las casillas negras."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c6 e2e4 d5e4 c3e4 f8b4 c1d2 d8d4 d2b4 d4e4 f1e2": {
+      "porQue": "Interpone desarrollando: el blanco tiene mucha compensación por los dos peones, sobre todo por el alfil de b4 y el rey negro sin enrocar.",
+      "porQueNo": [
+        {
+          "uci": "d1e2",
+          "texto": "8.De2? Cf6: el cambio de damas le quita al blanco casi todo el ataque."
+        }
+      ]
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c6 g1f3 d5c4": {
+      "porQue": "La Noteboom: el negro toma el peón y lo sostendrá con ...b5 y ...Ab4."
+    },
+    "d2d4 d7d5 c2c4 e7e6 b1c3 c7c6 g1f3 d5c4 a2a4 f8b4 e2e3 b7b5 c1d2": {
+      "porQue": "Rompe la clavada: el blanco prepara axb5 y b3 para recuperar el peón.",
+      "porQueNo": [
+        {
+          "uci": "a4b5",
+          "texto": "7.axb5? cxb5 8.Ad2 Db6: el negro sostiene los peones del flanco de dama."
+        },
+        {
+          "uci": "f1e2",
+          "texto": "7.Ae2? Ab7 y ...Cf6: el negro conserva el peón de más."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -189,7 +229,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-12",
     "resultados": {
       "d2d4 d7d5 c2c4": {
         "ok": true,
@@ -318,6 +358,50 @@
       "d2d4 d7d5 c2c4 d5c4 e2e4 e7e5 d4e5 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 7 puntos de chances: +0,3 → −0,4. Refutación: Dxd1+ Rxd1 Cc6 Cf3 Ag4 Ae3"
+      },
+      "d2d4 d7d5 c2c4 d5c4 g1f3 a7a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 d5c4 g1f3 a7a6 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c6 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c6 e2e4 d5e4 c3e4 f8b4 c1d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c6 e2e4 d5e4 c3e4 f8b4 c1d2 d8d4 d2b4 d4e4 f1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c6 e2e4 d5e4 c3e4 f8b4 c1d2 d8d4 d2b4 d4e4 d1e2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,4 → −0,3. Refutación: Cf6 O-O-O Dxe2 Axe2 Ce4 Ae1"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c6 g1f3 d5c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c6 g1f3 d5c4 a2a4 f8b4 e2e3 b7b5 c1d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c6 g1f3 d5c4 a2a4 f8b4 e2e3 b7b5 a4b5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,4 → −0,1. Refutación: cxb5 Ad2 Db6 Dc2 a5 b3"
+      },
+      "d2d4 d7d5 c2c4 e7e6 b1c3 c7c6 g1f3 d5c4 a2a4 f8b4 e2e3 b7b5 f1e2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,4 → −0,3. Refutación: Ab7 Ad2 Cf6 O-O Axc3 bxc3"
       }
     }
   }

@@ -1,0 +1,94 @@
+{
+  "id": "benoni-antigua",
+  "nombre": "Benoni Antigua",
+  "raiz": "d2d4 c7c5",
+  "resumen": "El negro ataca d4 con el peón de c antes de desarrollar nada. Lo más fuerte es 2.d5, que gana espacio; entonces el negro elige entre cerrar el centro con 2...e5 (la Benoni Antigua propiamente dicha, con una estructura parecida a la de la Benoni Checa), atacar la cabeza del peón con 2...e6, o pasar a una Benoni Moderna con ...Cf6 y c4. Stockfish le da al blanco una ventaja clara de espacio en todas estas líneas.",
+  "planesBlancas": [
+    "2.d5 y e4: espacio y un centro sólido.",
+    "Contra la estructura cerrada (...e5), preparar f4 o el avance en el flanco de dama con c4, a3 y b4."
+  ],
+  "planesNegras": [
+    "Con ...e5 y ...d6, cerrar el centro y buscar ...f5 en el flanco de rey.",
+    "Con ...e6, atacar d5 y llevar la partida a una Benoni con estructura abierta."
+  ],
+  "estructura": "Peón blanco en d5 que corta el tablero; si el negro juega ...e5 y ...d6, cadena cerrada con c5-d6-e5 contra d5-e4.",
+  "rupturas": [
+    "...f5 (con el centro cerrado) o ...b5 del negro.",
+    "f4, o c4 con b4, del blanco."
+  ],
+  "piezas": [
+    "Alfil negro de f8: a e7 si el centro se cierra; a g7 si el negro juega ...g6.",
+    "Caballo blanco de b1: c3 o d2-c4, apuntando a la casilla débil de d6 o b5."
+  ],
+  "trampas": [],
+  "notas": {
+    "d2d4 c7c5 d4d5": {
+      "porQue": "Lo más fuerte: gana espacio y deja al peón de c5 sin pareja.",
+      "porQueNo": [
+        {
+          "uci": "d4c5",
+          "texto": "2.dxc5? e6 y ...Axc5: el negro recupera el peón con un buen desarrollo."
+        },
+        {
+          "uci": "e2e3",
+          "texto": "2.e3? d5: el negro se queda con un centro cómodo y el blanco renunció a la ventaja de espacio."
+        }
+      ]
+    },
+    "d2d4 c7c5 d4d5 e7e5": {
+      "porQue": "La Benoni Antigua propiamente dicha: cierra el centro y planea ...d6, ...Ae7 y ...f5. Stockfish prefiere 2...e6, que deja el centro más abierto.",
+      "inferior": true
+    },
+    "d2d4 c7c5 d4d5 e7e5 e2e4 d7d6 b1c3": {
+      "porQue": "Desarrollo sencillo; Ce2-g3 o Ad3 son igual de buenos. Con tanto espacio, el blanco puede elegir el flanco donde atacar."
+    },
+    "d2d4 c7c5 d4d5 g8f6": {
+      "porQue": "Con c4, se llega a una Benoni Moderna o a un Benko."
+    },
+    "d2d4 c7c5 d4d5 e7e6": {
+      "porQue": "Ataca la cabeza del peón enseguida, para cambiar en d5 y abrir el juego."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-12",
+    "resultados": {
+      "d2d4 c7c5 d4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "d2d4 c7c5 d4c5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,7 → +0,2. Refutación: e6 e4 Axc5 Ad3 Cc6 Cf3"
+      },
+      "d2d4 c7c5 e2e3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 4 puntos de chances: +0,7 → +0,2. Refutación: cxd4 exd4 Cf6 h3 d5 Ad3"
+      },
+      "d2d4 c7c5 d4d5 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere e6: −0,7 contra −1,2 (marcada como inferior pero jugable)"
+      },
+      "d2d4 c7c5 d4d5 e7e5 e2e4 d7d6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,3 para el bando que mueve"
+      },
+      "d2d4 c7c5 d4d5 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "d2d4 c7c5 d4d5 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      }
+    }
+  }
+}
