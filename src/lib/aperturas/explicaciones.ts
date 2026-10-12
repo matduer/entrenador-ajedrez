@@ -30,6 +30,12 @@ export interface NotaJugada {
    * la acepta hasta 0,15 de pérdida (sigue rechazando errores) y la app lo avisa.
    */
   inferior?: boolean
+  /**
+   * La jugada aparece en la teoría del catálogo pero Stockfish la considera un error (pierde más de
+   * 0,15). El texto lo dice y nombra la mejor; el verificador exige que de verdad pierda eso, y el curso
+   * no la elige como jugada propia si hay otra.
+   */
+  error?: boolean
   /** Alternativas tentadoras en la posición ANTERIOR a esta jugada, y cómo se castigan. */
   porQueNo?: PorQueNo[]
 }

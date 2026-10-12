@@ -57,11 +57,13 @@ for (const archivo of readdirSync(CARPETA).filter((f) => f.endsWith('.json') && 
       fallas++
       continue
     }
-    const ok = r.perdida <= (nota.inferior ? TOLERANCIA_INFERIOR : TOLERANCIA_SI)
+    const ok = nota.error ? r.perdida > TOLERANCIA_INFERIOR : r.perdida <= (nota.inferior ? TOLERANCIA_INFERIOR : TOLERANCIA_SI)
     resultados[clave] = {
       ok,
       detalle: ok
-        ? nota.inferior && r.perdida > TOLERANCIA_SI
+        ? nota.error
+          ? `Stockfish (prof. ${PROFUNDIDAD}) confirma el error: pierde ${r.perdida.toFixed(3)}`
+          : nota.inferior && r.perdida > TOLERANCIA_SI
           ? `Stockfish (prof. ${PROFUNDIDAD}) prefiere ${lineaSan(fensDeLinea(prefijo).at(-1)!, [r.mejor])[0]}: ${textoEvaluacion(r.antes)} contra ${textoEvaluacion(r.despues)} (marcada como inferior pero jugable)`
           : `Stockfish (prof. ${PROFUNDIDAD}): ${textoEvaluacion(r.despues)} para el bando que mueve`
         : `Stockfish (prof. ${PROFUNDIDAD}) prefiere ${lineaSan(fensDeLinea(prefijo).at(-1)!, [r.mejor])[0]}: ${textoEvaluacion(r.antes)} contra ${textoEvaluacion(r.despues)}`,

@@ -214,10 +214,12 @@ function podarPropias(arbol: Nodo, raiz: string[], color: Color, elecciones: Ele
       const elegida = elecciones[claveEleccion(color, camino)]
       const candidatas = [...n.hijos].map(([u, h]) => {
         const p = evaluar(h, [...camino, u])
-        return { u, peso: h.peso, p, inferior: notaPara([...camino, u])?.nota.inferior ?? false, sale: p.fuera * 2 > p.hojas }
+        const nota = notaPara([...camino, u])?.nota
+        // Un error pesa más que una jugada inferior.
+        return { u, peso: h.peso, p, inferior: nota?.error ? 2 : nota?.inferior ? 1 : 0, sale: p.fuera * 2 > p.hojas }
       })
       candidatas.sort(
-        (a, b) => Number(b.u === elegida) - Number(a.u === elegida) || Number(a.inferior) - Number(b.inferior) || Number(a.sale) - Number(b.sale) || b.peso - a.peso,
+        (a, b) => Number(b.u === elegida) - Number(a.u === elegida) || a.inferior - b.inferior || Number(a.sale) - Number(b.sale) || b.peso - a.peso,
       )
       r = { ...candidatas[0].p, jugada: candidatas[0].u }
     } else {
