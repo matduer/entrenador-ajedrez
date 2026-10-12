@@ -153,6 +153,24 @@
     },
     "c2c4 c7c5 g1f3 g8f6 b1c3 e7e6 g2g3 b7b6 f1g2 c8b7 e1g1 f8e7 d2d4 c5d4 d1d4 d7d6": {
       "porQue": "La estructura del Erizo: peones en a6, b6, d6 y e6, con las piezas detrás. Parece pasiva, pero Suba la describe como una defensa dinámica: el negro espera con paciencia y golpea con las rupturas ...b5 o ...d5 en el momento en que el blanco se sobreextiende."
+    },
+    "c2c4 d7d5 c4d5": {
+      "porQue": "Lo más fuerte: el negro tiene que recuperar el peón con la dama o con el caballo, y el blanco gana tiempo.",
+      "porQueNo": [
+        {
+          "uci": "e2e3",
+          "texto": "2.e3? e6: se llega a un Gambito de Dama Rehusado donde el blanco jugó e3 temprano y no tiene nada especial."
+        }
+      ]
+    },
+    "c2c4 d7d5 c4d5 g8f6 g1f3": {
+      "porQue": "Desarrollo antes de echar al caballo de d5: el blanco sigue con Cc3 y e4 o d4 cuando le convenga."
+    },
+    "c2c4 e7e6 b1c3 g8f6 e2e4": {
+      "porQue": "El Ataque Mikenas-Carls: ocupa el centro antes de que el negro juegue ...d5."
+    },
+    "c2c4 e7e6 b1c3 g8f6 e2e4 d7d5": {
+      "porQue": "Lo mejor: contraataca el centro enseguida; tras 4.e5 el negro juega ...d4 o ...Cfd7."
     }
   },
   "fuentes": [
@@ -181,7 +199,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-12",
     "resultados": {
       "c2c4": {
         "ok": true,
@@ -326,6 +344,26 @@
       "c2c4 c7c5 g1f3 g8f6 b1c3 e7e6 g2g3 b7b6 f1g2 c8b7 e1g1 f8e7 d2d4 c5d4 d1d4 d7d6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "c2c4 d7d5 c4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "c2c4 d7d5 e2e3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,7 → +0,1. Refutación: e6 d4 Cf6 Cf3 Ae7 b3"
+      },
+      "c2c4 d7d5 c4d5 g8f6 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "c2c4 e7e6 b1c3 g8f6 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "c2c4 e7e6 b1c3 g8f6 e2e4 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
       }
     }
   }

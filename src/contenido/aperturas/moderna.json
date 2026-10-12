@@ -133,6 +133,12 @@
     },
     "e2e4 g7g6 d2d4 f8g7 b1c3 d7d6 f2f4 a7a6": {
       "porQue": "También contra el Ataque Austríaco Persson juega ...a6, con ...b5, ...Ab7 y ...Cd7: el negro deja que el blanco ocupe el centro y lo ataca desde los flancos."
+    },
+    "e2e4 g7g6 d2d4 f8g7 f1c4": {
+      "porQue": "El Ataque del Alfil: apunta a f7 y prepara Df3 o Cf3. El negro responde con calma."
+    },
+    "e2e4 g7g6 d2d4 f8g7 f1c4 d7d6": {
+      "porQue": "Lo más sólido: tapa la diagonal del alfil de g7 sobre d4 pero prepara ...Cf6 y ...e6 para neutralizar al alfil de c4."
     }
   },
   "fuentes": [
@@ -170,7 +176,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-12",
     "resultados": {
       "e2e4 g7g6": {
         "ok": true,
@@ -299,6 +305,14 @@
       "e2e4 g7g6 d2d4 f8g7 b1c3 d7d6 f2f4 a7a6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "e2e4 g7g6 d2d4 f8g7 f1c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 g7g6 d2d4 f8g7 f1c4 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
       }
     }
   }

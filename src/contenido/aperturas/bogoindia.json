@@ -112,6 +112,12 @@
     "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 b1d2 c7c5 a2a3 b4d2 d1d2 c5d4 f3d4 b8c6": {
       "porQue": "Las blancas tienen la pareja de alfiles, pero el desarrollo rápido del negro equilibra. Stockfish prefiere 7...d5, para disputar el centro de inmediato.",
       "inferior": true
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 b4e7": {
+      "porQue": "La retirada: el alfil de d2 queda mal ubicado (tapa al caballo de b1 y no puede ir a la gran diagonal), y el negro sigue con ...d5 o ...b6 sin haber cambiado su buen alfil."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 b4e7 g2g3 d7d5 f1g2": {
+      "porQue": "Un esquema de Catalana: el alfil de d2 está algo fuera de lugar, y el negro puede elegir entre ...c6 y ...dxc4."
     }
   },
   "fuentes": [
@@ -137,7 +143,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-11",
+    "fecha": "2026-10-12",
     "resultados": {
       "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4": {
         "ok": true,
@@ -250,6 +256,14 @@
       "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 b1d2 c7c5 a2a3 b4d2 d1d2 c5d4 f3d4 b8c6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18) prefiere d5: −0,2 contra −0,7 (marcada como inferior pero jugable)"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 b4e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 b4e7 g2g3 d7d5 f1g2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
       }
     }
   }
