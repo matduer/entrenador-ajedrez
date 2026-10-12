@@ -89,6 +89,40 @@
     },
     "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 c5d4 a3b4 d4c3 d1g4": {
       "porQue": "Por esto 5...cxd4 perdió el favor: las blancas pueden permitirse entregar el peón de c3 y jugar por la iniciativa. FCO nombra 7.Cf3 y 7.Dg4; Stockfish prefiere 7.Dg4, que ataca g7 enseguida."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 e8g8 f1d3": {
+      "porQue": "La jugada principal desde hace años: ataca h7 para provocar una jugada comprometedora en el flanco de rey, y después seguir con el desarrollo normal (Watson)."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 e8g8 f1d3 b8c6": {
+      "porQue": "La solución que prefiere Watson: sana y con buenas chances. El caballo presiona d4 y puede ir a g6 para tapar el ataque."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 e8g8 f1d3 b8c6 g1f3": {
+      "porQue": "Desarrolla. Si ...f5, se transpone a la línea con 8.Cf3."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 e8g8 f1d3 f7f5": {
+      "porQue": "La otra solución: el peón tapa la diagonal hacia h7, y si el blanco toma al paso, el negro gana la columna f."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 e8g8 f1d3 f7f5 e5f6": {
+      "porQue": "Lo más fuerte según Stockfish: abre el juego para los alfiles antes de que el negro consolide."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 e8g8 g1f3": {
+      "porQue": "Natural, aunque perdió popularidad porque el negro encontró antídotos eficaces (Watson)."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 e8g8 g1f3 b8c6 f1d3 f7f5 e5f6 f8f6 c1g5": {
+      "porQue": "Natural y crítico: ataca la torre de f6."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 e8g8 g1f3 b8c6 f1d3 f7f5 e5f6 f8f6 c1g5 e6e5": {
+      "porQue": "La sorpresa que propone Watson: el negro invierte material, pero destruye el centro blanco y mete todas sus piezas en juego.",
+      "porQueNo": [
+        {
+          "uci": "f6f8",
+          "texto": "...Tf8? Ah6: el blanco rompe el enroque negro."
+        },
+        {
+          "uci": "d8a5",
+          "texto": "...Da5? O-O Tf8 Axh7+: el sacrificio en h7 funciona."
+        }
+      ]
     }
   },
   "fuentes": [
@@ -113,12 +147,16 @@
     {
       "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
       "capitulo": "«French Defence», «Winawer Variation»: 5 a3"
+    },
+    {
+      "titulo": "John Watson — Play the French (3.ª ed., Everyman Chess, 2003)",
+      "capitulo": "cap. 10, «Winawer Variation: Main Line with 7 Dg4» (7...O-O, con análisis de Kindermann y Dirr)"
     }
   ],
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-11",
+    "fecha": "2026-10-12",
     "resultados": {
       "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3": {
         "ok": true,
@@ -195,6 +233,46 @@
       "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 c5d4 a3b4 d4c3 d1g4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +1,3 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 e8g8 f1d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 e8g8 f1d3 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,0 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 e8g8 f1d3 b8c6 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,0 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 e8g8 f1d3 f7f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 e8g8 f1d3 f7f5 e5f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 e8g8 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 e8g8 g1f3 b8c6 f1d3 f7f5 e5f6 f8f6 c1g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 e8g8 g1f3 b8c6 f1d3 f7f5 e5f6 f8f6 c1g5 e6e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 e8g8 g1f3 b8c6 f1d3 f7f5 e5f6 f8f6 c1g5 f6f8 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 8 puntos de chances: −0,2 → −1,1. Refutación: Ah6 Cg6 Axg6 gxh6 Ae8+ Rh8"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 e8g8 g1f3 b8c6 f1d3 f7f5 e5f6 f8f6 c1g5 d8a5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 42 puntos de chances: −0,2 → −7,4. Refutación: Axf6 Dxc3+ Re2 g6 Axe7 Cxe7"
       }
     }
   }
