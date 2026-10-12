@@ -1,9 +1,11 @@
-import { clavePosicion } from '../ajedrez/posicion.ts'
+import { Chess } from 'chessops/chess'
+import { clavePosicion, fenDe, jugadaLegal } from '../ajedrez/posicion.ts'
 import { db, guardarAjuste, leerAjuste } from '../datos/db.ts'
 import type { Color, RepasoLinea } from '../datos/tipos.ts'
 import { armarArbol, fensDeLinea, lineasDesde } from './arbol.ts'
 import { cargarCatalogo } from './catalogo.ts'
 import { EXPLICACIONES, notaPara, type Explicacion } from './explicaciones.ts'
+import { frecuenciasGuardadas, type Frecuencias } from './popularidad.ts'
 import { lineasDelNivel } from './practica.ts'
 import { idLinea } from './repertorio.ts'
 
@@ -112,34 +114,67 @@ function elegirPropia(prefijo: string[], hijos: Map<string, Nodo>, color: Color,
   return candidatas[0].u
 }
 
+/** Mínimo de partidas Masters en una posición para confiar en sus frecuencias. */
+const MINIMO_PARTIDAS = 20
+/** Una respuesta del rival jugada en menos de esta fracción de las partidas es una rareza. */
+const UMBRAL_RAREZA = 0.02
+
+export interface Ordenadas {
+  lineas: string[][]
+  /** Prefijos (UCI separados por espacio) que terminan en una respuesta rara del rival. */
+  raras: Set<string>
+  /** Posiciones donde mueve el rival, para consultar sus frecuencias. */
+  posicionesRival: string[]
+}
+
 /**
  * Poda las líneas a una jugada propia por posición y las ordena: primero la principal, después las que
  * se apartan una sola vez con la segunda respuesta del rival, y así (suma de los rangos de cada desvío).
+ * Las respuestas del rival se ordenan por lo que más se juega en la base Masters cuando hay datos; si
+ * no, por cuántas líneas del catálogo pasan por ahí.
  */
-export function podarYOrdenar(lineas: string[][], raiz: string[], color: Color, elecciones: Elecciones): string[][] {
+export function podarYOrdenar(lineas: string[][], raiz: string[], color: Color, elecciones: Elecciones, frecuencias = new Map<string, Frecuencias>()): Ordenadas {
   const arbol = armarNodos(lineas)
   const salida: { l: string[]; rangos: number[] }[] = []
-  const recorrer = (n: Nodo, camino: string[], rangos: number[]) => {
+  const raras = new Set<string>()
+  const posicionesRival: string[] = []
+  const recorrer = (n: Nodo, camino: string[], rangos: number[], pos: Chess) => {
     if (n.hijos.size === 0) {
       salida.push({ l: camino, rangos })
       return
     }
     const ply = camino.length
+    const seguir = (u: string, h: Nodo, r: number[]) => {
+      const p = pos.clone()
+      const m = jugadaLegal(p, u)
+      if (!m) return
+      p.play(m)
+      recorrer(h, [...camino, u], r, p)
+    }
     if (ply < raiz.length) {
       const h = n.hijos.get(raiz[ply])
-      if (h) recorrer(h, [...camino, raiz[ply]], rangos)
+      if (h) seguir(raiz[ply], h, rangos)
       return
     }
     const mio = (ply % 2 === 0) === (color === 'white')
     if (mio) {
       const u = elegirPropia(camino, n.hijos, color, elecciones)
-      recorrer(n.hijos.get(u)!, [...camino, u], rangos)
+      seguir(u, n.hijos.get(u)!, rangos)
       return
     }
-    const ordenados = [...n.hijos].sort((a, b) => b[1].peso - a[1].peso)
-    ordenados.forEach(([u, h], i) => recorrer(h, [...camino, u], [...rangos, i]))
+    const fen = fenDe(pos)
+    posicionesRival.push(fen)
+    const f = frecuencias.get(clavePosicion(fen))
+    const total = f ? Object.values(f).reduce((s, x) => s + x, 0) : 0
+    const conDatos = f !== undefined && total >= MINIMO_PARTIDAS
+    const veces = (u: string) => (conDatos ? (f[u] ?? 0) : 0)
+    const ordenados = [...n.hijos].sort((a, b) => veces(b[0]) - veces(a[0]) || b[1].peso - a[1].peso)
+    ordenados.forEach(([u, h], i) => {
+      if (conDatos && veces(u) / total < UMBRAL_RAREZA) raras.add([...camino, u].join(' '))
+      seguir(u, h, [...rangos, i])
+    })
   }
-  recorrer(arbol, [], [])
+  recorrer(arbol, [], [], Chess.default())
   const suma = (r: number[]) => r.reduce((s, x) => s + x, 0)
   salida.sort((a, b) => {
     const d = suma(a.rangos) - suma(b.rangos)
@@ -147,24 +182,50 @@ export function podarYOrdenar(lineas: string[][], raiz: string[], color: Color, 
     for (let i = 0; i < Math.min(a.rangos.length, b.rangos.length); i++) if (a.rangos[i] !== b.rangos[i]) return a.rangos[i] - b.rangos[i]
     return a.l.length - b.l.length
   })
-  return salida.map((x) => x.l)
+  return { lineas: salida.map((x) => x.l), raras, posicionesRival }
 }
+
+/** La línea pasa por alguna respuesta rara del rival. */
+const esRara = (l: string[], raras: Set<string>) => l.some((_, i) => raras.has(l.slice(0, i + 1).join(' ')))
+
+/** Posiciones del curso donde mueve el rival: las que hay que consultar en la base Masters. */
+export async function posicionesDelRival(explicacion: Explicacion, color: Color): Promise<string[]> {
+  const raiz = explicacion.raiz.split(' ')
+  return podarYOrdenar(await lineasTeoricas(raiz), raiz, color, await leerElecciones()).posicionesRival
+}
+
+export const SECCION_RAREZAS = {
+  nivel: 5,
+  nombre: 'Rarezas y trampas',
+  descripcion: 'Respuestas poco jugadas por los maestros y trampas típicas. Es opcional: no bloquea las otras secciones.',
+} as const
 
 export async function armarCurso(explicacion: Explicacion, color: Color): Promise<Curso> {
   const raiz = explicacion.raiz.split(' ')
   const todas = await lineasTeoricas(raiz)
-  const ordenadas = podarYOrdenar(todas, raiz, color, await leerElecciones())
+  const elecciones = await leerElecciones()
+  const previo = podarYOrdenar(todas, raiz, color, elecciones)
+  const frecuencias = await frecuenciasGuardadas(previo.posicionesRival)
+  const { lineas: ordenadas, raras } = frecuencias.size ? podarYOrdenar(todas, raiz, color, elecciones, frecuencias) : previo
   const vistas = new Set<string>()
   const secciones: Seccion[] = []
-  for (const n of SECCIONES) {
-    const lineas = lineasDelNivel(ordenadas, raiz.length + n.extra, color).filter((l) => !vistas.has(l.join(' ')))
-    lineas.forEach((l) => vistas.add(l.join(' ')))
-    if (!lineas.length) continue
+  const agregar = (nivel: number, nombre: string, descripcion: string, lineas: string[][]) => {
+    if (!lineas.length) return
     const lecciones: Leccion[] = []
     for (let i = 0; i < lineas.length; i += LINEAS_POR_LECCION)
-      lecciones.push({ seccion: n.nivel, numero: lecciones.length + 1, lineas: lineas.slice(i, i + LINEAS_POR_LECCION) })
-    secciones.push({ nivel: n.nivel, nombre: n.nombre, descripcion: n.descripcion, lecciones })
+      lecciones.push({ seccion: nivel, numero: lecciones.length + 1, lineas: lineas.slice(i, i + LINEAS_POR_LECCION) })
+    secciones.push({ nivel, nombre, descripcion, lecciones })
   }
+  for (const n of SECCIONES) {
+    const lineas = lineasDelNivel(ordenadas, raiz.length + n.extra, color).filter((l) => !vistas.has(l.join(' ')) && !esRara(l, raras))
+    lineas.forEach((l) => vistas.add(l.join(' ')))
+    agregar(n.nivel, n.nombre, n.descripcion, lineas)
+  }
+  // Las rarezas y las trampas típicas van aparte, al final: no bloquean el resto del curso.
+  const rarezas = ordenadas.filter((l) => esRara(l, raras))
+  const trampas = explicacion.trampas.map((t) => t.jugadas.split(' ')).filter((l) => l.length > raiz.length && l.slice(0, raiz.length).join(' ') === raiz.join(' '))
+  const extra = lineasDelNivel([...trampas, ...rarezas], 200, color).filter((l) => !vistas.has(l.join(' ')))
+  agregar(SECCION_RAREZAS.nivel, SECCION_RAREZAS.nombre, SECCION_RAREZAS.descripcion, extra)
   return { explicacion, color, todas, secciones }
 }
 
@@ -194,14 +255,22 @@ export async function estadoCurso(curso: Curso): Promise<EstadoCurso> {
   const lecciones = new Map<string, EstadoLeccion>()
   let proxima: Leccion | undefined
   let anteriorCompleta = true
+  let proximaRareza: Leccion | undefined
   for (const s of curso.secciones)
     for (const l of s.lecciones) {
       const completa = l.lineas.every((x) => repasos.has(idLinea(curso.color, x)))
+      // La sección de rarezas es opcional: siempre está abierta y no traba a las demás.
+      if (s.nivel === SECCION_RAREZAS.nivel) {
+        lecciones.set(claveLeccion(l), completa ? 'completa' : 'disponible')
+        if (!completa && !proximaRareza) proximaRareza = l
+        continue
+      }
       const estado: EstadoLeccion = completa ? 'completa' : anteriorCompleta ? 'disponible' : 'bloqueada'
       if (estado === 'disponible' && !proxima) proxima = l
       lecciones.set(claveLeccion(l), estado)
       anteriorCompleta = completa
     }
+  proxima ??= proximaRareza
   const vencidas = lineas
     .filter((l) => {
       const r = repasos.get(idLinea(curso.color, l))

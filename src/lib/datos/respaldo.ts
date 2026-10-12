@@ -9,7 +9,7 @@ export async function crearRespaldo(): Promise<Respaldo> {
     partidas: await db.partidas.toArray(),
     errores: await db.errores.toArray(),
     repasos: await db.repasos.toArray(),
-    ajustes: (await db.ajustes.toArray()).filter((a) => a.clave !== 'tokenLichess'),
+    ajustes: (await db.ajustes.toArray()).filter((a) => a.clave !== 'tokenLichess' && !a.clave.startsWith('masters:')),
     repertorio: await db.repertorio.toArray(),
     repasosLineas: await db.repasosLineas.toArray(),
   }

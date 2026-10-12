@@ -1,6 +1,7 @@
 <script lang="ts">
   import { lineaConNumeros } from '../../lib/ajedrez/posicion.ts'
-  import { armarCurso, claveLeccion, estadoCurso, guardarEleccion, type Curso, type EstadoCurso, type Leccion } from '../../lib/aperturas/curso.ts'
+  import { armarCurso, claveLeccion, estadoCurso, guardarEleccion, posicionesDelRival, type Curso, type EstadoCurso, type Leccion } from '../../lib/aperturas/curso.ts'
+  import { descargarFrecuencias } from '../../lib/aperturas/popularidad.ts'
   import type { Explicacion } from '../../lib/aperturas/explicaciones.ts'
   import { idLinea } from '../../lib/aperturas/repertorio.ts'
   import type { Color } from '../../lib/datos/tipos.ts'
@@ -21,11 +22,27 @@
   let pestana = $state<'curso' | 'lineas'>('curso')
   let sesion = $state<{ lineas: string[][]; modo: 'aprender' | 'repasar'; titulo: string }>()
 
+  /** Estado de la consulta a la base Masters para ordenar las respuestas del rival. */
+  let masters = $state<{ hechas: number; total: number } | 'sin-token' | 'error'>()
+
   async function cargar() {
     curso = await armarCurso(explicacion, color)
     estado = await estadoCurso(curso)
   }
-  cargar()
+
+  async function ordenarPorMasters() {
+    const fens = await posicionesDelRival(explicacion, color)
+    const r = await descargarFrecuencias(fens, (hechas, total) => {
+      if (total) masters = { hechas, total }
+    })
+    if (r !== 'ok') masters = r
+    else {
+      const habia = typeof masters === 'object'
+      masters = undefined
+      if (habia) await cargar()
+    }
+  }
+  cargar().then(ordenarPorMasters)
 
   function aprender(l: Leccion) {
     const nombre = curso?.secciones.find((s) => s.nivel === l.seccion)?.nombre
@@ -70,6 +87,13 @@
   {:else}
     <section class="tarjeta resumen">
       <p>{estado.aprendidas} de {estado.total} líneas aprendidas · {estado.vencidas.length} para repasar hoy</p>
+      {#if typeof masters === 'object'}
+        <p class="suave">Ordenando las respuestas del rival según la base Masters: {masters.hechas} de {masters.total} posiciones…</p>
+      {:else if masters === 'sin-token'}
+        <p class="suave">Para ordenar las respuestas del rival por lo que más juegan los maestros, pegá tu token de Lichess en Ajustes. Mientras tanto, el orden es el del catálogo.</p>
+      {:else if masters === 'error'}
+        <p class="suave">No se pudo consultar la base Masters (sin conexión o token inválido). El curso usa los datos que ya estaban guardados.</p>
+      {/if}
       <div class="fila">
         <button class="boton principal" onclick={() => estado?.proxima && aprender(estado.proxima)} disabled={!estado.proxima}>
           {estado.proxima ? 'Aprender líneas nuevas' : 'No quedan líneas nuevas'}
