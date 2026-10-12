@@ -228,6 +228,76 @@
     },
     "c2c4 g8f6 b2b4 e7e5": {
       "porQue": "Lo mejor: ocupa el centro y abre el alfil de f8, que ya amenaza ...Axb4."
+    },
+    "c2c4 c7c5 b1c3 g8f6 g2g3 d7d5 c4d5 f6d5 f1g2 d5c7 g1f3": {
+      "porQue": "Desarrollo normal: el blanco va a enrocar y buscar d4 o b4 según cómo se arme el negro."
+    },
+    "c2c4 c7c5 b1c3 g8f6 g2g3 d7d5 c4d5 f6d5 f1g2 d5c7 g1f3 b8c6": {
+      "porQue": "El otro caballo apunta a d4: la idea del Sistema Rubinstein es dominar esa casilla."
+    },
+    "c2c4 c7c5 b1c3 g8f6 g2g3 d7d5 c4d5 f6d5 f1g2 d5c7 g1f3 b8c6 e1g1": {
+      "porQue": "Enroca y espera el momento de golpear el centro negro con d3 y b4, o con e3 y d4."
+    },
+    "c2c4 c7c5 b1c3 g8f6 g2g3 d7d5 c4d5 f6d5 f1g2 d5c7 g1f3 b8c6 e1g1 e7e5": {
+      "porQue": "El esquema Rubinstein completo: los peones de c5 y e5 y los caballos de c6 y c7 controlan d4. El negro movió tres veces el caballo y cedió desarrollo a cambio del dominio central (Watson).",
+      "porQueNo": [
+        {
+          "uci": "c7e6",
+          "texto": "...Ce6? Ca4: el blanco ataca c5 y el negro no puede sostenerlo con comodidad."
+        }
+      ]
+    },
+    "c2c4 c7c5 b1c3 g8f6 g2g3 d7d5 c4d5 f6d5 f1g2 d5c7 d1b3": {
+      "porQue": "Ataca b7 y prepara Axc6+ para destrozar la estructura negra."
+    },
+    "c2c4 c7c5 b1c3 g8f6 g2g3 d7d5 c4d5 f6d5 f1g2 d5c7 d1b3 b8c6": {
+      "porQue": "Tapa la diagonal y acepta el cambio en c6.",
+      "porQueNo": [
+        {
+          "uci": "e7e5",
+          "texto": "...e5? Axb7: el peón cae y la torre de a8 queda en la mira."
+        },
+        {
+          "uci": "d8d7",
+          "texto": "...Dd7? Axb7: el blanco gana el peón de b7 igual."
+        }
+      ]
+    },
+    "c2c4 c7c5 b1c3 g8f6 g2g3 d7d5 c4d5 f6d5 f1g2 d5c7 d1b3 b8c6 g2c6 b7c6 b3a4": {
+      "porQue": "Ataca c6 y c5: el blanco entregó su alfil para dejarle al negro peones doblados y aislados."
+    },
+    "c2c4 c7c5 b1c3 g8f6 g2g3 d7d5 c4d5 f6d5 f1g2 d5c7 d2d3 e7e5": {
+      "porQue": "El esquema típico: ...e5 y ...Cc6 contra d4. Si el blanco quiere abrir, tendrá que jugar b4 o f4."
+    },
+    "c2c4 c7c5 g1f3 g8f6 d2d4": {
+      "porQue": "Abre el centro: tras ...cxd4 Cxd4 se llega a una especie de Siciliana abierta con c4 ya jugado; si el blanco suma e4, se forma la estructura Maroczy."
+    },
+    "c2c4 c7c5 g1f3 g8f6 d2d4 c5d4 f3d4": {
+      "porQue": "Retoma centralizando el caballo."
+    },
+    "c2c4 c7c5 g1f3 g8f6 d2d4 c5d4 f3d4 e7e6": {
+      "porQue": "Lo más flexible: prepara ...d5 o ...Ab4+ y deja abiertas varias estructuras."
+    },
+    "c2c4 c7c5 g1f3 g8f6 d2d4 c5d4 f3d4 e7e6 g2g3": {
+      "porQue": "El fianchetto: el alfil de g2 presiona la gran diagonal, y el caballo de b1 todavía no va a c3, donde ...Ab4 lo clavaría."
+    },
+    "c2c4 c7c5 g1f3 g8f6 d2d4 c5d4 f3d4 e7e6 g2g3 d7d5": {
+      "porQue": "Ataca c4 enseguida: el negro reclama su parte del centro."
+    },
+    "c2c4 c7c5 g1f3 g8f6 d2d4 c5d4 f3d4 e7e6 g2g3 d7d5 f1g2 e6e5": {
+      "porQue": "Echa al caballo de d4 ganando espacio. Watson señala que incluso las líneas agudas con ...d4 tuvieron éxito para el negro."
+    },
+    "c2c4 c7c5 g1f3 g8f6 d2d4 c5d4 f3d4 e7e6 g2g3 f8b4": {
+      "porQue": "Un jaque para desordenar el desarrollo blanco antes de decidir dónde va cada pieza."
+    },
+    "c2c4 c7c5 g1f3 g8f6 d2d4 c5d4 f3d4 e7e6 g2g3 f8b4 c1d2 d8b6": {
+      "porQue": "La línea principal según Watson: la dama ataca d4 y b2 al mismo tiempo."
+    },
+    "c2c4 c7c5 g1f3 g8f6 d2d4 c5d4 f3d4 b8c6": {
+      "porQue": "Desarrolla atacando el caballo de d4."
+    },
+    "c2c4 c7c5 g1f3 g8f6 d2d4 c5d4 f3d4 b8c6 b1c3": {
+      "porQue": "Desarrolla y controla d5 y e4. Ahora el negro elige entre ...e6, ...d5, ...Db6 o ...g6."
     }
   },
   "fuentes": [
@@ -251,6 +321,14 @@
       "titulo": "Catálogo abierto de aperturas de Lichess",
       "url": "https://github.com/lichess-org/chess-openings",
       "licencia": "CC0"
+    },
+    {
+      "titulo": "John L. Watson — Symmetrical English: 1...c5 (Batsford, 1988)",
+      "capitulo": "cap. 6, «3 g3 d5 and the Rubinstein Variation»"
+    },
+    {
+      "titulo": "John L. Watson — Symmetrical English: 1...c5 (Batsford, 1988)",
+      "capitulo": "caps. 13 a 15, «2 Cf3 Cf6 3 d4»"
     }
   ],
   "verificacion": {
@@ -485,6 +563,90 @@
       "c2c4 g8f6 b2b4 e7e5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "c2c4 c7c5 b1c3 g8f6 g2g3 d7d5 c4d5 f6d5 f1g2 d5c7 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "c2c4 c7c5 b1c3 g8f6 g2g3 d7d5 c4d5 f6d5 f1g2 d5c7 g1f3 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "c2c4 c7c5 b1c3 g8f6 g2g3 d7d5 c4d5 f6d5 f1g2 d5c7 g1f3 b8c6 e1g1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "c2c4 c7c5 b1c3 g8f6 g2g3 d7d5 c4d5 f6d5 f1g2 d5c7 g1f3 b8c6 e1g1 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "c2c4 c7c5 b1c3 g8f6 g2g3 d7d5 c4d5 f6d5 f1g2 d5c7 g1f3 b8c6 e1g1 c7e6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,1 → −0,9. Refutación: e3 Dd3 Da4 Ad7 Ce1 Df5"
+      },
+      "c2c4 c7c5 b1c3 g8f6 g2g3 d7d5 c4d5 f6d5 f1g2 d5c7 d1b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "c2c4 c7c5 b1c3 g8f6 g2g3 d7d5 c4d5 f6d5 f1g2 d5c7 d1b3 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "c2c4 c7c5 b1c3 g8f6 g2g3 d7d5 c4d5 f6d5 f1g2 d5c7 d1b3 e7e5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 9 puntos de chances: +0,1 → −1,0. Refutación: Axb7 Axb7 Dxb7 Dd7 Dg2 Cc6"
+      },
+      "c2c4 c7c5 b1c3 g8f6 g2g3 d7d5 c4d5 f6d5 f1g2 d5c7 d1b3 d8d7 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,1 → −0,6. Refutación: Axb7 Axb7 Dxb7 Cc6 Cb5 Tc8"
+      },
+      "c2c4 c7c5 b1c3 g8f6 g2g3 d7d5 c4d5 f6d5 f1g2 d5c7 d1b3 b8c6 g2c6 b7c6 b3a4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "c2c4 c7c5 b1c3 g8f6 g2g3 d7d5 c4d5 f6d5 f1g2 d5c7 d2d3 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "c2c4 c7c5 g1f3 g8f6 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "c2c4 c7c5 g1f3 g8f6 d2d4 c5d4 f3d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "c2c4 c7c5 g1f3 g8f6 d2d4 c5d4 f3d4 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "c2c4 c7c5 g1f3 g8f6 d2d4 c5d4 f3d4 e7e6 g2g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "c2c4 c7c5 g1f3 g8f6 d2d4 c5d4 f3d4 e7e6 g2g3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "c2c4 c7c5 g1f3 g8f6 d2d4 c5d4 f3d4 e7e6 g2g3 d7d5 f1g2 e6e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "c2c4 c7c5 g1f3 g8f6 d2d4 c5d4 f3d4 e7e6 g2g3 f8b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "c2c4 c7c5 g1f3 g8f6 d2d4 c5d4 f3d4 e7e6 g2g3 f8b4 c1d2 d8b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "c2c4 c7c5 g1f3 g8f6 d2d4 c5d4 f3d4 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "c2c4 c7c5 g1f3 g8f6 d2d4 c5d4 f3d4 b8c6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
       }
     }
   }
