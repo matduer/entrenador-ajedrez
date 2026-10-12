@@ -3,7 +3,7 @@ import { clavePosicion, fenDe, jugadaLegal } from '../ajedrez/posicion.ts'
 import { db, guardarAjuste, leerAjuste } from '../datos/db.ts'
 import type { Color, RepasoLinea } from '../datos/tipos.ts'
 import { armarArbol, fensDeLinea, lineasDesde } from './arbol.ts'
-import { cargarCatalogo, type Catalogo } from './catalogo.ts'
+import { cargarCatalogo, clasificar, type Catalogo } from './catalogo.ts'
 import { EXPLICACIONES, notaPara, type Explicacion } from './explicaciones.ts'
 import { frecuenciasGuardadas, type Frecuencias } from './popularidad.ts'
 import { lineasDelNivel } from './practica.ts'
@@ -136,16 +136,77 @@ function armarNodos(lineas: string[][]): Nodo {
   return raiz
 }
 
-/** Mi jugada en una posición con varias: la elegida, o la de más teoría que no esté marcada como inferior. */
-function elegirPropia(prefijo: string[], hijos: Map<string, Nodo>, color: Color, elecciones: Elecciones): string {
-  const elegida = elecciones[claveEleccion(color, prefijo)]
-  if (elegida && hijos.has(elegida)) return elegida
-  const candidatas = [...hijos].map(([u, n]) => {
-    const nota = notaPara([...prefijo, u])?.nota
-    return { u, peso: n.peso, inferior: nota?.inferior ?? false }
-  })
-  candidatas.sort((a, b) => Number(a.inferior) - Number(b.inferior) || b.peso - a.peso)
-  return candidatas[0].u
+/** La línea termina en otra apertura (por ejemplo, la Inglesa que con 2.d4 pasa a una India). */
+export type SaleDeLaFamilia = (ucis: string[]) => boolean
+
+/** Grupo de una apertura según su primera jugada: las de flanco transponen mucho entre sí sin cambiar de carácter. */
+const grupo = (primera: string | undefined) => (primera === 'e2e4' ? 'e4' : primera === 'd2d4' ? 'd4' : 'flanco')
+
+/**
+ * Una línea sale de la apertura del curso cuando su posición con nombre más profunda está registrada
+ * en el catálogo bajo otra familia y con una primera jugada de otro grupo (1.e4, 1.d4 o de flanco):
+ * 1.c4 Cf6 2.d4 g6 3.Cc3 Ag7 4.e4 es la India de Rey (1.d4 Cf6 2.c4 g6…). No cuenta pasar de la Réti a
+ * la Inglesa ni de una Najdorf a una posición con nombre de Scheveningen: las familias del catálogo no
+ * son una jerarquía limpia y esas transposiciones no cambian el carácter de la apertura.
+ */
+export function criterioFamilia(catalogo: Catalogo, raiz: string[]): SaleDeLaFamilia {
+  const familia = clasificar(catalogo, raiz, 200)?.familia
+  const g = grupo(raiz[0])
+  return (ucis) => {
+    const a = clasificar(catalogo, ucis, 200)
+    return a !== undefined && a.familia !== familia && grupo(a.ucis[0]) !== g
+  }
+}
+
+/** Resultado de podar un subárbol: cuántas líneas quedan y cuántas terminan en otra apertura. */
+interface Poda {
+  hojas: number
+  fuera: number
+  /** Mi jugada elegida, si en este nodo muevo yo. */
+  jugada?: string
+}
+
+/**
+ * Elige mi jugada en cada posición de abajo hacia arriba: la que guardó el usuario o, si no eligió, la
+ * de más teoría, prefiriendo las que no están marcadas como inferiores y después las que, ya podadas,
+ * no llevan mayormente a otra apertura (para que el curso de la Inglesa no se vuelva un curso de 1.d4).
+ * Se mira adónde terminan las líneas que el curso va a enseñar, no la posición inmediata: 1.c4 e6 2.d4
+ * todavía figura como Inglesa en el catálogo, y con 2.Cf3 el blanco igual puede pasar a d4 más tarde.
+ */
+function podarPropias(arbol: Nodo, raiz: string[], color: Color, elecciones: Elecciones, sale: SaleDeLaFamilia): Map<Nodo, Poda> {
+  const memo = new Map<Nodo, Poda>()
+  const evaluar = (n: Nodo, camino: string[]): Poda => {
+    const hecho = memo.get(n)
+    if (hecho) return hecho
+    let r: Poda
+    const ply = camino.length
+    if (n.hijos.size === 0) r = { hojas: 1, fuera: Number(sale(camino)) }
+    else if (ply < raiz.length) {
+      const h = n.hijos.get(raiz[ply])
+      r = h ? evaluar(h, [...camino, raiz[ply]]) : { hojas: 0, fuera: 0 }
+    } else if ((ply % 2 === 0) === (color === 'white')) {
+      const elegida = elecciones[claveEleccion(color, camino)]
+      const candidatas = [...n.hijos].map(([u, h]) => {
+        const p = evaluar(h, [...camino, u])
+        return { u, peso: h.peso, p, inferior: notaPara([...camino, u])?.nota.inferior ?? false, sale: p.fuera * 2 > p.hojas }
+      })
+      candidatas.sort(
+        (a, b) => Number(b.u === elegida) - Number(a.u === elegida) || Number(a.inferior) - Number(b.inferior) || Number(a.sale) - Number(b.sale) || b.peso - a.peso,
+      )
+      r = { ...candidatas[0].p, jugada: candidatas[0].u }
+    } else {
+      r = { hojas: 0, fuera: 0 }
+      for (const [u, h] of n.hijos) {
+        const p = evaluar(h, [...camino, u])
+        r.hojas += p.hojas
+        r.fuera += p.fuera
+      }
+    }
+    memo.set(n, r)
+    return r
+  }
+  evaluar(arbol, [])
+  return memo
 }
 
 /** Mínimo de partidas Masters en una posición para confiar en sus frecuencias. */
@@ -167,8 +228,9 @@ export interface Ordenadas {
  * Las respuestas del rival se ordenan por lo que más se juega en la base Masters cuando hay datos; si
  * no, por cuántas líneas del catálogo pasan por ahí.
  */
-export function podarYOrdenar(lineas: string[][], raiz: string[], color: Color, elecciones: Elecciones, frecuencias = new Map<string, Frecuencias>()): Ordenadas {
+export function podarYOrdenar(lineas: string[][], raiz: string[], color: Color, elecciones: Elecciones, sale: SaleDeLaFamilia = () => false, frecuencias = new Map<string, Frecuencias>()): Ordenadas {
   const arbol = armarNodos(lineas)
+  const poda = podarPropias(arbol, raiz, color, elecciones, sale)
   const salida: { l: string[]; rangos: number[] }[] = []
   const raras = new Set<string>()
   const posicionesRival: string[] = []
@@ -192,7 +254,7 @@ export function podarYOrdenar(lineas: string[][], raiz: string[], color: Color, 
     }
     const mio = (ply % 2 === 0) === (color === 'white')
     if (mio) {
-      const u = elegirPropia(camino, n.hijos, color, elecciones)
+      const u = poda.get(n)!.jugada!
       seguir(u, n.hijos.get(u)!, rangos)
       return
     }
@@ -225,7 +287,7 @@ const esRara = (l: string[], raras: Set<string>) => l.some((_, i) => raras.has(l
 /** Posiciones del curso donde mueve el rival: las que hay que consultar en la base Masters. */
 export async function posicionesDelRival(explicacion: Explicacion, color: Color): Promise<string[]> {
   const raiz = explicacion.raiz.split(' ')
-  return podarYOrdenar(await lineasTeoricas(raiz), raiz, color, await leerElecciones()).posicionesRival
+  return podarYOrdenar(await lineasTeoricas(raiz), raiz, color, await leerElecciones(), criterioFamilia(await cargarCatalogo(), raiz)).posicionesRival
 }
 
 export const SECCION_RAREZAS = {
@@ -238,10 +300,11 @@ export async function armarCurso(explicacion: Explicacion, color: Color): Promis
   const raiz = explicacion.raiz.split(' ')
   const todas = await lineasTeoricas(raiz)
   const elecciones = await leerElecciones()
-  const previo = podarYOrdenar(todas, raiz, color, elecciones)
-  const frecuencias = await frecuenciasGuardadas(previo.posicionesRival)
-  const { lineas: ordenadas, raras } = frecuencias.size ? podarYOrdenar(todas, raiz, color, elecciones, frecuencias) : previo
   const catalogo = await cargarCatalogo()
+  const sale = criterioFamilia(catalogo, raiz)
+  const previo = podarYOrdenar(todas, raiz, color, elecciones, sale)
+  const frecuencias = await frecuenciasGuardadas(previo.posicionesRival)
+  const { lineas: ordenadas, raras } = frecuencias.size ? podarYOrdenar(todas, raiz, color, elecciones, sale, frecuencias) : previo
   const cortes = ordenadas.map((l) => corteEnVariante(catalogo, l, raiz.length))
   const vistas = new Set<string>()
   const secciones: Seccion[] = []
@@ -315,4 +378,31 @@ export async function estadoCurso(curso: Curso): Promise<EstadoCurso> {
     })
     .sort((a, b) => +new Date(repasos.get(idLinea(curso.color, a))!.card.due) - +new Date(repasos.get(idLinea(curso.color, b))!.card.due))
   return { repasos, total: lineas.length, aprendidas: repasos.size, vencidas, lecciones, proxima }
+}
+
+/**
+ * Otras jugadas teóricas mías en la posición tras `prefijo` (salvo `jugada`) cuyas líneas terminan
+ * mayormente en otra apertura, con las familias a las que llevan (las más frecuentes primero). Sirven
+ * para mostrar que existe la transposición sin que el curso la enseñe.
+ */
+export function transposiciones(todas: string[][], prefijo: string[], jugada: string, sale: SaleDeLaFamilia, catalogo: Catalogo): { uci: string; familias: string[] }[] {
+  const texto = prefijo.join(' ')
+  const porJugada = new Map<string, string[][]>()
+  for (const l of todas)
+    if (l.length > prefijo.length && l[prefijo.length] !== jugada && l.slice(0, prefijo.length).join(' ') === texto) {
+      const u = l[prefijo.length]
+      porJugada.set(u, [...(porJugada.get(u) ?? []), l])
+    }
+  const r: { uci: string; familias: string[] }[] = []
+  for (const [uci, ls] of porJugada) {
+    const fuera = ls.filter((l) => sale(l))
+    if (fuera.length * 2 <= ls.length) continue
+    const cuenta = new Map<string, number>()
+    for (const l of fuera) {
+      const f = clasificar(catalogo, l, 200)?.familia
+      if (f) cuenta.set(f, (cuenta.get(f) ?? 0) + 1)
+    }
+    r.push({ uci, familias: [...cuenta].sort((a, b) => b[1] - a[1]).map(([f]) => f) })
+  }
+  return r
 }

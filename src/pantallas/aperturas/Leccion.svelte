@@ -3,7 +3,8 @@
   import { lineaSan, posDesdeFen, sanDeUci } from '../../lib/ajedrez/posicion.ts'
   import { detectarMotivoError } from '../../lib/ajedrez/temas.ts'
   import { fensDeLinea } from '../../lib/aperturas/arbol.ts'
-  import { cargarCatalogo, clasificar, nombreEnEspanol, type Catalogo } from '../../lib/aperturas/catalogo.ts'
+  import { cargarCatalogo, clasificar, familiaEnEspanol, nombreEnEspanol, type Catalogo } from '../../lib/aperturas/catalogo.ts'
+  import { criterioFamilia, transposiciones } from '../../lib/aperturas/curso.ts'
   import { notaPara, porQueNoPara } from '../../lib/aperturas/explicaciones.ts'
   import { registrarLinea } from '../../lib/aperturas/practica.ts'
   import type { Color } from '../../lib/datos/tipos.ts'
@@ -24,11 +25,13 @@
     /** Todas las líneas teóricas de la apertura, para reconocer otras jugadas válidas. */
     todas: string[][]
     titulo: string
+    /** Raíz de la apertura del curso, para señalar las jugadas que transponen a otra apertura. */
+    raiz: string[]
     alSalir: () => void
     /** El usuario prefiere otra jugada propia en esta posición. */
     alCambiarEleccion: (prefijo: string[], uci: string) => void
   }
-  let { color, lineas, modo, todas, titulo, alSalir, alCambiarEleccion }: Props = $props()
+  let { color, lineas, modo, todas, titulo, raiz, alSalir, alCambiarEleccion }: Props = $props()
 
   type Paso = { linea: string[]; fase: 'presentar' | 'memoria' | 'mezcla'; registrar: boolean }
   const mezclar = <T,>(xs: T[]) => xs.map((x) => ({ x, r: Math.random() })).sort((a, b) => a.r - b.r).map((y) => y.x)
@@ -175,7 +178,9 @@
     if (todas.some((l) => l.slice(0, ply).join(' ') === texto && l[ply] === uci)) {
       alternativa = { prefijo, uci, san }
       refrescar++
-      mensaje = { tipo: 'info', texto: `${san} también es teoría, pero la jugada que tenés guardada acá es ${sanDeUci(pos, esperada)}.` }
+      const otra = transposicionesDe(prefijo, esperada).find((t) => t.uci === uci)
+      const destino = otra ? `, y lleva a otra apertura (${otra.familias.slice(0, 2).map(familiaEnEspanol).join(', ')})` : ''
+      mensaje = { tipo: 'info', texto: `${san} también es teoría${destino}, pero la jugada que tenés guardada acá es ${sanDeUci(pos, esperada)}.` }
       return
     }
 
@@ -221,19 +226,44 @@
     return a ? nombreEnEspanol(a) : undefined
   })
 
-  /** Las jugadas ya hechas en la línea que tienen explicación, de los dos bandos. */
+  let sale = $derived(catalogo ? criterioFamilia(catalogo, raiz) : undefined)
+
+  /** Otras jugadas mías en la posición tras `prefijo` que llevan a otra apertura, en texto. */
+  const cacheTransposiciones = new Map<string, ReturnType<typeof transposiciones>>()
+  function transposicionesDe(prefijo: string[], jugada: string) {
+    if (!catalogo || !sale) return []
+    const clave = `${prefijo.join(' ')}|${jugada}`
+    let t = cacheTransposiciones.get(clave)
+    if (!t) cacheTransposiciones.set(clave, (t = transposiciones(todas, prefijo, jugada, sale, catalogo)))
+    return t
+  }
+
+  function textoTransposicion(prefijo: string[], jugada: string): string | undefined {
+    const t = transposicionesDe(prefijo, jugada)
+    if (!t.length) return undefined
+    const p = posDesdeFen(fensDeLinea(prefijo).at(-1)!)
+    const numero = `${Math.floor(prefijo.length / 2) + 1}.${prefijo.length % 2 ? '..' : ''}`
+    const partes = t.map((x) => `${numero} ${sanDeUci(p, x.uci)} (${x.familias.slice(0, 2).map(familiaEnEspanol).join(', ')})`)
+    return partes.length === 1
+      ? `Acá también se juega ${partes[0]}, que lleva a otra apertura; este curso sigue con la jugada propia de esta.`
+      : `Acá también se juegan ${partes.join(' o ')}, que llevan a otras aperturas; este curso sigue con la jugada propia de esta.`
+  }
+
+  /** Las jugadas ya hechas en la línea que tienen explicación o una transposición posible, de los dos bandos. */
   let ideas = $derived.by(() => {
     if (!paso) return []
     const sans = lineaSan(fens[0], paso.linea.slice(0, ply))
     const r: { ply: number; jugada: string; texto: string }[] = []
     for (let i = 0; i < ply; i++) {
       const nota = notaPara(paso.linea.slice(0, i + 1))
-      if (!nota) continue
-      r.push({
-        ply: i,
-        jugada: `${Math.floor(i / 2) + 1}.${i % 2 ? '..' : ''} ${sans[i]}`,
-        texto: nota.nota.porQue + (nota.nota.inferior ? ' (Stockfish la considera algo inferior, pero es teoría jugable.)' : ''),
-      })
+      const mia = (i % 2 === 0) === (color === 'white')
+      const transpone = mia && i >= raiz.length ? textoTransposicion(paso.linea.slice(0, i), paso.linea[i]) : undefined
+      if (!nota && !transpone) continue
+      const textos = [
+        nota && nota.nota.porQue + (nota.nota.inferior ? ' (Stockfish la considera algo inferior, pero es teoría jugable.)' : ''),
+        transpone,
+      ]
+      r.push({ ply: i, jugada: `${Math.floor(i / 2) + 1}.${i % 2 ? '..' : ''} ${sans[i]}`, texto: textos.filter(Boolean).join(' ') })
     }
     return r
   })

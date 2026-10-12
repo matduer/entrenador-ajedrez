@@ -71,7 +71,7 @@
 
 {#if sesion && curso}
   {#key sesion}
-    <LeccionPantalla {...sesion} {color} todas={curso.todas} alSalir={salirDeSesion} alCambiarEleccion={cambiarEleccion} />
+    <LeccionPantalla {...sesion} {color} todas={curso.todas} raiz={explicacion.raiz.split(' ')} alSalir={salirDeSesion} alCambiarEleccion={cambiarEleccion} />
   {/key}
 {:else}
   <div class="cabecera">
