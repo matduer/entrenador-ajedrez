@@ -326,6 +326,55 @@
           "texto": "Cb5? a6: el caballo no tiene nada que hacer en b5 y el negro recupera el control."
         }
       ]
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 d8c7 g2g3": {
+      "porQue": "Fianchetto y, a la vez, prepara Af4 contra la dama de c7 (Schandorff).",
+      "porQueNo": [
+        {
+          "uci": "f2f3",
+          "texto": "f3? e5: el negro rompe en el centro antes de que el blanco pueda jugar e4."
+        }
+      ]
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 d8c7 g2g3 e7e5 d4e5 d7e5 c1f4 f6d7 f1g2": {
+      "porQue": "La posición de partida de una variante clásica, jugada en cientos de partidas: el caballo de e5 está clavado contra la dama."
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 d8c7 g2g3 e7e5 d4e5 d7e5 c1f4 f6d7 f1g2 g7g5": {
+      "porQue": "La idea de Morozevich: ataca al alfil de f4 y busca juego activo. Casi desplazó a la clásica 11...f6 (Schandorff)."
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 d8c7 g2g3 e7e5 d4e5 d7e5 c1f4 f6d7 f1g2 g7g5 c4e3": {
+      "porQue": "La respuesta de Kasparov cuando se encontró con la novedad: busca una ventaja chica pero estable, atacando el alfil de f5.",
+      "porQueNo": [
+        {
+          "uci": "f4g5",
+          "texto": "Axg5? Cxc4: el caballo de c4 se pierde."
+        },
+        {
+          "uci": "g3g4",
+          "texto": "g4? gxf4 Cxe5 Dxe5 gxf5: el negro gana una pieza."
+        }
+      ]
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 d8c7 g2g3 e7e5 d4e5 d7e5 c1f4 f6d7 f1g2 f7f6": {
+      "porQue": "La disposición clásica: refuerza el caballo de e5 con un peón."
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 d7b6": {
+      "porQue": "La Variante Sokolov, la interpretación moderna: el caballo echa al de c4 y el negro sigue con ...a5."
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 d7b6 c4e5 a7a5": {
+      "porQue": "Impide a5, que echaría al caballo de b6.",
+      "porQueNo": [
+        {
+          "uci": "e7e6",
+          "texto": "...e6? f3 Ag6 e4: el blanco arma el centro que buscaba."
+        }
+      ]
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 f6d5": {
+      "porQue": "Una idea de Morozevich: prepara ...e5 para la próxima jugada. Es, sobre todo, un arma de sorpresa (Schandorff)."
+    },
+    "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 f6d5 f2f3": {
+      "porQue": "Prepara e4 para echar al caballo de d5 y ocupar el centro. Stockfish la prefiere a 8.g3, que es la recomendación de Schandorff (él menciona 8.f3 como interesante)."
     }
   },
   "fuentes": [
@@ -359,6 +408,10 @@
     {
       "titulo": "Lars Schandorff — Playing the Queen's Gambit: A Grandmaster Guide (Quality Chess, 2009)",
       "capitulo": "cap. 3, «The Slav»: teoría, 3...dxc4, variante 6...Ca6 y línea principal 6.Ce5 e6 7.f3 (partidas 20 a 28)"
+    },
+    {
+      "titulo": "Lars Schandorff — Playing the Queen's Gambit: A Grandmaster Guide (Quality Chess, 2009)",
+      "capitulo": "cap. 3, «The Slav»: «The Mainline – Part Two» (6...Cbd7), partidas 29 a 31"
     }
   ],
   "verificacion": {
@@ -657,6 +710,58 @@
       "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 e7e6 f2f3 c6c5 e2e4 f5g6 c3b5 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 7 puntos de chances: +0,5 → −0,3. Refutación: a6 Axc4 Cc6 Af4 axb5 Axb5"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 d8c7 g2g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 d8c7 f2f3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,4 → −0,2. Refutación: e5 e4 exd4 Dxd4 Ae6 Df2"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 d8c7 g2g3 e7e5 d4e5 d7e5 c1f4 f6d7 f1g2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 d8c7 g2g3 e7e5 d4e5 d7e5 c1f4 f6d7 f1g2 g7g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 d8c7 g2g3 e7e5 d4e5 d7e5 c1f4 f6d7 f1g2 g7g5 c4e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 d8c7 g2g3 e7e5 d4e5 d7e5 c1f4 f6d7 f1g2 g7g5 f4g5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 30 puntos de chances: +0,4 → −3,1. Refutación: Cxc4 Dd4 h6 Af4 Cce5 a5"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 d8c7 g2g3 e7e5 d4e5 d7e5 c1f4 f6d7 f1g2 g7g5 g3g4 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 23 puntos de chances: +0,4 → −2,2. Refutación: gxf4 Cxe5 Dxe5 gxf5 O-O-O Db3"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 d8c7 g2g3 e7e5 d4e5 d7e5 c1f4 f6d7 f1g2 f7f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 d7b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 d7b6 c4e5 a7a5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 d7b6 c4e5 e7e6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: −0,4 → −0,9. Refutación: f3 Ag6 e4 Cbd7 Cd3 c5"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 f6d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 d5c4 a2a4 c8f5 f3e5 b8d7 e5c4 f6d5 f2f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
       }
     }
   }
