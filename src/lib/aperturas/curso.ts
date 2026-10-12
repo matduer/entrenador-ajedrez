@@ -221,7 +221,9 @@ function podarPropias(arbol: Nodo, raiz: string[], color: Color, elecciones: Ele
       candidatas.sort(
         (a, b) => Number(b.u === elegida) - Number(a.u === elegida) || a.inferior - b.inferior || Number(a.sale) - Number(b.sale) || b.peso - a.peso,
       )
-      r = { ...candidatas[0].p, jugada: candidatas[0].u }
+      // Si la única teoría cargada es un error, la línea no se enseña (hojas: 0): mejor no prepararse
+      // contra esa jugada del rival que aprender una respuesta mala.
+      r = candidatas[0].inferior === 2 && candidatas[0].u !== elegida ? { hojas: 0, fuera: 0 } : { ...candidatas[0].p, jugada: candidatas[0].u }
     } else {
       r = { hojas: 0, fuera: 0 }
       for (const [u, h] of n.hijos) {
@@ -282,7 +284,8 @@ export function podarYOrdenar(lineas: string[][], raiz: string[], color: Color, 
     }
     const mio = (ply % 2 === 0) === (color === 'white')
     if (mio) {
-      const u = poda.get(n)!.jugada!
+      const u = poda.get(n)!.jugada
+      if (!u) return
       seguir(u, n.hijos.get(u)!, rangos)
       return
     }
