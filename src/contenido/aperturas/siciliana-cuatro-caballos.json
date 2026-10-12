@@ -1,0 +1,167 @@
+{
+  "id": "siciliana-cuatro-caballos",
+  "nombre": "Siciliana de los Cuatro Caballos",
+  "raiz": "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6",
+  "resumen": "Una variante más vieja que la Clásica: el negro deja libre la diagonal a3-f8 para su alfil de rey, que puede ir a b4 o c5, a cambio de un agujero en d6. Eso obliga a las blancas a actuar enseguida: contra una jugada rutinaria como 6.Ae2, la clavada 6...Ab4 es molesta. Las dos líneas serias son 6.Cdb5, que apunta a d6, y 6.Cxc6 bxc6 7.e5, la preferida de Stockfish. También sirve como camino indirecto al Sveshnikov (6.Cdb5 d6 7.Af4 e5) evitando la Rossolimo.",
+  "planesBlancas": [
+    "Aprovechar d6: Cdb5 y Af4, o Cd6+ si el negro se descuida.",
+    "6.Cxc6 bxc6 7.e5 Cd5 8.Ce4, con c4 para echar al caballo del centro."
+  ],
+  "planesNegras": [
+    "...Ab4 para clavar el caballo de c3 y presionar e4.",
+    "...d5 en el momento justo, para liberar el juego y aprovechar el alfil activo."
+  ],
+  "estructura": "Peones negros en e6 y d7 con la casilla d6 sin cubrir por peones; tras 6.Cxc6 bxc6, el negro tiene un centro de peones (c6, d7, e6) a cambio de la estructura del flanco de dama.",
+  "rupturas": [
+    "...d5 del negro.",
+    "e5 y c4 del blanco en la línea 6.Cxc6."
+  ],
+  "piezas": [
+    "Alfil negro de f8: a b4, contra el caballo de c3.",
+    "Caballo blanco de d4: a b5, apuntando a d6."
+  ],
+  "trampas": [],
+  "notas": {
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4c6": {
+      "porQue": "Para Stockfish la más fuerte, y una alternativa importante a 6.Cdb5 desde los años 70: tras 6...bxc6 7.e5! Cd5 8.Ce4, el negro tiene que actuar antes de que llegue c4."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4c6 b7c6 e4e5 f6d5": {
+      "porQue": "La única buena: el caballo se centraliza.",
+      "porQueNo": [
+        {
+          "uci": "f6g8",
+          "texto": "7...Cg8? 8.Ad3: el negro perdió todo el tiempo y no tiene juego."
+        },
+        {
+          "uci": "d7d5",
+          "texto": "7...d5? 8.exf6: el caballo cae."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4c6 b7c6 e4e5 f6d5 c3e4 d8c7": {
+      "porQue": "La opción más popular: ataca e5. Tras 9.f4 Db6 10.c4, ...Ab4+ o ...Ce3 llevan a un juego muy agudo."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4b5": {
+      "porQue": "La primera idea que viene a la cabeza: el caballo apunta a d6, la debilidad del negro."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4b5 f8b4": {
+      "porQue": "Contraataca: provoca la ultra aguda 7.Af4 o la más tranquila 7.a3."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4b5 f8b4 a2a3 b4c3 b5c3 d7d5": {
+      "porQue": "El negro aprovecha el cambio para avanzar en el centro: tras 9.exd5 exd5 10.Ad3 O-O 11.O-O d4, el peón de d4 domina.",
+      "porQueNo": [
+        {
+          "uci": "e8g8",
+          "texto": "8...O-O? 9.Dd6: la dama se instala en el agujero y paraliza al negro."
+        },
+        {
+          "uci": "d8a5",
+          "texto": "8...Da5? 9.Ad3 y la ruptura ...d5 llega tarde."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4b5 f8b4 c1f4 f6e4 d1f3 d7d5 b5c7 e8f8 e1c1 b4c3 b2c3": {
+      "porQue": "La posición crítica de 7.Af4: el negro tiene un peón de más y el enroque blanco está abierto, pero el rey negro perdió el enroque. Un enigma todavía sin resolver."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4b5 d7d6": {
+      "porQue": "Otra forma de cubrir d6: es el camino al Sveshnikov que evita la Rossolimo y la línea 7.Cd5."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4b5 d7d6 c1f4 e6e5 f4g5": {
+      "porQue": "Se llega a la misma posición que 5...e5 6.Cdb5 d6 7.Ag5 del Sveshnikov.",
+      "porQueNo": [
+        {
+          "uci": "f4c1",
+          "texto": "8.Ac1? a6 y ...b5: el negro gana espacio con tiempo."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1e2 f8b4": {
+      "porQue": "El castigo a la jugada rutinaria: obliga a 7.O-O Axc3 8.bxc3 Cxe4, un sacrificio de peón especulativo, porque 7.f3 se contesta con ...d5."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 a2a3": {
+      "porQue": "Prudente: quita b4 al alfil, pero 6...Dc7 o 6...d6 llevan a líneas inofensivas de la Taimanov o la Scheveningen."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Sicilian Defence», «Four Knights Variation»"
+    },
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-12",
+    "resultados": {
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4c6 b7c6 e4e5 f6d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4c6 b7c6 e4e5 f6g8 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 4 puntos de chances: −0,5 → −1,0. Refutación: Ad3 Dc7 De2 Tb8 b3 Ab4"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4c6 b7c6 e4e5 d7d5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 30 puntos de chances: −0,5 → −4,7. Refutación: exf6 Dxf6 Df3 h5 Dxf6 gxf6"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4c6 b7c6 e4e5 f6d5 c3e4 d8c7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4b5 f8b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4b5 f8b4 a2a3 b4c3 b5c3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4b5 f8b4 a2a3 b4c3 b5c3 e8g8 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 4 puntos de chances: −0,4 → −0,8. Refutación: Dd6 Ce8 Dg3 d5 exd5 exd5"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4b5 f8b4 a2a3 b4c3 b5c3 d8a5 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: −0,4 → −1,2. Refutación: Ad2 Db6 Ad3 d5 exd5 exd5"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4b5 f8b4 c1f4 f6e4 d1f3 d7d5 b5c7 e8f8 e1c1 b4c3 b2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4b5 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4b5 d7d6 c1f4 e6e5 f4g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 d4b5 d7d6 c1f4 e6e5 f4c1 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 7 puntos de chances: +0,3 → −0,5. Refutación: a6 Ca3 b5 Cab1 Ae7 Ae3"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 f1e2 f8b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 b8c6 a2a3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      }
+    }
+  }
+}

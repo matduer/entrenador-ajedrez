@@ -204,6 +204,55 @@
     "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 c1g5": {
       "inferior": true,
       "porQue": "El «Ataque Aussie», inventado por jugadores australianos: en vez de retomar en d4, el alfil ataca la dama. Es pura sorpresa; con juego correcto no da ventaja y Stockfish prefiere el normal 4.Cxd4 (Bosch)."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 f8b4": {
+      "porQue": "La Variante de la Clavada: contraataca e4 antes de que el blanco se acomode."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 f8b4 e4e5": {
+      "porQue": "Lo más fuerte para Stockfish: echa al caballo con tiempo."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 f8b4 e4e5 f6d5 c1d2 d5c3": {
+      "porQue": "Lo mejor: cambia antes de que la clavada se vuelva en su contra.",
+      "porQueNo": [
+        {
+          "uci": "d7d6",
+          "texto": "7...d6? 8.Cxd5 Axd2+ 9.Dxd2 exd5 10.Ab5+: el negro queda con el rey en el centro y el peón aislado."
+        }
+      ]
+    },
+    "e2e4 c7c5 g1f3 a7a6": {
+      "porQue": "La O'Kelly: una jugada en apariencia inútil que desalienta 3.d4, porque tras 3...cxd4 4.Cxd4 Cf6 5.Cc3 e5 se llega a una «Najdorf mejorada»."
+    },
+    "e2e4 c7c5 g1f3 a7a6 c2c4": {
+      "porQue": "Lo más fuerte: con el Maroczy armado, la jugada ...a6 pierde casi todo su sentido."
+    },
+    "e2e4 c7c5 g1f3 a7a6 c2c3": {
+      "porQue": "Una Alapin «mejorada»: contra c3, la jugada ...a6 está muy cerca de ser un tiempo perdido."
+    },
+    "e2e4 c7c5 g1f3 g8f6": {
+      "porQue": "La Variante Nimzowitsch: provoca e5 como en la Alekhine, pero el peón de c5 impide que el blanco arme un gran centro."
+    },
+    "e2e4 c7c5 g1f3 g8f6 e4e5 f6d5 b1c3": {
+      "porQue": "Muestra el defecto: si 4...Cxc3 5.dxc3, el blanco está mejor que en la línea análoga de la Alekhine, porque el peón de c5 hace menos atractiva la liberación con ...d6."
+    },
+    "e2e4 c7c5 g1f3 g8f6 e4e5 f6d5 b1c3 e7e6": {
+      "porQue": "Lo mejor: tras 5.Cxd5 exd5 6.d4 se llega a la posición básica de la variante."
+    },
+    "e2e4 c7c5 g1f3 g8f6 e4e5 f6d5 b1c3 e7e6 c3d5 e6d5 d2d4 b8c6": {
+      "porQue": "Entrega un peón por un desarrollo rápido: si 7.dxc5 Axc5 8.Dxd5, ...Db6 ataca f2."
+    },
+    "e2e4 c7c5 g1f3 g8f6 e4e5 f6d5 b1c3 e7e6 c3d5 e6d5 d2d4 b8c6 d4c5": {
+      "porQue": "Lo más fuerte: el blanco acepta el peón y, contra ...Db6, tiene la peligrosa 9.Ac4!."
+    },
+    "e2e4 c7c5 b2b4": {
+      "porQue": "El Gambito del Flanco: desvía el peón de c para ganar el centro con d4. Stockfish no lo considera del todo correcto.",
+      "inferior": true
+    },
+    "e2e4 c7c5 b2b4 c5b4 a2a3": {
+      "porQue": "Ofrece seguir con el gambito; si 3...d5, el negro devuelve el peón y se desarrolla con comodidad."
+    },
+    "e2e4 c7c5 g1f3 e7e6 c2c3": {
+      "porQue": "Una Alapin con ...e6 ya jugado: el negro responde con ...d5 o ...Cf6, como en las líneas de 2.c3 e6."
     }
   },
   "fuentes": [
@@ -236,12 +285,16 @@
       "titulo": "Catálogo abierto de aperturas de Lichess",
       "url": "https://github.com/lichess-org/chess-openings",
       "licencia": "CC0"
+    },
+    {
+      "titulo": "Paul van der Sterren — Fundamental Chess Openings (Gambit, 2009)",
+      "capitulo": "«Sicilian Defence»: 2...a6, 2...Cf6 y la Variante de la Clavada"
     }
   ],
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-12",
     "resultados": {
       "e2e4 c7c5": {
         "ok": true,
@@ -442,6 +495,66 @@
       "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 c1g5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18) prefiere Cxd4: +0,4 contra −0,3 (marcada como inferior pero jugable)"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 f8b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 f8b4 e4e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 f8b4 e4e5 f6d5 c1d2 d5c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,9 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 f8b4 e4e5 f6d5 c1d2 d7d6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 16 puntos de chances: −0,9 → −2,8. Refutación: Cxd5 Axd2+ Dxd2 exd5 Ab5+ Ad7"
+      },
+      "e2e4 c7c5 g1f3 a7a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 a7a6 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 a7a6 c2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 g8f6 e4e5 f6d5 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 g8f6 e4e5 f6d5 b1c3 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 g8f6 e4e5 f6d5 b1c3 e7e6 c3d5 e6d5 d2d4 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 g8f6 e4e5 f6d5 b1c3 e7e6 c3d5 e6d5 d2d4 b8c6 d4c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 c7c5 b2b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Cf3: +0,3 contra −0,4 (marcada como inferior pero jugable)"
+      },
+      "e2e4 c7c5 b2b4 c5b4 a2a3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 c2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
       }
     }
   }
