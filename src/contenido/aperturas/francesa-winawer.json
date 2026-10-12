@@ -123,6 +123,46 @@
           "texto": "...Da5? O-O Tf8 Axh7+: el sacrificio en h7 funciona."
         }
       ]
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 d8c7 g4g7": {
+      "porQue": "El Peón Envenenado: el blanco toma g7 y h7, y el negro abre el juego en el centro y la columna g."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 d8c7 g4g7 h8g8 g7h7 c5d4": {
+      "porQue": "El contrajuego negro: abre el centro y amenaza ...Dxe5+ y ...dxc3."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 d8c7 g4g7 h8g8 g7h7 c5d4 g1e2": {
+      "porQue": "Cubre c3 y prepara f4 para sostener e5.",
+      "porQueNo": [
+        {
+          "uci": "e1d1",
+          "texto": "Rd1? Cbc6: el negro desarrolla con tiempo y el peón de e5 cae."
+        },
+        {
+          "uci": "h7h3",
+          "texto": "Dh3? Dxe5+: el peón de e5 cae con jaque."
+        }
+      ]
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 d8c7 g4g7 h8g8 g7h7 c5d4 g1e2 b8c6 f2f4": {
+      "porQue": "Sostiene e5: el centro blanco aguanta y el peón pasado de h es una carta a largo plazo."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 d8c7 g4g7 h8g8 g7h7 c5d4 g1e2 b8c6 f2f4 c8d7": {
+      "porQue": "Desarrolla y prepara el enroque largo. ...dxc3 es igual de buena.",
+      "porQueNo": [
+        {
+          "uci": "c7b6",
+          "texto": "...Db6? h4: el peón de h corre y el negro no consiguió nada en el centro."
+        }
+      ]
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 g1f3 b7b6": {
+      "porQue": "Prepara ...Aa6 para cambiar el alfil malo del negro por el bueno del blanco, el de casillas blancas."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 g1f3 b8c6 a3a4": {
+      "porQue": "El plan posicional: a4 y Aa3; el alfil se ubica en la diagonal a3-f8, que quedó sin defensor tras el cambio en c3."
+    },
+    "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 g1f3 b8c6 a3a4 d8a5": {
+      "porQue": "Presiona c3 y a4: el negro aprovecha los peones doblados."
     }
   },
   "fuentes": [
@@ -151,6 +191,10 @@
     {
       "titulo": "John Watson — Play the French (3.ª ed., Everyman Chess, 2003)",
       "capitulo": "cap. 10, «Winawer Variation: Main Line with 7 Dg4» (7...O-O, con análisis de Kindermann y Dirr)"
+    },
+    {
+      "titulo": "John Watson — Play the French (3.ª ed., Everyman Chess, 2003)",
+      "capitulo": "caps. 11 y 12, «Winawer Variation: Positional Lines» y «Black Plays 6...Dc7»"
     }
   ],
   "verificacion": {
@@ -273,6 +317,50 @@
       "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 e8g8 g1f3 b8c6 f1d3 f7f5 e5f6 f8f6 c1g5 d8a5 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 42 puntos de chances: −0,2 → −7,4. Refutación: Axf6 Dxc3+ Re2 g6 Axe7 Cxe7"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 d8c7 g4g7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 d8c7 g4g7 h8g8 g7h7 c5d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 d8c7 g4g7 h8g8 g7h7 c5d4 g1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 d8c7 g4g7 h8g8 g7h7 c5d4 e1d1 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +0,5 → −0,1. Refutación: dxc3 Cf3 Ad7 Ag5 Cbc6 h4"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 d8c7 g4g7 h8g8 g7h7 c5d4 h7h3 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 5 puntos de chances: +0,5 → 0,0. Refutación: Dxe5+ Ce2 Cbc6 Tb1 dxc3 Dxc3"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 d8c7 g4g7 h8g8 g7h7 c5d4 g1e2 b8c6 f2f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 d8c7 g4g7 h8g8 g7h7 c5d4 g1e2 b8c6 f2f4 c8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 d1g4 d8c7 g4g7 h8g8 g7h7 c5d4 g1e2 b8c6 f2f4 c7b6 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 10 puntos de chances: −0,7 → −1,8. Refutación: h4 Ad7 Th3 O-O-O Dd3 dxc3"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 g1f3 b7b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 g1f3 b8c6 a3a4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 e7e6 d2d4 d7d5 b1c3 f8b4 e4e5 c7c5 a2a3 b4c3 b2c3 g8e7 g1f3 b8c6 a3a4 d8a5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
       }
     }
   }
