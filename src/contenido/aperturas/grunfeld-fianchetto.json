@@ -92,6 +92,9 @@
     },
     "d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d5 g1f3 e8g8 e1g1 c7c5 d4c5": {
       "porQue": "Para Stockfish, la más fuerte: el negro tendrá que dedicar tiempo a recuperar el peón."
+    },
+    "d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d5 g1f3 e8g8 c4d5 f6d5 e1g1 d5b6": {
+      "porQue": "El cambio diferido: con los dos reyes enrocados, el caballo se retira a b6 y el negro presiona d4 con ...Cc6 o ...c5."
     }
   },
   "fuentes": [
@@ -108,7 +111,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-11",
+    "fecha": "2026-10-12",
     "resultados": {
       "d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d5": {
         "ok": true,
@@ -189,6 +192,10 @@
       "d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d5 g1f3 e8g8 e1g1 c7c5 d4c5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 g7g6 g2g3 f8g7 f1g2 d7d5 g1f3 e8g8 c4d5 f6d5 e1g1 d5b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
       }
     }
   }

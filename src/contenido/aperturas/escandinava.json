@@ -143,6 +143,18 @@
           "texto": "11.d5? pierde material: Tiviakov quedó perdido con blancas en 11 jugadas contra Almeida (Solsona, 2005) y se salvó porque el rival aceptó tablas."
         }
       ]
+    },
+    "e2e4 d7d5 e4d5 d8d5 b1c3 d5a5 d2d4 e7e5 g1f3": {
+      "porQue": "Lo mejor contra el Contraataque Anderssen: desarrolla atacando e5.",
+      "porQueNo": [
+        {
+          "uci": "c1d2",
+          "texto": "5.Ad2? exd4: el negro gana un peón central."
+        }
+      ]
+    },
+    "e2e4 d7d5 e4d5 d8d5 b1c3 d5d8": {
+      "porQue": "La Variante Valenciana: la dama vuelve a casa. Sólida pero lenta: el blanco queda con una ventaja de desarrollo."
     }
   },
   "fuentes": [
@@ -172,7 +184,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-12",
     "resultados": {
       "e2e4 d7d5": {
         "ok": true,
@@ -301,6 +313,18 @@
       "e2e4 d7d5 e4d5 d8d5 b1c3 d5d6 d2d4 g8f6 g1f3 a7a6 g2g3 c8g4 h2h3 g4h5 f1g2 b8c6 e1g1 e8c8 c1f4 d6b4 d4d5 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 5 puntos de chances: +0,9 → +0,4. Refutación: e5 Ad2 Axf3 Axf3 Cd4 Tb1"
+      },
+      "e2e4 d7d5 e4d5 d8d5 b1c3 d5a5 d2d4 e7e5 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,2 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4d5 d8d5 b1c3 d5a5 d2d4 e7e5 c1d2 (por qué no)": {
+        "ok": true,
+        "detalle": "Pierde 6 puntos de chances: +1,2 → +0,5. Refutación: exd4 Cb5 Ab4 Cxd4 a6 Cgf3"
+      },
+      "e2e4 d7d5 e4d5 d8d5 b1c3 d5d8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
       }
     }
   }

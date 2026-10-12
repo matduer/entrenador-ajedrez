@@ -127,6 +127,9 @@
           "texto": "4.Cge2? e6 5.Cg3 Cf6: el blanco no recupera el peón ni tiene compensación."
         }
       ]
+    },
+    "d2d4 d7d5 e2e4 d5e4 b1c3 e7e5 g1e2": {
+      "porQue": "Contra el Contragambito Lemberger, lo más preciso para Stockfish: desarrolla y deja la recuperación de e4 para después."
     }
   },
   "fuentes": [
@@ -152,7 +155,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-11",
+    "fecha": "2026-10-12",
     "resultados": {
       "d2d4 d7d5 e2e4 d5e4": {
         "ok": true,
@@ -261,6 +264,10 @@
       "d2d4 d7d5 e2e4 d5e4 b1c3 c8f5 g1e2 (por qué no)": {
         "ok": true,
         "detalle": "Pierde 6 puntos de chances: −0,2 → −0,8. Refutación: e6 Cg3 Cf6 Ag5 Ab4 Ch5"
+      },
+      "d2d4 d7d5 e2e4 d5e4 b1c3 e7e5 g1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
       }
     }
   }
