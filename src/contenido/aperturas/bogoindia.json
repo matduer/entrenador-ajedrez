@@ -217,6 +217,13 @@
     },
     "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 b1c3": {
       "porQue": "Tapa el jaque desarrollando: pasa a una Nimzoindia."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 b8c6": {
+      "porQue": "Desarrolla y prepara ...e5."
+    },
+    "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 f3d2": {
+      "porQue": "Tapa el jaque con el caballo de rey.",
+      "inferior": true
     }
   },
   "fuentes": [
@@ -242,7 +249,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-12",
+    "fecha": "2026-10-13",
     "resultados": {
       "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4": {
         "ok": true,
@@ -495,6 +502,14 @@
       "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 b1c3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 c1d2 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 g1f3 f8b4 f3d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Cbd2: +0,4 contra −0,1 (marcada como inferior pero jugable)"
       }
     }
   }

@@ -268,6 +268,37 @@
     },
     "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 f8e7 e1g1 b8c6 c2c4 c6b4 d3e2": {
       "porQue": "Retira el alfil."
+    },
+    "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d3": {
+      "porQue": "Echa al caballo de e4 de forma tranquila."
+    },
+    "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d3 e4f6": {
+      "porQue": "El caballo vuelve a f6."
+    },
+    "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 c2c4": {
+      "porQue": "Gana espacio y frena ...d5."
+    },
+    "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 f1d3": {
+      "porQue": "Ataca el caballo de e4."
+    },
+    "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d1e2": {
+      "porQue": "Clava el caballo por la columna e y busca cambiar damas."
+    },
+    "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d1e2 d8e7": {
+      "porQue": "Defiende el caballo y ofrece el cambio de damas."
+    },
+    "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5c4": {
+      "porQue": "Retira el caballo a c4.",
+      "inferior": true
+    },
+    "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5c4 f6e4": {
+      "porQue": "Recupera el peón."
+    },
+    "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5d3": {
+      "porQue": "Retira el caballo a d3."
+    },
+    "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5d3 f6e4": {
+      "porQue": "Recupera el peón."
     }
   },
   "fuentes": [
@@ -293,7 +324,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-12",
+    "fecha": "2026-10-13",
     "resultados": {
       "e2e4 e7e5 g1f3 g8f6": {
         "ok": true,
@@ -586,6 +617,46 @@
       "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d4 d6d5 f1d3 f8e7 e1g1 b8c6 c2c4 c6b4 d3e2": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d2d3 e4f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 f1d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5f3 f6e4 d1e2 d8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Cf3: +0,5 contra −0,0 (marcada como inferior pero jugable)"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5c4 f6e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 g8f6 f3e5 d7d6 e5d3 f6e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
       }
     }
   }

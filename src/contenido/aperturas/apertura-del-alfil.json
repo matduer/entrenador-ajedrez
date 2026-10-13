@@ -362,6 +362,50 @@
     },
     "e2e4 e7e5 f1c4 f8c5 b2b4 c5b4 c2c3": {
       "porQue": "Gana tiempo contra el alfil y prepara d4."
+    },
+    "e2e4 e7e5 f1c4 f8c5 d1e2": {
+      "porQue": "Defiende e4 con la dama y prepara f4.",
+      "inferior": true
+    },
+    "e2e4 e7e5 f1c4 f8c5 d1e2 b8c6 c2c3 g8f6 f2f4": {
+      "porQue": "Según Stockfish es un error: era mejor 5. Cf3 (−0,2 contra −3,0, para el bando que juega).",
+      "error": true
+    },
+    "e2e4 e7e5 f1c4 d7d5": {
+      "porQue": "Según Stockfish es un error: era mejor 2... Cf6 (−0,0 contra −1,0, para el bando que juega).",
+      "error": true
+    },
+    "e2e4 e7e5 f1c4 d7d5 c4d5": {
+      "porQue": "Toma el peón.",
+      "inferior": true
+    },
+    "e2e4 e7e5 f1c4 f8c5 d2d4": {
+      "porQue": "Ofrece un peón para abrir el centro."
+    },
+    "e2e4 e7e5 f1c4 f8c5 f2f4": {
+      "porQue": "Según Stockfish es un error: era mejor 3. Cf3 (+0,3 contra −0,9, para el bando que juega).",
+      "error": true
+    },
+    "e2e4 e7e5 f1c4 f8c5 c2c3 d8g5": {
+      "porQue": "Ataca g2 aprovechando que el caballo no salió."
+    },
+    "e2e4 e7e5 f1c4 g8f6 d2d3 f8e7 g1f3 e8g8": {
+      "porQue": "Enroca.",
+      "inferior": true
+    },
+    "e2e4 e7e5 f1c4 g8f6 d2d4 e5d4 c2c3": {
+      "porQue": "Según Stockfish es un error: era mejor 4. Cf3 (−0,2 contra −1,5, para el bando que juega).",
+      "error": true
+    },
+    "e2e4 e7e5 f1c4 g8f6 g1e2 f6e4 b1c3": {
+      "porQue": "Ofrece un peón para desarrollarse."
+    },
+    "e2e4 e7e5 f1c4 b7b5 c4b5 c7c6": {
+      "porQue": "Gana tiempo contra el alfil."
+    },
+    "e2e4 e7e5 f1c4 b7b5 c4b5 f7f5": {
+      "porQue": "Según Stockfish es un error: era mejor 3... c6 (−1,5 contra −2,7, para el bando que juega).",
+      "error": true
     }
   },
   "fuentes": [
@@ -382,7 +426,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-12",
+    "fecha": "2026-10-13",
     "resultados": {
       "e2e4 e7e5 f1c4": {
         "ok": true,
@@ -779,6 +823,54 @@
       "e2e4 e7e5 f1c4 f8c5 b2b4 c5b4 c2c3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "e2e4 e7e5 f1c4 f8c5 d1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Cf3: +0,3 contra −0,4 (marcada como inferior pero jugable)"
+      },
+      "e2e4 e7e5 f1c4 f8c5 d1e2 b8c6 c2c3 g8f6 f2f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) confirma el error: pierde 0.472"
+      },
+      "e2e4 e7e5 f1c4 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) confirma el error: pierde 0.180"
+      },
+      "e2e4 e7e5 f1c4 d7d5 c4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere exd5: +1,0 contra +0,4 (marcada como inferior pero jugable)"
+      },
+      "e2e4 e7e5 f1c4 f8c5 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 f1c4 f8c5 f2f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) confirma el error: pierde 0.216"
+      },
+      "e2e4 e7e5 f1c4 f8c5 c2c3 d8g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 f1c4 g8f6 d2d3 f8e7 g1f3 e8g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere d6: −0,2 contra −1,0 (marcada como inferior pero jugable)"
+      },
+      "e2e4 e7e5 f1c4 g8f6 d2d4 e5d4 c2c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) confirma el error: pierde 0.243"
+      },
+      "e2e4 e7e5 f1c4 g8f6 g1e2 f6e4 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 f1c4 b7b5 c4b5 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,5 para el bando que mueve"
+      },
+      "e2e4 e7e5 f1c4 b7b5 c4b5 f7f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) confirma el error: pierde 0.202"
       }
     }
   }

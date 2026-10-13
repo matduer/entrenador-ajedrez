@@ -141,6 +141,31 @@
     },
     "d2d4 e7e5 d4d5 f8c5 e2e4 d8h4": {
       "porQue": "Ataca e4 y f2."
+    },
+    "d2d4 e7e5 d4e5 d8h4": {
+      "porQue": "Según Stockfish es un error: era mejor 2... d5 (−1,4 contra −3,5, para el bando que juega).",
+      "error": true
+    },
+    "d2d4 e7e5 d4e5 f7f6": {
+      "porQue": "Ofrece otro peón para abrir líneas.",
+      "inferior": true
+    },
+    "d2d4 e7e5 d4e5 d7d6": {
+      "porQue": "Ofrece un peón para abrir líneas."
+    },
+    "d2d4 e7e5 d4e5 b8c6 g1f3 f8c5": {
+      "porQue": "Desarrolla apuntando a f2.",
+      "inferior": true
+    },
+    "d2d4 e7e5 d4e5 b8c6 g1f3 f7f6": {
+      "porQue": "Ofrece otro peón para abrir líneas."
+    },
+    "d2d4 e7e5 d4e5 b8c6 g1f3 g8e7": {
+      "porQue": "Prepara ...Cg6 para recuperar e5."
+    },
+    "d2d4 e7e5 d4e5 b8c6 g1f3 d8e7 d1d5": {
+      "porQue": "Según Stockfish es un error: era mejor 4. Ag5 (+1,9 contra +0,8, para el bando que juega).",
+      "error": true
     }
   },
   "fuentes": [
@@ -161,7 +186,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-12",
+    "fecha": "2026-10-13",
     "resultados": {
       "d2d4 e7e5 d4e5": {
         "ok": true,
@@ -278,6 +303,34 @@
       "d2d4 e7e5 d4d5 f8c5 e2e4 d8h4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 e7e5 d4e5 d8h4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) confirma el error: pierde 0.315"
+      },
+      "d2d4 e7e5 d4e5 f7f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere d5: −1,4 contra −2,0 (marcada como inferior pero jugable)"
+      },
+      "d2d4 e7e5 d4e5 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,7 para el bando que mueve"
+      },
+      "d2d4 e7e5 d4e5 b8c6 g1f3 f8c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere d6: −1,4 contra −1,9 (marcada como inferior pero jugable)"
+      },
+      "d2d4 e7e5 d4e5 b8c6 g1f3 f7f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,6 para el bando que mueve"
+      },
+      "d2d4 e7e5 d4e5 b8c6 g1f3 g8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,8 para el bando que mueve"
+      },
+      "d2d4 e7e5 d4e5 b8c6 g1f3 d8e7 d1d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) confirma el error: pierde 0.185"
       }
     }
   }

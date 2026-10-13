@@ -108,6 +108,19 @@
     },
     "d2d4 g8f6 g1f3 e7e6 e2e3": {
       "porQue": "Sistema Yusupov-Rubinstein: esquema de Colle contra ...e6, a menudo con b3 y Ab2 como en el Colle-Zukertort."
+    },
+    "d2d4 g8f6 g1f3 g7g6 e2e3 f8g7 f1d3 d7d6": {
+      "porQue": "Prepara ...e5 contra el esquema Colle."
+    },
+    "d2d4 g7g6 g1f3 f8g7 e2e3 c7c5 f1d3 d8a5": {
+      "porQue": "Según Stockfish es un error: era mejor 4... d5 (+0,1 contra −0,8, para el bando que juega).",
+      "error": true
+    },
+    "d2d4 g8f6 g1f3 e7e6 e2e3 c7c5 f1d3 d7d5 b2b3 b8c6 e1g1 f8d6 c1b2 e8g8": {
+      "porQue": "Enroca."
+    },
+    "d2d4 g8f6 g1f3 e7e6 e2e3 c7c5 f1d3 d7d5 b2b3 b8c6 e1g1 f8e7 c1b2 e8g8": {
+      "porQue": "Enroca."
     }
   },
   "fuentes": [
@@ -133,7 +146,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-12",
+    "fecha": "2026-10-13",
     "resultados": {
       "d2d4 d7d5 g1f3 g8f6 e2e3": {
         "ok": true,
@@ -230,6 +243,22 @@
       "d2d4 g8f6 g1f3 e7e6 e2e3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 g1f3 g7g6 e2e3 f8g7 f1d3 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g7g6 g1f3 f8g7 e2e3 c7c5 f1d3 d8a5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) confirma el error: pierde 0.150"
+      },
+      "d2d4 g8f6 g1f3 e7e6 e2e3 c7c5 f1d3 d7d5 b2b3 b8c6 e1g1 f8d6 c1b2 e8g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 g1f3 e7e6 e2e3 c7c5 f1d3 d7d5 b2b3 b8c6 e1g1 f8e7 c1b2 e8g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
       }
     }
   }

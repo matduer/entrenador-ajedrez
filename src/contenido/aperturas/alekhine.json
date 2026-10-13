@@ -407,6 +407,24 @@
     },
     "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 c2c4 d5b6 e5d6 c7d6 b1c3 g7g6 h2h3 f8g7 g1f3 e8g8 f1e2 b8c6 e1g1 c8f5": {
       "porQue": "Desarrolla."
+    },
+    "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 f1c4": {
+      "porQue": "Desarrolla atacando el caballo de d5."
+    },
+    "e2e4 g8f6 d2d3": {
+      "porQue": "Según Stockfish es un error: era mejor 2. e5 (+0,9 contra −0,1, para el bando que juega).",
+      "error": true
+    },
+    "e2e4 g8f6 e4e5 f6d5 b2b3": {
+      "porQue": "Prepara Ab2 apuntando a la diagonal larga.",
+      "inferior": true
+    },
+    "e2e4 g8f6 e4e5 f6d5 c2c4 d5b6 b2b3": {
+      "porQue": "Refuerza c4 y prepara Ab2.",
+      "inferior": true
+    },
+    "e2e4 g8f6 e4e5 f6d5 f1c4 d5b6 c4b3 c7c5 d2d3": {
+      "porQue": "Refuerza e4 y abre el alfil de c1."
     }
   },
   "fuentes": [
@@ -428,7 +446,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-12",
+    "fecha": "2026-10-13",
     "resultados": {
       "e2e4 g8f6": {
         "ok": true,
@@ -901,6 +919,26 @@
       "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 c2c4 d5b6 e5d6 c7d6 b1c3 g7g6 h2h3 f8g7 g1f3 e8g8 f1e2 b8c6 e1g1 c8f5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "e2e4 g8f6 e4e5 f6d5 d2d4 d7d6 f1c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 g8f6 d2d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) confirma el error: pierde 0.170"
+      },
+      "e2e4 g8f6 e4e5 f6d5 b2b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere d4: +0,6 contra −0,1 (marcada como inferior pero jugable)"
+      },
+      "e2e4 g8f6 e4e5 f6d5 c2c4 d5b6 b2b3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere d4: +0,6 contra 0,0 (marcada como inferior pero jugable)"
+      },
+      "e2e4 g8f6 e4e5 f6d5 f1c4 d5b6 c4b3 c7c5 d2d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
       }
     }
   }

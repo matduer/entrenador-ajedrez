@@ -59,6 +59,13 @@
     },
     "e2e4 b7b6 d2d4 c8b7 b1c3 e7e6 a2a3 d7d6 f1d3 b8d7 g1f3 g7g6 e1g1 f8g7 c1e3 g8e7 d1d2 h7h6 a1e1": {
       "porQue": "Lleva la torre al centro, preparando la ruptura e5 o d5."
+    },
+    "e2e4 g8h6": {
+      "porQue": "Según Stockfish es un error: era mejor 1... e5 (−0,3 contra −1,2, para el bando que juega).",
+      "error": true
+    },
+    "e2e4 g8h6 d2d4": {
+      "porQue": "Ocupa el centro."
     }
   },
   "fuentes": [
@@ -75,7 +82,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-12",
+    "fecha": "2026-10-13",
     "resultados": {
       "e2e4 b7b6 d2d4 c8b7 b1c3 e7e6 a2a3": {
         "ok": true,
@@ -124,6 +131,14 @@
       "e2e4 b7b6 d2d4 c8b7 b1c3 e7e6 a2a3 d7d6 f1d3 b8d7 g1f3 g7g6 e1g1 f8g7 c1e3 g8e7 d1d2 h7h6 a1e1": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 g8h6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) confirma el error: pierde 0.159"
+      },
+      "e2e4 g8h6 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,2 para el bando que mueve"
       }
     }
   }

@@ -207,6 +207,10 @@
     },
     "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 f1e2 a7a6 e1g1 g8f6 c1e3 d7d6 f2f4": {
       "porQue": "Gana espacio en el flanco de rey."
+    },
+    "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 d8b6": {
+      "porQue": "Ataca el caballo de d4.",
+      "inferior": true
     }
   },
   "fuentes": [
@@ -232,7 +236,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-12",
+    "fecha": "2026-10-13",
     "resultados": {
       "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3": {
         "ok": true,
@@ -461,6 +465,10 @@
       "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 b8c6 b1c3 d8c7 f1e2 a7a6 e1g1 g8f6 c1e3 d7d6 f2f4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 c7c5 g1f3 e7e6 d2d4 c5d4 f3d4 g8f6 b1c3 d8b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Cc6: −0,6 contra −1,3 (marcada como inferior pero jugable)"
       }
     }
   }

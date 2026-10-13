@@ -542,6 +542,19 @@
     },
     "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3 e8g8 f1d3 d7d5 g1f3 c7c5 e1g1 b8c6 a2a3 b4c3 b2c3 d5c4 d3c4 d8c7 d1c2": {
       "porQue": "Prepara e4."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1d3": {
+      "porQue": "Defiende c3 y prepara a3 sin doblar peones."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e4": {
+      "porQue": "Según Stockfish es un error: era mejor 4. Cf3 (+0,2 contra −0,8, para el bando que juega).",
+      "error": true
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3 e8g8 g1e2 d7d5 a2a3 b4d6": {
+      "porQue": "Retira el alfil para conservarlo."
+    },
+    "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3 e8g8 f1d3 d7d5 g1f3 b8c6 e1g1 d5c4": {
+      "porQue": "Toma en c4 para ganar un tiempo con ...Ad6 o ...e5."
     }
   },
   "fuentes": [
@@ -575,7 +588,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-12",
+    "fecha": "2026-10-13",
     "resultados": {
       "d2d4 g8f6 c2c4 e7e6": {
         "ok": true,
@@ -1224,6 +1237,22 @@
       "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3 e8g8 f1d3 d7d5 g1f3 c7c5 e1g1 b8c6 a2a3 b4c3 b2c3 d5c4 d3c4 d8c7 d1c2": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 d1d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) confirma el error: pierde 0.170"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3 e8g8 g1e2 d7d5 a2a3 b4d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 e7e6 b1c3 f8b4 e2e3 e8g8 f1d3 d7d5 g1f3 b8c6 e1g1 d5c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
       }
     }
   }

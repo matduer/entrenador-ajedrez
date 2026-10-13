@@ -116,6 +116,31 @@
     "e2e4 e7e5 g1f3 b8c6 c2c3 f7f5 d2d4 d7d6 d4d5": {
       "porQue": "Gana espacio echando al caballo.",
       "inferior": true
+    },
+    "e2e4 e7e5 g1f3 b8c6 c2c3 d7d5 d1a4 g8f6": {
+      "porQue": "Contraataca e4."
+    },
+    "e2e4 e7e5 g1f3 b8c6 c2c3 d7d5 d1a4 f7f6": {
+      "porQue": "Refuerza e5 con el peón."
+    },
+    "e2e4 e7e5 g1f3 b8c6 c2c3 d7d5 f1b5": {
+      "porQue": "Clava el caballo de c6.",
+      "inferior": true
+    },
+    "e2e4 e7e5 g1f3 b8c6 c2c3 f8e7": {
+      "porQue": "Según Stockfish es un error: era mejor 3... d5 (+0,2 contra −0,7, para el bando que juega).",
+      "error": true
+    },
+    "e2e4 e7e5 g1f3 b8c6 c2c3 g8e7": {
+      "porQue": "Prepara ...d5 con apoyo del caballo.",
+      "inferior": true
+    },
+    "e2e4 e7e5 g1f3 b8c6 c2c3 g8f6 f1c4": {
+      "porQue": "Desarrolla en vez de d4.",
+      "inferior": true
+    },
+    "e2e4 e7e5 g1f3 b8c6 c2c3 g8f6 d2d4 f6e4 d4d5 f8c5": {
+      "porQue": "Desarrolla atacando f2."
     }
   },
   "fuentes": [
@@ -137,7 +162,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-12",
+    "fecha": "2026-10-13",
     "resultados": {
       "e2e4 e7e5 g1f3 b8c6 c2c3": {
         "ok": true,
@@ -238,6 +263,34 @@
       "e2e4 e7e5 g1f3 b8c6 c2c3 f7f5 d2d4 d7d6 d4d5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18) prefiere exf5: +1,0 contra +0,6 (marcada como inferior pero jugable)"
+      },
+      "e2e4 e7e5 g1f3 b8c6 c2c3 d7d5 d1a4 g8f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 c2c3 d7d5 d1a4 f7f6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 c2c3 d7d5 f1b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere d3: −0,1 contra −0,9 (marcada como inferior pero jugable)"
+      },
+      "e2e4 e7e5 g1f3 b8c6 c2c3 f8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) confirma el error: pierde 0.165"
+      },
+      "e2e4 e7e5 g1f3 b8c6 c2c3 g8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere d5: +0,2 contra −0,4 (marcada como inferior pero jugable)"
+      },
+      "e2e4 e7e5 g1f3 b8c6 c2c3 g8f6 f1c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere d4: −0,0 contra −0,6 (marcada como inferior pero jugable)"
+      },
+      "e2e4 e7e5 g1f3 b8c6 c2c3 g8f6 d2d4 f6e4 d4d5 f8c5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
       }
     }
   }

@@ -222,6 +222,20 @@
     },
     "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 d2d4 d7d6 e5c4 f5e4 b1c3 f6g6": {
       "porQue": "Defiende e4 y presiona g2."
+    },
+    "e2e4 e7e5 g1f3 f7f5 b1c3": {
+      "porQue": "Desarrolla y defiende e4."
+    },
+    "e2e4 e7e5 g1f3 f7f5 f3e5 d8e7": {
+      "porQue": "Según Stockfish es un error: era mejor 3... Df6 (−1,6 contra −2,9, para el bando que juega).",
+      "error": true
+    },
+    "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 e5c4 f5e4 d2d3": {
+      "porQue": "Según Stockfish es un error: era mejor 5. Ce3 (+1,4 contra +0,5, para el bando que juega).",
+      "error": true
+    },
+    "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 d2d4 d7d6 e5c4 f5e4 c4e3": {
+      "porQue": "El caballo va a e3 para presionar d5 y g4."
     }
   },
   "fuentes": [
@@ -251,7 +265,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-12",
+    "fecha": "2026-10-13",
     "resultados": {
       "e2e4 e7e5 g1f3 f7f5 f3e5": {
         "ok": true,
@@ -468,6 +482,22 @@
       "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 d2d4 d7d6 e5c4 f5e4 b1c3 f6g6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −1,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 f7f5 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,3 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 f7f5 f3e5 d8e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) confirma el error: pierde 0.202"
+      },
+      "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 e5c4 f5e4 d2d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) confirma el error: pierde 0.164"
+      },
+      "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 d2d4 d7d6 e5c4 f5e4 c4e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,1 para el bando que mueve"
       }
     }
   }

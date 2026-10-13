@@ -294,6 +294,23 @@
     },
     "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1b5 f8b4 e1g1 e8g8 d2d3 b4c3 b2c3 d7d6 f1e1": {
       "porQue": "Prepara d4."
+    },
+    "e2e4 e7e5 g1f3 b8c6 b1c3 g7g6": {
+      "porQue": "Según Stockfish es un error: era mejor 3... Cf6 (−0,1 contra −1,0, para el bando que juega).",
+      "error": true
+    },
+    "e2e4 e7e5 g1f3 b8c6 b1c3 g7g6 d2d4": {
+      "porQue": "Abre el centro antes de que el alfil llegue a g7."
+    },
+    "e2e4 e7e5 g1f3 b8c6 b1c3 f7f5": {
+      "porQue": "Según Stockfish es un error: era mejor 3... Cf6 (−0,1 contra −1,5, para el bando que juega).",
+      "error": true
+    },
+    "e2e4 e7e5 g1f3 b8c6 b1c3 f8b4 c3d5": {
+      "porQue": "Ataca el alfil y apunta a c7."
+    },
+    "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 c3d5": {
+      "porQue": "Centraliza el caballo y busca cambios."
     }
   },
   "fuentes": [
@@ -326,7 +343,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-12",
+    "fecha": "2026-10-13",
     "resultados": {
       "e2e4 e7e5 g1f3 b8c6 b1c3": {
         "ok": true,
@@ -655,6 +672,26 @@
       "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 f1b5 f8b4 e1g1 e8g8 d2d3 b4c3 b2c3 d7d6 f1e1": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) confirma el error: pierde 0.173"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g7g6 d2d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,0 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 f7f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) confirma el error: pierde 0.253"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 f8b4 c3d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 c3d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
       }
     }
   }

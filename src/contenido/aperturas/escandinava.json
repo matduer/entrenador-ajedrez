@@ -318,6 +318,23 @@
     },
     "e2e4 d7d5 e4d5 d8d5 b1c3 d5d6 d2d4 g8f6 f1c4 c7c6 g1e2 c8f5 c1f4 d6b4": {
       "porQue": "Ataca b2 y el alfil de c4."
+    },
+    "e2e4 d7d5 e4d5 g8f6 c2c4 e7e6": {
+      "porQue": "Ofrece un peón para abrir líneas: es el Gambito Islandés.",
+      "inferior": true
+    },
+    "e2e4 d7d5 e4d5 g8f6 c2c4 e7e6 d5e6": {
+      "porQue": "Toma el peón."
+    },
+    "e2e4 d7d5 e4d5 g8f6 c2c4 c7c6": {
+      "porQue": "Ofrece un peón para llevar la partida a una Panov."
+    },
+    "e2e4 d7d5 e4d5 g8f6 d2d4 f6d5 c2c4 d5b4": {
+      "porQue": "Según Stockfish es un error: era mejor 4... Cf6 (−0,7 contra −1,5, para el bando que juega).",
+      "error": true
+    },
+    "e2e4 d7d5 e4d5 c7c6 d5c6 b8c6": {
+      "porQue": "Retoma con ventaja de desarrollo."
     }
   },
   "fuentes": [
@@ -347,7 +364,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-12",
+    "fecha": "2026-10-13",
     "resultados": {
       "e2e4 d7d5": {
         "ok": true,
@@ -692,6 +709,26 @@
       "e2e4 d7d5 e4d5 d8d5 b1c3 d5d6 d2d4 g8f6 f1c4 c7c6 g1e2 c8f5 c1f4 d6b4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4d5 g8f6 c2c4 e7e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere c6: −0,1 contra −0,6 (marcada como inferior pero jugable)"
+      },
+      "e2e4 d7d5 e4d5 g8f6 c2c4 e7e6 d5e6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4d5 g8f6 c2c4 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "e2e4 d7d5 e4d5 g8f6 d2d4 f6d5 c2c4 d5b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) confirma el error: pierde 0.150"
+      },
+      "e2e4 d7d5 e4d5 c7c6 d5c6 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
       }
     }
   }

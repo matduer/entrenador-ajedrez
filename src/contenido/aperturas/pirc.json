@@ -249,6 +249,37 @@
     "e2e4 d7d6 d2d4 g8f6 b1c3 b8d7 f2f4 e7e5 g1f3 e5d4 d1d4 c7c6 f1c4": {
       "porQue": "Según Stockfish es un error: era mejor 7. Ae3 (+0,7 contra −0,1, para el bando que juega).",
       "error": true
+    },
+    "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 c1g5": {
+      "porQue": "Desarrolla y prepara Dd2 con Ah6: es la Variante Byrne."
+    },
+    "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 c1g5 f8g7": {
+      "porQue": "Completa el fianchetto."
+    },
+    "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f1c4": {
+      "porQue": "Desarrolla apuntando a f7."
+    },
+    "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f1c4 f8g7": {
+      "porQue": "Completa el fianchetto."
+    },
+    "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f1e2 f8g7 h2h4": {
+      "porQue": "Avanza el peón h contra el enroque negro: es el Ataque Bayoneta."
+    },
+    "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f1e2 f8g7 g2g4": {
+      "porQue": "Avanza el peón g para echar al caballo de f6."
+    },
+    "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 g2g3": {
+      "porQue": "Prepara el fianchetto: esquema tranquilo."
+    },
+    "e2e4 d7d6 d2d4 g8f6 g1f3": {
+      "porQue": "Según Stockfish es un error: era mejor 3. Cc3 (+0,5 contra −0,7, para el bando que juega).",
+      "error": true
+    },
+    "e2e4 d7d6 d2d4 g8f6 g1f3 f6e4": {
+      "porQue": "Toma el peón de e4."
+    },
+    "e2e4 d7d6 d2d4 g8f6 b1c3 b8d7 g2g4": {
+      "porQue": "Avanza el peón g para echar al caballo de f6."
     }
   },
   "fuentes": [
@@ -278,7 +309,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-12",
+    "fecha": "2026-10-13",
     "resultados": {
       "e2e4 d7d6": {
         "ok": true,
@@ -539,6 +570,46 @@
       "e2e4 d7d6 d2d4 g8f6 b1c3 b8d7 f2f4 e7e5 g1f3 e5d4 d1d4 c7c6 f1c4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18) confirma el error: pierde 0.156"
+      },
+      "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 c1g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 c1g5 f8g7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f1c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f1c4 f8g7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f1e2 f8g7 h2h4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 f1e2 f8g7 g2g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 d7d6 d2d4 g8f6 b1c3 g7g6 g2g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "e2e4 d7d6 d2d4 g8f6 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) confirma el error: pierde 0.215"
+      },
+      "e2e4 d7d6 d2d4 g8f6 g1f3 f6e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "e2e4 d7d6 d2d4 g8f6 b1c3 b8d7 g2g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
       }
     }
   }
