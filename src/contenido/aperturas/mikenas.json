@@ -1,0 +1,204 @@
+{
+  "id": "mikenas",
+  "nombre": "Defensa Mikenas (1.d4 Cc6)",
+  "raiz": "d2d4 b8c6",
+  "resumen": "1...Cc6 contra 1.d4 bloquea el peón de c pero prepara ...e5. Contra 2.c4 e5 el blanco puede cerrar con 3.d5 (con ...Ce7 o ...Cd4) o tomar con 3.dxe5. Contra 2.Cf3 o 2.e4 el negro suele pasar a una Nimzowitsch o a esquemas con ...d6 y ...e5.",
+  "planesBlancas": [
+    "Ganar espacio con d5 y echar al caballo.",
+    "Ocupar el centro con c4 y e4."
+  ],
+  "planesNegras": [
+    "Jugar ...e5 cuanto antes.",
+    "Si el blanco cierra con d5, reacomodar el caballo y preparar ...f5."
+  ],
+  "estructura": "Tras d5, centro cerrado con peones blancos en c4 y d5 contra ...e5.",
+  "rupturas": [
+    "...f5 del negro en el centro cerrado.",
+    "c5 o f4 del blanco."
+  ],
+  "piezas": [
+    "Caballo negro que vuelve a e7 o g6.",
+    "Alfil negro de f8 hacia c5 o b4."
+  ],
+  "trampas": [],
+  "notas": {
+    "d2d4 b8c6": {
+      "porQue": "Prepara ...e5 con el caballo.",
+      "inferior": true
+    },
+    "d2d4 b8c6 c2c4": {
+      "porQue": "Ocupa el centro."
+    },
+    "d2d4 b8c6 c2c4 e7e5": {
+      "porQue": "Golpea el centro."
+    },
+    "d2d4 b8c6 c2c4 e7e5 d4d5": {
+      "porQue": "Gana espacio echando al caballo."
+    },
+    "d2d4 b8c6 c2c4 e7e5 d4d5 c6e7": {
+      "porQue": "Retira el caballo, rumbo a g6."
+    },
+    "d2d4 b8c6 c2c4 e7e5 d4d5 c6e7 e2e4": {
+      "porQue": "Ocupa el centro.",
+      "inferior": true
+    },
+    "d2d4 b8c6 c2c4 e7e5 d4d5 c6e7 e2e4 e7g6": {
+      "porQue": "Prepara ...Ac5 o ...f5."
+    },
+    "d2d4 b8c6 c2c4 e7e5 d4d5 c6d4": {
+      "porQue": "Ocupa d4 con el caballo."
+    },
+    "d2d4 b8c6 c2c4 e7e5 d4d5 c6d4 e2e3": {
+      "porQue": "Echa al caballo."
+    },
+    "d2d4 b8c6 c2c4 e7e5 d4d5 c6d4 e2e3 d4f5": {
+      "porQue": "Retira el caballo."
+    },
+    "d2d4 b8c6 c2c4 e7e5 d4e5": {
+      "porQue": "Toma el peón.",
+      "inferior": true
+    },
+    "d2d4 b8c6 c2c4 e7e5 d4e5 c6e5": {
+      "porQue": "Recupera el peón."
+    },
+    "d2d4 b8c6 c2c4 e7e5 d4e5 c6e5 b1c3": {
+      "porQue": "Desarrolla."
+    },
+    "d2d4 b8c6 c2c4 e7e5 d4e5 c6e5 b1c3 e5c4": {
+      "porQue": "Toma el peón de c4: es el Gambito Pozarek."
+    },
+    "d2d4 b8c6 c2c4 e7e5 d4e5 c6e5 e2e4": {
+      "porQue": "Ocupa el centro."
+    },
+    "d2d4 b8c6 g1f3": {
+      "porQue": "Desarrolla e impide ...e5."
+    },
+    "d2d4 b8c6 g1f3 d7d6": {
+      "porQue": "Prepara ...e5."
+    },
+    "d2d4 b8c6 g1f3 d7d5": {
+      "porQue": "Ocupa el centro."
+    },
+    "d2d4 b8c6 d4d5": {
+      "porQue": "Echa al caballo."
+    },
+    "d2d4 b8c6 d4d5 c6e5": {
+      "porQue": "Centraliza el caballo."
+    },
+    "d2d4 b8c6 d4d5 c6e5 e2e4": {
+      "porQue": "Ocupa el centro."
+    },
+    "d2d4 b8c6 e2e4": {
+      "porQue": "Ocupa el centro."
+    },
+    "d2d4 b8c6 e2e4 e7e5": {
+      "porQue": "Golpea el centro."
+    }
+  },
+  "fuentes": [
+    {
+      "titulo": "Catálogo abierto de aperturas de Lichess",
+      "url": "https://github.com/lichess-org/chess-openings",
+      "licencia": "CC0"
+    }
+  ],
+  "verificacion": {
+    "motor": "Stockfish",
+    "profundidad": 18,
+    "fecha": "2026-10-13",
+    "resultados": {
+      "d2d4 b8c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Cf6: −0,2 contra −0,8 (marcada como inferior pero jugable)"
+      },
+      "d2d4 b8c6 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 b8c6 c2c4 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 b8c6 c2c4 e7e5 d4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 b8c6 c2c4 e7e5 d4d5 c6e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "d2d4 b8c6 c2c4 e7e5 d4d5 c6e7 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Cf3: +0,8 contra +0,4 (marcada como inferior pero jugable)"
+      },
+      "d2d4 b8c6 c2c4 e7e5 d4d5 c6e7 e2e4 e7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 b8c6 c2c4 e7e5 d4d5 c6d4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,9 para el bando que mueve"
+      },
+      "d2d4 b8c6 c2c4 e7e5 d4d5 c6d4 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +1,0 para el bando que mueve"
+      },
+      "d2d4 b8c6 c2c4 e7e5 d4d5 c6d4 e2e3 d4f5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,1 para el bando que mueve"
+      },
+      "d2d4 b8c6 c2c4 e7e5 d4e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere d5: +0,5 contra 0,0 (marcada como inferior pero jugable)"
+      },
+      "d2d4 b8c6 c2c4 e7e5 d4e5 c6e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "d2d4 b8c6 c2c4 e7e5 d4e5 c6e5 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 b8c6 c2c4 e7e5 d4e5 c6e5 b1c3 e5c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 b8c6 c2c4 e7e5 d4e5 c6e5 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
+      },
+      "d2d4 b8c6 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 b8c6 g1f3 d7d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,9 para el bando que mueve"
+      },
+      "d2d4 b8c6 g1f3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 b8c6 d4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "d2d4 b8c6 d4d5 c6e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "d2d4 b8c6 d4d5 c6e5 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "d2d4 b8c6 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "d2d4 b8c6 e2e4 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      }
+    }
+  }
+}
