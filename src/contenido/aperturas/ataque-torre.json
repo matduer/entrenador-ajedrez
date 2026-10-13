@@ -147,6 +147,15 @@
     },
     "d2d4 g8f6 g1f3 e7e6 c1g5 c7c5 e2e3 c5d4 e3d4 f8e7 b1d2 d7d6 c2c3 b8d7": {
       "porQue": "Desarrolla."
+    },
+    "d2d4 g8f6 g1f3 g7g6 c1g5": {
+      "porQue": "Clava el caballo antes del fianchetto negro."
+    },
+    "d2d4 g8f6 g1f3 g7g6 c1g5 f8g7": {
+      "porQue": "Completa el fianchetto."
+    },
+    "d2d4 g8f6 g1f3 e7e6 c1g5 c7c5 e2e4": {
+      "porQue": "Ofrece un peón para ocupar el centro."
     }
   },
   "fuentes": [
@@ -172,7 +181,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-12",
+    "fecha": "2026-10-13",
     "resultados": {
       "d2d4 g8f6 g1f3 e7e6 c1g5": {
         "ok": true,
@@ -321,6 +330,18 @@
       "d2d4 g8f6 g1f3 e7e6 c1g5 c7c5 e2e3 c5d4 e3d4 f8e7 b1d2 d7d6 c2c3 b8d7": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 g1f3 g7g6 c1g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 g1f3 g7g6 c1g5 f8g7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 g1f3 e7e6 c1g5 c7c5 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,0 para el bando que mueve"
       }
     }
   }
