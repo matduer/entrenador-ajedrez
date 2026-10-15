@@ -21,9 +21,9 @@ const CACHE = `${DIR}/masters.json`
 /** Hasta qué media jugada se profundiza: la jugada 12 o seis medias jugadas más que la línea, con tope en la 15. */
 const objetivo = (largo: number) => Math.min(30, Math.max(24, largo + 6))
 /** Con menos partidas que esto, la posición ya no dice qué juegan los maestros. */
-const MINIMO_PARTIDAS = 30
+const MINIMO_PARTIDAS = 50
 /** Medias jugadas desde el final de la línea en las que se suman respuestas del rival además de la principal. */
-const PLIES_CON_RAMAS = 8
+const PLIES_CON_RAMAS = 4
 const PARTE_RIVAL = 0.15
 const MAX_RAMAS_RIVAL = 3
 const PARTE_SEGUNDA_PROPIA = 0.2
@@ -41,6 +41,13 @@ const hojas = JSON.parse(fs.readFileSync(`${DIR}/hojas.json`, 'utf8')) as { line
 const esperar = (ms: number) => new Promise((r) => setTimeout(r, ms))
 const enroques: Record<string, string> = { e1h1: 'e1g1', e1a1: 'e1c1', e8h8: 'e8g8', e8a8: 'e8c8' }
 let nuevas = 0
+/**
+ * Pausa entre consultas. Lichess responde 429 si se va rápido y hay que esperar un minuto entero, así
+ * que conviene ir parejo: cada 429 alarga la pausa y una racha sin 429 la acorta de a poco.
+ */
+let pausa = 1500
+let seguidas = 0
+const inicio = Date.now()
 
 function guardar() {
   fs.writeFileSync(CACHE, JSON.stringify(cache))
@@ -66,7 +73,9 @@ async function consultar(fen: string): Promise<Frecuencias> {
       process.exit(1)
     }
     if (resp.status === 429 || resp.status >= 500) {
-      console.log(`  Lichess pide esperar (${resp.status}); sigo en un minuto.`)
+      if (resp.status === 429) pausa = Math.min(10_000, Math.round(pausa * 1.5))
+      seguidas = 0
+      console.log(`  Lichess pide esperar (${resp.status}); sigo en un minuto, con ${(pausa / 1000).toFixed(1)} s entre consultas.`)
       await esperar(60_000)
       continue
     }
@@ -76,7 +85,11 @@ async function consultar(fen: string): Promise<Frecuencias> {
     for (const m of datos.moves) f[enroques[m.uci] ?? m.uci] = m.white + m.draws + m.black
     cache[k] = f
     if (++nuevas % 50 === 0) guardar()
-    await esperar(300)
+    if (++seguidas >= 100 && pausa > 500) {
+      pausa = Math.round(pausa * 0.9)
+      seguidas = 0
+    }
+    await esperar(pausa)
     return f
   }
 }
@@ -115,7 +128,12 @@ for (const [i, h] of pendientes.entries()) {
   await recorrer(fensDeLinea(ucis).at(-1)!, ucis.length, objetivo(ucis.length), ucis.length, new Set(h.colores), new Set())
   if (i % 25 === 0) {
     guardar()
-    console.log(`${i + 1}/${pendientes.length} líneas · ${Object.keys(cache).length} posiciones (${nuevas} nuevas en esta corrida)`)
+    const minutos = (Date.now() - inicio) / 60_000
+    const resta = i ? (minutos / i) * (pendientes.length - i) : 0
+    console.log(
+      `${i + 1}/${pendientes.length} líneas · ${Object.keys(cache).length} posiciones (${nuevas} nuevas, ${(nuevas / Math.max(minutos, 0.1)).toFixed(0)} por minuto)` +
+        (i ? ` · faltan unas ${(resta / 60).toFixed(1)} h` : ''),
+    )
   }
 }
 guardar()

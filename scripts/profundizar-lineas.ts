@@ -22,8 +22,8 @@ const SALIDA = 'public/datos/profundizacion.json'
 const CACHE_MOTOR = `${DIR}/motor.json`
 // Los mismos criterios que la descarga, para recorrer solo lo descargado.
 const objetivo = (largo: number) => Math.min(30, Math.max(24, largo + 6))
-const MINIMO_PARTIDAS = 30
-const PLIES_CON_RAMAS = 8
+const MINIMO_PARTIDAS = 50
+const PLIES_CON_RAMAS = 4
 const PARTE_RIVAL = 0.15
 const MAX_RAMAS_RIVAL = 3
 /** Pérdida (chances de ganar, 0 a 2) desde la que una jugada propia no se enseña: la de los «por qué no». */
