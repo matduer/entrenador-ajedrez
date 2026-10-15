@@ -107,12 +107,37 @@ function claveEleccion(color: Color, prefijo: string[]): string {
   return `${color}|${clavePosicion(fensDeLinea(prefijo).at(-1)!)}`
 }
 
-/** Líneas teóricas desde la raíz: las del catálogo y las de las notas escritas, que suelen llegar más lejos. */
+interface Profundizacion {
+  lineas: string[]
+  /** Mi jugada en cada posición de la parte profundizada, por las jugadas que llevan a ella. */
+  propias: Record<string, string>
+}
+
+let profundizacion: Profundizacion = { lineas: [], propias: {} }
+let cargaProfundizacion: Promise<void> | undefined
+
+/** Continuación de las líneas con la base Masters (`scripts/profundizar-lineas.ts`); se baja una vez. */
+function cargarProfundizacion(): Promise<void> {
+  cargaProfundizacion ??= fetch(`${import.meta.env.BASE_URL}datos/profundizacion.json`)
+    .then((r) => (r.ok ? (r.json() as Promise<Profundizacion>) : undefined))
+    .then((p) => {
+      if (p) profundizacion = p
+    })
+    .catch(() => {})
+  return cargaProfundizacion
+}
+
+/**
+ * Líneas teóricas desde la raíz: las del catálogo, las de las notas escritas, que suelen llegar más
+ * lejos, y su continuación con lo que juegan los maestros (`profundizacion.json`).
+ */
 export async function lineasTeoricas(raiz: string[]): Promise<string[][]> {
   const arbol = armarArbol(await cargarCatalogo())
+  await cargarProfundizacion()
   const lineas = lineasDesde(arbol, raiz, 40)
   const r = raiz.join(' ')
   for (const e of EXPLICACIONES) for (const clave of Object.keys(e.notas)) if (clave.startsWith(r + ' ')) lineas.push(clave.split(' '))
+  for (const l of profundizacion.lineas) if (l.startsWith(r + ' ')) lineas.push(l.split(' '))
   return lineas.length ? lineas : [raiz]
 }
 
@@ -212,6 +237,8 @@ function podarPropias(arbol: Nodo, raiz: string[], color: Color, elecciones: Ele
       r = h ? evaluar(h, [...camino, raiz[ply]]) : { hojas: 0, fuera: 0 }
     } else if ((ply % 2 === 0) === (color === 'white')) {
       const elegida = elecciones[claveEleccion(color, camino)]
+      // En la parte profundizada, la jugada de los maestros que eligió el script (no la de más ramas).
+      const principal = profundizacion.propias[camino.join(' ')]
       const candidatas = [...n.hijos].map(([u, h]) => {
         const p = evaluar(h, [...camino, u])
         const nota = notaPara([...camino, u])?.nota
@@ -219,7 +246,12 @@ function podarPropias(arbol: Nodo, raiz: string[], color: Color, elecciones: Ele
         return { u, peso: h.peso, p, inferior: nota?.error ? 2 : nota?.inferior ? 1 : 0, sale: p.fuera * 2 > p.hojas }
       })
       candidatas.sort(
-        (a, b) => Number(b.u === elegida) - Number(a.u === elegida) || a.inferior - b.inferior || Number(a.sale) - Number(b.sale) || b.peso - a.peso,
+        (a, b) =>
+          Number(b.u === elegida) - Number(a.u === elegida) ||
+          a.inferior - b.inferior ||
+          Number(a.sale) - Number(b.sale) ||
+          Number(b.u === principal) - Number(a.u === principal) ||
+          b.peso - a.peso,
       )
       // Si la única teoría cargada es un error, la línea no se enseña (hojas: 0): mejor no prepararse
       // contra esa jugada del rival que aprender una respuesta mala.
