@@ -407,6 +407,36 @@ export interface EstadoCurso {
 
 export const claveLeccion = (l: Leccion) => `${l.seccion}-${l.numero}`
 
+/**
+ * Cuando una línea ya aprendida se alarga (por ejemplo, al profundizar la teoría), el progreso pasa a
+ * la primera línea del curso que la continúa: se repasa entera en la fecha que tocaba y las jugadas
+ * nuevas se aprenden en ese repaso. Las otras continuaciones (respuestas nuevas del rival) quedan por
+ * aprender. Modifica `repasos` y guarda la copia; la fila vieja no se toca.
+ */
+async function heredarProgreso(color: Color, lineas: string[][], repasos: Map<string, RepasoLinea>) {
+  const textos = lineas.map((l) => l.join(' '))
+  const faltan = textos.filter((t) => !repasos.has(`${color}:${t}`))
+  if (!faltan.length) return
+  const enCurso = new Set(textos)
+  const aprendidas = textos.filter((t) => repasos.has(`${color}:${t}`))
+  // Las aprendidas que ya no están en el curso y que todavía no pasaron su progreso a una continuación.
+  const viejas = (await db.repasosLineas.where('color').equals(color).toArray()).filter((r) => {
+    const t = r.ucis.join(' ')
+    return !enCurso.has(t) && !aprendidas.some((a) => a.startsWith(t + ' '))
+  })
+  const nuevas: RepasoLinea[] = []
+  for (const t of faltan) {
+    const i = viejas.findIndex((r) => t.startsWith(r.ucis.join(' ') + ' '))
+    if (i < 0) continue
+    const [vieja] = viejas.splice(i, 1)
+    const ucis = t.split(' ')
+    const nueva = { ...vieja, id: idLinea(color, ucis), ucis }
+    repasos.set(nueva.id, nueva)
+    nuevas.push(nueva)
+  }
+  if (nuevas.length) await db.repasosLineas.bulkPut(nuevas)
+}
+
 /** Una lección se habilita cuando todas las líneas de la anterior ya se vieron al menos una vez. */
 export async function estadoCurso(curso: Curso): Promise<EstadoCurso> {
   const lineas = curso.secciones.flatMap((s) => s.lecciones.flatMap((l) => l.lineas))
@@ -414,6 +444,7 @@ export async function estadoCurso(curso: Curso): Promise<EstadoCurso> {
   const filas = await db.repasosLineas.bulkGet(ids)
   const repasos = new Map<string, RepasoLinea>()
   filas.forEach((r, i) => r && repasos.set(ids[i], r))
+  await heredarProgreso(curso.color, lineas, repasos)
   const ahora = Date.now()
   const lecciones = new Map<string, EstadoLeccion>()
   let proxima: Leccion | undefined
