@@ -201,6 +201,10 @@
     },
     "g2g4 d7d5 f1g2 c7c6 g4g5": {
       "porQue": "Gana espacio en el flanco de rey."
+    },
+    "g2g4 f7f5": {
+      "porQue": "Según Stockfish es un error: era mejor 1... d5 (+1,3 contra −0,7, para el bando que juega).",
+      "error": true
     }
   },
   "fuentes": [
@@ -213,7 +217,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-12",
+    "fecha": "2026-10-18",
     "resultados": {
       "g2g4 d7d5": {
         "ok": true,
@@ -410,6 +414,10 @@
       "g2g4 d7d5 f1g2 c7c6 g4g5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −1,1 para el bando que mueve"
+      },
+      "g2g4 f7f5": {
+        "ok": false,
+        "detalle": "Stockfish (prof. 18) prefiere d5: +1,3 contra −0,7"
       }
     }
   }

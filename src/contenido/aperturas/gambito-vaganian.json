@@ -127,6 +127,13 @@
     },
     "d2d4 g8f6 c2c4 c7c5 g1f3 c5d4 f3d4 e7e5 d4b5 d7d5 c4d5 f8c5 b5c3 e8g8 e2e3 e5e4 f1e2 d8e7 a2a3 f8d8 b2b4": {
       "porQue": "Ataca el alfil."
+    },
+    "d2d4 g8f6 c2c4 c7c5 g1f3 c5d4 f3d4 e7e5 d4b5 d7d5 c4d5 f8c5 b5c3 e8g8 g2g3 e5e4": {
+      "porQue": "Gana espacio.",
+      "inferior": true
+    },
+    "d2d4 g8f6 c2c4 c7c5 g1f3 c5d4 f3d4 e7e5 d4b5 d7d5 c4d5 f8c5 b5c3 e8g8 g2g3 f6g4": {
+      "porQue": "El caballo salta a g4."
     }
   },
   "fuentes": [
@@ -272,6 +279,14 @@
       "d2d4 g8f6 c2c4 c7c5 g1f3 c5d4 f3d4 e7e5 d4b5 d7d5 c4d5 f8c5 b5c3 e8g8 e2e3 e5e4 f1e2 d8e7 a2a3 f8d8 b2b4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 c7c5 g1f3 c5d4 f3d4 e7e5 d4b5 d7d5 c4d5 f8c5 b5c3 e8g8 g2g3 e5e4": {
+        "ok": false,
+        "detalle": "Stockfish (prof. 18) prefiere Cg4: −0,2 contra −0,8"
+      },
+      "d2d4 g8f6 c2c4 c7c5 g1f3 c5d4 f3d4 e7e5 d4b5 d7d5 c4d5 f8c5 b5c3 e8g8 g2g3 f6g4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
       }
     }
   }

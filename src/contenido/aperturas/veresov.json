@@ -307,6 +307,9 @@
     "d2d4 g8f6 b1c3 d7d5 c1g5 f6e4": {
       "porQue": "Ataca el alfil.",
       "inferior": true
+    },
+    "d2d4 g8f6 b1c3 d7d5 c1g5 b8d7 e2e3": {
+      "porQue": "Sostiene la estructura."
     }
   },
   "fuentes": [
@@ -459,8 +462,8 @@
         "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
       },
       "b1c3 d7d5 d2d4 g8f6 c1g5 b8d7 d1d3 h7h6 g5h4 c7c6": {
-        "ok": false,
-        "detalle": "Stockfish (prof. 18) prefiere c5: +0,5 contra +0,1"
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere c5: +0,5 contra +0,1 (marcada como inferior pero jugable)"
       },
       "b1c3 d7d5 d2d4 g8f6 c1g5 b8d7 d1d3 h7h6 g5h4 c7c6 g1f3": {
         "ok": true,
@@ -703,8 +706,12 @@
         "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
       },
       "d2d4 g8f6 b1c3 d7d5 c1g5 f6e4": {
-        "ok": false,
-        "detalle": "Stockfish (prof. 18) prefiere c5: +0,1 contra −0,6"
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere c5: +0,1 contra −0,6 (marcada como inferior pero jugable)"
+      },
+      "d2d4 g8f6 b1c3 d7d5 c1g5 b8d7 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,1 para el bando que mueve"
       }
     }
   }
