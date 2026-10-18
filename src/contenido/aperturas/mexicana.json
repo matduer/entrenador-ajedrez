@@ -143,6 +143,21 @@
     "d2d4 g8f6 c2c4 b8c6 d4d5 c6e5 f2f4": {
       "porQue": "Según Stockfish es un error: era mejor 4. e4 (+0,5 contra −0,6, para el bando que juega).",
       "error": true
+    },
+    "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 d4d5 c6e7 e2e4 e7g6 c1e3": {
+      "porQue": "Desarrolla."
+    },
+    "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 d4d5 c6e7 e2e4 e7g6 c1e3 f8b4": {
+      "porQue": "Clava el caballo de c3."
+    },
+    "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 d4d5 c6e7 e2e4 e7g6 c1e3 f8b4 f2f3": {
+      "porQue": "Refuerza e4."
+    },
+    "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 d4d5 c6e7 e2e4 e7g6 c1e3 f8b4 f2f3 b4c3": {
+      "porQue": "Cambia el alfil por el caballo."
+    },
+    "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 d4d5 c6e7 e2e4 e7g6 c1e3 f8b4 f2f3 e8g8": {
+      "porQue": "Enroca."
     }
   },
   "fuentes": [
@@ -168,7 +183,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-13",
+    "fecha": "2026-10-18",
     "resultados": {
       "d2d4 g8f6 c2c4 b8c6": {
         "ok": true,
@@ -293,6 +308,26 @@
       "d2d4 g8f6 c2c4 b8c6 d4d5 c6e5 f2f4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18) confirma el error: pierde 0.191"
+      },
+      "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 d4d5 c6e7 e2e4 e7g6 c1e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 d4d5 c6e7 e2e4 e7g6 c1e3 f8b4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 d4d5 c6e7 e2e4 e7g6 c1e3 f8b4 f2f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 d4d5 c6e7 e2e4 e7g6 c1e3 f8b4 f2f3 b4c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 b8c6 b1c3 e7e5 d4d5 c6e7 e2e4 e7g6 c1e3 f8b4 f2f3 e8g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
       }
     }
   }

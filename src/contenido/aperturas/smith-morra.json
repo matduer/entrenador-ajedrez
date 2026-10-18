@@ -222,6 +222,10 @@
     },
     "e2e4 c7c5 d2d4 c5d4 c2c3 d4c3 b1c3 b8c6 g1f3 d7d6 f1c4 e7e6 e1g1 g8f6": {
       "porQue": "Desarrolla."
+    },
+    "e2e4 c7c5 d2d4 c5d4 c2c3 d4c3 g1f3": {
+      "porQue": "Desarrolla y deja el peón.",
+      "inferior": true
     }
   },
   "fuentes": [
@@ -239,7 +243,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-12",
+    "fecha": "2026-10-18",
     "resultados": {
       "e2e4 c7c5 d2d4 c5d4": {
         "ok": true,
@@ -464,6 +468,10 @@
       "e2e4 c7c5 d2d4 c5d4 c2c3 d4c3 b1c3 b8c6 g1f3 d7d6 f1c4 e7e6 e1g1 g8f6": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "e2e4 c7c5 d2d4 c5d4 c2c3 d4c3 g1f3": {
+        "ok": false,
+        "detalle": "Stockfish (prof. 18) prefiere Cxc3: −0,2 contra −0,8"
       }
     }
   }

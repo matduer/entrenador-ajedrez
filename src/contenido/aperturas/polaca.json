@@ -173,6 +173,33 @@
     },
     "b2b4 g8f6 c1b2 g7g6 e2e4": {
       "porQue": "Ocupa el centro: si ...Cxe4, Axh8 gana la torre por la diagonal que abrió ...g6."
+    },
+    "b2b4 e7e5 c1b2 f8b4 b2e5 g8f6 c2c3 b4e7": {
+      "porQue": "Retira el alfil."
+    },
+    "b2b4 e7e5 c1b2 f8b4 b2e5 g8f6 c2c3 b4e7 e2e3": {
+      "porQue": "Desarrolla."
+    },
+    "b2b4 e7e5 a2a3": {
+      "porQue": "Sostiene el peón de b4."
+    },
+    "b2b4 e7e5 a2a3 d7d5": {
+      "porQue": "Ocupa el centro."
+    },
+    "b2b4 e7e5 a2a3 d7d5 c1b2": {
+      "porQue": "Desarrolla y ataca e5."
+    },
+    "b2b4 e7e5 a2a3 d7d5 c1b2 f8d6": {
+      "porQue": "Defiende e5."
+    },
+    "b2b4 e7e5 a2a3 d7d5 c1b2 f8d6 c2c4": {
+      "porQue": "Golpea d5."
+    },
+    "b2b4 e7e5 a2a3 d7d5 c1b2 f8d6 e2e3": {
+      "porQue": "Sostiene la estructura."
+    },
+    "b2b4 e7e5 a2a3 d7d5 c1b2 f8d6 g1f3": {
+      "porQue": "Ataca e5."
     }
   },
   "fuentes": [
@@ -194,7 +221,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-12",
+    "fecha": "2026-10-18",
     "resultados": {
       "b2b4": {
         "ok": true,
@@ -379,6 +406,42 @@
       "b2b4 g8f6 c1b2 g7g6 e2e4": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "b2b4 e7e5 c1b2 f8b4 b2e5 g8f6 c2c3 b4e7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "b2b4 e7e5 c1b2 f8b4 b2e5 g8f6 c2c3 b4e7 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "b2b4 e7e5 a2a3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "b2b4 e7e5 a2a3 d7d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "b2b4 e7e5 a2a3 d7d5 c1b2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "b2b4 e7e5 a2a3 d7d5 c1b2 f8d6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "b2b4 e7e5 a2a3 d7d5 c1b2 f8d6 c2c4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "b2b4 e7e5 a2a3 d7d5 c1b2 f8d6 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "b2b4 e7e5 a2a3 d7d5 c1b2 f8d6 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
       }
     }
   }
