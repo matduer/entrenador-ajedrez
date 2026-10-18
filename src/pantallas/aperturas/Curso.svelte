@@ -1,5 +1,8 @@
 <script lang="ts">
-  import { lineaConNumeros } from '../../lib/ajedrez/posicion.ts'
+  import { lineaConNumeros, posDesdeFen, sanDeUci } from '../../lib/ajedrez/posicion.ts'
+  import { fensDeLinea } from '../../lib/aperturas/arbol.ts'
+  import { esTeoria, lineasDelDesvio, partidasEnCurso, type Desvio, type PartidasEnCurso } from '../../lib/aperturas/enPartidas.ts'
+  import { db } from '../../lib/datos/db.ts'
   import { armarCurso, claveLeccion, estadoCurso, guardarEleccion, posicionesDelRival, reiniciarProgreso, type Curso, type EstadoCurso, type Leccion } from '../../lib/aperturas/curso.ts'
   import { descargarFrecuencias } from '../../lib/aperturas/popularidad.ts'
   import type { Explicacion } from '../../lib/aperturas/explicaciones.ts'
@@ -19,7 +22,33 @@
 
   let curso = $state.raw<Curso>()
   let estado = $state.raw<EstadoCurso>()
-  let pestana = $state<'curso' | 'lineas'>('curso')
+  let pestana = $state<'curso' | 'lineas' | 'partidas'>('curso')
+  let enPartidas = $state.raw<PartidasEnCurso>()
+
+  async function cargarPartidas() {
+    if (!curso || !estado) return
+    const partidas = await db.partidas.toArray()
+    enPartidas = partidasEnCurso(curso, partidas, estado.repasos)
+  }
+
+  /** «5.Ad3» o «4...Ab4» para la jugada `uci` jugada después de `prefijo`. */
+  function jugadaConNumero(prefijo: string[], uci: string): string {
+    const fen = fensDeLinea(prefijo).at(-1)!
+    return `${Math.floor(prefijo.length / 2) + 1}.${prefijo.length % 2 ? '..' : ''} ${sanDeUci(posDesdeFen(fen), uci)}`
+  }
+
+  /** Tu jugada también es teoría: pasa a ser la del curso (como «Guardar como mi jugada» en la lección). */
+  async function adoptar(d: Desvio) {
+    await guardarEleccion(color, d.prefijo, d.jugada)
+    await cargar()
+    await cargarPartidas()
+  }
+
+  function practicarDesvio(d: Desvio) {
+    if (!curso) return
+    const lineas = lineasDelDesvio(curso, d)
+    if (lineas.length) sesion = { lineas: lineas.slice(0, 10), modo: 'repasar', titulo: `${explicacion.nombre} · desde tus partidas` }
+  }
   let sesion = $state<{ lineas: string[][]; modo: 'aprender' | 'repasar'; titulo: string }>()
 
   /** Estado de la consulta a la base Masters para ordenar las respuestas del rival. */
@@ -113,6 +142,7 @@
     <div class="pestanas" role="tablist">
       <button role="tab" aria-selected={pestana === 'curso'} onclick={() => (pestana = 'curso')}>Curso</button>
       <button role="tab" aria-selected={pestana === 'lineas'} onclick={() => (pestana = 'lineas')}>Líneas</button>
+      <button role="tab" aria-selected={pestana === 'partidas'} onclick={() => ((pestana = 'partidas'), cargarPartidas())}>En tus partidas</button>
     </div>
 
     {#if pestana === 'curso'}
@@ -140,6 +170,60 @@
           {/if}
         </section>
       {/each}
+    {:else if pestana === 'partidas'}
+      {#if !enPartidas}
+        <p class="suave">Buscando tus partidas…</p>
+      {:else if !enPartidas.llegaron}
+        <p class="suave">Ninguna de tus partidas importadas con {color === 'white' ? 'blancas' : 'negras'} llega a esta apertura.</p>
+      {:else}
+        {@const mias = enPartidas.desvios.filter((d) => d.tipo === 'mia')}
+        {@const rival = enPartidas.desvios.filter((d) => d.tipo === 'rival')}
+        <p>
+          {enPartidas.llegaron} partida{enPartidas.llegaron === 1 ? '' : 's'} tuya{enPartidas.llegaron === 1 ? '' : 's'} llegan a esta apertura.
+          En {enPartidas.completas} seguiste el curso hasta el final de la línea; en {mias.reduce((n, d) => n + d.partidas.length, 0)} te saliste vos
+          y en {rival.reduce((n, d) => n + d.partidas.length, 0)} el rival jugó algo que el curso no tiene.
+        </p>
+        {#if mias.length}
+          <h3 class="subtitulo">Dónde jugaste otra cosa</h3>
+          <p class="suave">Si tu jugada también es teoría y la preferís, podés pasarla al curso: las líneas se rearman con ella.</p>
+          <ol class="desvios">
+            {#each mias as d (d.clave + d.jugada)}
+              <li>
+                <span class="suave">{lineaConNumeros(INICIAL, d.prefijo) || 'Posición inicial'}</span>
+                <span>
+                  Jugaste <b>{jugadaConNumero(d.prefijo, d.jugada)}</b>{d.partidas.length > 1 ? ` (${d.partidas.length} partidas)` : ''}; el curso juega
+                  <b>{jugadaConNumero(d.prefijo, d.esperadas[0])}</b>.
+                  {#if d.aprendida}<span class="etiqueta">ya la aprendiste</span>{/if}
+                </span>
+                <span class="fila">
+                  <button class="boton" onclick={() => practicarDesvio(d)}>Practicar esta línea</button>
+                  {#if curso && esTeoria(curso, d)}
+                    <button class="boton" onclick={() => adoptar(d)}>Usar {jugadaConNumero(d.prefijo, d.jugada)} en el curso</button>
+                  {/if}
+                  {#each d.partidas.slice(0, 3) as p (p.id)}{#if p.url}<a class="boton enlace" href={p.url} target="_blank" rel="noreferrer">Ver partida ({new Date(p.fecha).toLocaleDateString('es-AR')})</a>{/if}{/each}
+                </span>
+              </li>
+            {/each}
+          </ol>
+        {/if}
+        {#if rival.length}
+          <h3 class="subtitulo">Jugadas del rival que el curso no tiene</h3>
+          <ol class="desvios">
+            {#each rival as d (d.clave + d.jugada)}
+              <li>
+                <span class="suave">{lineaConNumeros(INICIAL, d.prefijo)}</span>
+                <span>
+                  El rival jugó <b>{jugadaConNumero(d.prefijo, d.jugada)}</b>{d.partidas.length > 1 ? ` (${d.partidas.length} partidas)` : ''}; el curso
+                  cubre {d.esperadas.slice(0, 4).map((j) => jugadaConNumero(d.prefijo, j)).join(', ')}{d.esperadas.length > 4 ? ` y ${d.esperadas.length - 4} más` : ''}.
+                </span>
+                <span class="fila">
+                  {#each d.partidas.slice(0, 3) as p (p.id)}{#if p.url}<a class="boton enlace" href={p.url} target="_blank" rel="noreferrer">Ver partida ({new Date(p.fecha).toLocaleDateString('es-AR')})</a>{/if}{/each}
+                </span>
+              </li>
+            {/each}
+          </ol>
+        {/if}
+      {/if}
     {:else}
       <p class="suave">
         En tus turnos se practica una sola jugada por posición. Si en la práctica jugás otra que también es teoría, podés
@@ -256,6 +340,31 @@
   }
   .pie {
     margin-top: 18px;
+  }
+  .subtitulo {
+    font-size: 1rem;
+    margin: 18px 0 8px;
+  }
+  .desvios {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 8px;
+  }
+  .desvios li {
+    display: grid;
+    gap: 4px;
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    background: var(--superficie);
+    padding: 8px 10px;
+    font-size: 0.92rem;
+  }
+  .etiqueta {
+    margin-left: 6px;
+    font-size: 0.8rem;
+    color: #c98a2b;
   }
   .pie p {
     margin: 0 0 8px;
