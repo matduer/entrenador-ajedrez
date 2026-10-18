@@ -236,6 +236,22 @@
     },
     "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 d2d4 d7d6 e5c4 f5e4 c4e3": {
       "porQue": "El caballo va a e3 para presionar d5 y g4."
+    },
+    "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 d2d4 d7d6 e5c4 f5e4 d1h5 g7g6 h5e2": {
+      "porQue": "Retira la dama.",
+      "inferior": true
+    },
+    "e2e4 e7e5 g1f3 f7f5 c2c4": {
+      "porQue": "Según Stockfish es un error: era mejor 3. Cxe5 (+1,5 contra +0,0, para el bando que juega).",
+      "error": true
+    },
+    "e2e4 e7e5 g1f3 f7f5 g2g4": {
+      "porQue": "Según Stockfish es un error: era mejor 3. Cxe5 (+1,5 contra −2,3, para el bando que juega).",
+      "error": true
+    },
+    "e2e4 e7e5 g1f3 f7f5 b2b4": {
+      "porQue": "Según Stockfish es un error: era mejor 3. Cxe5 (+1,5 contra −1,1, para el bando que juega).",
+      "error": true
     }
   },
   "fuentes": [
@@ -265,7 +281,7 @@
   "verificacion": {
     "motor": "Stockfish",
     "profundidad": 18,
-    "fecha": "2026-10-13",
+    "fecha": "2026-10-18",
     "resultados": {
       "e2e4 e7e5 g1f3 f7f5 f3e5": {
         "ok": true,
@@ -498,6 +514,22 @@
       "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 d2d4 d7d6 e5c4 f5e4 c4e3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +1,1 para el bando que mueve"
+      },
+      "e2e4 e7e5 g1f3 f7f5 f3e5 d8f6 d2d4 d7d6 e5c4 f5e4 d1h5 g7g6 h5e2": {
+        "ok": false,
+        "detalle": "Stockfish (prof. 18) prefiere Dd1: +0,1 contra −0,7"
+      },
+      "e2e4 e7e5 g1f3 f7f5 c2c4": {
+        "ok": false,
+        "detalle": "Stockfish (prof. 18) prefiere Cxe5: +1,5 contra +0,0"
+      },
+      "e2e4 e7e5 g1f3 f7f5 g2g4": {
+        "ok": false,
+        "detalle": "Stockfish (prof. 18) prefiere Cxe5: +1,5 contra −2,3"
+      },
+      "e2e4 e7e5 g1f3 f7f5 b2b4": {
+        "ok": false,
+        "detalle": "Stockfish (prof. 18) prefiere Cxe5: +1,5 contra −1,1"
       }
     }
   }

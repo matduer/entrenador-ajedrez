@@ -211,6 +211,30 @@
     },
     "d2d4 c7c5 d4d5 f7f5 e2e4 f5e4 b1c3": {
       "porQue": "Desarrolla."
+    },
+    "d2d4 c7c5 d4d5 d7d6 b1c3": {
+      "porQue": "Desarrolla."
+    },
+    "d2d4 c7c5 d4d5 d7d6 b1c3 g7g6": {
+      "porQue": "Prepara el fianchetto."
+    },
+    "d2d4 c7c5 d4c5 b8a6 b1c3": {
+      "porQue": "Desarrolla."
+    },
+    "d2d4 c7c5 d4c5 b8a6 e2e4": {
+      "porQue": "Ocupa el centro."
+    },
+    "d2d4 c7c5 g1f3 c5d4 e2e3": {
+      "porQue": "Sostiene la estructura.",
+      "inferior": true
+    },
+    "d2d4 c7c5 c2c4 c5d4 e2e3": {
+      "porQue": "Sostiene la estructura.",
+      "inferior": true
+    },
+    "d2d4 c7c5 b2b4": {
+      "porQue": "Según Stockfish es un error: era mejor 2. d5 (+0,7 contra −0,7, para el bando que juega).",
+      "error": true
     }
   },
   "fuentes": [
@@ -434,8 +458,8 @@
         "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
       },
       "d2d4 c7c5 d4d5 e7e6 c2c4 e6d5 c4d5 d7d6 b1c3 g7g6 e2e4 f8g7 f1d3 a7a6": {
-        "ok": false,
-        "detalle": "Stockfish (prof. 18) prefiere Cf6: −0,5 contra −1,0"
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Cf6: −0,5 contra −1,0 (marcada como inferior pero jugable)"
       },
       "d2d4 c7c5 d4d5 e7e6 c2c4 e6d5 c4d5 d7d6 b1c3 g7g6 e2e4 f8g7 f1d3 a7a6 a2a4": {
         "ok": true,
@@ -452,6 +476,34 @@
       "d2d4 c7c5 d4d5 f7f5 e2e4 f5e4 b1c3": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): +1,4 para el bando que mueve"
+      },
+      "d2d4 c7c5 d4d5 d7d6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,6 para el bando que mueve"
+      },
+      "d2d4 c7c5 d4d5 d7d6 b1c3 g7g6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "d2d4 c7c5 d4c5 b8a6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "d2d4 c7c5 d4c5 b8a6 e2e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,9 para el bando que mueve"
+      },
+      "d2d4 c7c5 g1f3 c5d4 e2e3": {
+        "ok": false,
+        "detalle": "Stockfish (prof. 18) prefiere Dxd4: −0,1 contra −0,8"
+      },
+      "d2d4 c7c5 c2c4 c5d4 e2e3": {
+        "ok": false,
+        "detalle": "Stockfish (prof. 18) prefiere Dxd4: −0,1 contra −0,8"
+      },
+      "d2d4 c7c5 b2b4": {
+        "ok": false,
+        "detalle": "Stockfish (prof. 18) prefiere d5: +0,7 contra −0,7"
       }
     }
   }

@@ -336,6 +336,137 @@
     },
     "d2d4 g8f6 c2c4 d7d6 b1c3 c7c6 e2e4 e7e5 g1f3 b8d7": {
       "porQue": "Desarrolla."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 f1e1 a7a6 a1b1": {
+      "porQue": "Prepara b4."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 f1e1 a7a6 a1b1 f8e8": {
+      "porQue": "Refuerza e5."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 f1e1 a7a6 a1b1 f8e8 e2f1": {
+      "porQue": "Retira el alfil."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 f1e1 a7a6 a1b1 f8e8 e2f1 b7b5": {
+      "porQue": "Gana espacio en el flanco de dama."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 c1e3": {
+      "porQue": "Desarrolla."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 c1e3 a7a6": {
+      "porQue": "Prepara ...b5."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 c1e3 a7a6 d4d5": {
+      "porQue": "Gana espacio."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 c1e3 a7a6 d4d5 c6d5": {
+      "porQue": "Toma en d5."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 c1e3 a7a6 d4d5 c6d5 c4d5": {
+      "porQue": "Recaptura."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 c1e3 a7a6 d4d5 c6d5 c4d5 b7b5": {
+      "porQue": "Gana espacio en el flanco de dama."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 c1e3 a7a6 d4d5 c6d5 c4d5 b7b5 f3d2": {
+      "porQue": "El caballo se reubica."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 c1e3 a7a6 d4d5 c6d5 c4d5 b7b5 f3d2 d7b6": {
+      "porQue": "El caballo se reubica."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 c1g5 f8e7 e2e3": {
+      "porQue": "Sostiene la estructura."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 c1g5 f8e7 e2e3 e8g8": {
+      "porQue": "Enroca."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 c1g5 f8e7 e2e3 e8g8 d1c2": {
+      "porQue": "Desarrolla la dama."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 c1g5 f8e7 e2e3 e8g8 d1c2 c7c6": {
+      "porQue": "Sostiene la estructura."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 c1g5 f8e7 e2e3 e8g8 d1c2 c7c6 f1d3": {
+      "porQue": "Desarrolla."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 c1g5 f8e7 e2e3 e8g8 d1c2 c7c6 f1d3 h7h6": {
+      "porQue": "Le pregunta al alfil."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 c1g5 f8e7 e2e3 e8g8 d1c2 c7c6 f1d3 h7h6 g5h4": {
+      "porQue": "Retira el alfil."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 c1g5 f8e7 e2e3 e8g8 d1c2 c7c6 f1d3 h7h6 g5h4 f8e8": {
+      "porQue": "La torre ocupa la columna e."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 d4e5 d6e5 d1d8 e8d8 c1g5": {
+      "porQue": "Desarrolla."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 d4e5 d6e5 d1d8 e8d8 c1g5 c7c6": {
+      "porQue": "Sostiene la estructura."
+    },
+    "d2d4 g8f6 c2c4 d7d6 g1f3 c7c6 b1c3": {
+      "porQue": "Desarrolla."
+    },
+    "d2d4 g8f6 c2c4 d7d6 g1f3 c7c6 b1c3 b8d7": {
+      "porQue": "Desarrolla."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 d1c2": {
+      "porQue": "Desarrolla la dama."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 d1c2 a7a6": {
+      "porQue": "Prepara ...b5."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 d1c2 a7a6 f1d1": {
+      "porQue": "La torre ocupa la columna d."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 d1c2 a7a6 f1d1 d8c7": {
+      "porQue": "Desarrolla la dama."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 d1c2 a7a6 f1d1 d8c7 c1g5": {
+      "porQue": "Desarrolla."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 d1c2 a7a6 f1d1 d8c7 c1g5 h7h6": {
+      "porQue": "Le pregunta al alfil."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 c1g5 f8e7 e2e3 e8g8 f1e2": {
+      "porQue": "Desarrolla."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 c1g5 f8e7 e2e3 e8g8 f1e2 c7c6": {
+      "porQue": "Sostiene la estructura."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 c1g5 f8e7 e2e3 e8g8 f1e2 c7c6 e1g1": {
+      "porQue": "Enroca."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 c1g5 f8e7 e2e3 e8g8 f1e2 c7c6 e1g1 f6e8": {
+      "porQue": "El caballo se reubica."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 d4e5 d6e5 d1d8 e8d8 g1f3": {
+      "porQue": "Desarrolla."
+    },
+    "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 d4e5 d6e5 d1d8 e8d8 g1f3 b8d7": {
+      "porQue": "Desarrolla."
+    },
+    "d2d4 g8f6 c2c4 d7d6 g1f3 c7c6 b1c3 b8d7 g2g3": {
+      "porQue": "Prepara el fianchetto."
+    },
+    "d2d4 g8f6 c2c4 d7d6 g1f3 c7c6 b1c3 b8d7 g2g3 e7e5": {
+      "porQue": "Golpea el centro."
+    },
+    "d2d4 g8f6 c2c4 d7d6 g1f3 c7c6 b1c3 b8d7 g2g3 e7e5 f1g2": {
+      "porQue": "Completa el fianchetto.",
+      "inferior": true
+    },
+    "d2d4 g8f6 c2c4 d7d6 g1f3 c7c6 b1c3 b8d7 g2g3 e7e5 f1g2 e5e4": {
+      "porQue": "Gana espacio con ataque al caballo."
+    },
+    "d2d4 g8f6 c2c4 d7d6 g1f3 c7c6 b1c3 b8d7 g2g3 e7e5 f1g2 e5e4 f3g5": {
+      "porQue": "El caballo ataca e4.",
+      "inferior": true
+    },
+    "d2d4 g8f6 c2c4 d7d6 g1f3 c7c6 b1c3 b8d7 g2g3 e7e5 f1g2 e5e4 f3g5 d6d5": {
+      "porQue": "Sostiene e4."
+    },
+    "d2d4 g8f6 c2c4 d7d6 g1f3 c7c6 b1c3 b8d7 g2g3 e7e5 f1g2 e5e4 f3g5 d6d5 c4d5": {
+      "porQue": "Toma en d5."
     }
   },
   "fuentes": [
@@ -732,8 +863,8 @@
         "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
       },
       "d2d4 g8f6 c2c4 d7d6 b1c3 c7c6": {
-        "ok": false,
-        "detalle": "Stockfish (prof. 18) prefiere e5: −0,5 contra −0,9"
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere e5: −0,5 contra −0,9 (marcada como inferior pero jugable)"
       },
       "d2d4 g8f6 c2c4 d7d6 b1c3 c7c6 e2e4": {
         "ok": true,
@@ -758,6 +889,178 @@
       "d2d4 g8f6 c2c4 d7d6 b1c3 c7c6 e2e4 e7e5 g1f3 b8d7": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −0,9 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 f1e1 a7a6 a1b1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 f1e1 a7a6 a1b1 f8e8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,6 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 f1e1 a7a6 a1b1 f8e8 e2f1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 f1e1 a7a6 a1b1 f8e8 e2f1 b7b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 c1e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 c1e3 a7a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 c1e3 a7a6 d4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 c1e3 a7a6 d4d5 c6d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 c1e3 a7a6 d4d5 c6d5 c4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 c1e3 a7a6 d4d5 c6d5 c4d5 b7b5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 c1e3 a7a6 d4d5 c6d5 c4d5 b7b5 f3d2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 c1e3 a7a6 d4d5 c6d5 c4d5 b7b5 f3d2 d7b6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −1,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 c1g5 f8e7 e2e3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 c1g5 f8e7 e2e3 e8g8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 c1g5 f8e7 e2e3 e8g8 d1c2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 c1g5 f8e7 e2e3 e8g8 d1c2 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 c1g5 f8e7 e2e3 e8g8 d1c2 c7c6 f1d3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 c1g5 f8e7 e2e3 e8g8 d1c2 c7c6 f1d3 h7h6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 c1g5 f8e7 e2e3 e8g8 d1c2 c7c6 f1d3 h7h6 g5h4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 c1g5 f8e7 e2e3 e8g8 d1c2 c7c6 f1d3 h7h6 g5h4 f8e8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 d4e5 d6e5 d1d8 e8d8 c1g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 d4e5 d6e5 d1d8 e8d8 c1g5 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 g1f3 c7c6 b1c3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 g1f3 c7c6 b1c3 b8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,9 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 d1c2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 d1c2 a7a6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 d1c2 a7a6 f1d1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,8 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 d1c2 a7a6 f1d1 d8c7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,8 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 d1c2 a7a6 f1d1 d8c7 c1g5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 e2e4 f8e7 f1e2 e8g8 e1g1 c7c6 d1c2 a7a6 f1d1 d8c7 c1g5 h7h6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,5 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 c1g5 f8e7 e2e3 e8g8 f1e2": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 c1g5 f8e7 e2e3 e8g8 f1e2 c7c6": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,4 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 c1g5 f8e7 e2e3 e8g8 f1e2 c7c6 e1g1": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 g1f3 b8d7 c1g5 f8e7 e2e3 e8g8 f1e2 c7c6 e1g1 f6e8": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 d4e5 d6e5 d1d8 e8d8 g1f3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): 0,0 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 b1c3 e7e5 d4e5 d6e5 d1d8 e8d8 g1f3 b8d7": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 g1f3 c7c6 b1c3 b8d7 g2g3": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,7 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 g1f3 c7c6 b1c3 b8d7 g2g3 e7e5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,7 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 g1f3 c7c6 b1c3 b8d7 g2g3 e7e5 f1g2": {
+        "ok": false,
+        "detalle": "Stockfish (prof. 18) prefiere e4: +0,8 contra +0,3"
+      },
+      "d2d4 g8f6 c2c4 d7d6 g1f3 c7c6 b1c3 b8d7 g2g3 e7e5 f1g2 e5e4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 g1f3 c7c6 b1c3 b8d7 g2g3 e7e5 f1g2 e5e4 f3g5": {
+        "ok": false,
+        "detalle": "Stockfish (prof. 18) prefiere Cd2: +0,3 contra −0,3"
+      },
+      "d2d4 g8f6 c2c4 d7d6 g1f3 c7c6 b1c3 b8d7 g2g3 e7e5 f1g2 e5e4 f3g5 d6d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,3 para el bando que mueve"
+      },
+      "d2d4 g8f6 c2c4 d7d6 g1f3 c7c6 b1c3 b8d7 g2g3 e7e5 f1g2 e5e4 f3g5 d6d5 c4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
       }
     }
   }

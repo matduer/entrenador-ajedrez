@@ -308,6 +308,12 @@
     "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3 g1f3 g7g6 f1c4 f8g7 f3e5": {
       "porQue": "El caballo ocupa e5.",
       "inferior": true
+    },
+    "d2d4 d7d5 e2e4 d5e4 b1c3 f7f5 c1f4": {
+      "porQue": "Desarrolla."
+    },
+    "d2d4 d7d5 e2e4 d5e4 b1c3 c7c5 d4d5": {
+      "porQue": "Gana espacio."
     }
   },
   "fuentes": [
@@ -644,16 +650,24 @@
         "detalle": "Stockfish (prof. 18) prefiere Af4: +0,0 contra −0,7 (marcada como inferior pero jugable)"
       },
       "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3 g1f3 g7g6 f1c4 f8g7 h2h4": {
-        "ok": false,
-        "detalle": "Stockfish (prof. 18) prefiere Ag5: −0,7 contra −1,9"
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) confirma el error: pierde 0.220"
       },
       "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 c1g5 c8f5 g5f6 e7f6 g2g4 f5g6 d1e2 f8b4 e2b5": {
         "ok": true,
         "detalle": "Stockfish (prof. 18): −1,7 para el bando que mueve"
       },
       "d2d4 d7d5 e2e4 d5e4 b1c3 g8f6 f2f3 e4f3 g1f3 g7g6 f1c4 f8g7 f3e5": {
-        "ok": false,
-        "detalle": "Stockfish (prof. 18) prefiere Ag5: −0,7 contra −1,3"
+        "ok": true,
+        "detalle": "Stockfish (prof. 18) prefiere Ag5: −0,7 contra −1,3 (marcada como inferior pero jugable)"
+      },
+      "d2d4 d7d5 e2e4 d5e4 b1c3 f7f5 c1f4": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): −0,2 para el bando que mueve"
+      },
+      "d2d4 d7d5 e2e4 d5e4 b1c3 c7c5 d4d5": {
+        "ok": true,
+        "detalle": "Stockfish (prof. 18): +0,1 para el bando que mueve"
       }
     }
   }
