@@ -5,7 +5,7 @@
   import { fensDeLinea } from '../../lib/aperturas/arbol.ts'
   import { cargarCatalogo, clasificar, familiaEnEspanol, nombreEnEspanol, type Catalogo } from '../../lib/aperturas/catalogo.ts'
   import { criterioFamilia, transposiciones } from '../../lib/aperturas/curso.ts'
-  import { notaPara, porQueNoPara } from '../../lib/aperturas/explicaciones.ts'
+  import { explicacionDeLinea, notaPara, porQueNoPara } from '../../lib/aperturas/explicaciones.ts'
   import { registrarLinea } from '../../lib/aperturas/practica.ts'
   import type { Color } from '../../lib/datos/tipos.ts'
   import { motorInteractivo } from '../../lib/motor/motor.ts'
@@ -64,6 +64,9 @@
   /** Hubo un error en la jugada actual: se muestra la flecha hasta acertarla. */
   let fallaAca = $state(false)
   let lineaTerminada = $state(false)
+  /** Planes de la apertura al terminar una línea nueva («¿Y ahora qué?»): una vez por variante en la sesión. */
+  let ahoraQue = $state<{ nombre: string; planes: string[] }>()
+  const planesVistos = new Set<string>()
   let resultados = $state<{ linea: string[]; bien: boolean }[]>([])
 
   let paso = $derived(pasos[indice])
@@ -85,6 +88,7 @@
     alternativa = undefined
     lineaTerminada = false
     fallaAca = false
+    ahoraQue = undefined
     avanzarRival()
   }
   iniciarPaso()
@@ -116,7 +120,14 @@
       resultados = [...resultados, { linea: paso.linea, bien }]
     }
     if (paso.fase === 'mezcla' && !bien) pasos = [...pasos, { linea: paso.linea, fase: 'mezcla', registrar: false }]
-    if (bien) {
+    const e = paso.fase === 'memoria' ? explicacionDeLinea(paso.linea) : undefined
+    const planes = e ? (color === 'white' ? e.planesBlancas : e.planesNegras) : []
+    if (e && planes.length && !planesVistos.has(e.id)) {
+      planesVistos.add(e.id)
+      ahoraQue = { nombre: e.nombre, planes }
+    }
+    if (bien && ahoraQue) mensaje = { tipo: 'bien', texto: 'Línea sin errores.' }
+    else if (bien) {
       mensaje = { tipo: 'bien', texto: 'Línea sin errores.' }
       setTimeout(siguiente, 900)
     } else
@@ -325,7 +336,14 @@
         {@const a = alternativa}
         <button class="boton" onclick={() => alCambiarEleccion(a.prefijo, a.uci)}>Guardar {a.san} como mi jugada en esta posición</button>
       {/if}
-      {#if lineaTerminada && paso.fase !== 'presentar' && errores > 0}
+      {#if ahoraQue}
+        <div class="ahora-que">
+          <h3>¿Y ahora qué?</h3>
+          <p class="suave">Planes típicos para {color === 'white' ? 'las blancas' : 'las negras'} en {ahoraQue.nombre}:</p>
+          <ul>{#each ahoraQue.planes as p (p)}<li>{p}</li>{/each}</ul>
+        </div>
+      {/if}
+      {#if lineaTerminada && paso.fase !== 'presentar' && (errores > 0 || ahoraQue)}
         <button class="boton principal" onclick={siguiente}>Seguir</button>
       {/if}
       {#if refutacion}
@@ -374,6 +392,13 @@
   }
   .panel p {
     margin: 0;
+  }
+  .ahora-que h3 {
+    margin: 0 0 4px;
+  }
+  .ahora-que ul {
+    margin: 6px 0 0;
+    padding-left: 20px;
   }
   .progreso {
     display: flex;

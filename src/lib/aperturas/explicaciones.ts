@@ -82,6 +82,32 @@ export function explicacionPara(ucis: string[]): Explicacion | undefined {
   return mejor
 }
 
+/** Posición de la raíz de cada explicación → explicaciones con esa raíz. */
+let raicesPorPosicion: Map<string, Explicacion[]> | undefined
+
+/**
+ * La explicación de la variante más profunda a la que llega la línea, aunque sea por otro orden de
+ * jugadas: la de la raíz que aparece más tarde en la línea (a igual jugada, la de raíz más larga).
+ */
+export function explicacionDeLinea(ucis: string[]): Explicacion | undefined {
+  if (!raicesPorPosicion) {
+    raicesPorPosicion = new Map()
+    for (const e of EXPLICACIONES) {
+      const r = e.raiz.split(' ')
+      const fens = fensDeLinea(r)
+      if (fens.length !== r.length + 1) continue
+      const k = clavePosicion(fens.at(-1)!)
+      raicesPorPosicion.set(k, [...(raicesPorPosicion.get(k) ?? []), e])
+    }
+  }
+  const fens = fensDeLinea(ucis)
+  for (let i = fens.length - 1; i >= 0; i--) {
+    const es = raicesPorPosicion.get(clavePosicion(fens[i]))
+    if (es) return es.reduce((a, b) => (b.raiz.length > a.raiz.length ? b : a))
+  }
+  return undefined
+}
+
 /**
  * Índice por posición: «posición antes de la jugada + jugada» → nota. Así una nota escrita para un orden
  * de jugadas (1.d4 Cf6 2.c4) también aparece cuando se llega por transposición (1.c4 Cf6 2.d4).
