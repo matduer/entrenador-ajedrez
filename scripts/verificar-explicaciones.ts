@@ -7,6 +7,8 @@
  * Guarda el resultado en el campo `verificacion` de cada archivo y termina con código 1 si algo falla.
  *
  * Uso: node scripts/verificar-explicaciones.ts [profundidad] [archivo ...]
+ * Con SOLO_NUEVAS=1 se reusa el resultado guardado de cada jugada que ya pasó a la misma profundidad
+ * (solo se analizan las notas nuevas o las que fallaban): sirve después de agregar notas en tanda.
  * Motor: variable de entorno STOCKFISH (ruta al ejecutable); por defecto, el que ya estaba instalado.
  */
 import { readFileSync, readdirSync, writeFileSync } from 'node:fs'
@@ -38,6 +40,12 @@ for (const archivo of readdirSync(CARPETA).filter((f) => f.endsWith('.json') && 
   const ruta = `${CARPETA}/${archivo}`
   const e: Explicacion = JSON.parse(readFileSync(ruta, 'utf8'))
   const resultados: Record<string, ResultadoVerificacion> = {}
+  const previos = process.env.SOLO_NUEVAS && e.verificacion?.profundidad === PROFUNDIDAD ? e.verificacion.resultados : {}
+  const reusar = (clave: string) => {
+    const p = previos[clave]
+    if (p?.ok) resultados[clave] = p
+    return Boolean(p?.ok)
+  }
   const raiz = e.raiz.split(' ')
   if (fensDeLinea(raiz).length !== raiz.length + 1) {
     console.log(`✗ ${archivo}: la raíz no es legal`)
@@ -50,6 +58,11 @@ for (const archivo of readdirSync(CARPETA).filter((f) => f.endsWith('.json') && 
     const uci = ucis[ucis.length - 1]
     const sanes = lineaSan(fensDeLinea([])[0], ucis)
     const etiqueta = sanes.join(' ')
+    // Un resultado previo solo vale si la nota no cambió de marca (inferior o error) desde entonces.
+    if (!nota.inferior && !nota.error && (nota.porQueNo ?? []).every((a) => previos[`${prefijo.join(' ')} ${a.uci} (por qué no)`]?.ok) && reusar(clave)) {
+      for (const a of nota.porQueNo ?? []) reusar(`${prefijo.join(' ')} ${a.uci} (por qué no)`)
+      continue
+    }
     const r = await evaluarJugada(prefijo, uci)
     if (!r) {
       resultados[clave] = { ok: false, detalle: 'Jugada ilegal' }
