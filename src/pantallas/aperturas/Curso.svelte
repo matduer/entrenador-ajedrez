@@ -1,9 +1,10 @@
 <script lang="ts">
-  import { lineaConNumeros, posDesdeFen, sanDeUci } from '../../lib/ajedrez/posicion.ts'
+  import { clavePosicion, lineaConNumeros, posDesdeFen, sanDeUci } from '../../lib/ajedrez/posicion.ts'
   import { fensDeLinea } from '../../lib/aperturas/arbol.ts'
   import { esTeoria, lineasDelDesvio, partidasEnCurso, type Desvio, type PartidasEnCurso } from '../../lib/aperturas/enPartidas.ts'
   import { db } from '../../lib/datos/db.ts'
-  import { armarCurso, claveLeccion, estadoCurso, guardarEleccion, posicionesDelRival, reiniciarProgreso, type Curso, type EstadoCurso, type Leccion } from '../../lib/aperturas/curso.ts'
+  import { motorInteractivo } from '../../lib/motor/motor.ts'
+  import { agregarLineaAlCurso, armarCurso, claveLeccion, leerLineasAgregadas, quitarLineasAgregadas, estadoCurso, guardarEleccion, posicionesDelRival, reiniciarProgreso, type Curso, type EstadoCurso, type Leccion } from '../../lib/aperturas/curso.ts'
   import { descargarFrecuencias } from '../../lib/aperturas/popularidad.ts'
   import type { Explicacion } from '../../lib/aperturas/explicaciones.ts'
   import { idLinea } from '../../lib/aperturas/repertorio.ts'
@@ -42,6 +43,56 @@
     await guardarEleccion(color, d.prefijo, d.jugada)
     await cargar()
     await cargarPartidas()
+  }
+
+  /** Desvío del rival que se está agregando (Stockfish calcula la respuesta). */
+  let agregando = $state<string>()
+  /** Líneas de este curso agregadas desde las partidas. */
+  let agregadas = $state(0)
+
+  async function contarAgregadas() {
+    const r = explicacion.raiz
+    agregadas = (await leerLineasAgregadas())[color].filter((l) => l.startsWith(r + ' ')).length
+  }
+  contarAgregadas()
+
+  /**
+   * Agrega al curso la jugada del rival con la respuesta de Stockfish y dos medias jugadas más. Se parte
+   * del orden de jugadas del curso (la partida pudo llegar por transposición, y las líneas del curso
+   * tienen que empezar por la raíz).
+   */
+  async function agregarDesvio(d: Desvio) {
+    if (!curso || agregando) return
+    let base: string[] | undefined
+    for (const l of curso.secciones.flatMap((s) => s.lecciones.flatMap((x) => x.lineas))) {
+      const i = fensDeLinea(l).findIndex((f, k) => k < l.length && clavePosicion(f) === d.clave)
+      if (i >= 0) {
+        base = l.slice(0, i)
+        break
+      }
+    }
+    if (!base) return
+    agregando = d.clave + d.jugada
+    try {
+      const fen = fensDeLinea([...base, d.jugada]).at(-1)!
+      const r = await motorInteractivo().analizar(fen, { profundidad: 18 })
+      const linea = [...base, d.jugada, ...r.linea.slice(0, 3)]
+      if (r.linea.length && fensDeLinea(linea).length === linea.length + 1) {
+        await agregarLineaAlCurso(color, linea)
+        await cargar()
+        await cargarPartidas()
+        await contarAgregadas()
+      }
+    } finally {
+      agregando = undefined
+    }
+  }
+
+  async function quitarAgregadas() {
+    await quitarLineasAgregadas(color, explicacion.raiz.split(' '))
+    await cargar()
+    await cargarPartidas()
+    await contarAgregadas()
   }
 
   function practicarDesvio(d: Desvio) {
@@ -208,6 +259,7 @@
         {/if}
         {#if rival.length}
           <h3 class="subtitulo">Jugadas del rival que el curso no tiene</h3>
+          <p class="suave">«Agregar al curso» suma la jugada del rival con tu respuesta según Stockfish (profundidad 18) y dos medias jugadas más; queda como una línea para aprender.</p>
           <ol class="desvios">
             {#each rival as d (d.clave + d.jugada)}
               <li>
@@ -217,11 +269,18 @@
                   cubre {d.esperadas.slice(0, 4).map((j) => jugadaConNumero(d.prefijo, j)).join(', ')}{d.esperadas.length > 4 ? ` y ${d.esperadas.length - 4} más` : ''}.
                 </span>
                 <span class="fila">
+                  <button class="boton" onclick={() => agregarDesvio(d)} disabled={!!agregando}>{agregando === d.clave + d.jugada ? 'Calculando con Stockfish…' : 'Agregar al curso'}</button>
                   {#each d.partidas.slice(0, 3) as p (p.id)}{#if p.url}<a class="boton enlace" href={p.url} target="_blank" rel="noreferrer">Ver partida ({new Date(p.fecha).toLocaleDateString('es-AR')})</a>{/if}{/each}
                 </span>
               </li>
             {/each}
           </ol>
+        {/if}
+        {#if agregadas}
+          <p class="suave">
+            Agregaste {agregadas} línea{agregadas === 1 ? '' : 's'} desde tus partidas.
+            <button class="boton enlace" onclick={quitarAgregadas}>Quitarlas del curso</button>
+          </p>
         {/if}
       {/if}
     {:else}

@@ -127,17 +127,42 @@ function cargarProfundizacion(): Promise<void> {
   return cargaProfundizacion
 }
 
+/** Líneas que el usuario agregó a sus cursos desde sus partidas (jugada del rival + respuesta de Stockfish), por color. */
+export type LineasAgregadas = Record<Color, string[]>
+
+export const leerLineasAgregadas = () => leerAjuste<LineasAgregadas>('lineasAgregadasAperturas', { white: [], black: [] })
+
+export async function agregarLineaAlCurso(color: Color, ucis: string[]) {
+  const a = await leerLineasAgregadas()
+  const t = ucis.join(' ')
+  if (!a[color].includes(t)) a[color] = [...a[color], t]
+  await guardarAjuste('lineasAgregadasAperturas', { white: [...a.white], black: [...a.black] })
+}
+
+/** Quita las líneas agregadas de un color que empiezan por la raíz; devuelve cuántas. */
+export async function quitarLineasAgregadas(color: Color, raiz: string[]): Promise<number> {
+  const a = await leerLineasAgregadas()
+  const r = raiz.join(' ')
+  const quedan = a[color].filter((l) => !l.startsWith(r + ' '))
+  const n = a[color].length - quedan.length
+  a[color] = quedan
+  await guardarAjuste('lineasAgregadasAperturas', { white: [...a.white], black: [...a.black] })
+  return n
+}
+
 /**
  * Líneas teóricas desde la raíz: las del catálogo, las de las notas escritas, que suelen llegar más
- * lejos, y su continuación con lo que juegan los maestros (`profundizacion.json`).
+ * lejos, y su continuación con lo que juegan los maestros (`profundizacion.json`). Con `color`, también
+ * las que el usuario agregó desde sus partidas (los scripts de Node no lo pasan: no hay base de datos).
  */
-export async function lineasTeoricas(raiz: string[]): Promise<string[][]> {
+export async function lineasTeoricas(raiz: string[], color?: Color): Promise<string[][]> {
   const arbol = armarArbol(await cargarCatalogo())
   await cargarProfundizacion()
   const lineas = lineasDesde(arbol, raiz, 40)
   const r = raiz.join(' ')
   for (const e of EXPLICACIONES) for (const clave of Object.keys(e.notas)) if (clave.startsWith(r + ' ')) lineas.push(clave.split(' '))
   for (const l of profundizacion.lineas) if (l.startsWith(r + ' ')) lineas.push(l.split(' '))
+  if (color) for (const l of (await leerLineasAgregadas())[color]) if (l.startsWith(r + ' ')) lineas.push(l.split(' '))
   return lineas.length ? lineas : [raiz]
 }
 
@@ -350,7 +375,7 @@ const esRara = (l: string[], raras: Set<string>) => l.some((_, i) => raras.has(l
 /** Posiciones del curso donde mueve el rival: las que hay que consultar en la base Masters. */
 export async function posicionesDelRival(explicacion: Explicacion, color: Color): Promise<string[]> {
   const raiz = explicacion.raiz.split(' ')
-  return podarYOrdenar(await lineasTeoricas(raiz), raiz, color, await leerElecciones(), criterioFamilia(await cargarCatalogo(), raiz)).posicionesRival
+  return podarYOrdenar(await lineasTeoricas(raiz, color), raiz, color, await leerElecciones(), criterioFamilia(await cargarCatalogo(), raiz)).posicionesRival
 }
 
 export const SECCION_RAREZAS = {
@@ -361,7 +386,7 @@ export const SECCION_RAREZAS = {
 
 export async function armarCurso(explicacion: Explicacion, color: Color): Promise<Curso> {
   const raiz = explicacion.raiz.split(' ')
-  const todas = await lineasTeoricas(raiz)
+  const todas = await lineasTeoricas(raiz, color)
   const elecciones = await leerElecciones()
   const catalogo = await cargarCatalogo()
   const sale = criterioFamilia(catalogo, raiz)
